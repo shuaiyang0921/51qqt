@@ -1,0 +1,12 @@
+.honor_banner{width: 100%;padding: 124px 0 144px 0;background: url(../images/about/about5.png) no-repeat center center;background-size: cover;}
+.honor_banner_title{font-size: 72px;height: 100px;line-height: 100px;}
+.honor_banner_text{font-size: 36px;height: 50px;line-height: 50px;margin-top: 8px;}
+.honor_certificate{padding: 60px 120px 0 120px;}
+.honor_title{font-size: 36px;height: 50px;line-height: 50px;margin-bottom: 50px;}
+.honor_certificate_list{padding: 21px;background: #FFFFFF;border-radius: 4px;border: 1px solid #EBEBEB;cursor: pointer;margin: 12px;}
+.honor_certificate_list:hover{box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.2);}
+.honor_certificate_img{width: 240px;height: 336px;margin-bottom: 20px;background: #F7F8FA;}
+.honor_certificate_text{line-height: 25px;width: 208px;height: 50px;margin: 0 auto;}
+.honor_certificate_navs{margin-bottom: 28px;}
+.honor_certificate_bg{background: #F7F8FA;}
+.honor_qualifications_img{width: 240px;height: 160px;background: #F7F8FA;}
