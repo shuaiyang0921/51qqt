@@ -189,8 +189,7 @@
     .homeHead{display: none;}
     .homephoneHead{display: flex;}
     .header{height: auto;}
-    /* .heiheader{height: 66px;} */
-    .heiheader{height: 1000px;background-color: #000000;}
+    .heiheader{height: 66px;}
     .logosize{height: 26px;width: 87px;}
     .homephoneHead_menu {display: inline-block;transition: all .2s linear;}
     input[name='nav']:checked+ .homephoneHead_menu {
