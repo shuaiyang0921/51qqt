@@ -410,16 +410,16 @@
         </div>
         <div class="joinUs_post">
             <div class="tac joinUs_title PingFangSCMedium">热招岗位</div>
-            <div class="joinUs_post_lists flex-column flex-between">
-                <div class="joinUs_post_list ">
-                    <div class="joinUs_post_listTitle f20 PingFangSCMedium flex-column flex-between flex-middle">
-                        <div>SRM销售总监</div>
-                        <div class="f14 colorbai joinUs_post_listlabel">HOT</div>
-                    </div>
-                    <div class="f14 joinUs_post_address flex-column flex-middle"><span class="joinUs_post_icon"><img src="images/about/joinUs7.png" class="imgsize" alt="地址"></span>西安、武汉、南昌</div>
-                    <div class="f14 joinUs_post_department flex-column flex-middle"><span class="joinUs_post_icon"><img src="images/about/joinUs6.png" class="imgsize" alt="部门"></span>销售部</div>
-                </div>
-                <div class="joinUs_post_list ">
+            <div class="joinUs_post_lists flex-column flex-between ">
+				<div class="joinUs_post_list joinUs_post_listblue">
+					<div class="joinUs_post_listTitle f20 PingFangSCMedium flex-column flex-between flex-middle">
+						<div>SRM销售总监</div>
+						<div class="f14 colorbai joinUs_post_listlabel">HOT</div>
+					</div>
+					<div class="f14 joinUs_post_address flex-column flex-middle"><span class="joinUs_post_icon"><img src="images/about/joinUs7.png" class="imgsize" alt="地址"></span>西安、武汉、南昌</div>
+					<div class="f14 joinUs_post_department flex-column flex-middle"><span class="joinUs_post_icon"><img src="images/about/joinUs6.png" class="imgsize" alt="部门"></span>销售部</div>
+				</div>
+                <div class="joinUs_post_list">
                     <div class="joinUs_post_listTitle f20 PingFangSCMedium flex-column flex-between flex-middle">
                         <div>SRM销售总监</div>
                         <div class="f14 colorbai joinUs_post_listlabel">HOT</div>
@@ -436,7 +436,22 @@
                     <div class="f14 joinUs_post_department flex-column flex-middle"><span class="joinUs_post_icon"><img src="images/about/joinUs6.png" class="imgsize" alt="部门"></span>销售部</div>
                 </div>
             </div>
-            <div></div>
+            <div class="joinUs_post_popUp">
+				<div class="f18 joinUs_post_popUpTitle PingFangSCMedium"><span></span>岗位职责</div>
+				<div class="f16 joinUs_post_popUpText">
+					1、负责SRM（供应商管理系统）的业务开展及云应用产品的销售团队管理和交付； <br/>
+					2、熟悉整个大客户销售的流程：包括销售线索挖掘、客户拜访、协调组织公司售前资源、安排客户交流和方案讨论、商务谈判和关单； <br/>
+					3、有团队合作意识、敬业精神、学习和适应能力强、执行力强、可以承受比较大的工作压力。
+				</div>
+				<div class="f18 joinUs_post_popUpTitle PingFangSCMedium"><span></span>任职要求</div>
+				<div class="f16 joinUs_post_popUpText">
+					1、本科及以上学历，5年以上软件行业或者互联网产品的销售管理经验；有良好的销售业绩记录和客户关系； <br/>
+					2、具备优秀的沟通表达与谈判技巧，对销售流程了然于胸，具备较强的抗压能力与销售激情； <br/>
+					3、过往客户对象主要为大中型企业，有一定的大型客户基础； <br/>
+					4、熟悉SAP/Oracle等大型应用软件市场的或者有SRM/CRM应用软件销售背景的优先考虑。
+				</div>
+				<a class="f16 colorbai homeHead_appleStytle joinUs_post_popUpBut" href="#">投递简历</a>
+			</div>
             <div class="joinUs_post_lists flex-column flex-between">
                 <div class="joinUs_post_list ">
                     <div class="joinUs_post_listTitle f20 PingFangSCMedium flex-column flex-between flex-middle">
@@ -502,7 +517,7 @@
 				<div class="home_register_text">开启数字化供应链与采购新体验</div>
 				<div class="tar">赋能企业数字化转型与变革</div>
 			</div>
-			<a class="f18 home_register_but homeHead_appleStytle colorbai" href="#">注册体验</a>
+			<a class="f18 homeHead_registertil home_register_but  homeHead_appleStytle  colorbai" href="#">注册体验</a>
 		</div>
 		<div class="bgfooter">
 			<div class="footer maxwidth">
@@ -728,7 +743,16 @@
 				// $('.home_Case_info').eq(index).css("display","flex");
 				// $('.home_Case_info').animate({'left':-(changenum*100)+'%'},0);
 			});
-			
+			$('.joinUs_post_lists>.joinUs_post_list').click(function(){
+				event.stopPropagation();
+				index=$(this).index();
+				$('.joinUs_post_lists>.joinUs_post_list').removeClass('joinUs_post_listblue')
+				$('.joinUs_post_lists>.joinUs_post_list').eq(index).addClass('joinUs_post_listblue')
+				// changeCasenum = index
+				// $('.home_Case_info').not(index).css("display","none");
+				// $('.home_Case_info').eq(index).css("display","flex");
+				// $('.home_Case_info').animate({'left':-(changenum*100)+'%'},0);
+			});
    		});
     </script>
 </html>
