@@ -3,7 +3,7 @@
 .colorblack{color: #000000;}
 .colorfooter{color: #979797;}
 .colorred{color: #c83030;}
-.colorblue{color: #005CEF;}
+.colorblue{color: #005CEF!important;}
 .colororigin{color: #FF761A;}
 .bgbai{background-color: #FFFFFF;}
 .bghead{background-color: #FAFBFC;}
