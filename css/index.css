@@ -11,7 +11,7 @@
 .bgblue{background-color: #005CEF;}
 .bgorigin{background-color: #e3730d;}
 .bgpink{background-color: #fdf4ec;}
-.bggriy{background: #F7F8FA;}
+.bggray{background: #F7F8FA;}
 .tac{text-align: center;}
 .tar{text-align: right;}
 .fonwei{font-weight: bold;}
@@ -21,6 +21,7 @@
 .xian_head{border-bottom: 1px dashed #EBEBEB;}
 .xian_footer{border-bottom: 1px solid rgba(255,255,255,0.1);}
 .maxwidth{max-width: 1440px;margin: 0 auto;}
+.porelative{position: relative;}
 /* home */
 .header{position: fixed;top: 0;width: 100%;margin: 0 auto;-webkit-transition: 5s; transition: 5s;z-index: 100;}
 .heiheader{height: 74px;}

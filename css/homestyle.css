@@ -11,7 +11,7 @@
 .homeHead_tabs{position: absolute;bottom: 84px;width: 100%;margin: 0 auto;}
 .homeHead_tabs div{width: 30px;height: 4px;background: #BDC8DE;border-radius: 2px;margin: 0 5px;cursor: pointer;}
 .homeHead_tab{background: #005CEF!important;}
-.homeHead_adver_bot{margin: 0 120px 5px 120px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;border: 1px solid #FFFFFF;padding: 10px 0;transform: translateY(-60px);}
+.homeHead_adver_bot{margin: 0 120px 5px 120px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;border: 1px solid #FFFFFF;padding: 10px 10px;transform: translateY(-60px);}
 .homeHead_adver_botimg{width: 54px;height: 54px;}
 .homeHead_adver_bottext{width: 183px;height: 30px;font-family: PingFangSC-Regular, PingFang SC;font-weight: 400;color: #888888;line-height: 15px;margin-top: 5px;}
 .homeHead_adver_botstyle{padding: 15px 10px;}
