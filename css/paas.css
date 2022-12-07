@@ -32,8 +32,8 @@
 .PaaS_title{font-size: 36px;margin-bottom: 16px;}
 .PaaS_text{color: #555555;height: 22px;line-height: 22px;margin-bottom: 40px;}
 .PaaS_img{width: 100%;}
-.hideModel>div{display: none;}
-.showModel{display: block!important;}
+/* .hideModel>div{display: none;} */
+/* .showModel{display: block!important;} */
 .mkt_registertil{color: #005CEF;background: #FFFFFF;}
 .scf_bgImg{padding: 0 120px;}
 .scf_navsBg{padding: 60px 0;}

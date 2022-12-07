@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>企企通</title>
+		<link rel="stylesheet" href="../css/flex-layout.css" />
+		<link rel="stylesheet" href="../css/reset.css" />
+        <!-- 头部底部样式 -->
+		<link rel="stylesheet" href="../css/index.css" />
+		<!-- 首页样式 -->
+		<link rel="stylesheet" href="../css/homestyle.css" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/load.js"></script>
+		<script type="text/javascript">
+			load('axios')
+		</script>
+	</head>
+	<body>
+		<div id="app">
+            <div class="padBg bggray">
+				<div class="tac home_product_title PingFangSCMedium">信赖之选，世界<span class="colorblue">500</span>强和<span class="colorblue">30+</span>行业领军企</div>
+				<div class="home_Case_companys flex-column flex-center flex-middle" ref='box' @mouseenter="enter" @mouseleave="leave">
+                    <div class="home_Case_companylistshow" v-for="(item,index) in caseCompanylist" >
+                        <div class="home_Case_companylist" :style="index%2==0?{transform: 'translateX('+ tranL+ 'px)'}:{transform: 'translateX('+ tranR+ 'px)'}">
+                            <div class="home_Case_companyImg" v-for="itemchind in item"><img :src="itemchind.companyLogo" class="imgsize" alt="itemchind.companyName"></div>
+                            <div class="home_Case_companyImg" v-for="itemchind in item"><img :src="itemchind.companyLogo" class="imgsize" alt="itemchind.companyName"></div>
+                        </div>
+                    </div>
+                    <!-- <div class="home_Case_companylistshow" v-for="(item,index) in caseCompanylist" v-if="index==1">
+                        <div class="home_Case_companylist" :style="{transform: 'translateX('+ tranR+ 'px)'}">
+                            <div class="home_Case_companyImg" v-for="itemchind in item"><img :src="itemchind.companyLogo" class="imgsize" alt="itemchind.companyName"></div>
+                            <div class="home_Case_companyImg" v-for="itemchind in item"><img :src="itemchind.companyLogo" class="imgsize" alt="itemchind.companyName"></div>
+                        </div>
+                    </div> -->
+				</div>
+				<div><a class="f16 colorbai home_Case_More" href="#">更多行业案例</a></div>
+			</div>
+		</div>
+	</body>
+	
+	<script>
+		var vm = new Vue({
+			el:'#app',
+			data(){
+				return {
+					caseCompanylist:[],
+                    tranL:0,
+                    tranR:-1660,
+                    setTimetrans:null
+				}
+			},
+			watch: {
+			},
+			created(){
+                getHost('els')
+				this.getdata()
+
+                let that = this
+                that.setTimetrans = setInterval(()=>{
+                    that.tranL--
+                    that.tranR++
+                    if(that.tranL==-1550){
+                        that.tranL=0
+                    }
+                    if(that.tranR==-110){
+                        that.tranR=-1660
+                    }
+                },100)
+			},
+			mounted(){
+			},
+			methods: {
+                getdata(){
+                    let that = this
+                    // 获取500强图片
+					var _getcaseCompanylist = p => get('/consumer/noToken/queryLogo', p);
+					_getcaseCompanylist({type:'1'})
+					.then(res => {
+                        // console.log('_getcaseCompanylist',res.result)
+						that.caseCompanylist = res.result
+					})
+					.catch(err => {
+						console.log(err,'_getcaseCompanylist获取数据异常');
+					})
+                },
+                enter(){
+                    clearInterval(this.setTimetrans)
+                },
+                leave(){
+                    let that = this
+                    that.setTimetrans = setInterval(()=>{
+                        that.tranL--
+                        that.tranR++
+                        if(that.tranL==-1550){
+                            that.tranL=0
+                        }
+                        if(that.tranR==-110){
+                            that.tranR=-1660
+                        }
+                    },10)
+                }
+			},
+			computed:{
+			},
+		})
+    </script>
+</html>
