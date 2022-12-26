@@ -739,22 +739,22 @@
 					<div class="registe_form_title homeHead_appleStytle"><span class="colorblue">立即构建</span>企业数字化采购协同平台</div>
 					<div class="f16 flex-column flex-middle registe_form_magbot">
 						<div class="registe_form_text PingFangSCMedium">联系人：</div>
-						<div class="registe_form_input"><input type="text" class="imgsize" placeholder="请输入您的姓名"></div>
+						<div class="registe_form_input"><input v-model="name" type="text" class="imgsize" placeholder="请输入您的姓名"></div>
 					</div>
 					<div class="f16 flex-column flex-middle registe_form_magbot">
 						<div class="registe_form_text PingFangSCMedium">公司名称：</div>
-						<div class="registe_form_input"><input type="text" class="imgsize" placeholder="请输入您的公司名全称"></div>
+						<div class="registe_form_input"><input type="text" v-model="companyName" class="imgsize" placeholder="请输入您的公司名全称"></div>
 					</div>
 					<div class="f16 flex-column flex-middle registe_form_magbot">
 						<div class="registe_form_text PingFangSCMedium">手机号码：</div>
-						<div class="registe_form_input"><input type="number" class="imgsize" placeholder="请输入您的手机号码"></div>
+						<div class="registe_form_input"><input type="number" v-model="telephone" class="imgsize" placeholder="请输入您的手机号码"></div>
 					</div>
 					<div class="f16 flex-column flex-middle registe_form_Vercodemagbot">
 						<div class="registe_form_text PingFangSCMedium">验证码：</div>
-						<div class="registe_form_Vercode"><input type="number" class="imgsize" placeholder="请输入您的手机号码"></div>
-						<div class="registe_form_codebut colorbai">获取验证码</div>
+						<div class="registe_form_Vercode"><input type="number" v-model="smsCode" class="imgsize" placeholder="请输入验证码"></div>
+						<div class="registe_form_codebut colorbai" @click="getcode">获取验证码</div>
 					</div>
-					<div class="f16 registe_form_submit PingFangSCMedium colorbai">立即提交</div>
+					<div class="f16 registe_form_submit PingFangSCMedium colorbai" @click="submitfrom()">立即提交</div>
 				</div>
 			</div>
 		</div>
@@ -784,7 +784,12 @@
 				showmodel:false,
 				changenum:0,
 				Solutionindex:0,
-				navstopIndex:1
+				navstopIndex:1,
+				name:'',
+				companyName:'',
+				telephone:'',
+				smsCode:'',
+				registerModule:'1'
 			}
 		},
 		watch: {
@@ -826,10 +831,8 @@
 				var _getBanerImg = p => get('/banner/noToken/queryByModule', p);
 				_getBanerImg({module:'1'})
 				.then(res => {
-					// console.log(res,'ress');
 					that.BanerImg = res.result
 					if(that.BanerImg.length>1){
-						// console.log(that.BanerImg.length,that.changenum)
 						setInterval(()=>{
 							if(that.changenum>=that.BanerImg.length-1){
 								that.changenum=0
@@ -849,18 +852,6 @@
 				_getcaseCompanylist({type:'1'})
 				.then(res => {
 					that.caseCompanylist = res.result
-					// if(that.caseCompanylist.length>1){
-					// 	// console.log(that.BanerImg.length,that.changenum)
-					// 	setInterval(()=>{
-					// 		if(that.changenum>=that.BanerImg.length-1){
-					// 			that.changenum=0
-					// 		}else{
-					// 			that.changenum++;
-					// 		}
-					// 		$('.homeHead_tabs>div').eq(that.changenum).addClass('homeHead_tab').siblings().removeClass('homeHead_tab')
-					// 		$('.homeHead_adverstyle').animate({'left':-(that.changenum*100)+'%'},0);
-					// 	},3000);
-					// }
 				})
 				.catch(err => {
 					console.log(err,'_getcaseCompanylist获取数据异常');
@@ -885,6 +876,58 @@
 				this.Solutionindex = index
 				$('.home_Solutionleft>div').eq(this.Solutionindex).addClass('bgblue').siblings().removeClass('bgblue')
 				// $('.home_Solution_item .home_Solution_rightwidth').eq(index).css("display","flex").siblings().css("display","none");
+			},
+			getcode(){
+				const reg = /^((0\d{2,3}-\d{7,8})|(1[3456789]\d{9}))$/
+				if(!reg.test(this.telephone)){
+					window.alert("请输入正确的电话号码！");
+					return false
+				}
+				var _getcode = p => post('/account/sms', p,'json');
+				_getcode({
+					mobile:this.telephone,
+					smsmode:"1"
+				})
+				.then(res => {
+					window.alert(res.message);
+				})
+				.catch(err => {
+					console.log(err,'_getcode获取数据异常');
+				})
+			},
+			submitfrom(){
+				if(this.name==''){
+					window.alert("联系人不能为空！");
+					return false
+				}
+				if(this.companyName==''){
+					window.alert("公司名称不能为空！");
+					return false
+				}
+				const reg = /^((0\d{2,3}-\d{7,8})|(1[3456789]\d{9}))$/
+				if(!reg.test(this.telephone)){
+					window.alert("请输入正确的电话号码！");
+					return false
+				}
+				if(this.smsCode==''){
+					window.alert("验证码不能为空！");
+					return false
+				}
+				var _getcode = p => post('/website/websiteUserInfo/noToken/add', p,'json');
+				_getcode({
+					name:this.name,
+					companyName:this.companyName,
+					telephone:this.telephone,
+					smsCode:this.smsCode,
+					registerModule:'1',
+				})
+				.then(res => {
+					window.alert('注册成功！');
+					this.showmodel = false
+				})
+				.catch(err => {
+					console.log(err,'_getcode获取数据异常');
+				})
 			}
 		},
 		computed:{

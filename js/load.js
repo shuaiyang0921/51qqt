@@ -32,6 +32,7 @@ function load(jsdir) {
             document.write('<script src="' + BOOTPATH + '/vue.js"></script>')
             document.write('<script src="' + BOOTPATH + '/axios.min.js"></script>')
 			document.write('<script src="' + BOOTPATH + '/service.js"></script>');
+            document.write('<script src="' + BOOTPATH + '/qs.js"></script>');
             break;
         }
         default: {
