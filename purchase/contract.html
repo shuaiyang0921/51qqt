@@ -17,829 +17,658 @@
         <link rel="stylesheet" href="../css/paas.css">
 		<script src="../js/jquery.min.js"></script>
         <script src="../js/home.js"></script>
+		<script src="../js/load.js"></script>
+		<script type="text/javascript">
+			load('axios')
+		</script>
 	</head>
 	<body>
-		<div class="bghead header">
-			<div class="flex-column flex-between homeHead f16">
-				<div class="flex-column flex-middle">
-					<a class="logosize" href="../index.html"><img src="../img/logo.png" class="imgsize" alt="企企通"></a>
-					<div class="flex-column flex-middle homenavs">
-						<ul class="flex-column flex-middle homeNav">
-							<li class="hobverPopUp">
-								<div class="hobverPopUp_text colorblue"><span>产品</span><span class="iconxiablue"></span></div>
-								<div class="homeHead_popUpStyle bghead">
-									<div class="maxwidth ">
-										<div class="flex-column xian_head">
-											<div class="homeHead_productpopUp_saas">
-												<div class="f18 homeHead_appleStytle homeHead_productpopUp_left">企业SasS云</div>
-											</div>
-											<div class="homeHead_productpopUp_right f14 flex-column flex-between">
-												<div class="homeHead_productpopUp_rightText">
-													<div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon1 colorblue">采购云<span class="iconright"></span></div>
-													<div class="f12 homeHead_productpopUp_subheading">一站式数字化采购平台</div>
-													<a>供应商管理</a>
-													<a>战略寻源</a>
-													<a>电子招投标</a>
-													<a>采购协同</a>
-													<a>合同管理</a>
-													<a>采购资源</a>
-													<a>采购分析</a>
-												</div>
-												<div class="homeHead_productpopUp_rightText">
-													<div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon2 colorblue">商城云<span class="iconright"></span></div>
-													<div class="f12 homeHead_productpopUp_subheading">为企业打造一站式交易平台</div>
-													<a>企企购商城</a>
-													<a>B2B商城</a>
-													<a>聚源池</a>
-												</div>
-												<div class="homeHead_productpopUp_rightText">
-													<div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon3 colorblue">赋能云<span class="iconright"></span></div>
-													<div class="f12 homeHead_productpopUp_subheading">中小微企快捷资产资金对接平台</div>
-													<a>企链通</a>
-													<a>企利通</a>
-													<a>企融通</a>
-													<a>企票通</a>
-													<a>企保通</a>
-													<a>企订通</a>
-												</div>
-												<div class="homeHead_productpopUp_rightText">
-													<div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon4 colorblue">营销云<span class="iconright"></span></div>
-													<div class="f12 homeHead_productpopUp_subheading">提供一站式营销解决方案</div>
-													<a>内容创意</a>
-													<a>广告投放</a>
-													<a>渠道运营</a>
-													<a>客户管理</a>
-												</div>
-											</div>
-										</div>
-										<div class="flex-column">
-											<div class="homeHead_productpopUp_saas">
-												<div class="f18 homeHead_appleStytle homeHead_productpopUp_paas_left">PaaS平台</div>
-											</div>
-											<div class="flex-column flex-between homeHead_productpopUp_paas_right">
-												<div>
-													<div class="f14 homeHead_appleStytle homeHead_productpopUp_paastitleicon1">APaaS应用开发平台</div>
-													<div class="f12 homeHead_productpopUp_paas_right_subheading">沉淀应用场景，快速二次开发</div>
-												</div>
-												<div>
-													<div class="f14 homeHead_appleStytle homeHead_productpopUp_paastitleicon2">IPaaS集成开发平台</div>
-													<div class="f12 homeHead_productpopUp_paas_right_subheading">集成第三方资源，无缝对接企业内外系统</div>
-												</div>
-												<div>
-													<div class="f14 homeHead_appleStytle homeHead_productpopUp_paastitleicon3">DPaaS数据中台</div>
-													<div class="f12 homeHead_productpopUp_paas_right_subheading">数据沉淀、建模，挖掘与分析，可视化</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class='hobverPopUp'>
-								<span class="hobverPopUp_text">解决方案</span><span class="iconxia"></span>
-								<div class="bghead homeHead_popUpStyle">
-									<div class=" maxwidth">
-										<div class="flex-column xian_head">
-											<div class="homeHead_solutionPopUp_left">
-												<div class="f18 homeHead_appleStytle homeHead_solutionPopUp_leftTitle">行业解决方案</div>
-											</div>
-											<div class="homeHead_productpopUp_right f14 flex-column">
-												<a class="homeHead_solutionPopUp_rightText" href="../solutions/manufacturing.html">
-													<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon1">高端制造</div>
-													<div class="f12 homeHead_solutionPopUp_subheading">电子/装备/整车汽配</div>
-												</a>
-												<a class="homeHead_solutionPopUp_rightText">
-													<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon2">地产建筑</div>
-													<div class="f12 homeHead_productpopUp_subheading">房地产/建筑</div>
-												</a>
-												<a class="homeHead_solutionPopUp_rightText">
-													<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon3">快消零售</div>
-													<div class="f12 homeHead_productpopUp_subheading">美妆/家电/茶酒/商超</div>
-												</a>
-												<a class="homeHead_solutionPopUp_rightText">
-													<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon4">食品餐饮</div>
-													<div class="f12 homeHead_productpopUp_subheading">食品/饮料/餐饮</div>
-												</a>
-												<a class="homeHead_solutionPopUp_rightText">
-													<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon5">金融保险</div>
-													<div class="f12 homeHead_productpopUp_subheading">银行/保险</div>
-												</a>
-												<a class="homeHead_solutionPopUp_rightText">
-													<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon6">生物制药</div>
-													<div class="f12 homeHead_productpopUp_subheading">医药/医疗</div>
-												</a>
-												<a class="homeHead_solutionPopUp_rightText">
-													<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon7">能源化工</div>
-													<div class="f12 homeHead_productpopUp_subheading">石油/天然气/化工</div>
-												</a>
-												<a class="homeHead_solutionPopUp_rightText">
-													<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon8">现代服务</div>
-													<div class="f12 homeHead_productpopUp_subheading">物业/教育/旅游/电商/公共服务</div>
-												</a>
-											</div>
-										</div>
-										<div class="flex-column xian_head">
-											<div class="homeHead_solutionPopUp_left">
-												<div class="f18 homeHead_appleStytle homeHead_solutionPopUp_leftTitle">领域解决方案</div>
-											</div>
-											<div class="homeHead_productpopUp_right f14 flex-column">
-												<a class="homeHead_solutionPopUp_rightText" href="">
-													<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon9">生产</div>
-													<div class="f12 homeHead_solutionPopUp_subheading">直接采购/间接采购</div>
-												</a>
-												<a class="homeHead_solutionPopUp_rightText">
-													<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon10">商贸</div>
-													<div class="f12 homeHead_productpopUp_subheading">标准商品/定制商品/相关服务</div>
-												</a>
-												<a class="homeHead_solutionPopUp_rightText">
-													<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon11">项目</div>
-													<div class="f12 homeHead_productpopUp_subheading">工程/研发/设备项目/营销项目</div>
-												</a>
-												<a class="homeHead_solutionPopUp_rightText">
-													<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon12">服务</div>
-													<div class="f12 homeHead_productpopUp_subheading">教培/福利/物流/营销/费用类</div>
-												</a>
-												<a class="homeHead_solutionPopUp_rightText">
-													<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon13">大宗</div>
-													<div class="f12 homeHead_productpopUp_subheading">农副/金属/化工/能源产品</div>
-												</a>
-												<a class="homeHead_solutionPopUp_rightText">
-													<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon14">办公</div>
-													<div class="f12 homeHead_productpopUp_subheading">行政物资/办公/IT类/劳保用品</div>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class=''><a href="../case-study.html">客户案例</a></li>
-							<li class="hobverPopUp">
-								<span class="hobverPopUp_text">资讯中心</span><span class="iconxia"></span>
-								<div class="bghead  homeHead_popUpStyle">
-									<div class="maxwidth">
-										<div class="flex-column">
-											<div class="homeHead_informationPopUp_left">
-												<div class="f18 homeHead_informationPopUp_Title">
-													<div class="homeHead_appleStytle homeHead_informationPopUp_leftTitle">企企通视频上新啦</div>
-													<div class="f12 homeHead_solutionPopUp_subheading">分享企业数字化转型经验、采购供应链知识</div>
-													<div class="f12 homeHead_solutionPopUp_subheading">相互学习、相互交流、相互促进</div>
-													<a class="f14 homeHead_playvidio colorbai">立即观看</a>
-												</div>
-											</div>
-											<div class="homeHead_informationPopUp_right f14 flex-column">
-												<a class="homeHead_informationPopUp_rightText" href="">
-													<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon15">企业资讯<span class="iconrightgary"></span></div>
-													<div class="f12 homeHead_solutionPopUp_subheading">了解更多关于企企通</div>
-												</a>
-												<a class="homeHead_informationPopUp_rightText">
-													<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon16">市场活动<span class="iconrightgary"></span></div>
-													<div class="f12 homeHead_productpopUp_subheading">市场动态观察</div>
-												</a>
-												<a class="homeHead_informationPopUp_rightText">
-													<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon17">干货分享<span class="iconrightgary"></span></div>
-													<div class="f12 homeHead_productpopUp_subheading">采购与供应链行业知识共享</div>
-												</a>
-												<a class="homeHead_informationPopUp_rightText">
-													<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon18">分析报告<span class="iconrightgary"></span></div>
-													<div class="f12 homeHead_productpopUp_subheading">行业权威机构数字化采购报告分享</div>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-							</li>
-							<li><a href="../cooperation.html">合作伙伴</a></li>
-							<li class="hobverPopUp">
-								<span class="hobverPopUp_text">关于我们</span><span class="iconxia"></span>
-								<div class="bghead homeHead_popUpStyle">
-									<div class="maxwidth">
-										<div class="flex-column flex-between flex-middle homeHead_aboutUsPopUp_padd">
-											<a class="homeHead_aboutUsPopUp_Text" href="../about.html">
-												<div class="f14 homeHead_aboutUsPopUp_title homeHead_appleStytle homeHead_aboutUsPopUp_titleicon1">公司介绍<span class="iconrightgary"></span></div>
-												<div class="f12 homeHead_solutionPopUp_subheading">为企业打造一站式数字化采购平台</div>
-											</a>
-											<a class="homeHead_aboutUsPopUp_Text" href="../honor.html">
-												<div class="f14 homeHead_aboutUsPopUp_title homeHead_appleStytle homeHead_aboutUsPopUp_titleicon2">荣誉资质<span class="iconrightgary"></span></div>
-												<div class="f12 homeHead_productpopUp_subheading">历年履获行业权威机构荣誉奖项及专业资质</div>
-											</a>
-											<a class="homeHead_aboutUsPopUp_Text" href="join-us.html">
-												<div class="f14 homeHead_aboutUsPopUp_title homeHead_appleStytle homeHead_aboutUsPopUp_titleicon3">加入我们<span class="iconrightgary"></span></div>
-												<div class="f12 homeHead_productpopUp_subheading">期待专业的你来加入</div>
-											</a>
-											<a class="homeHead_aboutUsPopUp_Text" href="contact-us.html">
-												<div class="f14 homeHead_aboutUsPopUp_title homeHead_appleStytle homeHead_aboutUsPopUp_titleicon4">联系我们<span class="iconrightgary"></span></div>
-												<div class="f12 homeHead_productpopUp_subheading">全心全意为客户提供全方位专业服务</div>
-											</a>
-										</div>
-									</div>
-								</div>
-								
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="flex-column flex-middle">
+		<div id="app">
+			<div class="bghead header">
+				<div class="flex-column flex-between homeHead f16">
 					<div class="flex-column flex-middle">
-						<div class="iconsize"><img src="../img/home18.png" class="imgsize" alt="电话拨号"></div>
-						<div class="homeHead_phone homeHead_appleStytle f18">400-835-1881</div>
+						<a class="logosize" href="../index.html"><img src="../img/logo.png" class="imgsize" alt="企企通"></a>
+						<div class="flex-column flex-middle homenavs">
+							<ul class="flex-column flex-middle homeNav">
+								<li class="hobverPopUp">
+									<div class="hobverPopUp_text colorblue"><span>产品</span><span class="iconxiablue"></span></div>
+									<div class="homeHead_popUpStyle bghead">
+										<div class="maxwidth ">
+											<div class="flex-column xian_head">
+												<div class="homeHead_productpopUp_saas">
+													<div class="f18 homeHead_appleStytle homeHead_productpopUp_left">企业SasS云</div>
+												</div>
+												<div class="homeHead_productpopUp_right f14 flex-column flex-between">
+													<div class="homeHead_productpopUp_rightText">
+														<div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon1 colorblue">采购云<span class="iconright"></span></div>
+														<div class="f12 homeHead_productpopUp_subheading">一站式数字化采购平台</div>
+														<a>供应商管理</a>
+														<a>战略寻源</a>
+														<a>电子招投标</a>
+														<a>采购协同</a>
+														<a>合同管理</a>
+														<a>采购资源</a>
+														<a>采购分析</a>
+													</div>
+													<div class="homeHead_productpopUp_rightText">
+														<div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon2 colorblue">商城云<span class="iconright"></span></div>
+														<div class="f12 homeHead_productpopUp_subheading">为企业打造一站式交易平台</div>
+														<a>企企购商城</a>
+														<a>B2B商城</a>
+														<a>聚源池</a>
+													</div>
+													<div class="homeHead_productpopUp_rightText">
+														<div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon3 colorblue">赋能云<span class="iconright"></span></div>
+														<div class="f12 homeHead_productpopUp_subheading">中小微企快捷资产资金对接平台</div>
+														<a>企链通</a>
+														<a>企利通</a>
+														<a>企融通</a>
+														<a>企票通</a>
+														<a>企保通</a>
+														<a>企订通</a>
+													</div>
+													<div class="homeHead_productpopUp_rightText">
+														<div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon4 colorblue">营销云<span class="iconright"></span></div>
+														<div class="f12 homeHead_productpopUp_subheading">提供一站式营销解决方案</div>
+														<a>内容创意</a>
+														<a>广告投放</a>
+														<a>渠道运营</a>
+														<a>客户管理</a>
+													</div>
+												</div>
+											</div>
+											<div class="flex-column">
+												<div class="homeHead_productpopUp_saas">
+													<div class="f18 homeHead_appleStytle homeHead_productpopUp_paas_left">PaaS平台</div>
+												</div>
+												<div class="flex-column flex-between homeHead_productpopUp_paas_right">
+													<div>
+														<div class="f14 homeHead_appleStytle homeHead_productpopUp_paastitleicon1">APaaS应用开发平台</div>
+														<div class="f12 homeHead_productpopUp_paas_right_subheading">沉淀应用场景，快速二次开发</div>
+													</div>
+													<div>
+														<div class="f14 homeHead_appleStytle homeHead_productpopUp_paastitleicon2">IPaaS集成开发平台</div>
+														<div class="f12 homeHead_productpopUp_paas_right_subheading">集成第三方资源，无缝对接企业内外系统</div>
+													</div>
+													<div>
+														<div class="f14 homeHead_appleStytle homeHead_productpopUp_paastitleicon3">DPaaS数据中台</div>
+														<div class="f12 homeHead_productpopUp_paas_right_subheading">数据沉淀、建模，挖掘与分析，可视化</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class='hobverPopUp'>
+									<span class="hobverPopUp_text">解决方案</span><span class="iconxia"></span>
+									<div class="bghead homeHead_popUpStyle">
+										<div class=" maxwidth">
+											<div class="flex-column xian_head">
+												<div class="homeHead_solutionPopUp_left">
+													<div class="f18 homeHead_appleStytle homeHead_solutionPopUp_leftTitle">行业解决方案</div>
+												</div>
+												<div class="homeHead_productpopUp_right f14 flex-column">
+													<a class="homeHead_solutionPopUp_rightText" href="../solutions/manufacturing.html">
+														<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon1">高端制造</div>
+														<div class="f12 homeHead_solutionPopUp_subheading">电子/装备/整车汽配</div>
+													</a>
+													<a class="homeHead_solutionPopUp_rightText">
+														<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon2">地产建筑</div>
+														<div class="f12 homeHead_productpopUp_subheading">房地产/建筑</div>
+													</a>
+													<a class="homeHead_solutionPopUp_rightText">
+														<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon3">快消零售</div>
+														<div class="f12 homeHead_productpopUp_subheading">美妆/家电/茶酒/商超</div>
+													</a>
+													<a class="homeHead_solutionPopUp_rightText">
+														<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon4">食品餐饮</div>
+														<div class="f12 homeHead_productpopUp_subheading">食品/饮料/餐饮</div>
+													</a>
+													<a class="homeHead_solutionPopUp_rightText">
+														<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon5">金融保险</div>
+														<div class="f12 homeHead_productpopUp_subheading">银行/保险</div>
+													</a>
+													<a class="homeHead_solutionPopUp_rightText">
+														<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon6">生物制药</div>
+														<div class="f12 homeHead_productpopUp_subheading">医药/医疗</div>
+													</a>
+													<a class="homeHead_solutionPopUp_rightText">
+														<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon7">能源化工</div>
+														<div class="f12 homeHead_productpopUp_subheading">石油/天然气/化工</div>
+													</a>
+													<a class="homeHead_solutionPopUp_rightText">
+														<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon8">现代服务</div>
+														<div class="f12 homeHead_productpopUp_subheading">物业/教育/旅游/电商/公共服务</div>
+													</a>
+												</div>
+											</div>
+											<div class="flex-column xian_head">
+												<div class="homeHead_solutionPopUp_left">
+													<div class="f18 homeHead_appleStytle homeHead_solutionPopUp_leftTitle">领域解决方案</div>
+												</div>
+												<div class="homeHead_productpopUp_right f14 flex-column">
+													<a class="homeHead_solutionPopUp_rightText" href="">
+														<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon9">生产</div>
+														<div class="f12 homeHead_solutionPopUp_subheading">直接采购/间接采购</div>
+													</a>
+													<a class="homeHead_solutionPopUp_rightText">
+														<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon10">商贸</div>
+														<div class="f12 homeHead_productpopUp_subheading">标准商品/定制商品/相关服务</div>
+													</a>
+													<a class="homeHead_solutionPopUp_rightText">
+														<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon11">项目</div>
+														<div class="f12 homeHead_productpopUp_subheading">工程/研发/设备项目/营销项目</div>
+													</a>
+													<a class="homeHead_solutionPopUp_rightText">
+														<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon12">服务</div>
+														<div class="f12 homeHead_productpopUp_subheading">教培/福利/物流/营销/费用类</div>
+													</a>
+													<a class="homeHead_solutionPopUp_rightText">
+														<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon13">大宗</div>
+														<div class="f12 homeHead_productpopUp_subheading">农副/金属/化工/能源产品</div>
+													</a>
+													<a class="homeHead_solutionPopUp_rightText">
+														<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon14">办公</div>
+														<div class="f12 homeHead_productpopUp_subheading">行政物资/办公/IT类/劳保用品</div>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class=''><a href="../case-study.html">客户案例</a></li>
+								<li class="hobverPopUp">
+									<span class="hobverPopUp_text">资讯中心</span><span class="iconxia"></span>
+									<div class="bghead  homeHead_popUpStyle">
+										<div class="maxwidth">
+											<div class="flex-column">
+												<div class="homeHead_informationPopUp_left">
+													<div class="f18 homeHead_informationPopUp_Title">
+														<div class="homeHead_appleStytle homeHead_informationPopUp_leftTitle">企企通视频上新啦</div>
+														<div class="f12 homeHead_solutionPopUp_subheading">分享企业数字化转型经验、采购供应链知识</div>
+														<div class="f12 homeHead_solutionPopUp_subheading">相互学习、相互交流、相互促进</div>
+														<a class="f14 homeHead_playvidio colorbai">立即观看</a>
+													</div>
+												</div>
+												<div class="homeHead_informationPopUp_right f14 flex-column">
+													<a class="homeHead_informationPopUp_rightText" href="">
+														<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon15">企业资讯<span class="iconrightgary"></span></div>
+														<div class="f12 homeHead_solutionPopUp_subheading">了解更多关于企企通</div>
+													</a>
+													<a class="homeHead_informationPopUp_rightText">
+														<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon16">市场活动<span class="iconrightgary"></span></div>
+														<div class="f12 homeHead_productpopUp_subheading">市场动态观察</div>
+													</a>
+													<a class="homeHead_informationPopUp_rightText">
+														<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon17">干货分享<span class="iconrightgary"></span></div>
+														<div class="f12 homeHead_productpopUp_subheading">采购与供应链行业知识共享</div>
+													</a>
+													<a class="homeHead_informationPopUp_rightText">
+														<div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon18">分析报告<span class="iconrightgary"></span></div>
+														<div class="f12 homeHead_productpopUp_subheading">行业权威机构数字化采购报告分享</div>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+								</li>
+								<li><a href="../cooperation.html">合作伙伴</a></li>
+								<li class="hobverPopUp">
+									<span class="hobverPopUp_text">关于我们</span><span class="iconxia"></span>
+									<div class="bghead homeHead_popUpStyle">
+										<div class="maxwidth">
+											<div class="flex-column flex-between flex-middle homeHead_aboutUsPopUp_padd">
+												<a class="homeHead_aboutUsPopUp_Text" href="../about.html">
+													<div class="f14 homeHead_aboutUsPopUp_title homeHead_appleStytle homeHead_aboutUsPopUp_titleicon1">公司介绍<span class="iconrightgary"></span></div>
+													<div class="f12 homeHead_solutionPopUp_subheading">为企业打造一站式数字化采购平台</div>
+												</a>
+												<a class="homeHead_aboutUsPopUp_Text" href="../honor.html">
+													<div class="f14 homeHead_aboutUsPopUp_title homeHead_appleStytle homeHead_aboutUsPopUp_titleicon2">荣誉资质<span class="iconrightgary"></span></div>
+													<div class="f12 homeHead_productpopUp_subheading">历年履获行业权威机构荣誉奖项及专业资质</div>
+												</a>
+												<a class="homeHead_aboutUsPopUp_Text" href="join-us.html">
+													<div class="f14 homeHead_aboutUsPopUp_title homeHead_appleStytle homeHead_aboutUsPopUp_titleicon3">加入我们<span class="iconrightgary"></span></div>
+													<div class="f12 homeHead_productpopUp_subheading">期待专业的你来加入</div>
+												</a>
+												<a class="homeHead_aboutUsPopUp_Text" href="contact-us.html">
+													<div class="f14 homeHead_aboutUsPopUp_title homeHead_appleStytle homeHead_aboutUsPopUp_titleicon4">联系我们<span class="iconrightgary"></span></div>
+													<div class="f12 homeHead_productpopUp_subheading">全心全意为客户提供全方位专业服务</div>
+												</a>
+											</div>
+										</div>
+									</div>
+									
+								</li>
+							</ul>
+						</div>
 					</div>
-					<a class="f16 homeHead_logintil" href="#">登录</a>
-					<a class="f14 homeHead_registertil" href="#">注册体验</a>
-				</div>
-			</div>
-			<div class="bgbai homephoneHead_height">
-				<div class="flex-column flex-between homephoneHead xian_head">
-					<a class="logosize" href="#"><img src="../img/logo.png" class="imgsize" alt="企企通"></a>
 					<div class="flex-column flex-middle">
 						<div class="flex-column flex-middle">
 							<div class="iconsize"><img src="../img/home18.png" class="imgsize" alt="电话拨号"></div>
 							<div class="homeHead_phone homeHead_appleStytle f18">400-835-1881</div>
 						</div>
-						<div class="menu_buttonstyle">
-							<div class="menu_button">
-								<div class="bar"></div>
-								<div class="bar"></div>
-								<div class="bar"></div>
-							</div>
-						</div>
+						<a class="f16 homeHead_logintil" href="#">登录</a>
+						<a class="f14 homeHead_registertil" href="#">注册体验</a>
 					</div>
 				</div>
-				<div class="shownavs">
-					<div class="homephoneHead_navs xian_head">
-						<div>
-							<div class="flex-column flex-between homephoneHead_nav">
-								<div class="f16 PingFangSCMedium">产品</div>
-								<div class="homephoneHead_navicon"><img src="../img/home44.png" class="imgsize" alt="企企通图标"></div>
+				<div class="bgbai homephoneHead_height">
+					<div class="flex-column flex-between homephoneHead xian_head">
+						<a class="logosize" href="#"><img src="../img/logo.png" class="imgsize" alt="企企通"></a>
+						<div class="flex-column flex-middle">
+							<div class="flex-column flex-middle">
+								<div class="iconsize"><img src="../img/home18.png" class="imgsize" alt="电话拨号"></div>
+								<div class="homeHead_phone homeHead_appleStytle f18">400-835-1881</div>
 							</div>
-							<div class="homephoneHead_navchild f14">
-								<div class="homephoneHead_navchild_title colorblue">企业SaaS云</div>
-								<div>
-									<div class="flex-column flex-between homephoneHead_navchild_Subhead">
-										<div class="homeHead_productpopUp_titleicon1">采购云</div>
-										<div class="homephoneHead_navicon"><img src="../img/home44.png" class="imgsize" alt="企企通图标"></div>
-									</div>
-									<div class="shownavchild_text">
-										<a class="homephoneHead_navchild_text" href="#">供应商管理</a>
-										<a class="homephoneHead_navchild_text" href="#">战略寻源</a>
-										<a class="homephoneHead_navchild_text" href="#">电子招投标</a>
-										<a class="homephoneHead_navchild_text" href="#">采购协同</a>
-										<a class="homephoneHead_navchild_text" href="#">合同管理</a>
-										<a class="homephoneHead_navchild_text" href="#">采购资源</a>
-										<a class="homephoneHead_navchild_text" href="#">采购分析</a>
-									</div>
+							<div class="menu_buttonstyle">
+								<div class="menu_button">
+									<div class="bar"></div>
+									<div class="bar"></div>
+									<div class="bar"></div>
 								</div>
-								<div>
-									<div class="flex-column flex-between homephoneHead_navchild_Subhead">
-										<div class="homeHead_productpopUp_titleicon2">商城云</div>
-										<div class="homephoneHead_navicon"><img src="../img/home44.png" class="imgsize" alt="企企通图标"></div>
-									</div>
-									<div class="shownavchild_text">
-										<a class="homephoneHead_navchild_text" href="#">企企购商城</a>
-										<a class="homephoneHead_navchild_text" href="#">B2B商城</a>
-										<a class="homephoneHead_navchild_text" href="#">聚源池</a>
-									</div>
-								</div>
-								<div>
-									<div class="flex-column flex-between homephoneHead_navchild_Subhead">
-										<div class="homeHead_productpopUp_titleicon3">赋能云</div>
-										<div class="homephoneHead_navicon"><img src="../img/home44.png" class="imgsize" alt="企企通图标"></div>
-									</div>
-									<div class="shownavchild_text">
-										<a class="homephoneHead_navchild_text" href="#">企链通</a>
-										<a class="homephoneHead_navchild_text" href="#">企利通</a>
-										<a class="homephoneHead_navchild_text" href="#">企融通</a>
-										<a class="homephoneHead_navchild_text" href="#">企票通</a>
-										<a class="homephoneHead_navchild_text" href="#">企保通</a>
-										<a class="homephoneHead_navchild_text" href="#">企订通</a>
-									</div>
-								</div>
-								<div>
-									<div class="flex-column flex-between homephoneHead_navchild_Subhead">
-										<div class="homeHead_productpopUp_titleicon4">营销云</div>
-										<div class="homephoneHead_navicon"><img src="../img/home44.png" class="imgsize" alt="企企通图标"></div>
-									</div>
-									<div class="shownavchild_text">
-										<a class="homephoneHead_navchild_text" href="#">内容创意</a>
-										<a class="homephoneHead_navchild_text" href="#">广告投放</a>
-										<a class="homephoneHead_navchild_text" href="#">渠道运营</a>
-										<a class="homephoneHead_navchild_text" href="#">客户管理</a>
-									</div>
-								</div>
-								<div class="homephoneHead_navchild_title colorblue">PaaS平台</div>
-								<a class="homephoneHead_navchild_text homeHead_productpopUp_paastitleicon1" href="#">APaaS应用开发平台</a>
-								<a class="homephoneHead_navchild_text homeHead_productpopUp_paastitleicon2" href="#">IPaaS集成开发平台</a>
-								<a class="homephoneHead_navchild_text homeHead_productpopUp_paastitleicon3" href="#">DPaaS数据中台</a>
 							</div>
 						</div>
-						<div>
-							<div class="flex-column flex-between homephoneHead_nav">
-								<div class="f16 PingFangSCMedium">解决方案</div>
-								<div class="homephoneHead_navicon"><img src="../img/home44.png" class="imgsize" alt="企企通图标"></div>
-							</div>
-							<div class="homephoneHead_navchild f14">
-								<div class="homephoneHead_navchild_title colorblue">行业解决方案</div>
-								<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon1" href="../solutions/manufacturing.html">高端制造</a>
-								<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon2" href="#">地产建筑</a>
-								<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon3" href="#">快消零售</a>
-								<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon4" href="#">食品餐饮</a>
-								<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon5" href="#">金融保险</a>
-								<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon6" href="#">生物制药</a>
-								<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon7" href="#">能源化工</a>
-								<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon8" href="#">现代服务</a>
-								<div class="homephoneHead_navchild_title colorblue">领域解决方案</div>
-								<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon9" href="#">生产</a>
-								<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon10" href="#">商贸</a>
-								<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon11" href="#">项目</a>
-								<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon12" href="#">服务</a>
-								<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon13" href="#">大宗</a>
-								<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon14" href="#">办公</a>
-							</div>
-						</div>
-						
-						<a class="flex-column flex-between homephoneHead_nav"  href="case-study.html">
-							<div class="f16">客户案例</div>
-							<!-- <div class="homephoneHead_navicon"><img src="/img/home44.png" class="imgsize" alt="企企通图标"></div> -->
-						</a>
-						<div>
-							<div class="flex-column flex-between homephoneHead_nav">
-								<div class="f16 PingFangSCMedium">资讯中心</div>
-								<div class="homephoneHead_navicon"><img src="../img/home44.png" class="imgsize" alt="企企通图标"></div>
-							</div>
-							<div class="homephoneHead_navchild f14">
-								<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon15" style="margin-top: 0px;" href="#">企业资讯</a>
-								<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon16" href="#">市场活动</a>
-								<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon17" href="#">干货分享</a>
-								<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon18" href="#">分析报告</a>
-							</div>
-						</div>
-						<a class="flex-column flex-between homephoneHead_nav" href="cooperation.html">
-							<div class="f16">合作伙伴</div>
-							<!-- <div class="homephoneHead_navicon"><img src="/img/home44.png" class="imgsize" alt="企企通图标"></div> -->
-						</a>
-						<div>
-							<div class="flex-column flex-between homephoneHead_nav">
-								<div class="f16 PingFangSCMedium">关于我们</div>
-								<div class="homephoneHead_navicon"><img src="../img/home44.png" class="imgsize" alt="企企通图标"></div>
-							</div>
-							<div class="homephoneHead_navchild f14">
-								<a class="homephoneHead_navchild_text homeHead_aboutUsPopUp_titleicon1" style="margin-top: 0px;" href="../about.html">公司介绍</a>
-								<a class="homephoneHead_navchild_text homeHead_aboutUsPopUp_titleicon2" href="../honor.html">荣誉资质</a>
-								<a class="homephoneHead_navchild_text homeHead_aboutUsPopUp_titleicon3" href="../join-us.html">加入我们</a>
-								<a class="homephoneHead_navchild_text homeHead_aboutUsPopUp_titleicon4" href="../contact-us.html">联系我们</a>
-							</div>
-						</div>
-						
 					</div>
-					<div class="f14 homeHead_registertil tac">注册体验</div>
+					<div class="shownavs">
+						<div class="homephoneHead_navs xian_head">
+							<div>
+								<div class="flex-column flex-between homephoneHead_nav">
+									<div class="f16 PingFangSCMedium">产品</div>
+									<div class="homephoneHead_navicon"><img src="../img/home44.png" class="imgsize" alt="企企通图标"></div>
+								</div>
+								<div class="homephoneHead_navchild f14">
+									<div class="homephoneHead_navchild_title colorblue">企业SaaS云</div>
+									<div>
+										<div class="flex-column flex-between homephoneHead_navchild_Subhead">
+											<div class="homeHead_productpopUp_titleicon1">采购云</div>
+											<div class="homephoneHead_navicon"><img src="../img/home44.png" class="imgsize" alt="企企通图标"></div>
+										</div>
+										<div class="shownavchild_text">
+											<a class="homephoneHead_navchild_text" href="#">供应商管理</a>
+											<a class="homephoneHead_navchild_text" href="#">战略寻源</a>
+											<a class="homephoneHead_navchild_text" href="#">电子招投标</a>
+											<a class="homephoneHead_navchild_text" href="#">采购协同</a>
+											<a class="homephoneHead_navchild_text" href="#">合同管理</a>
+											<a class="homephoneHead_navchild_text" href="#">采购资源</a>
+											<a class="homephoneHead_navchild_text" href="#">采购分析</a>
+										</div>
+									</div>
+									<div>
+										<div class="flex-column flex-between homephoneHead_navchild_Subhead">
+											<div class="homeHead_productpopUp_titleicon2">商城云</div>
+											<div class="homephoneHead_navicon"><img src="../img/home44.png" class="imgsize" alt="企企通图标"></div>
+										</div>
+										<div class="shownavchild_text">
+											<a class="homephoneHead_navchild_text" href="#">企企购商城</a>
+											<a class="homephoneHead_navchild_text" href="#">B2B商城</a>
+											<a class="homephoneHead_navchild_text" href="#">聚源池</a>
+										</div>
+									</div>
+									<div>
+										<div class="flex-column flex-between homephoneHead_navchild_Subhead">
+											<div class="homeHead_productpopUp_titleicon3">赋能云</div>
+											<div class="homephoneHead_navicon"><img src="../img/home44.png" class="imgsize" alt="企企通图标"></div>
+										</div>
+										<div class="shownavchild_text">
+											<a class="homephoneHead_navchild_text" href="#">企链通</a>
+											<a class="homephoneHead_navchild_text" href="#">企利通</a>
+											<a class="homephoneHead_navchild_text" href="#">企融通</a>
+											<a class="homephoneHead_navchild_text" href="#">企票通</a>
+											<a class="homephoneHead_navchild_text" href="#">企保通</a>
+											<a class="homephoneHead_navchild_text" href="#">企订通</a>
+										</div>
+									</div>
+									<div>
+										<div class="flex-column flex-between homephoneHead_navchild_Subhead">
+											<div class="homeHead_productpopUp_titleicon4">营销云</div>
+											<div class="homephoneHead_navicon"><img src="../img/home44.png" class="imgsize" alt="企企通图标"></div>
+										</div>
+										<div class="shownavchild_text">
+											<a class="homephoneHead_navchild_text" href="#">内容创意</a>
+											<a class="homephoneHead_navchild_text" href="#">广告投放</a>
+											<a class="homephoneHead_navchild_text" href="#">渠道运营</a>
+											<a class="homephoneHead_navchild_text" href="#">客户管理</a>
+										</div>
+									</div>
+									<div class="homephoneHead_navchild_title colorblue">PaaS平台</div>
+									<a class="homephoneHead_navchild_text homeHead_productpopUp_paastitleicon1" href="#">APaaS应用开发平台</a>
+									<a class="homephoneHead_navchild_text homeHead_productpopUp_paastitleicon2" href="#">IPaaS集成开发平台</a>
+									<a class="homephoneHead_navchild_text homeHead_productpopUp_paastitleicon3" href="#">DPaaS数据中台</a>
+								</div>
+							</div>
+							<div>
+								<div class="flex-column flex-between homephoneHead_nav">
+									<div class="f16 PingFangSCMedium">解决方案</div>
+									<div class="homephoneHead_navicon"><img src="../img/home44.png" class="imgsize" alt="企企通图标"></div>
+								</div>
+								<div class="homephoneHead_navchild f14">
+									<div class="homephoneHead_navchild_title colorblue">行业解决方案</div>
+									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon1" href="../solutions/manufacturing.html">高端制造</a>
+									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon2" href="#">地产建筑</a>
+									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon3" href="#">快消零售</a>
+									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon4" href="#">食品餐饮</a>
+									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon5" href="#">金融保险</a>
+									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon6" href="#">生物制药</a>
+									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon7" href="#">能源化工</a>
+									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon8" href="#">现代服务</a>
+									<div class="homephoneHead_navchild_title colorblue">领域解决方案</div>
+									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon9" href="#">生产</a>
+									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon10" href="#">商贸</a>
+									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon11" href="#">项目</a>
+									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon12" href="#">服务</a>
+									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon13" href="#">大宗</a>
+									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon14" href="#">办公</a>
+								</div>
+							</div>
+							
+							<a class="flex-column flex-between homephoneHead_nav"  href="case-study.html">
+								<div class="f16">客户案例</div>
+								<!-- <div class="homephoneHead_navicon"><img src="/img/home44.png" class="imgsize" alt="企企通图标"></div> -->
+							</a>
+							<div>
+								<div class="flex-column flex-between homephoneHead_nav">
+									<div class="f16 PingFangSCMedium">资讯中心</div>
+									<div class="homephoneHead_navicon"><img src="../img/home44.png" class="imgsize" alt="企企通图标"></div>
+								</div>
+								<div class="homephoneHead_navchild f14">
+									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon15" style="margin-top: 0px;" href="#">企业资讯</a>
+									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon16" href="#">市场活动</a>
+									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon17" href="#">干货分享</a>
+									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon18" href="#">分析报告</a>
+								</div>
+							</div>
+							<a class="flex-column flex-between homephoneHead_nav" href="cooperation.html">
+								<div class="f16">合作伙伴</div>
+								<!-- <div class="homephoneHead_navicon"><img src="/img/home44.png" class="imgsize" alt="企企通图标"></div> -->
+							</a>
+							<div>
+								<div class="flex-column flex-between homephoneHead_nav">
+									<div class="f16 PingFangSCMedium">关于我们</div>
+									<div class="homephoneHead_navicon"><img src="../img/home44.png" class="imgsize" alt="企企通图标"></div>
+								</div>
+								<div class="homephoneHead_navchild f14">
+									<a class="homephoneHead_navchild_text homeHead_aboutUsPopUp_titleicon1" style="margin-top: 0px;" href="../about.html">公司介绍</a>
+									<a class="homephoneHead_navchild_text homeHead_aboutUsPopUp_titleicon2" href="../honor.html">荣誉资质</a>
+									<a class="homephoneHead_navchild_text homeHead_aboutUsPopUp_titleicon3" href="../join-us.html">加入我们</a>
+									<a class="homephoneHead_navchild_text homeHead_aboutUsPopUp_titleicon4" href="../contact-us.html">联系我们</a>
+								</div>
+							</div>
+							
+						</div>
+						<div class="f14 homeHead_registertil tac">注册体验</div>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="heiheader"></div>
-        <div class="paas_topBg">
-            <div class="supplier_adver flex-column flex-middle flex-center">
-                <div class="qilian_adver_left">
-                    <div class="manufacturing_adver_title homeHead_appleStytle">合同管理</div>
-                    <div class="f16 PingFangSCMedium paas_adver_text">实现采购合同的全过程电子化管理，包括条款/条款库、合同模版、格式范本、审批及电签、电子合同库、合同履行到归档等。支持合同和协议等多种合同类型，并提供智能化的合同解决方案，包括合同条款的自动监控、纸质合同的电子化转换等</div>
-                    <div class="flex-column flex-middle f18 paas_adver_buts homeHead_appleStytle colorgary">
-                        <div>规范管控</div>
-                        <div>省时省力</div>
-                        <div>安全保障</div>
-                    </div>
-                    <div class="f14 homeHead_registertil tac homeHead_appleStytle">注册体验</div>
-                </div>
-                <div class="qilian_topImg"><img src="../images/purchase/contract1.png" class="imgsize" alt="合同管理"></div>
-            </div>
-        </div>
-        <div class="padBg bggray">
-            <div class="PingFangSCMedium tac home_title">传统合同管理现状</div>
-            <div class="flex-column flex-around">
-                <div class="flex-column manufacturing_observation_list">
-                    <div class="manufacturing_observation_img"><img src="../images/purchase/sourcing3.png" class="imgsize" alt="效率问题"></div>
-                    <div>
-                        <div class="PingFangSCMedium manufacturing_observation_title">效率问题</div>
-                        <div class="f16 manufacturing_observation_text">传统管理方式，手工操作，或者通过OA等系统，甚至采用纸质合同，在合同的草拟、审批的工作量大，流程长。 另外，合同的模版规范，合同的履行监控容易脱节，人工核对确认的工作量大，容易出错</div>
-                    </div>
-                </div>
-                <div class="flex-column manufacturing_observation_list">
-                    <div class="manufacturing_observation_img"><img src="../images/purchase/contract2.png" class="imgsize" alt="合规问题"></div>
-                    <div>
-                        <div class="PingFangSCMedium manufacturing_observation_title">合规问题</div>
-                        <div class="f16 manufacturing_observation_text">从合同草拟、审核签署到合同履行的过程较长，合同类型多样，如果没有全过程的电子化管理，合同的条款在执行时容易控制不到，导致验收、付款的脱节。 合同履行过程中会发生变更和调整，传统的手工或半自动化管理，均存在较大的合规风险</div>
-                    </div>
-                </div>
-                <div class="flex-column manufacturing_observation_list">
-                    <div class="manufacturing_observation_img"><img src="../images/purchase/contract3.png" class="imgsize" alt="协同问题"></div>
-                    <div>
-                        <div class="PingFangSCMedium manufacturing_observation_title">协同问题</div>
-                        <div class="f16 manufacturing_observation_text">合同的审核确认过程，合同文本在采供之间传递，传统方式导致企业内部、采供之间有重大的协同问题，不但影响效率，更易产生错漏</div>
-                    </div>
-                </div>
-                <div class="flex-column manufacturing_observation_list">
-                    <div class="manufacturing_observation_img"><img src="../images/purchase/contract4.png" class="imgsize" alt="遗失错漏"></div>
-                    <div>
-                        <div class="PingFangSCMedium manufacturing_observation_title">遗失错漏</div>
-                        <div class="f16 manufacturing_observation_text">传统的纸质管理或半自动化管理，容易出现遗失错漏，比如合同的查找困难，合同丢失、不能按合同结算和付款等。 尤其当合同发生变更和调整，且调整频繁时，后续的结算会非常困难</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="padBg">
-            <div class="PingFangSCMedium tac home_title">核心功能</div>
-            <div class=""><img src="../images/purchase/contract5.png" class="imgsize" alt="核心功能"></div>
-        </div>
-        <div class="padBg bggray">
-            <div class="PingFangSCMedium tac home_title">产品价值</div>
-            <div class="flex-column flex-center flex-middle">
-                <div class="Q3k_navList_img"><img src="../images/purchase/contract6.png" class="imgsize" alt="实现合同管理的全过程数字化， 提高了管理效率"></div>
-                <div class="scf_navList_right">
-                    <div class="scf_navList_rightTitle homeHead_appleStytle">实现合同管理的全过程数字化，提高了管理效率</div>
-                    <div class="purchase_navList_rightText f14">实现从条款、模版到范本，审批签署、变更调整到履行监控的合同全过程数字化管理，可高效协同、状态管控、动态查询，极大提高了工作效率</div>
-                    <div class="tac colorbai homeHead_appleStytle aPaaS_head_but">立即咨询</div>
-                </div>
-            </div>
-            <div class="flex-column flex-center flex-middle bgbai">
-                <div class="scf_navList_right">
-                    <div class="scf_navList_rightTitle homeHead_appleStytle">实现了合同的结构化管理，使传统文本变为可控的流程</div>
-                    <div class="purchase_navList_rightText f14">将合同文本转变为结构化的控制条款、文本内容，有效控制后续的业务单据，使得价格、结算及付款按合同条款进行；整个合同管理链条上的上下游单据相互关联，可实现双向溯源</div>
-                    <div class="tac colorbai homeHead_appleStytle aPaaS_head_but">立即咨询</div>
-                </div>
-                <div class="Q3k_navList_img"><img src="../images/purchase/contract7.png" class="imgsize" alt="实现了合同的结构化管理， 使传统文本变为可控的流程"></div>
-            </div>
-            <div class="flex-column flex-center flex-middle">
-                <div class="Q3k_navList_img"><img src="../images/purchase/contract8.png" class="imgsize" alt="灵活的审批和签署功能， 给用户提供了更多便利"></div>
-                <div class="scf_navList_right">
-                    <div class="scf_navList_rightTitle homeHead_appleStytle">灵活的审批和签署功能，给用户提供了更多便利</div>
-                    <div class="purchase_navList_rightText f14">提供灵活的审批及签署解决方案，包括与OA集成、与电子签章集成、与移动集成等方式，并可按类型灵活配置</div>
-                    <div class="tac colorbai homeHead_appleStytle aPaaS_head_but">立即咨询</div>
-                </div>
-            </div>
-            <div class="flex-column flex-center flex-middle bgbai">
-                <div class="scf_navList_right">
-                    <div class="scf_navList_rightTitle homeHead_appleStytle">智能化提醒和监控，减少了差错，提高了合规性</div>
-                    <div class="purchase_navList_rightText f14">自动提醒和预警，提醒渠道和方式多样，主动防呆，减少用户差错；提供智能化的合同文本转电子化的功能，应对强势供应商的业务场景</div>
-                    <div class="tac colorbai homeHead_appleStytle aPaaS_head_but">立即咨询</div>
-                </div>
-                <div class="Q3k_navList_img"><img src="../images/purchase/contract9.png" class="imgsize" alt="智能化提醒和监控， 减少了差错，提高了合规性"></div>
-            </div>
-        </div>
-        
-        
-        <div class="manufacturing_bg manufacturing_bgImg">
-            <div class="PingFangSCMedium tac home_title">成就更多客户成功，他们都选择了企企通</div>
-            <div class="bgbai flex-column flex-middle flex-between">
-                <div class="flex-column flex-middle manufacturing_case_navs">
-                    <div class="flex-column flex-middle flex-center manufacturing_case_nav"><div class="manufacturing_case_navsImg"><img src="../images/solutions/service10.png" class="imgsize" alt="猿辅导"></div></div>
-                    <div class="flex-column flex-middle flex-center"><div class="manufacturing_case_navsImg"><img src="../images/solutions/service11.png" class="imgsize" alt="永旺梦乐城"></div></div>
-					<div class="flex-column flex-middle flex-center"><div class="manufacturing_case_navsImg"><img src="../images/solutions/service12.png" class="imgsize" alt="森大国际集团"></div></div>
-					<div class="flex-column flex-middle flex-center"><div class="manufacturing_case_navsImg"><img src="../images/solutions/service13.png" class="imgsize" alt="柏斯琴行"></div></div>
-                </div>
-				<div class="flex-column flex-middle flex-center manufacturing_case_but"><div class="f14 manufacturing_case_butsty tac homeHead_appleStytle">查看更多案例</div></div>
-            </div>
-			<div class="manufacturing_lists">
-				<div class="porelative manufacturing_list">
-					<div class="manufacturing_listleft colorbai">
-						<div class="homeHead_appleStytle manufacturing_listleft_title">「猿辅导」升级供应商管理系统，助推在线教育行业采购数字化转型</div>
-						<div class="f16 manufacturing_listleft_text">作为在线教育科技领先者，猿辅导升级供应商管理系统，提升供方准入、考察评审、寻源、订单协同、绩效管理等方面的管理水平，实现采购的数字化转型</div>
-						<div class="flex-column flex-middle flex-between f16 PingFangSCMedium tac">
-							<div class="manufacturing_listleft_but1">查看案例</div>
-							<div class="manufacturing_listleft_but2">在线教育</div>
-							<div class="manufacturing_listleft_but3">SRM采购/供应链</div>
+			<div class="heiheader"></div>
+			<div class="paas_topBg">
+				<div class="supplier_adver flex-column flex-middle flex-center">
+					<div class="qilian_adver_left">
+						<div class="manufacturing_adver_title homeHead_appleStytle">合同管理</div>
+						<div class="f16 PingFangSCMedium paas_adver_text">实现采购合同的全过程电子化管理，包括条款/条款库、合同模版、格式范本、审批及电签、电子合同库、合同履行到归档等。支持合同和协议等多种合同类型，并提供智能化的合同解决方案，包括合同条款的自动监控、纸质合同的电子化转换等</div>
+						<div class="flex-column flex-middle f18 paas_adver_buts homeHead_appleStytle colorgary">
+							<div>规范管控</div>
+							<div>省时省力</div>
+							<div>安全保障</div>
 						</div>
+						<div class="f14 homeHead_registertil tac homeHead_appleStytle">注册体验</div>
 					</div>
-					<div class="manufacturing_listright_img"><img src="../images/solutions/service14.png" class="imgsize" alt="猿辅导"></div>
+					<div class="qilian_topImg"><img src="../images/purchase/contract1.png" class="imgsize" alt="合同管理"></div>
 				</div>
-				<div class="porelative ">
-					<div class="manufacturing_listleft colorbai">
-						<div class="homeHead_appleStytle manufacturing_listleft_title">「永旺梦乐城」引入SRM采购平台，实现采购阳光化、规范化</div>
-						<div class="f16 manufacturing_listleft_text">日企内部管理精细化、流程执行严谨、部门管理设置复杂等经营理念，企企通结合企业管理需求的SRM采购平台，助力企业搭建SRM采购平台，实现采购的阳光化、规范化</div>
-						<div class="flex-column flex-middle flex-between f16 PingFangSCMedium tac">
-							<div class="manufacturing_listleft_but1">查看案例</div>
-							<div class="manufacturing_listleft_but2">百货商贸</div>
-							<div class="manufacturing_listleft_but3">SRM采购/供应链</div>
+			</div>
+			<div class="padBg bggray">
+				<div class="PingFangSCMedium tac home_title">传统合同管理现状</div>
+				<div class="flex-column flex-around">
+					<div class="flex-column manufacturing_observation_list" v-for="item in supplierData">
+						<div class="manufacturing_observation_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
+						<div>
+							<div class="PingFangSCMedium manufacturing_observation_title">{{item.title}}</div>
+							<div class="f16 manufacturing_observation_text">{{item.intro}}</div>
 						</div>
 					</div>
-					<div class="manufacturing_listright_img"><img src="../images/solutions/service15.png" class="imgsize" alt="永旺梦乐城"></div>
+					<!-- <div class="flex-column manufacturing_observation_list">
+						<div class="manufacturing_observation_img"><img src="../images/purchase/sourcing3.png" class="imgsize" alt="效率问题"></div>
+						<div>
+							<div class="PingFangSCMedium manufacturing_observation_title">效率问题</div>
+							<div class="f16 manufacturing_observation_text">传统管理方式，手工操作，或者通过OA等系统，甚至采用纸质合同，在合同的草拟、审批的工作量大，流程长。 另外，合同的模版规范，合同的履行监控容易脱节，人工核对确认的工作量大，容易出错</div>
+						</div>
+					</div>
+					<div class="flex-column manufacturing_observation_list">
+						<div class="manufacturing_observation_img"><img src="../images/purchase/contract2.png" class="imgsize" alt="合规问题"></div>
+						<div>
+							<div class="PingFangSCMedium manufacturing_observation_title">合规问题</div>
+							<div class="f16 manufacturing_observation_text">从合同草拟、审核签署到合同履行的过程较长，合同类型多样，如果没有全过程的电子化管理，合同的条款在执行时容易控制不到，导致验收、付款的脱节。 合同履行过程中会发生变更和调整，传统的手工或半自动化管理，均存在较大的合规风险</div>
+						</div>
+					</div>
+					<div class="flex-column manufacturing_observation_list">
+						<div class="manufacturing_observation_img"><img src="../images/purchase/contract3.png" class="imgsize" alt="协同问题"></div>
+						<div>
+							<div class="PingFangSCMedium manufacturing_observation_title">协同问题</div>
+							<div class="f16 manufacturing_observation_text">合同的审核确认过程，合同文本在采供之间传递，传统方式导致企业内部、采供之间有重大的协同问题，不但影响效率，更易产生错漏</div>
+						</div>
+					</div>
+					<div class="flex-column manufacturing_observation_list">
+						<div class="manufacturing_observation_img"><img src="../images/purchase/contract4.png" class="imgsize" alt="遗失错漏"></div>
+						<div>
+							<div class="PingFangSCMedium manufacturing_observation_title">遗失错漏</div>
+							<div class="f16 manufacturing_observation_text">传统的纸质管理或半自动化管理，容易出现遗失错漏，比如合同的查找困难，合同丢失、不能按合同结算和付款等。 尤其当合同发生变更和调整，且调整频繁时，后续的结算会非常困难</div>
+						</div>
+					</div> -->
 				</div>
-				<div class="porelative ">
-					<div class="manufacturing_listleft colorbai">
-						<div class="homeHead_appleStytle manufacturing_listleft_title">「森大国际集团」携手企企通，建立采购管理平台，提高供应链管理水平</div>
-						<div class="f16 manufacturing_listleft_text">通过建立全新的采购管理平台，实现采购供应链管理高效率、低成本、高品质的运营，打造快速决策、智慧决策、灵活决策的供应链体系，打造“一带一路”走出去企业转型的标杆</div>
-						<div class="flex-column flex-middle flex-between f16 PingFangSCMedium tac">
-							<div class="manufacturing_listleft_but1">查看案例</div>
-							<div class="manufacturing_listleft_but2">国际贸易</div>
-							<div class="manufacturing_listleft_but3">SRM采购/供应链</div>
+			</div>
+			<div class="padBg">
+				<div class="PingFangSCMedium tac home_title">{{supplierImgData[0].bigTitle}}</div>
+				<div class=""><img :src="supplierImgData[0].image" class="imgsize" :alt="supplierImgData[0].bigTitle"></div>
+			</div>
+			<div class="padBg bggray">
+				<div class="PingFangSCMedium tac home_title">产品价值</div>
+				<div v-for="(item,index) in supplierListData">
+					<div class="flex-column flex-center flex-middle" v-if="index%2==0">
+						<div class="Q3k_navList_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
+						<div class="scf_navList_right">
+							<div class="scf_navList_rightTitle homeHead_appleStytle">{{item.title}}</div>
+							<div class="purchase_navList_rightText f14">{{item.intro}}</div>
+							<div class="f14 colorblue home_Enabling_text" v-for="items in item.productChildList">{{items.intro}}</div>
+							<div class="tac colorbai homeHead_appleStytle aPaaS_head_but">立即咨询</div>
 						</div>
 					</div>
-					<div class="manufacturing_listright_img"><img src="../images/solutions/service16.png" class="imgsize" alt="森大国际集团"></div>
-				</div>
-				<div class="porelative">
-					<div class="manufacturing_listleft colorbai">
-						<div class="homeHead_appleStytle manufacturing_listleft_title">世界知名钢琴企「柏斯琴行」应用企企通SRM系统，提高采购管理水平</div>
-						<div class="f16 manufacturing_listleft_text">柏斯琴行，世界钢琴企业前三强，通过企企通SRM系统，对接打通内部ERP系统，完成采供双方的信息共享和业务协作，实现供应链管理的数字化转型升级</div>
-						<div class="flex-column flex-middle flex-between f16 PingFangSCMedium tac">
-							<div class="manufacturing_listleft_but1">查看案例</div>
-							<div class="manufacturing_listleft_but2">教育培训</div>
-							<div class="manufacturing_listleft_but3">SRM采购/供应链</div>
+					<div class="flex-column flex-center flex-middle bgbai" v-else>
+						<div class="scf_navList_right">
+							<div class="scf_navList_rightTitle homeHead_appleStytle">{{item.title}}</div>
+							<div class="purchase_navList_rightText f14">{{item.intro}}</div>
+							<div class="f14 colorblue home_Enabling_text" v-for="items in item.productChildList">{{items.intro}}</div>
+							<div class="tac colorbai homeHead_appleStytle aPaaS_head_but">立即咨询</div>
 						</div>
+						<div class="Q3k_navList_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
 					</div>
-					<div class="manufacturing_listright_img"><img src="../images/solutions/service17.png" class="imgsize" alt="柏斯琴行"></div>
 				</div>
 			</div>
 			
-        </div>
-		<div class="bggray">
-			<div class="tac home_product_title PingFangSCMedium">信赖之选，世界<span class="colorblue">500</span>强和<span class="colorblue">30+</span>行业领军企</div>
-			<div class="home_Case_companys">
-				<div class="home_Case_companylist flex-column flex-center">
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
-					<div class="home_Case_companyImg"><img src="../img/home100.png" class="imgsize" alt=""></div>
+			
+			<iframe src="../iframe/achieveCust.html" style="width: 100%;height: 700px;" frameborder="0" scrolling="no"></iframe>
+			<iframe src="../iframe/companys.html" style="width: 100%;height: 866px;" frameborder="0" scrolling="no"></iframe>
+			<div class="home_register flex-column flex-center flex-middle colorbai">
+				<div class="PingFangSCMedium">
+					<div class="home_register_text">开启数字化供应链与采购新体验</div>
+					<div class="tar">赋能企业数字化转型与变革</div>
 				</div>
+				<div class="f18 homeHead_registertil home_register_but  homeHead_appleStytle  colorbai" @click="showregistermodal">注册体验</div>
 			</div>
-		</div>
-		<div class="home_register flex-column flex-center flex-middle colorbai">
-			<div class="PingFangSCMedium">
-				<div class="home_register_text">开启数字化供应链与采购新体验</div>
-				<div class="tar">赋能企业数字化转型与变革</div>
-			</div>
-			<a class="f18 homeHead_registertil home_register_but  homeHead_appleStytle  colorbai" href="#">注册体验</a>
-		</div>
-		<div class="bgfooter">
-			<div class="footer maxwidth">
-				<div class="footer_topstyle xian_footer flex-column">
-					<div class="colorbai footer_leftstyle">
-						<div class="footer_logosize"><img src="../img/qqtbot.png" class="imgsize" alt="企企通"></div>
-						<div class="flex-column flex-middle"><span class="f14">服务热线：</span><span class="f18 PingFangSCMedium">400-835-1881</span></div>
-						<div class="footer_textpadd"><span class="f14">市场合作：</span><span class="f18 PingFangSCMedium">marketing@51qqt.com</span></div>
-						<div class="flex-column tac f14">
-							<div class="footer_contactimgpadd">
-								<div class="footer_contactimg"><img src="../img/home15.png" class="imgsize" alt="企企通"></div>
-								<div>企企通官方公众号</div>
+			<div class="bgfooter">
+				<div class="footer maxwidth">
+					<div class="footer_topstyle xian_footer flex-column">
+						<div class="colorbai footer_leftstyle">
+							<div class="footer_logosize"><img src="../img/qqtbot.png" class="imgsize" alt="企企通"></div>
+							<div class="flex-column flex-middle"><span class="f14">服务热线：</span><span class="f18 PingFangSCMedium">400-835-1881</span></div>
+							<div class="footer_textpadd"><span class="f14">市场合作：</span><span class="f18 PingFangSCMedium">marketing@51qqt.com</span></div>
+							<div class="flex-column tac f14">
+								<div class="footer_contactimgpadd">
+									<div class="footer_contactimg"><img src="../img/home15.png" class="imgsize" alt="企企通"></div>
+									<div>企企通官方公众号</div>
+								</div>
+								<div>
+									<div class="footer_contactimg"><img src="../img/home62.png" class="imgsize" alt="企企通"></div>
+									<div>售前咨询</div>
+								</div>
+							</div>
+						</div>
+						<div class="f14 flex-column flex-between footer_rightstyle">
+							<div>
+								<div class="homeHead_appleStytle colorbai">产品</div>
+								<div class="flex-column footer_linkstyle">
+									<div class="footer_linkmag">
+										<div class="colorbai">SaaS云</div>
+										<a href="#">采购云</a>
+										<a href="#">商城云</a>
+										<a href="#">赋能云</a>
+										<a href="#">营销云</a>
+									</div>
+									<div class="">
+										<div class="colorbai">PaaS平台</div>
+										<a href="#">APaaS应用开发平台</a>
+										<a href="#">IPaaS集成开发平台</a>
+										<a href="#">DPaaS数据中台</a>
+									</div>
+								</div>
 							</div>
 							<div>
-								<div class="footer_contactimg"><img src="../img/home62.png" class="imgsize" alt="企企通"></div>
-								<div>售前咨询</div>
+								<div class="homeHead_appleStytle colorbai">解决方案</div>
+								<div class="flex-column footer_linkstyle">
+									<div class="footer_linkmag">
+										<div class="colorbai">行业解决方案</div>
+										<a href="#">高端制造</a>
+										<a href="#">地产建筑</a>
+										<a href="#">快消零售</a>
+										<a href="#">食品餐饮</a>
+										<a href="#">金融保险</a>
+										<a href="#">生物制药</a>
+										<a href="#">能源化工</a>
+										<a href="#">现代服务</a>
+									</div>
+									<div class="">
+										<div class="colorbai">领域解决方案</div>
+										<a href="#">生产</a>
+										<a href="#">大宗物资</a>
+										<a href="#">商贸</a>
+										<a href="#">项目</a>
+										<a href="#">服务</a>
+										<a href="#">行政办公</a>	
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="homeHead_appleStytle colorbai">客户案例</div>
+								<a href="case-study.html" class="footer_linkstyle">客户案例</a>
+							</div>
+							<div>
+								<div class="homeHead_appleStytle colorbai">资讯中心</div>
+								<div class="flex-column footer_linkstyle">
+									<div class="footer_linkmag">
+										<a href="#" class="footer_firstlinkmag">企业资讯</a>
+										<a href="#">市场活动</a>
+										<a href="#">干货分享</a>
+										<a href="#">分析报告</a>
+										<a href="#">微视频</a>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="homeHead_appleStytle colorbai">关于企企通</div>
+								<div class="flex-column footer_linkstyle">
+									<div class="footer_linkmag">
+										<a href="../about.html" class="footer_firstlinkmag">公司介绍</a>
+										<a href="#">荣誉资质</a>
+										<a href="#">加入我们</a>
+										<a href="#">联系我们</a>
+									</div>
+								</div>
 							</div>
 						</div>
+						
 					</div>
-					<div class="f14 flex-column flex-between footer_rightstyle">
-						<div>
-							<div class="homeHead_appleStytle colorbai">产品</div>
-							<div class="flex-column footer_linkstyle">
-								<div class="footer_linkmag">
-									<div class="colorbai">SaaS云</div>
-									<a href="#">采购云</a>
-									<a href="#">商城云</a>
-									<a href="#">赋能云</a>
-									<a href="#">营销云</a>
-								</div>
-								<div class="">
-									<div class="colorbai">PaaS平台</div>
-									<a href="#">APaaS应用开发平台</a>
-									<a href="#">IPaaS集成开发平台</a>
-									<a href="#">DPaaS数据中台</a>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="homeHead_appleStytle colorbai">解决方案</div>
-							<div class="flex-column footer_linkstyle">
-								<div class="footer_linkmag">
-									<div class="colorbai">行业解决方案</div>
-									<a href="#">高端制造</a>
-									<a href="#">地产建筑</a>
-									<a href="#">快消零售</a>
-									<a href="#">食品餐饮</a>
-									<a href="#">金融保险</a>
-									<a href="#">生物制药</a>
-									<a href="#">能源化工</a>
-									<a href="#">现代服务</a>
-								</div>
-								<div class="">
-									<div class="colorbai">领域解决方案</div>
-									<a href="#">生产</a>
-									<a href="#">大宗物资</a>
-									<a href="#">商贸</a>
-									<a href="#">项目</a>
-									<a href="#">服务</a>
-									<a href="#">行政办公</a>	
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="homeHead_appleStytle colorbai">客户案例</div>
-							<a href="case-study.html" class="footer_linkstyle">客户案例</a>
-						</div>
-						<div>
-							<div class="homeHead_appleStytle colorbai">资讯中心</div>
-							<div class="flex-column footer_linkstyle">
-								<div class="footer_linkmag">
-									<a href="#" class="footer_firstlinkmag">企业资讯</a>
-									<a href="#">市场活动</a>
-									<a href="#">干货分享</a>
-									<a href="#">分析报告</a>
-									<a href="#">微视频</a>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="homeHead_appleStytle colorbai">关于企企通</div>
-							<div class="flex-column footer_linkstyle">
-								<div class="footer_linkmag">
-									<a href="../about.html" class="footer_firstlinkmag">公司介绍</a>
-									<a href="#">荣誉资质</a>
-									<a href="#">加入我们</a>
-									<a href="#">联系我们</a>
-								</div>
-							</div>
-						</div>
+					<div class="f14 flex-column footer_topstyle footer_aboutstyle">
+						<a href="#">友情链接</a>
+						<a href="#">SRM管理系统</a>
+						<a href="#">51采购网</a>
 					</div>
-					
+					<div></div>
 				</div>
-				<div class="f14 flex-column footer_topstyle footer_aboutstyle">
-					<a href="#">友情链接</a>
-					<a href="#">SRM管理系统</a>
-					<a href="#">51采购网</a>
+				<div class="f14 footer_bottom flex-column flex-center">
+					<div>版权所有 © 2021 深圳市企企通科技-粤ICP备15109055号</div>
+					<a href="#" class="footer_bottomtext">隐私政策</a>
+					<a href="#">网站声明</a>
 				</div>
-				<div></div>
 			</div>
-			<div class="f14 footer_bottom flex-column flex-center">
-				<div>版权所有 © 2021 深圳市企企通科技-粤ICP备15109055号</div>
-				<a href="#" class="footer_bottomtext">隐私政策</a>
-				<a href="#">网站声明</a>
-			</div>
-		</div>
-		<div class="register_modal flex-column flex-middle">
-			<div class="registe_form">
-				<div class="registe_form_cancel"><img src="../img/home114.png" class="imgsize" alt=""></div>
-				<div class="registe_form_bg"><img src="../img/home47.png" class="imgsize" alt=""></div>
-				<div class="registe_form_title homeHead_appleStytle"><span class="colorblue">立即构建</span>企业数字化采购协同平台</div>
-				<div class="f16 flex-column flex-middle registe_form_magbot">
-					<div class="registe_form_text PingFangSCMedium">联系人：</div>
-					<div class="registe_form_input"><input type="text" class="imgsize" placeholder="请输入您的姓名"></div>
+			<div class="register_modal flex-column flex-middle" v-if="showmodel">
+				<div class="registe_form">
+					<div class="registe_form_cancel" @click="hederegistermodal"><img src="../img/home114.png" class="imgsize" alt=""></div>
+					<div class="registe_form_bg"><img src="../img/home47.png" class="imgsize" alt=""></div>
+					<div class="registe_form_title homeHead_appleStytle"><span class="colorblue">立即构建</span>企业数字化采购协同平台</div>
+					<div class="f16 flex-column flex-middle registe_form_magbot">
+						<div class="registe_form_text PingFangSCMedium">联系人：</div>
+						<div class="registe_form_input"><input type="text" class="imgsize" placeholder="请输入您的姓名"></div>
+					</div>
+					<div class="f16 flex-column flex-middle registe_form_magbot">
+						<div class="registe_form_text PingFangSCMedium">公司名称：</div>
+						<div class="registe_form_input"><input type="text" class="imgsize" placeholder="请输入您的公司名全称"></div>
+					</div>
+					<div class="f16 flex-column flex-middle registe_form_magbot">
+						<div class="registe_form_text PingFangSCMedium">手机号码：</div>
+						<div class="registe_form_input"><input type="number" class="imgsize" placeholder="请输入您的手机号码"></div>
+					</div>
+					<div class="f16 flex-column flex-middle registe_form_Vercodemagbot">
+						<div class="registe_form_text PingFangSCMedium">验证码：</div>
+						<div class="registe_form_Vercode"><input type="number" class="imgsize" placeholder="请输入您的手机号码"></div>
+						<div class="registe_form_codebut colorbai">获取验证码</div>
+					</div>
+					<div class="f16 registe_form_submit PingFangSCMedium colorbai">立即提交</div>
 				</div>
-				<div class="f16 flex-column flex-middle registe_form_magbot">
-					<div class="registe_form_text PingFangSCMedium">公司名称：</div>
-					<div class="registe_form_input"><input type="text" class="imgsize" placeholder="请输入您的公司名全称"></div>
-				</div>
-				<div class="f16 flex-column flex-middle registe_form_magbot">
-					<div class="registe_form_text PingFangSCMedium">手机号码：</div>
-					<div class="registe_form_input"><input type="number" class="imgsize" placeholder="请输入您的手机号码"></div>
-				</div>
-				<div class="f16 flex-column flex-middle registe_form_Vercodemagbot">
-					<div class="registe_form_text PingFangSCMedium">验证码：</div>
-					<div class="registe_form_Vercode"><input type="number" class="imgsize" placeholder="请输入您的手机号码"></div>
-					<div class="registe_form_codebut colorbai">获取验证码</div>
-				</div>
-				<div class="f16 registe_form_submit PingFangSCMedium colorbai">立即提交</div>
 			</div>
 		</div>
 	</body>
-	
-	<script>
-		// $("#footer").load("./footer.html");
-		$(document).ready(function(){
-			var onOff = true;
-			var Onnav = true;
-			$('.menu_button').click(function(){
-				event.stopPropagation();
-				$(this).toggleClass("cross");
-				if(onOff){
-					$('.header').css("height","100%");
-					$('.shownavs').show();
-				}else{
-					$('.header').css("height","auto");
-					$('.shownavs').hide();
-				}
-				onOff = !onOff;
-			});
-			$('.homephoneHead_nav').click(function(){
-				event.stopPropagation();
-				index=$(this).index();
-				if(Onnav){
-					$(this).siblings(".homephoneHead_navchild").show();
-					$(this).find('.PingFangSCMedium').css("color","#005CEF");
-					$(this).find('.homephoneHead_navicon').css("transform","translateY(12px) rotate(180deg)");
-				}else{
-					$(this).siblings(".homephoneHead_navchild").hide();
-					$(this).find('.PingFangSCMedium').css("color","#222222");
-					$(this).find('.homephoneHead_navicon').css("transform","none");
-				}
-				Onnav = !Onnav;
-			});
-			$('.homephoneHead_navchild_Subhead').click(function(){
-				event.stopPropagation();
-				$('.homephoneHead_navchild_Subhead').css("color","#222222")
-				$('.homephoneHead_navchild_Subhead').find('.homephoneHead_navicon').css("transform","none")
-				index=$(this).index();
-				$(this).css("color","#005CEF")
-				$(this).siblings(".shownavchild_text").show();
-				$(this).parent().siblings().find(".shownavchild_text").hide();
-				$(this).find('.homephoneHead_navicon').css("transform","translateY(8px) rotate(180deg)");
-			});
-			var changenum = 0
-			// console.log($('.homeHead_tabs>div'))
-			setInterval(()=>{
-				if(changenum>=3){
-					changenum=0
-				}else{
-					changenum++;
-				}
-				$('.homeHead_tabs>div').removeClass('homeHead_tab')
-				$('.homeHead_tabs>div').eq(changenum).addClass('homeHead_tab')
-				$('.homeHead_adverstyle').animate({'left':-(changenum*100)+'%'},0);
-			},3000);
-			$('.homeHead_tabs>div').click(function(){
-				event.stopPropagation();
-				index=$(this).index();
-				$('.homeHead_tabs>div').removeClass('homeHead_tab')
-				$('.homeHead_tabs>div').eq(index).addClass('homeHead_tab')
-				changenum = index
-				$('.homeHead_adverstyle').animate({'left':-(changenum*100)+'%'},0);
-			});
-			$('.homeHead_registertil').click(function(){
-				event.stopPropagation();
-				$('.register_modal').css("display","flex");
-			});
-			$('.registe_form_cancel').click(function(){
-				event.stopPropagation();
-				$('.register_modal').hide();
-			});
-            $('.manufacturing_case_navs>div').click(function(){
-				event.stopPropagation();
-				index=$(this).index();
-				$(this).addClass('manufacturing_case_nav').siblings().removeClass('manufacturing_case_nav')
-				$('.manufacturing_lists>div').eq(index).addClass('manufacturing_list').siblings().removeClass('manufacturing_list')
-			});
-            var navNum = 0
-            if(getQueryVariable('navNum')){
-                navNum = getQueryVariable('navNum')
-            }
-            $('.paas_navs>div').eq(navNum).addClass('paas_nav').siblings().removeClass('paas_nav')
-			$('.hideModel>div').eq(navNum).addClass('showModel').siblings().removeClass('showModel')
-            $('.paas_navs>div').click(function(){
-				event.stopPropagation();
-				navNum=$(this).index();
-				$(this).addClass('paas_nav').siblings().removeClass('paas_nav')
-				$('.hideModel>div').eq(navNum).addClass('showModel').siblings().removeClass('showModel')
-			});
-   		});
-    </script>
 </html>
+<script>
+	var vm = new Vue({
+		el:'#app',
+		data(){
+			return {
+				supplierData:[],
+				supplierImgData:[],
+				supplierListData:[],
+				showmodel:false
+			}
+		},
+		watch: {
+		},
+		created(){
+			getHost('els')
+			this.getdata()
+		},
+		mounted(){
+		
+		},
+		methods: {
+			getdata(){
+				that = this
+				var _getData = p => get('/product/websiteProduct/noToken/queryByPageName', p);
+				_getData({pageName:'33'})
+				.then(res => {
+					that.supplierData = res.result['1']
+					that.supplierImgData = res.result['2']
+					that.supplierListData = res.result['3']
+				})
+				.catch(err => {
+					console.log(err,'_getData获取数据异常');
+				})
+			},
+			showregistermodal(){
+				this.showmodel = true
+			},
+			hederegistermodal(){
+				this.showmodel = false
+			},
+		},
+		computed:{
+			
+		},
+	})
+</script>

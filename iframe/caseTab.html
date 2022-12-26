@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>企企通</title>
+		<link rel="stylesheet" href="../css/flex-layout.css" />
+		<link rel="stylesheet" href="../css/reset.css" />
+        <!-- 头部底部样式 -->
+		<link rel="stylesheet" href="../css/index.css" />
+		<!-- 首页样式 -->
+		<link rel="stylesheet" href="../css/homestyle.css" />
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/load.js"></script>
+		<script type="text/javascript">
+			load('axios')
+		</script>
+	</head>
+	<body>
+		<div id="app">
+            <div class="home_Case">
+				<div class="tac home_product_title PingFangSCMedium">成就更多客户成功，他们都选择了企企通</div>
+				<div>
+					<div class="flex-column home_Case_info" v-for="(item,index) in CaseList" v-if="Caseindex==index">
+						<div class="home_Caseimg"><img :src="item.image" class="imgsize" :alt="item.tag"></div>
+						<div class="home_Case_inforight">
+							<div class="f16 home_Case_inforight_title">{{item.intro}}</div>
+							<div class="home_Case_inforightImg"><img :src="item.logo" class="imgsize" :alt="item.tag"></div>
+							<div class="flex-column flex-between">
+								<div class="f16 PingFangSCMedium">{{item.tag}}</div>
+								<a class="f14 colorblue" href="#">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="home_Case_tabs flex-column flex-center">
+					<div v-for="(item,index) in CaseList" :class="Caseindex==index?'home_Case_tab':''" @click="changeCaseindex(index)"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+	<script>
+		var vm = new Vue({
+            el: '#app',
+			data(){
+				return {
+					CaseList:[],
+                    Caseindex:0
+				}
+			},
+			watch: {
+			},
+			created(){
+                getHost('els')
+			    this.getdata()
+
+			},
+			mounted(){
+            },
+			methods: {
+                getdata(){
+                    that = this
+                    var _getCaseData = p => get('/general/websiteGeneral/noToken/queryIndexData', p);
+                    _getCaseData({})
+                    .then(res => {
+                        that.CaseList = res.result['首页-客户评价'];
+                    })
+                    .catch(err => {
+                        console.log(err,'_getCaseData获取数据异常');
+                    })
+                    setInterval(()=>{
+                        if(that.Caseindex>=that.CaseList.length-1){
+                            that.Caseindex=0
+                        }else{
+                            that.Caseindex++;
+                        }
+                    },3000);
+                },
+                changeCaseindex(index){
+                    this.Caseindex = index
+                }
+			},
+			computed:{
+			},
+		})
+    </script>
+</html>
