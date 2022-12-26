@@ -462,7 +462,7 @@
 						<div class="home_product_saasimg"><img :src="item.icon" class="imgsize" :alt="item.intro"></div>
 						<div class="home_product_saasTitle PingFangSCMedium">{{item.intro}}</div>
 						<div class="f14 home_product_saasText">{{item.description}}</div>
-						<a class="f14 colorblue" href="./purchase/index.html">了解更多<span class="home_product_saasMoreicon"><img src="./img/home83.png" class="imgsize" alt="了解更多"></span></a>
+						<a class="f14 colorblue" :href="item.remark">了解更多<span class="home_product_saasMoreicon"><img src="./img/home83.png" class="imgsize" alt="了解更多"></span></a>
 					</div>
 				</div>
 				<div class="f26 homeHead_appleStytle">PaaS平台</div>
@@ -472,7 +472,7 @@
 						<div class="home_product_paasright">
 							<div class="home_product_paasTitle PingFangSCMedium">{{item.intro}}</div>
 							<div class="f14 home_product_saasText">{{item.description}}</div>
-							<div class="f14 colorblue">了解更多<span class="home_product_saasMoreicon"><img src="./img/home83.png" class="imgsize" alt=""></span></div>
+							<a class="f14 colorblue" :href="item.remark">了解更多<span class="home_product_saasMoreicon"><img src="./img/home83.png" class="imgsize" alt="了解更多"></span></a>
 						</div>
 					</div>
 				</div>
