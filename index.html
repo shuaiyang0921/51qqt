@@ -495,7 +495,7 @@
 			<div class="home_Solution">
 				<div class="tac home_product_title PingFangSCMedium colorbai">我们为全行业提供更适用的客户解决方案</div>
 				<div class="f20 tac home_Solution_tabs flex-column">
-					<div v-for="(item,index) in SolutionList" @click="changenavstop(index)" :class="index==navstopIndex?'home_Solution_tab':''" >{{item[1][0].type_dictText}}</div>
+					<div v-for="(item,index) in SolutionList" @click="changenavstop(index,item)" :class="index==navstopIndex?'home_Solution_tab':''" >{{item[1][0].type_dictText}}</div>
 					
 				</div>
 				<div class="flex-column flex-top home_Solution_item" v-for="(item,index) in SolutionList" :class="index==navstopIndex?'showitem':''">
@@ -873,7 +873,12 @@
 				$('.homeHead_tabs>div').eq(this.changenum).addClass('homeHead_tab').siblings().removeClass('homeHead_tab')
 				$('.homeHead_adverstyle').animate({'left':-(this.changenum*100)+'%'},0);
 			},
-			changenavstop(index){
+			changenavstop(index,item){
+				item[1].forEach(i=>{
+					if (item[0][0]==i.name_dictText){
+						this.pageName=i.name
+					}
+				})
 				this.navstopIndex = index
 				this.Solutionindex = 0
 			},
