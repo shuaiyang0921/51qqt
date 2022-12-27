@@ -12,7 +12,7 @@
 		<!-- 首页样式 -->
 		<link rel="stylesheet" href="./css/homestyle.css" />
         <!-- 荣耀资质样式 -->
-        <link rel="stylesheet" href="./css/cooperation.css">
+        <link rel="stylesheet" href="./css/caseStudy.css">
 		<script src="js/jquery.min.js"></script>
 		<script src="./js/load.js"></script>
 		<script type="text/javascript">
@@ -173,7 +173,7 @@
 										</div>
 									</div>
 								</li>
-								<li class=''><a href="#">客户案例</a></li>
+								<li><a class='colorblue' href="case-study.html">客户案例</a></li>
 								<li class="hobverPopUp">
 									<span class="hobverPopUp_text">资讯中心</span><span class="iconxia"></span>
 									<div class="bghead  homeHead_popUpStyle">
@@ -210,9 +210,9 @@
 									</div>
 									
 								</li>
-								<li><a href="#">合作伙伴</a></li>
+								<li><a href="cooperation.html">合作伙伴</a></li>
 								<li class="hobverPopUp">
-									<span class="hobverPopUp_text colorblue">关于我们</span><span class="iconxiablue"></span>
+									<span class="hobverPopUp_text">关于我们</span><span class="iconxia"></span>
 									<div class="bghead homeHead_popUpStyle">
 										<div class="maxwidth">
 											<div class="flex-column flex-between flex-middle homeHead_aboutUsPopUp_padd">
@@ -224,11 +224,11 @@
 													<div class="f14 homeHead_aboutUsPopUp_title homeHead_appleStytle homeHead_aboutUsPopUp_titleicon2">荣誉资质<span class="iconrightgary"></span></div>
 													<div class="f12 homeHead_productpopUp_subheading">历年履获行业权威机构荣誉奖项及专业资质</div>
 												</a>
-												<a class="homeHead_aboutUsPopUp_Text" href="">
+												<a class="homeHead_aboutUsPopUp_Text" href="join-us.html">
 													<div class="f14 homeHead_aboutUsPopUp_title homeHead_appleStytle homeHead_aboutUsPopUp_titleicon3">加入我们<span class="iconrightgary"></span></div>
 													<div class="f12 homeHead_productpopUp_subheading">期待专业的你来加入</div>
 												</a>
-												<a class="homeHead_aboutUsPopUp_Text" href="">
+												<a class="homeHead_aboutUsPopUp_Text" href="contact-us.html">
 													<div class="f14 homeHead_aboutUsPopUp_title homeHead_appleStytle homeHead_aboutUsPopUp_titleicon4">联系我们<span class="iconrightgary"></span></div>
 													<div class="f12 homeHead_productpopUp_subheading">全心全意为客户提供全方位专业服务</div>
 												</a>
@@ -358,7 +358,7 @@
 								</div>
 							</div>
 							
-							<a class="flex-column flex-between homephoneHead_nav"  href="#">
+							<a class="flex-column flex-between homephoneHead_nav colorblue"  href="case-study.html">
 								<div class="f16">客户案例</div>
 								<!-- <div class="homephoneHead_navicon"><img src="./img/home44.png" class="imgsize" alt="企企通图标"></div> -->
 							</a>
@@ -374,7 +374,7 @@
 									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon18" href="#">分析报告</a>
 								</div>
 							</div>
-							<a class="flex-column flex-between homephoneHead_nav">
+							<a class="flex-column flex-between homephoneHead_nav" href="cooperation.html">
 								<div class="f16">合作伙伴</div>
 								<!-- <div class="homephoneHead_navicon"><img src="./img/home44.png" class="imgsize" alt="企企通图标"></div> -->
 							</a>
@@ -386,8 +386,8 @@
 								<div class="homephoneHead_navchild f14">
 									<a class="homephoneHead_navchild_text homeHead_aboutUsPopUp_titleicon1" style="margin-top: 0px;" href="about.html">公司介绍</a>
 									<a class="homephoneHead_navchild_text homeHead_aboutUsPopUp_titleicon2" href="honor.html">荣誉资质</a>
-									<a class="homephoneHead_navchild_text homeHead_aboutUsPopUp_titleicon3" href="#">加入我们</a>
-									<a class="homephoneHead_navchild_text homeHead_aboutUsPopUp_titleicon4" href="#">联系我们</a>
+									<a class="homephoneHead_navchild_text homeHead_aboutUsPopUp_titleicon3" href="join-us.html">加入我们</a>
+									<a class="homephoneHead_navchild_text homeHead_aboutUsPopUp_titleicon4" href="contact-us.html">联系我们</a>
 								</div>
 							</div>
 							
@@ -397,90 +397,62 @@
 				</div>
 			</div>
 			<div class="heiheader"></div>
-			<div class="cooperation_adver colorbai">
-				<div class="cooperation_adver_title homeHead_appleStytle">供应链生态<br/>合作·共赢</div>
-				<div class="f16 cooperation_adver_text">与合作伙伴一起<br/>共建数字化采购供应链生态，推动企业数字化发展变革</div>
-				<a class="f14 homeHead_registertil tac homeHead_appleStytle">申请加入</a>
-			</div>
-			<div class="cooperation_type">
-				<div class="PingFangSCMedium tac home_title">合作伙伴招募类型</div>
-				<div class="flex-column flex-between">
-					<div class="cooperation_type_list flex-column" v-for="item in cooperationInfo">
-						<div class="cooperation_type_listleft"><img :src="item.image" class="imgsize" :alt="item.title"></div>
-						<div class="cooperation_type_listright">
-							<div class="PingFangSCMedium cooperation_type_listrightTitle">{{item.title}}</div>
-							<div class="f16 cooperation_type_listrightText">{{item.intro}}</div>
-							<div class="f14 cooperation_type_listrightBut" v-if="item.tag==null" @click="showregistermodal">立即加入</div>
-							<div class="f12 cooperation_type_listrightSpan" v-else>
-								<span v-for="items in item.tag.split(',')">{{items}}</span>
+			<div class="caseStudyInfo_bg">
+				<div class="flex-column f16 flex-middle bgbai news_navs">
+                    <div v-for="item in industryList" :class="typeIndex==item.type?'news_navschenck':''" @click="changetype(item.type)" >{{item.name}}</div>
+				</div>
+				<div class="flex-column flex-top" v-if="typeIndex!=4">
+					<div class="news_left">
+						<div class="flex-column flex-top news_list" v-for="item in InfoData"  v-if="InfoData.length!=0" @click="tznewsInfo(item.id)">
+                            <div class="news_listimg"><img :src="item.image" class="imgsize" :alt="item.title"></div>
+                            <div class="news_listright">
+                                <div class="f18 homeHead_appleStytle news_listright_title">{{item.title}}</div>
+                                <div class="f14 news_listright_text">{{item.description}}</div>
+                                <div class="f14 flex-column flex-middle flex-between">
+                                    <div class="news_listright_but">{{item.tag}}</div>
+                                    <div class="colorhui888">{{item.createTime}}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tac f26"  v-if="InfoData.length==0">
+                            暂无数据
+                        </div>
+                        <div class="caseStudy_FilterPages flex-column flex-middle flex-center">
+                            <div class="Pagesprev"><img src="images/caseStudy/caseStudy4.png" class="imgsize" alt="上一页" @click="prevPage"></div>
+                            <div class="f16 flex-column flex-middle caseStudy_FilterPages_nums tac">
+                                <div v-for="item in Pagenun" :class="currentPage==item?'caseStudy_FilterPages_num':''" @click="changePage(item)">{{item}}</div>
+                            </div>
+                            <div class="Pagesnext"><img src="images/caseStudy/caseStudy3.png" class="imgsize" alt="下一页" @click="nextPage"></div>
+                        </div>
+					</div>
+					<div class="caseStudyInfo_right">
+						<div class="caseStudyInfo_right_img"><img src="./images/caseStudy/caseStudy6.png" class="imgsize" alt="获取更多采购干货分享"></div>
+						<div class="caseStudyInfo_rightBot">
+							<div class="homeHead_appleStytle caseStudyInfo_rightBot_title">热门案例</div>
+							<div class="flex-column">
+								<div class="caseStudyInfo_rightBot_icon tac">
+									<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy7.png" class="imgsize" alt="第一"></div>
+									<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy8.png" class="imgsize" alt="第二"></div>
+									<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy9.png" class="imgsize" alt="第三"></div>
+									<div class="caseStudyInfo_rightBot_iconImg">4</div>
+								</div>
+								<div class="f16 caseStudyInfo_rightBot_text">
+									<a v-for="item in hotList" :href="'caseStudyInfo.html?id='+item.id">{{item.intro}}</a>
+								</div>
 							</div>
+							
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="cooperation_why">
-				<div class="PingFangSCMedium tac home_title">为什么选择与企企通合作</div>
-				<div class="flex-column">
-					<div class="cooperation_why_left">
-						<div class="cooperation_why_lefttop"><img src="./images/cooperation/cooperation5.png" class="imgsize" alt="品牌实力"></div>
-						<div class="colorbai PingFangSCMedium cooperation_why_leftTitle">品牌实力</div>
-						<div class="f16 cooperation_why_leftText">企企通在<span>SRM赛道持续领先</span><br/>
-							服务众多<span>500强</span>及<span>中小微企业客户</span><br/>
-							国家级“高新技术企业”及多项安全/ISO认证<br/> 
-							先后获得“中国企业服务创新成长50强”“大中华区IT服务业独角兽大奖”等<span>30+行业</span>权威荣誉奖项</div>
-					</div>
-					<div class="cooperation_why_right flex-column">
-						<div class="cooperation_why_rightList tac" v-for="item in suppliernumData">
-							<div class="cooperation_why_rightImg"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
-							<div class="PingFangSCMedium cooperation_why_rightTitle">{{item.title}}</div>
-							<div class="f16  cooperation_why_rightText">{{item.intro}}</div>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-			<div class="home_partners" :style="{backgroundImage: 'url('+ partnersImg + ')'}">
-				<div class="home_partners_bgsty">
-					<div class="tac home_product_title PingFangSCMedium home_partners_img">合作伙伴</div>
-				</div>
-			</div>
-			<div class="cooperation_become">
-				<div class="PingFangSCMedium colorbai tac home_title">马上成为企企通合作伙伴</div>
-				<div class="cooperation_becomeImg"><img src="images/cooperation/cooperation8.png" class="imgsize" alt="马上成为企企通合作伙伴"></div>
-				<div class="flex-column flex-around f20 homeHead_appleStytle colorbai cooperation_becomeText tac">
-					<div>1.提出申请</div>
-					<div>2.申请确认</div>
-					<div>3.合作洽谈</div>
-					<div>4.培训及授权</div>
-					<div>5.合同签约，发放证书</div>
-				</div>
-			</div>
-			<div class="cooperation_becomeBot">
-				<div class="cooperation_becomeBotform flex-column">
-					<div class="cooperation_becomeBotform_img"><img src="images/cooperation/cooperation9.png" class="imgsize" alt="马上成为企企通合作伙伴"></div>
-					<div class="cooperation_becomeBotform_right">
-						<div class="f16 flex-column flex-middle cooperation_form_magbot">
-							<div class="registe_form_text PingFangSCMedium">公司名称：</div>
-							<div class="cooperation_form_input"><input v-model="companyName" type="text" class="imgsize" placeholder="请输入您的公司名全称"></div>
-						</div>
-						<div class="f16 flex-column flex-middle cooperation_form_magbot">
-							<div class="registe_form_text PingFangSCMedium">联系人：</div>
-							<div class="cooperation_form_input"><input v-model="name" type="text" class="imgsize" placeholder="请输入您的姓名"></div>
-						</div>
-						<div class="f16 flex-column flex-middle cooperation_form_magbot">
-							<div class="registe_form_text PingFangSCMedium">手机号码：</div>
-							<div class="cooperation_form_input"><input v-model="telephone" type="number" class="imgsize" placeholder="请输入您的手机号码"></div>
-						</div>
-						<div class="f16 flex-column flex-middle cooperation_form_magbot">
-							<div class="registe_form_text PingFangSCMedium">验证码：</div>
-							<div class="flex-column flex-middle cooperation_form_Vercodemagbot">
-								<div class="cooperation_form_Vercode"><input v-model="smsCode" type="number" class="imgsize" placeholder="请输入您的手机号码"></div>
-								<div class="colorblue PingFangSCMedium" @click="getcode">获取验证码</div>
-							</div>
-						</div>
-						<div class="f16 tac cooperation_form_submit homeHead_appleStytle colorbai" @click="submitfrom()">立即加入</div>
-					</div>
-				</div>
+                <div class="flex-column flex-between" v-else>
+                    <div v-for="item in InfoData" class="news_vidio_list bgbai">
+                        <div class="news_vidio_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
+                        <div class="news_vidio_pad">
+                            <div class="f20 news_vidio_title PingFangSCMedium">{{item.title}}</div>
+                            <div class="f14 news_vidio_text">{{item.description}}</div>
+                        </div>
+                    </div>
+                </div>
 			</div>
 			<div class="home_register flex-column flex-center flex-middle colorbai">
 				<div class="PingFangSCMedium">
@@ -553,7 +525,7 @@
 							</div>
 							<div>
 								<div class="homeHead_appleStytle colorbai">客户案例</div>
-								<a href="#" class="footer_linkstyle">客户案例</a>
+								<a href="case-study.html" class="footer_linkstyle">客户案例</a>
 							</div>
 							<div>
 								<div class="homeHead_appleStytle colorbai">资讯中心</div>
@@ -601,22 +573,22 @@
 					<div class="registe_form_title homeHead_appleStytle"><span class="colorblue">立即构建</span>企业数字化采购协同平台</div>
 					<div class="f16 flex-column flex-middle registe_form_magbot">
 						<div class="registe_form_text PingFangSCMedium">联系人：</div>
-						<div class="registe_form_input"><input v-model="name" type="text" class="imgsize" placeholder="请输入您的姓名"></div>
+						<div class="registe_form_input"><input type="text" class="imgsize" placeholder="请输入您的姓名"></div>
 					</div>
 					<div class="f16 flex-column flex-middle registe_form_magbot">
 						<div class="registe_form_text PingFangSCMedium">公司名称：</div>
-						<div class="registe_form_input"><input type="text" v-model="companyName" class="imgsize" placeholder="请输入您的公司名全称"></div>
+						<div class="registe_form_input"><input type="text" class="imgsize" placeholder="请输入您的公司名全称"></div>
 					</div>
 					<div class="f16 flex-column flex-middle registe_form_magbot">
 						<div class="registe_form_text PingFangSCMedium">手机号码：</div>
-						<div class="registe_form_input"><input type="number" v-model="telephone" class="imgsize" placeholder="请输入您的手机号码"></div>
+						<div class="registe_form_input"><input type="number" class="imgsize" placeholder="请输入您的手机号码"></div>
 					</div>
 					<div class="f16 flex-column flex-middle registe_form_Vercodemagbot">
 						<div class="registe_form_text PingFangSCMedium">验证码：</div>
-						<div class="registe_form_Vercode"><input type="number" v-model="smsCode" class="imgsize" placeholder="请输入验证码"></div>
-						<div class="registe_form_codebut colorbai" @click="getcode">获取验证码</div>
+						<div class="registe_form_Vercode"><input type="number" class="imgsize" placeholder="请输入您的手机号码"></div>
+						<div class="registe_form_codebut colorbai">获取验证码</div>
 					</div>
-					<div class="f16 registe_form_submit PingFangSCMedium colorbai" @click="submitfrom()">立即提交</div>
+					<div class="f16 registe_form_submit PingFangSCMedium colorbai">立即提交</div>
 				</div>
 			</div>
 		</div>
@@ -627,22 +599,31 @@
 		el:'#app',
 		data(){
 			return {
-				cooperationInfo:[],
-				suppliernumData:[],
-				partnersImg:[],
+                industryList:[
+					{name:'全部',type:''},
+					{name:'企业资讯',type:'0'},
+					{name:'市场活动',type:'1'},
+					{name:'干货分享',type:'2'},
+					{name:'分析报告',type:'3'},
+					{name:'微视频',type:'4'}
+				],
+				InfoData:[],
+				hotList:[],
+                Pagenun:[],
 				showmodel:false,
-				Listindex:0,
-				name:'',
-				companyName:'',
-				telephone:'',
-				smsCode:'',
+                currentPage:1,
+                typeIndex:''
 			}
 		},
 		watch: {
 		},
 		created(){
 			getHost('els')
+            if(getQueryVariable('navnum')){
+                this.typeIndex = getQueryVariable('navnum')
+            }
 			this.getdata()
+			this.gethotdata()
 		},
 		mounted(){
 		
@@ -650,20 +631,32 @@
 		methods: {
 			getdata(){
 				that = this
-				var _getData = p => get('/content/websiteCooperativePartner/noToken/queryPageData', p);
-				_getData().then(res => {
-					that.cooperationInfo = res.result['1']
-					that.suppliernumData = res.result['2']
+				var _getData = p => get('/information/noToken/frontList', p);
+				_getData({
+					type:that.typeIndex,
+					pageNo:this.currentPage,
+					pageSize:10
+				}).then(res => {
+					that.InfoData = res.result.records
+					that.Pagenun = []
+					for(let i=1;i<=res.result.pages;i++){
+						that.Pagenun.push(i)
+					}
+					if(res.result.pages==0){
+						that.Pagenun = [1]
+					}
 				}).catch(err => {
 					console.log(err,'_getData获取数据异常');
 				})
-				var _getData = p => get('/general/websiteGeneral/noToken/queryIndexData', p);
-				_getData({})
-				.then(res => {
-					that.partnersImg = res.result['首页-合作伙伴'];
-				})
-				.catch(err => {
-					console.log(err,'_getData获取数据异常');
+			},
+			gethotdata(){
+				that = this
+				var _gethotData = p => get('/works/caseWork/noToken/hot', p);
+				_gethotData({}).then(res => {
+					that.hotList = res.result
+					
+				}).catch(err => {
+					console.log(err,'_gethotData获取数据异常');
 				})
 			},
 			showregistermodal(){
@@ -672,67 +665,29 @@
 			hederegistermodal(){
 				this.showmodel = false
 			},
-			showvidiomodal(){
-				this.showVidio = true
+            changetype(type){
+				this.typeIndex = type
+				this.getdata()
 			},
-			hidevidiomodal(){
-				this.showVidio = false
+            changePage(item){
+				this.currentPage = item
+				this.getdata()
 			},
-			changeindex(index){
-				this.Listindex = index
+            prevPage(){
+				if(this.currentPage!=1){
+					this.currentPage--
+					this.getdata()
+				}
 			},
-			getcode(){
-				const reg = /^((0\d{2,3}-\d{7,8})|(1[3456789]\d{9}))$/
-				if(!reg.test(this.telephone)){
-					window.alert("请输入正确的电话号码！");
-					return false
+			nextPage(){
+				if(this.currentPage!=this.Pagenun.length){
+					this.currentPage++
+					this.getdata()
 				}
-				var _getcode = p => post('/account/sms', p,'json');
-				_getcode({
-					mobile:this.telephone,
-					smsmode:"1"
-				})
-				.then(res => {
-					window.alert(res.message);
-				})
-				.catch(err => {
-					console.log(err,'_getcode获取数据异常');
-				})
 			},
-			submitfrom(){
-				if(this.name==''){
-					window.alert("联系人不能为空！");
-					return false
-				}
-				if(this.companyName==''){
-					window.alert("公司名称不能为空！");
-					return false
-				}
-				const reg = /^((0\d{2,3}-\d{7,8})|(1[3456789]\d{9}))$/
-				if(!reg.test(this.telephone)){
-					window.alert("请输入正确的电话号码！");
-					return false
-				}
-				if(this.smsCode==''){
-					window.alert("验证码不能为空！");
-					return false
-				}
-				var _getcode = p => post('/website/websiteUserInfo/noToken/add', p,'json');
-				_getcode({
-					name:this.name,
-					companyName:this.companyName,
-					telephone:this.telephone,
-					smsCode:this.smsCode,
-					registerModule:'1',
-				})
-				.then(res => {
-					window.alert('注册成功！');
-					this.showmodel = false
-				})
-				.catch(err => {
-					console.log(err,'_getcode获取数据异常');
-				})
-			}
+            tznewsInfo(id){
+                window.location.href = './newsInfo.html?id='+id
+            }
 		},
 		computed:{},
 	})

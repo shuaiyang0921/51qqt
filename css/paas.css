@@ -93,3 +93,10 @@
 .mall_navs_textwidth{width: 320px;}
 .Q3k_navList_img{width: 520px;height: 310px;margin: 50px}
 .purchase_navList_rightText{color: #888888;line-height: 24px;margin-bottom: 20px;}
+.darentong_change_leftwid{width: calc(100% - 408px);}
+.darentong_change_left{padding: 32px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;margin: 12px;width: calc(50% - 88px);}
+.darentong_change_right{padding: 32px;width: 320px;height: 252px;background: url(../images/purchase/darentong2.png) no-repeat center center;background-size: cover;margin: 12px;box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;}
+.darentong_change_img{width: 48px;height: 48px;margin-right: 24px;}
+.darentong_change_title{line-height: 30px;margin-bottom: 8px;}
+.darentong_change_lefttext{color: #555555;height: 44px;line-height: 22px;}
+.darentong_change_text{color: #555555;width: 248px;line-height: 22px;}
