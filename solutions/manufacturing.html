@@ -397,10 +397,10 @@
 				</div>
 			</div>
 			<div class="heiheader"></div>
-			<div class="manufacturing_adver colorbai">
-				<div class="manufacturing_adver_title homeHead_appleStytle">高端制造行业数字化采购</div>
+			<div class="colorbai" :style="banner.backgroundImage">
+				<div class="manufacturing_adver_title homeHead_appleStytle">{{banner.title}}</div>
 				<div class="manufacturing_adver_title">解决方案</div>
-				<div class="f18 PingFangSCMedium manufacturing_adver_text">深耕制造行业数字化，面向工业制造、电子制造、汽车制造、科技制造等，通过采购与供应链数字化赋能，构建一站式数字化采购管理平台</div>
+				<div class="f18 PingFangSCMedium manufacturing_adver_text">{{banner.intro}}</div>
 				<div class="f14 homeHead_registertil tac homeHead_appleStytle">注册体验</div>
 			</div>
 			<div class="manufacturing_bg bggray">
@@ -589,6 +589,7 @@
 				supplierData:[],
 				supplierImgData:[],
 				supplierListData:[],
+				banner:{},
 				showmodel:false
 			}
 		},
@@ -604,14 +605,25 @@
 		methods: {
 			getdata(){
 				that = this
+				that.getUrlParam()
 				var _getData = p => get('/websiteSolution/noToken/queryByPageName', p);
-				_getData({pageName: '7'}).then(res => {
+				_getData({pageName: this.pageName}).then(res => {
 					that.supplierData = res.result['1']
 					that.supplierImgData = res.result['2']
 					that.supplierListData = res.result['3']
 				}).catch(err => {
 					console.log(err,'_getData获取数据异常');
 				})
+				var _getBannerData = p => get('/banner/noToken/queryByModule', p);
+				_getBannerData({module: this.pageName}).then(res => {
+					that.banner=res.result[0];
+					that.banner.backgroundImage="background: url("+that.banner.image+") no-repeat center center;background-size: cover;padding: 60px 0 72px 120px;"
+					console.log(res.result[0])
+					console.log("==========")
+				}).catch(err => {
+					console.log(err,'_getBannerData获取数据异常');
+				})
+
 			},
 			showregistermodal(){
 				this.showmodel = true
@@ -619,6 +631,17 @@
 			hederegistermodal(){
 				this.showmodel = false
 			},
+			getUrlParam(){
+				var url = window.location.href ;             //获取当前url
+				var dz_url = url.split('#')[0];                //获取#/之前的字符串
+				var cs = dz_url.split('?')[1];                //获取?之后的参数字符串
+				var cs_arr = cs.split('&');                    //参数字符串分割为数组
+				var cs={};
+				for(var i=0;i<cs_arr.length;i++){         //遍历数组，拿到json对象
+					cs[cs_arr[i].split('=')[0]] = cs_arr[i].split('=')[1]
+				}
+				this.pageName = cs.name;
+			}
 		},
 		computed:{},
 	})
