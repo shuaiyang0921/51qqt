@@ -377,10 +377,10 @@
 									<div class="homephoneHead_navicon"><img src="./img/home44.png" class="imgsize" alt="企企通图标"></div>
 								</div>
 								<div class="homephoneHead_navchild f14">
-									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon15" style="margin-top: 0px;" href="#">企业资讯</a>
-									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon16" href="#">市场活动</a>
-									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon17" href="#">干货分享</a>
-									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon18" href="#">分析报告</a>
+									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon15" style="margin-top: 0px;" href="./news.html?navnum=0">企业资讯</a>
+									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon16" href="./news.html?navnum=1">市场活动</a>
+									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon17" href="./news.html?navnum=2">干货分享</a>
+									<a class="homephoneHead_navchild_text homeHead_solutionPopUp_titleicon18" href="./news.html?navnum=3">分析报告</a>
 								</div>
 							</div>
 							<a class="flex-column flex-between homephoneHead_nav" href="cooperation.html">
@@ -531,7 +531,7 @@
 							<div class="home_Case_inforightImg"><img :src="item.logo" class="imgsize" :alt="item.tag"></div>
 							<div class="flex-column flex-between">
 								<div class="f16 PingFangSCMedium">{{item.tag}}</div>
-								<a class="f14 colorblue" href="">了解更多<span class="home_product_saasMoreicon"><img src="./img/home83.png" class="imgsize" alt="了解更多"></span></a>
+								<a class="f14 colorblue" :href="'./newsInfo.html?id='+item.correlationId">了解更多<span class="home_product_saasMoreicon"><img src="./img/home83.png" class="imgsize" alt="了解更多"></span></a>
 							</div>
 						</div>
 					</div>
