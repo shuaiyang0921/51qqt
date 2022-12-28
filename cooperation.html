@@ -669,12 +669,12 @@
 				})
 				var _getData = p => get('/general/websiteGeneral/noToken/queryIndexData', p);
 				_getData({})
-				.then(res => {
-					that.partnersImg = res.result['首页-合作伙伴'];
-				})
-				.catch(err => {
-					console.log(err,'_getData获取数据异常');
-				})
+						.then(res => {
+							that.partnersImg = res.result['首页-合作伙伴'];
+						})
+						.catch(err => {
+							console.log(err,'_getData获取数据异常');
+						})
 			},
 			showregistermodal(){
 				this.showmodel = true
@@ -702,12 +702,12 @@
 					mobile:this.telephone,
 					smsmode:"1"
 				})
-				.then(res => {
-					window.alert(res.message);
-				})
-				.catch(err => {
-					console.log(err,'_getcode获取数据异常');
-				})
+						.then(res => {
+							window.alert(res.message);
+						})
+						.catch(err => {
+							console.log(err,'_getcode获取数据异常');
+						})
 			},
 			submitfrom(){
 				if(this.name==''){
@@ -727,26 +727,24 @@
 					window.alert("验证码不能为空！");
 					return false
 				}
-				$('.homeHead_tabs>div').removeClass('homeHead_tab')
-				$('.homeHead_tabs>div').eq(changenum).addClass('homeHead_tab')
-				$('.homeHead_adverstyle').animate({'left':-(changenum*100)+'%'},0);
-			},3000);
-			$('.homeHead_tabs>div').click(function(){
-				event.stopPropagation();
-				index=$(this).index();
-				$('.homeHead_tabs>div').removeClass('homeHead_tab')
-				$('.homeHead_tabs>div').eq(index).addClass('homeHead_tab')
-				changenum = index
-				$('.homeHead_adverstyle').animate({'left':-(changenum*100)+'%'},0);
-			});
-			$('.homeHead_registertil').click(function(){
-				event.stopPropagation();
-				$('.register_modal').css("display","flex");
-			});
-			$('.registe_form_cancel').click(function(){
-				event.stopPropagation();
-				$('.register_modal').hide();
-			});
-   		});
+				var _getcode = p => post('/website/websiteUserInfo/noToken/add', p,'json');
+				_getcode({
+					name:this.name,
+					companyName:this.companyName,
+					telephone:this.telephone,
+					smsCode:this.smsCode,
+					registerModule:'1',
+				})
+						.then(res => {
+							window.alert('注册成功！');
+							this.showmodel = false
+						})
+						.catch(err => {
+							console.log(err,'_getcode获取数据异常');
+						})
+			}
+		},
+		computed:{},
+	})
     </script>
 </html>
