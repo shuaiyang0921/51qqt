@@ -449,7 +449,7 @@
 						<div class="mall_navs" v-for="(item,index) in purchaseMallData" v-if="index>2">
 							<div class="f24 PingFangSCMedium"><span class="mall_navs_img"><img :src="item.icon" class="imgsize" :alt="item.title"></span>{{item.title}}</div>
 							<div class="mall_navs_text mall_navs_textwidth f16" v-html="item.intro"></div>
-							<a class="f14 colorblue" href="item.link"><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
+							<a class="f14 colorblue" :href="item.link"><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
 						</div>
 					</div>
 				</div>
@@ -463,7 +463,7 @@
 							<div class="scf_navList_rightTitle homeHead_appleStytle">{{item.childName}}</div>
 							<div class="scf_navList_rightLable f16 PingFangSCMedium bgbai">{{item.title}}</div>
 							<div class="scf_navList_rightText f14">{{item.intro}}</div>
-							<div class="f14 colorblue">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
+							<div class="f14 colorblue" @click="changePage(item.link)">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
 						</div>
 					</div>
 					<div class="flex-column flex-center flex-middle bgbai" v-else>
@@ -471,7 +471,7 @@
 							<div class="scf_navList_rightTitle homeHead_appleStytle">{{item.childName}}</div>
 							<div class="scf_navList_rightLable f16 PingFangSCMedium bggray">{{item.title}}</div>
 							<div class="scf_navList_rightText f14">{{item.intro}}</div>
-							<div class="f14 colorblue">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
+							<div class="f14 colorblue"  @click="changePage(item.link)">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
 						</div>
 						<div class="scf_navList_img"><img :src="item.image" class="imgsize" :alt="item.childName"></div>
 					</div>
@@ -665,6 +665,10 @@
 			},
 			changeNav(index){
 				this.changeindex = index
+			},
+			changePage(url){
+				console.log(url)
+				window.location.href=url;
 			}
 		},
 		computed:{
