@@ -438,7 +438,7 @@
 							<div class="scf_navList_rightTitle homeHead_appleStytle">{{item.childName}}</div>
 							<div class="scf_navList_rightLable f16 PingFangSCMedium bgbai">{{item.title}}</div>
 							<div class="scf_navList_rightText f14" v-html="item.intro" ></div>
-							<div class="f14 colorblue">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
+							<div class="f14 colorblue" @click="changePage(item.link)">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
 						</div>
 					</div>
 				</div>
@@ -663,6 +663,9 @@
 			},
 			changeNav(index){
 				this.changeindex = index
+			},
+			changePage(url){
+				window.location.href=url;
 			}
 		},
 		computed:{
