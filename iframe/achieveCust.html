@@ -38,7 +38,7 @@
 					<div class="porelative" v-for="(item,index) in achieveCustlist" v-if="index==navsindex">
 						<div class="manufacturing_listleft colorbai">
 							<div class="homeHead_appleStytle manufacturing_listleft_title">{{item.intro}}</div>
-							<div class="f16 manufacturing_listleft_text">{{item.description}}</div>
+							<div class="f16 manufacturing_listleft_text" v-html="item.description"></div>
 							<div class="flex-column flex-middle flex-between f16 PingFangSCMedium tac">
 								<div class="manufacturing_listleft_but1" @click="caseStudyInfo(item.id)">查看案例</div>
 								<div :class="index==0?'manufacturing_listleft_but2':'manufacturing_listleft_but3'" v-for="(items,index) in item.tags.split(',')">{{items}}</div>
@@ -57,23 +57,30 @@
 			data(){
 				return {
 					achieveCustlist:[],
-                    navsindex:0
+                    navsindex:0,
+					pageName: '7'
 				}
 			},
 			watch: {
 			},
 			created(){
                 getHost('els')
+				if(getQueryVariable('name')){
+					this.pageName = getQueryVariable('name')
+				}
 				this.getdata()
 			},
 			mounted(){
+				if(getQueryVariable('name')){
+					this.pageName = getQueryVariable('name')
+				}
 			},
 			methods: {
                 getdata(){
                     let that = this
                     // 获取500强图片
 					var _getachieveCustlist = p => get('/works/caseWork/noToken/queryByHot', p);
-					_getachieveCustlist({type:'1'})
+					_getachieveCustlist({industryOrAreas: that.pageName})
 					.then(res => {
                         console.log('_getcaseCompanylist',res.result)
 						that.achieveCustlist = res.result

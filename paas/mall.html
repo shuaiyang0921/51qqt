@@ -423,7 +423,7 @@
 							<div>B2B商城</div>
 							<div>聚源池</div>
 						</div>
-						<div class="f14 homeHead_registertil tac homeHead_appleStytle mkt_registertil">注册体验</div>
+						<div class="f14 homeHead_registertil tac homeHead_appleStytle mkt_registertil" @click="showregistermodal">注册体验</div>
 					</div>
 					<div class="paas_topImg"><img src="../images/mall/mall_bg.png" class="imgsize" alt="商城云"></div>
 				</div>
@@ -460,9 +460,9 @@
 					<div class="flex-column flex-center flex-middle" v-if="index%2==0">
 						<div class="scf_navList_img"><img :src="item.image" class="imgsize" :alt="item.childName"></div>
 						<div class="scf_navList_right">
-							<div class="scf_navList_rightTitle homeHead_appleStytle">{{item.childName}}</div>
-							<div class="scf_navList_rightLable f16 PingFangSCMedium bgbai">{{item.title}}</div>
-							<div class="scf_navList_rightText f14">{{item.intro}}</div>
+							<div class="scf_navList_rightTitle homeHead_appleStytle">{{item.title}}</div>
+							<div class="scf_navList_rightLable f16 PingFangSCMedium bgbai">{{item.intro}}</div>
+							<div class="scf_navList_rightText f14"></div>
 							<div class="f14 colorblue" @click="changePage(item.link)">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
 						</div>
 					</div>
