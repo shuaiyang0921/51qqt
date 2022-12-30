@@ -457,22 +457,59 @@
 			<div class="home_product">
 				<div class="tac home_product_title PingFangSCMedium">产品矩阵：采购全链条业务闭环、开放</div>
 				<div class="f26 homeHead_appleStytle">SaaS云</div>
-				<div class="flex-column flex-between ">
-					<div class="home_product_saas tac" v-for="item in productSaasList">
-						<div class="home_product_saasimg"><img :src="item.icon" class="imgsize" :alt="item.intro"></div>
-						<div class="home_product_saasTitle PingFangSCMedium">{{item.intro}}</div>
-						<div class="f14 home_product_saasText" v-html="item.description"></div>
-						<a class="f14 colorblue" :href="item.remark">了解更多<span class="home_product_saasMoreicon"><img src="./img/home83.png" class="imgsize" alt="了解更多"></span></a>
+				<div class="flex-column flex-between" style="margin-bottom: 24px">
+					<div class="flex-item-8">
+						<div v-if="index==0" class="home_product_saas_first tac" v-for="(item,index) in productSaasList">
+							<div class="flex-item-7">
+								<div class="home_product_saasimg">
+									<img :src="item.icon" class="imgsize" :alt="item.intro">
+								</div>
+							</div>
+							<div class="flex-item-17">
+								<div class="home_product_saasTitle PingFangSCMedium">{{item.intro}}</div>
+								<div class="f14 home_product_saasText" v-html="item.description"></div>
+								<a class="f14 colorblue" style="float: left" :href="item.remark">
+									了解更多
+									<span class="home_product_saasMoreicon"><img src="./img/home83.png" class="imgsize" alt="了解更多">
+									</span>
+								</a>
+							</div>
+						</div>
 					</div>
+					<div class="flex-item-16">
+						<div v-if="index!=0" :style="index%2==0?'margin-left:51px;':''" class="home_product_saas tac flex-item-6" v-for="(item,index) in productSaasList">
+							<div class="flex-item-7">
+								<div class="home_product_saasimg">
+									<img :src="item.icon" class="imgsize" :alt="item.intro">
+								</div>
+							</div>
+							<div class="flex-item-17">
+								<div class="home_product_saasTitle PingFangSCMedium">{{item.intro}}</div>
+								<div class="f14 home_product_saasText" v-html="item.description"></div>
+								<a class="f14 colorblue" style="float: left" :href="item.remark">
+									了解更多
+									<span class="home_product_saasMoreicon"><img src="./img/home83.png" class="imgsize" alt="了解更多">
+									</span>
+								</a>
+							</div>
+
+						</div>
+					</div>
+
 				</div>
 				<div class="f26 homeHead_appleStytle">PaaS平台</div>
 				<div class="flex-column flex-between ">
 					<div class="home_product_paas flex-column" v-for="item in productPaasList">
-						<div class="home_product_saasimg"><img :src="item.icon" class="imgsize" :alt="item.intro"></div>
+						<div class="home_product_paasimg"><img :src="item.icon" class="imgsize" :alt="item.intro"></div>
 						<div class="home_product_paasright">
 							<div class="home_product_paasTitle PingFangSCMedium">{{item.intro}}</div>
 							<div class="f14 home_product_saasText">{{item.description}}</div>
-							<a class="f14 colorblue" :href="item.remark">了解更多<span class="home_product_saasMoreicon"><img src="./img/home83.png" class="imgsize" alt="了解更多"></span></a>
+							<a class="f14 colorblue" :href="item.remark">
+								了解更多
+								<span class="home_product_saasMoreicon">
+									<img src="./img/home83.png" class="imgsize" alt="了解更多">
+								</span>
+							</a>
 						</div>
 					</div>
 				</div>
