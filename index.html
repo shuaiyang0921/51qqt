@@ -537,10 +537,7 @@
 					</div>
 				</div>
 				<div class="home_Case_tabs flex-column flex-center">
-					<div class="home_Case_tab"></div>
-					<div></div>
-					<div></div>
-					<div></div>
+					<div v-for="(item,index) in CaseList" :class="index==0?'home_Case_tab':''" @click="changeCaseTab(index)"></div>
 				</div>
 			</div>
 			<iframe src="./iframe/companys.html" style="width: 100%;height: 866px;" frameborder="0" scrolling="no"></iframe>
@@ -784,6 +781,7 @@
 				partnersImg:'',
 				showmodel:false,
 				changenum:0,
+				changeCaseNum: 0,
 				Solutionindex:0,
 				navstopIndex:1,
 				name:'',
@@ -818,6 +816,19 @@
 					// that.caseCompanylist = res.result['首页-合作伙伴、500强、行业认可'][1];
 					that.endorsedBotList = res.result['首页-合作伙伴、500强、行业认可'][3];
 					that.CaseList = res.result['首页-客户评价'];
+					if(that.CaseList.length>1){
+						setInterval(()=>{
+							if(that.changeCaseNum>=that.CaseList.length-1){
+								that.changeCaseNum=0
+							}else{
+								that.changeCaseNum++;
+							}
+							$('.home_Case_tabs>div').eq(this.changeCaseNum).addClass('home_Case_tab').siblings().removeClass('home_Case_tab')
+							$('.home_Case_info').eq(this.changeCaseNum).addClass('home_Case_info_show').siblings().removeClass('home_Case_info_show')
+						},3000);
+					}
+
+
 					that.SolutionList = res.result['首页-解决方案'];
 					that.SolutionList[1][1].forEach(item=>{
 						if (item.name_dictText==that.SolutionList[1][0][0]){
@@ -879,6 +890,11 @@
 				this.changenum = index
 				$('.homeHead_tabs>div').eq(this.changenum).addClass('homeHead_tab').siblings().removeClass('homeHead_tab')
 				$('.homeHead_adverstyle').animate({'left':-(this.changenum*100)+'%'},0);
+			},
+			changeCaseTab(index){
+				this.changeCaseNum = index
+				$('.home_Case_tabs>div').eq(this.changeCaseNum).addClass('home_Case_tab').siblings().removeClass('home_Case_tab')
+				$('.home_Case_info').eq(this.changeCaseNum).addClass('home_Case_info_show').siblings().removeClass('home_Case_info_show')
 			},
 			changenavstop(index,item){
 				item[1].forEach(i=>{
