@@ -35,7 +35,7 @@
 												</div>
 												<div class="homeHead_productpopUp_right f14 flex-column flex-between">
 													<div class="homeHead_productpopUp_rightText">
-														<div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon1 colorblue"><a href="./purchase/index.html">采购云</a><span class="iconright"></span></div>
+														<div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon1 colorblue"><a class="colorblue" href="./purchase/index.html">采购云</a><span class="iconright"></span></div>
 														<div class="f12 homeHead_productpopUp_subheading">一站式数字化采购平台</div>
 														<a href="./purchase/supplier.html">供应商管理</a>
 														<a href="./purchase/sourcing.html">战略寻源</a>
@@ -46,7 +46,7 @@
 														<a href="./purchase/analysis.html">采购分析</a>
 													</div>
 													<div class="homeHead_productpopUp_rightText">
-														<div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon2 colorblue"><a href="./paas/mall.html">商城云</a><span class="iconright"></span></div>
+														<div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon2 colorblue"><a class="colorblue" href="./paas/mall.html">商城云</a><span class="iconright"></span></div>
 														<div class="f12 homeHead_productpopUp_subheading">为企业打造一站式交易平台</div>
 														<a href="./paas/qqgouQ3.html">内采商城Q3</a>
 														<a href="./paas/qqgouQ3K.html">内采商城Q3K</a>
@@ -54,7 +54,7 @@
 														<a href="./paas/juyuanchi.html">聚源池</a>
 													</div>
 													<div class="homeHead_productpopUp_rightText">
-														<div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon3 colorblue"><a href="./paas/scf.html">赋能云</a><span class="iconright"></span></div>
+														<div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon3 colorblue"><a class="colorblue" href="./paas/scf.html">赋能云</a><span class="iconright"></span></div>
 														<div class="f12 homeHead_productpopUp_subheading">中小微企快捷资产资金对接平台</div>
 														<a href="./paas/scf-qiliantong.html">企链通</a>
 														<a href="./paas/scf-qilitong.html">企利通</a>
@@ -64,7 +64,7 @@
 														<a href="./paas/scf-qidingtong.html">企订通</a>
 													</div>
 													<div class="homeHead_productpopUp_rightText">
-														<div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon4 colorblue"><a href="./paas/mkt.html">营销云</a><span class="iconright"></span></div>
+														<div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon4 colorblue"><a class="colorblue" href="./paas/mkt.html">营销云</a><span class="iconright"></span></div>
 														<div class="f12 homeHead_productpopUp_subheading">提供一站式营销解决方案</div>
 														<a href="./paas/mkt.html?navNum=0">内容创意</a>
 														<a href="./paas/mkt.html?navNum=1">广告投放</a>
@@ -280,7 +280,7 @@
 									<div class="homephoneHead_navchild_title colorblue">企业SaaS云</div>
 									<div>
 										<div class="flex-column flex-between homephoneHead_navchild_Subhead">
-											<div class="homeHead_productpopUp_titleicon1"><a href="./purchase/index.html">采购云</a></div>
+											<div class="homeHead_productpopUp_titleicon1"><a  href="./purchase/index.html">采购云</a></div>
 											<div class="homephoneHead_navicon"><img src="./img/home44.png" class="imgsize" alt="企企通图标"></div>
 										</div>
 										<div class="shownavchild_text">
@@ -538,7 +538,6 @@
 				<div class="flex-column flex-top home_Solution_item" v-for="(item,index) in SolutionList" :class="index==navstopIndex?'showitem':''">
 					<div class="f16 home_Solution_left home_Solutionleft">
 						<div v-for="(itemnavs,indexnavs) in item[0]" :class="indexnavs==Solutionindex?'bgblue':''" @click=changeSolution(indexnavs,item[1],itemnavs)>{{itemnavs}}</div>
-						
 					</div>
 					<div class="flex-column home_Solution_rightwidth" v-for="(itemdemo,indexdemo) in item[1]" :style="indexdemo==Solutionindex?'display: flex;':''">
 						<div class="home_Solution_center">
@@ -577,7 +576,8 @@
 					<div v-for="(item,index) in CaseList" :class="index==0?'home_Case_tab':''" @click="changeCaseTab(index)"></div>
 				</div>
 			</div>
-			<iframe src="./iframe/companys.html" style="width: 100%;height: 866px;" frameborder="0" scrolling="no"></iframe>
+			
+			<iframe src="./iframe/companys.html" class="companyshei" frameborder="0" scrolling="no"></iframe>
 			<div class="home_endorsed">
 				<div class="tac home_product_title PingFangSCMedium colorbai">行业认可</div>
 				<div class="flex-column flex-between tac colorbai PingFangSCMedium home_endorsed_lists">
@@ -654,12 +654,17 @@
 			</div>
 			<div class="home_partners" :style="{backgroundImage: 'url('+ partnersImg + ')'}">
 				<div class="home_partners_bgsty">
-					<div class="tac home_product_title PingFangSCMedium home_partners_img">合作伙伴</div>
+					<div class="tac home_partners_title PingFangSCMedium home_partners_img">合作伙伴</div>
 					<div><a class="f16 colorbai home_Case_More" href="cooperation.html">成为合作伙伴</a></div>
 				</div>
 			</div>
-			<iframe src="./iframe/home_register.html" style="width: 100%;height: 155px;" frameborder="0" scrolling="no"></iframe>
-			
+			<div class="home_register flex-column flex-center flex-middle colorbai">
+				<div class="PingFangSCMedium">
+					<div class="home_register_text">开启数字化供应链与采购新体验</div>
+					<div class="tar">赋能企业数字化转型与变革</div>
+				</div>
+				<div class="f18 homeHead_registertil home_register_but  homeHead_appleStytle  colorbai" @click="showregistermodal">注册体验</div>
+			</div>
 			<div class="bgfooter">
 				<div class="footer maxwidth">
 					<div class="footer_topstyle xian_footer flex-column">
