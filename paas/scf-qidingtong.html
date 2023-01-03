@@ -429,7 +429,7 @@
 				</div>
 			</div>
 			<div class="padBg">
-				<div class="PingFangSCMedium tac home_title">{{ImgData[0].bigTitle}}</div>
+				<div class="PingFangSCMedium tac home_title">{{ImgData[0]?ImgData[0].bigTitle:''}}</div>
 				<div class=""><img :src="ImgData[0]?ImgData[0].image:''" class="imgsize" :alt="ImgData[0]?ImgData[0].bigTitle:''"></div>
 			</div>
 			<div class="padBg bggray">
@@ -440,7 +440,7 @@
 						<div class="flex-column flex-middle" v-for="(item,index) in listData" :class="index==0?'qirongtong_Business_list1':index==1?'qirongtong_Business_list2':''">
 							<div class="qirongtong_Business_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
 							<div>
-								<div class="f24 PingFangSCMedium qirongtong_Business_title">{{item.title}}</div>
+								<div class="f24 PingFangSCMedium qirongtong_Business_title" v-html="item.title"></div>
 								<div class="f16 qirongtong_Business_text" v-html="item.intro"></div>
 							</div>
 						</div>

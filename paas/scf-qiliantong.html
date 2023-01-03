@@ -433,7 +433,7 @@
 				<div class="flex-column flex-around">
 					<div class="qiliantong_whyList" v-for="item in listData">
 						<div class="flex-column flex-between flex-middle qiliantong_whyList_title">
-							<div class="homeHead_appleStytle f22">{{item.title}}</div>
+							<div class="homeHead_appleStytle f22" v-html="item.title"></div>
 							<div class="qiliantong_whyList_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
 						</div>
 						<div class="f16 qiliantong_whyList_text" v-html="item.intro"></div>
@@ -441,7 +441,7 @@
 				</div>
 			</div>
 			<div class="padBg">
-				<div class="PingFangSCMedium tac home_title">{{ImgData[0].bigTitle}}</div>
+				<div class="PingFangSCMedium tac home_title">{{ImgData[0]?ImgData[0].bigTitle:''}}</div>
 				<div class=""><img :src="ImgData[0]?ImgData[0].image:''" class="imgsize" :alt="ImgData[0]?ImgData[0].bigTitle:''"></div>
 			</div>
 			<div class="" style="padding-bottom: 60px;">

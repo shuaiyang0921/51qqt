@@ -429,22 +429,22 @@
 				</div>
 			</div>
 			<div class="padBg bggray">
-				<div class="PingFangSCMedium tac home_title">{{listData[0].bigTitle}}?</div>
+				<div class="PingFangSCMedium tac home_title">{{listData[0]?listData[0].bigTitle:''}}</div>
 				<div class="flex-column flex-around">
 					<div class="qiliantong_whyList" v-for="item in listData">
 						<div class="flex-column flex-between flex-middle qiliantong_whyList_title">
-							<div class="homeHead_appleStytle f22">{{item.childName}}</div>
+							<div class="homeHead_appleStytle f22" v-html="item.title"></div>
 							<div class="qiliantong_whyList_img"><img :src="item.icon" class="imgsize" :alt="item.childName"></div>
 						</div>
 						<div v-for="items in item.productChildList">
-							<div class="f16 qirongtong_whyList_title PingFangSCMedium">{{items.title}}</div>
-							<div class="f16 qirongtong_whyList_text">{{items.intro}}</div>
+							<div class="f16 qirongtong_whyList_title PingFangSCMedium" v-html="items.title"></div>
+							<div class="f16 qirongtong_whyList_text" v-html="items.intro"></div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="padBg">
-				<div class="PingFangSCMedium tac home_title">{{ImgData[0].bigTitle}}</div>
+				<div class="PingFangSCMedium tac home_title">{{ImgData[0]?ImgData[0].bigTitle:''}}</div>
 				<div class=""><img :src="ImgData[0]?ImgData[0].image:''" class="imgsize" :alt="ImgData[0]?ImgData[0].bigTitle:''"></div>
 			</div>
 			<div class="padBg bggray">
@@ -455,7 +455,7 @@
 						<div class="flex-column flex-middle" v-for="(item,index) in BusinessData" :class="index==0?'qirongtong_Business_list1':index==1?'qirongtong_Business_list2':''">
 							<div class="qirongtong_Business_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
 							<div>
-								<div class="f24 PingFangSCMedium qirongtong_Business_title">{{item.title}}</div>
+								<div class="f24 PingFangSCMedium qirongtong_Business_title" v-html="item.title"></div>
 								<div class="f16 qirongtong_Business_text" v-html="item.intro"></div>
 							</div>
 						</div>

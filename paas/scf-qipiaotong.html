@@ -429,7 +429,7 @@
 				</div>
 			</div>
 			<div class="padBg">
-				<div class="PingFangSCMedium tac home_title">{{ImgData[0].bigTitle}}</div>
+				<div class="PingFangSCMedium tac home_title">{{ImgData[0]?ImgData[0].bigTitle:''}}</div>
 				<div class="tac f18 padbott">业务模式：对核心企业开具的商业承兑汇票进行保贴，减少现金支付和银承支付方式</div>
 				<div class="PaaS_img"><img :src="ImgData[0]?ImgData[0].image:''" class="imgsize" :alt="ImgData[0]?ImgData[0].bigTitle:''"></div>
 			</div>
@@ -441,7 +441,7 @@
 						<div class="flex-column flex-middle" v-for="(item,index) in listData" :class="index==0?'qirongtong_Business_list3':''">
 							<div class="qirongtong_Business_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
 							<div>
-								<div class="f24 PingFangSCMedium qirongtong_Business_title">{{item.title}}</div>
+								<div class="f24 PingFangSCMedium qirongtong_Business_title" v-html="item.title"></div>
 								<div class="f16 qirongtong_Business_text qipiaotong_Business_textwidth" v-html="item.intro"></div>
 							</div>
 						</div>

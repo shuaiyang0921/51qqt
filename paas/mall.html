@@ -440,14 +440,14 @@
 					</div>
 					<div>
 						<div class="mall_navs" v-for="(item,index) in purchaseMallData" v-if="index==1||index==2">
-							<div class="f24 PingFangSCMedium"><span class="mall_navs_img"><img :src="item.icon" class="imgsize" :alt="item.title"></span>{{item.title}}</div>
+							<div class="f24 PingFangSCMedium"><span class="mall_navs_img"><img :src="item.icon" class="imgsize" :alt="item.title"></span><span v-html="item.title"></span></div>
 							<div class="mall_navs_text mall_navs_textwidth f16" v-html="item.intro"></div>
 							<a class="f14 colorblue" :href="item.link"><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
 						</div>
 					</div>
 					<div class="flex-column flex-center">
 						<div class="mall_navs" v-for="(item,index) in purchaseMallData" v-if="index>2">
-							<div class="f24 PingFangSCMedium"><span class="mall_navs_img"><img :src="item.icon" class="imgsize" :alt="item.title"></span>{{item.title}}</div>
+							<div class="f24 PingFangSCMedium"><span class="mall_navs_img"><img :src="item.icon" class="imgsize" :alt="item.title"></span><span v-html="item.title"></span></div>
 							<div class="mall_navs_text mall_navs_textwidth f16" v-html="item.intro"></div>
 							<a class="f14 colorblue" :href="item.link"><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
 						</div>
@@ -460,17 +460,17 @@
 					<div class="flex-column flex-center flex-middle" v-if="index%2==0">
 						<div class="scf_navList_img"><img :src="item.image" class="imgsize" :alt="item.childName"></div>
 						<div class="scf_navList_right">
-							<div class="scf_navList_rightTitle homeHead_appleStytle">{{item.title}}</div>
-							<div class="scf_navList_rightLable f16 PingFangSCMedium bgbai">{{item.intro}}</div>
-							<div class="scf_navList_rightText f14"></div>
+							<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
+							<div class="scf_navList_rightLable f16 PingFangSCMedium bgbai" v-html="item.intro"></div>
+							<div class="scf_navList_rightText f14" v-html="item.description"></div>
 							<div class="f14 colorblue" @click="changePage(item.link)">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
 						</div>
 					</div>
 					<div class="flex-column flex-center flex-middle bgbai" v-else>
 						<div class="scf_navList_right">
-							<div class="scf_navList_rightTitle homeHead_appleStytle">{{item.childName}}</div>
-							<div class="scf_navList_rightLable f16 PingFangSCMedium bggray">{{item.title}}</div>
-							<div class="scf_navList_rightText f14">{{item.intro}}</div>
+							<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
+							<div class="scf_navList_rightLable f16 PingFangSCMedium bggray" v-html="item.intro"></div>
+							<div class="scf_navList_rightText f14" v-html="item.description"></div>
 							<div class="f14 colorblue"  @click="changePage(item.link)">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
 						</div>
 						<div class="scf_navList_img"><img :src="item.image" class="imgsize" :alt="item.childName"></div>
