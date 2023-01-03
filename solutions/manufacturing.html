@@ -423,7 +423,7 @@
 						<div class="manufacturing_observation_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
 						<div>
 							<div class="PingFangSCMedium manufacturing_observation_title" v-html="item.title"></div>
-							<div class="f16 manufacturing_observation_text">{{item.intro}}</div>
+							<div class="f16 manufacturing_observation_text" v-html="item.intro"></div>
 						</div>
 					</div>
 				</div>
@@ -438,14 +438,14 @@
 						<div class="manufacturing_programmeList_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
 						<div class="manufacturing_programmeList_right">
 							<div class="PingFangSCMedium manufacturing_programmeList_rightTitle" v-html="item.title"></div>
-							<div class="f16 manufacturing_programmeList_rightText">{{item.intro}}</div>
+							<div class="f16 manufacturing_programmeList_rightText" v-html="item.intro"></div>
 							<div class="f14 homeHead_registertil tac homeHead_appleStytle" @click="showregistermodal">立即咨询</div>
 						</div>
 					</div>
 					<div class="manufacturing_programmeList flex-column flex-middle" v-else>
 						<div class="manufacturing_programmeList_left bggray">
 							<div class="PingFangSCMedium manufacturing_programmeList_rightTitle" v-html="item.title"></div>
-							<div class="f16 manufacturing_programmeList_leftText">{{item.intro}}</div>
+							<div class="f16 manufacturing_programmeList_leftText" v-html="item.intro"></div>
 							<div class="f14 homeHead_registertil tac homeHead_appleStytle" @click="showregistermodal">立即咨询</div>
 						</div>
 						<div class="manufacturing_programmeList_rightimg"><img :src="item.image" class="imgsize" :alt="item.title"></div>
