@@ -430,7 +430,7 @@
 			</div>
 			<div class="padBg">
 				<div class="PingFangSCMedium tac home_title">{{ImgData[0].bigTitle}}</div>
-				<div class=""><img :src="ImgData[0].image" class="imgsize" :alt="ImgData[0].bigTitle"></div>
+				<div class=""><img :src="ImgData[0]?ImgData[0].image:''" class="imgsize" :alt="ImgData[0]?ImgData[0].bigTitle:''"></div>
 			</div>
 			<div class="padBg bggray">
 				<div class="PingFangSCMedium tac home_title">业务价值</div>
@@ -637,3 +637,4 @@
 		},
 	})
 </script>
+<script src="../js/navigation.js"></script>

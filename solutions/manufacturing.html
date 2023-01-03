@@ -417,7 +417,7 @@
 				<div class="f14 homeHead_registertil tac homeHead_appleStytle" @click="showregistermodal">注册体验</div>
 			</div>
 			<div class="manufacturing_bg bggray">
-				<div class="PingFangSCMedium tac home_title">{{supplierData[0].bigTitle}}</div>
+				<div class="PingFangSCMedium tac home_title">{{supplierData[0]?supplierData[0].bigTitle:''}}</div>
 				<div class="flex-column flex-around">
 					<div class="flex-column manufacturing_observation_list" v-for="item in supplierData">
 						<div class="manufacturing_observation_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
@@ -429,8 +429,8 @@
 				</div>
 			</div>
 			<div class="padBg">
-				<div class="PingFangSCMedium tac home_title">{{supplierImgData[0].bigTitle}}</div>
-				<div class=""><img :src="supplierImgData[0].image" class="imgsize" :alt="supplierImgData[0].bigTitle"></div>
+				<div class="PingFangSCMedium tac home_title">{{supplierImgData[0]?supplierImgData[0].bigTitle:''}}</div>
+				<div class=""><img :src="supplierImgData[0]?supplierImgData[0].image:''" class="imgsize" :alt="supplierImgData[0]?supplierImgData[0].bigTitle:''"></div>
 			</div>
 			<div class="manufacturing_bg">
 				<div v-for="(item,index) in supplierListData">
@@ -659,3 +659,4 @@
 		computed:{},
 	})
 </script>
+<script src="../js/navigation.js"></script>

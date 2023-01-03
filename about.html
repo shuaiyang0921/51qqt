@@ -415,15 +415,15 @@
 			</div>
 			<div class="about_videobg">
 				<div class="about_video">
-					<div class="homeHead_appleStytle about_video_title tac">{{aboutInfo[0].title}}</div>
+					<div class="homeHead_appleStytle about_video_title tac">{{aboutInfo[0]?aboutInfo[0].title:''}}</div>
 					<div class="flex-column">
 						<div class="about_video_img" @click="showvidiomodal">
-							<div class="about_video_imgsize"><img :src="aboutInfo[0].backgroundImage" class="imgsize" alt=""></div>
+							<div class="about_video_imgsize"><img :src="aboutInfo[0]?aboutInfo[0].backgroundImage:''" class="imgsize" alt=""></div>
 							<div class="about_video_imgplay"><img src="./images/about/about7.png" class="imgsize" alt=""></div>
 							<div class="about_video_imgbg"><img src="./images/about/about6.png" class="imgsize" alt=""></div>
 						</div>
 						<div class="about_video_text f16">
-							<div class="about_video_textmab" v-html="aboutInfo[0].description"></div>
+							<div class="about_video_textmab" v-html="aboutInfo[0]?aboutInfo[0].description:''"></div>
 						</div>
 					</div>
 					<div class="about_video_data tac flex-column flex-around">
@@ -605,13 +605,13 @@
 			<div class="register_modal flex-column flex-middle" v-if="showVidio">
 				<div class="Vidio_padd flex-column flex-middle flex-center porelative">
 					<div>
-						<div class="PingFangSCMedium tac home_title colorbai">{{aboutInfo[0].title}}</div>
+						<div class="PingFangSCMedium tac home_title colorbai">{{aboutInfo[0]?aboutInfo[0].title:''}}</div>
 						<video
 							controls
 							preload="auto"
 							width="878"
 							height="492"
-							:src="aboutInfo[0].video"
+							:src="aboutInfo[0]?aboutInfo[0].video:''"
 						>
 						</video>
 					</div>
@@ -677,3 +677,4 @@
 		computed:{},
 	})
 </script>
+<script src="./js/navigation.js"></script>

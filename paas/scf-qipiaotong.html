@@ -431,7 +431,7 @@
 			<div class="padBg">
 				<div class="PingFangSCMedium tac home_title">{{ImgData[0].bigTitle}}</div>
 				<div class="tac f18 padbott">业务模式：对核心企业开具的商业承兑汇票进行保贴，减少现金支付和银承支付方式</div>
-				<div class="PaaS_img"><img :src="ImgData[0].image" class="imgsize" :alt="ImgData[0].bigTitle"></div>
+				<div class="PaaS_img"><img :src="ImgData[0]?ImgData[0].image:''" class="imgsize" :alt="ImgData[0]?ImgData[0].bigTitle:''"></div>
 			</div>
 			<div class="padBg bggray">
 				<div class="PingFangSCMedium tac home_title">业务价值</div>
@@ -638,3 +638,4 @@
 		},
 	})
 </script>
+<script src="../js/navigation.js"></script>

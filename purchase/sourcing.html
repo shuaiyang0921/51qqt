@@ -434,15 +434,15 @@
 					<div class="flex-column manufacturing_observation_list" v-for="item in supplierData">
 						<div class="manufacturing_observation_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
 						<div>
-							<div class="PingFangSCMedium manufacturing_observation_title">{{item.title}}</div>
-							<div class="f16 manufacturing_observation_text">{{item.intro}}</div>
+							<div class="PingFangSCMedium manufacturing_observation_title" v-html="item.title"></div>
+							<div class="f16 manufacturing_observation_text" v-html="item.intro"></div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="padBg">
-				<div class="PingFangSCMedium tac home_title">{{supplierImgData[0].bigTitle}}</div>
-				<div class=""><img :src="supplierImgData[0].image" class="imgsize" :alt="supplierImgData[0].bigTitle"></div>
+				<div class="PingFangSCMedium tac home_title">{{supplierImgData[0]?supplierImgData[0].bigTitle:''}}</div>
+				<div class=""><img :src="supplierImgData[0]?supplierImgData[0].image:''" class="imgsize" :alt="supplierImgData[0]?supplierImgData[0].bigTitle:''"></div>
 			</div>
 			<div class="padBg bggray">
 				<div class="PingFangSCMedium tac home_title">核心能力</div>
@@ -450,16 +450,16 @@
 					<div class="flex-column flex-center flex-middle" v-if="index%2==0">
 						<div class="Q3k_navList_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
 						<div class="scf_navList_right">
-							<div class="scf_navList_rightTitle homeHead_appleStytle">{{item.title}}</div>
-							<div class="purchase_navList_rightText f14">{{item.intro}}</div>
+							<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
+							<div class="purchase_navList_rightText f14" v-html="item.intro"></div>
 							<div class="f14 colorblue home_Enabling_text" v-for="items in item.productChildList">{{items.intro}}</div>
 							<div class="tac colorbai homeHead_appleStytle aPaaS_head_but">立即咨询</div>
 						</div>
 					</div>
 					<div class="flex-column flex-center flex-middle bgbai" v-else>
 						<div class="scf_navList_right">
-							<div class="scf_navList_rightTitle homeHead_appleStytle">{{item.title}}</div>
-							<div class="purchase_navList_rightText f14">{{item.intro}}</div>
+							<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
+							<div class="purchase_navList_rightText f14" v-html="item.intro"></div>
 							<div class="f14 colorblue home_Enabling_text" v-for="items in item.productChildList">{{items.intro}}</div>
 							<div class="tac colorbai homeHead_appleStytle aPaaS_head_but">立即咨询</div>
 						</div>
@@ -655,3 +655,4 @@
 		},
 	})
 </script>
+<script src="../js/navigation.js"></script>

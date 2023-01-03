@@ -9,7 +9,7 @@ var HostAddress = {}
 function getHost(hostAddressSign) {
     switch(hostAddressSign){
         case 'els': {
-			return axios.defaults.baseURL = 'https://xgw.51qqt.com/els';
+			return axios.defaults.baseURL = '/els';
         }
     }
 }

@@ -425,7 +425,7 @@
 				<div class="paas_topImg"><img src="../images/paas/paas1.png" class="imgsize" alt="PaaS平台"></div>
 			</div>
 			<div class="PingFangSCMedium tac home_title">{{ImgData[0].bigTitle}}</div>
-			<div class="scf_bgImg"><img :src="ImgData[0].image" class="imgsize" :alt="ImgData[0].bigTitle"></div>
+			<div class="scf_bgImg"><img :src="ImgData[0]?ImgData[0].image:''" class="imgsize" :alt="ImgData[0]?ImgData[0].bigTitle:''"></div>
 			<div class="bggray scf_navsBg">
 				<div class="PingFangSCMedium tac home_title">平台化供应链金融解决方案，助力产业链结构升级</div>
 				<div class="scf_navs f16 flex-column flex-center">
@@ -445,7 +445,7 @@
 			</div>
 			<div class="padBg">
 				<div class="PingFangSCMedium tac home_title">{{purchaseImgData[0].bigTitle}}</div>
-				<div class=""><img :src="purchaseImgData[0].image" class="imgsize" :alt="purchaseImgData[0].bigTitle"></div>
+				<div class=""><img :src="purchaseImgData[0]?purchaseImgData[0].image:''" class="imgsize" :alt="purchaseImgData[0]?purchaseImgData[0].bigTitle:''"></div>
 			</div>
 			<div class="bggray scf_solvebgImg_bot">
 				<div class="padBg scf_solvebgImg porelative">
@@ -674,3 +674,4 @@
 		},
 	})
 </script>
+<script src="../js/navigation.js"></script>

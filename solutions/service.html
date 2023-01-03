@@ -430,7 +430,7 @@
 			</div>
 			<div class="padBg">
 				<div class="PingFangSCMedium tac home_title">{{supplierImgData[0].title}}</div>
-				<div class=""><img :src="supplierImgData[0].image" class="imgsize" :alt="supplierImgData[0].bigTitle"></div>
+				<div class=""><img :src="supplierImgData[0]?supplierImgData[0].image:''" class="imgsize" :alt=supplierImgData[0]?supplierImgData[0].bigTitle:''></div>
 			</div>
 			<div class="manufacturing_bg">
 				<div v-for="(item,index) in supplierListData">
@@ -637,3 +637,4 @@
 		computed:{},
 	})
 </script>
+<script src="../js/navigation.js"></script>
