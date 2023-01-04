@@ -1,5 +1,5 @@
 $(".homeHead_popUpStyle").mousemove(function(){
-    console.log(event.clientX)
+    // console.log(event.clientX)
     if (event.clientX<124){
         $(".homeHead_popUpStyle").css({
             "border-radius": "0px 0px 4px 4px",
