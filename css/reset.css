@@ -8,9 +8,9 @@ ol,li,ul{
 iframe{
 	display: block;
 }
-p{
-	color:#8c9398;
-}
+/*p{*/
+/*	color:#8c9398;*/
+/*}*/
 a{
 	text-decoration: none;
 	display: inline-block;
