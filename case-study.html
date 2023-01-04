@@ -432,7 +432,9 @@
 					<a v-for="item in ListData" :href="'caseStudyInfo.html?id='+item.id" >
 						<div class="caseStudy_FilterList_img"><img :src="item.image" class="imgsize"></div>
 						<div class="caseStudy_FilterList_Bot flex-column">
-							<div class="caseStudy_FilterList_BotImg tac flex-column flex-middle flex-center colorblue"><img :src="item.logo" class="imgsize" :alt="item.consumerId_dictText"></div>
+							<div class="caseStudy_FilterList_BotImg tac flex-column flex-middle flex-center colorblue">
+								<img :src="item.logo" style="width: 100%;height: auto" :alt="item.consumerId_dictText">
+							</div>
 							<div>
 								<div class="f20 homeHead_appleStytle caseStudy_FilterList_BotTitle">{{item.consumerId_dictText}}</div>
 								<div class="f16 caseStudy_FilterList_BotText">{{item.title}}</div>

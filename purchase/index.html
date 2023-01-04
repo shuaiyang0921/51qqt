@@ -434,7 +434,9 @@
 				<div class="flex-column flex-center">
 					<div class="mall_navs">
 						<div class="mall_navs_imgtitle"><img :src="purchaseMallData[0]?purchaseMallData[0].image:''" class="imgsize" :alt="purchaseMallData[0]?purchaseMallData[0].title:''"></div>
-						<div class="f24 PingFangSCMedium"><span class="mall_navs_img"><img :src="purchaseMallData[0].icon" class="imgsize" :alt="purchaseMallData[0]?purchaseMallData[0].title:''"></span>{{purchaseMallData[0].title}}</div>
+						<div class="f24 PingFangSCMedium"><span class="mall_navs_img"><img :src="purchaseMallData[0].icon" class="imgsize" :alt="purchaseMallData[0]?purchaseMallData[0].title:''"></span>
+						<span v-html="purchaseMallData[0].title"></span>
+						</div>
 						<div class="mall_navs_text f16" v-html="purchaseMallData[0]?purchaseMallData[0].intro:''"></div>
 						<a class="home_product_saasMoreicon" :href="purchaseMallData[0]?purchaseMallData[0].link:''"><img src="../img/home83.png" class="imgsize" alt="了解更多"></a>
 					</div>

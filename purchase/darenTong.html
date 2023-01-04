@@ -436,7 +436,7 @@
 						<div class="manufacturing_observation_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
 						<div>
 							<div class="PingFangSCMedium manufacturing_observation_title">{{item.title}}</div>
-							<div class="f16 manufacturing_observation_text">{{item.intro}}</div>
+							<div class="f16 manufacturing_observation_text" v-html="item.intro"></div>
 						</div>
 					</div>
 				</div>
@@ -448,7 +448,7 @@
 						<div class="scf_navList_img"><img :src="item.image" class="imgsize" :alt="item.childName"></div>
 						<div class="scf_navList_right">
 							<div class="scf_navList_rightTitle homeHead_appleStytle">{{item.title}}</div>
-							<div class="scf_navList_rightLable f16 PingFangSCMedium bgbai">{{item.intro}}</div>
+							<div class="scf_navList_rightLable f16 PingFangSCMedium bgbai" v-html="item.intro"></div>
 							<div class="scf_navList_rightText f14" v-html="item.description"></div>
 							<div class="tac colorbai homeHead_appleStytle aPaaS_head_but">立即咨询</div>
 						</div>
@@ -456,7 +456,7 @@
 					<div class="flex-column flex-center flex-middle bgbai" v-else>
 						<div class="scf_navList_right">
 							<div class="scf_navList_rightTitle homeHead_appleStytle">{{item.title}}</div>
-							<div class="scf_navList_rightLable f16 PingFangSCMedium bggray">{{item.intro}}</div>
+							<div class="scf_navList_rightLable f16 PingFangSCMedium bggray" v-html="item.intro"></div>
 							<div class="scf_navList_rightText f14" v-html="item.description"></div>
 							<div class="tac colorbai homeHead_appleStytle aPaaS_head_but">立即咨询</div>
 						</div>
@@ -465,14 +465,14 @@
 				</div>
 			</div>
 			<div class="padBg bgblue">
-				<div class="PingFangSCMedium tac home_title colorbai">{{purchaseImgData[0].bigTitle}}</div>
+				<div class="PingFangSCMedium tac home_title colorbai">{{purchaseImgData[0]?purchaseImgData[0].bigTitle:''}}</div>
 				<div class="flex-column flex-center">
                     <div class="flex-column darentong_change_leftwid" >
                         <div class="darentong_change_left flex-column flex-top" v-for="(item,index) in purchaseImgData" v-if="index<=3">
                             <div class="darentong_change_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
                             <div style="width: calc(100% - 72px);">
                                 <div class="darentong_change_title f22 PingFangSCMedium">{{item.title}}</div>
-                                <div class="f14 darentong_change_lefttext">{{item.intro}}</div>
+                                <div class="f14 darentong_change_lefttext" v-html="item.intro"></div>
                             </div>
                         </div>
                     </div>
@@ -480,7 +480,7 @@
                         <div class="darentong_change_img"><img :src="purchaseImgData[4]?purchaseImgData[4].icon:''" class="imgsize" :alt="purchaseImgData[4]?purchaseImgData[4].title:''"></div>
                         <div>
                             <div class="darentong_change_title f22 PingFangSCMedium">{{purchaseImgData[4]?purchaseImgData[4].title:''}}</div>
-                            <div class="f14 darentong_change_text">{{purchaseImgData[4]?purchaseImgData[4].intro:''}}</div>
+                            <div class="f14 darentong_change_text" v-html="purchaseImgData[4]?purchaseImgData[4].intro:''"></div>
                         </div>
                     </div>
                 </div>
