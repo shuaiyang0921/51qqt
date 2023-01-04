@@ -42,7 +42,7 @@
 .scf_navs>div{padding: 17px 50px;cursor: pointer;line-height: 28px;}
 .scf_nav{color: #005CEF;font-size: 20px;font-family: PingFangSC-Semibold, PingFang SC;font-weight: 600;position: relative;}
 .scf_nav::after{content: "";width: 32px;height: 2px;background: #005CEF;border-radius: 1px;position: absolute;bottom: 0;left: calc(50% - 16px);}
-.scf_navList_img{width: 520px;height: 360px;margin: 15px}
+.scf_navList_img{width: 520px;height: 360px;margin: 25px 15px}
 .scf_navList_right{width: 520px;margin: 0 15px}
 .scf_navList_rightTitle{font-size: 26px;line-height: 37px;margin-bottom: 16px;}
 .scf_navList_rightLable{padding: 13px 24px;border-radius: 2px;border-left: 4px solid #FF761A;margin-bottom: 16px;}
