@@ -407,7 +407,7 @@
 			<div class="heiheader"></div>
 			<div class="homeHead_adver">
 				<div class="homeHead_adverstyle flex-column" :style="{width: imgwidth}">
-					<div class="homeHead_adverList" v-for="item in BanerImg" :style="{backgroundImage: 'url('+ item.image+ ')',position:'relative'}">
+					<div @click="jumpLink(item.showButton,item.link)" class="homeHead_adverList" v-for="item in BanerImg" :style="{backgroundImage: 'url('+ item.image+ ')',position:'relative'}">
 						<div class="homeHead_adver1_title homeHead_appleStytle" v-if="item.title">{{item.title}}</div>
 						<div class="homeHead_adver1_title homeHead_appleStytle" v-if="item.subhead">{{item.subhead}}</div>
 						<div class="f20 homeHead_adver1_text" v-if="item.intro">{{item.intro}}</div>
@@ -918,6 +918,11 @@
 					window.open(link)
 				}else {
 					this.showmodel = true
+				}
+			},
+			jumpLink(showButton,link){
+				if (showButton=='0'&&link){
+					window.open(link)
 				}
 			},
 			hederegistermodal(){
