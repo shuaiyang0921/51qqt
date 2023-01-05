@@ -43,7 +43,9 @@
 .scf_nav{color: #005CEF;font-size: 20px;font-family: PingFangSC-Semibold, PingFang SC;font-weight: 600;position: relative;}
 .scf_nav::after{content: "";width: 32px;height: 2px;background: #005CEF;border-radius: 1px;position: absolute;bottom: 0;left: calc(50% - 16px);}
 .scf_navList_img{width: 520px;height: 360px;margin: 35px 45px 35px 0;}
+.purchase_navList_img{width: 570px;height: 380PX;margin: 35px 55px 35px 0;}
 .scf_navList_right{width: 495px;padding-right: 55px;}
+.purchase_navList_right{width: 570px;padding-right: 55px;}
 .scf_navList_rightTitle{font-size: 26px;line-height: 37px;margin-bottom: 16px;}
 .scf_navList_rightLable{padding: 13px 24px;border-radius: 2px;border-left: 4px solid #FF761A;margin-bottom: 16px;}
 .scf_navList_rightText{color: #555555;line-height: 24px;margin-bottom: 60px;}

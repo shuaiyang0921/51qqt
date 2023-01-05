@@ -460,8 +460,8 @@
 				<div class="PingFangSCMedium tac home_title">打通供应链采购各个环节，形成业务、系统、人到物多维度集成协同</div>
 				<div v-for="(item,index) in purchasenavListData">
 					<div class="flex-column flex-center flex-middle" v-if="index%2==0">
-						<div class="scf_navList_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
-						<div class="scf_navList_right">
+						<div class="purchase_navList_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
+						<div class="purchase_navList_right">
 							<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
 							<div class="scf_navList_rightLable f16 PingFangSCMedium bgbai" v-html="item.intro"></div>
 							<div class="scf_navList_rightText f14" v-html="item.description"></div>
@@ -469,13 +469,13 @@
 						</div>
 					</div>
 					<div class="flex-column flex-center flex-middle bgbai" v-else>
-						<div class="scf_navList_right">
+						<div class="purchase_navList_right">
 							<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
 							<div class="scf_navList_rightLable f16 PingFangSCMedium bggray" v-html="item.intro"></div>
 							<div class="scf_navList_rightText f14" v-html="item.description"></div>
 							<div class="f14 colorblue" @click="changePage(item.link)">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
 						</div>
-						<div class="scf_navList_img"><img :src="item.image" class="imgsize" :alt="item.childName"></div>
+						<div class="purchase_navList_img"><img :src="item.image" class="imgsize" :alt="item.childName"></div>
 					</div>
 				</div>
 			</div>
