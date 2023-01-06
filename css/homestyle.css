@@ -1,6 +1,7 @@
 .homeHead_adver{width: 100%;height: 526px;overflow: hidden;position: relative;}
 .homeHead_adverstyle{height: 526px;flex-wrap: nowrap;left: 0%;transition:1s;position: relative;}
 .homeHead_adverList{background-size: cover;width: calc(100% - 120px);height: 421px;padding: 105px 0 0 120px;background-repeat: no-repeat;}
+.homeHead_adverList_video{background-size: cover;width: calc(100% - 120px);height: 421px;padding: 0 0 0 120px;background-repeat: no-repeat;}
 .homeHead_adver1_title{font-size: 56px;}
 .homeHead_adver1_text{font-family: PingFangSC-Regular, PingFang SC;font-weight: 400;color: #555555;margin: 20px 0 32px 0;width: 50%;}
 .homeHead_adver1_but{background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);border-radius: 4px;padding: 13px 68px;width: 64px;color: #FFFFFF;}

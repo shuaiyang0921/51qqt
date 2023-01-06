@@ -407,11 +407,18 @@
 			<div class="heiheader"></div>
 			<div class="homeHead_adver">
 				<div class="homeHead_adverstyle flex-column" :style="{width: imgwidth}">
-					<div @click="jumpLink(item.showButton,item.link)" class="homeHead_adverList" v-for="item in BanerImg" :style="{backgroundImage: 'url('+ item.image+ ')',position:'relative'}">
-						<div class="homeHead_adver1_title homeHead_appleStytle" v-if="item.title">{{item.title}}</div>
-						<div class="homeHead_adver1_title homeHead_appleStytle" v-if="item.subhead">{{item.subhead}}</div>
-						<div class="f20 homeHead_adver1_text" v-if="item.intro">{{item.intro}}</div>
-						<a v-if="item.showButton==1" class="f14 homeHead_registertil tac homeHead_appleStytle" style="position: absolute;bottom: 120px;" @click="showregistermodal(item.link)">{{item.buttonText?item.buttonText:'注册体验'}}</a>
+					<div @click="jumpLink(item.showButton,item.link)" :class="item.video?'homeHead_adverList_video':'homeHead_adverList'" v-for="item in BanerImg" :style="{backgroundImage: 'url('+ item.image+ ')',position:'relative'}">
+						<template v-if="!item.video">
+							<div class="homeHead_adver1_title homeHead_appleStytle" v-if="item.title">{{item.title}}</div>
+							<div class="homeHead_adver1_title homeHead_appleStytle" v-if="item.subhead">{{item.subhead}}</div>
+							<div class="f20 homeHead_adver1_text" v-if="item.intro">{{item.intro}}</div>
+							<a v-if="item.showButton==1" class="f14 homeHead_registertil tac homeHead_appleStytle" style="position: absolute;bottom: 120px;" @click="showregistermodal(item.link)">{{item.buttonText?item.buttonText:'注册体验'}}</a>
+						</template>
+						<template v-else>
+							<video :src="item.video" style="width:100%; height:100%;position: absolute;top: 0;left: 0; object-fit: fill" controls="controls" :poster="item.image"></video>
+							<video :src="item.video" style="width:100%; height:100%;position: absolute;top: 0;left: 0; object-fit: fill" controls="controls" :poster="item.image"></video>
+						</template>
+
 					</div>
 				</div>
 				<div class="homeHead_tabs flex-column flex-center">
@@ -825,7 +832,8 @@
 				companyName:'',
 				telephone:'',
 				smsCode:'',
-				registerModule:'1'
+				registerModule:'1',
+				bannerInterval:"",
 			}
 		},
 		watch: {
@@ -889,7 +897,7 @@
 						item.image=item.image.replace(/\s/g,'%20');
 					})
 					if(that.BanerImg.length>1){
-						setInterval(()=>{
+						this.bannerInterval=setInterval(()=>{
 							if(that.changenum>=that.BanerImg.length-1){
 								that.changenum=0
 							}else{
@@ -897,6 +905,7 @@
 							}
 							$('.homeHead_tabs>div').eq(that.changenum).addClass('homeHead_tab').siblings().removeClass('homeHead_tab')
 							$('.homeHead_adverstyle').animate({'left':-(that.changenum*100)+'%'},0);
+							this.videoPauseOrPlay()
 						},3000);
 					}
 				})
@@ -921,6 +930,7 @@
 				}
 			},
 			jumpLink(showButton,link){
+
 				if (showButton=='0'&&link){
 					window.open(link)
 				}
@@ -1010,6 +1020,13 @@
 				.catch(err => {
 					console.log(err,'_getcode获取数据异常');
 				})
+			},
+			videoPauseOrPlay(){
+				var videos=document.getElementsByTagName('video');
+				for (var i=0;i<videos.length;i++)
+				{
+					videos[i].pause()
+				}
 			}
 		},
 		computed:{
