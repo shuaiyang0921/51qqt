@@ -456,7 +456,7 @@
 				</div>
                 <div class="flex-column flex-between" v-else>
                     <div v-for="item in InfoData" class="news_vidio_list bgbai">
-                        <div class="news_vidio_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
+                        <div class="news_vidio_img" @click="showvidiomodal(item.title,item.video)" ><img :src="item.image" class="imgsize" :alt="item.title"></div>
                         <div class="news_vidio_pad">
                             <div class="f20 news_vidio_title PingFangSCMedium">{{item.title}}</div>
                             <div class="f14 news_vidio_text">{{item.description}}</div>
@@ -601,6 +601,22 @@
 					<div class="f16 registe_form_submit PingFangSCMedium colorbai">立即提交</div>
 				</div>
 			</div>
+			<div class="register_modal flex-column flex-middle" v-if="showVidio">
+				<div class="Vidio_padd flex-column flex-middle flex-center porelative">
+					<div>
+						<div class="PingFangSCMedium tac home_title colorbai">{{vidiotitle}}</div>
+						<video
+							controls
+							preload="auto"
+							width="878"
+							height="492"
+							:src="vidiourl"
+						>
+						</video>
+					</div>
+					<div class="Vidio_cancel" @click="hidevidiomodal"><img src="./img/home114.png" class="imgsize" alt=""></div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
@@ -622,7 +638,10 @@
                 Pagenun:[],
 				showmodel:false,
                 currentPage:1,
-                typeIndex:''
+                typeIndex:'',
+				showVidio:false,
+				vidiotitle:'',
+				vidiourl:'',
 			}
 		},
 		watch: {
@@ -697,7 +716,15 @@
 			},
             tznewsInfo(id){
                 window.location.href = './newsInfo.html?id='+id
-            }
+            },
+			showvidiomodal(title,url){
+				this.vidiotitle = title
+				this.vidiourl = url
+				this.showVidio = true
+			},
+			hidevidiomodal(){
+				this.showVidio = false
+			},
 		},
 		computed:{},
 	})
