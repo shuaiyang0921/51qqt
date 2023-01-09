@@ -25,6 +25,7 @@
 .maxwidth{max-width: 1440px;margin: 0 auto;}
 .porelative{position: relative;}
 .padBg{padding: 60px 120px;}
+.fontWeightNormal{font-weight: normal}
 /* home */
 .header{position: fixed;top: 0;width: 100%;margin: 0 auto;-webkit-transition: 5s; transition: 5s;z-index: 100;}
 .heiheader{height: 74px;}
