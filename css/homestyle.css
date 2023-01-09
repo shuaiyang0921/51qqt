@@ -84,6 +84,7 @@
 
 /* .home_Case_companylist>div{width: 120px;height: 44px;padding: 14px 16px;background: #FFFFFF;box-shadow: 0px 0px 30px 0px rgba(20,22,26,0.08);border-radius: 4px;margin: 10px;}    */
 .home_Case_More{width: 96px;padding: 13px 52px;margin: 0 auto;background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);border-radius: 4px;display: block;}
+.scfMoreCase{margin: 50px 0}
 .home_endorsed{padding: 60px 120px;position: relative;background: url(../img/home53.png) no-repeat center center;background-size: cover;}
 .home_endorsed_title{font-size: 44px;}
 .home_endorsed_lists{margin-bottom: 105px;}
