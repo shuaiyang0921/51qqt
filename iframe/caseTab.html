@@ -22,7 +22,7 @@
             <div class="home_Case">
 				<div class="tac home_product_title PingFangSCMedium">成就更多客户成功，他们都选择了企企通</div>
 				<div>
-					<div class="flex-column home_Case_info" v-for="(item,index) in CaseList" v-if="Caseindex==index">
+					<div class="flex-column home_Case_info" v-for="(item,index) in CaseList">
 						<div class="home_Caseimg"><img :src="item.image" class="imgsize" :alt="item.tag"></div>
 						<div class="home_Case_inforight">
 							<div class="f16 home_Case_inforight_title">{{item.intro}}</div>
@@ -76,10 +76,14 @@
                         }else{
                             that.Caseindex++;
                         }
+						$('.home_Case_tabs>div').eq(this.Caseindex).addClass('home_Case_tab').siblings().removeClass('home_Case_tab')
+						$('.home_Case_info').eq(this.Caseindex).addClass('home_Case_info_show').siblings().removeClass('home_Case_info_show')
                     },3000);
                 },
                 changeCaseindex(index){
                     this.Caseindex = index
+					$('.home_Case_tabs>div').eq(this.Caseindex).addClass('home_Case_tab').siblings().removeClass('home_Case_tab')
+					$('.home_Case_info').eq(this.Caseindex).addClass('home_Case_info_show').siblings().removeClass('home_Case_info_show')
                 }
 			},
 			computed:{

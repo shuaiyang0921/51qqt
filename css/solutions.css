@@ -23,6 +23,7 @@
 .manufacturing_programmeList_rightText{color: #555555;line-height: 26px;margin-bottom: 32px;}
 .manufacturing_programmeList_rightimg{width: 560px;height: 300px;position: absolute;right: 0;}
 .manufacturing_programmeList{margin: 100px 0;position: relative;}
+.manufacturing_programmeList:nth-last-child(1){margin-bottom: 0}
 .manufacturing_programmeList_left{width: calc(100% - 300px);height: 280px;padding: 50px 60px;border-radius: 12px;}
 .manufacturing_programmeList_leftText{color: #555555;line-height: 26px;margin-bottom: 32px;width: calc(100% - 460px);}
 /* .manufacturing_case{background: linear-gradient(180deg, rgba(103,154,255,0.06) 0%, rgba(255,255,255,0.06) 100%);} */

@@ -12,7 +12,7 @@
 .qilian_topImg{width: 360px;height: 350px;margin-left: 136px;}
 .qilian_adver_left{width: calc(100% - 496px);}
 .paas_adver_left{width: calc(100% - 580px);}
-.paas_adver_text{color: #555555;line-height: 28px;margin: 24px 0;}
+.paas_adver_text{color: #555555;line-height: 28px;margin: 24px 0;font-weight: normal}
 .paas_adver_buts{margin-bottom: 48px;}
 .paas_adver_buts>div{border-radius: 18px;border: 1px solid rgba(34,34,34,0.19);padding: 5px 19px;margin-right: 16px;}
 .mkt_adver_buts{margin-bottom: 48px;}

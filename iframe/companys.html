@@ -30,7 +30,7 @@
                     </div>
 				</div>
 <!--				<div><div class="f16 colorbai home_Case_More">更多行业案例</div></div>-->
-				<div><a class="f16 colorbai home_Case_More" href="../case-study.html" target="_blank">更多行业案例</a></div>
+				<div v-if="showCase"><a class="f16 colorbai home_Case_More" href="../case-study.html" target="_blank">更多行业案例</a></div>
 			</div>
 		</div>
 	</body>
@@ -43,7 +43,8 @@
 					caseCompanylist:[],
                     tranL:0,
                     tranR:-1660,
-                    setTimetrans:null
+                    setTimetrans:null,
+					showCase:false
 				}
 			},
 			watch: {
@@ -65,6 +66,9 @@
                 },100)
 			},
 			mounted(){
+				if (parent.document.location.pathname.includes("index.html")){
+					this.showCase=true
+				}
 			},
 			methods: {
                 getdata(){
@@ -75,6 +79,18 @@
 					.then(res => {
                         // console.log('_getcaseCompanylist',res.result)
 						that.caseCompanylist = res.result
+						var iframes=$(window.parent.document).find("iframe")
+						for (var i=0;i<iframes.length;i++){
+							if ($(iframes[i]).attr("src").includes("companys.html")){
+								var height=750
+								if (that.showCase){
+									height=866
+								}
+								var iframeHeight=(height-(6-that.caseCompanylist.length)*92)+"px;"
+								$(iframes[i]).attr("style","width: 100%;height:"+iframeHeight)
+							}
+
+						}
 					})
 					.catch(err => {
 						console.log(err,'_getcaseCompanylist获取数据异常');

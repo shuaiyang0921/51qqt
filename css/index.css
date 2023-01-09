@@ -29,7 +29,9 @@
 .header{position: fixed;top: 0;width: 100%;margin: 0 auto;-webkit-transition: 5s; transition: 5s;z-index: 100;}
 .heiheader{height: 74px;}
 .homeHead_appleStytle{font-family: PingFangSC-Semibold, sans-serif;font-weight: 600;}
+.homeHead_appleStytle_normal{font-family: PingFangSC-Semibold, sans-serif;font-weight: normal;}
 .PingFangSCMedium{font-family: PingFangSC-Medium, PingFang SC;font-weight: 600;}
+.PingFangSCMediumNormal{font-family: PingFangSC-Medium, PingFang SC;font-weight: normal;}
 .PingFangSCMediumBanner{font-family: PingFangSC-Medium, PingFang SC;font-weight: 500;}
 .homeHead{background: #FFFFFF;padding: 0 120px;box-shadow: 0px 3px 14px 0px rgba(0,0,0,0.05);position: relative;}
 .homephoneHead{padding: 20px 0px;margin: 0 24px;display: none;}

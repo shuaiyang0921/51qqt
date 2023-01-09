@@ -15,7 +15,7 @@ function getHost(hostAddressSign) {
 			}
 		}
 	}
-	// return axios.defaults.baseURL = '/els';
+	return axios.defaults.baseURL = '/els';
 }
 
 /** 
