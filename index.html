@@ -436,30 +436,33 @@
 			</div>
 			<div class="PingFangSCMedium tac home_title">{{firstdemo[0]?firstdemo[0].bigTitle:''}}</div>
 			<div class="home_Enabling">
-				<div v-for="(item,index) in firstdemo" >
-					<div class="flex-column flex-between" v-if="index==0">
-						<div class="home_Enabling_left">
-							<div class="f26 PingFangSCMedium">{{item.title}}</div>
-							<div class="f16 home_Enabling_Subhead">{{item.intro}}</div>
-							<div class="f16 PingFangSCMedium home_Enabling_title">业务场景：</div>
-							<div class="f14 home_Enabling_text" v-for="itchenk in item.description.split(',')">{{itchenk}}</div>
-							<div class="f14 homeHead_appleStytle home_Enabling_but homeHead_registertil colorbai" @click="showregistermodal('')">注册体验</div>
+				<template  v-for="(item,index) in firstdemo">
+					<div >
+						<div class="flex-column flex-between" v-if="index==0">
+							<div class="home_Enabling_left">
+								<div class="f26 PingFangSCMedium">{{item.title}}</div>
+								<div class="f16 home_Enabling_Subhead">{{item.intro}}</div>
+								<div class="f16 PingFangSCMedium home_Enabling_title">业务场景：</div>
+								<div class="f14 home_Enabling_text" v-for="itchenk in item.description.split(',')">{{itchenk}}</div>
+								<div class="f14 homeHead_appleStytle home_Enabling_but homeHead_registertil colorbai" @click="showregistermodal('')">注册体验</div>
+							</div>
+							<div class="home_Enabling_rightimg"><img :src="item.image" class="imgsize" :alt="item.title"></div>
 						</div>
-						<div class="home_Enabling_rightimg"><img :src="item.image" class="imgsize" :alt="item.title"></div>
-					</div>
-					<div class="flex-column flex-between" v-if="index==1">
-						<div class="home_Enabling_leftimg"><img :src="item.image" class="imgsize" :alt="item.title"></div>
-						<div class="home_Enabling_right">
-							<div class="f26 PingFangSCMedium">{{item.title}}</div>
-							<div class="f16 home_Enabling_Subhead">{{item.intro}}</div>
-							<div class="f16 PingFangSCMedium home_Enabling_title">业务场景：</div>
-							<div class="f14 home_Enabling_text" v-for="itchenk in item.description.split(',')">{{itchenk}}</div>
-							<div class="f14 homeHead_appleStytle home_Enabling_but homeHead_registertil colorbai" @click="showregistermodal('')">注册体验</div>
+						<div class="flex-column flex-between" v-if="index==1">
+							<div class="home_Enabling_leftimg"><img :src="item.image" class="imgsize" :alt="item.title"></div>
+							<div class="home_Enabling_right">
+								<div class="f26 PingFangSCMedium">{{item.title}}</div>
+								<div class="f16 home_Enabling_Subhead">{{item.intro}}</div>
+								<div class="f16 PingFangSCMedium home_Enabling_title">业务场景：</div>
+								<div class="f14 home_Enabling_text" v-for="itchenk in item.description.split(',')">{{itchenk}}</div>
+								<div class="f14 homeHead_appleStytle home_Enabling_but homeHead_registertil colorbai" @click="showregistermodal('')">注册体验</div>
+							</div>
 						</div>
 					</div>
-				</div>
-				
-				
+					<div class="flex-column flex-between" v-if="index==0" style="background-color: #F7F8FA;height: 130px;position: relative">
+						<img src="./img/home163.png" style="width: 65%;height: 140%;position: absolute;top: -22px;left: 24%">
+					</div>
+				</template>
 			</div>
 			<div class="home_product">
 				<div class="tac home_product_title PingFangSCMedium">产品矩阵：采购全链条业务闭环、开放</div>
