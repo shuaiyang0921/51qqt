@@ -66,7 +66,7 @@
 .home_Solution_rightwidth2{width: calc(100% - 252px);}
 .showitem{display: flex;}
 .home_Solution_centerText{padding: 33px 0 56px 0;}
-.home_Solution_centerImgs{width: 400px;margin-bottom: 40px;}
+.home_Solution_centerImgs{width: 480px;margin-bottom: 40px;}
 .home_Solution_centerImg{width: 32px;height: 32px;margin: 0 auto;margin-bottom: 12px;}
 .home_Solution_centerbut{padding: 10px 32px;width: 56px;background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);border-radius: 4px;cursor: pointer;}
 .home_Case{padding: 60px 0px;background: url(../img/home42.png) no-repeat center center;background-size: cover;}
