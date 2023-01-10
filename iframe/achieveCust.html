@@ -82,7 +82,6 @@
 					var _getachieveCustlist = p => get('/works/caseWork/noToken/queryByHot', p);
 					_getachieveCustlist({industryOrAreas: that.pageName})
 					.then(res => {
-                        console.log('_getcaseCompanylist',res.result)
 						that.achieveCustlist = res.result
 					})
 					.catch(err => {

@@ -447,7 +447,7 @@
 									<div class="caseStudyInfo_rightBot_iconImg">4</div>
 								</div>
 								<div class="f16 caseStudyInfo_rightBot_text">
-									<a v-for="item in hotList" :href="'caseStudyInfo.html?id='+item.id">{{item.intro}}</a>
+									<a v-for="item in hotList" :href="'caseStudyInfo.html?id='+item.id">{{item.title}}</a>
 								</div>
 							</div>
 							
@@ -680,7 +680,7 @@
 			},
 			gethotdata(){
 				that = this
-				var _gethotData = p => get('/works/caseWork/noToken/hot', p);
+				var _gethotData = p => get('/information/noToken/hot', p);
 				_gethotData({}).then(res => {
 					that.hotList = res.result
 					

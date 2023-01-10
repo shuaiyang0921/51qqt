@@ -75,6 +75,7 @@
 .home_Caseimg{width: 480px;height: 340px;}
 .home_Case_inforight{width: calc(100% - 600px);padding: 60px 60px 40px 60px;}
 .home_Case_inforight_title{position: relative;line-height: 28px;}
+.home_Case_inforight_title_case_tab{position: relative;line-height: 28px;}
 .home_Case_inforight_title::before{content: "";width: 48px;height: 40px;position: absolute;top: -30px;left: -30px;background: url(../img/home1.png) no-repeat center center;background-size: cover;}
 .home_Case_inforightImg{width: 110px;height: 46px;margin: 72px 0 16px 0;}
 .home_Case_tabs{width: 100%;margin: 0 auto;}
