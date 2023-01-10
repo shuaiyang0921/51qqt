@@ -409,8 +409,8 @@
 				<div class="homeHead_adverstyle flex-column" :style="{width: imgwidth}">
 					<div @click="jumpLink(item.showButton,item.link)" :class="item.video?'homeHead_adverList_video':'homeHead_adverList'" v-for="item in BanerImg" :style="{backgroundImage: 'url('+ item.image+ ')',position:'relative'}">
 						<template v-if="!item.video">
-							<div class="homeHead_adver1_title homeHead_appleStytle" v-if="item.title">{{item.title}}</div>
-							<div class="homeHead_adver1_title homeHead_appleStytle" v-if="item.subhead">{{item.subhead}}</div>
+							<div class="homeHead_adver1_title homeHead_appleStytle" v-if="item.title" v-html="item.title"></div>
+<!--							<div class="homeHead_adver1_title homeHead_appleStytle" v-if="item.subhead">{{item.subhead}}</div>-->
 							<div class="f20 homeHead_adver1_text" v-if="item.intro" v-html="item.intro"></div>
 							<a v-if="item.showButton==1" class="f14 homeHead_registertil tac homeHead_appleStytle" style="position: absolute;bottom: 120px;" @click="showregistermodal(item.link)">{{item.buttonText?item.buttonText:'注册体验'}}</a>
 						</template>
@@ -513,7 +513,7 @@
 						<div class="home_product_paasimg"><img :src="item.icon" class="imgsize" :alt="item.intro"></div>
 						<div class="home_product_paasright">
 							<div class="home_product_paasTitle PingFangSCMedium">{{item.intro}}</div>
-							<div class="f14 home_product_saasText">{{item.description}}</div>
+							<div class="f14 home_product_saasText" v-html="item.description"></div>
 							<a class="f14 colorblue" :href="item.remark">
 								了解更多
 								<span class="home_product_saasMoreicon">
