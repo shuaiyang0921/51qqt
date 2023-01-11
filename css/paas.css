@@ -46,6 +46,7 @@
 .purchase_navList_img{width: 570px;height: 380PX;margin: 35px 55px 35px 0;}
 .scf_navList_right{width: 495px;padding-right: 55px;}
 .purchase_navList_right{width: 570px;padding-right: 55px;}
+.purchase_navList_left{width: 570px;padding-left: 55px;}
 .scf_navList_rightTitle{font-size: 26px;line-height: 37px;margin-bottom: 16px;}
 .scf_navList_rightLable{padding: 13px 24px;border-radius: 2px;border-left: 4px solid #FF761A;margin-bottom: 16px;}
 .scf_navList_rightText{color: #555555;line-height: 24px;margin-bottom: 60px;}

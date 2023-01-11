@@ -415,16 +415,18 @@
 				<div class="tac honor_title PingFangSCMedium">荣誉奖项</div>
 				<div class="honor_certificate_navs">
 					<div class="flex-column flex-around">
-						<div class="honor_certificate_list f16 " v-for="item in supplierListData">
-							<div class="honor_certificate_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
-							<div class="tac honor_certificate_text">{{item.title}}</div>
-						</div>
+						<template v-for="(item,index) in supplierListData">
+							<div class="honor_certificate_list f16" v-for="(content,index) in item">
+								<div class="honor_certificate_img"><img :src="content.image" class="imgsize" :alt="content.title"></div>
+								<div class="tac honor_certificate_text" v-html="content.title"></div>
+							</div>
+						</template>
 					</div>
 				</div>
-				<!-- <div class="home_Case_tabs flex-column flex-center">
+				 <div class="home_Case_tabs flex-column flex-center">
 					<div class="home_Case_tab"></div>
 					<div></div>
-				</div> -->
+				</div>
 			</div>
 			<div class="honor_certificate honor_certificate_bg">
 				<div class="tac honor_title PingFangSCMedium">企业资质</div>
@@ -432,7 +434,7 @@
 					<div class="flex-column flex-around">
 						<div class="honor_certificate_list f16" v-for="item in aboutListData">
 							<div class="honor_qualifications_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
-							<div class="tac honor_certificate_text">{{item.title}}</div>
+							<div class="tac honor_certificate_text" v-html="item.title"></div>
 						</div>
 						
 					</div>
@@ -604,7 +606,26 @@
 				that = this
 				var _getData = p => get('/aboutUs/noToken/queryByPageName', p);
 				_getData({pageName: '4'}).then(res => {
-					that.supplierListData = res.result['1']
+					var result1=res.result['1'];
+					var j=0;
+					var resultList=[]
+					for (var i=0;i<result1.length;i++){
+						var result=result1[i];
+						if (i==0){
+							resultList.push(result)
+						}else {
+							if (i%12!=0){
+								resultList.push(result)
+							}else {
+								that.supplierListData.push(resultList)
+								resultList=[]
+								resultList.push(result)
+							}
+						}
+						if (i==result1.length-1){
+							that.supplierListData.push(resultList)
+						}
+					}
 					that.aboutListData = res.result['2']
 				}).catch(err => {
 					console.log(err,'_getData获取数据异常');
