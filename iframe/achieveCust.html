@@ -35,9 +35,9 @@
 					<div class="flex-column flex-middle flex-center manufacturing_case_but" @click="tzMoremanu"><div class="f14 manufacturing_case_butsty tac homeHead_appleStytle_normal">查看更多案例</div></div>
 				</div>
 				<div class="">
-					<div class="porelative" v-for="(item,index) in achieveCustlist">
+					<div :class="index==navsindex?'porelative':'porelative achieveCase'" v-for="(item,index) in achieveCustlist">
 						<div class="manufacturing_listleft colorbai">
-							<div class="homeHead_appleStytle manufacturing_listleft_title">{{item.title}}</div>
+							<div class="homeHead_appleStytle manufacturing_listleft_title" v-html="item.title"></div>
 							<div class="f16 manufacturing_listleft_text colorbai" v-html="item.intro"></div>
 							<div class="flex-column flex-middle flex-between f16 tac">
 								<div class="manufacturing_listleft_but1 PingFangSCMedium" @click="caseStudyInfo(item.id)">查看案例</div>

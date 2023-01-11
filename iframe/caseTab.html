@@ -29,7 +29,7 @@
 							<div class="flex-column flex-between">
 								<div class="f16 PingFangSCMedium fontWeightNormal tags" style="">{{item.tags}}</div>
 							</div>
-							<div class="f16 home_Case_inforight_title_case_tab tab_intro">{{item.intro}}</div>
+							<div class="f16 home_Case_inforight_title_case_tab tab_intro" v-html="item.intro"></div>
 <!--							<div class="home_Case_inforightImg"><img :src="item.logo" class="imgsize" :alt="item.tag"></div>-->
 						</div>
 					</div>
@@ -37,7 +37,7 @@
 				<div class="home_Case_tabs flex-column flex-center">
 					<div v-for="(item,index) in CaseList" :class="Caseindex==index?'home_Case_tab':''" @click="changeCaseindex(index)"></div>
 				</div>
-				<div class="scfMoreCase"><a class="f16 colorbai home_Case_More" href="../case-study.html" target="_blank">更多行业案例</a></div>
+				<div class="scfMoreCase"><a class="f16 colorbai home_Case_More" href="../case-study.html" target="_blank">查看更多案例</a></div>
 			</div>
 		</div>
 	</body>

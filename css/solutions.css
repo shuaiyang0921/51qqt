@@ -44,7 +44,9 @@
 .manufacturing_listleft_but1{width: 64px;color: #005CEF;line-height: 22px;height: 22px;padding: 9px 33px;background: #FFFFFF;border-radius: 4px;}
 .manufacturing_listleft_but2{width: 80px;line-height: 22px;height: 22px;border-radius: 4px;border: 2px solid rgba(255,255,255,0.3);padding: 9px 33px;}
 .manufacturing_listleft_but3{width: 126px;line-height: 22px;height: 22px;border-radius: 4px;padding: 9px 3px;background: rgba(255,255,255,0.2);}
-
+.achieveCase{
+    display: none;
+}
 
 @media screen and (max-width:1540px) {
     .manufacturing_listleft {width: calc(100% - 487px);padding: 40px 160px 72px 40px;}
