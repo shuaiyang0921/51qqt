@@ -126,3 +126,59 @@
 .home_Case_companyImg{width: 120px;height: 44px;padding: 14px 16px;background: #FFFFFF;box-shadow: 0px 0px 30px 0px rgba(20,22,26,0.08);border-radius: 4px;margin: 10px;display: inline-block;transition: .3s;}
 .home_Case_companyImg:hover{box-shadow: 0px 0px 30px 0px rgba(20,22,26,0.2);transform: scale(1.1);}
 .Vidio_padd{width: 878px;height: 714px;background: #000000;margin: 0 auto;}
+@media screen and (max-width:1360px) {
+    .homeHead_adver_bot{margin: 0px 30px 5px 30px;}
+}
+@media screen and (max-width:1170px) {
+    .home_Enabling_rightimg,.home_Enabling_leftimg,.home_Caseimg{display: none;}
+    .home_Enabling_left,.home_Enabling_right,.home_Case_inforight{width: 100%;}
+    .home_product_paasright{width: calc(100% - 88px);}
+    .home_product_paas{width: 100%;}
+    .home_Solution{padding: 60px 30px 0 30px;}
+    .padBg{padding: 30px 60px;}
+    .companyshei{height: 806px;}
+    .home_endorsed_botLists{bottom: -160px;}
+    .home_information{padding: 190px 60px 30px 60px;}
+    .home_information_list{width: 100%;}
+    .home_information_text{width: calc(100% - 144px);}
+    .home_partners{padding: 0px;}
+    .home_partners_img{margin-bottom: 400px;}
+    .home_register{padding: 35px 20px;}
+}
+@media screen and (max-width:900px) {
+    .home_Solution_left {width: 100%;display: flex;justify-content: space-around;align-items: center;text-align: center;flex-flow: wrap;}
+    .home_Solution_left>div{height: 35px;line-height: 35px;width: 130px;padding: 30px 20px;}
+    .home_Solution_rightwidth,.home_Solution_center {width: 100%;}
+    .home_Solution_right{width: 100%;height:auto}
+    .home_Solution_rightimg{width: 90px;height: 90px;margin: 15px;}
+}
+@media screen and (max-width:582px) {
+    .homeHead_adverList{padding: 20px 0 0 20px;height: 350px;}
+    .homeHead_adver1_title{font-size: 30px;}
+    .f20{font-size: 18px;}
+    .homeHead_adver{height: 375px;}
+    .homeHead_adver_bottext{width: 100%;}
+    .homeHead_adver_bot{margin: 0px 15px 5px 15px;}
+    .home_title,.home_product_title{font-size: 24px;margin-bottom: 20px;}
+    .home_Enabling{margin: 0 20px 30px 20px;}
+    .home_product,.home_padd{padding:30px 20px}
+    .home_product_saas{width: 100%;margin: 10px 0 10px 0;}
+    .home_competitive_listright{padding: 15px 15px 10px 20px;width: calc(100% - 255px);}
+    .home_Case_info{margin: 0 20px 30px 20px;}
+    .padBg,.home_endorsed{padding: 15px 20px;}
+    .home_Case_companys{padding: 0;}
+    .home_endorsed_botStyle{margin: 0 20px;}
+    .home_endorsed_list{width: 50%;}
+    .home_endorsed_botLists{bottom: -320px;}
+    .home_information{padding: 280px 20px 15px 20px;}
+    .home_Case_More{padding: 5px 20px;}
+    .home_partners_img{margin-bottom: 170px;}
+    .home_Case_companyImg{padding: 10px;}
+    .f18{font-size: 16px;}
+    .home_register{ font-size: 16px;padding: 2px 20px;}
+    .home_register_text{margin: 0 75px 5px 0;}
+    .home_register_but{padding: 5px 30px;margin-left: 70px;}
+    .companyshei{height: 674px;}
+    .home_Case_companys{margin-bottom: 10px;}
+    
+}
