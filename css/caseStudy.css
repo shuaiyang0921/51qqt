@@ -67,7 +67,7 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
-    overflow: hidden;margin-bottom: 24px;}
+    overflow: hidden;}
 .previous_news{
     margin-top: 30px;
     width: calc(100% - 420px);
