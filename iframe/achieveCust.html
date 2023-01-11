@@ -41,7 +41,7 @@
 							<div class="f16 manufacturing_listleft_text colorbai" v-html="item.intro"></div>
 							<div class="flex-column flex-middle flex-between f16 tac">
 								<div class="manufacturing_listleft_but1 PingFangSCMedium" @click="caseStudyInfo(item.id)">查看案例</div>
-								<div :class="index==0?'manufacturing_listleft_but2 PingFangSCMediumNormal':'manufacturing_listleft_but3 PingFangSCMediumNormal'" v-for="(items,index) in item.tags">{{items}}</div>
+								<div :class="index==0?'manufacturing_listleft_but2 PingFangSCMediumNormal':'manufacturing_listleft_but3 PingFangSCMediumNormal'" v-for="(items,index) in item.tags.split(',')">{{items}}</div>
 							</div>
 						</div>
 						<div class="manufacturing_listright_img"><img :src="item.backgroundImage" class="imgsize" :alt="item.title"></div>
