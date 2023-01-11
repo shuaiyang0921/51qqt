@@ -438,13 +438,14 @@
 					<div class="caseStudyInfo_right">
 						<div class="caseStudyInfo_right_img"><img src="./images/caseStudy/caseStudy6.png" class="imgsize" alt="获取更多采购干货分享"></div>
 						<div class="caseStudyInfo_rightBot">
-							<div class="homeHead_appleStytle caseStudyInfo_rightBot_title">热门案例</div>
+							<div class="homeHead_appleStytle caseStudyInfo_rightBot_title"><span>热门资讯</span></div>
 							<div class="flex-column">
 								<div class="caseStudyInfo_rightBot_icon tac">
 									<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy7.png" class="imgsize" alt="第一"></div>
 									<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy8.png" class="imgsize" alt="第二"></div>
 									<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy9.png" class="imgsize" alt="第三"></div>
 									<div class="caseStudyInfo_rightBot_iconImg">4</div>
+									<div class="caseStudyInfo_rightBot_iconImg">5</div>
 								</div>
 								<div class="f16 caseStudyInfo_rightBot_text">
 									<a v-for="item in hotList" :href="'caseStudyInfo.html?id='+item.id">{{item.title}}</a>
@@ -455,8 +456,8 @@
 					</div>
 				</div>
                 <div class="flex-column flex-between" v-else>
-                    <div v-for="item in InfoData" class="news_vidio_list bgbai">
-                        <div class="news_vidio_img" @click="showvidiomodal(item.title,item.video)" ><img :src="item.image" class="imgsize" :alt="item.title"></div>
+                    <div v-for="item in InfoData" class="news_vidio_list bgbai" @click="showvidiomodal(item.title,item.video)" >
+                        <div class="news_vidio_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
                         <div class="news_vidio_pad">
                             <div class="f20 news_vidio_title PingFangSCMedium">{{item.title}}</div>
                             <div class="f14 news_vidio_text">{{item.description}}</div>
@@ -664,7 +665,7 @@
 				_getData({
 					type:that.typeIndex,
 					pageNo:this.currentPage,
-					pageSize:10
+					pageSize:12
 				}).then(res => {
 					that.InfoData = res.result.records
 					that.Pagenun = []
@@ -715,7 +716,7 @@
 				}
 			},
             tznewsInfo(id){
-                window.location.href = './newsInfo.html?id='+id
+                window.location.href = './newsInfo.html?id='+id+"&type="+this.typeIndex
             },
 			showvidiomodal(title,url){
 				this.vidiotitle = title

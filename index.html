@@ -571,7 +571,7 @@
 			<div class="home_Case">
 				<div class="tac home_product_title PingFangSCMedium">与千家高成长企业一起，实现数字化采购</div>
 				<div>
-					<div class="flex-column home_Case_info" v-for="item in CaseList">
+					<div :class="index==0?'flex-column home_Case_info home_Case_info_show':'flex-column home_Case_info'" v-for="(item,index) in CaseList">
 						<div class="home_Caseimg"><img :src="item.image" class="imgsize" :alt="item.tag"></div>
 						<div class="home_Case_inforight">
 							<div class="f16 home_Case_inforight_title">{{item.intro}}</div>

@@ -5,6 +5,7 @@
 .homeHead_registertil{padding: 14px 68px;}
 .caseStudy_FilterHeader{padding: 20px 120px;box-shadow: 0px 2px 10px 0px rgba(154,161,174,0.1);}
 .caseStudy_FilterHeader_top{margin-bottom: 20px;}
+.caseStudy_FilterHeader_bottom{margin-top: 20px;}
 .caseStudy_FilterHeader_topTitle{}
 .caseStudy_FilterHeader_lists>div{margin: 0 20px;height: 22px;line-height: 22px;cursor: pointer;}
 .caseStudy_FilterHeader_chenck{padding: 5px 20px;background: #005CEF;border-radius: 16px;color: #FFFFFF;}
@@ -29,7 +30,7 @@
 .caseStudyInfo_label_img{width: 6px;height: 12px;margin: 0 10px;}
 .caseStudyInfo_left{background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(197,205,219,0.1);border-radius: 8px;border: 2px solid #FFFFFF;padding: 32px 32px 90px 32px;width: calc(100% - 420px);margin-right: 32px;}
 .news_left{background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(197,205,219,0.1);border-radius: 8px;border: 2px solid #FFFFFF;padding: 12px 32px;width: calc(100% - 420px);margin-right: 32px;}
-.caseStudyInfo_left_title{height: 42px;font-size: 30px;line-height: 42px;margin-bottom: 30px;}
+.caseStudyInfo_left_title{font-size: 30px;margin-bottom: 30px;}
 .caseStudyInfo_left_publishtime{margin-bottom: 56px;color: #555555;height: 20px;line-height: 20px;}
 .caseStudyInfo_left_text{color: #555555;line-height: 28px;margin-bottom: 24px;}
 .caseStudyInfo_left_img{width: 100%;margin: 22px 0 50px 0;}
@@ -37,6 +38,7 @@
 .caseStudyInfo_right_img{width: 320px;height: 260px;margin-bottom: 32px;}
 .caseStudyInfo_rightBot{background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 8px;border: 2px solid #FFFFFF;padding: 22px 41px 4px 30px;}
 .caseStudyInfo_rightBot_title{height: 30px;line-height: 30px;font-size: 22px;margin-bottom: 23px;border-bottom: 1px solid #EBEBEB;padding-bottom: 20px;}
+.caseStudyInfo_rightBot_title>span:hover{color: #005CEF}
 .caseStudyInfo_rightBot_icon{margin-right: 10px;}
 .caseStudyInfo_rightBot_iconImg{width: 22px;height: 22px;line-height: 22px;margin-bottom: 22px;}
 .caseStudyInfo_rightBot_text a{height: 22px;line-height: 22px;width: 213px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-bottom: 22px;display: block;color: #222222;}
@@ -47,10 +49,36 @@
 .news_list{padding: 24px 0;border-bottom: 1px solid #EBEBEB;}
 .news_listright{width: calc(100% - 310px);}
 .news_listright_title{height: 52px;line-height: 26px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;margin-bottom: 10px;}
-.news_listright_text{color: #555555;height: 44px;line-height: 22px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;margin-bottom: 24px;}
+.news_listright_title:hover{color: #005CEF}
+.news_listright_text{color: #555555;height: 44px;line-height: 22px;word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;margin-bottom: 24px;}
 .news_listright_but{background: #FFFFFF;padding: 4px 11px;box-shadow: 0px 2px 6px 0px rgba(15,31,87,0.06);border-radius: 2px;color: #888888;}
-.news_vidio_list{border: 1px solid #FFFFFF;border-radius: 4px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);margin: 15px;cursor: pointer;}
+.news_listright_but:hover{color: #005CEF}
+.news_vidio_list{width:386px;border: 1px solid #FFFFFF;border-radius: 4px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);margin: 15px;cursor: pointer;}
 .news_vidio_img{width: 384px;height: 216px;}
 .news_vidio_pad{padding: 24px;}
 .news_vidio_title{line-height: 28px;margin-bottom: 10px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
-.news_vidio_text{color: #555555;line-height: 24px;height: 120px;width: 336px;overflow:hidden;text-overflow:ellipsis;}
+.news_vidio_text{color: #555555;line-height: 24px;height: 120px;width: 336px;word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;margin-bottom: 24px;}
+.previous_news{
+    margin-top: 30px;
+    width: calc(100% - 420px);
+}
+.previous_news:hover{
+    color: #005CEF;
+}
+.next_news{
+    margin-top: 15px;
+    width: calc(100% - 420px);
+}
+.next_news:hover{
+     color: #005CEF;
+ }

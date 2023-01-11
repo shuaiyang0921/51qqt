@@ -414,7 +414,7 @@
 			</div>
 			<div class="heiheader"></div>
 			<div class="paas_topBg">
-				<div class="supplier_adver flex-column flex-middle flex-center" :style="{background: 'url('+(BannerImg[0]?BannerImg[0].image:'')+') no-repeat center center',backgroundSize: 'cover'}">
+				 <div class="supplier_adver flex-column flex-middle flex-center" :style="{backgroundImage: 'url('+(BannerImg[0]?BannerImg[0].image:'')+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover'}">
 					<div class="qilian_adver_left">
 						<div class="adver_title homeHead_appleStytle" v-html="BannerImg[0]?BannerImg[0].title:''"></div>
 						<div class="f16 PingFangSCMedium paas_adver_text" v-html="BannerImg[0]?BannerImg[0].intro:''"></div>

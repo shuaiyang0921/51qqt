@@ -29,7 +29,7 @@
 				<div class="bgbai flex-column flex-middle flex-between">
 					<div class="flex-column flex-middle manufacturing_case_navs">
 						<div class="flex-column flex-middle flex-center" v-for="(item,index) in achieveCustlist" :class="index==navsindex?'manufacturing_case_nav':''" @click="changenavsindex(index)">
-                            <div class="manufacturing_case_navsImg"><img :src="item.logo" class="imgsize" :alt="item.intro"></div>
+                            <div class="manufacturing_case_navsImg"><img :src="item.logo" class="imgsize" :alt="item.consumerId_dictText"></div>
                         </div>
 					</div>
 					<div class="flex-column flex-middle flex-center manufacturing_case_but" @click="tzMoremanu"><div class="f14 manufacturing_case_butsty tac homeHead_appleStytle_normal">查看更多案例</div></div>

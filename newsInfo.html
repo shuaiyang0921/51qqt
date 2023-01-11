@@ -434,6 +434,7 @@
 									<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy8.png" class="imgsize" alt="第二"></div>
 									<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy9.png" class="imgsize" alt="第三"></div>
 									<div class="caseStudyInfo_rightBot_iconImg">4</div>
+									<div class="caseStudyInfo_rightBot_iconImg">5</div>
 								</div>
 								<div class="f16 caseStudyInfo_rightBot_text">
 									<a v-for="item in hotList" :href="'caseStudyInfo.html?id='+item.id">{{item.title}}</a>
@@ -442,6 +443,8 @@
 							
 						</div>
 					</div>
+					<div class="previous_news" @click="turnPage(InfoData.previous.id)" v-if="InfoData.previous">上一篇&nbsp;·&nbsp;{{InfoData.previous.title}}</div>
+					<div class="next_news" @click="turnPage(InfoData.next.id)" v-if="InfoData.next">下一篇&nbsp;·&nbsp;{{InfoData.next.title}}</div>
 				</div>
 			</div>
 			<div class="home_register flex-column flex-center flex-middle colorbai">
@@ -591,7 +594,8 @@
 			return {
 				InfoData:{},
 				hotList:[],
-				showmodel:false
+				showmodel:false,
+				type: ''
 			}
 		},
 		watch: {
@@ -608,18 +612,27 @@
 			getdata(){
 				that = this
 				let id = ''
+				let type='';
 				if(getQueryVariable('id')){
 					id = getQueryVariable('id')
 				}
+				if (getQueryVariable('type')){
+					type=getQueryVariable('type')
+					this.type=type
+				}
 				var _getData = p => get('/information/noToken/queryFrontById', p);
 				_getData({
-					id:id
+					id:id,
+					type:type
 				}).then(res => {
 					that.InfoData = res.result
 					
 				}).catch(err => {
 					console.log(err,'_getData获取数据异常');
 				})
+			},
+			turnPage(id){
+				window.location.href = './newsInfo.html?id='+id+"&type="+this.type
 			},
 			gethotdata(){
 				that = this
