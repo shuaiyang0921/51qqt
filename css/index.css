@@ -212,3 +212,6 @@
     .homeHead_productpopUp_paastitleicon2::before{content:'';background: no-repeat url(../img/home64.png);background-size:100%;width: 20px;height: 20px;position: absolute;top: 0px;left: -25px;}
     .homeHead_productpopUp_paastitleicon3::before{content:'';background: no-repeat url(../img/home65.png);background-size:100%;width: 20px;height: 20px;position: absolute;top: 0px;left: -25px;}
 }
+.displayBox{
+    display: -webkit-box;
+}

@@ -10,3 +10,6 @@
 .honor_certificate_navs{margin-bottom: 28px;}
 .honor_certificate_bg{background: #F7F8FA;}
 .honor_qualifications_img{width: 220px;height: 140px;background: #F7F8FA;}
+.navNone{
+    display: none;
+}

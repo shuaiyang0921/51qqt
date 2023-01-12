@@ -414,30 +414,30 @@
 			<div class="padBg">
 				<div class="tac honor_title PingFangSCMedium">荣誉奖项</div>
 				<div class="honor_certificate_navs">
-					<div class="flex-column flex-around">
-						<template v-for="(item,index) in supplierListData">
-							<div class="honor_certificate_list f16" v-for="(content,index) in item">
-								<div class="honor_certificate_img"><img :src="content.image" class="imgsize" :alt="content.title"></div>
-								<div class="tac honor_certificate_text" v-html="content.title"></div>
-							</div>
-						</template>
+					<div v-if="index==navIndex" class="flex-column flex-around displayBox" v-for="(item,index) in supplierListData">
+						<div class="honor_certificate_list f16" v-for="(content,index) in item">
+						<div class="honor_certificate_img"><img :src="content.image" class="imgsize" :alt="content.title"></div>
+						<div class="tac honor_certificate_text" v-html="content.title"></div>
+					</div>
 					</div>
 				</div>
-				 <div class="home_Case_tabs flex-column flex-center">
-					<div class="home_Case_tab"></div>
-					<div></div>
+				<div class="home_Case_tabs flex-column flex-center">
+					<div v-for="(item,index) in supplierListData" :class="index==0?'home_Case_tab':''" @click="changeCaseTab(index)"></div>
 				</div>
 			</div>
 			<div class="honor_certificate honor_certificate_bg">
 				<div class="tac honor_title PingFangSCMedium">企业资质</div>
 				<div class="honor_certificate_navs">
-					<div class="flex-column flex-around">
-						<div class="honor_certificate_list f16" v-for="item in aboutListData">
-							<div class="honor_qualifications_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
-							<div class="tac honor_certificate_text" v-html="item.title"></div>
+					<div v-if="index==navZiZhiIndex" class="flex-column flex-around displayBox" v-for="(item,index) in aboutListData">
+						<div class="honor_certificate_list f16" v-for="(content,index) in item">
+							<div class="honor_qualifications_img"><img :src="content.image" class="imgsize" :alt="content.title"></div>
+							<div class="tac honor_certificate_text" v-html="content.title"></div>
 						</div>
-						
 					</div>
+				</div>
+
+				<div class="home_Case_tabs_ziZhi flex-column flex-center">
+					<div v-for="(item,index) in aboutListData" :class="index==0?'home_Case_tab':''" @click="changeCaseTabZiZhi(index)"></div>
 				</div>
 			</div>
 			<div class="home_register flex-column flex-center flex-middle colorbai">
@@ -589,7 +589,9 @@
 				aboutListData:[],
 				showmodel:false,
 				showVidio:false,
-				Listindex:0
+				Listindex:0,
+				navIndex:0,
+				navZiZhiIndex:0
 			}
 		},
 		watch: {
@@ -607,7 +609,6 @@
 				var _getData = p => get('/aboutUs/noToken/queryByPageName', p);
 				_getData({pageName: '4'}).then(res => {
 					var result1=res.result['1'];
-					var j=0;
 					var resultList=[]
 					for (var i=0;i<result1.length;i++){
 						var result=result1[i];
@@ -626,7 +627,25 @@
 							that.supplierListData.push(resultList)
 						}
 					}
-					that.aboutListData = res.result['2']
+					var result2=res.result['2']
+					var resultList2=[]
+					for (var i=0;i<result2.length;i++){
+						var result=result2[i];
+						if (i==0){
+							resultList2.push(result)
+						}else {
+							if (i%12!=0){
+								resultList2.push(result)
+							}else {
+								that.aboutListData.push(resultList2)
+								resultList2=[]
+								resultList2.push(result)
+							}
+						}
+						if (i==result2.length-1){
+							that.aboutListData.push(resultList2)
+						}
+					}
 				}).catch(err => {
 					console.log(err,'_getData获取数据异常');
 				})
@@ -645,7 +664,15 @@
 			},
 			changeindex(index){
 				this.Listindex = index
-			}
+			},
+			changeCaseTab(index){
+				this.navIndex = index
+				$('.home_Case_tabs>div').eq(this.navIndex).addClass('home_Case_tab').siblings().removeClass('home_Case_tab')
+			},
+			changeCaseTabZiZhi(index){
+				this.navZiZhiIndex = index
+				$('.home_Case_tabs_ziZhi>div').eq(this.navZiZhiIndex).addClass('home_Case_tab').siblings().removeClass('home_Case_tab')
+			},
 		},
 		computed:{},
 	})

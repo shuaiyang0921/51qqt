@@ -80,6 +80,9 @@
 .home_Case_inforightImg{width: 110px;height: 46px;margin: 72px 0 16px 0;}
 .home_Case_tabs{width: 100%;margin: 0 auto;}
 .home_Case_tabs div{width: 30px;height: 4px;background: #BDC8DE;border-radius: 2px;margin: 0 5px;cursor: pointer;}
+
+.home_Case_tabs_ziZhi{width: 100%;margin: 0 auto;}
+.home_Case_tabs_ziZhi div{width: 30px;height: 4px;background: #BDC8DE;border-radius: 2px;margin: 0 5px;cursor: pointer;}
 .home_Case_tab{background: #005CEF!important;}
 .home_Case_companys{padding: 0 15px;margin-bottom: 60px;}
 

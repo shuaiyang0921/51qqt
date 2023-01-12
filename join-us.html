@@ -425,8 +425,8 @@
 			</div>
 			<div class="joinUs_post">
 				<div class="tac joinUs_title PingFangSCMedium">热招岗位</div>
-				<div class="joinUs_post_lists flex-column flex-between ">
-					<div v-for="(item,index) in supplierListData">
+				<div v-if="indexList==navIndex" class="joinUs_post_lists flex-column flex-between " v-for="(itemList,indexList) in supplierListData">
+					<div v-for="(item,index) in itemList">
 						<div class="joinUs_post_list" :class="Listindex==index?'joinUs_post_listblue':''" @click="changeindex(index)">
 							<div class="joinUs_post_listTitle f20 PingFangSCMedium flex-column flex-between flex-middle">
 								<div>{{item.job}}</div>
@@ -443,6 +443,10 @@
 							<a class="f16 colorbai homeHead_appleStytle joinUs_post_popUpBut" href="#">投递简历</a>
 						</div>
 					</div>
+				</div>
+
+				<div class="home_Case_tabs flex-column flex-center">
+					<div v-for="(item,index) in supplierListData" :class="index==0?'home_Case_tab':''" @click="changeCaseTab(index)"></div>
 				</div>
 			</div>
 			<div class="padBg">
@@ -598,7 +602,8 @@
 				supplierListData:[],
 				showmodel:false,
 				showVidio:false,
-				Listindex:0
+				Listindex:0,
+				navIndex: 0
 			}
 		},
 		watch: {
@@ -616,10 +621,33 @@
 				var _getData = p => get('/aboutUs/noToken/queryByPageName', p);
 				_getData({pageName: '3'}).then(res => {
 					that.aboutImgData = res.result['1']
-					that.supplierListData = res.result['3']
+					var result1=res.result['3'];
+					var resultList=[]
+					for (var i=0;i<result1.length;i++){
+						var result=result1[i];
+						if (i==0){
+							resultList.push(result)
+						}else {
+							if (i%9!=0){
+								resultList.push(result)
+							}else {
+								that.supplierListData.push(resultList)
+								resultList=[]
+								resultList.push(result)
+							}
+						}
+						if (i==result1.length-1){
+							that.supplierListData.push(resultList)
+						}
+					}
+					// that.supplierListData = res.result['3']
 				}).catch(err => {
 					console.log(err,'_getData获取数据异常');
 				})
+			},
+			changeCaseTab(index){
+				this.navIndex = index
+				$('.home_Case_tabs>div').eq(this.navIndex).addClass('home_Case_tab').siblings().removeClass('home_Case_tab')
 			},
 			showregistermodal(){
 				this.showmodel = true
