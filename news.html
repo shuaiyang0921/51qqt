@@ -455,14 +455,26 @@
 						</div>
 					</div>
 				</div>
-                <div class="flex-column flex-between" v-else>
+                <div class="flex-column flex-top" v-else>
                     <div v-for="item in InfoData" class="news_vidio_list bgbai" @click="showvidiomodal(item.title,item.video)" >
                         <div class="news_vidio_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
                         <div class="news_vidio_pad">
-                            <div class="f20 news_vidio_title PingFangSCMedium">{{item.title}}</div>
-                            <div class="f14 news_vidio_text">{{item.description}}</div>
+                            <div class="f20 news_vidio_title PingFangSCMedium" v-html="item.title"></div>
+                            <div class="f14 news_vidio_text" v-html="item.description"></div>
                         </div>
                     </div>
+
+
+<!--					<div class="tac f26"  v-if="InfoData.length==0">-->
+<!--						暂无数据-->
+<!--					</div>-->
+<!--					<div class="caseStudy_FilterPages flex-column flex-middle flex-center" v-if="InfoData.length>0">-->
+<!--						<div class="Pagesprev" v-if="totalPage>5&&currentPage!=1"><img src="images/caseStudy/caseStudy4.png" class="imgsize" alt="上一页" @click="prevPage"></div>-->
+<!--						<div class="f16 flex-column flex-middle caseStudy_FilterPages_nums tac">-->
+<!--							<div v-if="showPage(item)" v-for="item in Pagenun" :class="currentPage==item?'caseStudy_FilterPages_num':''" @click="changePage(item)">{{item}}</div>-->
+<!--						</div>-->
+<!--						<div class="Pagesnext" v-if="totalPage>5&&currentPage!=totalPage"><img src="images/caseStudy/caseStudy3.png" class="imgsize" alt="下一页" @click="nextPage"></div>-->
+<!--					</div>-->
                 </div>
 			</div>
 			<div class="home_register flex-column flex-center flex-middle colorbai">
