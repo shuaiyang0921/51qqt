@@ -417,7 +417,7 @@
 					<div v-if="index==navIndex" class="flex-column flex-around displayBox" v-for="(item,index) in supplierListData">
 						<div class="honor_certificate_list f16" v-for="(content,index) in item">
 						<div class="honor_certificate_img"><img :src="content.image" class="imgsize" :alt="content.title"></div>
-						<div class="tac honor_certificate_text" v-html="content.title"></div>
+						<div class="tac honor_text" v-html="content.title"></div>
 					</div>
 					</div>
 				</div>
