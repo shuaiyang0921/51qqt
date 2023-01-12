@@ -215,3 +215,6 @@
 .displayBox{
     display: -webkit-box;
 }
+.videoPageWidth{
+    width: 100%;
+}
