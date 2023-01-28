@@ -566,8 +566,7 @@
 					</div>
 					<div class="f14 flex-column footer_topstyle footer_aboutstyle">
 						<a href="#">友情链接</a>
-						<a href="#">SRM管理系统</a>
-						<a href="https://www.51caigou.com" target="_blank">51采购网</a>
+						<a v-for="item in blogrollList" :href="item.link">{{item.title}}</a>
 					</div>
 					<div></div>
 				</div>

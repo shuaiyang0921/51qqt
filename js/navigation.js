@@ -21,3 +21,18 @@ $(".homeHead_popUpStyle").mousemove(function(){
 $(".hobverPopUp").mouseenter(function (){
     $(".homeHead_popUpStyle").attr("style","")
 })
+
+var _getData = p => get('/websiteBlogroll/noToken/list', p);
+_getData({})
+    .then(res => {
+        console.log(res,"友情链接")
+        if (res.code==200){
+            vm.blogrollList=res.result;
+        }else {
+            vm.blogrollList=[];
+        }
+
+    })
+    .catch(err => {
+        console.log(err,'_getData获取数据异常');
+    })
