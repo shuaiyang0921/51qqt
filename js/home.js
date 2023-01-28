@@ -9,20 +9,20 @@ function getQueryVariable(variable)
     return(false); 
 }
 $(document).ready(function(){
-    // var onOff = true;
+    var onOff = true;
     // var Onnav = true;
-    // $('.menu_button').click(function(){
-    //     event.stopPropagation();
-    //     $(this).toggleClass("cross");
-    //     if(onOff){
-    //         $('.header').css("height","100%");
-    //         $('.shownavs').show();
-    //     }else{
-    //         $('.header').css("height","auto");
-    //         $('.shownavs').hide();
-    //     }
-    //     onOff = !onOff;
-    // });
+    $('.menu_button').click(function(){
+        event.stopPropagation();
+        $(this).toggleClass("cross");
+        if(onOff){
+            $('.header').css("height","100%");
+            $('.shownavs').show();
+        }else{
+            $('.header').css("height","auto");
+            $('.shownavs').hide();
+        }
+        onOff = !onOff;
+    });
     // $('.homephoneHead_nav').click(function(){
     //     event.stopPropagation();
     //     index=$(this).index();
