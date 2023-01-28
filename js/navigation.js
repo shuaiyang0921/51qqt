@@ -25,7 +25,6 @@ $(".hobverPopUp").mouseenter(function (){
 var _getData = p => get('/websiteBlogroll/noToken/list', p);
 _getData({})
     .then(res => {
-        console.log(res,"友情链接")
         if (res.code==200){
             vm.blogrollList=res.result;
         }else {
