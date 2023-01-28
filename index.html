@@ -249,7 +249,7 @@
 							<div class="homeHead_phone homeHead_appleStytle f18">400-835-1881</div>
 						</div>
 						<a class="f16 homeHead_logintil" href="https://www.51qqt.com/ELSLogin/login/login.html">登录</a>
-						<div class="f14 homeHead_registertil" @click="showregistermodal('')">注册体验</div>
+						<div class="f14 homeHead_registertil" @click="showregistermodal()">注册体验</div>
 					</div>
 				</div>
 				<div class="bgbai homephoneHead_height">
@@ -459,7 +459,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="flex-column flex-between" v-if="index==0" style="background-color: #F7F8FA;height: 130px;position: relative">
+					<div class="flex-column flex-between showEnablingimg" v-if="index==0" style="background-color: #F7F8FA;height: 130px;position: relative">
 						<img src="./img/home163.png" style="width: 65%;height: 140%;position: absolute;top: -22px;left: 24%">
 					</div>
 				</template>
@@ -467,9 +467,25 @@
 			<div class="home_product">
 				<div class="tac home_product_title PingFangSCMedium">产品矩阵：采购全链条业务闭环、开放</div>
 				<div class="f26 homeHead_appleStytle">SaaS云</div>
-				<div class="flex-column flex-between" style="margin-bottom: 24px">
-					<div class="flex-item-8">
-						<div v-if="index==0" class="home_product_saas_first tac" v-for="(item,index) in productSaasList">
+				<div class="flex-column" style="margin-bottom: 24px">
+					<div v-if="index==0" class="home_product_saas_first tac" v-for="(item,index) in productSaasList">
+						<div class="flex-item-7">
+							<div class="home_product_saasimg">
+								<img :src="item.icon" class="imgsize" :alt="item.intro">
+							</div>
+						</div>
+						<div class="flex-item-17">
+							<div class="home_product_saasTitle PingFangSCMedium">{{item.intro}}</div>
+							<div class="f14 home_product_saasText" v-html="item.description"></div>
+							<a class="f14 colorblue" style="float: left" :href="item.remark">
+								了解更多
+								<span class="home_product_saasMoreicon"><img src="./img/home83.png" class="imgsize" alt="了解更多">
+								</span>
+							</a>
+						</div>
+					</div>
+					<div class="flex-column home_product_saasList">
+						<div v-if="index!=0"  class="home_product_saas tac" v-for="(item,index) in productSaasList">
 							<div class="flex-item-7">
 								<div class="home_product_saasimg">
 									<img :src="item.icon" class="imgsize" :alt="item.intro">
@@ -486,26 +502,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="flex-item-16">
-						<div v-if="index!=0" :style="index%2==0?'margin-left:51px;':''" class="home_product_saas tac flex-item-6" v-for="(item,index) in productSaasList">
-							<div class="flex-item-7">
-								<div class="home_product_saasimg">
-									<img :src="item.icon" class="imgsize" :alt="item.intro">
-								</div>
-							</div>
-							<div class="flex-item-17">
-								<div class="home_product_saasTitle PingFangSCMedium">{{item.intro}}</div>
-								<div class="f14 home_product_saasText" v-html="item.description"></div>
-								<a class="f14 colorblue" style="float: left" :href="item.remark">
-									了解更多
-									<span class="home_product_saasMoreicon"><img src="./img/home83.png" class="imgsize" alt="了解更多">
-									</span>
-								</a>
-							</div>
-
-						</div>
-					</div>
-
+					
 				</div>
 				<div class="f26 homeHead_appleStytle">PaaS平台</div>
 				<div class="flex-column flex-between ">
@@ -552,15 +549,17 @@
 					</div>
 					<div class="flex-column home_Solution_rightwidth" v-for="(itemdemo,indexdemo) in item[1]" :style="indexdemo==Solutionindex?'display: flex;':''">
 						<div class="home_Solution_center">
-							<div class="f24 colorbai PingFangSCMedium">{{itemdemo.title}}</div>
-							<div class="f14 colorbai home_Solution_centerText">{{itemdemo.intro}}</div>
-							<div class="home_Solution_centerImgs flex-column flex-between">
-								<div class="tac" v-for="itemchenk in itemdemo.tags">
-									<div class="home_Solution_centerImg"><img :src="itemchenk.src" class="imgsize" :alt="itemchenk.title"></div>
-									<div class="f14 colorbai">{{itemchenk.title}}</div>
+							<div style="padding: 20px;">
+								<div class="f24 colorbai PingFangSCMedium">{{itemdemo.title}}</div>
+								<div class="f14 colorbai home_Solution_centerText">{{itemdemo.intro}}</div>
+								<div class="home_Solution_centerImgs flex-column flex-between">
+									<div class="tac" v-for="itemchenk in itemdemo.tags">
+										<div class="home_Solution_centerImg"><img :src="itemchenk.src" class="imgsize" :alt="itemchenk.title"></div>
+										<div class="f14 colorbai">{{itemchenk.title}}</div>
+									</div>
 								</div>
+								<a class="f14 colorbai home_Solution_centerbut" :href="'./solutions/manufacturing.html?name='+pageName">方案详情</a>
 							</div>
-							<a class="f14 colorbai home_Solution_centerbut" :href="'./solutions/manufacturing.html?name='+pageName">方案详情</a>
 						</div>
 						<div class="home_Solution_right flex-column">
 							<div class="home_Solution_rightimg" v-for="itemlogos in itemdemo.logos"><img :src="itemlogos" class="imgsize" alt="itemlogos"></div>
@@ -587,7 +586,7 @@
 					<div v-for="(item,index) in CaseList" :class="index==0?'home_Case_tab':''" @click="changeCaseTab(index)"></div>
 				</div>
 			</div>
-			<iframe src="./iframe/companys.html" style="width: 100%;height: 866px;" frameborder="0" scrolling="no"></iframe>
+			<iframe src="./iframe/companys.html" class="companyStyle" frameborder="0" scrolling="no"></iframe>
 			<div class="home_endorsed">
 				<div class="tac home_product_title PingFangSCMedium colorbai">行业认可</div>
 				<div class="flex-column flex-between tac colorbai PingFangSCMedium home_endorsed_lists">
@@ -668,8 +667,14 @@
 					<div><a class="f16 colorbai home_Case_More" href="cooperation.html">成为合作伙伴</a></div>
 				</div>
 			</div>
-			<iframe src="./iframe/home_register.html" style="width: 100%;height: 155px;" frameborder="0" scrolling="no"></iframe>
-			
+			<div class="home_register flex-column flex-center flex-middle colorbai">
+				<div class="PingFangSCMedium">
+					<div class="home_register_text">开启数字化供应链与采购新体验</div>
+					<div class="tar">赋能企业数字化转型与变革</div>
+				</div>
+				<div class="f18 homeHead_registertil home_register_but  homeHead_appleStytle  colorbai" @click="showregistermodal">注册体验</div>
+			</div>
+			<!-- <iframe src="./iframe/home_register.html" style="width: 100%;height: 155px;" frameborder="0" scrolling="no"></iframe> -->
 			<div class="bgfooter">
 				<div class="footer maxwidth">
 					<div class="footer_topstyle xian_footer flex-column">
