@@ -41,7 +41,7 @@
 .caseStudyInfo_rightBot_icon{margin-right: 10px;}
 .caseStudyInfo_rightBot_iconImg{width: 22px;height: 22px;line-height: 22px;margin-bottom: 22px;}
 .caseStudyInfo_rightBot_text a{height: 22px;line-height: 22px;width: 213px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-bottom: 22px;display: block;color: #222222;}
-.caseStudyInfo_rightBot_text>a:hover{color: #005CEF}
+.caseStudyInfo_rightBot_text a:hover{color: #005CEF}
 .news_navs{margin-bottom: 24px;}
 .news_navs>div{padding: 18px 20px;border-bottom: 2px solid #FFFFFF;margin-right: 10px;line-height: 22px;cursor: pointer;}
 .news_navschenck{font-size: 20px;color: #005CEF;font-family: PingFangSC-Medium, PingFang SC;font-weight: 500;border-bottom: 2px solid #005CEF!important;}
@@ -82,3 +82,16 @@
 .next_news:hover{
      color: #005CEF;
  }
+.hot_title_show_hidden{
+    display: none;
+}
+.hot_title_show_before{
+    width: 0;height: 0;border-left: 6px solid transparent;border-right: 6px solid transparent;border-bottom: 6px solid #E2E2E5;position: absolute;top: 23px;z-index: 102;left: 16px;
+}
+.hot_title_show_after{
+    width: 0;height: 0;border-left: 8px solid transparent;border-right: 8px solid transparent;border-bottom: 8px solid #BEBEBE;position: absolute;top: 21px;z-index: 101;left: 14px;
+}
+.hot_title_show{
+    position: absolute;top: 28px;left: 0;width: 320px;border: 1px solid #BEBEBE;border-radius:4px;z-index: 100;background: #E2E2E5;padding: 5px;font-size: 14px;
+}
+
