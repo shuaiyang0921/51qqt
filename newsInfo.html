@@ -437,7 +437,18 @@
 									<div class="caseStudyInfo_rightBot_iconImg">5</div>
 								</div>
 								<div class="f16 caseStudyInfo_rightBot_text">
-									<a v-for="item in hotList" :href="'newsInfo.html?id='+item.id">{{item.title}}</a>
+
+
+									<div v-for="(item,index) in hotList" style="position: relative;">
+										<a @mouseover="overFun(index)" @mouseout="outFun(index)" style="z-index: -100" :href="'newsInfo.html?id='+item.id">{{item.title}}</a>
+										<div :class="showFullTitle==index?'hot_title_show_before':''"></div>
+										<div :class="showFullTitle==index?'hot_title_show_after':''"></div>
+										<div :class="showFullTitle==index?'hot_title_show':'hot_title_show_hidden'">
+											{{item.title}}
+										</div>
+									</div>
+
+<!--									<a v-for="item in hotList" :href="'newsInfo.html?id='+item.id">{{item.title}}</a>-->
 								</div>
 							</div>
 							
@@ -595,6 +606,7 @@
 				hotList:[],
 				showmodel:false,
 				blogrollList:[],
+				showFullTitle:-1,
 				type: ''
 			}
 		},
@@ -650,6 +662,12 @@
 			hederegistermodal(){
 				this.showmodel = false
 			},
+			overFun(index){
+				this.showFullTitle=index;
+			},
+			outFun(index){
+				this.showFullTitle=-1;
+			}
 		},
 		computed:{},
 	})
