@@ -23,7 +23,7 @@
 .Pagesprev{width: 8px;height: 14px;cursor: pointer;}
 .Pagesnext{width: 8px;height: 14px;cursor: pointer;}
 .caseStudy_FilterPages_nums{margin: 0 8px;}
-.caseStudy_FilterPages_nums>div{height: 22px;color: #005CEF;line-height: 22px;padding: 5px 11px;width: 10px;border-radius: 2px;border: 1px solid #005CEF;margin: 0 7px;cursor: pointer;}
+.caseStudy_FilterPages_nums>div{height: 22px;color: #005CEF;line-height: 22px;padding:5px 11px 5px 11px;width: 10px;border-radius: 2px;border: 1px solid #005CEF;margin: 0 7px;cursor: pointer;display: flex;flex-direction: row;justify-content: center;}
 .caseStudy_FilterPages_num{background: #FF761A;border-radius: 2px;color: #FFFFFF!important;border: 1px solid #FF761A!important;}
 .caseStudyInfo_bg{padding: 60px 120px;background: #F7F8FA;}
 .caseStudyInfo_label{color: #555555;height: 22px;line-height: 22px;margin-bottom: 16px;}
@@ -41,7 +41,9 @@
 .caseStudyInfo_rightBot_icon{margin-right: 10px;}
 .caseStudyInfo_rightBot_iconImg{width: 22px;height: 22px;line-height: 22px;margin-bottom: 22px;}
 .caseStudyInfo_rightBot_text a{height: 22px;line-height: 22px;width: 213px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-bottom: 22px;display: block;color: #222222;}
+.caseStudyInfo_rightBot_text a p{height: 22px;line-height: 22px;width: 213px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-bottom: 22px;display: block;color: #222222;}
 .caseStudyInfo_rightBot_text a:hover{color: #005CEF}
+.caseStudyInfo_rightBot_text a p:hover{color: #005CEF}
 .news_navs{margin-bottom: 24px;}
 .news_navs>div{padding: 18px 20px;border-bottom: 2px solid #FFFFFF;margin-right: 10px;line-height: 22px;cursor: pointer;}
 .news_navschenck{font-size: 20px;color: #005CEF;font-family: PingFangSC-Medium, PingFang SC;font-weight: 500;border-bottom: 2px solid #005CEF!important;}
@@ -59,6 +61,10 @@
 .news_listright_but{background: #FFFFFF;padding: 4px 11px;box-shadow: 0px 2px 6px 0px rgba(15,31,87,0.06);border-radius: 2px;color: #888888;}
 .news_listright_but:hover{color: #005CEF}
 .news_vidio_list{width:386px;border: 1px solid #FFFFFF;border-radius: 4px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);margin: 15px;cursor: pointer;}
+.news_vidio_list:hover{
+    width:386px;border: 1px solid #FFFFFF;border-radius: 4px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.5);margin: 15px;cursor: pointer;
+}
+
 .news_vidio_img{width: 384px;height: 216px;}
 .news_vidio_pad{padding: 24px;}
 .news_vidio_title{line-height: 28px;margin-bottom: 10px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
@@ -93,5 +99,44 @@
 }
 .hot_title_show{
     position: absolute;top: 28px;left: 0;width: 320px;border: 1px solid #BEBEBE;border-radius:4px;z-index: 100;background: #E2E2E5;padding: 5px;font-size: 14px;
+}
+.news_listimg>img{
+    transition: all 0.1s;
+}
+.news_listimg>img:hover{
+    transform: scale(1.1);
+}
+/*.news_vidio_img>img{transition: all 0.1s;}*/
+/*.news_vidio_img>img:hover{*/
+/*    transform: scale(1.1);*/
+/*}*/
+
+.videoContainer{
+    position: absolute;top: 0;left: 0;
+}.videoListContainer{
+    color: #FFFFFF;background: rgba(34, 35, 37, 1);overflow-y: auto;position: absolute;top: 0;right: 0;height: 689px;padding: 10px 0 15px 0;
+}
+.videoListContainer>div{
+    cursor: pointer;
+}
+.videoListContainer>div>img{
+    padding: 10px 20px 5px 20px;
+}
+.videoListTitleText{
+    width: 282px;text-align: left;font-size: 16px;padding:0 20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+}
+.videoListDescriptionText{
+    width: 282px;text-align: left;max-height: 100px;line-height: 20px;font-size: 12px;padding:0 20px;overflow: hidden;word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    margin-top: 3px;
+}
+.videoTitleText{
+    width: 857px;text-align: left;height: 33px;line-height: 33px;font-size: 24px;margin-top: 24px;padding-left: 20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+}
+.videoDescriptionText{
+    width: 857px;text-align: left;height: 22px;line-height: 22px;font-size: 16px;margin-top: 8px;padding-left: 20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
 }
 

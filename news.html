@@ -464,7 +464,7 @@
 					</div>
 				</div>
                 <div class="flex-column flex-top" v-else>
-                    <div v-for="item in InfoData" class="news_vidio_list bgbai" @click="showvidiomodal(item.title,item.video)" >
+                    <div v-for="item in InfoData" class="news_vidio_list bgbai" @click="showvidiomodal(item)" >
                         <div class="news_vidio_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
                         <div class="news_vidio_pad">
                             <div class="f20 news_vidio_title PingFangSCMedium" v-html="item.title"></div>
@@ -622,20 +622,31 @@
 				</div>
 			</div>
 			<div class="register_modal flex-column flex-middle" v-if="showVidio">
-				<div class="Vidio_padd flex-column flex-middle flex-center porelative">
-					<div>
-						<div class="PingFangSCMedium tac home_title colorbai">{{vidiotitle}}</div>
+				<div class="Vidio_padd_wei flex-column flex-middle flex-center porelative">
+					<div class="videoContainer">
+						<div class="colorbai videoTitleText">{{vidiotitle}}</div>
+						<div class="colorbai videoDescriptionText">{{videoDescription}}</div>
 						<video
 							controls
 							preload="auto"
 							width="878"
-							height="492"
+							height="520"
 							:src="vidiourl"
+							:poster="imageUrl"
+							style="margin-bottom: 111px;margin-top: 16px;"
 						>
 						</video>
 					</div>
+					<div class="videoListContainer" ref="videoListContainer" @scroll="scollerFunc($event)">
+						<div v-for="(item,index) in videoList" @click="showvidiomodal(item)">
+							<img width="282" :src="item.image"/>
+							<div class="colorbai videoListTitleText">{{item.title}}</div>
+							<div class="colorbai videoListDescriptionText">{{item.description}}</div>
+						</div>
+					</div>
 					<div class="Vidio_cancel" @click="hidevidiomodal"><img src="./img/home114.png" class="imgsize" alt=""></div>
 				</div>
+
 			</div>
 		</div>
 	</body>
@@ -658,13 +669,18 @@
                 Pagenun:[],
 				showmodel:false,
                 currentPage:1,
+				videoCurrentPage:1,
+				videoTotalPage:0,
                 typeIndex:'',
 				showVidio:false,
 				vidiotitle:'',
+				videoDescription:'',
 				vidiourl:'',
+				imageUrl:'',
 				blogrollList:[],
 				totalPage:0,
 				showFullTitle:-1,
+				videoList:[]
 			}
 		},
 		watch: {
@@ -678,7 +694,7 @@
 			this.gethotdata()
 		},
 		mounted(){
-		
+			// window.addEventListener('scroll', this.scollerFunc, true)
 		},
 		methods: {
 			getdata(){
@@ -712,6 +728,23 @@
 					console.log(err,'_gethotData获取数据异常');
 				})
 			},
+			getVideoData(){
+				that = this
+				var _getVideoData = p => get('/information/noToken/frontList', p);
+				_getVideoData({
+					type:4,
+					pageNo:this.videoCurrentPage,
+					pageSize:50
+				}).then(res => {
+					res.result.records.forEach(item=>{
+						that.videoList.push(item)
+					})
+					console.log(that.videoList)
+					that.videoTotalPage=res.result.pages
+				}).catch(err => {
+					console.log(err,'_getVideoData获取数据异常');
+				})
+			},
 			showregistermodal(){
 				this.showmodel = true
 			},
@@ -741,10 +774,14 @@
             tznewsInfo(id){
                 window.location.href = './newsInfo.html?id='+id+"&type="+this.typeIndex
             },
-			showvidiomodal(title,url){
-				this.vidiotitle = title
-				this.vidiourl = url
+			showvidiomodal(item){
+				this.videoDescription=item.description
+				this.vidiotitle = item.title
+				this.vidiourl = item.video
+				this.imageUrl=item.image
 				this.showVidio = true
+				this.videoList=[]
+				this.getVideoData()
 			},
 			hidevidiomodal(){
 				this.showVidio = false
@@ -765,13 +802,24 @@
 				return false
 			},
 			overFun(index){
-				console.log(index)
 				this.showFullTitle=index;
 			},
 			outFun(index){
-				console.log(index)
 				this.showFullTitle=-1;
-			}
+			},
+			scollerFunc(el) {
+				let dom = el.target;
+				const scrollDistance = dom.scrollHeight - dom.scrollTop - dom.clientHeight;
+				if (scrollDistance <= 1) {//等于0证明已经到底，可以请求接口
+					console.log("触底了")
+					if (this.videoCurrentPage<this.videoTotalPage){
+						this.videoCurrentPage=this.videoCurrentPage+1
+						this.getVideoData()
+					}else {
+						// alert("没有更多数据了")
+					}
+				}
+			},
 		},
 		computed:{},
 	})
