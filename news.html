@@ -444,8 +444,13 @@
 									<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy7.png" class="imgsize" alt="第一"></div>
 									<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy8.png" class="imgsize" alt="第二"></div>
 									<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy9.png" class="imgsize" alt="第三"></div>
-									<div class="caseStudyInfo_rightBot_iconImg">4</div>
-									<div class="caseStudyInfo_rightBot_iconImg">5</div>
+									<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>3">4</div>
+									<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>4">5</div>
+									<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>5">6</div>
+									<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>6">7</div>
+									<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>7">8</div>
+									<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>8">9</div>
+									<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>9">10</div>
 								</div>
 								<div class="f16 caseStudyInfo_rightBot_text">
 									<div v-for="(item,index) in hotList" style="position: relative;">

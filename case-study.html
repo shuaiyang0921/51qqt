@@ -417,24 +417,24 @@
 				<div class="flex-column flex-middle f16 caseStudy_FilterHeader_top">
 					<div class="">行业：</div>
 					<div class="flex-column flex-middle caseStudy_FilterHeader_lists">
-						<div v-for="(item,index) in industryList" :class="industryIndex==index?'caseStudy_FilterHeader_chenck':''" @click="changeindustry(index,item.industry)">{{item.name}}</div>
+						<div v-for="(item,index) in industryList" :class="industryIndex==index?'caseStudy_FilterHeader_chenck':''" @click="changeindustry(index,item.name)">{{item.nameStr}}</div>
 					</div>
 				</div>
 				<div class="flex-column flex-middle f16">
 					<div class="">场景：</div>
 					<div class="flex-column flex-middle caseStudy_FilterHeader_lists">
-						<div v-for="(item,index) in classifyList" :class="classifyIndex==index?'caseStudy_FilterHeader_chenck':''" @click="changeclassify(index,item.classify)">{{item.name}}</div>
+						<div v-for="(item,index) in classifyList" :class="classifyIndex==index?'caseStudy_FilterHeader_chenck':''" @click="changeclassify(index,item.name)">{{item.nameStr}}</div>
 					</div>
 				</div>
 				<div class="flex-column flex-middle f16 caseStudy_FilterHeader_bottom">
 					<div class="">规模：</div>
 					<div class="flex-column flex-middle caseStudy_FilterHeader_lists">
-						<div v-for="(item,index) in scaleList" :class="scaleIndex==index?'caseStudy_FilterHeader_chenck':''" @click="changescale(index,item.scale)">{{item.name}}</div>
+						<div v-for="(item,index) in scaleList" :class="scaleIndex==index?'caseStudy_FilterHeader_chenck':''" @click="changescale(index,item.name)">{{item.nameStr}}</div>
 					</div>
 				</div>
 			</div>
 			<div class="caseStudy_Filter">
-				<div class="flex-column  caseStudy_FilterList" v-if="ListData.length!=0">
+				<div class="flex-column flex-between caseStudy_FilterList" v-if="ListData.length!=0">
 					<a v-for="item in ListData" :href="'caseStudyInfo.html?id='+item.id" >
 						<div class="caseStudy_FilterList_img"><img :src="item.image" class="imgsize"></div>
 						<div class="caseStudy_FilterList_Bot flex-column">
@@ -602,28 +602,28 @@
 		data(){
 			return {
 				industryList:[
-					{name:'全部',industry:''},
-					{name:'高端制造',industry:'7'},
-					{name:'地产建筑',industry:'13'},
-					{name:'快消零售',industry:'8'},
-					{name:'食品餐饮',industry:'9'},
-					{name:'金融保险',industry:'10'},
-					{name:'生物制药',industry:'11'},
-					{name:'能源化工',industry:'12'},
-					{name:'现代服务',industry:'14'}
+					// {nameStr:'全部',industry:''},
+					// {nameStr:'高端制造',industry:'7'},
+					// {nameStr:'地产建筑',industry:'13'},
+					// {nameStr:'快消零售',industry:'8'},
+					// {nameStr:'食品餐饮',industry:'9'},
+					// {nameStr:'金融保险',industry:'10'},
+					// {nameStr:'生物制药',industry:'11'},
+					// {nameStr:'能源化工',industry:'12'},
+					// {nameStr:'现代服务',industry:'14'}
 				],
 				classifyList:[
-					{name:'全部',classify:''},
-					{name:'采购/供应链',classify:'0'},
-					{name:'商城',classify:'1'},
-					{name:'供应链金融',classify:'2'},
-					{name:'营销云',classify:'3'},
+					// {nameStr:'全部',classify:''},
+					// {nameStr:'采购/供应链',classify:'0'},
+					// {nameStr:'商城',classify:'1'},
+					// {nameStr:'供应链金融',classify:'2'},
+					// {nameStr:'营销云',classify:'3'},
 				],
 				scaleList:[
-					{name:'全部',scale:''},
-					{name:'成长型企业',scale:'1'},
-					{name:'中大型企业',scale:'2'},
-					{name:'500强企业',scale:'3'},
+					// {nameStr:'全部',scale:''},
+					// {nameStr:'成长型企业',scale:'1'},
+					// {nameStr:'中大型企业',scale:'2'},
+					// {nameStr:'500强企业',scale:'3'},
 				],
 				ListData:[],
 				showmodel:false,
@@ -673,6 +673,18 @@
 				})
 				.catch(err => {
 					console.log(err,'_getData获取数据异常');
+				})
+
+				var _getCategoryData = p => get('/websiteCategory/noToken/category', p);
+				_getCategoryData({})
+				.then(res => {
+					console.log(res)
+					that.industryList = res.result[0]
+					that.classifyList = res.result[1]
+					that.scaleList = res.result[2]
+				})
+				.catch(err => {
+					console.log(err,'_getCategoryData获取数据异常');
 				})
 			},
 			showregistermodal(){
