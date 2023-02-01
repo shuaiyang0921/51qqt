@@ -418,10 +418,10 @@
 					<div class="paas_adver_left">
 						<div class="manufacturing_adver_title homeHead_appleStytle" v-html="BannerImg[0]?BannerImg[0].title:''"></div>
 						<div class="f16 PingFangSCMedium paas_adver_text colorbai" v-html="BannerImg[0]?BannerImg[0].intro:''"></div>
-						<div class="flex-column flex-middle f18 mkt_adver_buts homeHead_appleStytle">
-							<div v-for="(item,index) in tags">{{item}}</div>
+						<div class="flex-column flex-middle f18 paas_adver_buts homeHead_appleStytle">
+							<div v-for="(item,index) in tags" class="colorblack">{{item}}</div>
 						</div>
-						<div class="f14 homeHead_registertil tac homeHead_appleStytle mkt_registertil" @click="showregistermodal">注册体验</div>
+						<div class="f14 homeHead_registertil tac homeHead_appleStytle" @click="showregistermodal">注册体验</div>
 					</div>
 					<div class="paas_topImg"><img :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize" alt="PaaS平台"></div>
 				</div>
@@ -790,6 +790,7 @@
 								that.BannerImg = res.result
 								if (that.BannerImg){
 									that.tags=that.BannerImg[0].tags
+									console.log(that.tags)
 								}
 								that.BannerImg.forEach(item=>{
 									item.image=item.image.replace(/\s/g,'%20');

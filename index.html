@@ -441,7 +441,7 @@
 						<div class="flex-column flex-between" v-if="index==0">
 							<div class="home_Enabling_left">
 								<div class="f26 PingFangSCMedium">{{item.title}}</div>
-								<div class="f16 home_Enabling_Subhead">{{item.intro}}</div>
+								<div class="f16 home_Enabling_Subhead" v-html="item.intro"></div>
 								<div class="f16 PingFangSCMedium home_Enabling_title">业务场景：</div>
 								<div class="f14 home_Enabling_text" v-for="itchenk in item.description.split(',')">{{itchenk}}</div>
 								<div class="f14 homeHead_appleStytle home_Enabling_but homeHead_registertil colorbai" @click="showregistermodal('')">注册体验</div>
@@ -452,7 +452,7 @@
 							<div class="home_Enabling_leftimg"><img :src="item.image" class="imgsize" :alt="item.title"></div>
 							<div class="home_Enabling_right">
 								<div class="f26 PingFangSCMedium">{{item.title}}</div>
-								<div class="f16 home_Enabling_Subhead">{{item.intro}}</div>
+								<div class="f16 home_Enabling_Subhead" v-html="item.intro"></div>
 								<div class="f16 PingFangSCMedium home_Enabling_title">业务场景：</div>
 								<div class="f14 home_Enabling_text" v-for="itchenk in item.description.split(',')">{{itchenk}}</div>
 								<div class="f14 homeHead_appleStytle home_Enabling_but homeHead_registertil colorbai" @click="showregistermodal('')">注册体验</div>
@@ -841,6 +841,7 @@
 				registerModule:'1',
 				bannerInterval:"",
 				blogrollList:[],
+				caseInterval:[],
 			}
 		},
 		watch: {
@@ -869,15 +870,7 @@
 					that.endorsedBotList = res.result['首页-合作伙伴、500强、行业认可'][3];
 					that.CaseList = res.result['首页-客户评价'];
 					if(that.CaseList.length>1){
-						setInterval(()=>{
-							if(that.changeCaseNum>=that.CaseList.length-1){
-								that.changeCaseNum=0
-							}else{
-								that.changeCaseNum++;
-							}
-							$('.home_Case_tabs>div').eq(this.changeCaseNum).addClass('home_Case_tab').siblings().removeClass('home_Case_tab')
-							$('.home_Case_info').eq(this.changeCaseNum).addClass('home_Case_info_show').siblings().removeClass('home_Case_info_show')
-						},3000);
+						this.setCaseInterval();
 					}
 
 
@@ -904,16 +897,7 @@
 						item.image=item.image.replace(/\s/g,'%20');
 					})
 					if(that.BanerImg.length>1){
-						this.bannerInterval=setInterval(()=>{
-							if(that.changenum>=that.BanerImg.length-1){
-								that.changenum=0
-							}else{
-								that.changenum++;
-							}
-							$('.homeHead_tabs>div').eq(that.changenum).addClass('homeHead_tab').siblings().removeClass('homeHead_tab')
-							$('.homeHead_adverstyle').animate({'left':-(that.changenum*100)+'%'},0);
-							this.videoPauseOrPlay()
-						},3000);
+						this.setBannerInterval();
 					}
 				})
 				.catch(err => {
@@ -947,11 +931,15 @@
 			},
 			changetab(index){
 				this.changenum = index
+				clearInterval(this.bannerInterval)
+				this.setBannerInterval();
 				$('.homeHead_tabs>div').eq(this.changenum).addClass('homeHead_tab').siblings().removeClass('homeHead_tab')
 				$('.homeHead_adverstyle').animate({'left':-(this.changenum*100)+'%'},0);
 			},
 			changeCaseTab(index){
 				this.changeCaseNum = index
+				clearInterval(this.caseInterval)
+				this.setCaseInterval();
 				$('.home_Case_tabs>div').eq(this.changeCaseNum).addClass('home_Case_tab').siblings().removeClass('home_Case_tab')
 				$('.home_Case_info').eq(this.changeCaseNum).addClass('home_Case_info_show').siblings().removeClass('home_Case_info_show')
 			},
@@ -1034,6 +1022,29 @@
 				{
 					videos[i].pause()
 				}
+			},
+			setBannerInterval(){
+				this.bannerInterval=setInterval(()=>{
+					if(that.changenum>=that.BanerImg.length-1){
+						that.changenum=0
+					}else{
+						that.changenum++;
+					}
+					$('.homeHead_tabs>div').eq(that.changenum).addClass('homeHead_tab').siblings().removeClass('homeHead_tab')
+					$('.homeHead_adverstyle').animate({'left':-(that.changenum*100)+'%'},0);
+					this.videoPauseOrPlay()
+				},4000);
+			},
+			setCaseInterval(){
+				this.caseInterval=setInterval(()=>{
+					if(that.changeCaseNum>=that.CaseList.length-1){
+						that.changeCaseNum=0
+					}else{
+						that.changeCaseNum++;
+					}
+					$('.home_Case_tabs>div').eq(this.changeCaseNum).addClass('home_Case_tab').siblings().removeClass('home_Case_tab')
+					$('.home_Case_info').eq(this.changeCaseNum).addClass('home_Case_info_show').siblings().removeClass('home_Case_info_show')
+				},4000);
 			}
 		},
 		computed:{
