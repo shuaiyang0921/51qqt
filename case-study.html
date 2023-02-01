@@ -679,9 +679,9 @@
 				_getCategoryData({})
 				.then(res => {
 					console.log(res)
-					that.industryList = res.result[0]
-					that.classifyList = res.result[1]
-					that.scaleList = res.result[2]
+					that.industryList = res.result.industryType
+					that.classifyList = res.result.classifyType
+					that.scaleList = res.result.scale
 				})
 				.catch(err => {
 					console.log(err,'_getCategoryData获取数据异常');
