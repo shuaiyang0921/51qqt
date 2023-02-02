@@ -412,9 +412,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="heiheader"></div>
-			<div class="paas_topBg">
-				<div class="mkt_adver flex-column flex-middle flex-between colorbai" :style="{backgroundImage: 'url('+(BannerImg[0]?BannerImg[0].image:'')+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover'}">
+			<!-- <div class="heiheader"></div> -->
+			<div :style="{backgroundImage: 'url('+(BannerImg[0]?BannerImg[0].image:'')+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover'}">
+				<div class="mkt_adver maxwidth flex-column flex-middle flex-between colorbai" >
 					<div class="paas_adver_left">
 						<div class="manufacturing_adver_title homeHead_appleStytle" v-html="BannerImg[0]?BannerImg[0].title:''"></div>
 						<div class="f16 PingFangSCMedium paas_adver_text colorbai" v-html="BannerImg[0]?BannerImg[0].intro:''"></div>
@@ -425,7 +425,6 @@
 					</div>
 					<div class="paas_topImg"><img v-if="BannerImg[0]" :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize" alt="采购云"></div>
 				</div>
-				
 			</div>
 			<div class="padBg">
 				<div class="PingFangSCMedium tac home_title">满足企业全品类采购需求，覆盖各类应用场景</div>
@@ -455,55 +454,61 @@
 				</div>
 			</div>
 			<div class="padBg bggray">
-				<div class="PingFangSCMedium tac home_title">打通供应链采购各个环节，形成业务、系统、人到物多维度集成协同</div>
-				<div v-for="(item,index) in purchasenavListData">
-					<div class="flex-column flex-center flex-middle" v-if="index%2==0">
-						<div class="purchase_navList_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
-						<div class="purchase_navList_right">
-							<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
-							<div class="scf_navList_rightLable f16 PingFangSCMedium bgbai" v-html="item.intro"></div>
-							<div class="scf_navList_rightText f14" v-html="item.description"></div>
-							<div class="f14 colorblue" @click="changePage(item.link)">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
+				<div class="maxwidth">
+					<div class="PingFangSCMedium tac home_title">打通供应链采购各个环节，形成业务、系统、人到物多维度集成协同</div>
+					<div v-for="(item,index) in purchasenavListData">
+						<div class="flex-column flex-center flex-middle" v-if="index%2==0">
+							<div class="purchase_navList_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
+							<div class="purchase_navList_right">
+								<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
+								<div class="scf_navList_rightLable f16 PingFangSCMedium bgbai" v-html="item.intro"></div>
+								<div class="scf_navList_rightText f14" v-html="item.description"></div>
+								<div class="f14 colorblue" @click="changePage(item.link)">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
+							</div>
 						</div>
-					</div>
-					<div class="flex-column flex-center flex-middle bgbai" v-else>
-						<div class="purchase_navList_left">
-							<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
-							<div class="scf_navList_rightLable f16 PingFangSCMedium bggray" v-html="item.intro"></div>
-							<div class="scf_navList_rightText f14" v-html="item.description"></div>
-							<div class="f14 colorblue" @click="changePage(item.link)">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
+						<div class="flex-column flex-center flex-middle bgbai" v-else>
+							<div class="purchase_navList_left">
+								<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
+								<div class="scf_navList_rightLable f16 PingFangSCMedium bggray" v-html="item.intro"></div>
+								<div class="scf_navList_rightText f14" v-html="item.description"></div>
+								<div class="f14 colorblue" @click="changePage(item.link)">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
+							</div>
+							<div class="purchase_navList_img"><img :src="item.image" class="imgsize" :alt="item.childName"></div>
 						</div>
-						<div class="purchase_navList_img"><img :src="item.image" class="imgsize" :alt="item.childName"></div>
 					</div>
 				</div>
 			</div>
 			<div class="padBg">
-				<div class="PingFangSCMedium tac home_title">{{purchaseImgData[0]?purchaseImgData[0].bigTitle:''}}</div>
-				<div style="width: 100%;"><img :src="purchaseImgData[0]?purchaseImgData[0].image:''" class="imgsize" :alt="purchaseImgData[0]?purchaseImgData[0].bigTitle:''"></div>
-			</div>
-			<iframe src="../iframe/achieveCust.html?name=28" style="width: 100%;height: 644px;" frameborder="0" scrolling="no"></iframe>
-			<iframe src="../iframe/companys.html" style="width: 100%;height: 866px;" frameborder="0" scrolling="no"></iframe>
-			<div class="home_register flex-column flex-center flex-middle colorbai">
-				<div class="PingFangSCMedium">
-					<div class="home_register_text">开启数字化供应链与采购新体验</div>
-					<div class="tar">赋能企业数字化转型与变革</div>
+				<div class="maxwidth">
+					<div class="PingFangSCMedium tac home_title">{{purchaseImgData[0]?purchaseImgData[0].bigTitle:''}}</div>
+					<div style="width: 100%;"><img :src="purchaseImgData[0]?purchaseImgData[0].image:''" class="imgsize" :alt="purchaseImgData[0]?purchaseImgData[0].bigTitle:''"></div>
 				</div>
-				<div class="f18 homeHead_registertil home_register_but  homeHead_appleStytle  colorbai" @click="showregistermodal">注册体验</div>
+			</div>
+			<iframe src="../iframe/achieveCust.html?name=28" style="width: 100%;height: 639px;" frameborder="0" scrolling="no"></iframe>
+			<iframe src="../iframe/companys.html" class="companyStyle" frameborder="0" scrolling="no"></iframe>
+			<div class="home_register colorbai">
+				<div class="maxwidth flex-column flex-between flex-middle">
+					<div class="PingFangSCMedium">
+						<div class="home_register_text">开启数字化供应链与采购新体验</div>
+						<div class="tar">赋能企业数字化转型与变革</div>
+					</div>
+					<div class="f18 homeHead_registertil home_register_but  homeHead_appleStytle  colorbai" @click="showregistermodal">注册体验</div>
+				</div>
 			</div>
 			<div class="bgfooter">
 				<div class="footer maxwidth">
-					<div class="footer_topstyle xian_footer flex-column">
+					<div class="footer_topstyle xian_footer flex-column flex-between">
 						<div class="colorbai footer_leftstyle">
-							<div class="footer_logosize"><img src="../img/qqtbot.png" class="imgsize" alt="企企通"></div>
+							<div class="footer_logosize"><img src="./img/qqtbot.png" class="imgsize" alt="企企通"></div>
 							<div class="flex-column flex-middle"><span class="f14">服务热线：</span><span class="f18 PingFangSCMedium">400-835-1881</span></div>
 							<div class="footer_textpadd"><span class="f14">市场合作：</span><span class="f18 PingFangSCMedium">marketing@51qqt.com</span></div>
 							<div class="flex-column tac f14">
 								<div class="footer_contactimgpadd">
-									<div class="footer_contactimg"><img src="../img/home15.png" class="imgsize" alt="企企通"></div>
+									<div class="footer_contactimg"><img src="./img/home15.png" class="imgsize" alt="企企通"></div>
 									<div>企企通官方公众号</div>
 								</div>
 								<div>
-									<div class="footer_contactimg"><img src="../img/home62.png" class="imgsize" alt="企企通"></div>
+									<div class="footer_contactimg"><img src="./img/home62.png" class="imgsize" alt="企企通"></div>
 									<div>售前咨询</div>
 								</div>
 							</div>
@@ -514,16 +519,16 @@
 								<div class="flex-column footer_linkstyle">
 									<div class="footer_linkmag">
 										<div class="colorbai">SaaS云</div>
-										<a href="../purchase/index.html">采购云</a>
-										<a href="../paas/mall.html">商城云</a>
-										<a href="../paas/scf.html">赋能云</a>
-										<a href="../paas/mkt.html?navNum=0">营销云</a>
+										<a href="./purchase/index.html">采购云</a>
+										<a href="./paas/mall.html">商城云</a>
+										<a href="./paas/scf.html">赋能云</a>
+										<a href="./paas/mkt.html?navNum=0">营销云</a>
 									</div>
 									<div class="">
 										<div class="colorbai">PaaS平台</div>
-										<a href="../paas/apaas.html?navNum=0">APaaS应用开发平台</a>
-										<a href="../paas/apaas.html?navNum=1">IPaaS集成开发平台</a>
-										<a href="../paas/apaas.html?navNum=2">DPaaS数据中台</a>
+										<a href="./paas/apaas.html?navNum=0">APaaS应用开发平台</a>
+										<a href="./paas/apaas.html?navNum=1">IPaaS集成开发平台</a>
+										<a href="./paas/apaas.html?navNum=2">DPaaS数据中台</a>
 									</div>
 								</div>
 							</div>
@@ -532,39 +537,39 @@
 								<div class="flex-column footer_linkstyle">
 									<div class="footer_linkmag">
 										<div class="colorbai">行业解决方案</div>
-										<a href="../solutions/manufacturing.html?name=7">高端制造</a>
-										<a href="../solutions/manufacturing.html?name=13">地产建筑</a>
-										<a href="../solutions/manufacturing.html?name=8">快消零售</a>
-										<a href="../solutions/manufacturing.html?name=9">食品餐饮</a>
-										<a href="../solutions/manufacturing.html?name=10">金融保险</a>
-										<a href="../solutions/manufacturing.html?name=11">生物制药</a>
-										<a href="../solutions/manufacturing.html?name=12">能源化工</a>
-										<a href="../solutions/manufacturing.html?name=14">现代服务</a>
+										<a href="./solutions/manufacturing.html?name=7">高端制造</a>
+										<a href="./solutions/manufacturing.html?name=13">地产建筑</a>
+										<a href="./solutions/manufacturing.html?name=8">快消零售</a>
+										<a href="./solutions/manufacturing.html?name=9">食品餐饮</a>
+										<a href="./solutions/manufacturing.html?name=10">金融保险</a>
+										<a href="./solutions/manufacturing.html?name=11">生物制药</a>
+										<a href="./solutions/manufacturing.html?name=12">能源化工</a>
+										<a href="./solutions/manufacturing.html?name=14">现代服务</a>
 									</div>
 									<div class="">
 										<div class="colorbai">领域解决方案</div>
-										<a href="../solutions/manufacturing.html?name=39">生产</a>
-										<a href="../solutions/manufacturing.html?name=43">大宗物资</a>
-										<a href="../solutions/manufacturing.html?name=40">商贸</a>
-										<a href="../solutions/manufacturing.html?name=41">项目</a>
-										<a href="../solutions/manufacturing.html?name=42">服务</a>
-										<a href="../solutions/manufacturing.html?name=44">行政办公</a>
+										<a href="./solutions/manufacturing.html?name=39">生产</a>
+										<a href="./solutions/manufacturing.html?name=43">大宗物资</a>
+										<a href="./solutions/manufacturing.html?name=40">商贸</a>
+										<a href="./solutions/manufacturing.html?name=41">项目</a>
+										<a href="./solutions/manufacturing.html?name=42">服务</a>
+										<a href="./solutions/manufacturing.html?name=44">行政办公</a>
 									</div>
 								</div>
 							</div>
 							<div>
 								<div class="homeHead_appleStytle colorbai">客户案例</div>
-								<a href="../case-study.html" class="footer_linkstyle">客户案例</a>
+								<a href="case-study.html" class="footer_linkstyle">客户案例</a>
 							</div>
 							<div>
 								<div class="homeHead_appleStytle colorbai">资讯中心</div>
 								<div class="flex-column footer_linkstyle">
 									<div class="footer_linkmag">
-										<a href="../news.html?navnum=0" class="footer_firstlinkmag">企业资讯</a>
-										<a href="../news.html?navnum=1">市场活动</a>
-										<a href="../news.html?navnum=2">干货分享</a>
-										<a href="../news.html?navnum=3">分析报告</a>
-										<a href="../news.html?navnum=4">微视频</a>
+										<a href="./news.html?navnum=0" class="footer_firstlinkmag">企业资讯</a>
+										<a href="./news.html?navnum=1">市场活动</a>
+										<a href="./news.html?navnum=2">干货分享</a>
+										<a href="./news.html?navnum=3">分析报告</a>
+										<a href="./news.html?navnum=4">微视频</a>
 									</div>
 								</div>
 							</div>
@@ -572,10 +577,10 @@
 								<div class="homeHead_appleStytle colorbai">关于企企通</div>
 								<div class="flex-column footer_linkstyle">
 									<div class="footer_linkmag">
-										<a href="../about.html" class="footer_firstlinkmag">公司介绍</a>
-										<a href="../honor.html">荣誉资质</a>
-										<a href="../join-us.html">加入我们</a>
-										<a href="../contact-us.html">联系我们</a>
+										<a href="about.html" class="footer_firstlinkmag">公司介绍</a>
+										<a href="honor.html">荣誉资质</a>
+										<a href="join-us.html">加入我们</a>
+										<a href="contact-us.html">联系我们</a>
 									</div>
 								</div>
 							</div>
@@ -586,7 +591,6 @@
 						<a href="#">友情链接</a>
 						<a v-for="item in blogrollList" :href="item.link">{{item.title}}</a>
 					</div>
-					<div></div>
 				</div>
 				<div class="f14 footer_bottom flex-column flex-center">
 					<div>版权所有 © 2021 深圳市企企通科技-<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">粤ICP备15109055号</a></div>
