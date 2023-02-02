@@ -426,33 +426,40 @@
 			<div class="joinUs_post">
 				<div class="tac joinUs_title PingFangSCMedium">热招岗位</div>
 				<div v-if="indexList==navIndex" class="joinUs_post_lists flex-column flex-between " v-for="(itemList,indexList) in supplierListData">
-					<div v-for="(item,index) in itemList">
-						<div class="joinUs_post_list" :class="Listindex==index?'joinUs_post_listblue':''" @click="changeindex(index)">
-							<div class="joinUs_post_listTitle f20 PingFangSCMedium flex-column flex-between flex-middle">
-								<div>{{item.job}}</div>
-								<div class="f14 colorbai joinUs_post_listlabel">HOT</div>
+					<template v-for="(item,index) in itemList">
+						<div>
+							<div class="joinUs_post_list" :class="Listindex==index?'joinUs_post_listblue':''" @click="changeindex(index,item)">
+								<div class="joinUs_post_listTitle f20 PingFangSCMedium flex-column flex-between flex-middle">
+									<div>{{item.job}}</div>
+									<div class="f14 colorbai joinUs_post_listlabel">HOT</div>
+								</div>
+								<div class="f14 joinUs_post_address flex-column flex-middle"><span class="joinUs_post_icon"><img src="images/about/joinUs7.png" class="imgsize" alt="地址"></span>{{item.address}}</div>
+								<div class="f14 joinUs_post_department flex-column flex-middle"><span class="joinUs_post_icon"><img src="images/about/joinUs6.png" class="imgsize" alt="部门"></span>{{item.dept}}</div>
 							</div>
-							<div class="f14 joinUs_post_address flex-column flex-middle"><span class="joinUs_post_icon"><img src="images/about/joinUs7.png" class="imgsize" alt="地址"></span>{{item.address}}</div>
-							<div class="f14 joinUs_post_department flex-column flex-middle"><span class="joinUs_post_icon"><img src="images/about/joinUs6.png" class="imgsize" alt="部门"></span>{{item.dept}}</div>
 						</div>
-						<div class="joinUs_post_popUp" v-if="index==Listindex">
-							<div class="f18 joinUs_post_popUpTitle PingFangSCMedium"><span></span>岗位职责</div>
-							<div class="f16 joinUs_post_popUpText" v-html="item.responsibilities"></div>
-							<div class="f18 joinUs_post_popUpTitle PingFangSCMedium"><span></span>任职要求</div>
-							<div class="f16 joinUs_post_popUpText" v-html="item.requirements"></div>
-							<a class="f16 colorbai homeHead_appleStytle joinUs_post_popUpBut" href="#">投递简历</a>
-						</div>
-					</div>
 
-					<div v-if="supplierListData.length%3==2&&indexList==(supplierListData.length-1)" class="joinUs_post_list_last">
-					</div>
+						<div v-if="indexList==(supplierListData.length-1)&&itemList.length%3!=0&&index==itemList.length-1" class="joinUs_post_list_last">
+
+						</div>
+						<div v-if="(index%3==2||(indexList==(supplierListData.length-1)&&itemList.length%3!=0&&index==itemList.length-1))&&parseInt(Listindex/3)==parseInt(index/3)" class="jobDetailContainer">
+							<div>
+								<div class="f18 joinUs_post_popUpTitle PingFangSCMedium"><span></span>岗位职责</div>
+								<div class="f16 joinUs_post_popUpText" v-html="detailItem.responsibilities"></div>
+								<div class="f18 joinUs_post_popUpTitle PingFangSCMedium"><span></span>任职要求</div>
+								<div class="f16 joinUs_post_popUpText" v-html="detailItem.requirements"></div>
+								<a class="f16 colorbai homeHead_appleStytle joinUs_post_popUpBut" href="#">投递简历</a>
+							</div>
+						</div>
+
+
+					</template>
 				</div>
 
 				<div class="home_Case_tabs flex-column flex-center">
 					<div v-for="(item,index) in supplierListData" :class="index==0?'home_Case_tab':''" @click="changeCaseTab(index)"></div>
 				</div>
 			</div>
-			<div class="padBg">
+			<div class="padBg hrBg" >
 				<div class="PingFangSCMedium joinUs_job tac">简历投递至人力资源部</div>
 				<div class="flex-column flex-center"><div class="PingFangSCMedium joinUs_website tac colororigin">hiring@51qqt.com</div></div>
 			</div>
@@ -606,7 +613,8 @@
 				showVidio:false,
 				Listindex:0,
 				blogrollList:[],
-				navIndex: 0
+				navIndex: 0,
+				detailItem:{}
 			}
 		},
 		watch: {
@@ -625,6 +633,7 @@
 				_getData({pageName: '3'}).then(res => {
 					that.aboutImgData = res.result['1']
 					var result1=res.result['3'];
+					this.detailItem=result1[0];
 					var resultList=[]
 					for (var i=0;i<result1.length;i++){
 						var result=result1[i];
@@ -650,6 +659,8 @@
 			},
 			changeCaseTab(index){
 				this.navIndex = index
+				this.Listindex=0
+				this.detailItem=this.supplierListData[index][0]
 				$('.home_Case_tabs>div').eq(this.navIndex).addClass('home_Case_tab').siblings().removeClass('home_Case_tab')
 			},
 			showregistermodal(){
@@ -664,12 +675,13 @@
 			hidevidiomodal(){
 				this.showVidio = false
 			},
-			changeindex(index){
+			changeindex(index,item){
 				if(index==this.Listindex){
 					this.Listindex = null
 				}else{
 					this.Listindex = index
 				}
+				this.detailItem=item
 			}
 		},
 		computed:{},

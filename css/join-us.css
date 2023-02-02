@@ -8,7 +8,7 @@
 .joinUs_img2{width: 478px;height: 480px;}
 .joinUs_img3{width: 478px;height: 240px;}
 .joinUs_img_mag{margin: 0 3px;}
-.joinUs_post{padding: 60px 120px 73px 120px;}
+.joinUs_post{padding: 60px 120px 73px 120px;background: rgba(247, 248, 250, 1)}
 .joinUs_post_lists{}
 .joinUs_post_list{padding: 30px 40px;background: #FFFFFF;border-radius: 4px;border: 1px solid #EBEBEB;width: 304px;margin: 15px;cursor: pointer;}
 .joinUs_post_list_last{padding: 30px 40px;background: #FFFFFF;border-radius: 4px;border: 1px solid #FFFFFF;width: 304px;margin: 15px;}
@@ -27,3 +27,12 @@
 .joinUs_post_popUpTitle span{width: 4px;height: 16px;background: #005CEF;margin-right: 10px;transform: translateY(2px);}
 .joinUs_post_popUpText{color: #555555;line-height: 28px;}
 .joinUs_post_popUpBut{padding: 13px 38px;margin: 40px 0;background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);width: 64px;border-radius: 4px;}
+.hrBg{
+    background: rgba(247, 248, 250, 1);
+}
+.jobDetailContainer{
+    width: 100%;padding:0 15px;
+}
+.jobDetailContainer>div{
+    background: #FFFFFF;border: 1px solid #EBEBEB;margin: 12px 0;padding: 0 40px
+}
