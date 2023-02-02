@@ -434,8 +434,8 @@
 				</div>
 			</div>
 			<div class="caseStudy_Filter">
-				<div class="flex-column flex-between caseStudy_FilterList" v-if="ListData.length!=0">
-					<a v-for="item in ListData" :href="'caseStudyInfo.html?id='+item.id" >
+				<div class="flex-column flex-between caseStudy_FilterList" v-if="ListData.length!=0" style="position: relative">
+					<a v-for="item in ListData" :href="'caseStudyInfo.html?id='+item.id">
 						<div class="caseStudy_FilterList_img"><img :src="item.image" class="imgsize"></div>
 						<div class="caseStudy_FilterList_Bot flex-column">
 							<div class="caseStudy_FilterList_BotImg tac flex-column flex-middle flex-center colorblue"><img :src="item.roundLogo" class="imgsize" :alt="item.consumerId_dictText"></div>
@@ -445,6 +445,8 @@
 							</div>
 						</div>
 					</a>
+					<div v-if="ListData.length%3==2" style="width: 378px;">
+					</div>
 				</div>
 				<div class="tac f26" v-else>
 					暂无数据

@@ -423,7 +423,7 @@
 						</div>
 						<div class="f14 homeHead_registertil tac homeHead_appleStytle mkt_registertil" @click="showregistermodal">注册体验</div>
 					</div>
-					<div class="paas_topImg"><img :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize" alt="营销云"></div>
+					<div class="paas_topImg"><img v-if="BannerImg[0]" :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize" alt="营销云"></div>
 				</div>
 				<div class="PingFangSCMedium tac home_title">营销云，为企业提供一站式营销解决方案</div>
 				<div class="f20 flex-column flex-middle flex-around paas_navs homeHead_appleStytle ">

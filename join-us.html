@@ -414,8 +414,8 @@
 			<div class="joinUs_imglists">
 				<div class="tac joinUs_title PingFangSCMedium">加入企企通</div>
 				<div class="joinUs_imglist1 flex-column flex-center">
-					<div class="joinUs_img1"><img :src="aboutImgData[0]?aboutImgData[0].image:''" class="imgsize"></div>
-					<div class="joinUs_img2"><img :src="aboutImgData[1]?aboutImgData[1].image:''" class="imgsize"></div>
+					<div class="joinUs_img1"><img v-if="aboutImgData[0]" :src="aboutImgData[0]?aboutImgData[0].image:''" class="imgsize"></div>
+					<div class="joinUs_img2"><img v-if="aboutImgData[1]"  :src="aboutImgData[1]?aboutImgData[1].image:''" class="imgsize"></div>
 				</div>
 				<div class="joinUs_imglist2 flex-column flex-center">
 					<div class="joinUs_img3" v-for="(item,index) in aboutImgData" :class="index==3?'joinUs_img_mag':''" v-if="index!=0&&index!=1"><img :src="item.image" class="imgsize"></div>
@@ -442,6 +442,9 @@
 							<div class="f16 joinUs_post_popUpText" v-html="item.requirements"></div>
 							<a class="f16 colorbai homeHead_appleStytle joinUs_post_popUpBut" href="#">投递简历</a>
 						</div>
+					</div>
+
+					<div v-if="supplierListData.length%3==2&&indexList==(supplierListData.length-1)" class="joinUs_post_list_last">
 					</div>
 				</div>
 
