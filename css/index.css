@@ -22,7 +22,6 @@
 .imgsize{width: 100%;height: 100%;}
 .xian_head{border-bottom: 1px dashed #EBEBEB;}
 .xian_footer{border-bottom: 1px solid rgba(255,255,255,0.1);}
-.maxwidth{max-width: 1440px;margin: 0 auto;}
 .porelative{position: relative;}
 .padBg{padding: 60px 120px;}
 .padCompanys{padding: 60px 0;}
@@ -30,11 +29,11 @@
 /* home */
 .header{position: fixed;top: 0;width: 100%;margin: 0 auto;-webkit-transition: 5s; transition: 5s;z-index: 100;}
 .heiheader{height: 74px;}
-.homeHead_appleStytle{font-family: PingFangSC-Semibold, sans-serif;font-weight: 600;}
-.homeHead_appleStytle_normal{font-family: PingFangSC-Semibold, sans-serif;font-weight: normal;}
-.PingFangSCMedium{font-family: PingFangSC-Medium, PingFang SC;font-weight: 600;}
-.PingFangSCMediumNormal{font-family: PingFangSC-Medium, PingFang SC;font-weight: normal;}
-.PingFangSCMediumBanner{font-family: PingFangSC-Medium, PingFang SC;font-weight: 500;}
+.homeHead_appleStytle{font-weight: 600;}
+.homeHead_appleStytle_normal{font-weight: normal;}
+.PingFangSCMedium{font-weight: 600;}
+.PingFangSCMediumNormal{font-weight: normal;}
+.PingFangSCMediumBanner{font-weight: 500;}
 .homeHead{background: #FFFFFF;padding: 0 120px;box-shadow: 0px 3px 14px 0px rgba(0,0,0,0.05);position: relative;}
 .homephoneHead{padding: 20px 0px;margin: 0 24px;display: none;}
 .menu_buttonstyle{width: 55px;height: 19px;}
@@ -72,7 +71,7 @@
 .homephoneHead_navicon{width: 16px;height: 12px;}/* transition: all 1s */
 .homephoneHead_navchild{margin-left: 16px;display: none;}
 .homephoneHead_navchild a{display: block;color: #222222;}
-.homephoneHead_navchild_title{font-family: PingFangSC-Regular, PingFang SC;font-weight: 400;}
+.homephoneHead_navchild_title{font-weight: 400;}
 .homephoneHead_navchild_Subhead{margin: 16px 0 16px 25px;}
 .shownavchild_text{display: none;}
 .homephoneHead_navchild_text{margin: 16px 0 16px 25px;}
@@ -176,9 +175,9 @@
 .homeHead_aboutUsPopUp_titleicon4::before{content:'';background: no-repeat url(../img/home37.png);background-size:100%;width: 20px;height: 20px;position: absolute;top: 2px;left: -25px;}
 /* 底部 */
 .footer{padding-top: 60px;}
-.footer_topstyle{margin: 0 120px;}
-.footer_leftstyle{margin-right: 110px;}
-.footer_rightstyle{width: calc(100% - 390px);margin-bottom: 16px;}
+/* .footer_topstyle{margin: 0 120px;} */
+.footer_leftstyle{margin-right: 100px;}
+.footer_rightstyle{width: calc(100% - 380px);margin-bottom: 16px;}
 .footer_logosize{width: 140px;height: 40px;margin-bottom: 20px;}
 .footer_textpadd{margin: 10px 0 32px 0;}
 .footer_contactimg{width: 120px;height: 120px;}

@@ -21,7 +21,8 @@ label,span{
 }
 body{
 	color:#222;
-	font-family: PingFangSC-Regular, PingFang SC;
+	font-family: PingFangSC,helvetica neue,hiragino sans gb,arial,microsoft yahei ui,microsoft yahei,simsun,sans-serif;
+ 	-webkit-font-smoothing: antialiased;
 	font-weight: 400;
 }
 
