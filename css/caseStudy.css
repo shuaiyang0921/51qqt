@@ -46,7 +46,7 @@
 .caseStudyInfo_rightBot_text a p:hover{color: #005CEF}
 .news_navs{margin-bottom: 24px;}
 .news_navs>div{padding: 18px 20px;border-bottom: 2px solid #FFFFFF;margin-right: 10px;line-height: 22px;cursor: pointer;}
-.news_navschenck{font-size: 20px;color: #005CEF;font-family: PingFangSC-Medium, PingFang SC;font-weight: 500;border-bottom: 2px solid #005CEF!important;}
+.news_navschenck{font-size: 20px;color: #005CEF;font-weight: 500;border-bottom: 2px solid #005CEF!important;}
 .news_listimg{width: 280px;height: 160px;border-radius: 4px;margin-right: 30px;}
 .news_list{padding: 24px 0;border-bottom: 1px solid #EBEBEB;}
 .news_listright{width: calc(100% - 310px);}

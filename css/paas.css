@@ -40,7 +40,7 @@
 .scf_navsBg{padding: 60px 0;}
 .scf_navs{border-bottom: 1px solid #EBEBEB;margin-bottom: 40px;}
 .scf_navs>div{padding: 17px 50px;cursor: pointer;line-height: 28px;}
-.scf_nav{color: #005CEF;font-size: 20px;font-family: PingFangSC-Semibold, PingFang SC;font-weight: 600;position: relative;}
+.scf_nav{color: #005CEF;font-size: 20px;font-weight: 600;position: relative;}
 .scf_nav::after{content: "";width: 32px;height: 2px;background: #005CEF;border-radius: 1px;position: absolute;bottom: 0;left: calc(50% - 16px);}
 .scf_navList_img{width: 520px;height: 360px;margin: 35px 45px 35px 0;}
 .purchase_navList_img{width: 570px;height: 380PX;margin: 35px 55px 35px 0;}

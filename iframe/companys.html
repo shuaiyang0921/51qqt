@@ -23,7 +23,8 @@
 				<div class="tac home_product_title PingFangSCMedium">信赖之选，世界<span class="colorblue">500</span>强和<span class="colorblue">30+</span>行业领军企业都在用</div>
 				<div class="home_Case_companys flex-column flex-center flex-middle" ref='box' @mouseenter="enter" @mouseleave="leave">
                     <div class="home_Case_companylistshow" v-for="(item,index) in caseCompanylist" >
-                        <div class="home_Case_companylist" :style="index%2==0?{transform: 'translateX('+ tranL+ 'px)'}:{transform: 'translateX('+ tranR+ 'px)'}">
+                        <!-- <div class="home_Case_companylist" :style="index%2==0?{transform: 'translateX('+ tranL+ 'px)'}:{transform: 'translateX('+ tranR+ 'px)'}"> -->
+						<div class="home_Case_companylist" :style="{transform: 'translateX('+ tranL+ 'px)'}">
                             <div class="home_Case_companyImg" v-for="itemchind in item"><img :src="itemchind.companyLogo" class="imgsize" alt="itemchind.companyName"></div>
                             <div class="home_Case_companyImg" v-for="itemchind in item"><img :src="itemchind.companyLogo" class="imgsize" alt="itemchind.companyName"></div>
                         </div>
@@ -63,7 +64,7 @@
                     if(that.tranR==-110){
                         that.tranR=-1660
                     }
-                },30)
+                },40)
 			},
 			mounted(){
 				if (parent.document.location.pathname.includes("index.html")&&!parent.document.location.pathname.includes("purchase")){
@@ -110,7 +111,7 @@
                         if(that.tranR==-110){
                             that.tranR=-1660
                         }
-                    },30)
+                    },40)
                 }
 			},
 			computed:{
