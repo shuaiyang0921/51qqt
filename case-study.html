@@ -434,7 +434,7 @@
 				</div>
 			</div>
 			<div class="caseStudy_Filter">
-				<div class="flex-column flex-between caseStudy_FilterList" v-if="ListData.length!=0" style="position: relative">
+				<div ref="caseStudy_FilterList_id" class="flex-column flex-between caseStudy_FilterList" v-if="ListData.length!=0" style="position: relative">
 					<a v-for="item in ListData" :href="'caseStudyInfo.html?id='+item.id">
 						<div class="caseStudy_FilterList_img"><img :src="item.image" class="imgsize"></div>
 						<div class="caseStudy_FilterList_Bot flex-column">
@@ -445,7 +445,7 @@
 							</div>
 						</div>
 					</a>
-					<div v-if="ListData.length%3==2" style="width: 410px;">
+					<div v-for="(numItem,numIndex) in (lineItemNum-ListData.length%lineItemNum)" v-if="ListData.length%lineItemNum!=0" style="width: 410px;">
 					</div>
 				</div>
 				<div class="tac f26" v-else>
@@ -638,7 +638,8 @@
 				currentPage: 1,
 				totalPage:0,
 				blogrollList:[],
-				Pagenun:[]
+				Pagenun:[],
+				lineItemNum:3
 			}
 		},
 		watch: {
@@ -648,9 +649,16 @@
 			this.getdata()
 		},
 		mounted(){
-		
+			window.addEventListener('resize', this.onResize);
 		},
 		methods: {
+			onResize(){
+				if (this.$refs.caseStudy_FilterList_id){
+					var width=$(this.$refs.caseStudy_FilterList_id)[0].clientWidth;
+					var finalNum=parseInt(width/410)
+					this.lineItemNum=finalNum;
+				}
+			},
 			getdata(){
 				that = this
 				var _getData = p => get('/works/caseWork/noToken/frontList', p);
@@ -671,6 +679,9 @@
 					if(res.result.pages==0){
 						that.Pagenun = [1]
 					}
+					setTimeout(()=>{
+						this.onResize()
+					},1)
 					// console.log(that.Pagenun)
 				})
 				.catch(err => {

@@ -425,7 +425,7 @@
 			</div>
 			<div class="joinUs_post">
 				<div class="tac joinUs_title PingFangSCMedium">热招岗位</div>
-				<div v-if="indexList==navIndex" class="joinUs_post_lists flex-column flex-between " v-for="(itemList,indexList) in supplierListData">
+				<div v-if="indexList==navIndex" ref="joinUs_post_lists" class="joinUs_post_lists flex-column flex-between " v-for="(itemList,indexList) in supplierListData">
 					<template v-for="(item,index) in itemList">
 						<div>
 							<div class="joinUs_post_list" :class="Listindex==index?'joinUs_post_listblue':''" @click="changeindex(index,item)">
@@ -438,10 +438,10 @@
 							</div>
 						</div>
 
-						<div v-if="indexList==(supplierListData.length-1)&&itemList.length%3!=0&&index==itemList.length-1" class="joinUs_post_list_last">
+						<div v-for="(numItem,numIndex) in (lineItemNum-itemList.length%lineItemNum)" v-if="itemList.length%lineItemNum!=0&&index==itemList.length-1" class="joinUs_post_list_last">
 
 						</div>
-						<div v-if="(index%3==2||(indexList==(supplierListData.length-1)&&itemList.length%3!=0&&index==itemList.length-1))&&parseInt(Listindex/3)==parseInt(index/3)" class="jobDetailContainer">
+						<div v-if="(index%lineItemNum==lineItemNum-1||(itemList.length%lineItemNum!=0&&index==itemList.length-1))&&parseInt(Listindex/lineItemNum)==parseInt(index/lineItemNum)&&showJobDetail" class="jobDetailContainer">
 							<div>
 								<div class="f18 joinUs_post_popUpTitle PingFangSCMedium"><span></span>岗位职责</div>
 								<div class="f16 joinUs_post_popUpText" v-html="detailItem.responsibilities"></div>
@@ -614,7 +614,9 @@
 				Listindex:0,
 				blogrollList:[],
 				navIndex: 0,
-				detailItem:{}
+				detailItem:{},
+				lineItemNum:3,
+				showJobDetail:true,
 			}
 		},
 		watch: {
@@ -624,9 +626,17 @@
 			this.getdata()
 		},
 		mounted(){
-		
+			window.addEventListener('resize', this.onResize);
 		},
 		methods: {
+			onResize(){
+				if (this.$refs.joinUs_post_lists){
+					var width=$(this.$refs.joinUs_post_lists)[0].clientWidth;
+					var finalNum=parseInt(width/414)
+					console.log(finalNum)
+					this.lineItemNum=finalNum;
+				}
+			},
 			getdata(){
 				that = this
 				var _getData = p => get('/aboutUs/noToken/queryByPageName', p);
@@ -652,6 +662,9 @@
 							that.supplierListData.push(resultList)
 						}
 					}
+					setTimeout(()=>{
+						this.onResize()
+					},1)
 					// that.supplierListData = res.result['3']
 				}).catch(err => {
 					console.log(err,'_getData获取数据异常');
@@ -660,6 +673,7 @@
 			changeCaseTab(index){
 				this.navIndex = index
 				this.Listindex=0
+				this.showJobDetail=true;
 				this.detailItem=this.supplierListData[index][0]
 				$('.home_Case_tabs>div').eq(this.navIndex).addClass('home_Case_tab').siblings().removeClass('home_Case_tab')
 			},
@@ -676,9 +690,14 @@
 				this.showVidio = false
 			},
 			changeindex(index,item){
+				console.log(index)
+				console.log(this.Listindex)
+				console.log("====")
 				if(index==this.Listindex){
 					this.Listindex = null
+					this.showJobDetail=false;
 				}else{
+					this.showJobDetail=true;
 					this.Listindex = index
 				}
 				this.detailItem=item
