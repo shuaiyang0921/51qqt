@@ -8,10 +8,10 @@
 .joinUs_img2{width: 478px;height: 480px;}
 .joinUs_img3{width: 478px;height: 240px;}
 .joinUs_img_mag{margin: 0 3px;}
-.joinUs_post{padding: 60px 120px 73px 120px;background: rgba(247, 248, 250, 1)}
+.joinUs_post{padding: 60px 120px 0 120px;background: rgba(247, 248, 250, 1)}
 .joinUs_post_lists{}
 .joinUs_post_list{padding: 30px 40px;background: #FFFFFF;border-radius: 4px;border: 1px solid #EBEBEB;width: 304px;margin: 15px;cursor: pointer;}
-.joinUs_post_list_last{padding: 30px 40px;background: #FFFFFF;border-radius: 4px;border: 1px solid #FFFFFF;width: 304px;margin: 15px;}
+.joinUs_post_list_last{padding: 30px 40px;border-radius: 4px;border: 1px solid #F7F8FA;width: 304px;margin: 15px;background: rgba(247, 248, 250, 1);}
 .joinUs_post_listTitle{height: 28px;line-height: 28px;margin-bottom: 18px;}
 .joinUs_post_address{color: #555555;height: 20px;line-height: 20px;border-bottom: 1px solid #EBEBEB;padding-bottom: 16px;}
 .joinUs_post_icon{width: 14px;height: 14px;margin-right: 8px;}
