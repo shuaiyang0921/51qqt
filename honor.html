@@ -411,6 +411,7 @@
 				<div class="homeHead_appleStytle honor_banner_title">企企通</div>
 				<div class="honor_banner_text">历年履获行业权威机构多项殊荣及专业资质</div>
 			</div>
+			<div id="honorImageList" style="position: absolute;top: 430px;"></div>
 			<div class="padBg">
 				<div class="tac honor_title PingFangSCMedium">荣誉奖项</div>
 				<div class="honor_certificate_navs">
@@ -425,7 +426,8 @@
 					<div v-for="(item,index) in supplierListData" :class="index==0?'home_Case_tab':''" @click="changeCaseTab(index)"></div>
 				</div>
 			</div>
-			<div class="honor_certificate honor_certificate_bg">
+			<div class="honor_certificate honor_certificate_bg porelative">
+				<div style="position: absolute;top: -80px;" id="certificationImageList"></div>
 				<div class="tac honor_title PingFangSCMedium">企业资质</div>
 				<div class="honor_certificate_navs">
 					<div v-if="index==navZiZhiIndex" class="flex-column flex-around displayBox" v-for="(item,index) in aboutListData">
@@ -668,10 +670,12 @@
 			changeCaseTab(index){
 				this.navIndex = index
 				$('.home_Case_tabs>div').eq(this.navIndex).addClass('home_Case_tab').siblings().removeClass('home_Case_tab')
+				window.location.href="#honorImageList"
 			},
 			changeCaseTabZiZhi(index){
 				this.navZiZhiIndex = index
 				$('.home_Case_tabs_ziZhi>div').eq(this.navZiZhiIndex).addClass('home_Case_tab').siblings().removeClass('home_Case_tab')
+				window.location.href="#certificationImageList"
 			},
 		},
 		computed:{},
