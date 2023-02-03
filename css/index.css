@@ -34,7 +34,7 @@
 .PingFangSCMedium{font-weight: 600;}
 .PingFangSCMediumNormal{font-weight: normal;}
 .PingFangSCMediumBanner{font-weight: 500;}
-.homeHead{background: #FFFFFF;padding: 0 120px;box-shadow: 0px 3px 14px 0px rgba(0,0,0,0.05);position: relative;}
+.homeHead{background: #FFFFFF;padding: 0 120px;position: relative;}/*box-shadow: 0px 3px 14px 0px rgba(0,0,0,0.05);*/
 .homephoneHead{padding: 20px 0px;margin: 0 24px;display: none;}
 .menu_buttonstyle{width: 55px;height: 19px;}
 .menu_button {cursor: pointer;margin-left: 30px;position: absolute;}
@@ -76,9 +76,9 @@
 .shownavchild_text{display: none;}
 .homephoneHead_navchild_text{margin: 16px 0 16px 25px;}
 /* 导航产品弹窗 */
-.homeHead_productpopUp_saas{padding-left: 100px;background: linear-gradient(135deg, rgba(0,85,255,0) 0%, rgba(0,85,255,0.04) 100%);}
+.homeHead_productpopUp_saas{background: linear-gradient(135deg, rgba(0,85,255,0) 0%, rgba(0,85,255,0.04) 100%);}
 .homeHead_productpopUp_left{padding: 37px 30px;width: 160px;height: 327px;background: no-repeat url(../img/home47.png);background-size:100%;}
-.homeHead_productpopUp_right{padding: 30px 40px;width: calc(100% - 400px);color: #222222;}
+.homeHead_productpopUp_right{padding: 17px 40px;width: calc(100% - 300px);color: #222222;}
 .homeHead_productpopUp_rightText{padding: 0 50px 0 30px;}
 .homeHead_productpopUp_rightText>div{margin-bottom: 14px;}
 .homeHead_productpopUp_rightText>a{margin-bottom: 14px;display: block;cursor: pointer;}
@@ -96,7 +96,7 @@
 .homeHead_productpopUp_subheading{color: #888888;margin-bottom: 16px!important;}
 .homeHead_productpopUp_paas{padding-left: 100px;background: linear-gradient(135deg, rgba(0,85,255,0) 0%, rgba(0,85,255,0.04) 100%);}
 .homeHead_productpopUp_paas_left{padding: 50px 30px;width: 160px;height: 40px;background: no-repeat url(../img/home48.png);background-size:100%;}
-.homeHead_productpopUp_paas_right{padding: 30px 40px;width: calc(100% - 400px);color: #222222;}
+.homeHead_productpopUp_paas_right{padding: 30px 40px;width: calc(100% - 300px);color: #222222;}
 .homeHead_productpopUp_paas_right>a{background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 4px 10px 0px rgba(166,180,208,0.1);border-radius: 4px;border: 2px solid #FFFFFF;padding: 18px;width: 240px;height: 41px;cursor: pointer;}
 .homeHead_productpopUp_paas_right>a:hover{box-shadow: 0px 4px 10px 0px rgba(166,180,208,0.2);}
 .homeHead_productpopUp_paas_right>a:hover .homeHead_appleStytle{color: #005CEF;}
@@ -108,9 +108,9 @@
 .homeHead_productpopUp_paastitleicon3{position: relative;}
 .homeHead_productpopUp_paastitleicon3::before{content:'';background: no-repeat url(../img/home61.png);background-size:100%;width: 40px;height: 36px;position: absolute;top: -29px;left: 200px;}
 /* 导航解决方案弹窗 */
-.homeHead_solutionPopUp_left{padding-left: 100px;background: linear-gradient(135deg, rgba(0,85,255,0) 0%, rgba(0,85,255,0.04) 100%);}
+.homeHead_solutionPopUp_left{background: linear-gradient(135deg, rgba(0,85,255,0) 0%, rgba(0,85,255,0.04) 100%);}
 .homeHead_solutionPopUp_leftTitle{padding: 37px 30px;width: 160px;height: 146px;background: no-repeat url(../img/home8.png);background-size:100%;}
-.homeHead_solutionPopUp_rightText{padding: 20px 10px 20px 40px;width: 200px;cursor: pointer;}
+.homeHead_solutionPopUp_rightText{padding: 20px 10px 20px 40px;width: 170px;cursor: pointer;}
 .homeHead_solutionPopUp_rightText:hover{background: #F7f8fa;}
 .homeHead_solutionPopUp_rightText:hover .homeHead_productpopUp_title{color: #005CEF;}
 .homeHead_solutionPopUp_subheading{color: #888888;}
@@ -151,16 +151,16 @@
 .homeHead_solutionPopUp_titleicon18{position: relative;}
 .homeHead_solutionPopUp_titleicon18::before{content:'';background: no-repeat url(../img/home35.png);background-size:100%;width: 20px;height: 20px;position: absolute;top: 2px;left: -25px;}
 /* 咨询中心弹窗 */
-.homeHead_informationPopUp_left{padding-left: 110px;background: linear-gradient(135deg, rgba(0,85,255,0) 0%, rgba(0,85,255,0.04) 100%);}
+.homeHead_informationPopUp_left{background: linear-gradient(135deg, rgba(0,85,255,0) 0%, rgba(0,85,255,0.04) 100%);}
 .homeHead_informationPopUp_Title{padding: 48px 20px;width: 570px;height: 138px;background: no-repeat url(../img/home9.png);background-size:100% 100%;}
 .homeHead_informationPopUp_leftTitle{margin-bottom: 12px;}
-.homeHead_informationPopUp_right{padding: 48px 40px;width: calc(100% - 800px);}
-.homeHead_informationPopUp_rightText{padding: 10px 20px 10px 40px;width: 250px;cursor: pointer;height: 49px;color: #222222;}
+.homeHead_informationPopUp_right{padding: 48px 40px;width: calc(100% - 690px);}
+.homeHead_informationPopUp_rightText{padding: 10px 20px 10px 40px;width: 190px;cursor: pointer;height: 49px;color: #222222;}
 .homeHead_informationPopUp_rightText:hover .homeHead_productpopUp_title{color: #005CEF;}
 .homeHead_informationPopUp_rightText:hover .iconrightgary{background: no-repeat url(../img/home46.png);background-size:100%;width: 7px;height: 11px;margin-left: 15px;}
 .homeHead_playvidio{background: linear-gradient(270deg, #008EFF 0%, #005CEF 100%);border-radius: 2px;padding: 8px 22px;margin-top: 29px;cursor: pointer;}
 /* 关于我们弹窗 */
-.homeHead_aboutUsPopUp_padd{padding: 60px 180px;}
+.homeHead_aboutUsPopUp_padd{padding: 45px 0px;}
 .homeHead_aboutUsPopUp_Text{width: 176px;background: #F7F8FA;padding: 24px 32px;height: 72px;}
 .homeHead_aboutUsPopUp_Text:hover .homeHead_aboutUsPopUp_title{color: #005CEF;}
 .homeHead_aboutUsPopUp_Text:hover .iconrightgary{background: no-repeat url(../img/home46.png);background-size:100%;width: 7px;height: 11px;margin-left: 5px;}
