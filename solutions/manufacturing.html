@@ -411,14 +411,14 @@
 			</div>
 			<div class="heiheader"></div>
 			<div class="colorbai" :style="banner.backgroundImage">
-				<div class="manufacturing_adver_title homeHead_appleStytle">{{banner.title}}</div>
+				<div class="manufacturing_adver_title homeHead_appleStytle" v-html="banner.title"></div>
 				<div class="manufacturing_adver_title">解决方案</div>
-				<div class="f18 PingFangSCMediumBanner manufacturing_adver_text">{{banner.intro}}</div>
+				<div class="f18 PingFangSCMediumBanner manufacturing_adver_text" v-html="banner.intro"></div>
 				<div class="f14 homeHead_registertil tac homeHead_appleStytle" @click="showregistermodal">注册体验</div>
 			</div>
 			<div class="manufacturing_bg bggray">
 				<div class="PingFangSCMedium tac home_title">{{supplierData[0]?supplierData[0].bigTitle:''}}</div>
-				<div class="flex-column flex-around">
+				<div class="flex-column flex-between">
 					<div class="flex-column manufacturing_observation_list" v-for="item in supplierData">
 						<div class="manufacturing_observation_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
 						<div>

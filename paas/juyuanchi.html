@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="../css/solutions.css">
         <!-- PaaS平台样式 -->
         <link rel="stylesheet" href="../css/paas.css">
+        <link rel="stylesheet" href="../css/product.css">
 		<script src="../js/jquery.min.js"></script>
         <script src="../js/home.js"></script>
 		<script src="../js/load.js"></script>
@@ -431,8 +432,8 @@
 				<div class="PingFangSCMedium tac home_title">核心能力</div>
 				<div v-for="(item,index) in supplierListData">
 					<div class="flex-column flex-center flex-middle" v-if="index%2==0">
-						<div class="Q3k_navList_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
-						<div class="scf_navList_right">
+						<div class="purchase_child_navList_left_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
+						<div class="purchase_child_navList_right_text">
 							<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
 							<div class="purchase_navList_rightText f14" v-html="item.intro"></div>
 							<div class="f14 colorblue home_Enabling_text" v-for="items in item.productChildList">{{items.intro}}</div>
@@ -440,13 +441,13 @@
 						</div>
 					</div>
 					<div class="flex-column flex-center flex-middle bgbai" v-else>
-						<div class="scf_navList_right">
+						<div class="purchase_child_navList_left_text">
 							<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
 							<div class="purchase_navList_rightText f14" v-html="item.intro"></div>
 							<div class="f14 colorblue home_Enabling_text" v-for="items in item.productChildList">{{items.intro}}</div>
 							<div class="tac colorbai homeHead_appleStytle aPaaS_head_but">立即咨询</div>
 						</div>
-						<div class="Q3k_navList_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
+						<div class="purchase_child_navList_right_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
 					</div>
 				</div>
 			</div>
