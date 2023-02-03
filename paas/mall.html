@@ -26,7 +26,7 @@
 	<body>
 		<div id="app">
 			<div class="bghead header">
-				<div class="flex-column flex-between homeHead f16">
+				<div class="flex-column flex-between homeHead f16 maxwidth">
 					<div class="flex-column flex-middle">
 						<a class="logosize" href="../index.html"><img src="../img/logo.png" class="imgsize" alt="企企通"></a>
 						<div class="flex-column flex-middle homenavs">
@@ -34,7 +34,7 @@
 								<li class="hobverPopUp">
 									<div class="hobverPopUp_text"><span>产品</span><span class="iconxia"></span></div>
 									<div class="homeHead_popUpStyle bghead">
-										<div class="maxwidth ">
+										<div class="maxwidth">
 											<div class="flex-column xian_head">
 												<div class="homeHead_productpopUp_saas">
 													<div class="f18 homeHead_appleStytle homeHead_productpopUp_left">企业SasS云</div>
@@ -413,9 +413,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="heiheader"></div>
-			<div class="paas_topBg">
-				<div class="mkt_adver flex-column flex-middle flex-between colorbai" :style="{backgroundImage: 'url('+(BannerImg[0]?BannerImg[0].image:'')+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover'}">
+			<!-- <div class="heiheader"></div> -->
+			<div :style="{backgroundImage: 'url('+(BannerImg[0]?BannerImg[0].image:'')+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover'}">
+				<div class="mkt_adver maxwidth flex-column flex-middle flex-between colorbai" >
 					<div class="paas_adver_left">
 						<div class="manufacturing_adver_title homeHead_appleStytle" v-html="BannerImg[0]?BannerImg[0].title:''"></div>
 						<div class="f16 PingFangSCMedium paas_adver_text colorbai" v-html="BannerImg[0]?BannerImg[0].intro:''"></div>
@@ -426,7 +426,6 @@
 					</div>
 					<div class="paas_topImg"><img v-if="BannerImg[0]" :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize" alt="商城云"></div>
 				</div>
-
 			</div>
 			<div class="padBg">
 				<div class="PingFangSCMedium tac home_title">商城云，赋能企业智能化采购</div>
