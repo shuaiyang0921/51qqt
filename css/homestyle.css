@@ -30,22 +30,20 @@
 .home_Enabling_connectimg{position: absolute;height: 187px;z-index: 1;top: -45px;}
 .home_product{background: url(../img/home39.png) no-repeat center center;background-size: cover;padding: 60px 120px;}
 .home_product_title{font-size: 36px;margin-bottom:40px;}
-.home_product_saas{width: calc(50% - 28px);height:204px;border-radius: 4px;border: 2px solid #FFFFFF;background: url(../img/home78.png) no-repeat center center;background-size: cover;margin: 22px 0 0 24px;cursor: pointer;box-shadow: 0px 8px 20px 0px rgb(166,180,208,0.1)}
-.home_product_saas_first{width: 378px;height:432px;border-radius: 4px;border: 2px solid #FFFFFF;background: url(../img/home161.png) no-repeat center center;background-size: cover;margin: 24px 18px 0 0;cursor: pointer;box-shadow: 0px 8px 20px 0px rgb(166,180,208,0.1)}
+.home_product_saas{width: calc(50% - 28px);height:204px;border-radius: 4px;border: 2px solid #FFFFFF;background: url(../img/home78.png) no-repeat center center;background-size: cover;margin: 22px 0 0 24px;cursor: pointer;}
+.home_product_saas_first{width: 378px;height:432px;border-radius: 4px;border: 2px solid #FFFFFF;background: url(../img/home161.png) no-repeat center center;background-size: cover;margin: 24px 18px 0 0;cursor: pointer;}
 .home_product_saasList{width: calc(100% - 400px);}
-.home_product_saas:hover{box-shadow: 0px 8px 20px 0px rgb(166,180,208,0.2)}
-.home_product_saas_first:hover{box-shadow: 0px 8px 20px 0px rgb(166,180,208,0.2)}
 .home_product_saasimg{width: 64px;height: 64px;margin: 31px auto;}
 .home_product_paasimg{width: 64px;height: 64px;margin: 0 auto;}
 .home_product_saasTitle{font-size: 22px;margin: 31px 0 16px 0;text-align: left}
 .home_product_saasText{color: #555555;margin-bottom: 24px;}
 .home_product_saasMoreicon{height: 11px;width: 16px;margin-left: 5px;}
-.home_product_paas{padding: 32px 62px 32px 32px;border-radius: 4px;border: 2px solid #FFFFFF;background: url(../img/home79.png) no-repeat center center;background-size: cover;margin-top: 24px;cursor: pointer;box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1)}
-.home_product_paas:hover{box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.2)}
+.home_product_paas{padding: 32px 62px 32px 32px;border-radius: 4px;border: 2px solid #FFFFFF;background: url(../img/home79.png) no-repeat center center;background-size: cover;margin-top: 24px;cursor: pointer;}
+.home_product_paas:hover{box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.3)}
 .home_product_paasright{margin-left: 24px;width: 196px;}
 .home_product_paasTitle{font-size: 22px;margin-bottom: 16px;}
 .home_padd{padding: 60px 120px;}
-.home_competitive_list{background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;border: 2px solid #FFFFFF;margin: 12px;cursor: pointer;}
+.home_competitive_list{background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);border-radius: 4px;border: 2px solid #FFFFFF;margin: 12px;cursor: pointer;}
 .home_competitive_list:hover{box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.5);}
 .home_competitive_listleft{padding: 40px 62px;background-size: cover;background-repeat: no-repeat;}
 .home_competitive_listleft2{padding: 40px 62px;background: url(../img/home85.png) no-repeat center center;background-size: cover;}
@@ -101,7 +99,7 @@
 .home_endorsed_botImg{width: 80px;height: 80px;border-radius: 50%;background: #FFFFFF;border: 1px solid #EBEBEB;margin: 0 auto;margin-bottom: 10px;}
 .home_endorsed_bottext{color: #555555;}
 .home_information{padding: 126px 120px 60px 120px;background: url(../img/home54.png) no-repeat center center;background-size: cover;}
-.home_information_list{padding: 32px 24px 22px 24px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;border: 2px solid #FFFFFF;margin: 12px;}
+.home_information_list{padding: 32px 24px 22px 24px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);border-radius: 4px;border: 2px solid #FFFFFF;margin: 12px;}
 .home_information_bot{margin-top: 16px;}
 .home_information_Img{width: 120px;height: 130px;margin-right: 24px;}
 .home_information_text{width: 380px;}
@@ -219,4 +217,12 @@
 }
 div::-webkit-scrollbar{
     display:none
+}
+
+.projection{
+    box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);
+    transition-property: box-shadow;transition-duration: 0.3s
+}
+.projection:hover{
+    box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.3);
 }
