@@ -24,12 +24,12 @@
 				<div class="tac home_product_title PingFangSCMedium">成就更多客户成功，他们都选择了企企通</div>
 				<div>
 					<div :class="index==0?'flex-column home_Case_info home_Case_info_show':'flex-column home_Case_info'" v-for="(item,index) in CaseList">
-						<div class="home_Caseimg"><img :src="item.backgroundImage" class="imgsize" :alt="item.tag"></div>
+						<div class="home_Caseimg_not_index"><img :src="item.backgroundImage" class="imgsize" :alt="item.tag"></div>
 						<div class="home_Case_inforight bgbai">
 							<div class="flex-column flex-between">
-								<div class="f16 PingFangSCMedium fontWeightNormal tags" style="">{{item.tags}}</div>
+								<div class="f22 PingFangSCMedium fontWeightNormal tags" style="">{{item.tags}}</div>
 							</div>
-							<div class="f16 home_Case_inforight_title_case_tab tab_intro" v-html="item.intro"></div>
+							<div class="f18 home_Case_inforight_title_case_tab tab_intro" v-html="item.intro"></div>
 <!--							<div class="home_Case_inforightImg"><img :src="item.logo" class="imgsize" :alt="item.tag"></div>-->
 						</div>
 					</div>

@@ -1066,15 +1066,15 @@
 				},4000);
 			},
 			setCaseInterval(){
-				// this.caseInterval=setInterval(()=>{
-				// 	if(that.changeCaseNum>=that.CaseList.length-1){
-				// 		that.changeCaseNum=0
-				// 	}else{
-				// 		that.changeCaseNum++;
-				// 	}
-				// 	$('.home_Case_tabs>div').eq(this.changeCaseNum).addClass('home_Case_tab').siblings().removeClass('home_Case_tab')
-				// 	$('.home_Case_info').eq(this.changeCaseNum).addClass('home_Case_info_show').siblings().removeClass('home_Case_info_show')
-				// },4000);
+				this.caseInterval=setInterval(()=>{
+					if(that.changeCaseNum>=that.CaseList.length-1){
+						that.changeCaseNum=0
+					}else{
+						that.changeCaseNum++;
+					}
+					$('.home_Case_tabs>div').eq(this.changeCaseNum).addClass('home_Case_tab').siblings().removeClass('home_Case_tab')
+					$('.home_Case_info').eq(this.changeCaseNum).addClass('home_Case_info_show').siblings().removeClass('home_Case_info_show')
+				},4000);
 			}
 		},
 		computed:{

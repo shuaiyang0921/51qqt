@@ -438,7 +438,7 @@
 						<div class="flex-column flex-middle" v-for="(item,index) in listData" :class="index==0?'qirongtong_Business_list3':''">
 							<div class="qirongtong_Business_img"><img :src="item.icon" class="imgsize" :alt="item.childName"></div>
 							<div>
-								<div class="f24 PingFangSCMedium qirongtong_Business_title" v-html="item.title"></div>
+								<div class="f24 PingFangSCMedium qirongtong_Business_title color222" v-html="item.title"></div>
 								<div class="f16 qirongtong_Business_text qipiaotong_Business_textwidth" v-for="items in item.productChildList" v-html="items.intro"></div>
 							</div>
 						</div>
