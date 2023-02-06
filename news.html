@@ -638,6 +638,7 @@
 							height="520"
 							:src="vidiourl"
 							:poster="imageUrl"
+							autoplay
 							style="margin-bottom: 111px;margin-top: 16px;"
 						>
 						</video>
@@ -757,6 +758,7 @@
 				this.showmodel = false
 			},
             changetype(type){
+				this.currentPage=1
 				this.typeIndex = type
 				this.getdata()
 			},

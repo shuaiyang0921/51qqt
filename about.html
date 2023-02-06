@@ -601,10 +601,10 @@
 					<div class="f16 registe_form_submit PingFangSCMedium colorbai">立即提交</div>
 				</div>
 			</div>
-			<div class="register_modal flex-column flex-middle" v-if="showVidio">
+			<div class="register_modal flex-column flex-middle" v-if="showVidio" v-cloak>
 				<div class="Vidio_padd flex-column flex-middle flex-center porelative">
 					<div>
-						<div class="PingFangSCMedium tac home_title colorbai">{{aboutInfo[0]?aboutInfo[0].title:''}}</div>
+						<div class="PingFangSCMedium tac home_title colorbai" v-html="aboutInfo[0]?aboutInfo[0].title:''"></div>
 						<video
 							controls
 							preload="auto"
@@ -678,3 +678,9 @@
 	})
 </script>
 <script src="./js/navigation.js"></script>
+<style>
+	[v-cloak]{
+
+		display: none;
+	}
+</style>

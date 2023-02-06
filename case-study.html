@@ -709,17 +709,20 @@
 			changeindustry(index,industry){
 				this.industryIndex = index
 				this.industry = industry
+				this.currentPage=1
 				this.getdata()
 			},
 			changeclassify(index,classify){
 				this.classifyIndex = index
 				this.classify = classify
+				this.currentPage=1
 				this.getdata()
 			},
 
 			changescale(index,scale){
 				this.scaleIndex = index
 				this.scale = scale
+				this.currentPage=1
 				this.getdata()
 			},
 			changePage(item){
