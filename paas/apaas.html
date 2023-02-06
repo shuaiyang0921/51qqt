@@ -426,8 +426,8 @@
 					<div class="paas_topImg"><img :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize" alt="PaaS平台"></div>
 				</div>
 				<div class="PingFangSCMedium tac home_title">PaaS平台，提供企业级采购业务应用和数据服务</div>
-				<div class="f20 flex-column flex-middle flex-around paas_navs homeHead_appleStytle ">
-					<div v-for="(item,index) in passData" :class="navNum==index?'paas_nav':''" @click="changenav(index)"><span class="paas_paas_topImg"><img :src="item.icon" class="imgsize" :alt="item.childName"></span>{{item.title}}</div>
+				<div class="f20 flex-column flex-middle flex-around paas_navs color222">
+					<div v-for="(item,index) in passData" :class="navNum==index?'paas_nav homeHead_appleStytle':''" @click="changenav(index)"><span class="paas_paas_topImg"><img :src="item.icon" class="imgsize" :alt="item.childName"></span>{{item.title}}</div>
 					<!-- <div><span class="paas_paas_topImg"><img src="../img/home81.png" class="imgsize" alt="IPaaS集成开发平台"></span>IPaaS集成开发平台</div>
 					<div><span class="paas_paas_topImg"><img src="../img/home82.png" class="imgsize" alt="DPaaS数据中台"></span>DPaaS数据中台</div> -->
 				</div>
@@ -446,7 +446,7 @@
 							<div class="aPaaS_head_img"><img :src="item.image" class="imgsize" :alt="item.childName"></div>
 						</div>
 					</div>
-					<div class="manufacturing_bg">
+					<div class="manufacturing_bg" style="padding-bottom: 60px;">
 						<div class="PingFangSCMedium tac PaaS_title">{{item.bigTitle}}</div>
 						<div class="f16 tac PaaS_text">{{item.intro}}</div>
 						<div class="PaaS_img"><img :src="item.backgroundImage" class="imgsize" :alt="item.bigTitle"></div>

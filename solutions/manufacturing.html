@@ -416,7 +416,7 @@
 				<div class="f18 PingFangSCMediumBanner manufacturing_adver_text" v-html="banner.intro"></div>
 				<div class="f14 homeHead_registertil tac homeHead_appleStytle" @click="showregistermodal">注册体验</div>
 			</div>
-			<div class="manufacturing_bg bggray">
+			<div class="manufacturing_bg bggray" style="padding-bottom: 60px;">
 				<div class="PingFangSCMedium tac home_title">{{supplierData[0]?supplierData[0].bigTitle:''}}</div>
 				<div class="flex-column flex-between">
 					<div class="flex-column manufacturing_observation_list" v-for="item in supplierData">
@@ -437,14 +437,14 @@
 					<div class="flex-column flex-middle" v-if="index%2==0">
 						<div class="manufacturing_programmeList_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
 						<div class="manufacturing_programmeList_right">
-							<div class="PingFangSCMedium manufacturing_programmeList_rightTitle" v-html="item.title"></div>
+							<div class="PingFangSCMedium manufacturing_programmeList_rightTitle color222" v-html="item.title"></div>
 							<div class="f16 manufacturing_programmeList_rightText" v-html="item.intro"></div>
 							<div class="f14 homeHead_registertil tac homeHead_appleStytle fontWeightNormal" @click="showregistermodal">立即咨询</div>
 						</div>
 					</div>
 					<div class="manufacturing_programmeList flex-column flex-middle" v-else>
 						<div class="manufacturing_programmeList_left bggray">
-							<div class="PingFangSCMedium manufacturing_programmeList_rightTitle" v-html="item.title"></div>
+							<div class="PingFangSCMedium manufacturing_programmeList_rightTitle color222" v-html="item.title"></div>
 							<div class="f16 manufacturing_programmeList_leftText" v-html="item.intro"></div>
 							<div class="f14 homeHead_registertil tac homeHead_appleStytle fontWeightNormal" @click="showregistermodal">立即咨询</div>
 						</div>
