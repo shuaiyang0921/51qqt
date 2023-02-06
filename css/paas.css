@@ -20,7 +20,8 @@
 .paas_paas_topImg{width: 26px;height: 26px;margin-right: 14px;vertical-align:top;}
 .paas_navs{padding: 0 120px;}
 .paas_navs>div{padding-bottom: 22px;height: 28px;line-height: 28px;border-bottom: 4px solid #fff;cursor: pointer;}
-.paas_nav{border-bottom: 4px solid #005CEF!important;}
+.paas_navs>div:hover{color: #005CEF}
+.paas_nav{border-bottom: 4px solid #005CEF!important;color: #005CEF}
 .aPaaS_head_bg{padding: 30px 120px 0 120px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);}
 .aPaaS_head{background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;border: 3px solid #FFFFFF;padding: 40px 60px;}
 .aPaaS_head_img{width: 520px;height: 360px;}
