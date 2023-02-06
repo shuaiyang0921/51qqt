@@ -544,7 +544,7 @@
 				<div class="maxwidth">
 					<div class="tac home_product_title PingFangSCMedium colorbai">我们为全行业提供更适用的客户解决方案</div>
 					<div class="f20 tac home_Solution_tabs flex-column">
-						<div v-for="(item,index) in SolutionList" @click="changenavstop(index,item)" :class="index==navstopIndex?'home_Solution_tab':''" >{{item[1][0].type_dictText}}</div>
+						<div v-for="(item,index) in SolutionList" @click="changenavstop(index,item)" :class="index==1?caseTabClass1:caseTabClass2" >{{item[1][0].type_dictText}}</div>
 						
 					</div>
 					<div class="flex-column flex-top home_Solution_item" v-for="(item,index) in SolutionList" :class="index==navstopIndex?'showitem':''">
@@ -554,11 +554,11 @@
 						</div>
 						<div class="flex-column home_Solution_rightwidth" v-for="(itemdemo,indexdemo) in item[1]" :style="indexdemo==Solutionindex?'display: flex;':''">
 							<div class="home_Solution_center">
-								<div style="padding: 20px;">
+								<div style="padding: 0 20px;">
 									<div class="f24 colorbai PingFangSCMedium">{{itemdemo.title}}</div>
 									<div class="f14 colorbai home_Solution_centerText">{{itemdemo.intro}}</div>
-									<div class="home_Solution_centerImgs flex-column flex-between">
-										<div class="tac" v-for="itemchenk in itemdemo.tags">
+									<div class="home_Solution_centerImgs flex-column">
+										<div class="tac" v-for="(itemchenk,tagIndex) in itemdemo.tags" :style="tagIndex!=0?'margin-left: 67px;':''">
 											<div class="home_Solution_centerImg"><img :src="itemchenk.src" class="imgsize" :alt="itemchenk.title"></div>
 											<div class="f14 colorbai">{{itemchenk.title}}</div>
 										</div>
@@ -567,7 +567,7 @@
 								</div>
 							</div>
 							<div class="home_Solution_right flex-column">
-								<div class="home_Solution_rightimg" v-for="itemlogos in itemdemo.logos"><img :src="itemlogos" class="imgsize" alt="itemlogos"></div>
+								<div class="home_Solution_rightimg" v-for="itemlogos in itemdemo.logos"><img :src="itemlogos" class="imgsize" alt="itemlogos" style="border-radius: 4px;"></div>
 							</div>
 						</div>
 					</div>
@@ -860,6 +860,8 @@
 				bannerInterval:"",
 				blogrollList:[],
 				caseInterval:[],
+				caseTabClass1:"home_Solution_left_sel",
+				caseTabClass2:"home_Solution_right_unSel"
 			}
 		},
 		watch: {
@@ -967,8 +969,18 @@
 						this.pageName=i.name
 					}
 				})
+
+				console.log(index)
+				if (index==1){
+					this.caseTabClass1="home_Solution_left_sel"
+					this.caseTabClass2="home_Solution_right_unSel"
+				}else {
+					this.caseTabClass1="home_Solution_left_unSel"
+					this.caseTabClass2="home_Solution_right_sel"
+				}
 				this.navstopIndex = index
 				this.Solutionindex = 0
+
 			},
 			changeSolution(index,item,name){
 				console.log(item)
