@@ -191,6 +191,9 @@
 .footer_bottom{padding: 30px 0;background: #0D0E10;}
 .footer_bottom a,.footer_bottom div{color: rgba(255,255,255,0.6)!important;}
 .footer_bottomtext{margin: 0 40px;}
+
+/* 头部标题样式 */
+.manufacturing_adver_title{font-size: 48px;line-height: 62px;}
 /* 移动端头部 */
 
 @media screen and (max-width:1335px) {
