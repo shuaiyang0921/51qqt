@@ -6,6 +6,14 @@
 .f22{font-size: 22px;}
 .f24{font-size: 24px;}
 .f26{font-size: 26px;}
+.f28{font-size: 28px;}
+.br2{border-radius: 2px;}
+.br4{border-radius: 4px;}
+.br6{border-radius: 6px;}
+.br8{border-radius: 8px;}
+.br10{border-radius: 10px;}
+.br12{border-radius: 12px;}
+.br14{border-radius: 14px;}
 .flex-column,
 .flex-row {
   display: -webkit-box;
