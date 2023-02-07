@@ -413,13 +413,13 @@
 				</div>
 				<div class="flex-column flex-top" v-if="typeIndex!=4">
 					<div class="news_left">
-						<div class="flex-column flex-top news_list" v-for="item in InfoData"  v-if="InfoData.length!=0" @click="tznewsInfo(item.id)">
+						<div class="flex-column flex-top news_list" v-for="item in InfoData"  v-if="InfoData.length!=0" @click="tznewsInfo(item)">
                             <div class="news_listimg"><img :src="item.image" class="imgsize" :alt="item.title"></div>
                             <div class="news_listright">
                                 <div class="f18 homeHead_appleStytle news_listright_title">{{item.title}}</div>
                                 <div class="f14 news_listright_text">{{item.description}}</div>
                                 <div class="f14 flex-column flex-middle flex-between">
-                                    <div class="news_listright_but">{{item.tag}}</div>
+                                    <div class="news_listright_but" v-if="item.tag">{{item.tag}}</div>
                                     <div class="colorhui888">{{item.publishTime}}</div>
                                 </div>
                             </div>
@@ -454,7 +454,8 @@
 								</div>
 								<div class="f16 caseStudyInfo_rightBot_text">
 									<div v-for="(item,index) in hotList" style="position: relative;">
-										<a @mouseover="overFun(index)" @mouseout="outFun(index)" style="z-index: -100" :href="'newsInfo.html?id='+item.id">{{item.title}}</a>
+										<a v-if="item.type!=4" @mouseover="overFun(index)" @mouseout="outFun(index)" style="z-index: -100" :href="'newsInfo.html?id='+item.id">{{item.title}}</a>
+										<a v-else @mouseover="overFun(index)" @mouseout="outFun(index)" style="z-index: -100" @click="showvidiomodal(item)" >{{item.title}}</a>
 										<div :class="showFullTitle==index?'hot_title_show_before':''"></div>
 										<div :class="showFullTitle==index?'hot_title_show_after':''"></div>
 										<div :class="showFullTitle==index?'hot_title_show':'hot_title_show_hidden'">
@@ -778,8 +779,13 @@
 					this.getdata()
 				}
 			},
-            tznewsInfo(id){
-                window.location.href = './newsInfo.html?id='+id+"&type="+this.typeIndex
+            tznewsInfo(item){
+				if (item.type!=4){
+					window.location.href = './newsInfo.html?id='+id+"&type="+this.typeIndex
+				}else {
+					this.showvidiomodal(item)
+				}
+
             },
 			showvidiomodal(item){
 				this.videoDescription=item.description

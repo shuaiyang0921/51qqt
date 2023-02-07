@@ -445,7 +445,8 @@
 
 
 									<div v-for="(item,index) in hotList" style="position: relative;">
-										<a @mouseover="overFun(index)" @mouseout="outFun(index)" style="z-index: -100" :href="'newsInfo.html?id='+item.id">{{item.title}}</a>
+										<a v-if="item.type!=4" @mouseover="overFun(index)" @mouseout="outFun(index)" style="z-index: -100" :href="'newsInfo.html?id='+item.id">{{item.title}}</a>
+										<a v-else @mouseover="overFun(index)" @mouseout="outFun(index)" style="z-index: -100" @click="showvidiomodal(item)" >{{item.title}}</a>
 										<div :class="showFullTitle==index?'hot_title_show_before':''"></div>
 										<div :class="showFullTitle==index?'hot_title_show_after':''"></div>
 										<div :class="showFullTitle==index?'hot_title_show':'hot_title_show_hidden'">
@@ -599,6 +600,34 @@
 					<div class="f16 registe_form_submit PingFangSCMedium colorbai">立即提交</div>
 				</div>
 			</div>
+			<div class="register_modal flex-column flex-middle" v-if="showVidio">
+				<div class="Vidio_padd_wei flex-column flex-middle flex-center porelative">
+					<div class="videoContainer">
+						<div class="colorbai videoTitleText">{{vidiotitle}}</div>
+						<div class="colorbai videoDescriptionText">{{videoDescription}}</div>
+						<video
+								controls
+								preload="auto"
+								width="878"
+								height="520"
+								:src="vidiourl"
+								:poster="imageUrl"
+								autoplay
+								style="margin-bottom: 111px;margin-top: 16px;"
+						>
+						</video>
+					</div>
+					<div class="videoListContainer" ref="videoListContainer" @scroll="scollerFunc($event)">
+						<div v-for="(item,index) in videoList" @click="showvidiomodal(item)">
+							<img width="282" :src="item.image"/>
+							<div class="colorbai videoListTitleText">{{item.title}}</div>
+							<div class="colorbai videoListDescriptionText">{{item.description}}</div>
+						</div>
+					</div>
+					<div class="Vidio_cancel" @click="hidevidiomodal"><img src="./img/home114.png" class="imgsize" alt=""></div>
+				</div>
+
+			</div>
 		</div>
 	</body>
 </html>
@@ -612,7 +641,15 @@
 				showmodel:false,
 				blogrollList:[],
 				showFullTitle:-1,
-				type: ''
+				type: '',
+				showVidio:false,
+				vidiotitle:'',
+				videoDescription:'',
+				vidiourl:'',
+				imageUrl:'',
+				videoList:[],
+				videoCurrentPage:1,
+				videoTotalPage:0,
 			}
 		},
 		watch: {
@@ -672,7 +709,49 @@
 			},
 			outFun(index){
 				this.showFullTitle=-1;
-			}
+			},
+			getVideoData(){
+				that = this
+				var _getVideoData = p => get('/information/noToken/frontList', p);
+				_getVideoData({
+					type:4,
+					pageNo:this.videoCurrentPage,
+					pageSize:50
+				}).then(res => {
+					res.result.records.forEach(item=>{
+						that.videoList.push(item)
+					})
+					console.log(that.videoList)
+					that.videoTotalPage=res.result.pages
+				}).catch(err => {
+					console.log(err,'_getVideoData获取数据异常');
+				})
+			},
+			scollerFunc(el) {
+				let dom = el.target;
+				const scrollDistance = dom.scrollHeight - dom.scrollTop - dom.clientHeight;
+				if (scrollDistance <= 1) {//等于0证明已经到底，可以请求接口
+					console.log("触底了")
+					if (this.videoCurrentPage<this.videoTotalPage){
+						this.videoCurrentPage=this.videoCurrentPage+1
+						this.getVideoData()
+					}else {
+						// alert("没有更多数据了")
+					}
+				}
+			},
+			showvidiomodal(item){
+				this.videoDescription=item.description
+				this.vidiotitle = item.title
+				this.vidiourl = item.video
+				this.imageUrl=item.image
+				this.showVidio = true
+				this.videoList=[]
+				this.getVideoData()
+			},
+			hidevidiomodal(){
+				this.showVidio = false
+			},
 		},
 		computed:{},
 	})
