@@ -22,7 +22,7 @@
 	<body>
 		<div id="app">
 			<div class="bghead header">
-				<div class="flex-column flex-between homeHead f16">
+				<div class="flex-column flex-between homeHead f16 maxwidth">
 					<div class="flex-column flex-middle">
 						<a class="logosize" href="index.html"><img src="./img/logo.png" class="imgsize" alt="企企通"></a>
 						<div class="flex-column flex-middle homenavs">
@@ -74,7 +74,7 @@
 														<a href="./paas/mkt.html?navNum=3">客户管理</a>
 													</div>
 													<a class="homeHead_productpopUp_rightText" href="./purchase/darenTong.html">
-														<div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon4 colorblue">达人通<span class="iconright"></span></div>
+														<div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon4">达人通<span class="iconright colorblue"></span></div>
 														<div class="f12 homeHead_productpopUp_subheading">为直播电商量身打造</div>
 													</a>
 												</div>
@@ -213,7 +213,6 @@
 											</div>
 										</div>
 									</div>
-
 								</li>
 								<li><a href="cooperation.html">合作伙伴</a></li>
 								<li class="hobverPopUp">
@@ -407,11 +406,11 @@
 				</div>
 			</div>
 			<div class="heiheader"></div>
-			<div class="caseStudyInfo_bg">
-				<div class="flex-column f16 flex-middle bgbai news_navs">
+			<div class="caseStudyInfo_bg ">
+				<div class="flex-column f16 flex-middle bgbai news_navs maxwidth">
                     <div v-for="item in industryList" :class="typeIndex==item.type?'news_navschenck':''" @click="changetype(item.type)" >{{item.name}}</div>
 				</div>
-				<div class="flex-column flex-top" v-if="typeIndex!=4">
+				<div class="flex-column flex-top maxwidth" v-if="typeIndex!=4">
 					<div class="news_left">
 						<div class="flex-column flex-top news_list" v-for="item in InfoData"  v-if="InfoData.length!=0" @click="tznewsInfo(item)">
                             <div class="news_listimg"><img :src="item.image" class="imgsize" :alt="item.title"></div>
@@ -491,12 +490,14 @@
 					</div>
                 </div>
 			</div>
-			<div class="home_register flex-column flex-center flex-middle colorbai">
-				<div class="PingFangSCMedium">
-					<div class="home_register_text">开启数字化供应链与采购新体验</div>
-					<div class="tar">赋能企业数字化转型与变革</div>
+			<div class="home_register colorbai">
+				<div class="maxwidth flex-column flex-between flex-middle">
+					<div class="PingFangSCMedium">
+						<div class="home_register_text">开启数字化供应链与采购新体验</div>
+						<div class="tar">赋能企业数字化转型与变革</div>
+					</div>
+					<div class="f18 homeHead_registertil home_register_but  homeHead_appleStytle  colorbai" @click="showregistermodal">注册体验</div>
 				</div>
-				<div class="f18 homeHead_registertil home_register_but  homeHead_appleStytle  colorbai" @click="showregistermodal">注册体验</div>
 			</div>
 			<div class="bgfooter">
 				<div class="footer maxwidth">
