@@ -23,7 +23,7 @@
 	<body>
 		<div id="app">
 			<div class="bghead header">
-				<div class="flex-column flex-between homeHead f16">
+				<div class="flex-column flex-between homeHead f16 maxwidth">
 					<div class="flex-column flex-middle">
 						<a class="logosize" href="index.html"><img src="./img/logo.png" class="imgsize" alt="企企通"></a>
 						<div class="flex-column flex-middle homenavs">
@@ -413,53 +413,60 @@
 				<div class="about_banner_text">推动数字化采购新变革</div>
 				<div class="f14 homeHead_registertil tac about_banner_but" @click="showregistermodal">注册体验</div>
 			</div>
-			<div class="about_videobg">
-				<div class="about_video">
-					<div class="homeHead_appleStytle about_video_title tac">{{aboutInfo[0]?aboutInfo[0].title:''}}</div>
-					<div class="flex-column">
-						<div class="about_video_img" @click="showvidiomodal">
-							<div class="about_video_imgsize"><img :src="aboutInfo[0]?aboutInfo[0].backgroundImage:''" class="imgsize" alt=""></div>
-							<div class="about_video_imgplay"><img src="./images/about/about7.png" class="imgsize" alt=""></div>
-							<div class="about_video_imgbg"><img src="./images/about/about6.png" class="imgsize" alt=""></div>
+			<div class="about_videobg ">
+				<div class="maxwidth">
+					<div class="about_video">
+						<div class="homeHead_appleStytle about_video_title tac">{{aboutInfo[0]?aboutInfo[0].title:''}}</div>
+						<div class="flex-column">
+							<div class="about_video_img" @click="showvidiomodal">
+								<div class="about_video_imgsize"><img :src="aboutInfo[0]?aboutInfo[0].backgroundImage:''" class="imgsize" alt=""></div>
+								<div class="about_video_imgplay"><img src="./images/about/about7.png" class="imgsize" alt=""></div>
+								<div class="about_video_imgbg"><img src="./images/about/about6.png" class="imgsize" alt=""></div>
+							</div>
+							<div class="about_video_text f16">
+								<div class="about_video_textmab" v-html="aboutInfo[0]?aboutInfo[0].intro:''"></div>
+							</div>
 						</div>
-						<div class="about_video_text f16">
-							<div class="about_video_textmab" v-html="aboutInfo[0]?aboutInfo[0].intro:''"></div>
-						</div>
-					</div>
-					<div class="about_video_data tac flex-column flex-around">
-						<div v-for="item in suppliernumData">
-							<div class="about_video_dataTitle PingFangSCMedium">{{item.title}}</div>
-							<div class="about_video_dataText">{{item.intro}}</div>
+						<div class="about_video_data tac flex-column flex-around">
+							<div v-for="item in suppliernumData">
+								<div class="about_video_dataTitle PingFangSCMedium">{{item.title}}</div>
+								<div class="about_video_dataText">{{item.intro}}</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="about_history">
-				<div class="tac homeHead_appleStytle about_history_title ">发展历程</div>
-				<div class="about_history_navs flex-column flex-around flex-middle">
-					<div class="flex-column flex-middle" v-for="(item,index) in supplierListData" @click="changeindex(index)" :class="index==Listindex?'about_history_nav':''">
-						<div class="about_history_yuan flex-column flex-middle"><span></span></div>
-						<div class="f18 about_history_nav_text PingFangSCMedium tac">{{item.title}}</div>
+				<div class="maxwidth">
+					<div class="tac homeHead_appleStytle about_history_title ">发展历程</div>
+					<div class="about_history_navs flex-column flex-around flex-middle">
+						<div class="flex-column flex-middle" v-for="(item,index) in supplierListData" @click="changeindex(index)" :class="index==Listindex?'about_history_nav':''">
+							<div class="about_history_yuan flex-column flex-middle"><span></span></div>
+							<div class="f18 about_history_nav_text PingFangSCMedium tac">{{item.title}}</div>
+						</div>
 					</div>
-				</div>
-				<div class="about_history_intro">
-					<div v-for="(item,index) in supplierListData" v-if="Listindex==index">
-						<div class="PingFangSCMedium about_history_introTitle">{{item.title}}</div>
-						<div class="homeHead_appleStytle about_history_introSub">{{item.intro}}</div>
-						<div class="f20" style="line-height: 34px;">
-							<div v-for="items in item.productChildList">{{items.intro}}</div>
+					<div class="about_history_intro">
+						<div v-for="(item,index) in supplierListData" v-if="Listindex==index">
+							<div class="PingFangSCMedium about_history_introTitle">{{item.title}}</div>
+							<div class="homeHead_appleStytle about_history_introSub">{{item.intro}}</div>
+							<div class="f20" style="line-height: 34px;">
+								<div v-for="items in item.productChildList">{{items.intro}}</div>
+							</div>
 						</div>
 					</div>
 				</div>
+				
 			</div>
 			<div class="about_excellent">
-				<div class="tac home_product_title PingFangSCMedium colorbai">保持优秀，持续领先</div>
-				<div class="flex-column flex-between">
-					<div class="home_competitive_list flex-column" v-for="item in aboutListData">
-						<div class="about_excellent_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
-						<div class="home_competitive_listright">
-							<div class="f20 PingFangSCMedium">{{item.title}}</div>
-							<div class="f14 home_competitive_listtext"><div  v-for="items in item.productChildList">{{items.intro}}</div></div>
+				<div class="maxwidth">
+					<div class="tac home_product_title PingFangSCMedium colorbai">保持优秀，持续领先</div>
+					<div class="flex-column flex-between">
+						<div class="home_competitive_list flex-column" v-for="item in aboutListData">
+							<div class="about_excellent_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
+							<div class="home_competitive_listright">
+								<div class="f20 PingFangSCMedium">{{item.title}}</div>
+								<div class="f14 home_competitive_listtext"><div  v-for="items in item.productChildList">{{items.intro}}</div></div>
+							</div>
 						</div>
 					</div>
 				</div>

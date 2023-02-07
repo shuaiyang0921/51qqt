@@ -22,7 +22,7 @@
 	<body>
 		<div id="app">
 			<div class="bghead header">
-				<div class="flex-column flex-between homeHead f16">
+				<div class="flex-column flex-between homeHead f16 maxwidth">
 					<div class="flex-column flex-middle">
 						<a class="logosize" href="index.html"><img src="./img/logo.png" class="imgsize" alt="企企通"></a>
 						<div class="flex-column flex-middle homenavs">
@@ -413,33 +413,37 @@
 			</div>
 			<div id="honorImageList" style="position: absolute;top: 430px;"></div>
 			<div class="padBg">
-				<div class="tac honor_title PingFangSCMedium">荣誉奖项</div>
-				<div class="honor_certificate_navs">
-					<div v-if="index==navIndex" class="flex-column flex-around displayBox" v-for="(item,index) in supplierListData">
-						<div class="honor_certificate_list f16" v-for="(content,index) in item">
-						<div class="honor_certificate_img"><img :src="content.image" class="imgsize" :alt="content.title"></div>
-						<div class="tac honor_text" v-html="content.title"></div>
+				<div class="maxwidth">
+					<div class="tac honor_title PingFangSCMedium">荣誉奖项</div>
+					<div class="honor_certificate_navs">
+						<div v-if="index==navIndex" class="flex-column flex-around displayBox" v-for="(item,index) in supplierListData">
+							<div class="honor_certificate_list f16" v-for="(content,index) in item">
+							<div class="honor_certificate_img"><img :src="content.image" class="imgsize" :alt="content.title"></div>
+							<div class="tac honor_text" v-html="content.title"></div>
+						</div>
+						</div>
 					</div>
+					<div class="home_Case_tabs flex-column flex-center">
+						<div v-for="(item,index) in supplierListData" :class="index==0?'home_Case_tab':''" @click="changeCaseTab(index)"></div>
 					</div>
-				</div>
-				<div class="home_Case_tabs flex-column flex-center">
-					<div v-for="(item,index) in supplierListData" :class="index==0?'home_Case_tab':''" @click="changeCaseTab(index)"></div>
 				</div>
 			</div>
 			<div class="honor_certificate honor_certificate_bg porelative">
-				<div style="position: absolute;top: -80px;" id="certificationImageList"></div>
-				<div class="tac honor_title PingFangSCMedium">企业资质</div>
-				<div class="honor_certificate_navs">
-					<div v-if="index==navZiZhiIndex" class="flex-column flex-around displayBox" v-for="(item,index) in aboutListData">
-						<div class="honor_certificate_list f16" v-for="(content,index) in item">
-							<div class="honor_qualifications_img"><img :src="content.image" class="imgsize" :alt="content.title"></div>
-							<div class="tac honor_certificate_text" v-html="content.title"></div>
+				<div class="maxwidth">
+					<div style="position: absolute;top: -80px;" id="certificationImageList"></div>
+					<div class="tac honor_title PingFangSCMedium">企业资质</div>
+					<div class="honor_certificate_navs">
+						<div v-if="index==navZiZhiIndex" class="flex-column flex-around displayBox" v-for="(item,index) in aboutListData">
+							<div class="honor_certificate_list f16" v-for="(content,index) in item">
+								<div class="honor_qualifications_img"><img :src="content.image" class="imgsize" :alt="content.title"></div>
+								<div class="tac honor_certificate_text" v-html="content.title"></div>
+							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="home_Case_tabs_ziZhi flex-column flex-center">
-					<div v-for="(item,index) in aboutListData" :class="index==0?'home_Case_tab':''" @click="changeCaseTabZiZhi(index)"></div>
+					<div class="home_Case_tabs_ziZhi flex-column flex-center">
+						<div v-for="(item,index) in aboutListData" :class="index==0?'home_Case_tab':''" @click="changeCaseTabZiZhi(index)"></div>
+					</div>
 				</div>
 			</div>
 			<div class="home_register flex-column flex-center flex-middle colorbai">

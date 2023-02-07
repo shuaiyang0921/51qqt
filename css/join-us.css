@@ -10,7 +10,7 @@
 .joinUs_img_mag{margin: 0 3px;}
 .joinUs_post{padding: 60px 120px 0 120px;background: rgba(247, 248, 250, 1)}
 .joinUs_post_lists{}
-.joinUs_post_list{padding: 30px 40px;background: #FFFFFF;border-radius: 4px;border: 1px solid #EBEBEB;width: 304px;margin: 15px;cursor: pointer;}
+.joinUs_post_list{padding: 30px 40px;background: #FFFFFF;border-radius: 4px;border: 1px solid #EBEBEB;width: 304px;margin: 15px 0;cursor: pointer;}
 .joinUs_post_list_last{padding: 30px 40px;border-radius: 4px;border: 1px solid #F7F8FA;width: 304px;margin: 15px;background: rgba(247, 248, 250, 1);}
 .joinUs_post_listTitle{height: 28px;line-height: 28px;margin-bottom: 18px;}
 .joinUs_post_address{color: #555555;height: 20px;line-height: 20px;border-bottom: 1px solid #EBEBEB;padding-bottom: 16px;}
@@ -31,7 +31,7 @@
     background: rgba(247, 248, 250, 1);
 }
 .jobDetailContainer{
-    width: 100%;padding:0 15px;
+    width: 100%;
 }
 .jobDetailContainer>div{
     background: #FFFFFF;border: 1px solid #EBEBEB;margin: 12px 0;padding: 0 40px

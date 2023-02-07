@@ -22,7 +22,7 @@
 	<body>
 		<div id="app">
 			<div class="bghead header">
-				<div class="flex-column flex-between homeHead f16">
+				<div class="flex-column flex-between homeHead f16 maxwidth">
 					<div class="flex-column flex-middle">
 						<a class="logosize" href="index.html"><img src="./img/logo.png" class="imgsize" alt="企企通"></a>
 						<div class="flex-column flex-middle homenavs">
@@ -423,40 +423,41 @@
 					<div class="joinUs_img3"><img src="./images/about/joinUs5.png" class="imgsize"></div> -->
 				</div>
 			</div>
+			
 			<div class="joinUs_post">
-				<div class="tac joinUs_title PingFangSCMedium">热招岗位</div>
-				<div v-if="indexList==navIndex" ref="joinUs_post_lists" class="joinUs_post_lists flex-column flex-between " v-for="(itemList,indexList) in supplierListData">
-					<template v-for="(item,index) in itemList">
-						<div>
-							<div class="joinUs_post_list" :class="Listindex==index?'joinUs_post_listblue':''" @click="changeindex(index,item)">
-								<div class="joinUs_post_listTitle f20 PingFangSCMedium flex-column flex-between flex-middle">
-									<div>{{item.job}}</div>
-									<div class="f14 colorbai joinUs_post_listlabel">HOT</div>
-								</div>
-								<div class="f14 joinUs_post_address flex-column flex-middle"><span class="joinUs_post_icon"><img src="images/about/joinUs7.png" class="imgsize" alt="地址"></span>{{item.address}}</div>
-								<div class="f14 joinUs_post_department flex-column flex-middle"><span class="joinUs_post_icon"><img src="images/about/joinUs6.png" class="imgsize" alt="部门"></span>{{item.dept}}</div>
-							</div>
-						</div>
-
-						<div v-for="(numItem,numIndex) in (lineItemNum-itemList.length%lineItemNum)" v-if="itemList.length%lineItemNum!=0&&index==itemList.length-1" class="joinUs_post_list_last">
-
-						</div>
-						<div v-if="(index%lineItemNum==lineItemNum-1||(itemList.length%lineItemNum!=0&&index==itemList.length-1))&&parseInt(Listindex/lineItemNum)==parseInt(index/lineItemNum)&&showJobDetail" class="jobDetailContainer">
+				<div class="maxwidth">
+					<div class="tac joinUs_title PingFangSCMedium">热招岗位</div>
+					<div v-if="indexList==navIndex" ref="joinUs_post_lists" class="joinUs_post_lists flex-column flex-between " v-for="(itemList,indexList) in supplierListData">
+						<template v-for="(item,index) in itemList">
 							<div>
-								<div class="f18 joinUs_post_popUpTitle PingFangSCMedium"><span></span>岗位职责</div>
-								<div class="f16 joinUs_post_popUpText" v-html="detailItem.responsibilities"></div>
-								<div class="f18 joinUs_post_popUpTitle PingFangSCMedium"><span></span>任职要求</div>
-								<div class="f16 joinUs_post_popUpText" v-html="detailItem.requirements"></div>
-								<a class="f16 colorbai homeHead_appleStytle joinUs_post_popUpBut" href="#">投递简历</a>
+								<div class="joinUs_post_list" :class="Listindex==index?'joinUs_post_listblue':''" @click="changeindex(index,item)">
+									<div class="joinUs_post_listTitle f20 PingFangSCMedium flex-column flex-between flex-middle">
+										<div>{{item.job}}</div>
+										<div class="f14 colorbai joinUs_post_listlabel">HOT</div>
+									</div>
+									<div class="f14 joinUs_post_address flex-column flex-middle"><span class="joinUs_post_icon"><img src="images/about/joinUs7.png" class="imgsize" alt="地址"></span>{{item.address}}</div>
+									<div class="f14 joinUs_post_department flex-column flex-middle"><span class="joinUs_post_icon"><img src="images/about/joinUs6.png" class="imgsize" alt="部门"></span>{{item.dept}}</div>
+								</div>
 							</div>
-						</div>
+
+							<!-- <div v-for="(numItem,numIndex) in (lineItemNum-itemList.length%lineItemNum)" v-if="itemList.length%lineItemNum!=0&&index==itemList.length-1" class="joinUs_post_list_last">
+							</div> -->
+							<div v-if="(index%lineItemNum==lineItemNum-1||(itemList.length%lineItemNum!=0&&index==itemList.length-1))&&parseInt(Listindex/lineItemNum)==parseInt(index/lineItemNum)&&showJobDetail" class="jobDetailContainer">
+								<div>
+									<div class="f18 joinUs_post_popUpTitle PingFangSCMedium"><span></span>岗位职责</div>
+									<div class="f16 joinUs_post_popUpText" v-html="detailItem.responsibilities"></div>
+									<div class="f18 joinUs_post_popUpTitle PingFangSCMedium"><span></span>任职要求</div>
+									<div class="f16 joinUs_post_popUpText" v-html="detailItem.requirements"></div>
+									<a class="f16 colorbai homeHead_appleStytle joinUs_post_popUpBut" href="#">投递简历</a>
+								</div>
+							</div>
 
 
-					</template>
-				</div>
-
-				<div class="home_Case_tabs flex-column flex-center" style="padding-top: 45px;">
-					<div v-for="(item,index) in supplierListData" :class="index==0?'home_Case_tab':''" @click="changeCaseTab(index)"></div>
+						</template>
+					</div>
+					<div class="home_Case_tabs flex-column flex-center" style="padding-top: 45px;">
+						<div v-for="(item,index) in supplierListData" :class="index==0?'home_Case_tab':''" @click="changeCaseTab(index)"></div>
+					</div>
 				</div>
 			</div>
 			<div class="padBg hrBg" >
@@ -611,12 +612,12 @@
 				supplierListData:[],
 				showmodel:false,
 				showVidio:false,
-				Listindex:0,
+				Listindex:-1,
 				blogrollList:[],
 				navIndex: 0,
 				detailItem:{},
 				lineItemNum:3,
-				showJobDetail:true,
+				showJobDetail:false,
 			}
 		},
 		watch: {
@@ -632,7 +633,7 @@
 			onResize(){
 				if (this.$refs.joinUs_post_lists){
 					var width=$(this.$refs.joinUs_post_lists)[0].clientWidth;
-					var finalNum=parseInt(width/414)
+					var finalNum=parseInt(width/384)
 					console.log(finalNum)
 					this.lineItemNum=finalNum;
 				}
