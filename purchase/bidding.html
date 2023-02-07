@@ -444,11 +444,11 @@
 				<div class=""><img :src="supplierImgData[0]?supplierImgData[0].image:''" class="imgsize" :alt="supplierImgData[0]?supplierImgData[0].bigTitle:''"></div>
 			</div>
 			<div class="padBg bggray">
-				<div class="PingFangSCMedium tac home_title">产品价值</div>
+				<div class="PingFangSCMedium tac home_title" style="margin-bottom: 0px;">产品价值</div>
 				<div v-for="(item,index) in supplierListData">
 					<div class="flex-column flex-center flex-middle" v-if="index%2==0">
-						<div class="purchase_child_navList_left_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
-						<div class="purchase_child_navList_right_text">
+						<div class="purchase_bidding_navList_left_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
+						<div class="purchase_bidding_navList_right_text">
 							<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
 							<div class="purchase_navList_rightText f16" v-html="item.intro"></div>
 							<div class="f16 colorblue home_Enabling_text" v-for="items in item.productChildList">{{items.intro}}</div>
@@ -456,13 +456,13 @@
 						</div>
 					</div>
 					<div class="flex-column flex-center flex-middle bgbai br12" v-else>
-						<div class="purchase_child_navList_left_text">
+						<div class="purchase_bidding_navList_left_text">
 							<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
 							<div class="purchase_navList_rightText f16" v-html="item.intro"></div>
 							<div class="f16 colorblue home_Enabling_text" v-for="items in item.productChildList">{{items.intro}}</div>
 							<div class="tac colorbai homeHead_appleStytle aPaaS_head_but f14">立即咨询</div>
 						</div>
-						<div class="purchase_child_navList_right_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
+						<div class="purchase_bidding_navList_right_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
 					</div>
 				</div>
 			</div>

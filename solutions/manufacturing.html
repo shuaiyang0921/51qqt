@@ -434,15 +434,17 @@
 			</div>
 			<div class="manufacturing_bg">
 				<div v-for="(item,index) in supplierListData">
-					<div class="flex-column flex-middle" v-if="index%2==0">
-						<div class="manufacturing_programmeList_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
+					<div class="flex-column flex-middle" v-if="index%2==0" style="max-width: 1200px;">
+						<div class="manufacturing_programmeList_img">
+							<img :src="item.image" class="imgsize" :alt="item.title">
+						</div>
 						<div class="manufacturing_programmeList_right">
 							<div class="PingFangSCMedium manufacturing_programmeList_rightTitle color222" v-html="item.title"></div>
 							<div class="f16 manufacturing_programmeList_rightText" v-html="item.intro"></div>
 							<div class="f14 homeHead_registertil tac homeHead_appleStytle fontWeightNormal" @click="showregistermodal">立即咨询</div>
 						</div>
 					</div>
-					<div class="manufacturing_programmeList flex-column flex-middle" v-else>
+					<div class="manufacturing_programmeList flex-column flex-middle" style="max-width: 1200px;" v-else>
 						<div class="manufacturing_programmeList_left bggray">
 							<div class="PingFangSCMedium manufacturing_programmeList_rightTitle color222" v-html="item.title"></div>
 							<div class="f16 manufacturing_programmeList_leftText" v-html="item.intro"></div>
