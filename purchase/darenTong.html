@@ -25,8 +25,8 @@
 	</head>
 	<body>
 		<div id="app">
-			<div class="bghead header">
-				<div class="flex-column flex-between homeHead f16">
+			<div class="bgbai header">
+				<div class="flex-column flex-between homeHead f16 maxwidth">
 					<div class="flex-column flex-middle">
 						<a class="logosize" href="../index.html"><img src="../img/logo.png" class="imgsize" alt="企企通"></a>
 						<div class="flex-column flex-middle homenavs">
@@ -34,7 +34,7 @@
 								<li class="hobverPopUp">
 									<div class="hobverPopUp_text"><span>产品</span><span class="iconxia"></span></div>
 									<div class="homeHead_popUpStyle bghead">
-										<div class="maxwidth ">
+										<div class="maxwidth">
 											<div class="flex-column xian_head">
 												<div class="homeHead_productpopUp_saas">
 													<div class="f18 homeHead_appleStytle homeHead_productpopUp_left">企业SasS云</div>
@@ -78,7 +78,7 @@
 														<a href="../paas/mkt.html?navNum=3">客户管理</a>
 													</div>
 													<a class="homeHead_productpopUp_rightText" href="../purchase/darenTong.html">
-														<div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon4 colorblue">达人通<span class="iconright"></span></div>
+														<div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon4">达人通<span class="iconright colorblue"></span></div>
 														<div class="f12 homeHead_productpopUp_subheading">为直播电商量身打造</div>
 													</a>
 												</div>
@@ -413,21 +413,23 @@
 					</div>
 				</div>
 			</div>
-			<div class="heiheader"></div>
+			<!-- <div class="heiheader"></div> -->
 			<div class="paas_topBg">
-				<div class="mkt_adver flex-column flex-middle flex-between colorbai" :style="{backgroundImage: 'url('+(BannerImg[0]?BannerImg[0].image:'')+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover'}">
-					<div class="paas_adver_left">
-						<div class="manufacturing_adver_title homeHead_appleStytle" v-html="BannerImg[0]?BannerImg[0].title:''"></div>
-						<div class="f16 PingFangSCMedium paas_adver_text colorbai fontWeightNormal" v-html="BannerImg[0]?BannerImg[0].intro:''"></div>
-						<div class="flex-column flex-middle f18 mkt_adver_buts homeHead_appleStytle">
-							<div v-for="(item,index) in tags">{{item}}</div>
+				<div :style="{backgroundImage: 'url('+(BannerImg[0]?BannerImg[0].image:'')+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover'}">
+					<div class="mkt_adver flex-column flex-middle flex-between colorbai maxwidth" >
+						<div class="paas_adver_left ">
+							<div class="manufacturing_adver_title homeHead_appleStytle" v-html="BannerImg[0]?BannerImg[0].title:''"></div>
+							<div class="f16 PingFangSCMedium paas_adver_text colorbai fontWeightNormal" v-html="BannerImg[0]?BannerImg[0].intro:''"></div>
+							<div class="flex-column flex-middle f18 mkt_adver_buts homeHead_appleStytle">
+								<div v-for="(item,index) in tags">{{item}}</div>
+							</div>
+							<div class="f14 homeHead_registertil tac homeHead_appleStytle mkt_registertil" @click="showregistermodal">注册体验</div>
 						</div>
-						<div class="f14 homeHead_registertil tac homeHead_appleStytle mkt_registertil" @click="showregistermodal">注册体验</div>
+						<div class="paas_topImg"><img :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize" alt="达人通"></div>
 					</div>
-					<div class="paas_topImg"><img :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize" alt="达人通"></div>
 				</div>
 			</div>
-			<div class="padBg">
+			<div class="padBg maxwidth">
 				<div class="PingFangSCMedium tac home_title">直播电商达人管理现状</div>
 				<div class="flex-column flex-around">
 					<div class="flex-column manufacturing_observation_list" v-for="item in purchaseMallData">
@@ -463,25 +465,27 @@
 				</div>
 			</div>
 			<div class="padBg bgblue">
-				<div class="PingFangSCMedium tac home_title colorbai">{{purchaseImgData[0]?purchaseImgData[0].bigTitle:''}}</div>
-				<div class="flex-column flex-center">
-                    <div class="flex-column darentong_change_leftwid" >
-                        <div class="darentong_change_left flex-column flex-top" v-for="(item,index) in purchaseImgData" v-if="index<=3">
-                            <div class="darentong_change_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
-                            <div style="width: calc(100% - 72px);">
-                                <div class="darentong_change_title f22 PingFangSCMedium">{{item.title}}</div>
-                                <div class="f14 darentong_change_lefttext" v-html="item.intro"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex-column flex-top darentong_change_right">
-                        <div class="darentong_change_img"><img :src="purchaseImgData[4]?purchaseImgData[4].icon:''" class="imgsize" :alt="purchaseImgData[4]?purchaseImgData[4].title:''"></div>
-                        <div>
-                            <div class="darentong_change_title f22 PingFangSCMedium">{{purchaseImgData[4]?purchaseImgData[4].title:''}}</div>
-                            <div class="f14 darentong_change_text" v-html="purchaseImgData[4]?purchaseImgData[4].intro:''"></div>
-                        </div>
-                    </div>
-                </div>
+				<div class="maxwidth">
+					<div class="PingFangSCMedium tac home_title colorbai">{{purchaseImgData[0]?purchaseImgData[0].bigTitle:''}}</div>
+					<div class="flex-column flex-center">
+						<div class="flex-column darentong_change_leftwid" >
+							<div class="darentong_change_left flex-column flex-top" v-for="(item,index) in purchaseImgData" v-if="index<=3">
+								<div class="darentong_change_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
+								<div style="width: calc(100% - 72px);">
+									<div class="darentong_change_title f22 PingFangSCMedium">{{item.title}}</div>
+									<div class="f14 darentong_change_lefttext" v-html="item.intro"></div>
+								</div>
+							</div>
+						</div>
+						<div class="flex-column flex-top darentong_change_right">
+							<div class="darentong_change_img"><img :src="purchaseImgData[4]?purchaseImgData[4].icon:''" class="imgsize" :alt="purchaseImgData[4]?purchaseImgData[4].title:''"></div>
+							<div>
+								<div class="darentong_change_title f22 PingFangSCMedium">{{purchaseImgData[4]?purchaseImgData[4].title:''}}</div>
+								<div class="f14 darentong_change_text" v-html="purchaseImgData[4]?purchaseImgData[4].intro:''"></div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<iframe src="../iframe/companys.html" style="width: 100%;height: 866px;" frameborder="0" scrolling="no"></iframe>
 			<div class="home_register flex-column flex-center flex-middle colorbai">
