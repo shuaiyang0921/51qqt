@@ -221,3 +221,6 @@
 .videoPageWidth{
     width: 100%;
 }
+.cursorDefault{
+    cursor: default;
+}
