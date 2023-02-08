@@ -10,7 +10,7 @@ function getQueryVariable(variable)
 }
 $(document).ready(function(){
     var onOff = true;
-    // var Onnav = true;
+    var Onnav = true;
     $('.menu_button').click(function(){
         event.stopPropagation();
         $(this).toggleClass("cross");
@@ -23,30 +23,30 @@ $(document).ready(function(){
         }
         onOff = !onOff;
     });
-    // $('.homephoneHead_nav').click(function(){
-    //     event.stopPropagation();
-    //     index=$(this).index();
-    //     if(Onnav){
-    //         $(this).siblings(".homephoneHead_navchild").show();
-    //         $(this).find('.PingFangSCMedium').css("color","#005CEF");
-    //         $(this).find('.homephoneHead_navicon').css("transform","translateY(12px) rotate(180deg)");
-    //     }else{
-    //         $(this).siblings(".homephoneHead_navchild").hide();
-    //         $(this).find('.PingFangSCMedium').css("color","#222222");
-    //         $(this).find('.homephoneHead_navicon').css("transform","none");
-    //     }
-    //     Onnav = !Onnav;
-    // });
-    // $('.homephoneHead_navchild_Subhead').click(function(){
-    //     event.stopPropagation();
-    //     $('.homephoneHead_navchild_Subhead').css("color","#222222")
-    //     $('.homephoneHead_navchild_Subhead').find('.homephoneHead_navicon').css("transform","none")
-    //     index=$(this).index();
-    //     $(this).css("color","#005CEF")
-    //     $(this).siblings(".shownavchild_text").show();
-    //     $(this).parent().siblings().find(".shownavchild_text").hide();
-    //     $(this).find('.homephoneHead_navicon').css("transform","translateY(8px) rotate(180deg)");
-    // });
+    $('.homephoneHead_nav').click(function(){
+        event.stopPropagation();
+        index=$(this).index();
+        if(Onnav){
+            $(this).siblings(".homephoneHead_navchild").show();
+            $(this).find('.PingFangSCMedium').css("color","#005CEF");
+            $(this).find('.homephoneHead_navicon').css("transform","translateY(12px) rotate(180deg)");
+        }else{
+            $(this).siblings(".homephoneHead_navchild").hide();
+            $(this).find('.PingFangSCMedium').css("color","#222222");
+            $(this).find('.homephoneHead_navicon').css("transform","none");
+        }
+        Onnav = !Onnav;
+    });
+    $('.homephoneHead_navchild_Subhead').click(function(){
+        event.stopPropagation();
+        $('.homephoneHead_navchild_Subhead').css("color","#222222")
+        $('.homephoneHead_navchild_Subhead').find('.homephoneHead_navicon').css("transform","none")
+        index=$(this).index();
+        $(this).css("color","#005CEF")
+        $(this).siblings(".shownavchild_text").show();
+        $(this).parent().siblings().find(".shownavchild_text").hide();
+        $(this).find('.homephoneHead_navicon').css("transform","translateY(8px) rotate(180deg)");
+    });
     
     // $('.home_Solution_tabs>div').click(function(){
     //     event.stopPropagation();
