@@ -654,7 +654,7 @@
 				var _getBannerData = p => get('/banner/noToken/queryByModule', p);
 				_getBannerData({module: this.pageName}).then(res => {
 					that.banner=res.result[0];
-					that.banner.backgroundImage="background: url("+that.banner.image+") no-repeat center center;background-size: cover;padding: 60px 0 72px 120px;"
+					that.banner.backgroundImage="background: url("+that.banner.image+") no-repeat center center;background-size: cover;padding: 60px 60px 72px 60px;"
 					console.log(res.result[0])
 					console.log("==========")
 				}).catch(err => {

@@ -453,7 +453,7 @@
 				<div class=""><img :src="supplierImgData[0]?supplierImgData[0].image:''" class="imgsize" :alt="supplierImgData[0]?supplierImgData[0].bigTitle:''"></div>
 			</div>
 			<div class="padBg bggray">
-				<div class="PingFangSCMedium tac home_title">核心能力</div>
+				<div class="PingFangSCMedium tac home_title" style="margin-bottom: 0">核心能力</div>
 				<div v-for="(item,index) in supplierListData">
 					<div class="flex-column flex-center flex-middle" v-if="index%2==0">
 						<div class="purchase_child_navList_left_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
