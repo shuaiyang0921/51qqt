@@ -452,8 +452,8 @@
 								</div>
 							</div>
 
-							<!-- <div v-for="(numItem,numIndex) in (lineItemNum-itemList.length%lineItemNum)" v-if="itemList.length%lineItemNum!=0&&index==itemList.length-1" class="joinUs_post_list_last">
-							</div> -->
+							 <div v-for="(numItem,numIndex) in (lineItemNum-itemList.length%lineItemNum)" v-if="itemList.length%lineItemNum!=0&&index==itemList.length-1" class="joinUs_post_list_last">
+							</div>
 							<div v-if="(index%lineItemNum==lineItemNum-1||(itemList.length%lineItemNum!=0&&index==itemList.length-1))&&parseInt(Listindex/lineItemNum)==parseInt(index/lineItemNum)&&showJobDetail" class="jobDetailContainer">
 								<div>
 									<div class="f18 joinUs_post_popUpTitle PingFangSCMedium"><span></span>岗位职责</div>
@@ -651,7 +651,7 @@
 			onResize(){
 				if (this.$refs.joinUs_post_lists){
 					var width=$(this.$refs.joinUs_post_lists)[0].clientWidth;
-					var finalNum=parseInt(width/384)
+					var finalNum=parseInt(width/386)
 					console.log(finalNum)
 					this.lineItemNum=finalNum;
 				}
