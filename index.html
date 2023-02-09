@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="./css/index.css" />
 		<!-- 首页样式 -->
 		<link rel="stylesheet" href="./css/homestyle.css" />
+		<link rel="stylesheet" href="./css/caseStudy.css" />
 		<script src="./js/jquery.min.js"></script>
 		<script src="./js/load.js"></script>
 		<script type="text/javascript">
@@ -648,7 +649,7 @@
 							<div class="flex-column home_information_bot">
 								<div class="home_information_Img"><img src="./img/home108.png" class="imgsize" alt="企业资讯"></div>
 								<div class="f14 home_information_text">
-									<div v-for="item in information1">{{item.title}}</div>
+									<div v-for="item in information1" @click="turnInformationDetail(item)">{{item.title}}</div>
 								</div>
 							</div>
 						</div>
@@ -660,7 +661,7 @@
 							<div class="flex-column home_information_bot">
 								<div class="home_information_Img"><img src="./img/home109.png" class="imgsize" alt="市场活动"></div>
 								<div class="f14 home_information_text">
-									<div v-for="item in information2">{{item.title}}</div>
+									<div v-for="item in information2" @click="turnInformationDetail(item)">{{item.title}}</div>
 								</div>
 							</div>
 						</div>
@@ -672,7 +673,7 @@
 							<div class="flex-column home_information_bot">
 								<div class="home_information_Img"><img src="./img/home110.png" class="imgsize" alt="干货分享"></div>
 								<div class="f14 home_information_text">
-									<div v-for="item in information3">{{item.title}}</div>
+									<div v-for="item in information3" @click="turnInformationDetail(item)">{{item.title}}</div>
 								</div>
 							</div>
 						</div>
@@ -684,7 +685,7 @@
 							<div class="flex-column home_information_bot">
 								<div class="home_information_Img"><img src="./img/home111.png" class="imgsize" alt="微视频"></div>
 								<div class="f14 home_information_text">
-									<div v-for="(item,index) in information4" v-if="index<=2">{{item.title}}</div>
+									<div v-for="(item,index) in information4" v-if="index<=2" @click="turnInformationDetail(item)">{{item.title}}</div>
 								</div>
 							</div>
 						</div>
@@ -843,6 +844,35 @@
 					<div class="f16 registe_form_submit PingFangSCMedium colorbai" @click="submitfrom()">立即提交</div>
 				</div>
 			</div>
+
+			<div class="register_modal flex-column flex-middle" v-if="showVidio">
+				<div class="Vidio_padd_wei flex-column flex-middle flex-center porelative">
+					<div class="videoContainer">
+						<div class="colorbai videoTitleText">{{vidiotitle}}</div>
+						<div class="colorbai videoDescriptionText">{{videoDescription}}</div>
+						<video id="notBanner"
+								controls
+								preload="auto"
+								width="878"
+								height="520"
+								:src="vidiourl"
+								:poster="imageUrl"
+								autoplay
+								style="margin-bottom: 111px;margin-top: 16px;"
+						>
+						</video>
+					</div>
+					<div class="videoListContainer" ref="videoListContainer" @scroll="scollerFunc($event)">
+						<div v-for="(item,index) in videoList" @click="showvidiomodal(item)">
+							<img width="282" :src="item.image"/>
+							<div class="colorbai videoListTitleText">{{item.title}}</div>
+							<div class="colorbai videoListDescriptionText">{{item.description}}</div>
+						</div>
+					</div>
+					<div class="Vidio_cancel" @click="hidevidiomodal"><img src="./img/home114.png" class="imgsize" alt=""></div>
+				</div>
+
+			</div>
 		</div>
 	</body>
 </html>
@@ -882,7 +912,16 @@
 				blogrollList:[],
 				caseInterval:[],
 				caseTabClass1:"home_Solution_left_sel",
-				caseTabClass2:"home_Solution_right_unSel"
+				caseTabClass2:"home_Solution_right_unSel",
+
+				showVidio:false,
+				vidiotitle:'',
+				videoDescription:'',
+				vidiourl:'',
+				imageUrl:'',
+				videoCurrentPage:1,
+				videoTotalPage:0,
+				videoList:[]
 			}
 		},
 		watch: {
@@ -1071,7 +1110,10 @@
 				var videos=document.getElementsByTagName('video');
 				for (var i=0;i<videos.length;i++)
 				{
-					videos[i].pause()
+					var id=$(videos[i]).prop("id");
+					if (id!="notBanner"){
+						videos[i].pause()
+					}
 				}
 			},
 			setBannerInterval(){
@@ -1096,7 +1138,57 @@
 					$('.home_Case_tabs>div').eq(this.changeCaseNum).addClass('home_Case_tab').siblings().removeClass('home_Case_tab')
 					$('.home_Case_info').eq(this.changeCaseNum).addClass('home_Case_info_show').siblings().removeClass('home_Case_info_show')
 				},4000);
-			}
+			},
+			turnInformationDetail(item){
+				console.log(item)
+				if (item.type==4){
+					this.showvidiomodal(item)
+				}else {
+					window.location.href="newsInfo.html?id="+item.id
+				}
+			},
+			scollerFunc(el) {
+				let dom = el.target;
+				const scrollDistance = dom.scrollHeight - dom.scrollTop - dom.clientHeight;
+				if (scrollDistance <= 1) {//等于0证明已经到底，可以请求接口
+					console.log("触底了")
+					if (this.videoCurrentPage<this.videoTotalPage){
+						this.videoCurrentPage=this.videoCurrentPage+1
+						this.getVideoData()
+					}else {
+						// alert("没有更多数据了")
+					}
+				}
+			},
+			showvidiomodal(item){
+				this.videoDescription=item.description
+				this.vidiotitle = item.title
+				this.vidiourl = item.video
+				this.imageUrl=item.image
+				this.showVidio = true
+				this.videoList=[]
+				this.getVideoData()
+			},
+			hidevidiomodal(){
+				this.showVidio = false
+			},
+			getVideoData(){
+				that = this
+				var _getVideoData = p => get('/information/noToken/frontList', p);
+				_getVideoData({
+					type:4,
+					pageNo:this.videoCurrentPage,
+					pageSize:50
+				}).then(res => {
+					res.result.records.forEach(item=>{
+						that.videoList.push(item)
+					})
+					console.log(that.videoList)
+					that.videoTotalPage=res.result.pages
+				}).catch(err => {
+					console.log(err,'_getVideoData获取数据异常');
+				})
+			},
 		},
 		computed:{
 			imgwidth(){
