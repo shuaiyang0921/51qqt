@@ -426,7 +426,7 @@
 				</div>
 			</div>
 			<!-- <div class="heiheader"></div> -->
-			<div class="paas_topBg">
+			<div class="paas_topBg" style="position: relative;">
 				<div :style="{backgroundImage: 'url('+(BannerImg[0]?BannerImg[0].image:'')+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover'}">
 					<div class="mkt_adver flex-column flex-middle flex-between colorbai maxwidth" >
 						<div class="paas_adver_left ">
@@ -440,9 +440,9 @@
 						<div class="paas_topImg"><img :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize" alt="达人通"></div>
 					</div>
 				</div>
+				<div class="PingFangSCMedium tac home_title" style="margin-bottom: 0;position: absolute;bottom: 0;width: 100%;">直播电商达人管理现状</div>
 			</div>
 			<div class="padBg maxwidth">
-				<div class="PingFangSCMedium tac home_title">直播电商达人管理现状</div>
 				<div class="flex-column flex-around">
 					<div class="flex-column manufacturing_observation_list" v-for="item in purchaseMallData">
 						<div class="manufacturing_observation_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
