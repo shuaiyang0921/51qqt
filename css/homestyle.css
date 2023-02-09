@@ -1,7 +1,7 @@
 .maxwidth{max-width: 1200px;margin: 0 auto;}
 .homeHead_adver{width: 100%;height: 600px;overflow: hidden;position: relative;}
 .homeHead_adverstyle{height: 600px;flex-wrap: nowrap;left: 0%;transition:1s;position: relative;}
-.homeHead_adverList{background-size: cover;width: calc(100% - 120px);height: 421px;padding-top: 180px;background-repeat: no-repeat;}
+.homeHead_adverList{background-size: cover;width: calc(100% - 120px);height: 421px;padding-top: 180px;background-repeat: no-repeat;background-position: center;}
 .homeHead_adverList_video{background-size: cover;width: calc(100% - 120px);height: 421px;padding: 0 0 0 120px;background-repeat: no-repeat;}
 .homeHead_adver1_title{font-size: 56px;width: 616px;}
 .homeHead_adver1_text{font-weight: 400;color: #555555;margin: 20px 0 32px 0;width: 50%;}
