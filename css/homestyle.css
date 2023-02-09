@@ -91,6 +91,9 @@
 .home_Solution_centerImgs{width: 520px;margin-bottom: 40px;}
 .home_Solution_centerImg{width: 32px;height: 32px;margin: 0 auto;margin-bottom: 12px;}
 .home_Solution_centerbut{padding: 10px 32px;width: 56px;background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);border-radius: 4px;cursor: pointer;}
+.home_Solution_centerbut:hover{
+    background: linear-gradient(270deg, rgba(0, 142, 255, 0.8) 0%, rgba(0, 92, 239, 0.8) 100%);
+}
 .home_Case{padding: 60px 0px;background: url(../img/home42.png) no-repeat center center;background-size: cover;}
 .home_Case_info{margin-bottom: 40px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;border: 2px solid #FFFFFF;display: none;height: 340px;}
 .home_Case_info_show{display: flex;}
@@ -111,6 +114,9 @@
 
 /* .home_Case_companylist>div{width: 120px;height: 44px;padding: 14px 16px;background: #FFFFFF;box-shadow: 0px 0px 30px 0px rgba(20,22,26,0.08);border-radius: 4px;margin: 10px;}    */
 .home_Case_More{width: 96px;padding: 13px 52px;margin: 0 auto;background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);border-radius: 4px;display: block;}
+.home_Case_More:hover{
+    background: linear-gradient(270deg, rgba(0, 142, 255, 0.8) 0%, rgba(0, 92, 239, 0.8) 100%);
+}
 .scfMoreCase{margin: 50px 0}
 .home_endorsed{padding: 60px 120px;position: relative;background: url(../img/home53.png) no-repeat center center;background-size: cover;}
 .home_endorsed_title{font-size: 44px;}
@@ -126,7 +132,7 @@
 .home_information_list a img{
     transition: transform 0.1s;
 }
-.home_information_list a img:hover{
+.home_information_list a:hover img{
     transform:translateX(8px)
 }
 .home_information_bot{margin-top: 16px;}

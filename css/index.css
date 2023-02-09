@@ -158,7 +158,10 @@
 .homeHead_informationPopUp_rightText{padding: 10px 20px 10px 40px;width: 190px;cursor: pointer;height: 49px;color: #222222;}
 .homeHead_informationPopUp_rightText:hover .homeHead_productpopUp_title{color: #005CEF;}
 .homeHead_informationPopUp_rightText:hover .iconrightgary{background: no-repeat url(../img/home46.png);background-size:100%;width: 7px;height: 11px;margin-left: 15px;}
-.homeHead_playvidio{background: linear-gradient(270deg, #008EFF 0%, #005CEF 80%);border-radius: 2px;padding: 8px 22px;margin-top: 29px;cursor: pointer;}
+.homeHead_playvidio{background: linear-gradient(270deg, #008EFF 0%, #005CEF 100%);border-radius: 2px;padding: 8px 22px;margin-top: 29px;cursor: pointer;}
+.homeHead_playvidio:hover{
+    background: linear-gradient(270deg, rgba(0, 142, 255, 0.8) 0%, rgba(0, 92, 239, 0.8) 100%);
+}
 /* 关于我们弹窗 */
 .homeHead_aboutUsPopUp_padd{padding: 45px 0px;}
 .homeHead_aboutUsPopUp_Text{width: 176px;background: #F7F8FA;padding: 24px 32px;height: 72px;}
