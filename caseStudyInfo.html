@@ -455,7 +455,8 @@
 								</div>
 								<div class="f16 caseStudyInfo_rightBot_text">
 									<div v-for="(item,index) in hotList" style="position: relative;">
-										<a @mouseover="overFun(index)" @mouseout="outFun(index)" style="z-index: -100" :href="'caseStudyInfo.html?id='+item.id" v-html="item.title"></a>
+										<a v-if="!item.caseClassify.includes('5')" @mouseover="overFun(index)" @mouseout="outFun(index)" style="z-index: -100" :href="'caseStudyInfo.html?id='+item.id" v-html="item.title"></a>
+										<a v-else @mouseover="overFun(index)" @mouseout="outFun(index)" style="z-index: -100" v-html="item.title"></a>
 										<div :class="showFullTitle==index?'hot_title_show_before':''"></div>
 										<div :class="showFullTitle==index?'hot_title_show_after':''"></div>
 										<div :class="showFullTitle==index?'hot_title_show':'hot_title_show_hidden'" v-html="item.title"></div>

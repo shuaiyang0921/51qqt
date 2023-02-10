@@ -41,7 +41,7 @@
 								<div class="homeHead_appleStytle manufacturing_listleft_title" v-html="item.title"></div>
 								<div class="f16 manufacturing_listleft_text colorbai" v-html="item.intro"></div>
 								<div class="flex-column flex-middle flex-right f16 tac">
-									<div class="manufacturing_listleft_but1 PingFangSCMedium" @click="caseStudyInfo(item.id)">查看案例</div>
+									<div class="manufacturing_listleft_but1 PingFangSCMedium" @click="caseStudyInfo(item)">查看案例</div>
 									<div class="PingFangSCMediumNormal" :class="index==0?'manufacturing_listleft_but2':'manufacturing_listleft_but3'" v-for="(items,index) in item.tags.split(',')">{{items}}</div>
 								</div>
 								
@@ -107,8 +107,10 @@
 				tzMoremanu(){
 					parent.location.href = "../case-study.html"
 				},
-				caseStudyInfo(id){
-					parent.location.href="../caseStudyInfo.html?id="+id
+				caseStudyInfo(item){
+					if (!item.caseClassify.includes('5')){
+						parent.location.href="../caseStudyInfo.html?id="+item.id
+					}
 				}
 			},
 			computed:{

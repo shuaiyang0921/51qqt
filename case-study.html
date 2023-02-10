@@ -453,16 +453,29 @@
 			<div class="caseStudy_Filter">
 				<div class="maxwidth">
 					<div ref="caseStudy_FilterList_id" class="flex-column flex-between caseStudy_FilterList" v-if="ListData.length!=0" style="position: relative">
-						<a v-for="item in ListData" :href="'caseStudyInfo.html?id='+item.id">
-							<div class="caseStudy_FilterList_img"><img :src="item.image" class="imgsize"></div>
-							<div class="caseStudy_FilterList_Bot flex-column">
-								<div class="caseStudy_FilterList_BotImg tac flex-column flex-middle flex-center colorblue"><img :src="item.roundLogo" class="imgsize" :alt="item.consumerId_dictText"></div>
-								<div>
-									<div class="f20 homeHead_appleStytle caseStudy_FilterList_BotTitle">{{item.consumerId_dictText}}</div>
-									<div class="f16 caseStudy_FilterList_BotText" v-html="item.title"></div>
+						<template v-for="item in ListData" >
+							<a v-if="!item.caseClassify.includes('5')" :href="'caseStudyInfo.html?id='+item.id">
+								<div class="caseStudy_FilterList_img"><img :src="item.image" class="imgsize"></div>
+								<div class="caseStudy_FilterList_Bot flex-column">
+									<div class="caseStudy_FilterList_BotImg tac flex-column flex-middle flex-center colorblue"><img :src="item.roundLogo" class="imgsize" :alt="item.consumerId_dictText"></div>
+									<div>
+										<div class="f20 homeHead_appleStytle caseStudy_FilterList_BotTitle">{{item.consumerId_dictText}}</div>
+										<div class="f16 caseStudy_FilterList_BotText" v-html="item.title"></div>
+									</div>
 								</div>
-							</div>
-						</a>
+							</a>
+							<a v-else>
+								<div class="caseStudy_FilterList_img"><img :src="item.image" class="imgsize"></div>
+								<div class="caseStudy_FilterList_Bot flex-column">
+									<div class="caseStudy_FilterList_BotImg tac flex-column flex-middle flex-center colorblue"><img :src="item.roundLogo" class="imgsize" :alt="item.consumerId_dictText"></div>
+									<div>
+										<div class="f20 homeHead_appleStytle caseStudy_FilterList_BotTitle">{{item.consumerId_dictText}}</div>
+										<div class="f16 caseStudy_FilterList_BotText" v-html="item.title"></div>
+									</div>
+								</div>
+							</a>
+						</template>
+
 						<div v-for="(numItem,numIndex) in (lineItemNum-ListData.length%lineItemNum)" v-if="ListData.length%lineItemNum!=0" style="width: 380px;">
 						</div>
 					</div>
