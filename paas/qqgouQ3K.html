@@ -26,7 +26,7 @@
 	<body>
 		<div id="app">
 			<div class="bghead header">
-				<div class="flex-column flex-between homeHead f16">
+				<div class="flex-column flex-between homeHead f16 maxwidth">
 					<div class="flex-column flex-middle">
 						<a class="logosize" href="../index.html"><img src="../img/logo.png" class="imgsize" alt="企企通"></a>
 						<div class="flex-column flex-middle homenavs">
@@ -425,17 +425,20 @@
 					</div>
 				</div>
 			</div>
-			<div class="heiheader"></div>
-			<div class="qqgouQ3_adver flex-column flex-middle flex-between" :style="{backgroundImage: 'url('+(BannerImg[0]?BannerImg[0].image:'')+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover'}">
-				<div class="paas_adver_left">
-					<div class="manufacturing_adver_title homeHead_appleStytle" v-html="BannerImg[0]?BannerImg[0].title:''"></div>
-					<div class="f16 PingFangSCMedium paas_adver_text" v-html="BannerImg[0]?BannerImg[0].intro:''"></div>
-					<div class="flex-column flex-middle f18 paas_adver_buts homeHead_appleStytle colorgary">
-						<div v-for="(item,index) in tags">{{item}}</div>
+			<!-- <div class="heiheader"></div> -->
+			<div :style="{backgroundImage: 'url('+(BannerImg[0]?BannerImg[0].image:'')+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover',backgroundPosition:'center'}">
+				<div class="qqgouQ3_adver flex-column flex-middle flex-between maxwidth" >
+					<div class="paas_adver_left">
+						<div class="manufacturing_adver_title homeHead_appleStytle" v-html="BannerImg[0]?BannerImg[0].title:''"></div>
+						<div class="f16 PingFangSCMedium paas_adver_text" v-html="BannerImg[0]?BannerImg[0].intro:''"></div>
+						<div class="flex-column flex-middle f18 paas_adver_buts homeHead_appleStytle colorgary">
+							<div v-for="(item,index) in tags">{{item}}</div>
+						</div>
+						<div class="f14 homeHead_registertil tac homeHead_appleStytle" @click="showregistermodal">注册体验</div>
 					</div>
-					<div class="f14 homeHead_registertil tac homeHead_appleStytle" @click="showregistermodal">注册体验</div>
 				</div>
 			</div>
+			
 			<div class="padBg bggray">
 				<div class="PingFangSCMedium tac home_title">企业采购的痛点</div>
 				<div class="flex-column flex-around">

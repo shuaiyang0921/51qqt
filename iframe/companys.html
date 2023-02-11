@@ -83,9 +83,9 @@
 						var iframes=$(window.parent.document).find("iframe")
 						for (var i=0;i<iframes.length;i++){
 							if ($(iframes[i]).attr("src").includes("companys.html")){
-								var height=750
+								var height=672
 								if (that.showCase){
-									height=866
+									height=818
 								}
 								var iframeHeight=(height-(6-that.caseCompanylist.length)*92)+"px;"
 								$(iframes[i]).attr("style","width: 100%;height:"+iframeHeight)

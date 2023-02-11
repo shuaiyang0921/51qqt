@@ -49,8 +49,8 @@
 													<div class="homeHead_productpopUp_rightText">
 														<div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon2 colorblue"><a href="./paas/mall.html">商城云</a><span class="iconright"></span></div>
 														<div class="f12 homeHead_productpopUp_subheading">为企业打造一站式交易平台</div>
-														<a href="./paas/qqgouQ3.html">内采商城Q3</a>
-														<a href="./paas/qqgouQ3K.html">内采商城Q3K</a>
+														<a href="./paas/qqgouQ3.html">企企通商城旗舰版</a>
+														<a href="./paas/qqgouQ3K.html">企企通商城标准版</a>
 														<a href="./paas/b2b.html">B2B商城</a>
 														<a href="./paas/juyuanchi.html">聚源池</a>
 													</div>
@@ -308,8 +308,8 @@
 											<div class="homephoneHead_navicon"><img src="./img/home44.png" class="imgsize" alt="企企通图标"></div>
 										</div>
 										<div class="shownavchild_text">
-											<a class="homephoneHead_navchild_text" href="./paas/qqgouQ3.html">内采商城Q3</a>
-											<a class="homephoneHead_navchild_text" href="./paas/qqgouQ3K.html">内采商城Q3K</a>
+											<a class="homephoneHead_navchild_text" href="./paas/qqgouQ3.html">企企通商城旗舰版</a>
+											<a class="homephoneHead_navchild_text" href="./paas/qqgouQ3K.html">企企通商城标准版</a>
 											<a class="homephoneHead_navchild_text" href="./paas/b2b.html">B2B商城</a>
 											<a class="homephoneHead_navchild_text" href="./paas/juyuanchi.html">聚源池</a>
 										</div>
@@ -419,14 +419,12 @@
 					</div>
 				</div>
 			</div>
-			<!-- <div class="heiheader"></div> -->
 			<div class="homeHead_adver">
 				<div class="homeHead_adverstyle flex-column" :style="{width: imgwidth}">
 					<div @click="jumpLink(item.showButton,item.link)" :class="item.video?'homeHead_adverList_video':'homeHead_adverList'" v-for="item in BanerImg" :style="{backgroundImage: 'url('+ item.image+ ')',position:'relative','cursor':(item.showButton==1?'':'pointer')}">
 						<div style="max-width: 1200px;margin: 0 auto;">
 							<template v-if="!item.video">
 								<div class="homeHead_adver1_title homeHead_appleStytle" v-if="item.title" v-html="item.title"></div>
-	<!--							<div class="homeHead_adver1_title homeHead_appleStytle" v-if="item.subhead">{{item.subhead}}</div>-->
 								<div class="f20 homeHead_adver1_text" v-if="item.intro" v-html="item.intro"></div>
 								<a v-if="item.showButton==1" class="f14 homeHead_registertil tac homeHead_appleStytle" style="position: absolute;bottom: 95px;" @click="showregistermodal(item.link)">{{item.buttonText?item.buttonText:'注册体验'}}</a>
 							</template>
@@ -913,7 +911,6 @@
 				caseInterval:[],
 				caseTabClass1:"home_Solution_left_sel",
 				caseTabClass2:"home_Solution_right_unSel",
-
 				showVidio:false,
 				vidiotitle:'',
 				videoDescription:'',
@@ -929,6 +926,7 @@
 		created(){
 			getHost('els')
 			this.getdata()
+			console.log(window.location)
 		},
 		mounted(){
 		
@@ -1196,6 +1194,12 @@
 					return '600%'
 				}
 				return (this.BanerImg.length * 100) +'%'
+			},
+			getbaseUrl(url, base) {
+				if (!base) {
+					base = location.protocol + location.host;
+				}
+				return new URL(url, base).href;
 			}
 		},
 	})
