@@ -12,7 +12,6 @@ function getQueryVariable(variable)
 const imgs = document.getElementsByTagName('img');
 function lazyLoad(imgs) {
     // 视口的高度；
-    console.log(document.documentElement.scrollTop)
     const clientH = document.documentElement.clientHeight;
     // 滚动的距离，这里的逻辑判断是为了做兼容性处理；
     const clientT = document.documentElement.scrollTop;
@@ -24,7 +23,6 @@ function lazyLoad(imgs) {
             imgs[i].src = imgs[i].dataset.src;
         }
     }
-    console.log('aaaaaaa')
 };
 // 一开始能够加载显示在视口中的图片；
 lazyLoad(imgs);

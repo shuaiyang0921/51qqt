@@ -7,7 +7,7 @@ axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';
 
 var HostAddress = {}
 function getHost(hostAddressSign) {
-	console.log(window.location.href)
+
 	if(window.location.href.indexOf('file:')>-1){
 		switch(hostAddressSign){
 			case 'els': {
