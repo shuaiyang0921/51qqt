@@ -1,12 +1,12 @@
 .paas_topBg{background: linear-gradient(180deg, #E6EBF5 0%, #FFFFFF 100%);}
 .paas_adver{background: url(../images/paas/paas_bg.png) no-repeat center center;background-size: cover;padding: 60px 120px;}
 .mkt_adver{background: url(../images/paas/mkt_bg.png) no-repeat center center;background-size: cover;padding: 165px 0px 132px 0px;}
-.qiliantong_adver{background: url(../images/paas/bg_qilian.png) no-repeat center center;background-size: cover;padding: 60px 10%;}
-.qqgouQ3K_adver{background: url(../images/mall/bgQ3k.png) no-repeat center center;background-size: cover;padding: 60px 10%;}
-.qqgouQ3_adver{background: url(../images/mall/bgQ3.png) no-repeat center center;background-size: cover;padding: 60px 10%;}
-.b2b_adver{background: url(../images/mall/bgB2B.png) no-repeat center center;background-size: cover;padding: 60px 10%;}
-.juyuanchi_adver{background: url(../images/mall/bgJyc.png) no-repeat center center;background-size: cover;padding: 60px 10%;}
-.supplier_adver{background: url(../images/purchase/bgpurchaes.png) no-repeat center center;background-size: cover;padding: 60px 10%;}
+.qiliantong_adver{background: url(../images/paas/bg_qilian.png) no-repeat center center;background-size: cover;padding: 60px 10%;padding-top: 132px;}
+.qqgouQ3K_adver{background: url(../images/mall/bgQ3k.png) no-repeat center center;background-size: cover;padding: 60px 10%;padding-top: 132px;}
+.qqgouQ3_adver{background: url(../images/mall/bgQ3.png) no-repeat center center;background-size: cover;padding: 60px 10%;padding-top: 132px;}
+.b2b_adver{background: url(../images/mall/bgB2B.png) no-repeat center center;background-size: cover;padding: 60px 10%;padding-top: 132px;}
+.juyuanchi_adver{background: url(../images/mall/bgJyc.png) no-repeat center center;background-size: cover;padding: 60px 10%;padding-top: 132px;}
+.supplier_adver{background: url(../images/purchase/bgpurchaes.png) no-repeat center center;background-size: cover;padding: 60px 10%;padding-top: 132px;}
 .paas_topImg{width: 490px;height: 370px;padding: 10px;background: #FFFFFF;box-shadow: 0px 2px 20px 0px rgba(142,168,220,0.2);border-radius: 12px;margin-left: 66px;}
 .adver_title{font-size: 48px;line-height: 67px;}
 .qilian_topImg{width: 360px;height: 350px;margin-left: 136px;}
@@ -71,7 +71,7 @@
 .scf_padachievement_listright{width: calc(100% - 648px);padding: 60px;}
 .scf_padachievement_listLable{padding: 10px 42px;background: rgba(255,118,26,0.1);border-radius: 16px 0px 16px 0px;border: 1px solid #FF761A;width: 96px;height: 33px;color: #FF761A;line-height: 33px;margin-bottom: 40px;}
 .scf_padachievement_listText{color: #555555;line-height: 32px;}
-.qiliantong_whyList{background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;border: 2px solid #FFFFFF;padding: 32px 32px 32px 32px;margin: 14px;}
+.qiliantong_whyList{background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;border: 2px solid #FFFFFF;padding: 32px 32px 32px 32px;margin: 12px 0;}
 .qiliantong_whyList:hover{box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.2);transition: .3s;transform: translateY(-10px);}
 .qiliantong_whyList_img{width: 56px;height: 56px;}
 .qiliantong_whyList_title{line-height: 30px;margin-bottom: 16px;}
