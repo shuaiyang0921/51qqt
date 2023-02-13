@@ -80,7 +80,7 @@
 .homephoneHead_navchild_text{margin: 16px 0 16px 25px;}
 /* 导航产品弹窗 */
 .homeHead_productpopUp_saas{background: linear-gradient(135deg, rgba(0,85,255,0) 0%, rgba(0,85,255,0.04) 100%);}
-.homeHead_productpopUp_left{padding: 37px 30px;width: 160px;height: 237px;background: no-repeat url(../img/home47.png);background-size:100%;}
+.homeHead_productpopUp_left{padding: 42px 30px;width: 160px;height: 237px;background: no-repeat url(../img/home47.png);background-size:100%;}
 .homeHead_productpopUp_right{padding: 17px 40px;width: calc(100% - 300px);color: #222222;}
 .homeHead_productpopUp_rightText{padding: 0 50px 0 30px;}
 .homeHead_productpopUp_rightText>div{margin-bottom: 14px;}
@@ -96,7 +96,7 @@
 .homeHead_productpopUp_titleicon3::before{content:'';background: no-repeat url(../img/home57.png);background-size:100%;width: 18px;height: 18px;position: absolute;top: 2px;left: -25px;}
 .homeHead_productpopUp_titleicon4{position: relative;}
 .homeHead_productpopUp_titleicon4::before{content:'';background: no-repeat url(../img/home58.png);background-size:100%;width: 18px;height: 18px;position: absolute;top: 2px;left: -25px;}
-.homeHead_productpopUp_subheading{color: #888888;margin-bottom: 16px!important;}
+.homeHead_productpopUp_subheading{color: #888888;margin-bottom: 25px!important;}
 .homeHead_productpopUp_paas{padding-left: 100px;background: linear-gradient(135deg, rgba(0,85,255,0) 0%, rgba(0,85,255,0.04) 100%);}
 .homeHead_productpopUp_paas_left{padding: 50px 30px;width: 160px;height: 40px;background: no-repeat url(../img/home48.png);background-size:100%;}
 .homeHead_productpopUp_paas_right{padding: 30px 40px;width: calc(100% - 300px);color: #222222;}

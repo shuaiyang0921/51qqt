@@ -12,7 +12,7 @@ function getQueryVariable(variable)
 const imgs = document.getElementsByTagName('img');
 function lazyLoad(imgs) {
     // 视口的高度；
-    const clientH = document.documentElement.clientHeight;
+     const clientH = document.documentElement.clientHeight;
     // 滚动的距离，这里的逻辑判断是为了做兼容性处理；
     const clientT = document.documentElement.scrollTop;
     for(let i = 0; i < imgs.length; i++) {
