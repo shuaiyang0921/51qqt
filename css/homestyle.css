@@ -144,7 +144,7 @@
 .home_partners{padding: 0px 120px;background: #F7F8FA;background-repeat: no-repeat;background-size: cover;}
 .home_partners_bgsty{background: url(../img/home112.png) no-repeat center center;background-size: 100% 100%;padding: 60px 0;}
 .home_partners_img{margin-bottom: 444px;}
-.home_register{padding: 37px 100px;background: url(../img/home113.png) no-repeat center center;background-size: cover;font-size: 28px;}
+.home_register{padding: 70px 50px;background: url(../img/home113.png) no-repeat center center;background-size: cover;font-size: 28px;}
 .home_register_but{padding: 13px 64px;background: #FF761A;border-radius: 4px;margin-left: 12px;width: 72px;}
 .home_register_text{margin: 0 196px 7px 0;}
 .register_modal{position: fixed;height: 100%;width: 100%;background: rgba(0,0,0,0.5);z-index: 1000;top: 0;}

@@ -951,13 +951,13 @@
 						this.setCaseInterval();
 					}
 					that.SolutionList = res.result['首页-解决方案'];
-					console.log(that.SolutionList)
-					setInterval(()=>{
-						that.Solutionindex++
-						if(that.Solutionindex==that.SolutionList[that.navstopIndex][0].length){
-							that.Solutionindex=0
-						}
-					},2000)
+					// console.log(that.SolutionList)
+					// setInterval(()=>{
+					// 	that.Solutionindex++
+					// 	if(that.Solutionindex==that.SolutionList[that.navstopIndex][0].length){
+					// 		that.Solutionindex=0
+					// 	}
+					// },2000)
 					that.SolutionList[1][1].forEach(item=>{
 						if (item.name_dictText==that.SolutionList[1][0][0]){
 							that.pageName=item.name
