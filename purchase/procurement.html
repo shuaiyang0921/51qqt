@@ -435,7 +435,7 @@
 						</div>
 						<div class="f14 homeHead_registertil tac homeHead_appleStytle" @click="showregistermodal">注册体验</div>
 					</div>
-					<div class="qilian_topImg"><img :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize"></div>
+					<div class="qilian_topImg"><img v-if="BannerImg[0]" :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize"></div>
 				</div>
 			</div>
 			<div class="padBg bggray">
@@ -455,7 +455,7 @@
 			<div class="padBg">
 				<div class="maxwidth">
 					<div class="PingFangSCMedium tac home_title">{{supplierImgData[0]?supplierImgData[0].bigTitle:''}}</div>
-					<div class=""><img :src="supplierImgData[0]?supplierImgData[0].image:''" class="imgsize" :alt="supplierImgData[0]?supplierImgData[0].bigTitle:''"></div>
+					<div class=""><img v-if="supplierImgData[0]" :src="supplierImgData[0]?supplierImgData[0].image:''" class="imgsize" :alt="supplierImgData[0]?supplierImgData[0].bigTitle:''"></div>
 				</div>
 			</div>
 			<div class="padBg bggray">

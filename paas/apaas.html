@@ -435,7 +435,7 @@
 							</div>
 							<div class="f14 homeHead_registertil tac homeHead_appleStytle" @click="showregistermodal">注册体验</div>
 						</div>
-						<div class="paas_topImg"><img :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize" alt="PaaS平台"></div>
+						<div class="paas_topImg"><img v-if="BannerImg[0]" :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize" alt="PaaS平台"></div>
 					</div>
 				</div>
 				<div class="PingFangSCMedium tac home_title maxwidth">PaaS平台，提供企业级采购业务应用和数据服务</div>
@@ -462,7 +462,7 @@
 					<div class="manufacturing_bg maxwidth" style="padding-bottom: 60px;">
 						<div class="PingFangSCMedium tac PaaS_title">{{item.bigTitle}}</div>
 						<div class="f16 tac PaaS_text">{{item.intro}}</div>
-						<div class="PaaS_img"><img :src="item.backgroundImage" class="imgsize" :alt="item.bigTitle"></div>
+						<div class="PaaS_img"><img v-if="item.backgroundImage" :src="item.backgroundImage" class="imgsize" :alt="item.bigTitle"></div>
 					</div>
 				</div>
 			</div>

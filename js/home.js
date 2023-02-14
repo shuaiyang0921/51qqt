@@ -9,7 +9,7 @@ function getQueryVariable(variable)
     return(false); 
 }
 // 图片懒加载
-const imgs = document.getElementsByTagName('img');
+var imgs = document.getElementsByTagName('img');
 function lazyLoad(imgs) {
     // 视口的高度；
      const clientH = document.documentElement.clientHeight;
