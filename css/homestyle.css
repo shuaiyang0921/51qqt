@@ -178,7 +178,8 @@
 }
 @media screen and (max-width:1170px) {
     .home_Enabling_rightimg,.home_Enabling_leftimg,.home_Caseimg{display: none;}
-    .home_Enabling_left,.home_Enabling_right,.home_Case_inforight{width: 100%;}
+    .header{opacity: 1;}
+    .home_Enabling_left,.home_Enabling_right,.home_Case_inforight{width: calc(100% - 30px);}
     .home_product_paasright{width: calc(100% - 88px);}
     .home_product_paas{width: 100%;}
     .home_Solution{padding: 60px 30px 0 30px;}
@@ -197,7 +198,7 @@
 @media screen and (max-width:946px) {
     .home_endorsed_botLists{bottom:-285px}
 }
-@media screen and (max-width:900px) {
+@media screen and (max-width:906px) {
     .home_Solution_left {width: 100%;display: flex;justify-content: space-around;align-items: center;text-align: center;flex-flow: wrap;}
     .home_Solution_left>div{height: 35px;line-height: 35px;width: 130px;padding: 30px 20px;}
     .home_Solution_rightwidth,.home_Solution_center {width: 100%;}
@@ -206,6 +207,10 @@
     .home_endorsed_list{width: 50%;}
     .home_register{padding: 5px 16px;}
     .home_register_but{margin-left: 55px;}
+    .home_register .PingFangSCMedium{width: 100%;}
+    .home_register_text{width: 100%;text-align: center;}
+    .home_register .tar{text-align: center;}
+    .homeHead_registertil{margin: 0 auto;margin-top: 10px;}
 }
 @media screen and (max-width:780px) {
     .home_information{padding: 310px 10px 30px 10px;}
@@ -236,16 +241,17 @@
     .home_endorsed_botLists{bottom: -320px;}
     .home_information{padding: 350px 10px 15px 10px;}
     .home_Case_More{padding: 5px 20px;}
-    .home_partners_img{margin-bottom: 170px;}
+    .home_partners_bgsty{padding: 40px 0;}
+    .home_partners_img{margin-bottom: 190px;}
     .home_Case_companyImg{padding: 10px;}
     .f18{font-size: 16px;}
-    .home_register{ font-size: 16px;padding: 2px 20px;}
+    .home_register{ font-size: 16px;padding: 30px 20px;}
     .home_register_text{margin: 0 75px 5px 0;}
-    .home_register_but{padding: 5px 30px;margin-left: 70px;}
+    .home_register_but{padding: 5px 30px!important;}
     .companyshei{height: 674px;}
     .home_Case_companys{margin-bottom: 10px;}
-    .home_Enabling_left{margin: 0 25px;}
-    .home_Enabling_right{margin: 10px 25px 0 25px;}
+    .home_Enabling_left{margin: 0 15px;}
+    .home_Enabling_right{margin: 10px 15px 0 15px;}
     .home_Solution_centerImgs{width: 100%;}
     .home_Solution_center{padding:0}
     .home_Solution_centerImgsleft{margin-left:19px;}
