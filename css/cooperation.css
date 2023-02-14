@@ -16,7 +16,7 @@
 .cooperation_why_lefttop{width: 56px;width: 56px;margin-bottom: 20px;}
 .cooperation_why_leftTitle{height: 33px;font-size: 24px;line-height: 33px;margin-bottom: 21px;}
 .cooperation_why_leftText{width: 340px;color: #FFFFFF;line-height: 28px;}
-.cooperation_why_leftText span{color: #FF761A;margin: 0 5px;line-height: 19px;padding: 0 5px;}
+.cooperation_why_leftText span{color: #FFFFFF;margin: 0 5px;font-weight:550;line-height: 19px;padding: 0 5px;}
 .cooperation_why_right{width: calc( 100% - 400px);}
 .cooperation_why_rightList{padding: 32px 10px;width: calc( 50% - 22px);border: 1px solid #EBEBEB;}
 .cooperation_why_rightImg{width: 56px;height: 56px;margin: 0 auto;margin-bottom: 20px;}
