@@ -605,22 +605,22 @@
 					<div class="registe_form_title homeHead_appleStytle"><span class="colorblue">立即构建</span>企业数字化采购协同平台</div>
 					<div class="f16 flex-column flex-middle registe_form_magbot">
 						<div class="registe_form_text PingFangSCMedium">联系人：</div>
-						<div class="registe_form_input"><input type="text" class="imgsize" placeholder="请输入您的姓名"></div>
+						<div class="registe_form_input"><input v-model="name" type="text" class="imgsize" placeholder="请输入您的姓名"></div>
 					</div>
 					<div class="f16 flex-column flex-middle registe_form_magbot">
 						<div class="registe_form_text PingFangSCMedium">公司名称：</div>
-						<div class="registe_form_input"><input type="text" class="imgsize" placeholder="请输入您的公司名全称"></div>
+						<div class="registe_form_input"><input type="text" v-model="companyName" class="imgsize" placeholder="请输入您的公司名全称"></div>
 					</div>
 					<div class="f16 flex-column flex-middle registe_form_magbot">
 						<div class="registe_form_text PingFangSCMedium">手机号码：</div>
-						<div class="registe_form_input"><input type="number" class="imgsize" placeholder="请输入您的手机号码"></div>
+						<div class="registe_form_input"><input type="number" v-model="telephone" class="imgsize" placeholder="请输入您的手机号码"></div>
 					</div>
 					<div class="f16 flex-column flex-middle registe_form_Vercodemagbot">
 						<div class="registe_form_text PingFangSCMedium">验证码：</div>
-						<div class="registe_form_Vercode"><input type="number" class="imgsize" placeholder="请输入您的手机号码"></div>
-						<div class="registe_form_codebut colorbai">获取验证码</div>
+						<div class="registe_form_Vercode"><input type="number" v-model="smsCode" class="imgsize" placeholder="请输入验证码"></div>
+						<div class="registe_form_codebut colorbai" @click="getcode">获取验证码</div>
 					</div>
-					<div class="f16 registe_form_submit PingFangSCMedium colorbai">立即提交</div>
+					<div class="f16 registe_form_submit PingFangSCMedium colorbai" @click="submitfrom()">立即提交</div>
 				</div>
 			</div>
 		</div>
@@ -641,6 +641,10 @@
 				detailItem:{},
 				lineItemNum:3,
 				showJobDetail:false,
+				name:'',
+				companyName:'',
+				telephone:'',
+				smsCode:'',
 			}
 		},
 		watch: {
@@ -726,7 +730,63 @@
 					this.Listindex = index
 				}
 				this.detailItem=item
-			}
+			},
+			getcode(){
+				const reg = /^((0\d{2,3}-\d{7,8})|(1[3456789]\d{9}))$/
+				if(!reg.test(this.telephone)){
+					window.alert("请输入正确的电话号码！");
+					return false
+				}
+				var _getcode = p => post('/account/sms', p,'json');
+				_getcode({
+					mobile:this.telephone,
+					smsmode:"1"
+				})
+						.then(res => {
+							window.alert(res.message);
+						})
+						.catch(err => {
+							console.log(err,'_getcode获取数据异常');
+						})
+			},
+			submitfrom(){
+				if(this.name==''){
+					window.alert("联系人不能为空！");
+					return false
+				}
+				if(this.companyName==''){
+					window.alert("公司名称不能为空！");
+					return false
+				}
+				const reg = /^((0\d{2,3}-\d{7,8})|(1[3456789]\d{9}))$/
+				if(!reg.test(this.telephone)){
+					window.alert("请输入正确的电话号码！");
+					return false
+				}
+				if(this.smsCode==''){
+					window.alert("验证码不能为空！");
+					return false
+				}
+				var _getcode = p => post('/website/websiteUserInfo/noToken/add', p,'json');
+				_getcode({
+					name:this.name,
+					companyName:this.companyName,
+					telephone:this.telephone,
+					smsCode:this.smsCode,
+					registerModule:'1',
+				})
+						.then(res => {
+							if (res.code==200){
+								window.alert('注册成功！');
+								this.showmodel = false
+							}else {
+								window.alert('验证码错误！');
+							}
+						})
+						.catch(err => {
+							console.log(err,'_getcode获取数据异常');
+						})
+			},
 		},
 		computed:{},
 	})

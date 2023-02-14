@@ -768,8 +768,13 @@
 					registerModule:'1',
 				})
 						.then(res => {
-							window.alert('注册成功！');
-							this.showmodel = false
+							if (res.code==200){
+								window.alert('注册成功！');
+								this.showmodel = false
+							}else {
+								window.alert('验证码错误！');
+							}
+
 						})
 						.catch(err => {
 							console.log(err,'_getcode获取数据异常');
