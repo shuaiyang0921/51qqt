@@ -12,8 +12,10 @@
 		<!-- 首页样式 -->
 		<link rel="stylesheet" href="./css/homestyle.css" />
 		<link rel="stylesheet" href="./css/caseStudy.css" />
+		<link rel="stylesheet" href="./css/animate.min.css" />
 		<script src="./js/jquery.min.js"></script>
 		<script src="./js/load.js"></script>
+		<script src="./js/wow.min.js"></script>
 		<script type="text/javascript">
 			load('axios')
 		</script>
@@ -419,7 +421,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="homeHead_adver">
+			<div class="homeHead_adver wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="homeHead_adverstyle flex-column" :style="{width: imgwidth}">
 					<div @click="jumpLink(item.showButton,item.link)" :class="item.video?'homeHead_adverList_video':'homeHead_adverList'" v-for="item in BanerImg" :style="{backgroundImage: 'url('+ item.image+ ')',position:'relative','cursor':(item.showButton==1?'':'pointer')}">
 						<div style="max-width: 1200px;margin: 0 auto;">
@@ -439,7 +441,7 @@
 					<div v-for="(item,index) in BanerImg" :class="index==0?'homeHead_tab':''" @click="changetab(index)"></div>
 				</div>
 			</div>
-			<div class="flex-column flex-between homeHead_adver_bot">
+			<div class="flex-column flex-between homeHead_adver_bot wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="flex-column flex-middle homeHead_adver_botstyle" v-for="item in adverBotList">
 					<div class="homeHead_adver_botimg"><img :src="item.icon" class="imgsize" alt=""></div>
 					<div class="homeHead_adver_botright">
@@ -449,7 +451,7 @@
 				</div>
 			</div>
 			<div class="PingFangSCMedium tac home_title">{{firstdemo[0]?firstdemo[0].bigTitle:''}}</div>
-			<div class="home_Enabling">
+			<div class="home_Enabling wow animate__fadeInUp " data-wow-duration="2s">
 				<template  v-for="(item,index) in firstdemo">
 					<div >
 						<div class="flex-column flex-between" v-if="index==0">
@@ -478,7 +480,7 @@
 					</div>
 				</template>
 			</div>
-			<div class="home_product">
+			<div class="home_product wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth">
 					<div class="tac home_product_title PingFangSCMedium">产品矩阵：采购全链条业务闭环、开放</div>
 					<div class="f26 homeHead_appleStytle">SaaS云</div>
@@ -537,7 +539,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="home_padd">
+			<div class="home_padd wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth">
 					<div class="tac home_product_title PingFangSCMedium">{{competitiveList[0]?competitiveList[0].bigTitle:''}}</div>
 					<div class="flex-column flex-between">
@@ -554,7 +556,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="home_Solution">
+			<div class="home_Solution wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth">
 					<div class="tac home_product_title PingFangSCMedium colorbai">我们为全行业提供更适用的客户解决方案</div>
 					<div class="f20 tac home_Solution_tabs flex-column">
@@ -587,7 +589,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="home_Case">
+			<div class="home_Case wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth">
 					<div class="tac home_product_title PingFangSCMedium">与千家高成长企业一起，实现数字化采购</div>
 					<div>
@@ -608,8 +610,8 @@
 					</div>
 				</div>
 			</div>
-			<iframe src="./iframe/companys.html" class="companyStyle" frameborder="0" scrolling="no"></iframe>
-			<div class="home_endorsed">
+			<iframe src="./iframe/companys.html" class="companyStyle wow animate__fadeInUp" data-wow-duration="2s" frameborder="0" scrolling="no"></iframe>
+			<div class="home_endorsed wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth">
 					<div class="tac home_product_title PingFangSCMedium colorbai">行业认可</div>
 					<div class="flex-column flex-between tac colorbai PingFangSCMedium home_endorsed_lists">
@@ -635,7 +637,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="home_information">
+			<div class="home_information wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth">
 					<div class="tac home_product_title PingFangSCMedium">精选资讯</div>
 					<div class="flex-column flex-around">
@@ -690,7 +692,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="home_partners">
+			<div class="home_partners wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth" :style="{backgroundImage: 'url('+ partnersImg + ')'}">
 					<div class="home_partners_bgsty">
 						<div class="tac home_product_title PingFangSCMedium home_partners_img">合作伙伴</div>
@@ -698,7 +700,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="home_register colorbai">
+			<div class="home_register colorbai wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth flex-column flex-between flex-middle">
 					<div class="PingFangSCMedium">
 						<div class="home_register_text">开启数字化供应链与采购新体验</div>
@@ -707,7 +709,7 @@
 					<div class="f18 homeHead_registertil home_register_but  homeHead_appleStytle  colorbai" @click="showregistermodal">注册体验</div>
 				</div>
 			</div>
-			<div class="bgfooter">
+			<div class="bgfooter wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="footer maxwidth">
 					<div class="footer_topstyle xian_footer flex-column flex-between">
 						<div class="colorbai footer_leftstyle">
@@ -927,6 +929,7 @@
 		created(){
 			getHost('els')
 			this.getdata()
+			new WOW().init();
 		},
 		mounted(){
 

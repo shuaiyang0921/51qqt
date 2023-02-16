@@ -68,7 +68,6 @@ $(document).ready(function(){
         $(this).parent().siblings().find(".shownavchild_text").hide();
         $(this).find('.homephoneHead_navicon').css("transform","translateY(8px) rotate(180deg)");
     });
-    
     // $('.home_Solution_tabs>div').click(function(){
     //     event.stopPropagation();
     //     index=$(this).index();
