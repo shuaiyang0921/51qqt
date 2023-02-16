@@ -452,7 +452,7 @@
 			<div class="bggray scf_navsBg">
 				<div class="PingFangSCMedium tac home_title">平台化供应链金融解决方案，助力产业链结构升级</div>
 				<div class="scf_navs f16 flex-column flex-center" style="margin-bottom: 0;">
-					<div v-for="(item,index) in listData" :class="index==changeindex?'scf_nav':'scf_nav_other'" @click="changeNav(index)" v-html="item.title"></div>
+					<div v-for="(item,index) in listData" :class="index==changeindex?'scf_nav':'scf_nav_other'" @mouseenter="changeNav(index)" v-html="item.title"></div>
 				</div>
 				<div class="">
 					<div class="flex-column flex-center flex-middle" v-for="(item,index) in listData" v-if="index==changeindex">

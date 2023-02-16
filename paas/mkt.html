@@ -439,7 +439,7 @@
 				</div>
 				<div class="PingFangSCMedium tac home_title">营销云，为企业提供一站式营销解决方案</div>
 				<div class="f20 flex-column flex-middle flex-around paas_navs maxwidth">
-					<div v-for="(item,index) in listData" :class="index==listIndex?'paas_nav homeHead_appleStytle':''" @click="changenav(index)">{{item.title}}</div>
+					<div v-for="(item,index) in listData" :class="index==listIndex?'paas_nav homeHead_appleStytle':''" @mouseenter="changenav(index)">{{item.title}}</div>
 				</div> 
 			</div>
 			<div class="" v-for="(item,index) in listData" v-if="listIndex==index">
