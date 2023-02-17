@@ -36,7 +36,7 @@
 .manufacturing_case_navsImg{width: 180px;height: 60px;padding: 15px 30px;}
 .manufacturing_case_but{width: 20%;padding: 22px 0 ;}
 .manufacturing_case_butsty{width: 96px;padding: 13px 42px;color: #FFFFFF;background: linear-gradient(to right,#005CEF,#239BFF);border-radius: 4px;cursor: pointer;}
-.manufacturing_case_butsty:hover{opacity: 0.8;}
+.manufacturing_case_butsty:hover{opacity: 0.8;background:#FF761A;color: #FFFFFF;}
 /* .manufacturing_lists>div{display: none;}
 .manufacturing_list{display: flex!important;} */
 .manufacturing_listleft{width: calc(100% - 756px);padding:48px 280px 64px 72px;height: 288px;background: url(../images/solutions/manufacturing23.png) no-repeat center center;background-size: cover;z-index: 2;position: relative;}

@@ -173,7 +173,7 @@
 /* 首页客户解决方案图标边距 */
 .home_Solution_centerImgsleft{margin-left:67px;}
 /* 了解更多样式特效 */
-.home_more{-webkit-transition: all .5s; transition: all .5s;}
+.home_more{-webkit-transition: all .5s; transition: all .5s;cursor: pointer;}
 .home_more:hover .home_product_saasMoreicon{margin-left: 15px;}
 @media screen and (max-width:1360px) {
     .homeHead_adver_bot{margin: 0px 30px 5px 30px;}
