@@ -30,16 +30,17 @@
 .home_Enabling_connectimg{position: absolute;height: 187px;z-index: 1;top: -45px;}
 .home_product{background: url(../img/home39.png) no-repeat center center;background-size: cover;padding: 60px 120px;}
 .home_product_title{font-size: 36px;margin-bottom:40px;}
-.home_product_saas{width: calc(50% - 28px);height:204px;border-radius: 4px;border: 2px solid #FFFFFF;background: url(../img/home78.png) no-repeat center center;background-size: cover;margin: 22px 0 0 24px;cursor: pointer;}
-.home_product_saas_first{width: 378px;height:432px;border-radius: 4px;border: 2px solid #FFFFFF;background: url(../img/home161.png) no-repeat center center;background-size: cover;margin: 24px 18px 0 0;cursor: pointer;}
-.home_product_saasList{width: calc(100% - 400px);}
+.home_product_saas{width: calc(100% - 413px);height:204px;border-radius: 4px;border: 2px solid #FFFFFF;background: url(../img/home78.png) no-repeat center center;background-size: cover;margin: 24px 0 0 0px;cursor: pointer;-webkit-transition: all .5s; transition: all .5s;}
+.home_product_saas_first{width: 378px;height:432px;border-radius: 4px;border: 2px solid #FFFFFF;background: url(../img/home161.png) no-repeat center center;background-size: cover;margin: 24px 27px 0 0;cursor: pointer;-webkit-transition: all .5s; transition: all .5s;}
+.home_product_saas:hover,.home_product_saas_first:hover{transform: translateY(-10px);}
+.home_product_saasList{width: calc(100% - 409px);}
 .home_product_saasimg{width: 64px;height: 64px;margin: 31px auto;}
 .home_product_paasimg{width: 64px;height: 64px;margin: 0 auto;}
 .home_product_saasTitle{font-size: 22px;margin: 31px 0 16px 0;text-align: left}
 .home_product_saasText{color: #555555;margin-bottom: 24px;}
 .home_product_saasMoreicon{height: 11px;width: 16px;margin-left: 5px;}
-.home_product_paas{padding: 32px 62px 32px 32px;border-radius: 4px;border: 2px solid #FFFFFF;background: url(../img/home79.png) no-repeat center center;background-size: cover;margin-top: 24px;cursor: pointer;}
-.home_product_paas:hover{box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.3)}
+.home_product_paas{padding: 32px 62px 32px 32px;border-radius: 4px;border: 2px solid #FFFFFF;background: url(../img/home79.png) no-repeat center center;background-size: cover;margin-top: 24px;}
+.home_product_paas:hover{box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.3);transform: translateY(-10px);}
 .home_product_paasright{margin-left: 24px;width: 196px;}
 .home_product_paasTitle{font-size: 22px;margin-bottom: 16px;}
 .home_padd{padding: 60px 120px;}
@@ -115,7 +116,8 @@
 /* .home_Case_companylist>div{width: 120px;height: 44px;padding: 14px 16px;background: #FFFFFF;box-shadow: 0px 0px 30px 0px rgba(20,22,26,0.08);border-radius: 4px;margin: 10px;}    */
 .home_Case_More{width: 96px;padding: 13px 52px;margin: 0 auto;background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);border-radius: 4px;display: block;}
 .home_Case_More:hover{
-    background: linear-gradient(270deg, rgba(0, 142, 255, 0.8) 0%, rgba(0, 92, 239, 0.8) 100%);
+    opacity: 0.8;background:#FF761A;color: #FFFFFF;
+    /* background: linear-gradient(270deg, rgba(0, 142, 255, 0.8) 0%, rgba(0, 92, 239, 0.8) 100%); */
 }
 .scfMoreCase{margin: 50px 0}
 .home_endorsed{padding: 60px 120px;position: relative;background: url(../img/home53.png) no-repeat center center;background-size: cover;}
@@ -143,7 +145,7 @@
 .home_information_text div:hover{color: #005CEF;cursor: pointer;}
 .home_partners{padding: 0px 120px;background: #F7F8FA;background-repeat: no-repeat;background-size: cover;}
 .home_partners_bgsty{background: url(../img/home112.png) no-repeat center center;background-size: 100% 100%;padding: 60px 0;}
-.home_partners_img{margin-bottom: 475px;}
+.home_partners_img{margin-bottom: 500px;}
 .home_register{padding: 70px 50px;background: url(../img/home113.png) no-repeat center center;background-size: cover;font-size: 28px;}
 .home_register_but{padding: 13px 64px;background: #FF761A;border-radius: 4px;margin-left: 12px;width: 72px;}
 .home_register_text{margin: 0 196px 7px 0;}
@@ -162,14 +164,17 @@
 .registe_form_submit{width: 64px;padding: 13px 192px;background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);border-radius: 4px;cursor: pointer;}
 .home_Case_companylistshow{height: 92px;overflow: hidden;margin: 0 auto;}/* width: 1440px; */
 .home_Case_companylist{white-space: nowrap;}
-.home_Case_companyImg{width: 120px;height: 44px;padding: 14px 16px;background: #FFFFFF;box-shadow: 0px 0px 30px 0px rgba(20,22,26,0.08);border-radius: 4px;margin: 10px;display: inline-block;transition: .3s;}
+.home_Case_companyImg{width: 120px;height: 44px;padding: 14px 16px;background: #FFFFFF;box-shadow: 0px 0px 30px 0px rgba(20,22,26,0.08);border-radius: 4px;margin: 10px;display: inline-block;transition: all .5s;}
 .home_Case_companyImg:hover{box-shadow: 0px 0px 30px 0px rgba(20,22,26,0.2);}
 .home_Case_companyImg:hover img{transform: scale(1.1);}
 .Vidio_padd{width: 878px;height: 714px;background: #000000;margin: 0 auto;}
 .Vidio_padd_wei{width: 1200px;height: 714px;background: #000000;margin: 0 auto;padding: 0;}
-.companyStyle{width: 100%;height: 818px;}
+.companyStyle{width: 100%;height: 864px;}
 /* 首页客户解决方案图标边距 */
 .home_Solution_centerImgsleft{margin-left:67px;}
+/* 了解更多样式特效 */
+.home_more{-webkit-transition: all .5s; transition: all .5s;}
+.home_more:hover .home_product_saasMoreicon{margin-left: 15px;}
 @media screen and (max-width:1360px) {
     .homeHead_adver_bot{margin: 0px 30px 5px 30px;}
     .home_product_saas_first{width: 100%;height: 204px;margin:24px 0 0 0;}
@@ -242,6 +247,7 @@
     .home_information{padding: 350px 10px 15px 10px;}
     .home_Case_More{padding: 5px 20px;}
     .home_partners_bgsty{padding: 40px 0;}
+    .home_partners_but{width: 100%;position: absolute;bottom: 60px;}
     .home_partners_img{margin-bottom: 190px;}
     .home_Case_companyImg{padding: 10px;}
     .f18{font-size: 16px;}
@@ -275,7 +281,7 @@ div::-webkit-scrollbar{
 
 .projection{
     box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);
-    transition-property: box-shadow;transition-duration: 0.3s
+    transition-property: box-shadow;transition-duration: 2s
 }
 .projection:hover{
     box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.3);

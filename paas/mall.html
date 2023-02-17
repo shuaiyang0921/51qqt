@@ -450,7 +450,7 @@
 							<div v-html="purchaseMallData[0]?purchaseMallData[0].title:''"></div>
 						</div>
 						<div class="mall_navs_text f16" v-html="purchaseMallData[0]?purchaseMallData[0].intro:''"></div>
-						<a class="home_product_saasMoreicon" :href="purchaseMallData[0]?purchaseMallData[0].link:''"><img src="../img/home83.png" class="imgsize" alt="了解更多"></a>
+						<a class="f14 colorblue home_more" :href="purchaseMallData[0]?purchaseMallData[0].link:''">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
 					</div>
 					<div>
 						<div class="mall_navs" v-for="(item,index) in purchaseMallData" v-if="index==1||index==2">
@@ -461,7 +461,7 @@
 								<div v-html="item.title"></div>
 							</div>
 							<div class="mall_navs_text mall_navs_textwidth f16" v-html="item.intro"></div>
-							<a class="f14 colorblue" :href="item.link"><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
+							<a class="f14 colorblue home_more" :href="item.link">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
 						</div>
 					</div>
 					<div class="flex-column flex-center">
@@ -473,7 +473,7 @@
 								<div v-html="item.title"></div>
 							</div>
 							<div class="mall_navs_text mall_navs_textwidth f16" v-html="item.intro"></div>
-							<a class="f14 colorblue" :href="item.link"><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
+							<a class="f14 colorblue home_more" :href="item.link">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
 						</div>
 					</div>
 				</div>
@@ -487,7 +487,7 @@
 							<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
 							<div class="scf_navList_rightLable f18 PingFangSCMedium bgbai" v-html="item.intro"></div>
 							<div class="scf_navList_rightText f16" v-html="item.description"></div>
-							<div class="f16 colorblue" @click="changePage(item.link)">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
+							<div class="f16 colorblue home_more" @click="changePage(item.link)">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
 						</div>
 					</div>
 					<div class="flex-column flex-center flex-middle bgbai br12" v-else>
@@ -495,7 +495,7 @@
 							<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
 							<div class="scf_navList_rightLable f18 PingFangSCMedium bggray" v-html="item.intro"></div>
 							<div class="scf_navList_rightText f16" v-html="item.description"></div>
-							<div class="f16 colorblue"  @click="changePage(item.link)">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
+							<div class="f16 colorblue home_more"  @click="changePage(item.link)">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
 						</div>
 						<div class="purchase_index_navList_right_img"><img :src="item.image" class="imgsize" :alt="item.childName"></div>
 					</div>
@@ -504,7 +504,7 @@
 			
 			
 			<iframe src="../iframe/achieveCust.html?name=23" style="width: 100%;height: 644px;" frameborder="0" scrolling="no"></iframe>
-			<iframe src="../iframe/companys.html" style="width: 100%;height: 866px;" frameborder="0" scrolling="no"></iframe>
+			<iframe src="../iframe/companys.html" class="companyStyle wow animate__fadeInUp" data-wow-duration="2s" frameborder="0" scrolling="no"></iframe>
 			<div class="home_register colorbai">
 				<div class="maxwidth flex-column flex-between flex-middle">
 					<div class="PingFangSCMedium">
