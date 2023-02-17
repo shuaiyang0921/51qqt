@@ -485,7 +485,10 @@
 				</div>
                 <div class="flex-column flex-top flex-between maxwidth" v-else>
                     <div v-for="item in InfoData" class="news_vidio_list bgbai" @click="showvidiomodal(item)" >
-                        <div class="news_vidio_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
+                        <div class="news_vidio_img porelative">
+							<img :src="item.image" class="imgsize" :alt="item.title">
+							<img class="about_video_imgplay" src="./images/about/about7.png" class="imgsize" alt="">
+						</div>
                         <div class="news_vidio_pad">
                             <div class="f20 news_vidio_title PingFangSCMedium" v-html="item.title"></div>
                             <div class="f14 news_vidio_text" v-html="item.description"></div>
