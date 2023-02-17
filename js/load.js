@@ -29,6 +29,7 @@ function load(jsdir) {
         //公共基础 axios
         case 'axios':{
             document.write('<script src="' + BOOTPATH + '/home.js"></script>')
+            document.write('<script src="' + BOOTPATH + '/wow.min.js"></script>')
             document.write('<script src="' + BOOTPATH + '/vue.js"></script>')
             document.write('<script src="' + BOOTPATH + '/axios.min.js"></script>')
 			document.write('<script src="' + BOOTPATH + '/service.js"></script>');

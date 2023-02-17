@@ -72,12 +72,12 @@ $(document).ready(function(){
     window.onscroll=function(){
         let t = document.documentElement.scrollTop || document.body.scrollTop
         var header = document.getElementsByClassName('header');
-        console.log(t)
         header[0].style.opacity = '1'
         setTimeout(()=>{
             header[0].style.opacity = '0.8'
         },500)
     }
+    new WOW().init();
     // $('.home_Solution_tabs>div').click(function(){
     //     event.stopPropagation();
     //     index=$(this).index();

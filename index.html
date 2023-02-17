@@ -15,7 +15,6 @@
 		<link rel="stylesheet" href="./css/animate.min.css" />
 		<script src="./js/jquery.min.js"></script>
 		<script src="./js/load.js"></script>
-		<script src="./js/wow.min.js"></script>
 		<script type="text/javascript">
 			load('axios')
 		</script>
@@ -421,35 +420,38 @@
 					</div>
 				</div>
 			</div>
-			<div class="homeHead_adver wow animate__fadeInUp" data-wow-duration="2s">
-				<div class="homeHead_adverstyle flex-column" :style="{width: imgwidth}">
-					<div @click="jumpLink(item.showButton,item.link)" :class="item.video?'homeHead_adverList_video':'homeHead_adverList'" v-for="item in BanerImg" :style="{backgroundImage: 'url('+ item.image+ ')',position:'relative','cursor':(item.showButton==1?'':'pointer')}">
-						<div style="max-width: 1200px;margin: 0 auto;">
-							<template v-if="!item.video">
-								<div class="homeHead_adver1_title homeHead_appleStytle" v-if="item.title" v-html="item.title"></div>
-								<div class="f20 homeHead_adver1_text" v-if="item.intro" v-html="item.intro"></div>
-								<a v-if="item.showButton==1" class="f14 homeHead_registertil tac homeHead_appleStytle" style="position: absolute;bottom: 95px;" @click="showregistermodal(item.link)">{{item.buttonText?item.buttonText:'注册体验'}}</a>
-							</template>
-							<template v-else>
-								<video :src="item.video" style="width:100%; height:100%;position: absolute;top: 0;left: 0; object-fit: fill" controls="controls" :poster="item.image"></video>
-								<video :src="item.video" style="width:100%; height:100%;position: absolute;top: 0;left: 0; object-fit: fill" controls="controls" :poster="item.image"></video>
-							</template>
+			<div class="wow animate__fadeInUp" data-wow-duration="2s">
+				<div class="homeHead_adver">
+					<div class="homeHead_adverstyle flex-column" :style="{width: imgwidth}" v-show="BanerImg.length!=0">
+						<div @click="jumpLink(item.showButton,item.link)" :class="item.video?'homeHead_adverList_video':'homeHead_adverList'" v-for="item in BanerImg" :style="{backgroundImage: 'url('+ item.image+ ')',position:'relative','cursor':(item.showButton==1?'':'pointer')}">
+							<div style="max-width: 1200px;margin: 0 auto;">
+								<template v-if="!item.video">
+									<div class="homeHead_adver1_title homeHead_appleStytle" v-if="item.title" v-html="item.title"></div>
+									<div class="f20 homeHead_adver1_text" v-if="item.intro" v-html="item.intro"></div>
+									<a v-if="item.showButton==1" class="f14 homeHead_registertil tac homeHead_appleStytle" style="position: absolute;bottom: 95px;" @click="showregistermodal(item.link)">{{item.buttonText?item.buttonText:'注册体验'}}</a>
+								</template>
+								<template v-else>
+									<video :src="item.video" style="width:100%; height:100%;position: absolute;top: 0;left: 0; object-fit: fill" controls="controls" :poster="item.image"></video>
+									<video :src="item.video" style="width:100%; height:100%;position: absolute;top: 0;left: 0; object-fit: fill" controls="controls" :poster="item.image"></video>
+								</template>
+							</div>
+						</div>
+					</div>
+					<div class="homeHead_tabs flex-column flex-center">
+						<div v-for="(item,index) in BanerImg" :class="index==0?'homeHead_tab':''" @click="changetab(index)"></div>
+					</div>
+				</div>
+				<div class="flex-column flex-between homeHead_adver_bot">
+					<div class="flex-column flex-middle homeHead_adver_botstyle" v-for="item in adverBotList">
+						<div class="homeHead_adver_botimg"><img :src="item.icon" class="imgsize" alt=""></div>
+						<div class="homeHead_adver_botright">
+							<div class="f16 PingFangSCMedium">{{item.title}}</div>
+							<div class="f12 homeHead_adver_bottext">{{item.intro}}</div>
 						</div>
 					</div>
 				</div>
-				<div class="homeHead_tabs flex-column flex-center">
-					<div v-for="(item,index) in BanerImg" :class="index==0?'homeHead_tab':''" @click="changetab(index)"></div>
-				</div>
 			</div>
-			<div class="flex-column flex-between homeHead_adver_bot wow animate__fadeInUp" data-wow-duration="2s">
-				<div class="flex-column flex-middle homeHead_adver_botstyle" v-for="item in adverBotList">
-					<div class="homeHead_adver_botimg"><img :src="item.icon" class="imgsize" alt=""></div>
-					<div class="homeHead_adver_botright">
-						<div class="f16 PingFangSCMedium">{{item.title}}</div>
-						<div class="f12 homeHead_adver_bottext">{{item.intro}}</div>
-					</div>
-				</div>
-			</div>
+			
 			<div class="PingFangSCMedium tac home_title">{{firstdemo[0]?firstdemo[0].bigTitle:''}}</div>
 			<div class="home_Enabling wow animate__fadeInUp " data-wow-duration="2s">
 				<template  v-for="(item,index) in firstdemo">
@@ -983,7 +985,7 @@
 						item.image=item.image.replace(/\s/g,'%20');
 					})
 					if(that.BanerImg.length>1){
-						this.setBannerInterval();
+						// this.setBannerInterval();
 					}
 				})
 				.catch(err => {

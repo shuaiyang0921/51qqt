@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="../css/homestyle.css" />
         <!-- 解决方案样式 -->
         <link rel="stylesheet" href="../css/solutions.css">
+		<link rel="stylesheet" href="../css/animate.min.css" />
 		<script src="../js/jquery.min.js"></script>
 		<script src="../js/load.js"></script>
 		<script type="text/javascript">
@@ -421,7 +422,7 @@
 				</div>
 			</div>
 			<div class="heiheader"></div>
-			<div class="colorbai " :style="banner.backgroundImage">
+			<div class="colorbai wow animate__fadeInUp" data-wow-duration="2s" :style="banner.backgroundImage">
 				<div class="maxwidth">
 					<div class="manufacturing_adver_title homeHead_appleStytle" v-html="banner.title"></div>
 					<div class="manufacturing_adver_title">解决方案</div>
