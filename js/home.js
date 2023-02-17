@@ -68,6 +68,16 @@ $(document).ready(function(){
         $(this).parent().siblings().find(".shownavchild_text").hide();
         $(this).find('.homephoneHead_navicon').css("transform","translateY(8px) rotate(180deg)");
     });
+    
+    window.onscroll=function(){
+        let t = document.documentElement.scrollTop || document.body.scrollTop
+        var header = document.getElementsByClassName('header');
+        console.log(t)
+        header[0].style.opacity = '1'
+        setTimeout(()=>{
+            header[0].style.opacity = '0.8'
+        },500)
+    }
     // $('.home_Solution_tabs>div').click(function(){
     //     event.stopPropagation();
     //     index=$(this).index();
