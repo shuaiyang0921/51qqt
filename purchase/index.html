@@ -452,7 +452,12 @@
 						</div>
 						<div class="mall_navs_text f16" v-html="purchaseMallData[0]?purchaseMallData[0].intro:''"></div>
 						<div style="height: 18px;">
-							<a class="home_more f14 colorblue" style="float: left" :href="'../solutions/manufacturing.html?name='+(purchaseMallData[0]?purchaseMallData[0].link:'')">
+							<a v-if="purchaseMallData[0]&&purchaseMallData[0].link" class="home_more f14 colorblue" style="float: left" :href="'../solutions/manufacturing.html?name='+(purchaseMallData[0]?purchaseMallData[0].link:'')">
+								了解更多
+								<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多">
+								</span>
+							</a>
+							<a v-else class="home_more f14 colorblue" style="float: left">
 								了解更多
 								<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多">
 								</span>
@@ -470,7 +475,12 @@
 							</div>
 							<div class="mall_navs_text mall_navs_textwidth f16" v-html="item.intro"></div>
 							<div style="height: 18px;">
-								<a class="home_more f14 colorblue" style="float: left" :href="'../solutions/manufacturing.html?name='+item.link">
+								<a v-if="item.link" class="home_more f14 colorblue" style="float: left" :href="'../solutions/manufacturing.html?name='+item.link">
+									了解更多
+									<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多">
+									</span>
+								</a>
+								<a v-else class="home_more f14 colorblue" style="float: left">
 									了解更多
 									<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多">
 									</span>
@@ -490,7 +500,12 @@
 							</div>
 							<div class="mall_navs_text mall_navs_textwidth f16" v-html="item.intro"></div>
 							<div style="height: 18px;">
-								<a class="home_more f14 colorblue" style="float: left" :href="'../solutions/manufacturing.html?name='+item.link">
+								<a v-if="item.link" class="home_more f14 colorblue" style="float: left" :href="'../solutions/manufacturing.html?name='+item.link">
+									了解更多
+									<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多">
+									</span>
+								</a>
+								<a v-else class="home_more f14 colorblue" style="float: left">
 									了解更多
 									<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多">
 									</span>
