@@ -114,7 +114,7 @@
 .home_Case_companys{padding: 0 15px;margin-bottom: 60px;}
 
 /* .home_Case_companylist>div{width: 120px;height: 44px;padding: 14px 16px;background: #FFFFFF;box-shadow: 0px 0px 30px 0px rgba(20,22,26,0.08);border-radius: 4px;margin: 10px;}    */
-.home_Case_More{width: 96px;padding: 13px 52px;margin: 0 auto;background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);border-radius: 4px;display: block;}
+.home_Case_More{width: 96px;padding: 13px 52px;margin: 0 auto;background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);border-radius: 4px;display: block;cursor: pointer;}
 .home_Case_More:hover{
     opacity: 0.8;background:#FF761A;color: #FFFFFF;
     /* background: linear-gradient(270deg, rgba(0, 142, 255, 0.8) 0%, rgba(0, 92, 239, 0.8) 100%); */

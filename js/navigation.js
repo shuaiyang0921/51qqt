@@ -30,8 +30,6 @@ _getData({})
         }else {
             vm.blogrollList=[];
         }
-
-    })
-    .catch(err => {
+    }).catch(err => {
         console.log(err,'_getData获取数据异常');
     })
