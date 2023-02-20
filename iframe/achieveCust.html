@@ -42,7 +42,7 @@
 								<div class="f16 manufacturing_listleft_text colorbai" v-html="item.intro"></div>
 								<div class="flex-column flex-middle flex-right f16 tac">
 									<div class="manufacturing_listleft_but1 PingFangSCMedium" @click="caseStudyInfo(item)">查看案例</div>
-									<div class="PingFangSCMediumNormal" :class="index==0?'manufacturing_listleft_but2':'manufacturing_listleft_but3'" v-for="(items,index) in item.tags.split(',')">{{items}}</div>
+									<div class="PingFangSCMediumNormal" :class="index==0?'manufacturing_listleft_but2':'manufacturing_listleft_but3'" v-for="(items,index) in item.tags">{{items}}</div>
 								</div>
 								
 							</div>
@@ -85,17 +85,21 @@
 					var _getachieveCustlist = p => get('/works/caseWork/noToken/queryByHot', p);
 					_getachieveCustlist({industryOrAreas: that.pageName})
 					.then(res => {
-						var tag=res.result.tags;
-						if (tag){
-							if (tag.includes(",")){
-								res.result.tags=tag.split(",")
-							}else if (tag.includes("，")){
-								res.result.tags=tag.split("，")
-							}else {
-								res.result.tags=[tag]
+						var result=res.result;
+						result.forEach((itemValue)=>{
+							var tag=itemValue.tags;
+							if (tag){
+								if (tag.includes(",")){
+									itemValue.tags=tag.split(",")
+								}else if (tag.includes("，")){
+									itemValue.tags=tag.split("，")
+								}else {
+									itemValue.tags=[tag]
+								}
 							}
-						}
-						that.achieveCustlist = res.result
+						})
+
+						that.achieveCustlist = result
 					})
 					.catch(err => {
 						console.log(err,'_getachieveCustlist获取数据异常');
