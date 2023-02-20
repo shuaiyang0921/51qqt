@@ -32,7 +32,7 @@
                     </div>
 				</div>
 <!--				<div><div class="f16 colorbai home_Case_More">更多行业案例</div></div>-->
-				<div ><a class="f16 colorbai home_Case_More" href="../case-study.html" target="_blank">更多行业案例</a></div>
+				<div ><a class="f16 colorbai home_Case_More" @click="tzMoremanu">更多行业案例</a></div>
 			</div>
 		</div>
 	</body>
@@ -113,7 +113,10 @@
                             that.tranR=-1660
                         }
                     },40)
-                }
+                },
+				tzMoremanu(){
+					parent.location.href = "../case-study.html"
+				}
 			},
 			computed:{
 			},
