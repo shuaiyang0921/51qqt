@@ -433,13 +433,13 @@
 				<div class="maxwidth">
 					<div class="PingFangSCMedium tac home_title">合作伙伴招募类型</div>
 					<div class="flex-column flex-between">
-						<div class="cooperation_type_list flex-column" v-for="item in cooperationInfo">
+						<div class="cooperation_type_list flex-column projection" v-for="item in cooperationInfo">
 							<div class="cooperation_type_listleft"><img :src="item.image" class="imgsize" :alt="item.title"></div>
 							<div class="cooperation_type_listright">
 								<div class="PingFangSCMedium cooperation_type_listrightTitle">{{item.title}}</div>
 								<div class="f16 cooperation_type_listrightText">{{item.intro}}</div>
-								<div class="f14 cooperation_type_listrightBut" v-if="item.tag==null" @click="showregistermodal">立即加入</div>
-								<div class="f12 cooperation_type_listrightSpan" v-else>
+								<div class="f14 cooperation_type_listrightBut" @click="showregistermodal">立即加入</div>
+								<div class="f12 cooperation_type_listrightSpan" v-if="item.tag">
 									<span v-for="items in item.tag.split(',')">{{items}}</span>
 								</div>
 							</div>
