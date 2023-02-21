@@ -22,9 +22,9 @@
 .about_history_navs>div{width: 30px;height: 30px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 4px 4px 16px 0px rgba(166,180,208,0.4);border: 1px solid #FFFFFF;border-radius: 50%;z-index: 2;position: relative;cursor: pointer;}
 .about_history_yuan{width: 16px;height: 16px;border: 1px solid #B9BCC3;border-radius: 50%;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);margin:0 auto;}
 .about_history_navs span{width: 6px;height: 6px;border-radius: 50%;background: #B9BCC3;margin: 0 auto;}
-.about_history_nav_text{position: absolute;color: #555555;top: 45px;width: 100px;left: calc(-50% - 17px);}
+.about_history_nav_text{position: absolute;color: #555555;top: 45px;width: 96px;left: calc(-50% - 17px);}
 .about_history_nav {transform: scale(2);}
-.about_history_nav .about_history_nav_text{transform: scale(0.5);top: 26px;}
+.about_history_nav .about_history_nav_text{transform: scale(0.5);top: 28px;}
 .about_history_nav .about_history_yuan{border: 1px solid #005CEF;}
 .about_history_nav span{background: #005CEF;}
 .about_history_intro{margin-left: 50%;}
