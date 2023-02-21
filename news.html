@@ -428,10 +428,10 @@
 				</div>
 				<div class="flex-column flex-top maxwidth" v-if="typeIndex!=4">
 					<div class="news_left">
-						<div class="flex-column flex-top news_list" v-for="item in InfoData"  v-if="InfoData.length!=0" @click="tznewsInfo(item)">
+						<div class="flex-column flex-top news_list" v-for="item in InfoData"  v-if="InfoData.length!=0">
                             <div class="news_listimg"><img :src="item.image" class="imgsize" :alt="item.title"></div>
                             <div class="news_listright">
-                                <div class="f18 homeHead_appleStytle news_listright_title">{{item.title}}</div>
+                                <div class="f18 homeHead_appleStytle news_listright_title" @click="tznewsInfo(item)">{{item.title}}</div>
                                 <div class="f14 news_listright_text">{{item.description}}</div>
                                 <div class="f14 flex-column flex-middle flex-between">
                                     <div class="news_listright_but" v-if="item.tag">{{item.tag}}</div>
