@@ -94,7 +94,7 @@
 .home_Solution_centerImg{width: 32px;height: 32px;margin: 0 auto;margin-bottom: 12px;}
 .home_Solution_centerbut{padding: 10px 32px;width: 56px;background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);border-radius: 4px;cursor: pointer;}
 .home_Solution_centerbut:hover{
-    opacity: 0.8;background:#FF761A;
+    opacity: 0.8;background: linear-gradient(270deg, #FFA328 0%, #FF761A 100%);
 }
 .home_Case{padding: 60px 0px;background: url(../img/home42.png) no-repeat center center;background-size: cover;}
 .home_Case_info{margin-bottom: 40px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;border: 2px solid #FFFFFF;display: none;height: 340px;}
@@ -117,7 +117,7 @@
 /* .home_Case_companylist>div{width: 120px;height: 44px;padding: 14px 16px;background: #FFFFFF;box-shadow: 0px 0px 30px 0px rgba(20,22,26,0.08);border-radius: 4px;margin: 10px;}    */
 .home_Case_More{width: 96px;padding: 13px 52px;margin: 0 auto;background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);border-radius: 4px;display: block;cursor: pointer;}
 .home_Case_More:hover{
-    opacity: 0.8;background:#FF761A;color: #FFFFFF;
+    opacity: 0.8;background: linear-gradient(270deg, #FFA328 0%, #FF761A 100%);color: #FFFFFF;
     /* background: linear-gradient(270deg, rgba(0, 142, 255, 0.8) 0%, rgba(0, 92, 239, 0.8) 100%); */
 }
 .scfMoreCase{margin: 50px 0}
@@ -129,6 +129,7 @@
 .home_endorsed_botStyle{background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;border: 2px solid #FFFFFF;padding: 30px 19px;}
 .home_endorsed_botList{width: 112px;}
 .home_endorsed_botImg{width: 80px;height: 80px;border-radius: 50%;background: #FFFFFF;border: 1px solid #EBEBEB;margin: 0 auto;margin-bottom: 10px;}
+.home_endorsed_ying{position: absolute;width: 58px;height: 22px;bottom: 0;left: 65px;}
 .home_endorsed_bottext{color: #555555;}
 .home_information{padding: 126px 120px 60px 120px;background: url(../img/home54.png) no-repeat center center;background-size: cover;}
 .home_information_list{padding: 32px 24px 22px 24px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);border-radius: 4px;border: 2px solid #FFFFFF;margin: 12px;}

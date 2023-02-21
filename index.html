@@ -626,11 +626,18 @@
 						<div class="maxwidth">
 							<div class="home_endorsed_botStyle flex-column flex-between tac">
 								<div class="home_endorsed_botList" v-for="item in endorsedBotList">
-									<div class="home_endorsed_botImg"><img :src="item.companyLogo" class="imgsize" alt="item.companyName"></div>
+									<div class="porelative">
+										<div class="home_endorsed_botImg"><img :src="item.companyLogo" class="imgsize" alt="item.companyName"></div>
+										<div class="home_endorsed_ying"><img src="./img/home_ying.png" class="imgsize"></div>
+									</div>
+									
 									<div class="f14 home_endorsed_bottext">{{item.companyName}}</div>
 								</div>
 								<div class="home_endorsed_botList">
-									<div class="home_endorsed_botImg"><img src="./img/home107.png" class="imgsize" alt=""></div>
+									<div class="porelative">
+										<div class="home_endorsed_botImg"><img src="./img/home107.png" class="imgsize" alt=""></div>
+										<div class="home_endorsed_ying"><img src="./img/home_ying.png" class="imgsize"></div>
+									</div>
 									<a class="f14 colorblue home_more" href="honor.html">了解更多<span class="home_product_saasMoreicon"><img src="img/home83.png" class="imgsize" alt=""></span></a>
 								</div>
 							</div>
