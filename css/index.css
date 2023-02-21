@@ -169,7 +169,7 @@
 .homeHead_aboutUsPopUp_padd{padding: 45px 0px;}
 .homeHead_aboutUsPopUp_Text{width: 176px;background: #F7F8FA;padding: 24px 32px;height: 72px;}
 .homeHead_aboutUsPopUp_Text:hover .homeHead_aboutUsPopUp_title{color: #005CEF;}
-.homeHead_aboutUsPopUp_Text:hover .iconrightgary{background: no-repeat url(../img/home46.png);background-size:100%;width: 7px;height: 11px;margin-left: 5px;}
+.homeHead_aboutUsPopUp_Text:hover .iconrightgary{background: no-repeat url(../img/home46.png);background-size:100%;width: 7px;height: 11px;margin-left: 15px;}
 .homeHead_aboutUsPopUp_title{margin-bottom: 9px;margin-left: 30px;}
 .homeHead_aboutUsPopUp_titleicon1{position: relative;}
 .homeHead_aboutUsPopUp_titleicon1::before{content:'';background: no-repeat url(../img/home17.png);background-size:100%;width: 20px;height: 20px;position: absolute;top: 2px;left: -25px;}
