@@ -35,5 +35,5 @@
     width: 100%;
 }
 .jobDetailContainer>div{
-    background: #FFFFFF;border: 1px solid #EBEBEB;margin: 12px 0;padding: 0 40px
+    background: #FFFFFF;border: 1px solid #EBEBEB;margin: 12px 0;padding: 0 40px;border-radius: 4px;
 }
