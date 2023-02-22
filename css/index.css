@@ -107,11 +107,11 @@
 .homeHead_productpopUp_paas_right>a:hover .homeHead_appleStytle{color: #005CEF;}
 .homeHead_productpopUp_paas_right_subheading{color: #999999;margin-top: 8px;}
 .homeHead_productpopUp_paastitleicon1{position: relative;}
-.homeHead_productpopUp_paastitleicon1::before{content:'';background: no-repeat url(../img/home59.png);background-size:100%;width: 40px;height: 36px;position: absolute;top: -27px;left: 200px;}
+.homeHead_productpopUp_paastitleicon1::before{content:'';background: no-repeat url(../img/home59.png);background-size:100%;width: 40px;height: 40px;position: absolute;top: -27px;left: 200px;}
 .homeHead_productpopUp_paastitleicon2{position: relative;}
-.homeHead_productpopUp_paastitleicon2::before{content:'';background: no-repeat url(../img/home60.png);background-size:100%;width: 40px;height: 36px;position: absolute;top: -29px;left: 200px;}
+.homeHead_productpopUp_paastitleicon2::before{content:'';background: no-repeat url(../img/home60.png);background-size:100%;width: 40px;height: 40px;position: absolute;top: -29px;left: 200px;}
 .homeHead_productpopUp_paastitleicon3{position: relative;}
-.homeHead_productpopUp_paastitleicon3::before{content:'';background: no-repeat url(../img/home61.png);background-size:100%;width: 40px;height: 36px;position: absolute;top: -29px;left: 200px;}
+.homeHead_productpopUp_paastitleicon3::before{content:'';background: no-repeat url(../img/home61.png);background-size:100%;width: 40px;height: 40px;position: absolute;top: -29px;left: 200px;}
 /* 导航解决方案弹窗 */
 .homeHead_solutionPopUp_left{background: linear-gradient(135deg, rgba(0,85,255,0) 0%, rgba(0,85,255,0.04) 100%);}
 .homeHead_solutionPopUp_leftTitle{padding: 37px 30px;width: 160px;height: 146px;background: no-repeat url(../img/home8.png);background-size:100%;}
