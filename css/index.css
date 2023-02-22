@@ -61,7 +61,7 @@
 .homeHead_logintil{color: #333333;margin:0 30px;}
 .homeHead_registertil{padding: 10px 32px;color: #FFFFFF;background: linear-gradient(to right,#005CEF,#239BFF);border-radius: 4px;width: 56px;text-align: center;cursor: pointer;}
 .homeHead_registertil:hover{opacity: 0.8;background: linear-gradient(270deg, #FFA328 0%, #FF761A 100%);color: #FFFFFF;}
-.homeHead_popUpStyle{border-radius: 0px 0px 4px 4px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.04);position: absolute;top: 74px;left: 0px;width: 100%;z-index: 10;opacity: 0;height: 0;overflow: hidden;max-height: 20px;transition: max-height .25s ease-in-out,opacity .25s ease-in-out;}
+.homeHead_popUpStyle{border-radius: 0px 0px 4px 4px;box-shadow:  0px 8px 20px 0px rgba(55,99,170,0.2);position: absolute;top: 74px;left: 0px;width: 100%;z-index: 10;opacity: 0;height: 0;overflow: hidden;max-height: 20px;transition: max-height .25s ease-in-out,opacity .25s ease-in-out;border-top: 1px solid #E6E8EE;}
 .hobverPopUp:hover .hobverPopUp_text{color: #005CEF;}
 .hobverPopUp_text>a:hover{color: #005CEF;cursor: pointer;}
 .hobverPopUp:hover{border-bottom: 2px solid #005CEF;}
