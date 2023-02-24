@@ -437,7 +437,7 @@
 							<div class="cooperation_type_listleft"><img :src="item.image" class="imgsize" :alt="item.title"></div>
 							<div class="cooperation_type_listright">
 								<div class="PingFangSCMedium cooperation_type_listrightTitle">{{item.title}}</div>
-								<div class="f16 cooperation_type_listrightText">{{item.intro}}</div>
+								<div class="f16 cooperation_type_listrightText" v-html="item.intro"></div>
 								<div class="f14 cooperation_type_listrightBut" @click="showregistermodal">立即加入</div>
 								<div class="f12 cooperation_type_listrightSpan" v-if="item.tag">
 									<span v-for="items in item.tag.split(',')">{{items}}</span>
@@ -451,19 +451,43 @@
 				<div class="maxwidth">
 					<div class="PingFangSCMedium tac home_title">为什么选择与企企通合作</div>
 					<div class="flex-column">
-						<div class="cooperation_why_left">
-							<div class="cooperation_why_lefttop"><img src="./images/cooperation/cooperation5.png" class="imgsize" alt="品牌实力"></div>
-							<div class="colorbai PingFangSCMedium cooperation_why_leftTitle">品牌实力</div>
-							<div class="f16 cooperation_why_leftText">企企通在<span>SRM赛道持续领先</span><br/>
-								服务众多<span>500强</span>及<span>中小微企业客户</span><br/>
-								国家级“高新技术企业”及多项安全/ISO认证<br/>
-								先后获得“中国企业服务创新成长50强”“大中华区IT服务业独角兽大奖”等<span>30+行业</span>权威荣誉奖项</div>
+<!--						<div class="cooperation_why_left">-->
+<!--							<div class="cooperation_why_lefttop"><img src="./images/cooperation/cooperation5.png" class="imgsize" alt="品牌实力"></div>-->
+<!--							<div class="colorbai PingFangSCMedium cooperation_why_leftTitle">品牌实力</div>-->
+<!--							<div class="f16 cooperation_why_leftText">-->
+<!--								企企通在-->
+<!--								<span>SRM赛道持续领先</span><br/>-->
+<!--								服务众多-->
+<!--								<span>500强</span>-->
+<!--								及-->
+<!--								<span>中小微企业客户</span><br/>-->
+<!--								国家级“高新技术企业”及多项安全/ISO认证<br/>-->
+<!--								先后获得“中国企业服务创新成长50强”“大中华区IT服务业独角兽大奖”等-->
+<!--								<span>30+行业</span>-->
+<!--								权威荣誉奖项-->
+<!--							</div>-->
+<!--						</div>-->
+						<div v-if="suppliernumData[4]" class="cooperation_why_left" :style="{backgroundImage: 'url('+suppliernumData[4].image+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover'}">
+							<div class="cooperation_why_lefttop"><img :src="suppliernumData[4].icon" class="imgsize" alt="品牌实力"></div>
+							<div class="colorbai PingFangSCMedium cooperation_why_leftTitle">{{suppliernumData[4].title}}</div>
+							<div class="f16 cooperation_why_leftText" v-html="suppliernumData[4].intro">
+<!--								企企通在-->
+<!--								<span>SRM赛道持续领先</span><br/>-->
+<!--								服务众多-->
+<!--								<span>500强</span>-->
+<!--								及-->
+<!--								<span>中小微企业客户</span><br/>-->
+<!--								国家级“高新技术企业”及多项安全/ISO认证<br/>-->
+<!--								先后获得“中国企业服务创新成长50强”“大中华区IT服务业独角兽大奖”等-->
+<!--								<span>30+行业</span>-->
+<!--								权威荣誉奖项-->
+							</div>
 						</div>
 						<div class="cooperation_why_right flex-column">
-							<div class="cooperation_why_rightList tac" v-for="item in suppliernumData">
+							<div v-if="index<4" class="cooperation_why_rightList tac" v-for="(item,index) in suppliernumData">
 								<div class="cooperation_why_rightImg"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
 								<div class="PingFangSCMedium cooperation_why_rightTitle">{{item.title}}</div>
-								<div class="f16  cooperation_why_rightText">{{item.intro}}</div>
+								<div class="f16  cooperation_why_rightText" v-html="item.intro"></div>
 							</div>
 						</div>
 					</div>
