@@ -32,6 +32,7 @@ window.onscroll = () => lazyLoad(imgs);
 $(document).ready(function(){
     var onOff = true;
     var Onnav = true;
+    var onchind = true
     $('.menu_button').click(function(){
         event.stopPropagation();
         $(this).toggleClass("cross");
@@ -50,7 +51,7 @@ $(document).ready(function(){
         if(Onnav){
             $(this).siblings(".homephoneHead_navchild").show();
             $(this).find('.PingFangSCMedium').css("color","#005CEF");
-            $(this).find('.homephoneHead_navicon').css("transform","translateY(12px) rotate(180deg)");
+            $(this).find('.homephoneHead_navicon').css("transform","translateY(4px) rotate(180deg)");
         }else{
             $(this).siblings(".homephoneHead_navchild").hide();
             $(this).find('.PingFangSCMedium').css("color","#222222");
@@ -60,24 +61,37 @@ $(document).ready(function(){
     });
     $('.homephoneHead_navchild_Subhead').click(function(){
         event.stopPropagation();
-        $('.homephoneHead_navchild_Subhead').css("color","#222222")
-        $('.homephoneHead_navchild_Subhead').find('.homephoneHead_navicon').css("transform","none")
         index=$(this).index();
-        $(this).css("color","#005CEF")
-        $(this).siblings(".shownavchild_text").show();
-        $(this).parent().siblings().find(".shownavchild_text").hide();
-        $(this).find('.homephoneHead_navicon').css("transform","translateY(8px) rotate(180deg)");
+        if(onchind){
+            $(this).siblings(".shownavchild_text").show();
+            $(this).css("color","#005CEF");
+            $(this).find('.homephoneHead_navicon').css("transform","translateY(4px) rotate(180deg)");
+        }else{
+            $(this).siblings(".shownavchild_text").hide();
+            $(this).css("color","#222222");
+            $('.homephoneHead_navchild_Subhead').find('.homephoneHead_navicon').css("transform","none");
+        }
+        onchind = !onchind;
     });
     
     window.onscroll=function(){
         let t = document.documentElement.scrollTop || document.body.scrollTop
         var header = document.getElementsByClassName('header');
-        header[0].style.opacity = '1'
-        setTimeout(()=>{
-            header[0].style.opacity = '0.8'
-        },500)
+        if(t==0){
+            header[0].style.backgroundColor = 'rgba(255,255,255,0.8)'
+            header[0].style.boxShadow = 'none'
+        }else{
+            header[0].style.backgroundColor = 'rgba(255,255,255,1)'
+            header[0].style.boxShadow = '0px 8px 20px 0px rgba(166,180,208,0.3)'
+        }
     }
     new WOW().init();
+    // 刷新页面滚动条到达顶部
+    window.addEventListener("load", () => {
+        setTimeout(()=>{
+            window.scrollTo(0, 0);
+        },500)
+    });
     // $('.home_Solution_tabs>div').click(function(){
     //     event.stopPropagation();
     //     index=$(this).index();
