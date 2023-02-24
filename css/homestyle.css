@@ -178,6 +178,7 @@
 /* 了解更多样式特效 */
 .home_more{-webkit-transition: all .5s; transition: all .5s;cursor: pointer;}
 .home_more:hover .home_product_saasMoreicon{margin-left: 15px;}
+.achieveCuststy{width: 100%;height: 639px;}
 @media screen and (max-width:1360px) {
     .homeHead_adver_bot{margin: 0px 30px 5px 30px;}
     .home_product_saas_first{width: 100%;height: 204px;margin:24px 0 0 0;}
@@ -191,7 +192,7 @@
     .home_product_paasright{width: calc(100% - 88px);}
     .home_product_paas{width: 100%;}
     .home_Solution{padding: 60px 30px 0 30px;}
-    .padBg{padding: 30px 60px;}
+    .padBg{padding: 30px 60px;width: calc(100% - 120px);}
     .companyshei{height: 806px;}
     .home_endorsed_botLists{bottom: -160px;}
     .home_information{padding: 190px 60px 30px 60px;}
@@ -213,7 +214,7 @@
     .home_Solution_right{width: 100%;height:auto}
     .home_Solution_rightimg{width: 90px;height: 90px;margin: 15px;}
     .home_endorsed_list{width: 50%;}
-    .home_register{padding: 5px 16px;}
+    .home_register{padding: 35px 16px;}
     .home_register_but{margin-left: 55px;}
     .home_register .PingFangSCMedium{width: 100%;}
     .home_register_text{width: 100%;text-align: center;}
@@ -243,7 +244,7 @@
     .home_product_saas{width: 100%;margin: 10px 0 10px 0;}
     .home_competitive_listright{padding: 15px 15px 10px 15px;width: calc(100% - 166px);}
     .home_Case_info{margin: 0 20px 30px 20px;}
-    .padBg,.home_endorsed{padding: 15px 20px;}
+    .padBg,.home_endorsed{padding: 15px 20px;width: calc(100% - 40px);}
     .home_Case_companys{padding: 0;}
     .home_endorsed_botStyle{margin: 0 20px;}
     .home_endorsed_botLists{bottom: -320px;}
@@ -264,6 +265,8 @@
     .home_Solution_centerImgs{width: 100%;}
     .home_Solution_center{padding:0}
     .home_Solution_centerImgsleft{margin-left:19px;}
+    .achieveCuststy{height: 927px;}
+    .companyStyle{height: 702px;}
 }
 @media screen and (max-width:580px) {
     .home_endorsed_botLists{bottom: -420px;}

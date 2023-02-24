@@ -37,7 +37,7 @@
 .PingFangSCMediumNormal{font-weight: normal;}
 .PingFangSCMediumBanner{font-weight: 500;}
 .homeHead{padding: 0 120px;position: relative;}/*box-shadow: 0px 3px 14px 0px rgba(0,0,0,0.05);*/
-.homephoneHead{padding: 20px 0px;margin: 0 24px;display: none;}
+.homephoneHead{padding: 20px 24px;display: none;}
 .menu_buttonstyle{width: 55px;height: 19px;}
 .menu_button {cursor: pointer;margin-left: 30px;position: absolute;}
 .menu_button .bar:nth-of-type(1) { margin-top: 0px;}

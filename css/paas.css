@@ -112,3 +112,21 @@
 .achieveCase{
     display: none;
 }
+@media screen and (max-width:1170px) {
+    .paas_topImg{display: none;}
+    .paas_adver_left{width: calc(100% - 120px);padding: 0 60px;}
+    .mkt_registertil{margin: 0;}
+    .mall_navs{width: calc(100% - 64px); margin: 12px 0;}
+    .mall_navs_imgtitle,.phone_mall_navswid{width: 100%;}
+    .purchase_navList_right_text{padding-left:0px;padding-right:0px;padding-bottom: 20px;}
+    .purchase_navList_left_text{padding-left: 0px;padding-right:0px;padding-top: 20px;}
+}
+@media screen and (max-width:582px) {
+    .manufacturing_adver_title{font-size: 25px;line-height: 35px;}
+    .mkt_adver{padding: 100px 0px 132px 0px;}
+    .paas_adver_left{padding: 0 20px;width: calc(100% - 40px);}
+    .mkt_adver_buts{margin-bottom: 15px;}
+    .mkt_adver_buts>div{margin: 5px 0px;padding: 5px 35px;}
+    .mall_navs{padding: 30px 15px;width: calc(100% - 30px);}
+    .scf_navList_rightLable {padding: 13px 15px;}
+}
