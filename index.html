@@ -690,7 +690,7 @@
 						<div class="home_register_text">开启数字化供应链与采购新体验</div>
 						<div class="tar">赋能企业数字化转型与变革</div>
 					</div>
-					<div class="f18 homeHead_registertil home_register_but  homeHead_appleStytle  colorbai" @click="showregistermodal">注册体验</div>
+					<div class="f18 homeHead_registertil home_register_but  homeHead_appleStytle  colorbai" @click="showregistermodal()">注册体验</div>
 				</div>
 			</div>
 			<div class="bgfooter wow animate__fadeInUp" data-wow-duration="2s">
@@ -983,6 +983,7 @@
 				})
 			},
 			showregistermodal(link){
+				console.log(link)
 				if (link){
 					window.open(link)
 				}else {
