@@ -226,6 +226,12 @@
     .home_endorsed_botStyle{margin:0 30px;}
     .homeHead_adver1_title{width: 100%;}
 }
+@media screen and (max-width:662px) {
+    .homeHead_adver_bot{padding: 25px 20px;}
+    .homeHead_adver_botright{width: calc(100% - 70px);}
+    .homeHead_adver_botstyle,.homeHead_adver_bottext{width: 100%;}
+    .homeHead_adver_botstyle{border-right: none;}
+}
 @media screen and (max-width:600px) {
     .home_endorsed_botLists{bottom: -420px;}
     .home_information{padding: 450px 10px 30px 10px;}
@@ -269,9 +275,9 @@
     .companyStyle{height: 702px;}
 }
 @media screen and (max-width:580px) {
-    .home_endorsed_botLists{bottom: -420px;}
-    .home_information{padding: 450px  10px 30px 10px;}
-    .home_endorsed {padding: 60px 30px;}
+    .home_endorsed_botLists{bottom: -470px;}
+    .home_information{padding: 510px  10px 30px 10px;}
+    /* .home_endorsed {padding: 60px 30px;} */
     .home_Case_inforight{padding: 15px 20px;}
     .home_Case_inforightImg{margin: 15px 0;}
     .home_Case_inforight_title::before{top: 0;left: 0;}
@@ -279,7 +285,8 @@
     .home_Solution_left>div {width: 50%;padding: 20px 0;}
     .home_Solution_center{max-height: none;}
     .home_competitive_listleft{padding: 15px 20px;}
-    .home_competitive_list{margin: 0;}
+    .home_competitive_list{margin: 0;width: 100%;}
+    
 }
 div::-webkit-scrollbar{
     display:none
