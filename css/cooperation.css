@@ -1,7 +1,7 @@
 .cooperation_adver{background: url(../images/cooperation/cooperation1.png) no-repeat center center;background-size: cover;padding: 60px 0 72px 0;}
 .cooperation_adver_title{font-size: 48px;line-height: 67px;margin-bottom: 16px;}
 .cooperation_adver_text{line-height: 28px;margin-bottom: 40px;}
-.homeHead_registertil{padding: 13px 68px;}
+.registertil_banner{padding: 13px 68px;}
 .cooperation_type{padding: 60px 100px;background: #F7F8FA;}
 .cooperation_type_list{padding: 24px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;border: 2px solid #FFFFFF;margin: 12px 0px;}
 .cooperation_type_list:hover{transform: translateY(-10px);}
