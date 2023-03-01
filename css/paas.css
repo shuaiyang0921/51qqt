@@ -1,6 +1,6 @@
 .paas_topBg{background: linear-gradient(180deg, #E6EBF5 0%, #FFFFFF 100%);}
 .paas_adver{background: url(../images/paas/paas_bg.png) no-repeat center center;background-size: cover;padding: 60px 120px;}
-.mkt_adver{background: url(../images/paas/mkt_bg.png) no-repeat center center;background-size: cover;padding: 165px 0px 132px 0px;}
+.mkt_adver{padding: 165px 0px 132px 0px;}
 .qiliantong_adver{background: url(../images/paas/bg_qilian.png) no-repeat center center;background-size: cover;padding: 60px 10%;padding-top: 132px;}
 .qqgouQ3K_adver{background: url(../images/mall/bgQ3k.png) no-repeat center center;background-size: cover;padding: 60px 10%;padding-top: 132px;}
 .qqgouQ3_adver{background: url(../images/mall/bgQ3.png) no-repeat center center;background-size: cover;padding: 60px 10%;padding-top: 132px;}

@@ -176,6 +176,7 @@
 .home_Solution_centerImgsleft{margin-left:67px;}
 /* 了解更多样式特效 */
 .information_more:hover .home_product_saasMoreicon{transform: translateX(-10px)}
+.purchase_more:hover + .home_product_saasMoreicon{transform: translateX(10px)}
 .home_more{-webkit-transition: all 0.3s; transition: all 0.3s;cursor: pointer;}
 .achieveCuststy{width: 100%;height: 639px;}
 @media screen and (max-width:1360px) {
@@ -343,6 +344,7 @@ div::-webkit-scrollbar{
 
 .register_bottom:hover{
     opacity: 0.8;
+    cursor: pointer;
 }
 
 
