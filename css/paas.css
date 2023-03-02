@@ -3,10 +3,10 @@
 .mkt_adver{padding: 165px 0px 132px 0px;}
 .qiliantong_adver{background: url(../images/paas/bg_qilian.png) no-repeat center center;background-size: cover;padding: 60px 10%;padding-top: 132px;}
 .qqgouQ3K_adver{background: url(../images/mall/bgQ3k.png) no-repeat center center;background-size: cover;padding: 60px 10%;padding-top: 132px;}
-.qqgouQ3_adver{background: url(../images/mall/bgQ3.png) no-repeat center center;background-size: cover;padding: 60px 10%;padding-top: 132px;}
+.qqgouQ3_adver{padding: 60px 10%;padding-top: 132px;}
 .b2b_adver{background: url(../images/mall/bgB2B.png) no-repeat center center;background-size: cover;padding: 60px 10%;padding-top: 132px;}
 .juyuanchi_adver{background: url(../images/mall/bgJyc.png) no-repeat center center;background-size: cover;padding: 60px 10%;padding-top: 132px;}
-.supplier_adver{background: url(../images/purchase/bgpurchaes.png) no-repeat center center;background-size: cover;padding: 60px 10%;padding-top: 132px;}
+.supplier_adver{padding: 60px 10%;padding-top: 132px;}
 .paas_topImg{width: 490px;height: 370px;padding: 10px;background: #FFFFFF;box-shadow: 0px 2px 20px 0px rgba(142,168,220,0.2);border-radius: 12px;margin-left: 66px;}
 .adver_title{font-size: 48px;line-height: 67px;}
 .qilian_topImg{width: 360px;height: 350px;margin-left: 136px;}

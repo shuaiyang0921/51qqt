@@ -426,8 +426,8 @@
 							<div v-html="purchaseMallData[0]?purchaseMallData[0].title:''"></div>
 						</div>
 						<div class="mall_navs_text f16" v-html="purchaseMallData[0]?purchaseMallData[0].intro:''"></div>
-						<a v-if="purchaseMallData[0]&&purchaseMallData[0].link" class="f14 colorblue home_more" :href="'../solutions/manufacturing.html?name='+(purchaseMallData[0]?purchaseMallData[0].link:'')">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
-						<a v-else class="f14 colorblue home_more">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
+						<a v-if="purchaseMallData[0]&&purchaseMallData[0].link" class="f14 colorblue home_more" :href="'../solutions/manufacturing.html?name='+(purchaseMallData[0]?purchaseMallData[0].link:'')"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
+						<a v-else class="f14 colorblue home_more"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
 					</div>
 					<div>
 						<div class="mall_navs" v-for="(item,index) in purchaseMallData" v-if="index==1||index==2">
@@ -438,8 +438,8 @@
 								<div v-html="item.title"></div>
 							</div>
 							<div class="mall_navs_text mall_navs_textwidth f16" v-html="item.intro"></div>
-							<a v-if="item.link" class="f14 colorblue home_more" :href="'../solutions/manufacturing.html?name='+item.link">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
-							<a v-else class="f14 colorblue home_more">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
+							<a v-if="item.link" class="f14 colorblue home_more" :href="'../solutions/manufacturing.html?name='+item.link"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
+							<a v-else class="f14 colorblue home_more"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
 						</div>
 					</div>
 					<div class="flex-column flex-center">
@@ -451,8 +451,8 @@
 								<div v-html="item.title"></div>
 							</div>
 							<div class="mall_navs_text mall_navs_textwidth f16" v-html="item.intro"></div>
-							<a v-if="item.link" class="f14 colorblue home_more" :href="'../solutions/manufacturing.html?name='+item.link">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
-							<a v-else class="f14 colorblue home_more">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
+							<a v-if="item.link" class="f14 colorblue home_more" :href="'../solutions/manufacturing.html?name='+item.link"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
+							<a v-else class="f14 colorblue home_more"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
 						</div>
 					</div>
 				</div>
@@ -466,7 +466,7 @@
 							<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
 							<div class="scf_navList_rightLable f18 PingFangSCMedium bgbai" v-html="item.intro"></div>
 							<div class="scf_navList_rightText f16" v-html="item.description"></div>
-							<div class="f16 colorblue home_more" @click="changePage(item.link)">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
+							<div class="f16 colorblue home_more" @click="changePage(item.link)"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
 						</div>
 					</div>
 					<div class="flex-column flex-center flex-middle bgbai br12" v-else>
@@ -474,7 +474,7 @@
 							<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
 							<div class="scf_navList_rightLable f18 PingFangSCMedium bggray" v-html="item.intro"></div>
 							<div class="scf_navList_rightText f16" v-html="item.description"></div>
-							<div class="f16 colorblue home_more"  @click="changePage(item.link)">了解更多<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
+							<div class="f16 colorblue home_more"  @click="changePage(item.link)"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
 						</div>
 						<div class="purchase_index_navList_right_img"><img :src="item.image" class="imgsize" :alt="item.childName"></div>
 					</div>
