@@ -343,7 +343,7 @@ div::-webkit-scrollbar{
 }
 
 .register_bottom:hover{
-    opacity: 0.8;
+    background: rgba(255,118,26,0.8);
 }
 
 
