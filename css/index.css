@@ -204,25 +204,7 @@
 .manufacturing_adver_title{font-size: 48px;line-height: 62px;}
 /* 移动端头部 */
 
-@media screen and (max-width:1335px) {
-    .homeHead{display: none;}
-    .homephoneHead{display: flex;}
-    .header{height: auto;}
-    .heiheader{height: 66px;}
-    .logosize{height: 26px;width: 87px;}
-    .homephoneHead_menu {display: inline-block;transition: all .2s linear;}
-    input[name='nav']:checked+ .homephoneHead_menu {
-		 transform: rotate(90deg);
-	  }
-    .footer_topstyle{margin:0 30px}
-    .footer_leftstyle{margin-right: 30px;}
-    .footer_rightstyle{width: 100%;}
-    .footer_leftstyle{margin-right: 30px;}
-    .homeHead_registertil{margin: 20px auto;width: 200px;}
-    .homeHead_productpopUp_paastitleicon1::before{content:'';background: no-repeat url(../img/home63.png);background-size:100%;width: 20px;height: 20px;position: absolute;top: 0px;left: -25px;}
-    .homeHead_productpopUp_paastitleicon2::before{content:'';background: no-repeat url(../img/home64.png);background-size:100%;width: 20px;height: 20px;position: absolute;top: 0px;left: -25px;}
-    .homeHead_productpopUp_paastitleicon3::before{content:'';background: no-repeat url(../img/home65.png);background-size:100%;width: 20px;height: 20px;position: absolute;top: 0px;left: -25px;}
-}
+
 .displayBox{
     display: -webkit-box;
 }
@@ -239,13 +221,6 @@
 .tuomaogz{
     margin-top: 10px;
 }
-
-
-
-/*.homeHead_registertil{padding: 10px 32px;color: #FFFFFF;background: linear-gradient(to right,#005CEF,#239BFF);border-radius: 4px;width: 56px;text-align: center;cursor: pointer;}*/
-/*.homeHead_registertil:hover{opacity: 0.8;background: linear-gradient(270deg, #FFA328 0%, #FF761A 100%);color: #FFFFFF;}*/
-
-
 
 .homeHead_registertil{
     padding: 10px 32px;color: #FFFFFF;background: linear-gradient(to right,#005CEF,#239BFF);border-radius: 4px;width: 64px;text-align: center;cursor: pointer;
@@ -320,4 +295,29 @@
 }
 .index_banner_register{
     padding: 13px 68px;
+}
+/* 右下脚浮窗 */
+.rightView{position: fixed;top: 40%;right: 24px;}
+.rightView_kf{padding: 10px 6px 9px 6px;border: 2px solid #FFFFFF;;background: linear-gradient(180deg, #FF5717 0%, #FC9A2C 100%);;border-radius: 40px 40px 0 0;box-shadow: 4px 8px 20px 0px rgba(55,99,170,0.1);}
+.rightView_kfImg{width: 60px;height: 60px;border-radius: 50%;margin-bottom: 9px;}
+.rightView_kfText{color: #FF761A;padding: 4px;background: #FFFFFF;height: 20px;line-height: 20px;border-radius: 2px;}
+
+@media screen and (max-width:1335px) {
+    .homeHead{display: none;}
+    .homephoneHead{display: flex;}
+    .header{height: auto;}
+    .heiheader{height: 66px;}
+    .logosize{height: 26px;width: 87px;}
+    .homephoneHead_menu {display: inline-block;transition: all .2s linear;}
+    input[name='nav']:checked+ .homephoneHead_menu {
+		 transform: rotate(90deg);
+	  }
+    .footer_topstyle{margin:0 30px}
+    .footer_leftstyle{margin-right: 30px;}
+    .footer_rightstyle{width: 100%;}
+    .footer_leftstyle{margin-right: 30px;}
+    .homeHead_registertil{margin: 20px auto;width: 200px;}
+    .homeHead_productpopUp_paastitleicon1::before{content:'';background: no-repeat url(../img/home63.png);background-size:100%;width: 20px;height: 20px;position: absolute;top: 0px;left: -25px;}
+    .homeHead_productpopUp_paastitleicon2::before{content:'';background: no-repeat url(../img/home64.png);background-size:100%;width: 20px;height: 20px;position: absolute;top: 0px;left: -25px;}
+    .homeHead_productpopUp_paastitleicon3::before{content:'';background: no-repeat url(../img/home65.png);background-size:100%;width: 20px;height: 20px;position: absolute;top: 0px;left: -25px;}
 }

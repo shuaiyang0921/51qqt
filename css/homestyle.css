@@ -49,7 +49,7 @@
 .home_product_paasright{margin-left: 24px;width: 196px;}
 .home_product_paasTitle{font-size: 22px;margin-bottom: 16px;}
 .home_padd{padding: 60px 120px;}
-.home_competitive_list{background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);border-radius: 4px;margin: 12px;transition: transform 0.3s}
+.home_competitive_list{background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);border-radius: 4px;border: 2px solid #FFFFFF;margin: 12px;transition: transform 0.3s}
 .home_competitive_list:hover{box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.5);transform: translateY(-10px);}
 .home_competitive_listleft{padding: 40px 69px;background-size: cover;background-repeat: no-repeat;}
 .home_competitive_listleft2{padding: 40px 62px;background: url(../img/home85.png) no-repeat center center;background-size: cover;}
@@ -103,7 +103,7 @@
 .home_Caseimg_not_index{width: 520px;height: 360px;}
 .home_Case_inforight{width: calc(100% - 640px);padding: 60px 60px 40px 60px;}
 .home_Case_inforight_title{position: relative;line-height: 28px;}
-.home_Case_inforight_title_case_tab{position: relative;line-height: 32px;}
+.home_Case_inforight_title_case_tab{position: relative;line-height: 28px;}
 .home_Case_inforight_title::before{content: "";width: 48px;height: 40px;position: absolute;top: -30px;left: -30px;background: url(../img/home1.png) no-repeat center center;background-size: cover;}
 .home_Case_inforightImg{height: 46px;margin: 72px 0 16px 0;}
 .home_Case_tabs{width: 100%;margin: 0 auto;}
@@ -154,7 +154,7 @@
 .register_modal{position: fixed;height: 100%;width: 100%;background: rgba(0,0,0,0.5);z-index: 1000;top: 0;}
 .registe_form{margin:auto;width: 454px;height: 394px;background: #FFFFFF;border-radius: 4px;position: relative;padding: 50px 286px 56px 60px;}
 .registe_form_cancel{position: absolute;width: 30px;height: 30px;top: 30px;right: 30px;cursor: pointer;z-index: 2;}
-.Vidio_cancel{position: absolute;width: 24px;height: 24px;top: 4px;right: -34px;cursor: pointer;z-index: 2;}
+.Vidio_cancel{position: absolute;width: 30px;height: 30px;top: 30px;right: -50px;cursor: pointer;z-index: 2;}
 .registe_form_bg{position: absolute;width: 320px;height: 100%;top: 0px;right: 0px;z-index: 1;}
 .registe_form_title{font-size: 28px;height: 40px;line-height: 40px;letter-spacing: 2px;z-index: 2;position: relative;margin-bottom: 40px;}
 .registe_form_text{width: 90px;}
@@ -176,8 +176,8 @@
 .home_Solution_centerImgsleft{margin-left:67px;}
 /* 了解更多样式特效 */
 .information_more:hover .home_product_saasMoreicon{transform: translateX(-10px)}
-.purchase_more:hover + .home_product_saasMoreicon{transform: translateX(10px)}
 .home_more{-webkit-transition: all 0.3s; transition: all 0.3s;cursor: pointer;}
+.home_more:hover .home_product_saasMoreicon{transform: translateX(10px)}
 .achieveCuststy{width: 100%;height: 639px;}
 @media screen and (max-width:1360px) {
     .homeHead_adver_bot{margin: 0px 30px 5px 30px;}
@@ -263,7 +263,7 @@
     .f18{font-size: 16px;}
     .home_register{ font-size: 16px;padding: 30px 20px;}
     .home_register_text{margin: 0 75px 5px 0;}
-    .home_register_but{padding: 5px 30px!important;}
+    .home_register_but{padding: 5px 30px!important;margin: 5px auto;}
     .companyshei{height: 674px;}
     .home_Case_companys{margin-bottom: 10px;}
     .home_Enabling_left{margin: 0 15px;}
@@ -272,7 +272,7 @@
     .home_Solution_center{padding:0}
     .home_Solution_centerImgsleft{margin-left:19px;}
     .achieveCuststy{height: 927px;}
-    .companyStyle{height: 702px;}
+    .companyStyle{height: 718px;}
 }
 @media screen and (max-width:580px) {
     .home_endorsed_botLists{bottom: -470px;}
@@ -344,7 +344,6 @@ div::-webkit-scrollbar{
 
 .register_bottom:hover{
     opacity: 0.8;
-    cursor: pointer;
 }
 
 
@@ -388,80 +387,5 @@ div::-webkit-scrollbar{
 }
 
 .home_Solution_centerbut:hover:after,.home_Solution_centerbut:hover:before {
-    width: 100%;
-}
-
-
-.home_competitive_list_about_us{background-color: #FFFFFF;border-radius: 4px;margin: 12px;transition: transform 0.3s}
-.home_competitive_list_about_us:hover{box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.5);transform: translateY(-10px);}
-
-
-
-
-
-
-
-.registe_form_submit{
-    width: 64px;padding: 13px 192px;background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);border-radius: 4px;cursor: pointer;
-    position: relative;
-    transition: background 0.3s;
-}
-
-.registe_form_submit:after,.registe_form_submit:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 100%;
-    background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);
-    z-index:-2;
-    border-radius: 4px;
-}
-
-.registe_form_submit:hover{
-    z-index:1;
-    background:transparent;
-}
-
-.registe_form_submit:before {
-    transition: 0.3s;
-    background: linear-gradient(270deg, #FFA328 0%, #FF761A 100%);
-    z-index:-1;
-}
-.registe_form_submit:hover:after,.registe_form_submit:hover:before {
-    width: 100%;
-}
-
-
-.registe_form_codebut{
-    width: 80px;padding: 11px 30px;background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);border-radius: 4px;cursor: pointer;
-    position: relative;
-    transition: background 0.3s;
-}
-
-.registe_form_codebut:after,.registe_form_codebut:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 100%;
-    background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);
-    z-index:-2;
-    border-radius: 4px;
-}
-
-.registe_form_codebut:hover{
-    z-index:1;
-    background:transparent;
-}
-
-.registe_form_codebut:before {
-    transition: 0.3s;
-    background: linear-gradient(270deg, #FFA328 0%, #FF761A 100%);
-    z-index:-1;
-}
-.registe_form_codebut:hover:after,.registe_form_codebut:hover:before {
     width: 100%;
 }

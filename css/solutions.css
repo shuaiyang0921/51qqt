@@ -48,33 +48,6 @@
 .manufacturing_listleft_but3{width: 126px;line-height: 22px;height: 22px;border-radius: 4px;padding: 9px 3px;background: rgba(255,255,255,0.2);margin-left: calc(50% - 206px);margin-top: 10px;}
 
 
-@media screen and (max-width:1540px) {
-    .manufacturing_listleft {width: calc(100% - 686px);padding: 40px 200px 72px 40px;}
-}
-@media screen and (max-width:1435px) {
-    
-}
-@media screen and (max-width:1320px) {
-    .manufacturing_listleft_text{height: 112px;}
-}
-@media screen and (max-width:1170px) {
-    .manufacturing_bg{padding: 30px 60px 0 60px;}
-    .manufacturing_case_navs>div{width: 50%;border-bottom: 1px solid #EBEBEB;}
-    .manufacturing_case_butsty{padding: 13px 15px;}
-    .manufacturing_listright_img{width: 100%;}
-    .manufacturing_listleft{width: calc(100% - 80px);padding: 40px;background:rgba(0,92,239,.5);}
-    .manufacturing_listleft_text{margin-bottom: 10px;}
-}
-@media screen and (max-width:580px) {
-    .manufacturing_bg{padding: 15px 15px 0 15px;}
-    .manufacturing_case_but,.manufacturing_case_navs,.manufacturing_case_navs>div{width: 100%;}
-    .manufacturing_listleft{padding: 20px;width: calc(100% - 40px);height: 329px;}
-    .manufacturing_listleft_title{font-size: 20px;line-height: 30px;}
-    .manufacturing_listleft_but1{margin-right: 0px;}
-    /* .manufacturing_listleft .flex-right{justify-content:start} */
-    .manufacturing_listleft_but1{width: 74px;margin-right: 15px}
-    .manufacturing_listleft_but3{width: 136px;margin-left:10px;}
-}
 
 
 
@@ -155,4 +128,32 @@
 .manufacturing_listleft_but1:hover:after,.manufacturing_listleft_but1:hover:before {
     width: 100%;
     color: #FFFFFF;
+}
+
+@media screen and (max-width:1540px) {
+    .manufacturing_listleft {width: calc(100% - 686px);padding: 40px 200px 72px 40px;}
+}
+@media screen and (max-width:1435px) {
+    
+}
+@media screen and (max-width:1320px) {
+    .manufacturing_listleft_text{height: 112px;}
+}
+@media screen and (max-width:1170px) {
+    .manufacturing_bg{padding: 30px 60px 0 60px;}
+    .manufacturing_case_navs>div{width: 50%;border-bottom: 1px solid #EBEBEB;}
+    .manufacturing_case_butsty{padding: 13px 15px;}
+    .manufacturing_listright_img{width: 100%;}
+    .manufacturing_listleft{width: calc(100% - 80px);padding: 40px;background:rgba(0,92,239,.5);}
+    .manufacturing_listleft_text{margin-bottom: 10px;}
+}
+@media screen and (max-width:580px) {
+    .manufacturing_bg{padding: 15px 15px 0 15px;}
+    .manufacturing_case_but,.manufacturing_case_navs,.manufacturing_case_navs>div{width: 100%;}
+    .manufacturing_listleft{padding: 20px;width: calc(100% - 40px);height: 329px;}
+    .manufacturing_listleft_title{font-size: 20px;line-height: 30px;}
+    .manufacturing_listleft_but1{margin-right: 0px;}
+    /* .manufacturing_listleft .flex-right{justify-content:start} */
+    .manufacturing_listleft_but1{width: 74px;margin-right: 15px}
+    .manufacturing_listleft_but3{width: 136px;margin-left:10px;}
 }
