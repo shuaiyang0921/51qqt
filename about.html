@@ -436,7 +436,7 @@
 						</div>
 					</div>
 					<div class="about_history_intro">
-						<div v-for="(item,index) in supplierListData" v-if="Listindex==index">
+						<div v-for="(item,index) in supplierListData" v-show="Listindex==index">
 							<div class="PingFangSCMedium about_history_introTitle">{{item.title}}</div>
 							<div class="homeHead_appleStytle about_history_introSub">{{item.intro}}</div>
 							<div class="f20" style="line-height: 34px;">
@@ -451,11 +451,11 @@
 				<div class="maxwidth">
 					<div class="tac home_product_title PingFangSCMedium colorbai">保持优秀，持续领先</div>
 					<div class="flex-column flex-between">
-						<div class="home_competitive_list flex-column" v-for="item in aboutListData">
+						<div class="home_competitive_list_about_us flex-column" v-for="item in aboutListData">
 							<div class="about_excellent_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
 							<div class="home_competitive_listright">
-								<div class="f20 PingFangSCMedium">{{item.title}}</div>
-								<div class="f14 home_competitive_listtext"><div  v-for="items in item.productChildList">{{items.intro}}</div></div>
+								<div class="f22 PingFangSCMedium">{{item.title}}</div>
+								<div class="f16 home_competitive_listtext"><div  v-for="items in item.productChildList">{{items.intro}}</div></div>
 							</div>
 						</div>
 					</div>

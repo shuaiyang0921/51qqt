@@ -462,7 +462,7 @@
                 <div class="flex-column flex-top flex-between maxwidth" v-else>
                     <div v-for="item in InfoData" class="news_vidio_list bgbai" @click="showvidiomodal(item)" >
                         <div class="news_vidio_img porelative">
-							<img :src="item.image" class="imgsize" :alt="item.title">
+							<img :src="item.image" class="imgsize notPlayImage" :alt="item.title">
 							<img class="about_video_imgplay" src="./images/about/about7.png" class="imgsize" alt="">
 						</div>
                         <div class="news_vidio_pad">
@@ -648,8 +648,12 @@
 					</div>
 					<div class="videoListContainer" ref="videoListContainer" @scroll="scollerFunc($event)">
 						<div v-for="(item,index) in videoList" @click="showvidiomodal(item)">
-							<img width="282" :src="item.image"/>
-							<div class="colorbai videoListTitleText">{{item.title}}</div>
+                            <div>
+                                <div style="overflow:hidden;">
+                                    <img style="border-radius: 4px;" width="282" :src="item.image"/>
+                                </div>
+                            </div>
+							<div class="videoListTitleText">{{item.title}}</div>
 							<div class="colorbai videoListDescriptionText">{{item.description}}</div>
 						</div>
 					</div>
@@ -767,6 +771,7 @@
             changetype(type){
 				this.currentPage=1
 				this.typeIndex = type
+                this.InfoData=[]
 				this.getdata()
 			},
             changePage(item){

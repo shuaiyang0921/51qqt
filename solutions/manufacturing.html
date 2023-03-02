@@ -396,9 +396,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="heiheader"></div>
-			<div class="colorbai wow animate__fadeInUp" data-wow-duration="2s" :style="banner.backgroundImage">
-				<div class="maxwidth">
+			<div class="colorbai wow animate__fadeInUp" data-wow-duration="2s" :style="banner.backgroundImage" style="height: 500px;overflow: hidden;">
+				<div class="maxwidth" style="margin-top: 134px;">
 					<div class="manufacturing_adver_title homeHead_appleStytle" v-html="banner.title"></div>
 					<div class="manufacturing_adver_title">解决方案</div>
 					<div class="f18 PingFangSCMediumBanner manufacturing_adver_text" v-html="banner.intro"></div>
@@ -636,7 +635,7 @@
 				var _getBannerData = p => get('/banner/noToken/queryByModule', p);
 				_getBannerData({module: this.pageName}).then(res => {
 					that.banner=res.result[0];
-					that.banner.backgroundImage="background: url("+that.banner.image+") no-repeat center center;background-size: cover;padding: 60px 60px 72px 60px;"
+					that.banner.backgroundImage="background: url("+that.banner.image+") no-repeat center center;background-size: cover;padding: 0 60px 0 60px;"
 					console.log(res.result[0])
 					console.log("==========")
 				}).catch(err => {

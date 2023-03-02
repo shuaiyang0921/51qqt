@@ -459,7 +459,7 @@
 							</div>
 						</div>
 						<div class="cooperation_why_right flex-column">
-							<div v-if="index<4" class="cooperation_why_rightList tac" v-for="(item,index) in suppliernumData">
+							<div v-if="index<4" :class="'cooperation_why_rightList tac'+(' cooperation_why_rightList'+index)" v-for="(item,index) in suppliernumData">
 								<div class="cooperation_why_rightImg"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
 								<div class="PingFangSCMedium cooperation_why_rightTitle">{{item.title}}</div>
 								<div class="f16  cooperation_why_rightText" v-html="item.intro"></div>

@@ -1,4 +1,4 @@
-.caseStudy_adver{background: url(../images/caseStudy/caseStudy2.png) no-repeat center center;background-size: cover;padding: 80px 0 87px 0px;}
+.caseStudy_adver{background: url(../images/caseStudy/caseStudy2.png) no-repeat center center;background-size: cover;}
 .caseStudy_adver_title{height: 67px;font-size: 48px;line-height: 67px;margin-bottom: 24px;}
 .caseStudy_adver_xian{width: 90px;height: 6px;background: #FF761A;margin-bottom: 25px;}
 .caseStudy_adver_text{height: 28px;line-height: 28px;margin-bottom: 61px;}
@@ -23,7 +23,7 @@
 .caseStudy_FilterList_BotImg{width: 56px;height: 56px;background: #FFFFFF;border: 1px solid #EBEBEB;margin-right: 12px;border-radius: 50%;}
 .caseStudy_FilterList_BotTitle{height: 28px;line-height: 28px;margin-bottom: 8px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;color: #222;}
 .caseStudy_FilterList_BotText{width: 262px;height: 72px;color: #555555;line-height: 24px;}
-.caseStudy_FilterPages{margin-top: 40px;}
+.caseStudy_FilterPages{margin-top: 36px;margin-bottom: 28px;}
 .Pagesprev{width: 8px;height: 14px;cursor: pointer;}
 .Pagesnext{width: 8px;height: 14px;cursor: pointer;}
 .caseStudy_FilterPages_nums{margin: 0 8px;}
@@ -43,12 +43,12 @@
 .caseStudyInfo_rightBot{background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 8px;border: 2px solid #FFFFFF;padding: 22px 41px 4px 30px;}
 .caseStudyInfo_rightBot_title{height: 30px;line-height: 30px;font-size: 22px;margin-bottom: 23px;border-bottom: 1px solid #EBEBEB;padding-bottom: 20px;}
 .caseStudyInfo_rightBot_icon{margin-right: 10px;}
-.caseStudyInfo_rightBot_iconImg{width: 22px;height: 22px;line-height: 22px;margin-bottom: 22px;}
-.caseStudyInfo_rightBot_text a{height: 22px;line-height: 22px;width: 213px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-bottom: 22px;display: block;color: #222222;}
-.caseStudyInfo_rightBot_text a p{height: 22px;line-height: 22px;width: 213px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-bottom: 22px;display: block;color: #222222;}
+.caseStudyInfo_rightBot_iconImg{width: 24px;height: 24px;line-height: 24px;margin-bottom: 22px;}
+.caseStudyInfo_rightBot_text a{height: 24px;line-height: 24px;width: 209px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-bottom: 24px;display: block;color: #222222;}
+.caseStudyInfo_rightBot_text a p{height: 24px;line-height: 24px;width: 209px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-bottom: 24px;display: block;color: #222222;}
 .caseStudyInfo_rightBot_text a:hover{color: #005CEF}
 .caseStudyInfo_rightBot_text a p:hover{color: #005CEF}
-.news_navs{margin-bottom: 24px;}
+.news_navs{margin-bottom: 24px;border-radius: 4px;}
 .news_navs>div{padding: 18px 20px;border-bottom: 2px solid #FFFFFF;margin-right: 10px;line-height: 22px;cursor: pointer;}
 .news_navschenck{font-size: 20px;color: #005CEF;font-weight: 500;border-bottom: 2px solid #005CEF!important;}
 .news_listimg{width: 280px;height: 160px;border-radius: 4px;margin-right: 30px;overflow: hidden;}
@@ -64,12 +64,18 @@
     overflow: hidden;margin-bottom: 24px;}
 .news_listright_but{background: #FFFFFF;padding: 4px 11px;box-shadow: 0px 2px 6px 0px rgba(15,31,87,0.06);border-radius: 2px;color: #888888;}
 .news_listright_but:hover{color: #005CEF}
-.news_vidio_list{width:386px;border: 1px solid #FFFFFF;border-radius: 4px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);margin: 15px 0 2px 0;cursor: pointer;}
+.news_vidio_list{width:386px;border: 1px solid #FFFFFF;border-radius: 4px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);margin: 15px 0 2px 0;cursor: pointer;transition: all 0.3s;}
 .news_vidio_list:hover{
-    width:386px;border: 1px solid #FFFFFF;border-radius: 4px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.5);margin: 15px 0 2px 0;cursor: pointer;
+    width:386px;border: 1px solid #FFFFFF;border-radius: 4px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.5);margin: 15px 0 2px 0;cursor: pointer;transform: translateY(-10px);
 }
-
-.news_vidio_img{width: 384px;height: 216px;}
+/*.news_vidio_list>.news_vidio_img>.notPlayImage:hover{*/
+/*    transform: scale(1.1);*/
+/*}*/
+.news_vidio_list:hover .news_vidio_img>.notPlayImage{
+    transform: scale(1.1);
+}
+.notPlayImage{transition: all 0.3ms;}
+.news_vidio_img{width: 386px;height: 216px;overflow: hidden;transition: all 0.3ms;border-radius: 4px;}
 .news_vidio_pad{padding: 24px;}
 .news_vidio_title{line-height: 28px;margin-bottom: 10px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
 .news_vidio_text{color: #555555;line-height: 24px;height: 120px;width: 336px;word-break: break-all;
@@ -84,7 +90,7 @@
     font-weight: 600;
 }
 .previous_news:hover{
-    color: #005CEF;
+    color: #005CEF;cursor: pointer;
 }
 .next_news{
     margin-top: 15px;
@@ -92,7 +98,7 @@
     font-weight: 600;
 }
 .next_news:hover{
-     color: #005CEF;
+     color: #005CEF;cursor: pointer;
  }
 .hot_title_show_hidden{
     display: none;
@@ -119,18 +125,27 @@
 
 .videoContainer{
     position: absolute;top: 0;left: 0;
-}.videoListContainer{
+}
+.videoListContainer{
     color: #FFFFFF;background: rgba(34, 35, 37, 1);overflow-y: auto;position: absolute;top: 0;right: 0;height: 689px;padding: 10px 0 15px 0;
 }
 .videoListContainer>div{
     cursor: pointer;
 }
-.videoListContainer>div>img{
+.videoListContainer>div>div{
     padding: 10px 20px 5px 20px;
+}
+.videoListContainer>div>div>div>img{
+    transition: all 0.3s;
+}
+.videoListContainer>div>div>div>img:hover{
+    transform: scale(1.1);
 }
 .videoListTitleText{
     width: 282px;text-align: left;font-size: 16px;padding:0 20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+    color: #FFFFFF;
 }
+.videoListTitleText:hover{color: #005CEF;}
 .videoListDescriptionText{
     width: 282px;text-align: left;max-height: 100px;line-height: 20px;font-size: 12px;padding:0 20px;overflow: hidden;word-break: break-all;
     text-overflow: ellipsis;
