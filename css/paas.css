@@ -168,3 +168,24 @@
 .aPaaS_head_but:hover:after,.aPaaS_head_but:hover:before {
     width: 100%;
 }
+.mkt_item{
+    animation-name: product;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+    transform-origin: 0 100%;
+}
+@keyframes product {
+    from {transform: scaleY(0);}
+    to {transform: scaleY(1);}
+}
+/*@keyframes example {*/
+/*    from {opacity: 0;}*/
+/*    to {opacity: 1;}*/
+/*}*/
+/*@keyframes example {*/
+/*    from {transform: translateY(100%);}*/
+/*    to {transform: translateY(0);}*/
+/*    from{opacity: 0}*/
+/*    to {opacity: 1}*/
+/*}*/

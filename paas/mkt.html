@@ -418,10 +418,10 @@
 					<div v-for="(item,index) in listData" :class="index==listIndex?'paas_nav homeHead_appleStytle':''" @mouseenter="changenav(index)">{{item.title}}</div>
 				</div> 
 			</div>
-			<div class="" v-for="(item,index) in listData" v-if="listIndex==index">
+			<div class="" v-for="(item,index) in listData" v-show="listIndex==index">
 				<div class="aPaaS_head_bg">
 					<div class="maxwidth">
-						<div class="flex-column flex-between  aPaaS_head">
+						<div class="flex-column flex-between  aPaaS_head mkt_item">
 							<div class="f16 aPaaS_head_text">
 								<div v-for="items in item.productChildList">
 									<div class="PingFangSCMedium aPaaS_head_text1">{{items.title}}</div>

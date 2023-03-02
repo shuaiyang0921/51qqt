@@ -420,9 +420,9 @@
 				</div>
 			</div>
 			<div class="">
-				<div v-for="(item,index) in passData" v-if="navNum==index">
+				<div v-for="(item,index) in passData" v-show="navNum==index">
 					<div class="aPaaS_head_bg">
-						<div class="flex-column flex-between aPaaS_head maxwidth">
+						<div class="flex-column flex-between aPaaS_head maxwidth mkt_item">
 							<div class="f16 aPaaS_head_text">
 								<div v-for="items in item.productChildList">
 									<div class="PingFangSCMedium aPaaS_head_text1">{{items.title}}</div>

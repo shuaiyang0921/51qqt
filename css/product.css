@@ -33,3 +33,7 @@
 product_child_banner_height{
     height: 500px;
 }
+
+
+.scf_child_navList_left_img{width: 520px;height: 360px;margin: 64px 10px 64px 0;}
+.scf_child_navList_right_text{width: 460px;padding-left: 70px; }

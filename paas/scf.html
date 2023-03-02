@@ -431,9 +431,9 @@
 					<div v-for="(item,index) in listData" :class="index==changeindex?'scf_nav':'scf_nav_other'" @mouseenter="changeNav(index)" v-html="item.title"></div>
 				</div>
 				<div class="">
-					<div class="flex-column flex-center flex-middle" v-for="(item,index) in listData" v-if="index==changeindex">
-						<div class="purchase_child_navList_left_img"><img :src="item.image" class="imgsize" :alt="item.childName"></div>
-						<div class="purchase_child_navList_right_text">
+					<div class="flex-column flex-center flex-middle mkt_item" v-for="(item,index) in listData" v-show="index==changeindex">
+						<div class="scf_child_navList_left_img"><img :src="item.image" class="imgsize" :alt="item.childName"></div>
+						<div class="scf_child_navList_right_text">
 							<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
 							<div class="scf_navList_rightLable f18 PingFangSCMedium bgbai" style="max-width: 396px" v-html="item.intro"></div>
 							<div class="scf_navList_rightText f16" v-html="item.description" ></div>
