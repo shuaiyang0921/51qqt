@@ -618,13 +618,11 @@
 						</video>
 					</div>
 					<div class="videoListContainer" ref="videoListContainer" @scroll="scollerFunc($event)">
-						<div v-for="(item,index) in videoList" @click="showvidiomodal(item)">
-							<div>
-								<div style="overflow:hidden;">
-									<img style="border-radius: 4px;" width="282" :src="item.image"/>
-								</div>
+						<div v-for="(item,index) in videoList" @click="showvidiomodal(item)" class="flex-column flex-center videoListItem">
+							<div class="video_img">
+								<img  width="282" height="158" :src="item.image"/>
 							</div>
-							<div class="colorbai videoListTitleText">{{item.title}}</div>
+							<div class="videoListTitleText">{{item.title}}</div>
 							<div class="colorbai videoListDescriptionText">{{item.description}}</div>
 						</div>
 					</div>
