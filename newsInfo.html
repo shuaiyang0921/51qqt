@@ -398,70 +398,72 @@
 			</div>
 			<div class="heiheader"></div>
 			<div class="caseStudyInfo_bg">
-				<div class="flex-column f16 caseStudyInfo_label">
-					<a class="colorblue" href="./index.html">首页</a>
-					<div class="caseStudyInfo_label_img"><img src="./img/home45.png" class="imgsize" alt="右"></div>
-					<a class="colorblue" href="./news.html">资讯中心</a>
-					<div class="caseStudyInfo_label_img"><img src="./img/home45.png" class="imgsize" alt="右"></div>
-					<div>{{InfoData.title}}</div>
-				</div>
-				<div class="flex-column flex-top">
-					<div class="caseStudyInfo_left">
-						<div class="PingFangSCMedium caseStudyInfo_left_title">{{InfoData.title}}</div>
-						<div class="f14 caseStudyInfo_left_publishtime">发布时间：{{InfoData.publishTime}}</div>
-						<div class="f16 caseStudyInfo_left_text" v-html="InfoData.detail"></div>
-						<!-- <div class="f16 caseStudyInfo_left_text">本次大会以“数字赋能，提质增效”为主题，邀请300余位相关领导、行业专家学者以及制造业优秀CIO汇聚一堂，共谋安徽省制造业数字化转型。原安徽省经信和信息化委员会党委副书记副主任，安徽工业经济联合会会长张德山等政府主管单位领导出席本次峰会。汇聚了来自科大讯飞、美的集团、万兴科技、富士康、江淮汽车、中国石化、安徽六国化工等知名企业的行业大咖、企业负责人、CIO（首席信息官）等，分享企业智能制造、人工智能应用实践及优秀服务商分享智能制造解决方案、优秀案例，共话制造业数字化转型升级之路。</div>
-						<div class="caseStudyInfo_left_img"><img src="./images/caseStudy/caseStudy1.png" class="imgsize" alt="2022第五届安徽省制造业数字化转型峰会"></div>
-						<div class="f16 caseStudyInfo_left_text">工业是立国之本，制造业是国家经济命脉所系。智能制造是制造强国建设的主攻方向，其发展程度直接关乎我国制造业质量水平。2021年12月28日，工业和信息化部等八部门联合对外发布《“十四五”智能制造发展规划》(以下简称《规划》)，绘制了“十四五”时期我国智能制造发展蓝图。</div> -->
+				<div class="maxwidth">
+					<div class="flex-column f16 caseStudyInfo_label">
+						<a class="colorblue" href="./index.html">首页</a>
+						<div class="caseStudyInfo_label_img"><img src="./img/home45.png" class="imgsize" alt="右"></div>
+						<a class="colorblue" href="./news.html">资讯中心</a>
+						<div class="caseStudyInfo_label_img"><img src="./img/home45.png" class="imgsize" alt="右"></div>
+						<div>{{InfoData.title}}</div>
 					</div>
-					<div class="caseStudyInfo_right">
-						<div class="caseStudyInfo_right_img"><img src="./images/caseStudy/caseStudy6.png" class="imgsize" alt="获取更多采购干货分享"></div>
-						<div class="caseStudyInfo_rightBot">
-							<div class="homeHead_appleStytle caseStudyInfo_rightBot_title">热门资讯</div>
-							<div class="flex-column">
-								<div class="caseStudyInfo_rightBot_icon tac">
-									<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy7.png" class="imgsize" alt="第一"></div>
-									<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy8.png" class="imgsize" alt="第二"></div>
-									<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy9.png" class="imgsize" alt="第三"></div>
-									<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>3">4</div>
-									<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>4">5</div>
-									<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>5">6</div>
-									<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>6">7</div>
-									<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>7">8</div>
-									<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>8">9</div>
-									<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>9">10</div>
-								</div>
-								<div class="f16 caseStudyInfo_rightBot_text">
-
-
-									<div v-for="(item,index) in hotList" style="position: relative;">
-										<a v-if="item.type!=4" @mouseover="overFun(index)" @mouseout="outFun(index)" style="z-index: -100" :href="'newsInfo.html?id='+item.id">{{item.title}}</a>
-										<a v-else @mouseover="overFun(index)" @mouseout="outFun(index)" style="z-index: -100" @click="showvidiomodal(item)" >{{item.title}}</a>
-										<div :class="showFullTitle==index?'hot_title_show_before':''"></div>
-										<div :class="showFullTitle==index?'hot_title_show_after':''"></div>
-										<div :class="showFullTitle==index?'hot_title_show':'hot_title_show_hidden'">
-											{{item.title}}
-										</div>
-									</div>
-
-<!--									<a v-for="item in hotList" :href="'newsInfo.html?id='+item.id">{{item.title}}</a>-->
-								</div>
-							</div>
-							
+					<div class="flex-column flex-top">
+						<div class="caseStudyInfo_left">
+							<div class="PingFangSCMedium caseStudyInfo_left_title">{{InfoData.title}}</div>
+							<div class="f14 caseStudyInfo_left_publishtime">发布时间：{{InfoData.publishTime}}</div>
+							<div class="f16 caseStudyInfo_left_text" v-html="InfoData.detail"></div>
+							<!-- <div class="f16 caseStudyInfo_left_text">本次大会以“数字赋能，提质增效”为主题，邀请300余位相关领导、行业专家学者以及制造业优秀CIO汇聚一堂，共谋安徽省制造业数字化转型。原安徽省经信和信息化委员会党委副书记副主任，安徽工业经济联合会会长张德山等政府主管单位领导出席本次峰会。汇聚了来自科大讯飞、美的集团、万兴科技、富士康、江淮汽车、中国石化、安徽六国化工等知名企业的行业大咖、企业负责人、CIO（首席信息官）等，分享企业智能制造、人工智能应用实践及优秀服务商分享智能制造解决方案、优秀案例，共话制造业数字化转型升级之路。</div>
+							<div class="caseStudyInfo_left_img"><img src="./images/caseStudy/caseStudy1.png" class="imgsize" alt="2022第五届安徽省制造业数字化转型峰会"></div>
+							<div class="f16 caseStudyInfo_left_text">工业是立国之本，制造业是国家经济命脉所系。智能制造是制造强国建设的主攻方向，其发展程度直接关乎我国制造业质量水平。2021年12月28日，工业和信息化部等八部门联合对外发布《“十四五”智能制造发展规划》(以下简称《规划》)，绘制了“十四五”时期我国智能制造发展蓝图。</div> -->
 						</div>
+						<div class="caseStudyInfo_right">
+							<div class="caseStudyInfo_right_img"><img src="./images/caseStudy/caseStudy6.png" class="imgsize" alt="获取更多采购干货分享"></div>
+							<div class="caseStudyInfo_rightBot">
+								<div class="homeHead_appleStytle caseStudyInfo_rightBot_title">热门资讯</div>
+								<div class="flex-column">
+									<div class="caseStudyInfo_rightBot_icon tac">
+										<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy7.png" class="imgsize" alt="第一"></div>
+										<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy8.png" class="imgsize" alt="第二"></div>
+										<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy9.png" class="imgsize" alt="第三"></div>
+										<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>3">4</div>
+										<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>4">5</div>
+										<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>5">6</div>
+										<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>6">7</div>
+										<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>7">8</div>
+										<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>8">9</div>
+										<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>9">10</div>
+									</div>
+									<div class="f16 caseStudyInfo_rightBot_text">
+	
+	
+										<div v-for="(item,index) in hotList" style="position: relative;">
+											<a v-if="item.type!=4" @mouseover="overFun(index)" @mouseout="outFun(index)" style="z-index: -100" :href="'newsInfo.html?id='+item.id">{{item.title}}</a>
+											<a v-else @mouseover="overFun(index)" @mouseout="outFun(index)" style="z-index: -100" @click="showvidiomodal(item)" >{{item.title}}</a>
+											<div :class="showFullTitle==index?'hot_title_show_before':''"></div>
+											<div :class="showFullTitle==index?'hot_title_show_after':''"></div>
+											<div :class="showFullTitle==index?'hot_title_show':'hot_title_show_hidden'">
+												{{item.title}}
+											</div>
+										</div>
+	
+	<!--									<a v-for="item in hotList" :href="'newsInfo.html?id='+item.id">{{item.title}}</a>-->
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						<div class="previous_news" @click="turnPage(InfoData.previous.id)" v-if="InfoData.previous">上一篇&nbsp;·&nbsp;{{InfoData.previous.title}}</div>
+						<div class="next_news" @click="turnPage(InfoData.next.id)" v-if="InfoData.next">下一篇&nbsp;·&nbsp;{{InfoData.next.title}}</div>
 					</div>
-					<div class="previous_news" @click="turnPage(InfoData.previous.id)" v-if="InfoData.previous">上一篇&nbsp;·&nbsp;{{InfoData.previous.title}}</div>
-					<div class="next_news" @click="turnPage(InfoData.next.id)" v-if="InfoData.next">下一篇&nbsp;·&nbsp;{{InfoData.next.title}}</div>
 				</div>
 			</div>
 
-			<div class="home_register colorbai">
+			<div class="home_register colorbai wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth flex-column flex-between flex-middle">
 					<div class="PingFangSCMedium">
 						<div class="home_register_text">开启数字化供应链与采购新体验</div>
 						<div class="tar">赋能企业数字化转型与变革</div>
 					</div>
-					<div class="f18 register_bottom home_register_but  homeHead_appleStytle  colorbai" @click="showregistermodal">注册体验</div>
+					<div class="f18 register_bottom home_register_but homeHead_appleStytle  colorbai" @click="showregistermodal()">注册体验</div>
 				</div>
 			</div>
 			<div class="bgfooter">
