@@ -74,7 +74,7 @@
 .news_vidio_list:hover .news_vidio_img>.notPlayImage{
     transform: scale(1.1);
 }
-.notPlayImage{transition: all 0.3ms;}
+.notPlayImage{transition: all 0.3s;}
 .news_vidio_img{width: 386px;height: 216px;overflow: hidden;transition: all 0.3ms;border-radius: 4px;}
 .news_vidio_pad{padding: 24px;}
 .news_vidio_title{line-height: 28px;margin-bottom: 10px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
@@ -127,37 +127,48 @@
     position: absolute;top: 0;left: 0;
 }
 .videoListContainer{
-    color: #FFFFFF;background: rgba(34, 35, 37, 1);overflow-y: auto;position: absolute;top: 0;right: 0;height: 689px;padding: 10px 0 15px 0;
+    color: #FFFFFF;background: rgba(34, 35, 37, 1);overflow-y: auto;position: absolute;top: 0;right: 0;height: 689px;padding: 19px 20px 0 20px;
 }
-.videoListContainer>div{
-    cursor: pointer;
-}
-.videoListContainer>div>div{
-    padding: 10px 20px 5px 20px;
-}
-.videoListContainer>div>div>div>img{
+.videoListItem{
+    width: 282px;margin-bottom: 20px;overflow: hidden;
     transition: all 0.3s;
 }
-.videoListContainer>div>div>div{
-    overflow: hidden;
-    border-radius: 4px;
-    height: 158px;
+.videoListItem:hover{
+    background: rgba(255, 255, 255, 0.10);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    cursor: pointer;
 }
-.videoListContainer>div>div>div>img:hover{
+.video_img{
+    border-radius: 4px;height: 158px;overflow: hidden;
+}
+.video_img>img{
+    transition: all 0.3s;
+}
+.videoListItem:hover img{
     transform: scale(1.1);
 }
+.videoListItem:hover .videoListTitleText{
+    color: rgba(255, 118, 26, 1);
+}
 .videoListTitleText{
-    width: 282px;text-align: left;font-size: 16px;padding:0 20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+    width: 282px;
+    height:22px;text-align: left;font-size: 16px;padding:0 8px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+    margin-top: 10px;
     color: #FFFFFF;
 }
-.videoListTitleText:hover{color: #005CEF;}
+.videoListItem:hover .videoListTitleText:hover{
+    color: #005CEF;
+}
 .videoListDescriptionText{
-    width: 282px;text-align: left;max-height: 100px;line-height: 20px;font-size: 12px;padding:0 20px;overflow: hidden;word-break: break-all;
+    width: 282px;
+    text-align: left;max-height: 100px;line-height: 20px;font-size: 12px;padding:0 8px;overflow: hidden;word-break: break-all;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
     margin-top: 10px;
+    margin-bottom: 6px;
 }
 .videoTitleText{
     width: 857px;text-align: left;height: 33px;line-height: 33px;font-size: 24px;margin-top: 24px;padding-left: 20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
