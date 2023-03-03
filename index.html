@@ -591,9 +591,9 @@
 			<div class="home_endorsed wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth">
 					<div class="tac home_product_title PingFangSCMedium colorbai">行业认可</div>
-					<div class="flex-column flex-between tac colorbai PingFangSCMedium home_endorsed_lists">
+					<div ref="industryRecognition" class="industryRecognition flex-column flex-between tac colorbai PingFangSCMedium home_endorsed_lists">
 						<div class="home_endorsed_list" v-for="item in endorsedList">
-							<div class="home_endorsed_title ">{{item.title}}</div>
+							<div class="home_endorsed_title ">{{item.remark?item.remark:""}}{{item.tag?item.tag:item.title}}</div>
 							<div>{{item.intro}}</div>
 						</div>
 					</div>
@@ -924,10 +924,29 @@
 				imageUrl:'',
 				videoCurrentPage:1,
 				videoTotalPage:0,
-				videoList:[]
+				videoList:[],
+				numChange:false
 			}
 		},
 		watch: {
+			numChange(newVal, oldVal){
+				if (newVal&&newVal!=oldVal){
+					const time=300;
+					this.endorsedList.forEach(sed=>{
+						const title=sed.title;
+						const num=parseInt(title)+"";
+						const intervalTime=time/num
+						sed.remark=0
+						const timeOut=setInterval(()=>{
+							sed.remark=sed.remark+1;
+							if (sed.remark>=num){
+								clearInterval(timeOut);
+							}
+						},intervalTime);
+						sed.tag=title.substring(num.length)
+					})
+				}
+			}
 		},
 		created(){
 			getHost('els')
@@ -935,6 +954,7 @@
 			new WOW().init();
 		},
 		mounted(){
+			window.addEventListener('scroll', this.handleScroll)
 		},
 		methods: {
 			getdata(){
@@ -1000,6 +1020,19 @@
 				.catch(err => {
 					console.log(err,'_getcaseCompanylist获取数据异常');
 				})
+			},
+			getNextNum(){
+
+			},
+			handleScroll(){
+				const target = document.querySelector('.industryRecognition');
+				const clientRect = target.getBoundingClientRect();
+				const innerHeight=window.innerHeight;
+				if (innerHeight>clientRect.top+50){
+					this.numChange=true;
+				}else if (clientRect.top>1000){
+					this.numChange=false;
+				}
 			},
 			showregistermodal(link){
 				console.log(link)
