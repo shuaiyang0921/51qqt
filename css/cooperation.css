@@ -11,7 +11,6 @@
 .cooperation_type_listright{margin-left: 24px;}
 .cooperation_type_listrightTitle{height: 33px;font-size: 24px;line-height: 33px;margin-bottom: 12px;}
 .cooperation_type_listrightText{width: 396px;height: 78px;color: #555555;line-height: 26px;}
-.cooperation_type_listrightBut{margin-top: 23px;color: #FFFFFF;line-height: 20px;padding: 7px 22px;width: 56px;background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);border-radius: 2px;cursor: pointer;display: none;}
 .cooperation_type_listrightSpan{margin-top: 32px;}
 .cooperation_type_listrightSpan>span{padding: 3px 15px;margin-right: 8px;background: #FFFFFF;border-radius: 12px;border: 1px solid #EBEBEB;color: #888888;line-height: 17px;height: 17px;}
 .cooperation_why{padding: 60px 120px;}
@@ -47,4 +46,82 @@
 }
 .cooperation_form_Vercodemagbot{padding: 12px 24px 12px 16px;border-radius: 2px;border: 1px solid #DADBDD;background: #FFFFFF;width: calc(100% - 132px);}
 .cooperation_form_Vercode{width: calc(100% - 80px);}
-.cooperation_form_submit{width: calc(100% - 90px);padding: 11px 0px;background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);border-radius: 4px;margin-left: 90px;height: 22px;line-height: 22px;cursor: pointer;}
+
+
+
+
+
+
+
+.cooperation_form_submit{
+    width: calc(100% - 90px);padding: 11px 0px;background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);border-radius: 4px;margin-left: 90px;height: 22px;line-height: 22px;cursor: pointer;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.cooperation_form_submit:after,.cooperation_form_submit:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);
+    z-index:-2;
+    border-radius: 4px;
+}
+
+.cooperation_form_submit:hover{
+    z-index:1;
+    background:transparent;
+}
+
+.cooperation_form_submit:before {
+    transition: 0.3s;
+    background: linear-gradient(270deg, #FFA328 0%, #FF761A 100%);
+    z-index:-1;
+}
+.cooperation_form_submit:hover:after,.cooperation_form_submit:hover:before {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+.cooperation_type_listrightBut{
+    margin-top: 23px;color: #FFFFFF;line-height: 20px;padding: 7px 22px;width: 56px;background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);border-radius: 2px;cursor: pointer;display: none;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.cooperation_type_listrightBut:after,.cooperation_type_listrightBut:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);
+    z-index:-2;
+    border-radius: 4px;
+}
+
+.cooperation_type_listrightBut:hover{
+    z-index:1;
+    background:transparent;
+}
+
+.cooperation_type_listrightBut:before {
+    transition: 0.3s;
+    background: linear-gradient(270deg, #FFA328 0%, #FF761A 100%);
+    z-index:-1;
+}
+.cooperation_type_listrightBut:hover:after,.cooperation_type_listrightBut:hover:before {
+    width: 100%;
+}

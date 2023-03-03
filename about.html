@@ -452,7 +452,7 @@
 					<div class="flex-column flex-between">
 						<div class="home_competitive_list_about_us flex-column" v-for="item in aboutListData">
 							<div class="about_excellent_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
-							<div class="home_competitive_listright">
+							<div class="home_competitive_listright" style="background-color: #FFFFFF">
 								<div class="f22 PingFangSCMedium">{{item.title}}</div>
 								<div class="f16 home_competitive_listtext"><div  v-for="items in item.productChildList">{{items.intro}}</div></div>
 							</div>

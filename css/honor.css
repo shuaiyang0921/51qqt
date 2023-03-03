@@ -6,12 +6,14 @@
 .honor_certificate_list{padding: 21px 20px;background: #FFFFFF;border-radius: 4px;border: 1px solid #EBEBEB;cursor: pointer;margin: 17px 0px;margin-right: 18px;transition: all 0.3s}
 .honor_certificate_list:hover{box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.2);transform: translateY(-10px);}
 .honor_certificate_list:hover img{transform: scale(1.1);}
+.honor_certificate_img>img{transition: all 0.3s}
 .honor_certificate_img{width: 240px;height: 336px;margin-bottom: 20px;background: #F7F8FA;overflow: hidden;transition:  all 0.3s;}
 .honor_text{line-height: 25px;width: 208px;height: 50px;margin: 20px auto 0;}
 .honor_certificate_text{line-height: 25px;width: 208px;height: 50px;margin: 20px auto 0;}
 .honor_certificate_navs{margin-bottom: 28px;}
 .honor_certificate_bg{background: #F7F8FA;}
-.honor_qualifications_img{width: 240px;height: 160px;background: #F7F8FA;}
+.honor_qualifications_img{width: 240px;height: 160px;background: #F7F8FA;overflow: hidden;}
+.honor_qualifications_img>img{transition: all 0.3s}
 .navNone{
     display: none;
 }

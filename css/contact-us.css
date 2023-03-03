@@ -6,12 +6,12 @@
 .contactUs_info_leftTitle{height: 37px;font-size: 26px;line-height: 37px;margin-bottom: 16px;}
 .contactUs_info_leftText{height: 45px;font-size: 32px;color: #005CEF;line-height: 45px;margin-bottom: 30px;}
 .contactUs_info_leftMailbox{height: 28px;line-height: 28px;}
-.contactUs_info_leftMailboximg{width: 22px;height: 18px;margin-right: 10px;}
+.contactUs_info_leftMailboximg{width: 22px;height: 18px;margin-right: 10px;margin-top: 2px;}
 .contactUs_info_right{width: calc(100% - 652px);background: url(../images/about/contactUs2.png) no-repeat center center;background-size: cover;padding: 20px 56px;}
 .contactUs_info_rightImg{width: 140px;height: 140px;}
 .contactUs_info_rightText{height: 22px;color: #005CEF;line-height: 22px;margin: 5px 0;}
 .contactUs_info_rightQRcode{padding: 8px 20px 0 20px;background: #F7F8FA;}
-.contactUs_work{background: #FFFFFF;border-radius: 4px;border: 1px solid #EBEBEB;padding-bottom: 30px;margin: 15px 0;}
+.contactUs_work{background: #FFFFFF;border-radius: 4px;border: 1px solid #EBEBEB;padding-bottom: 30px;margin: 15px 0;transition: all 0.3s}
 .contactUs_work:hover{box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.2);transform: translateY(-10px);}
 .contactUs_workImg{width: 384px;height: 160px;}
 .contactUs_workTitle{height: 30px;font-size: 22px;line-height: 30px;margin: 24px 40px 12px 40px;}
