@@ -424,7 +424,7 @@ div::-webkit-scrollbar{
     .home_endorsed_botList{width: 96px;}
     .home_information{padding: 350px 10px 15px 10px;}
     .home_Case_More{padding: 10px 22px;}
-    .home_partners{padding: 10px;}
+    .home_partners{padding: 30px 10px;}
     .home_partners_bgsty{padding: 30px 0 70px 0;margin-bottom: 60px;}
     .home_partners_but{width: 100%;position: absolute;bottom: -40px;}
     .home_Case_companyImg{padding: 10px;}
@@ -447,7 +447,7 @@ div::-webkit-scrollbar{
     .homeHead_adver_botstyle{display: block;width: auto;}
     .homeHead_adver_botright{width: 56px;height: 20px;line-height: 20px;margin-left:0;}
     .homeHead_adver_botright .f16{font-size: 14px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
-    .home_title{font-size: 20px;line-height: 28px;margin: 30px 0 20px 0;padding: 0 15px;}
+    .home_title{font-size: 20px;line-height: 28px;margin: 0px 0 20px 0;padding: 0 15px;}
     .homeHead_tabs{bottom:25px;}
     .homeHead_adver1_title{font-size: 26px;text-align: center;}
     .homeHead_registertil {width: 56px;margin: 0;}
@@ -464,7 +464,7 @@ div::-webkit-scrollbar{
     .home_endorsed_botImg{width: 60px;height: 60px;}
     .home_endorsed_ying {left: 55px;}
     .footer_rightstyle{display: none;}
-    .home_partners_img{margin-bottom: 80px;}
+    .home_partners_img{margin-bottom: 127px;margin-top: 0;}
     .home_endorsed_botList:last-of-type{width: 100%;margin-top: 20px;}
     .home_endorsed_botList:last-of-type .porelative{display: none;}
     .home_Caseimg{display: block;width: 100%;height: 196px;}
