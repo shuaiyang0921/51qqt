@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="./css/homestyle.css" />
 		<link rel="stylesheet" href="./css/caseStudy.css" />
 		<link rel="stylesheet" href="./css/animate.min.css" />
+		<link rel="stylesheet" href="./css/cooperation.css" />
 		<script src="./js/jquery.min.js"></script>
 		<script src="./js/load.js"></script>
 		<script type="text/javascript">
@@ -426,7 +427,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="PingFangSCMedium tac home_title">{{firstdemo[0]?firstdemo[0].bigTitle:''}}</div>
 			<div class="home_Enabling wow animate__fadeInUp " data-wow-duration="2s">
 				<template  v-for="(item,index) in firstdemo">
@@ -694,6 +695,54 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="cooperation_why">
+				<div class="maxwidth">
+					<div class="PingFangSCMedium tac home_title">为什么选择与企企通合作</div>
+					<div class="flex-column">
+						<!--						<div class="cooperation_why_left">-->
+						<!--							<div class="cooperation_why_lefttop"><img src="./images/cooperation/cooperation5.png" class="imgsize" alt="品牌实力"></div>-->
+						<!--							<div class="colorbai PingFangSCMedium cooperation_why_leftTitle">品牌实力</div>-->
+						<!--							<div class="f16 cooperation_why_leftText">-->
+						<!--								企企通在-->
+						<!--								<span>SRM赛道持续领先</span><br/>-->
+						<!--								服务众多-->
+						<!--								<span>500强</span>-->
+						<!--								及-->
+						<!--								<span>中小微企业客户</span><br/>-->
+						<!--								国家级“高新技术企业”及多项安全/ISO认证<br/>-->
+						<!--								先后获得“中国企业服务创新成长50强”“大中华区IT服务业独角兽大奖”等-->
+						<!--								<span>30+行业</span>-->
+						<!--								权威荣誉奖项-->
+						<!--							</div>-->
+						<!--						</div>-->
+						<div v-if="suppliernumData[4]" class="cooperation_why_left" :style="{backgroundImage: 'url('+suppliernumData[4].image+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover'}">
+							<div class="cooperation_why_lefttop"><img :src="suppliernumData[4].icon" class="imgsize" alt="品牌实力"></div>
+							<div class="colorbai PingFangSCMedium cooperation_why_leftTitle">{{suppliernumData[4].title}}</div>
+							<div class="f16 cooperation_why_leftText" v-html="suppliernumData[4].intro">
+								<!--								企企通在-->
+								<!--								<span>SRM赛道持续领先</span><br/>-->
+								<!--								服务众多-->
+								<!--								<span>500强</span>-->
+								<!--								及-->
+								<!--								<span>中小微企业客户</span><br/>-->
+								<!--								国家级“高新技术企业”及多项安全/ISO认证<br/>-->
+								<!--								先后获得“中国企业服务创新成长50强”“大中华区IT服务业独角兽大奖”等-->
+								<!--								<span>30+行业</span>-->
+								<!--								权威荣誉奖项-->
+							</div>
+						</div>
+						<div class="cooperation_why_right flex-column">
+							<div v-if="index<4" :class="'cooperation_why_rightList tac'+(' cooperation_why_rightList'+index)" v-for="(item,index) in suppliernumData">
+								<div class="cooperation_why_rightImg"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
+								<div class="PingFangSCMedium cooperation_why_rightTitle">{{item.title}}</div>
+								<div class="f16  cooperation_why_rightText" v-html="item.intro"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<div class="home_register colorbai wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth flex-column flex-between flex-middle">
 					<div class="PingFangSCMedium">
@@ -958,7 +1007,8 @@
 				videoCurrentPage:1,
 				videoTotalPage:0,
 				videoList:[],
-				numChange:false
+				numChange:false,
+				suppliernumData:[]
 			}
 		},
 		watch: {
@@ -984,6 +1034,7 @@
 		created(){
 			getHost('els')
 			this.getdata()
+			this.getCooperative()
 			new WOW().init();
 		},
 		mounted(){
@@ -1054,6 +1105,26 @@
 					console.log(err,'_getcaseCompanylist获取数据异常');
 				})
 			},
+
+			getCooperative(){
+				that = this
+				var _getData = p => get('/content/websiteCooperativePartner/noToken/queryPageData', p);
+				_getData().then(res => {
+					that.cooperationInfo = res.result['1']
+					that.suppliernumData = res.result['2']
+				}).catch(err => {
+					console.log(err,'_getData获取数据异常');
+				})
+				var _getData = p => get('/general/websiteGeneral/noToken/queryIndexData', p);
+				_getData({})
+						.then(res => {
+							that.partnersImg = res.result['首页-合作伙伴'];
+						})
+						.catch(err => {
+							console.log(err,'_getData获取数据异常');
+						})
+			},
+
 			getNextNum(){
 
 			},

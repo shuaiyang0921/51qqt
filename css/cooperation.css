@@ -13,6 +13,7 @@
 .cooperation_type_listrightText{width: 396px;height: 78px;color: #555555;line-height: 26px;}
 .cooperation_type_listrightSpan{margin-top: 32px;}
 .cooperation_type_listrightSpan>span{padding: 3px 15px;margin-right: 8px;background: #FFFFFF;border-radius: 12px;border: 1px solid #EBEBEB;color: #888888;line-height: 17px;height: 17px;}
+
 .cooperation_why{padding: 60px 120px;}
 .cooperation_why_left{padding: 32px 30px 143px 30px;background: url(../images/cooperation/cooperation2.png) no-repeat center center;background-size: cover;}
 .cooperation_why_lefttop{width: 56px;width: 56px;margin-bottom: 20px;}
