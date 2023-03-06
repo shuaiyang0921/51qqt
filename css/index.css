@@ -198,8 +198,8 @@
 .footer_aboutstyle a:hover{color: #FFFFFF;}
 .footer_bottom{padding: 30px 0;background: #0D0E10;}
 .footer_bottom a,.footer_bottom div{color: rgba(255,255,255,0.6)!important;}
-.footer_bottomtext{margin: 0 40px;}
-
+.footer_bottomtext{margin-right: 40px;}
+.footer_bottom_num{margin-left: 10px;}
 /* 头部标题样式 */
 .manufacturing_adver_title{font-size: 48px;line-height: 62px;}
 /* 移动端头部 */
@@ -337,4 +337,11 @@
     .homeHead_productpopUp_paastitleicon1::before{content:'';background: no-repeat url(../img/home63.png);background-size:100%;width: 20px;height: 20px;position: absolute;top: 0px;left: -25px;}
     .homeHead_productpopUp_paastitleicon2::before{content:'';background: no-repeat url(../img/home64.png);background-size:100%;width: 20px;height: 20px;position: absolute;top: 0px;left: -25px;}
     .homeHead_productpopUp_paastitleicon3::before{content:'';background: no-repeat url(../img/home65.png);background-size:100%;width: 20px;height: 20px;position: absolute;top: 0px;left: -25px;}
+}
+@media screen and (max-width:780px) {
+    .rightView{display: none;}
+    .footer_bottom_num{width: 100%;margin-left: 0;margin-bottom: 10px;}
+    .footer{padding-top: 30px;}
+    .footer_topstyle{padding: 0 20px;margin: 0;}
+    .footer_aboutstyle {display: none;}
 }
