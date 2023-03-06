@@ -1037,7 +1037,6 @@
 			getHost('els')
 			this.getdata()
 			this.clientWidth = document.documentElement.clientWidth
-			this.getCooperative()
 			new WOW().init();
 		},
 		mounted(){
@@ -1050,8 +1049,9 @@
 				var _getData = p => get('/general/websiteGeneral/noToken/queryIndexData', p);
 				_getData({})
 				.then(res => {
+					that.suppliernumData = res.result['首页-选择企企通']
 					that.firstdemo = res.result['首页-第一模块'];
-					that.endorsedList = res.result['关于我们-加入我们-热招岗位'];
+					that.endorsedList = res.result['首页-行业认可文字'];
 					that.productSaasList = res.result['首页-产品模块'].SaaS云;
 					that.productPaasList = res.result['首页-产品模块'].Paas平台;
 					that.competitiveList = res.result['首页-价值模块'];
@@ -1108,26 +1108,6 @@
 					console.log(err,'_getcaseCompanylist获取数据异常');
 				})
 			},
-
-			getCooperative(){
-				that = this
-				var _getData = p => get('/content/websiteCooperativePartner/noToken/queryPageData', p);
-				_getData().then(res => {
-					that.cooperationInfo = res.result['1']
-					that.suppliernumData = res.result['2']
-				}).catch(err => {
-					console.log(err,'_getData获取数据异常');
-				})
-				var _getData = p => get('/general/websiteGeneral/noToken/queryIndexData', p);
-				_getData({})
-						.then(res => {
-							that.partnersImg = res.result['首页-合作伙伴'];
-						})
-						.catch(err => {
-							console.log(err,'_getData获取数据异常');
-						})
-			},
-
 			getNextNum(){
 
 			},
