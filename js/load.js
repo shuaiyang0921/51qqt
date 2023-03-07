@@ -1,3 +1,8 @@
+$(document).on('click','img',function(){
+    if (this.dataset.href){
+        window.location.href=this.dataset.href
+    }
+});
 function __CreateJSPath(js) {
     var scripts = document.getElementsByTagName("script");
     var path = "";
