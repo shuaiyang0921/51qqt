@@ -83,7 +83,7 @@
 .homephoneHead_navchild_Subhead{margin: 26px 0 26px 38px;padding-right: 20px;}
 .shownavchild_text{display: none;}
 .homephoneHead_navchild_text{margin: 25px 0 25px 38px;width: 100%;display: block;}
-.homephoneHead_right_text{margin: 15px 0 15px 20px;width: 100%;display: block;}
+.homephoneHead_right_text{margin: 15px 0 15px 0px;width: 100%;display: block;}
 /* 导航产品弹窗 */
 .homeHead_productpopUp_saas{background: linear-gradient(135deg, rgba(0,85,255,0) 0%, rgba(0,85,255,0.04) 100%);}
 .homeHead_productpopUp_left{padding: 42px 30px;width: 160px;height: 237px;background: no-repeat url(../img/home47.png);background-size:100%;}
