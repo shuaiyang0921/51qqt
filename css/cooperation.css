@@ -122,6 +122,6 @@
 @media screen and (max-width:582px) {
     .cooperation_why{padding: 30px 15px;}
     .cooperation_why_leftText,.cooperation_why_right,.cooperation_why_rightList{width: 100%;}
-    .cooperation_why_rightList0, .cooperation_why_rightList1{border: 1px solid #EBEBEB;;}
-
+    .cooperation_why_rightList0,.cooperation_why_rightList1{border: 1px solid #EBEBEB;}
+    .cooperation_why_rightList0,.cooperation_why_rightList2{border-right: 1px solid #EBEBEB;}
 }

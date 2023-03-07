@@ -435,7 +435,7 @@ div::-webkit-scrollbar{
     .companyshei{height: 674px;}
     .home_Case_companys{margin-bottom: 30px;padding: 0;}
     .home_Enabling_left{margin: 0;}
-    .home_Enabling_right{margin: 16px 0px 0 0px;}
+    .home_Enabling_right{margin: 20px 0px 0 0px;}
     .home_Solution_centerImgs{width: 100%;}
     .home_Solution_center{padding:0}
     .home_Solution_centerImgsleft{margin-left:19px;}
@@ -447,7 +447,7 @@ div::-webkit-scrollbar{
     .homeHead_adver_botstyle{display: block;width: auto;}
     .homeHead_adver_botright{width: 56px;height: 20px;line-height: 20px;margin-left:0;}
     .homeHead_adver_botright .f16{font-size: 14px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
-    .home_title{font-size: 20px;line-height: 28px;margin: 0px 0 20px 0;padding: 0 15px;}
+    .home_title{font-size: 20px;line-height: 28px;margin: 20px 0;padding: 0 15px;}
     .homeHead_tabs{bottom:25px;}
     .homeHead_adver1_title{font-size: 26px;text-align: center;}
     .homeHead_registertil {width: 56px;margin: 0;}
