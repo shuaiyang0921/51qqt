@@ -764,10 +764,12 @@
 				this.showmodel = false
 			},
             changetype(type){
-                if (type=='news.html'){
-                    window.location.href="/news/"+type
-                }else {
-                    window.location.href="/"+type
+                if (this.typeIndex!=type){
+                    if (type!='news.html'){
+                        window.location.href="/news/"+type
+                    }else {
+                        window.location.href="/"+type
+                    }
                 }
 			},
             changePage(item){
