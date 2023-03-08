@@ -634,29 +634,27 @@
 			</div>
 			<div class="home_Solution wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth">
-					<div class="tac home_product_title PingFangSCMedium colorbai">我们为全行业提供更适用的客户解决方案</div>
+					<div class="tac home_product_title PingFangSCMedium home_Solution_title">我们为全行业提供更适用的客户解决方案</div>
 					<div class="f20 tac home_Solution_tabs flex-column">
 						<div v-for="(item,index) in SolutionList" @mouseenter="changenavstop(index,item)" :class="index==1?caseTabClass1:caseTabClass2" >{{item[1][0].type_dictText}}</div>
 						
 					</div>
-					<div class="flex-column flex-top home_Solution_item" v-for="(item,index) in SolutionList" :class="index==navstopIndex?'showitem':''">
+					<div class="flex-column flex-top home_Solution_item" v-for="(item,index) in SolutionList" :class="index==navstopIndex?'showitem':''" @touchstart="handelTouchStart" @touchend="handelTouchend">
 						<div class="f16 home_Solution_left home_Solutionleft">
 							<div v-for="(itemnavs,indexnavs) in item[0]" :class="indexnavs==Solutionindex?'bgblue':''" @mouseenter=changeSolution(indexnavs,item[1],itemnavs)>{{itemnavs}}</div>
 							
 						</div>
 						<div class="flex-column home_Solution_rightwidth" v-for="(itemdemo,indexdemo) in item[1]" :style="indexdemo==Solutionindex?'display: flex;':''">
 							<div class="home_Solution_center">
-								<div style="padding: 10px 20px;">
-									<div class="f24 colorbai PingFangSCMedium">{{itemdemo.title}}</div>
-									<div class="f14 colorbai home_Solution_centerText">{{itemdemo.intro}}</div>
-									<div class="home_Solution_centerImgs flex-column">
-										<div class="tac" v-for="(itemchenk,tagIndex) in itemdemo.tags" :class="tagIndex!=0?'home_Solution_centerImgsleft':''">
-											<div class="home_Solution_centerImg"><img :src="itemchenk.src" class="imgsize" :alt="itemchenk.title"></div>
-											<div class="f14 colorbai">{{itemchenk.title}}</div>
-										</div>
+								<div class="f24 colorbai PingFangSCMedium">{{clientWidth>582?itemdemo.title:itemdemo.name_dictText}}</div>
+								<div class="f14 colorbai home_Solution_centerText">{{clientWidth>582?itemdemo.intro:itemdemo.mobileTitle}}</div>
+								<div class="home_Solution_centerImgs flex-column">
+									<div class="tac" v-for="(itemchenk,tagIndex) in itemdemo.tags" :class="tagIndex!=0?'home_Solution_centerImgsleft':''">
+										<div class="home_Solution_centerImg"><img :src="itemchenk.src" class="imgsize" :alt="itemchenk.title"></div>
+										<div class="f14 colorbai">{{itemchenk.title}}</div>
 									</div>
-									<a v-if="index==1" class="f14 colorbai home_Solution_centerbut" :href="'./solutions/manufacturing.html?name='+pageName">方案详情</a>
 								</div>
+								<a v-if="index==1" class="f14 colorbai home_Solution_centerbut" :href="'./solutions/manufacturing.html?name='+pageName">方案详情</a>
 							</div>
 							<div class="home_Solution_right flex-column">
 								<div class="home_Solution_rightimg" v-for="itemlogos in itemdemo.logos"><img :src="itemlogos" class="imgsize" alt="itemlogos" style="border-radius: 4px;"></div>
@@ -1103,7 +1101,10 @@
 				videoList:[],
 				numChange:false,
 				suppliernumData:[],
-				clientWidth:0
+				clientWidth:0,
+				startTime: 0,
+				startX: 0,
+				startY: 0,
 			}
 		},
 		watch: {
@@ -1414,6 +1415,37 @@
 					console.log(err,'_getVideoData获取数据异常');
 				})
 			},
+			handelTouchStart(e){
+				console.log('按钮', e.changedTouches[0].clientX);
+				this.startTime = Date.now()
+				this.startX = e.changedTouches[0].clientX;
+				this.startY = e.changedTouches[0].clientY;
+			},
+			handelTouchend(e) {
+				console.log('按钮', e.changedTouches[0].clientX);
+				let endTime = Date.now()
+				let endX = e.changedTouches[0].clientX;
+				let endY = e.changedTouches[0].clientY;
+				if (endTime - this.startTime > 2000) { //正常操作不会大于2秒
+					return
+				}
+				let direction = '';
+				//如果Y轴移动小于10,证明是上下滑动,所以不做处理
+				if (Math.abs(endX - this.startX) > 10 && Math.abs(endY - this.startY) < 20) {
+					direction = endX - this.startX > 0 ? 'right' : 'left'
+				}else{
+					return
+				}
+				if(direction=='right'){
+					if(this.Solutionindex!=0){
+						this.Solutionindex--
+					}
+					
+				}else{
+					this.Solutionindex++
+				}
+				console.log(direction);
+			}
 		},
 		computed:{
 			imgwidth(){
