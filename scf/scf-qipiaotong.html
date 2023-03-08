@@ -15,7 +15,6 @@
         <link rel="stylesheet" href="../css/solutions.css">
         <!-- PaaS平台样式 -->
         <link rel="stylesheet" href="../css/paas.css">
-        <link rel="stylesheet" href="../css/product.css">
 		<link rel="stylesheet" href="../css/animate.min.css" />
 		<script src="../js/jquery.min.js"></script>
         <script src="../js/home.js"></script>
@@ -66,7 +65,7 @@
                                                             <div class="f12 homeHead_productpopUp_subheading">为直播电商量身打造</div>
                                                         </a>
                                                         <div class="homeHead_productpopUp_rightText">
-                                                            <div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon4 colorblue"><a href="../paas/mkt.html">营销云</a><span class="iconright"></span></div>
+                                                            <div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon4 colorblue"><a href="../mkt/mkt.html">营销云</a><span class="iconright"></span></div>
                                                             <div class="f12 homeHead_productpopUp_subheading">提供一站式营销解决方案</div>
                                                             <!-- <a href="../paas/mkt.html?navNum=0">内容创意</a>
                                                             <a href="../paas/mkt.html?navNum=1">广告投放</a>
@@ -74,7 +73,7 @@
                                                             <a href="../paas/mkt.html?navNum=3">客户管理</a> -->
                                                         </div>
                                                         <div class="homeHead_productpopUp_rightText">
-                                                            <div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon3 colorblue"><a href="../paas/scf.html">赋能云</a><span class="iconright"></span></div>
+                                                            <div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon3 colorblue"><a href="scf.html">赋能云</a><span class="iconright"></span></div>
                                                             <div class="f12 homeHead_productpopUp_subheading">中小微企快捷资产资金对接平台</div>
                                                             <!-- <a href="../paas/scf-qiliantong.html">企链通</a>
                                                             <a href="../paas/scf-qilitong.html">企利通</a>
@@ -322,12 +321,12 @@
 									</div>
 									<div>
 										<div class="flex-column flex-between homephoneHead_navchild_Subhead">
-											<div class="homeHead_productpopUp_titleicon3"><a href="../paas/scf.html">赋能云</a></div>
+											<div class="homeHead_productpopUp_titleicon3"><a href="scf.html">赋能云</a></div>
 										</div>
 									</div>
 									<div>
 										<div class="flex-column flex-between homephoneHead_navchild_Subhead">
-											<div class="homeHead_productpopUp_titleicon4"><a href="../paas/mkt.html">营销云</a></div>
+											<div class="homeHead_productpopUp_titleicon4"><a href="../mkt/mkt.html">营销云</a></div>
 										</div>
 									</div>
 									<div class="flex-column flex-between homephoneHead_navchild_Subhead">
@@ -401,50 +400,49 @@
 				</div>
 			</div>
 			<!-- <div class="heiheader"></div> -->
-			<div class="wow animate__fadeInUp" data-wow-duration="2s" :style="{backgroundImage: 'url('+(BannerImg[0]?BannerImg[0].image:'')+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover,height:'500px''}">
-				<div class="qqgouQ3_adver flex-column flex-middle flex-between maxwidth" >
-					<div class="paas_adver_left">
-						<div class="manufacturing_adver_title homeHead_appleStytle" v-html="BannerImg[0]?BannerImg[0].title:''"></div>
-						<div class="f16 PingFangSCMedium paas_adver_text" v-html="BannerImg[0]?BannerImg[0].intro:''"></div>
-						<div class="flex-column flex-middle f18 paas_adver_buts homeHead_appleStytle colorgary">
-							<div v-for="(item,index) in tags">{{item}}</div>
+			<div class="paas_topBg wow animate__fadeInUp" data-wow-duration="2s">
+				<div :style="{backgroundImage: 'url('+(BannerImg[0]?BannerImg[0].image:'')+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover',height:'500px'}">
+					<div class="supplier_adver flex-column flex-middle flex-center maxwidth" >
+						<div class="qilian_adver_left">
+							<div class="adver_title homeHead_appleStytle" v-html="BannerImg[0]?BannerImg[0].title:''"></div>
+							<div class="f16 PingFangSCMedium paas_adver_text" v-html="BannerImg[0]?BannerImg[0].intro:''"></div>
+							<div class="flex-column flex-middle f18 paas_adver_buts homeHead_appleStytle colorgary">
+								<div v-for="(item,index) in tags">{{item}}</div>
+							</div>
+							<div class="f14 homeHead_registertil tac homeHead_appleStytle product_banner_register" @click="showregistermodal">注册体验</div>
 						</div>
-						<div class="f14 homeHead_registertil tac homeHead_appleStytle product_banner_register" @click="showregistermodal">注册体验</div>
+						<div class="qilian_topImg"><img :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize" alt="企票通"></div>
 					</div>
 				</div>
 			</div>
 			<div class="padBg">
 				<div class="maxwidth">
-					<div class="PingFangSCMedium tac home_title">{{supplierImgData[0]?supplierImgData[0].bigTitle:''}}</div>
-					<div class=""><img :src="supplierImgData[0]?supplierImgData[0].image:''" class="imgsize" :alt="supplierImgData[0]?supplierImgData[0].bigTitle:''"></div>
+					<div class="PingFangSCMedium tac home_title">{{ImgData[0]?ImgData[0].bigTitle:''}}</div>
+					<div class="tac f18 padbott">业务模式：对核心企业开具的商业承兑汇票进行保贴，减少现金支付和银承支付方式</div>
+					<div class="PaaS_img"><img :src="ImgData[0]?ImgData[0].image:''" class="imgsize" :alt="ImgData[0]?ImgData[0].bigTitle:''"></div>
 				</div>
 			</div>
 			<div class="padBg bggray">
 				<div class="maxwidth">
-					<div class="PingFangSCMedium tac home_title" style="margin-bottom: 0">核心能力</div>
-					<div v-for="(item,index) in supplierListData">
-						<div class="flex-column flex-center flex-middle" v-if="index%2==0">
-							<div class="purchase_child_navList_left_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
-							<div class="purchase_child_navList_right_text">
-								<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
-								<div class="purchase_navList_rightText f14" v-html="item.intro"></div>
-								<div class="f14 colorblue home_Enabling_text" v-for="items in item.productChildList">{{items.intro}}</div>
-								<div class="tac colorbai homeHead_appleStytle aPaaS_head_but" @click="showregistermodal">立即咨询</div>
+					<div class="PingFangSCMedium tac home_title">业务价值</div>
+					<div class="flex-column flex-center flex-middle porelative">
+						<div class="qirongtong_Business"><img src="../images/paas/qirongtong4.png" class="imgsize" alt="业务价值"></div>
+						<div class="qipiaotong_Business_lists">
+							<div class="flex-column flex-middle" v-for="(item,index) in listData" :class="index==0?'qirongtong_Business_list3':''">
+								<div class="qirongtong_Business_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
+								<div>
+									<div class="f24 PingFangSCMedium qirongtong_Business_title color222" v-html="item.title"></div>
+									<div class="f16 qirongtong_Business_text qipiaotong_Business_textwidth" v-html="item.intro"></div>
+								</div>
 							</div>
-						</div>
-						<div class="flex-column flex-center flex-middle bgbai" v-else>
-							<div class="purchase_child_navList_left_text">
-								<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
-								<div class="purchase_navList_rightText f14" v-html="item.intro"></div>
-								<div class="f14 colorblue home_Enabling_text" v-for="items in item.productChildList">{{items.intro}}</div>
-								<div class="tac colorbai homeHead_appleStytle aPaaS_head_but" @click="showregistermodal">立即咨询</div>
-							</div>
-							<div class="purchase_child_navList_right_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<iframe src="../iframe/achieveCust.html?name=27" class="achieveCuststy wow animate__fadeInUp" frameborder="0" scrolling="no"></iframe>
+			<div>
+				<iframe src="../iframe/caseTab.html?name=21" style="width: 100%;height: 695px;" frameborder="0" scrolling="no"></iframe>
+				<!--<div><a class="f16 colorbai home_Case_More" href="../case-study.html">查看更多案例</a></div>-->
+			</div>
 			<iframe src="../iframe/companys.html" class="companyStyle wow animate__fadeInUp" data-wow-duration="2s" frameborder="0" scrolling="no"></iframe>
 			<div class="home_register colorbai">
 				<div class="maxwidth flex-column flex-between flex-middle">
@@ -481,8 +479,8 @@
 										<div class="colorbai">SaaS云</div>
 										<a href="../purchase/index.html">采购云</a>
 										<a href="../paas/mall.html">商城云</a>
-										<a href="../paas/scf.html">赋能云</a>
-										<a href="../paas/mkt.html?navNum=0">营销云</a>
+										<a href="scf.html">赋能云</a>
+										<a href="../mkt/mkt.html?navNum=0">营销云</a>
 										<a href="../purchase/darenTong.html">达人通</a>
 									</div>
 									<div class="">
@@ -599,8 +597,9 @@
 		el:'#app',
 		data(){
 			return {
-				supplierImgData:[],
-				supplierListData:[],
+				listData:[],
+				ImgData:[],
+				BusinessData:[],
 				BannerImg:[],
 				tags:[],
 				blogrollList:[],
@@ -625,10 +624,10 @@
 			getdata(){
 				that = this
 				var _getData = p => get('/product/websiteProduct/noToken/queryByPageName', p);
-				_getData({pageName:'27'})
+				_getData({pageName:'21'})
 				.then(res => {
-					that.supplierImgData = res.result['1']
-					that.supplierListData = res.result['2']
+					that.ImgData = res.result['1']
+					that.listData = res.result['2']
 				})
 				.catch(err => {
 					console.log(err,'_getData获取数据异常');
@@ -637,7 +636,7 @@
 			getBanner(){
 				that = this
 				var _getBanner = p => get('/banner/noToken/queryByModule', p);
-				_getBanner({module:'27'})
+				_getBanner({module:'21'})
 						.then(res => {
 							that.BannerImg = res.result
 							if (that.BannerImg){

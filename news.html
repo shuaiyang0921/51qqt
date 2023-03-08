@@ -62,7 +62,7 @@
                                                             <div class="f12 homeHead_productpopUp_subheading">为直播电商量身打造</div>
                                                         </a>
                                                         <div class="homeHead_productpopUp_rightText">
-                                                            <div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon4 colorblue"><a href="./paas/mkt.html">营销云</a><span class="iconright"></span></div>
+                                                            <div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon4 colorblue"><a href="mkt/mkt.html">营销云</a><span class="iconright"></span></div>
                                                             <div class="f12 homeHead_productpopUp_subheading">提供一站式营销解决方案</div>
                                                             <!-- <a href="./paas/mkt.html?navNum=0">内容创意</a>
                                                             <a href="./paas/mkt.html?navNum=1">广告投放</a>
@@ -323,7 +323,7 @@
 									</div>
 									<div>
 										<div class="flex-column flex-between homephoneHead_navchild_Subhead">
-											<div class="homeHead_productpopUp_titleicon4"><a href="./paas/mkt.html">营销云</a></div>
+											<div class="homeHead_productpopUp_titleicon4"><a href="mkt/mkt.html">营销云</a></div>
 										</div>
 									</div>
 									<div class="flex-column flex-between homephoneHead_navchild_Subhead">
@@ -401,7 +401,7 @@
 				<div class="flex-column f16 flex-middle bgbai news_navs maxwidth">
                     <div v-for="item in industryList" :class="typeIndex==item.type?'news_navschenck':''" @mouseenter="changetype(item.type)" >{{item.name}}</div>
 				</div>
-				<div class="flex-column flex-top maxwidth" v-if="typeIndex!=4">
+				<div class="flex-column flex-top maxwidth" v-if="typeIndex!='videos.html'">
 					<div class="news_left">
 						<div class="flex-column flex-top news_list" v-for="item in InfoData"  v-if="InfoData.length!=0">
                             <div class="news_listimg"><img :src="item.image" class="imgsize" :alt="item.title"></div>
@@ -518,9 +518,9 @@
 									<div class="footer_linkmag">
 										<div class="colorbai">SaaS云</div>
 										<a href="./purchase/index.html">采购云</a>
-										<a href="./paas/mall.html">商城云</a>
-										<a href="./paas/scf.html">赋能云</a>
-										<a href="./paas/mkt.html?navNum=0">营销云</a>
+										<a href="mall/mall.html">商城云</a>
+										<a href="scf/scf.html">赋能云</a>
+										<a href="mkt/mkt.html?navNum=0">营销云</a>
 										<a href="./purchase/darenTong.html">达人通</a>
 									</div>
 									<div class="">
@@ -668,12 +668,12 @@
 		data(){
 			return {
                 industryList:[
-					{name:'全部',type:''},
-					{name:'企业资讯',type:'0'},
-					{name:'市场活动',type:'1'},
-					{name:'干货分享',type:'2'},
-					{name:'分析报告',type:'3'},
-					{name:'微视频',type:'4'}
+                    {name:'全部',type:'news.html'},
+                    {name:'企业资讯',type:'1.html'},
+                    {name:'市场活动',type:'events.html'},
+                    {name:'干货分享',type:'4.html'},
+                    {name:'分析报告',type:'reports.html'},
+                    {name:'微视频',type:'videos.html'}
 				],
 				InfoData:[],
 				hotList:[],
@@ -682,7 +682,7 @@
                 currentPage:1,
 				videoCurrentPage:1,
 				videoTotalPage:0,
-                typeIndex:'',
+                typeIndex:'news.html',
 				showVidio:false,
 				vidiotitle:'',
 				videoDescription:'',
@@ -702,9 +702,6 @@
 		},
 		created(){
 			getHost('els')
-            if(getQueryVariable('navnum')){
-                this.typeIndex = getQueryVariable('navnum')
-            }
 			this.getdata()
 			this.gethotdata()
 		},
@@ -716,7 +713,7 @@
 				that = this
 				var _getData = p => get('/information/noToken/frontList', p);
 				_getData({
-					type:that.typeIndex,
+					type:'',
 					pageNo:this.currentPage,
 					pageSize:12
 				}).then(res => {
@@ -767,10 +764,11 @@
 				this.showmodel = false
 			},
             changetype(type){
-				this.currentPage=1
-				this.typeIndex = type
-                this.InfoData=[]
-				this.getdata()
+                if (type=='news.html'){
+                    window.location.href="/news/"+type
+                }else {
+                    window.location.href="/"+type
+                }
 			},
             changePage(item){
 				this.currentPage = item
@@ -790,7 +788,7 @@
 			},
             tznewsInfo(item){
 				if (item.type!=4){
-					window.location.href = './newsInfo.html?id='+item.id+"&type="+this.typeIndex
+					window.location.href = './newsInfo.html?id='+item.id+"&type="
 				}else {
 					this.showvidiomodal(item)
 				}

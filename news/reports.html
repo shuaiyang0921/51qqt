@@ -62,7 +62,7 @@
                                                             <div class="f12 homeHead_productpopUp_subheading">为直播电商量身打造</div>
                                                         </a>
                                                         <div class="homeHead_productpopUp_rightText">
-                                                            <div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon4 colorblue"><a href="mkt/mkt.html">营销云</a><span class="iconright"></span></div>
+                                                            <div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon4 colorblue"><a href="./paas/mkt.html">营销云</a><span class="iconright"></span></div>
                                                             <div class="f12 homeHead_productpopUp_subheading">提供一站式营销解决方案</div>
                                                             <!-- <a href="./paas/mkt.html?navNum=0">内容创意</a>
                                                             <a href="./paas/mkt.html?navNum=1">广告投放</a>
@@ -323,7 +323,7 @@
 									</div>
 									<div>
 										<div class="flex-column flex-between homephoneHead_navchild_Subhead">
-											<div class="homeHead_productpopUp_titleicon4"><a href="mkt/mkt.html">营销云</a></div>
+											<div class="homeHead_productpopUp_titleicon4"><a href="./paas/mkt.html">营销云</a></div>
 										</div>
 									</div>
 									<div class="flex-column flex-between homephoneHead_navchild_Subhead">
@@ -397,64 +397,100 @@
 				</div>
 			</div>
 			<div class="heiheader"></div>
-			<div class="caseStudyInfo_bg">
-				<div class="maxwidth">
-					<div class="flex-column f16 caseStudyInfo_label">
-						<a class="colorblue" href="./index.html">首页</a>
-						<div class="caseStudyInfo_label_img"><img src="./img/home45.png" class="imgsize" alt="右"></div>
-						<a class="colorblue" href="./case-study.html">客户案例</a>
-						<div class="caseStudyInfo_label_img"><img src="./img/home45.png" class="imgsize" alt="右"></div>
-						<div>{{InfoData.consumerId_dictText}}</div>
+			<div class="caseStudyInfo_bg ">
+				<div class="flex-column f16 flex-middle bgbai news_navs maxwidth">
+                    <div v-for="item in industryList" :class="typeIndex==item.type?'news_navschenck':''" @mouseenter="changetype(item.type)" >{{item.name}}</div>
+				</div>
+				<div class="flex-column flex-top maxwidth" v-if="typeIndex!='videos.html'">
+					<div class="news_left">
+						<div class="flex-column flex-top news_list" v-for="item in InfoData"  v-if="InfoData.length!=0">
+                            <div class="news_listimg"><img :src="item.image" class="imgsize" :alt="item.title"></div>
+                            <div class="news_listright">
+                                <div class="f18 homeHead_appleStytle news_listright_title" @click="tznewsInfo(item)">{{item.title}}</div>
+                                <div class="f14 news_listright_text">{{item.description}}</div>
+                                <div class="f14 flex-column flex-middle flex-between">
+                                    <div class="news_listright_but" v-if="item.tag">{{item.tag}}</div>
+                                    <div class="colorhui888">{{item.publishTime}}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tac f26"  v-if="InfoData.length==0">
+                            暂无数据
+                        </div>
+                        <div class="caseStudy_FilterPages flex-column flex-middle flex-center" v-if="InfoData.length>0">
+                            <div class="Pagesprev" v-if="totalPage>5&&currentPage!=1"><img src="images/caseStudy/caseStudy4.png" class="imgsize" alt="上一页" @click="prevPage"></div>
+                            <div class="f16 flex-column flex-middle caseStudy_FilterPages_nums tac">
+                                <div v-if="showPage(item)" v-for="item in Pagenun" :class="currentPage==item?'caseStudy_FilterPages_num':''" @click="changePage(item)">{{item}}</div>
+                            </div>
+                            <div class="Pagesnext" v-if="totalPage>5&&currentPage!=totalPage"><img src="images/caseStudy/caseStudy3.png" class="imgsize" alt="下一页" @click="nextPage"></div>
+                        </div>
 					</div>
-					<div class="flex-column flex-top">
-						<div class="caseStudyInfo_left">
-							<div class="PingFangSCMedium caseStudyInfo_left_title" v-html="InfoData.title"></div>
-							<div class="f14 caseStudyInfo_left_publishtime">发布时间：{{InfoData.createTime}}</div>
-							<div class="f16 caseStudyInfo_left_text" v-html="InfoData.description"></div>
-							<!-- <div class="f16 caseStudyInfo_left_text">本次大会以“数字赋能，提质增效”为主题，邀请300余位相关领导、行业专家学者以及制造业优秀CIO汇聚一堂，共谋安徽省制造业数字化转型。原安徽省经信和信息化委员会党委副书记副主任，安徽工业经济联合会会长张德山等政府主管单位领导出席本次峰会。汇聚了来自科大讯飞、美的集团、万兴科技、富士康、江淮汽车、中国石化、安徽六国化工等知名企业的行业大咖、企业负责人、CIO（首席信息官）等，分享企业智能制造、人工智能应用实践及优秀服务商分享智能制造解决方案、优秀案例，共话制造业数字化转型升级之路。</div>
-							<div class="caseStudyInfo_left_img"><img src="./images/caseStudy/caseStudy1.png" class="imgsize" alt="2022第五届安徽省制造业数字化转型峰会"></div>
-							<div class="f16 caseStudyInfo_left_text">工业是立国之本，制造业是国家经济命脉所系。智能制造是制造强国建设的主攻方向，其发展程度直接关乎我国制造业质量水平。2021年12月28日，工业和信息化部等八部门联合对外发布《“十四五”智能制造发展规划》(以下简称《规划》)，绘制了“十四五”时期我国智能制造发展蓝图。</div> -->
-						</div>
-						<div class="caseStudyInfo_right">
-							<div class="caseStudyInfo_right_img"><img src="./images/caseStudy/caseStudy6.png" class="imgsize" alt="获取更多采购干货分享"></div>
-							<div class="caseStudyInfo_rightBot">
-								<div class="homeHead_appleStytle caseStudyInfo_rightBot_title">热门案例</div>
-								<div class="flex-column">
-									<div class="caseStudyInfo_rightBot_icon tac">
-										<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy7.png" class="imgsize" alt="第一"></div>
-										<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy8.png" class="imgsize" alt="第二"></div>
-										<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy9.png" class="imgsize" alt="第三"></div>
-										<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>3">4</div>
-										<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>4">5</div>
-										<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>5">6</div>
-										<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>6">7</div>
-										<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>7">8</div>
-										<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>8">9</div>
-										<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>9">10</div>
-									</div>
-									<div class="f16 caseStudyInfo_rightBot_text">
-										<div v-for="(item,index) in hotList" style="position: relative;">
-											<a v-if="!item.caseClassify.includes('5')" @mouseover="overFun(index)" @mouseout="outFun(index)" style="z-index: -100" :href="'caseStudyInfo.html?id='+item.id" v-html="item.title"></a>
-											<a v-else @mouseover="overFun(index)" @mouseout="outFun(index)" style="z-index: -100" v-html="item.title"></a>
-											<div :class="showFullTitle==index?'hot_title_show_before':''"></div>
-											<div :class="showFullTitle==index?'hot_title_show_after':''"></div>
-											<div :class="showFullTitle==index?'hot_title_show':'hot_title_show_hidden'" v-html="item.title"></div>
+					<div class="caseStudyInfo_right">
+						<div class="caseStudyInfo_right_img"><img src="./images/caseStudy/caseStudy6.png" class="imgsize" alt="获取更多采购干货分享"></div>
+						<div class="caseStudyInfo_rightBot">
+							<div class="homeHead_appleStytle caseStudyInfo_rightBot_title"><span>热门资讯</span></div>
+							<div class="flex-column">
+								<div class="caseStudyInfo_rightBot_icon tac">
+									<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy7.png" class="imgsize" alt="第一"></div>
+									<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy8.png" class="imgsize" alt="第二"></div>
+									<div class="caseStudyInfo_rightBot_iconImg"><img src="./images/caseStudy/caseStudy9.png" class="imgsize" alt="第三"></div>
+									<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>3">4</div>
+									<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>4">5</div>
+									<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>5">6</div>
+									<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>6">7</div>
+									<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>7">8</div>
+									<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>8">9</div>
+									<div class="caseStudyInfo_rightBot_iconImg" v-if="hotList.length>9">10</div>
+								</div>
+								<div class="f16 caseStudyInfo_rightBot_text">
+									<div v-for="(item,index) in hotList" style="position: relative;">
+										<a v-if="item.type!=4" @mouseover="overFun(index)" @mouseout="outFun(index)" style="z-index: -100" :href="'newsInfo.html?id='+item.id">{{item.title}}</a>
+										<a v-else @mouseover="overFun(index)" @mouseout="outFun(index)" style="z-index: -100" @click="showvidiomodal(item)" >{{item.title}}</a>
+										<div :class="showFullTitle==index?'hot_title_show_before':''"></div>
+										<div :class="showFullTitle==index?'hot_title_show_after':''"></div>
+										<div :class="showFullTitle==index?'hot_title_show':'hot_title_show_hidden'">
+											{{item.title}}
 										</div>
 									</div>
+
 								</div>
-								
 							</div>
+							
 						</div>
 					</div>
 				</div>
+                <div class="flex-column flex-top flex-between maxwidth" v-else>
+                    <div v-for="item in InfoData" class="news_vidio_list bgbai" @click="showvidiomodal(item)" >
+                        <div class="news_vidio_img porelative">
+							<img :src="item.image" class="imgsize notPlayImage" :alt="item.title">
+							<img class="about_video_imgplay" src="./images/about/about7.png" class="imgsize" alt="">
+						</div>
+                        <div class="news_vidio_pad">
+                            <div class="f20 news_vidio_title PingFangSCMedium" v-html="item.title"></div>
+                            <div class="f14 news_vidio_text" v-html="item.description"></div>
+                        </div>
+                    </div>
+
+
+					<div class="tac f26 videoPageWidth"  v-if="InfoData.length==0" style="width: 100%">
+						暂无数据
+					</div>
+					<div class="caseStudy_FilterPages flex-column flex-middle flex-center videoPageWidth" v-if="InfoData.length>0">
+						<div class="Pagesprev" v-if="totalPage>5&&currentPage!=1"><img src="images/caseStudy/caseStudy4.png" class="imgsize" alt="上一页" @click="prevPage"></div>
+						<div class="f16 flex-column flex-middle caseStudy_FilterPages_nums tac">
+							<div v-if="showPage(item)" v-for="item in Pagenun" :class="currentPage==item?'caseStudy_FilterPages_num':''" @click="changePage(item)">{{item}}</div>
+						</div>
+						<div class="Pagesnext" v-if="totalPage>5&&currentPage!=totalPage"><img src="images/caseStudy/caseStudy3.png" class="imgsize" alt="下一页" @click="nextPage"></div>
+					</div>
+                </div>
 			</div>
-			<div class="home_register colorbai wow animate__fadeInUp" data-wow-duration="2s">
+			<div class="home_register colorbai">
 				<div class="maxwidth flex-column flex-between flex-middle">
 					<div class="PingFangSCMedium">
 						<div class="home_register_text">开启数字化供应链与采购新体验</div>
 						<div class="tar">赋能企业数字化转型与变革</div>
 					</div>
-					<div class="f18 register_bottom home_register_but homeHead_appleStytle  colorbai" @click="showregistermodal()">注册体验</div>
+					<div class="f18 register_bottom home_register_but  homeHead_appleStytle  colorbai" @click="showregistermodal">注册体验</div>
 				</div>
 			</div>
 			<div class="bgfooter">
@@ -483,8 +519,8 @@
 										<div class="colorbai">SaaS云</div>
 										<a href="./purchase/index.html">采购云</a>
 										<a href="./paas/mall.html">商城云</a>
-										<a href="scf/scf.html">赋能云</a>
-										<a href="mkt/mkt.html?navNum=0">营销云</a>
+										<a href="./paas/scf.html">赋能云</a>
+										<a href="./paas/mkt.html?navNum=0">营销云</a>
 										<a href="./purchase/darenTong.html">达人通</a>
 									</div>
 									<div class="">
@@ -593,6 +629,36 @@
 					<div class="f16 registe_form_submit PingFangSCMedium colorbai" @click="submitfrom()">立即提交</div>
 				</div>
 			</div>
+			<div class="register_modal flex-column flex-middle" v-if="showVidio">
+				<div class="Vidio_padd_wei flex-column flex-middle flex-center porelative">
+					<div class="videoContainer">
+						<div class="colorbai videoTitleText">{{vidiotitle}}</div>
+						<div class="colorbai videoDescriptionText">{{videoDescription}}</div>
+						<video
+							controls
+							preload="auto"
+							width="878"
+							height="520"
+							:src="vidiourl"
+							:poster="imageUrl"
+							autoplay
+							style="margin-bottom: 111px;margin-top: 16px;"
+						>
+						</video>
+					</div>
+					<div class="videoListContainer" ref="videoListContainer" @scroll="scollerFunc($event)">
+						<div v-for="(item,index) in videoList" @click="showvidiomodal(item)" class="flex-column flex-center videoListItem">
+                            <div class="video_img">
+                                <img  width="282" height="158" :src="item.image"/>
+                            </div>
+							<div class="videoListTitleText">{{item.title}}</div>
+							<div class="colorbai videoListDescriptionText">{{item.description}}</div>
+						</div>
+					</div>
+					<div class="Vidio_cancel" @click="hidevidiomodal"><img src="./img/home165.png" class="imgsize" alt=""></div>
+				</div>
+
+			</div>
 		</div>
 	</body>
 </html>
@@ -601,11 +667,31 @@
 		el:'#app',
 		data(){
 			return {
-				InfoData:{},
+                industryList:[
+					{name:'全部',type:'news.html'},
+					{name:'企业资讯',type:'1.html'},
+					{name:'市场活动',type:'events.html'},
+					{name:'干货分享',type:'4.html'},
+					{name:'分析报告',type:'reports.html'},
+					{name:'微视频',type:'videos.html'}
+				],
+				InfoData:[],
 				hotList:[],
-				blogrollList:[],
-				showFullTitle:-1,
+                Pagenun:[],
 				showmodel:false,
+                currentPage:1,
+				videoCurrentPage:1,
+				videoTotalPage:0,
+                typeIndex:'reports.html',
+				showVidio:false,
+				vidiotitle:'',
+				videoDescription:'',
+				vidiourl:'',
+				imageUrl:'',
+				blogrollList:[],
+				totalPage:0,
+				showFullTitle:-1,
+				videoList:[],
 				name:'',
 				companyName:'',
 				telephone:'',
@@ -620,33 +706,55 @@
 			this.gethotdata()
 		},
 		mounted(){
-		
+			// window.addEventListener('scroll', this.scollerFunc, true)
 		},
 		methods: {
 			getdata(){
 				that = this
-				let id = ''
-				if(getQueryVariable('id')){
-					id = getQueryVariable('id')
-				}
-				var _getData = p => get('/works/caseWork/noToken/queryFrontById', p);
+				var _getData = p => get('/information/noToken/frontList', p);
 				_getData({
-					id:id
+					type:3,
+					pageNo:this.currentPage,
+					pageSize:12
 				}).then(res => {
-					that.InfoData = res.result
-					
+					that.InfoData = res.result.records
+					that.totalPage=res.result.pages
+					that.Pagenun = []
+					for(let i=1;i<=res.result.pages;i++){
+						that.Pagenun.push(i)
+					}
+					if(res.result.pages==0){
+						that.Pagenun = [1]
+					}
 				}).catch(err => {
 					console.log(err,'_getData获取数据异常');
 				})
 			},
 			gethotdata(){
 				that = this
-				var _gethotData = p => get('/works/caseWork/noToken/hot', p);
+				var _gethotData = p => get('/information/noToken/hot', p);
 				_gethotData({}).then(res => {
 					that.hotList = res.result
 					
 				}).catch(err => {
 					console.log(err,'_gethotData获取数据异常');
+				})
+			},
+			getVideoData(){
+				that = this
+				var _getVideoData = p => get('/information/noToken/frontList', p);
+				_getVideoData({
+					type:4,
+					pageNo:this.videoCurrentPage,
+					pageSize:50
+				}).then(res => {
+					res.result.records.forEach(item=>{
+						that.videoList.push(item)
+					})
+					console.log(that.videoList)
+					that.videoTotalPage=res.result.pages
+				}).catch(err => {
+					console.log(err,'_getVideoData获取数据异常');
 				})
 			},
 			showregistermodal(){
@@ -655,11 +763,81 @@
 			hederegistermodal(){
 				this.showmodel = false
 			},
+            changetype(type){
+                if (type=='news.html'){
+                    window.location.href="/news/"+type
+                }else {
+                    window.location.href="/"+type
+                }
+			},
+            changePage(item){
+				this.currentPage = item
+				this.getdata()
+			},
+            prevPage(){
+				if(this.currentPage!=1){
+					this.currentPage--
+					this.getdata()
+				}
+			},
+			nextPage(){
+				if(this.currentPage!=this.Pagenun.length){
+					this.currentPage++
+					this.getdata()
+				}
+			},
+            tznewsInfo(item){
+				if (item.type!=4){
+					window.location.href = '../newsInfo.html?id='+item.id+"&type=3"
+				}else {
+					this.showvidiomodal(item)
+				}
+
+            },
+			showvidiomodal(item){
+				this.videoDescription=item.description
+				this.vidiotitle = item.title
+				this.vidiourl = item.video
+				this.imageUrl=item.image
+				this.showVidio = true
+				this.videoList=[]
+				this.getVideoData()
+			},
+			hidevidiomodal(){
+				this.showVidio = false
+			},
+			showPage(item){
+				if (this.currentPage<3&&item<6){
+					return true;
+				}else if (this.currentPage>this.totalPage-2){
+					if (item>this.totalPage-5){
+						return true
+					}
+				}else{
+					if (item<this.currentPage+3&&item>this.currentPage-3){
+						return true;
+					}
+				}
+				return false
+			},
 			overFun(index){
 				this.showFullTitle=index;
 			},
 			outFun(index){
 				this.showFullTitle=-1;
+			},
+			scollerFunc(el) {
+				let dom = el.target;
+				const scrollDistance = dom.scrollHeight - dom.scrollTop - dom.clientHeight;
+				if (scrollDistance <= 1) {//等于0证明已经到底，可以请求接口
+					console.log("触底了")
+					if (this.videoCurrentPage<this.videoTotalPage){
+						this.videoCurrentPage=this.videoCurrentPage+1
+						this.getVideoData()
+					}else {
+						// alert("没有更多数据了")
+					}
+				}
 			},
 			getcode(){
 				const reg = /^((0\d{2,3}-\d{7,8})|(1[3456789]\d{9}))$/
