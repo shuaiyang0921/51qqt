@@ -444,7 +444,7 @@
 					</div>
 				</div>
 			</div>
-			<iframe :src="'../iframe/achieveCust.html?name='+pageName" class="achieveCuststy wow animate__fadeInUp" frameborder="0" scrolling="no"></iframe>
+			<iframe src="../iframe/achieveCust.html?name=7" class="achieveCuststy wow animate__fadeInUp" frameborder="0" scrolling="no"></iframe>
 			<iframe src="../iframe/companys.html" class="companyStyle wow animate__fadeInUp" data-wow-duration="2s" frameborder="0" scrolling="no"></iframe>
 			<div class="home_register colorbai">
 				<div class="maxwidth flex-column flex-between flex-middle">
@@ -623,9 +623,8 @@
 		methods: {
 			getdata(){
 				that = this
-				that.getUrlParam()
 				var _getData = p => get('/websiteSolution/noToken/queryByPageName', p);
-				_getData({pageName: this.pageName}).then(res => {
+				_getData({pageName: 7}).then(res => {
 					that.supplierData = res.result['1']
 					that.supplierImgData = res.result['2']
 					that.supplierListData = res.result['3']
@@ -633,7 +632,7 @@
 					console.log(err,'_getData获取数据异常');
 				})
 				var _getBannerData = p => get('/banner/noToken/queryByModule', p);
-				_getBannerData({module: this.pageName}).then(res => {
+				_getBannerData({module: 7}).then(res => {
 					that.banner=res.result[0];
 					that.banner.backgroundImage="background: url("+that.banner.image+") no-repeat center center;background-size: cover;padding: 0 60px 0 60px;"
 					console.log(res.result[0])
@@ -648,17 +647,6 @@
 			},
 			hederegistermodal(){
 				this.showmodel = false
-			},
-			getUrlParam(){
-				var url = window.location.href ;             //获取当前url
-				var dz_url = url.split('#')[0];                //获取#/之前的字符串
-				var cs = dz_url.split('?')[1];                //获取?之后的参数字符串
-				var cs_arr = cs.split('&');                    //参数字符串分割为数组
-				var cs={};
-				for(var i=0;i<cs_arr.length;i++){         //遍历数组，拿到json对象
-					cs[cs_arr[i].split('=')[0]] = cs_arr[i].split('=')[1]
-				}
-				this.pageName = cs.name;
 			},
 			getcode(){
 				const reg = /^((0\d{2,3}-\d{7,8})|(1[3456789]\d{9}))$/

@@ -655,7 +655,7 @@
 											<div class="f14 colorbai">{{itemchenk.title}}</div>
 										</div>
 									</div>
-									<a v-if="index==1" class="f14 colorbai home_Solution_centerbut" :href="'./solutions/manufacturing.html?name='+pageName">方案详情</a>
+									<a v-if="index==1" class="f14 colorbai home_Solution_centerbut" :href="'./solutions/'+pageName">方案详情</a>
 								</div>
 							</div>
 							<div class="home_Solution_right flex-column">
@@ -1061,8 +1061,25 @@
 		el:'#app',
 		data(){
 			return {
+
+				pageNameMap:{
+					"7":"manufacturing.html",
+					"8":"retail.html",
+					"9":"food.html",
+					"10":"finance.html",
+					"11":"pharmacy.html",
+					"12":"energy.html",
+					"13":"construction.html",
+					"14":"service.html",
+					"39":"direct.html",
+					"40":"trading.html",
+					"41":"project.html",
+					"42":"service1.html",
+					"43":"bulkCommodities.html",
+					"44":"officeSupplies.html",
+				},
 				firstdemo:[],
-				pageName: '13',
+				pageName: 'manufacturing.html',
 				BanerImg:[],
 				endorsedList:[],
 				productSaasList:[],
@@ -1165,7 +1182,7 @@
 					// },2000)
 					that.SolutionList[1][1].forEach(item=>{
 						if (item.name_dictText==that.SolutionList[1][0][0]){
-							that.pageName=item.name
+							that.pageName=this.pageNameMap[item.name]
 						}
 					})
 					that.information1 = res.result['首页-精选资讯']['企业资讯'];
@@ -1248,7 +1265,7 @@
 			changenavstop(index,item){
 				item[1].forEach(i=>{
 					if (item[0][0]==i.name_dictText){
-						this.pageName=i.name
+						this.pageName=this.pageNameMap[i.name]
 					}
 				})
 
@@ -1267,7 +1284,7 @@
 			changeSolution(index,item,name){
 				item.forEach(i=>{
 					if (i.name_dictText==name){
-						this.pageName=i.name
+						this.pageName=this.pageNameMap[i.name]
 					}
 				})
 				this.Solutionindex = index
