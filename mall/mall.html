@@ -426,7 +426,7 @@
 							<div v-html="purchaseMallData[0]?purchaseMallData[0].title:''"></div>
 						</div>
 						<div class="mall_navs_text f16" v-html="purchaseMallData[0]?purchaseMallData[0].intro:''"></div>
-						<a v-if="purchaseMallData[0]&&purchaseMallData[0].link" class="f14 colorblue home_more" :href="purchaseMallData[0]?purchaseMallData[0].link"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
+						<a v-if="purchaseMallData[0]&&purchaseMallData[0].link" class="f14 colorblue home_more" :href="purchaseMallData[0]?purchaseMallData[0].link:''"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
 						<a v-else class="f14 colorblue home_more"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
 					</div>
 					<div>
