@@ -444,7 +444,7 @@
 								</div>
 								<div class="f16 caseStudyInfo_rightBot_text">
 									<div v-for="(item,index) in hotList" style="position: relative;">
-										<a v-if="item.type!=4" @mouseover="overFun(index)" @mouseout="outFun(index)" style="z-index: -100" :href="'newsInfo.html?id='+item.id">{{item.title}}</a>
+										<a v-if="item.type!=4" @mouseover="overFun(index)" @mouseout="outFun(index)" style="z-index: -100" :href="'../newsInfo.html?id='+item.id">{{item.title}}</a>
 										<a v-else @mouseover="overFun(index)" @mouseout="outFun(index)" style="z-index: -100" @click="showvidiomodal(item)" >{{item.title}}</a>
 										<div :class="showFullTitle==index?'hot_title_show_before':''"></div>
 										<div :class="showFullTitle==index?'hot_title_show_after':''"></div>
