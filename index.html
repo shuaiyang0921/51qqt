@@ -261,7 +261,7 @@
                             <div class="homeHead_phone homeHead_appleStytle f18">400-835-1881</div>
                         </div>
                         <a class="f16 homeHead_logintil" href="https://www.51qqt.com/ELSLogin/login/login.html">登录</a>
-                        <div class="f14 homeHead_registertil" @click="showregistermodal()">注册体验</div>
+                        <div class="f14 homeHead_registertil" @click="showregistermodal('',1,'')">注册体验</div>
                     </div>
                 </div>
 				<div class="bgbai homephoneHead_height">
@@ -497,12 +497,12 @@
 			<div class="wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="homeHead_adver" >
 					<div class="homeHead_adverstyle flex-column" :style="{width: imgwidth}" v-show="BanerImg.length!=0">
-						<div @click="jumpLink(item.showButton,item.link)" :class="item.video?'homeHead_adverList_video':'homeHead_adverList'" v-for="item in BanerImg" :style="{backgroundImage: 'url('+ (clientWidth<=780?item.mobileImage.replace(/\s/g,'%20'):item.image.replace(/\s/g,'%20')) + ')',position:'relative','cursor':(item.showButton==1?'':'pointer')}">
+						<div @click="jumpLink(item.showButton,item.link)" :class="item.video?'homeHead_adverList_video':'homeHead_adverList'" v-for="(item,index) in BanerImg" :style="{backgroundImage: 'url('+ (clientWidth<=780?item.mobileImage.replace(/\s/g,'%20'):item.image.replace(/\s/g,'%20')) + ')',position:'relative','cursor':(item.showButton==1?'':'pointer')}">
 							<div style="max-width: 1200px;margin: 0 auto;" >
 								<template v-if="!item.video">
 									<div class="homeHead_adver1_title homeHead_appleStytle" v-if="item.title" v-html="item.title"></div>
 									<div class="f20 homeHead_adver1_text" v-if="item.intro" v-html="item.intro"></div>
-									<a v-if="item.showButton==1&&clientWidth>780" class="f16 homeHead_registertil tac homeHead_appleStytle index_banner_register" style="position: absolute;bottom: 95px;width: auto;" @click="showregistermodal(item.link)">{{item.buttonText?item.buttonText:'注册体验'}}</a>
+									<a v-if="item.showButton==1&&clientWidth>780" class="f16 homeHead_registertil tac homeHead_appleStytle index_banner_register" style="position: absolute;bottom: 95px;width: auto;" @click="showregistermodal(item.link,2,index)">{{item.buttonText?item.buttonText:'注册体验'}}</a>
 								</template>
 								<template v-else>
 									<video :src="item.video" style="width:100%; height:100%;position: absolute;top: 0;left: 0; object-fit: fill" controls="controls" :poster="item.image"></video>
@@ -536,7 +536,7 @@
 								<div class="f16 home_Enabling_Subhead" v-html="item.intro"></div>
 								<div class="f16 PingFangSCMedium home_Enabling_title">业务场景：</div>
 								<div class="f14 home_Enabling_text" v-for="itchenk in item.description.split(',')">{{itchenk}}</div>
-								<div class="f14 homeHead_appleStytle home_Enabling_but homeHead_registertil colorbai" @click="showregistermodal('')">注册体验</div>
+								<div class="f14 homeHead_appleStytle home_Enabling_but homeHead_registertil colorbai" @click="showregistermodal('',4,'')">注册体验</div>
 							</div>
 							<div class="home_Enabling_rightimg"><img :src="item.image" class="imgsize" :alt="item.title"></div>
 						</div>
@@ -547,7 +547,7 @@
 								<div class="f16 home_Enabling_Subhead" v-html="item.intro"></div>
 								<div class="f16 PingFangSCMedium home_Enabling_title">业务场景：</div>
 								<div class="f14 home_Enabling_text" v-for="itchenk in item.description.split(',')">{{itchenk}}</div>
-								<div class="f14 homeHead_appleStytle home_Enabling_but homeHead_registertil colorbai" @click="showregistermodal('')">注册体验</div>
+								<div class="f14 homeHead_appleStytle home_Enabling_but homeHead_registertil colorbai" @click="showregistermodal('',4,'')">注册体验</div>
 							</div>
 						</div>
 					</div>
@@ -844,7 +844,7 @@
 							<div class="home_register_text">开启数字化供应链与采购新体验</div>
 							<div class="tar">赋能企业数字化转型与变革</div>
 						</div>
-						<div class="f18 register_bottom home_register_but homeHead_appleStytle  colorbai" @click="showregistermodal()">注册体验</div>
+						<div class="f18 register_bottom home_register_but homeHead_appleStytle colorbai" @click="showregistermodal('',5,'')">注册体验</div>
 					</div>
 				</div>
 				<div class="bgfooter">
@@ -1036,7 +1036,7 @@
 						</div> -->
 					</div>
 				</div>
-				<div class="rightView_trial" @click="showregistermodal()">
+				<div class="rightView_trial" @click="showregistermodal('',3,'')">
 					<div class="rightView_trialImg"><img src="./img/right_shiyong.png" class="imgsize"></div>
 					<div class="f14 rightView_trialText">免费试用</div>
 				</div>
@@ -1058,7 +1058,7 @@
 		el:'#app',
 		data(){
 			return {
-
+				leaveWordType:'',
 				pageNameMap:{
 					"7":"manufacturing.html",
 					"8":"retail.html",
@@ -1231,8 +1231,13 @@
 					this.numChange=false;
 				}
 			},
-			showregistermodal(link){
-				console.log(link)
+			showregistermodal(link,leaveWordType,index){
+				if (index.toString()){
+					this.leaveWordType='1-'+leaveWordType+"-"+index;
+				}else {
+					this.leaveWordType='1-'+leaveWordType;
+				}
+
 				if (link){
 					window.open(link)
 				}else {
@@ -1333,7 +1338,7 @@
 					companyName:this.companyName,
 					telephone:this.telephone,
 					smsCode:this.smsCode,
-					registerModule:'1',
+					registerModule: this.leaveWordType,
 				})
 				.then(res => {
 					if (res.code==200){

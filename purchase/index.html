@@ -264,7 +264,7 @@
                             <div class="homeHead_phone homeHead_appleStytle f18">400-835-1881</div>
                         </div>
                         <a class="f16 homeHead_logintil" href="https://www.51qqt.com/ELSLogin/login/login.html">登录</a>
-                        <div class="f14 homeHead_registertil" @click="showregistermodal()">注册体验</div>
+                        <div class="f14 homeHead_registertil" @click="showregistermodal(2)">注册体验</div>
                     </div>
                 </div>
 				<div class="bgbai homephoneHead_height">
@@ -409,7 +409,7 @@
 						<div class="flex-column flex-middle f18 mkt_adver_buts homeHead_appleStytle">
 							<div v-for="(item,index) in tags">{{item}}</div>
 						</div>
-						<div class="f14 product_index_banner_register tac homeHead_appleStytle mkt_registertil" @click="showregistermodal">注册体验</div>
+						<div class="f14 product_index_banner_register tac homeHead_appleStytle mkt_registertil" @click="showregistermodal(1)">注册体验</div>
 					</div>
 					<div class="paas_topImg"><img v-if="BannerImg[0]" :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize" alt="采购云"></div>
 				</div>
@@ -531,7 +531,7 @@
 						<div class="home_register_text">开启数字化供应链与采购新体验</div>
 						<div class="tar">赋能企业数字化转型与变革</div>
 					</div>
-					<div class="f18 register_bottom home_register_but  homeHead_appleStytle  colorbai" @click="showregistermodal">注册体验</div>
+					<div class="f18 register_bottom home_register_but homeHead_appleStytle  colorbai" @click="showregistermodal(4)">注册体验</div>
 				</div>
 			</div>
 			<div class="bgfooter">
@@ -687,6 +687,7 @@
 					companyName:'',
 					telephone:'',
 					smsCode:'',
+					leaveWordType:'',
 				}
 			},
 			watch: {
@@ -733,8 +734,9 @@
 								console.log(err,'_getBanner获取数据异常');
 							})
 				},
-				showregistermodal(){
-					this.showmodel = true
+				showregistermodal(leaveWordType){
+					this.showmodel = true;
+					this.leaveWordType='28-'+leaveWordType;
 				},
 				hederegistermodal(){
 					this.showmodel = false
@@ -785,7 +787,7 @@
 						companyName:this.companyName,
 						telephone:this.telephone,
 						smsCode:this.smsCode,
-						registerModule:'1',
+						registerModule:this.leaveWordType,
 					})
 							.then(res => {
 								if (res.code==200){

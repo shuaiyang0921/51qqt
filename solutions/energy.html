@@ -260,7 +260,7 @@
 					<div class="homeHead_phone homeHead_appleStytle f18">400-835-1881</div>
 				</div>
 				<a class="f16 homeHead_logintil" href="https://www.51qqt.com/ELSLogin/login/login.html">登录</a>
-				<div class="f14 homeHead_registertil" @click="showregistermodal()">注册体验</div>
+				<div class="f14 homeHead_registertil" @click="showregistermodal(2)">注册体验</div>
 			</div>
 		</div>
 		<div class="bgbai homephoneHead_height">
@@ -401,7 +401,7 @@
 			<div class="manufacturing_adver_title homeHead_appleStytle" v-html="banner.title"></div>
 			<div class="manufacturing_adver_title">解决方案</div>
 			<div class="f18 PingFangSCMediumBanner manufacturing_adver_text" v-html="banner.intro"></div>
-			<div class="f14 homeHead_registertil tac homeHead_appleStytle registertil_banner" @click="showregistermodal">注册体验</div>
+			<div class="f14 homeHead_registertil tac homeHead_appleStytle registertil_banner" @click="showregistermodal(1)">注册体验</div>
 		</div>
 	</div>
 	<div class="manufacturing_bg bggray" style="padding-bottom: 60px;">
@@ -431,14 +431,14 @@
 				<div class="manufacturing_programmeList_right">
 					<div class="PingFangSCMedium manufacturing_programmeList_rightTitle color222" v-html="item.title"></div>
 					<div class="f16 manufacturing_programmeList_rightText" v-html="item.intro"></div>
-					<div class="f14 homeHead_registertil tac homeHead_appleStytle fontWeightNormal" @click="showregistermodal">立即咨询</div>
+					<div class="f14 homeHead_registertil tac homeHead_appleStytle fontWeightNormal" @click="showregistermodal(4)">立即咨询</div>
 				</div>
 			</div>
 			<div class="manufacturing_programmeList flex-column flex-middle" v-else>
 				<div class="manufacturing_programmeList_left bggray">
 					<div class="PingFangSCMedium manufacturing_programmeList_rightTitle color222" v-html="item.title"></div>
 					<div class="f16 manufacturing_programmeList_leftText" v-html="item.intro"></div>
-					<div class="f14 homeHead_registertil tac homeHead_appleStytle fontWeightNormal" @click="showregistermodal">立即咨询</div>
+					<div class="f14 homeHead_registertil tac homeHead_appleStytle fontWeightNormal" @click="showregistermodal(4)">立即咨询</div>
 				</div>
 				<div class="manufacturing_programmeList_rightimg"><img v-if="item.image" :src="item.image" class="imgsize" :alt="item.title"></div>
 			</div>
@@ -452,7 +452,7 @@
 				<div class="home_register_text">开启数字化供应链与采购新体验</div>
 				<div class="tar">赋能企业数字化转型与变革</div>
 			</div>
-			<div class="f18 register_bottom home_register_but  homeHead_appleStytle  colorbai" @click="showregistermodal">注册体验</div>
+			<div class="f18 register_bottom home_register_but  homeHead_appleStytle  colorbai" @click="showregistermodal(5)">注册体验</div>
 		</div>
 	</div>
 	<div class="bgfooter">
@@ -599,6 +599,7 @@
 		el:'#app',
 		data(){
 			return {
+				leaveWordType:'',
 				supplierData:[],
 				supplierImgData:[],
 				supplierListData:[],
@@ -642,8 +643,9 @@
 				})
 
 			},
-			showregistermodal(){
-				this.showmodel = true
+			showregistermodal(leaveWordType){
+				this.showmodel = true;
+				this.leaveWordType='12-'+leaveWordType;
 			},
 			hederegistermodal(){
 				this.showmodel = false
@@ -690,7 +692,7 @@
 					companyName:this.companyName,
 					telephone:this.telephone,
 					smsCode:this.smsCode,
-					registerModule:'1',
+					registerModule:this.leaveWordType,
 				})
 						.then(res => {
 							if (res.code==200){
