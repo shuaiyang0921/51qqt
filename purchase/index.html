@@ -377,7 +377,7 @@
 					</div>
 				</div>
 			</div>
-			<div :style="{backgroundImage: 'url('+(clientWidth<=582?BannerImg[0].mobileImage.replace(/\s/g,'%20'):BannerImg[0].image.replace(/\s/g,'%20'))+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover',backgroundPosition:'center'}" class="wow animate__fadeInUp" data-wow-duration="2s">
+			<div v-if="BannerImg[0]" :style="{backgroundImage: 'url('+(clientWidth<=582?BannerImg[0].mobileImage.replace(/\s/g,'%20'):BannerImg[0].image.replace(/\s/g,'%20'))+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover',backgroundPosition:'center'}" class="wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="mkt_adver maxwidth flex-column flex-middle flex-between colorbai" >
 					<div class="paas_adver_left">
 						<div class="manufacturing_adver_title homeHead_appleStytle" v-html="BannerImg[0]?BannerImg[0].title:''"></div>
@@ -392,17 +392,17 @@
 			</div>
 			<div class="padBg">
 				<div class="PingFangSCMedium tac home_title">满足企业全品类采购需求，覆盖各类应用场景</div>
-				<div class="flex-column flex-center">
+				<div class="flex-column flex-center" style="width: 100%;">
 					<div class="mall_navs">
 						<div class="mall_navs_imgtitle"><img :src="purchaseMallData[0]?purchaseMallData[0].image:''" class="imgsize" :alt="purchaseMallData[0]?purchaseMallData[0].title:''"></div>
-						<div class="f24 PingFangSCMedium flex-column flex-left">
+						<div class="f24 PingFangSCMedium flex-column flex-middle">
 							<div class="mall_navs_img">
 								<img :src="purchaseMallData[0]?purchaseMallData[0].icon:''" class="imgsize" :alt="purchaseMallData[0]?purchaseMallData[0].title:''">
 							</div>
 							<div v-html="purchaseMallData[0]?purchaseMallData[0].title:''"></div>
 						</div>
-						<div class="mall_navs_text f16" v-html="purchaseMallData[0]?purchaseMallData[0].intro:''"></div>
-						<div style="height: 18px;">
+						<div class="f16 mall_navs_text" v-html="purchaseMallData[0]?purchaseMallData[0].intro:''"></div>
+						<div class="pushase_more_link">
 							<a v-if="purchaseMallData[0]&&purchaseMallData[0].link" class="home_more f14 colorblue" style="float: left" :href="purchaseMallData[0]?purchaseMallData[0].link:''">
 								<span class="purchase_more">了解更多</span>
 								<span class="home_product_saasMoreicon">
@@ -419,15 +419,15 @@
 						<!-- <a class="home_product_saasMoreicon " :href="'../solutions/manufacturing.html?name='+(purchaseMallData[0]?purchaseMallData[0].link:'')"><img src="../img/home83.png" class="imgsize" alt="了解更多"></a> -->
 					</div>
 					<div class="phone_mall_navswid">
-						<div class="mall_navs" v-for="(item,index) in purchaseMallData" v-if="index==1||index==2" :style="index==1?'margin-bottom:24px':''">
-							<div class="f24 PingFangSCMedium flex-column flex-left">
+						<div class="mall_navs" v-for="(item,index) in purchaseMallData" v-if="index==1||index==2" :style="index==1?'margin-bottom:16px':''">
+							<div class="f24 PingFangSCMedium flex-column flex-middle">
 								<div class="mall_navs_img">
 									<img :src="item.icon" class="imgsize" :alt="item.title">
 								</div>
 								<div v-html="item.title"></div>
 							</div>
-							<div class="mall_navs_text mall_navs_textwidth f16" v-html="item.intro"></div>
-							<div style="height: 18px;">
+							<div class="f16 mall_navs_text mall_navs_textwidth" v-html="item.intro"></div>
+							<div class="pushase_more_link">
 								<a v-if="item.link" class="home_more f14 colorblue" style="float: left" :href="item.link">
 									<span class="purchase_more">了解更多</span>
 									<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多">
@@ -443,16 +443,16 @@
 							<!-- <a class="f14 colorblue" :href="'../solutions/manufacturing.html?name='+item.link"><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a> -->
 						</div>
 					</div>
-					<div class="flex-column flex-center">
+					<div class="flex-column flex-center last_mall_navs">
 						<div class="mall_navs" v-for="(item,index) in purchaseMallData" v-if="index>2">
-							<div class="f24 PingFangSCMedium flex-column flex-left">
+							<div class="f24 PingFangSCMedium flex-column flex-middle">
 								<div class="mall_navs_img">
 									<img :src="item.icon" class="imgsize" :alt="item.title">
 								</div>
 								<div v-html="item.title"></div>
 							</div>
-							<div class="mall_navs_text mall_navs_textwidth f16" v-html="item.intro"></div>
-							<div style="height: 18px;">
+							<div class="f16 mall_navs_text mall_navs_textwidth " v-html="item.intro"></div>
+							<div class="pushase_more_link">
 								<a v-if="item.link" class="home_more f14 colorblue" style="float: left" :href="item.link">
 									<span class="purchase_more">了解更多</span>
 									<span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多">
@@ -470,22 +470,22 @@
 			</div>
 			<div class="padBg bggray">
 				<div class="maxwidth">
-					<div class="PingFangSCMedium tac home_title">打通供应链采购各个环节，形成业务、系统、人到物多维度集成协同</div>
+					<div class="PingFangSCMedium tac home_title">打通供应链采购各个环节，形成<br/>业务、系统、人到物多维度集成协同</div>
 					<div v-for="(item,index) in purchasenavListData">
 						<div class="flex-column flex-center flex-middle" v-if="index%2==0">
 							<div class="purchase_index_navList_left_img"><img :src="item.image" class="imgsize" :alt="item.title"></div>
 							<div class="purchase_navList_right_text">
 								<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
-								<div class="scf_navList_rightLable f18 PingFangSCMedium bgbai" v-html="item.intro"></div>
-								<div class="scf_navList_rightText f16" v-html="item.description"></div>
+								<div class="f18 PingFangSCMedium bgbai scf_navList_rightLable" v-html="item.intro"></div>
+								<div class="f16 scf_navList_rightText" v-html="item.description"></div>
 								<div class="f16 colorblue home_more" @click="changePage(item.link)"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
 							</div>
 						</div>
 						<div class="flex-column flex-center flex-middle bgbai br12" v-else>
 							<div class="purchase_navList_left_text">
 								<div class="scf_navList_rightTitle homeHead_appleStytle" v-html="item.title"></div>
-								<div class="scf_navList_rightLable f18 PingFangSCMedium bggray" v-html="item.intro"></div>
-								<div class="scf_navList_rightText f16" v-html="item.description"></div>
+								<div class="f18 PingFangSCMedium bggray scf_navList_rightLable" v-html="item.intro"></div>
+								<div class="f16 scf_navList_rightText" v-html="item.description"></div>
 								<div class="f16 colorblue home_more" @click="changePage(item.link)"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></div>
 							</div>
 							<div class="purchase_index_navList_right_img"><img :src="item.image" class="imgsize" :alt="item.childName"></div>
@@ -493,7 +493,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="padBg">
+			<div class="padBg phonehide">
 				<div class="maxwidth">
 					<div class="PingFangSCMedium tac home_title">{{purchaseImgData[0]?purchaseImgData[0].bigTitle:''}}</div>
 					<div style="width: 100%;"><img :src="purchaseImgData[0]?purchaseImgData[0].image:''" class="imgsize" :alt="purchaseImgData[0]?purchaseImgData[0].bigTitle:''"></div>

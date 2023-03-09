@@ -156,6 +156,7 @@
     overflow: hidden;
     transform-origin: 0 100%;
 }
+.pushase_more_link{height: 18px;line-height: 18px;}
 @keyframes product {
     from {transform: scaleY(0);}
     to {transform: scaleY(1);}
@@ -180,13 +181,23 @@
     .purchase_navList_left_text{padding-left: 0px;padding-right:0px;padding-top: 20px;}
 }
 @media screen and (max-width:582px) {
-    .manufacturing_adver_title{font-size: 25px;line-height: 35px;}
-    .mkt_adver{padding: 100px 0px 132px 0px;}
+    .manufacturing_adver_title{font-size: 24px;line-height: 33px;margin-bottom: 8px;}
+    .mkt_adver{padding: 194px 0px 24px 0px;margin-top: 69px;text-align: center;}
     .paas_adver_left{padding: 0 20px;width: calc(100% - 40px);}
-    .mkt_adver_buts{margin-bottom: 15px;}
-    .mkt_adver_buts>div{margin: 5px 0px;padding: 5px 35px;}
-    .mall_navs{padding: 30px 15px;width: calc(100% - 30px);}
-    .scf_navList_rightLable {padding: 13px 15px;}
+    .mkt_adver_buts{margin-bottom: 20px;justify-content: space-between;}
+    .mkt_adver_buts>div{font-size: 14px;margin: 0;padding: 4px 15px;width: 70px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+    .mkt_adver_buts>div:nth-child(2){margin: 0 14px;}
+    .mall_navs{padding: 20px;width: calc(100% - 40px);margin: 0 0 16px 0;}
+    .mall_navs:last-child{margin-bottom: 0;}
+    .scf_navList_rightLable {padding: 10px 20px;font-size: 14px;height: 20px;line-height: 20px;font-weight:500;margin-bottom: 8px;}
     .paas_adver_text{display: none;}
-    .mkt_adver_buts>div{font-size: 14px;}
+    .product_index_banner_register{padding: 10px 42px;margin: 0 auto;}
+    .mall_navs_imgtitle{display: none;}
+    .pushase_more_link{display: none;}
+    .mall_navs_text{font-size: 14px;margin: 10px 0 0 0;}
+    .last_mall_navs{margin: 16px 20px 0 20px;width: 100%;}
+    .scf_navList_rightTitle {font-size: 18px;height: 25px;line-height: 25px;margin-bottom: 12px;}
+    .scf_navList_rightText{font-size: 14px;line-height: 24px;color: #555555;margin-bottom: 20px;}
+    .purchase_navList_left_text .scf_navList_rightTitle {text-align: center;}
+    .phonehide{display: none;}
 }
