@@ -90,7 +90,7 @@
     transform: scale(1.1);
 }
 .home_Solution_center{width: calc(100% - 356px);background: rgba(23,24,27,0.3);backdrop-filter: blur(5px);padding: 50px 60px 60px 60px;max-height: 338px}
-.home_Solution_rightwidth{width: calc(100% - 252px);display: none;}
+.home_Solution_rightwidth{width: calc(100% - 252px);display: none;animation: leftin 1s;background: url(../img/homephone_solutionBg.png) no-repeat center center;background-size: cover;}
 .home_Solution_item{display: none;}
 .home_Solution_rightwidth2{width: calc(100% - 252px);}
 .showitem{display: flex;}
@@ -486,7 +486,6 @@ div::-webkit-scrollbar{
     .home_Solution_centerImgsleft{margin-left:19px;}
     .home_Solution_centerImgs .f14{font-size: 12px;max-width: 90px;}
     .home_Solution_centerbut{padding: 9px 32px;}
-    .home_Solution_item{background: url(../img/homephone_solutionBg.png) no-repeat center center;background-size: cover;}
 }
 @media screen and (max-width:580px) {
     .home_endorsed_botLists{bottom: -160px;}
@@ -497,5 +496,16 @@ div::-webkit-scrollbar{
     .home_Case_inforight_title::before{top: 0;left: 0;}
     .home_competitive_listleft{padding: 20px 44px 16px 44px;}
     .home_competitive_list{margin: 18px 0 0 0;}
-    
+}
+@keyframes leftin {
+    0%{transform: translateX(0);}
+    50%{transform: translateX(-100%);}
+    51%{transform: translateX(100%);}
+    100%{transform: translateX(0);}
+}
+@keyframes rightin {
+    0%{transform: translateX(0);}
+    50%{transform: translateX(100%);}
+    51%{transform: translateX(-100%);}
+    100%{transform: translateX(0);}
 }

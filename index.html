@@ -637,14 +637,13 @@
 					<div class="tac home_product_title PingFangSCMedium home_Solution_title">我们为全行业提供更适用的客户解决方案</div>
 					<div class="f20 tac home_Solution_tabs flex-column">
 						<div v-for="(item,index) in SolutionList" @mouseenter="changenavstop(index,item)" :class="index==1?caseTabClass1:caseTabClass2" >{{item[1][0].type_dictText}}</div>
-						
 					</div>
 					<div class="flex-column flex-top home_Solution_item" v-for="(item,index) in SolutionList" :class="index==navstopIndex?'showitem':''" @touchstart="handelTouchStart" @touchend="handelTouchend">
 						<div class="f16 home_Solution_left home_Solutionleft">
 							<div v-for="(itemnavs,indexnavs) in item[0]" :class="indexnavs==Solutionindex?'bgblue':''" @mouseenter=changeSolution(indexnavs,item[1],itemnavs)>{{itemnavs}}</div>
 							
 						</div>
-						<div class="flex-column home_Solution_rightwidth" v-for="(itemdemo,indexdemo) in item[1]" :style="indexdemo==Solutionindex?'display: flex;':''">
+						<div class="flex-column home_Solution_rightwidth " v-for="(itemdemo,indexdemo) in item[1]" :style="indexdemo==Solutionindex?'display: flex;':''">
 							<div class="home_Solution_center">
 								<div class="f24 colorbai PingFangSCMedium">{{clientWidth>582?itemdemo.title:itemdemo.name_dictText}}</div>
 								<div class="f14 colorbai home_Solution_centerText">{{clientWidth>582?itemdemo.intro:itemdemo.mobileTitle}}</div>
@@ -1457,9 +1456,11 @@
 					if(this.Solutionindex!=0){
 						this.Solutionindex--
 					}
-
 				}else{
-					this.Solutionindex++
+					console.log(this.SolutionList[this.navstopIndex])
+					if(this.SolutionList[this.navstopIndex][1].length-1>this.Solutionindex){
+						this.Solutionindex++
+					}
 				}
 				console.log(direction);
 			}
