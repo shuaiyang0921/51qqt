@@ -1,3 +1,6 @@
+
+
+//资讯详情页面图片点击跳转
 $(document).on('click','img',function(){
     if (this.dataset.href){
         window.location.href=this.dataset.href
