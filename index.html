@@ -258,10 +258,10 @@
                         </div>
                     </div>
                     <div class="flex-column flex-middle flex-right" style="width: 400px;">
-                        <div class="flex-column flex-middle">
+                        <a class="flex-column flex-middle" href="tel:400-835-1881">
                             <div class="iconsize"><img src="./img/home18.png" class="imgsize" alt="电话拨号"></div>
                             <div class="homeHead_phone homeHead_appleStytle f18">400-835-1881</div>
-                        </div>
+						</a>
                         <a class="f16 homeHead_logintil" href="https://www.51qqt.com/ELSLogin/login/login.html">登录</a>
                         <div class="f14 homeHead_registertil" @click="showregistermodal('',1,'')">注册体验</div>
                     </div>
@@ -528,7 +528,7 @@
 				</div>
 			</div>
 
-			<div class="PingFangSCMedium tac home_title">{{firstdemo[0]?firstdemo[0].bigTitle:''}}</div>
+			<div class="PingFangSCMedium tac home_title">双向赋能<br/>构建企业供应链采购数字化协同平</div>
 			<div class="home_Enabling wow animate__fadeInUp " data-wow-duration="2s">
 				<template  v-for="(item,index) in firstdemo">
 					<div >
@@ -619,7 +619,7 @@
 			</div>
 			<div class="home_padd wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth">
-					<div class="tac home_product_title PingFangSCMedium">{{competitiveList[0]?competitiveList[0].bigTitle:''}}</div>
+					<div class="tac home_product_title PingFangSCMedium">通过数字化采购创造价值，提升<br/>企业竞争力</div>
 					<div class="flex-column flex-between">
 						<div class="home_competitive_list projection flex-column" v-for="item in competitiveList">
 							<div class="home_competitive_listleft tac" :style="{backgroundImage: 'url('+ (clientWidth<=780?item.mobileImage.replace(/\s/g,'%20'):item.image.replace(/\s/g,'%20')) + ')'}">
@@ -636,7 +636,7 @@
 			</div>
 			<div class="home_Solution wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth">
-					<div class="tac home_product_title PingFangSCMedium home_Solution_title">我们为全行业提供更适用的客户解决方案</div>
+					<div class="tac home_product_title PingFangSCMedium home_Solution_title">我们为全行业提供更适用的<br/>客户解决方案</div>
 					<div class="f20 tac home_Solution_tabs flex-column">
 						<div v-for="(item,index) in SolutionList" @mouseenter="changenavstop(index,item)" :class="index==1?caseTabClass1:caseTabClass2" >{{item[1][0].type_dictText}}</div>
 					</div>
@@ -662,11 +662,14 @@
 							</div>
 						</div>
 					</div>
+					<div class="flex-column flex-center home_Solution_tabs_nav" v-if="SolutionList[navstopIndex]">
+						<div v-for="(item,index) in SolutionList[navstopIndex][1]" :class="index==Solutionindex?'home_Case_tab':''"></div>
+					</div>
 				</div>
 			</div>
 			<div class="home_Case wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth">
-					<div class="tac home_product_title PingFangSCMedium">与千家高成长企业一起，实现数字化采购</div>
+					<div class="tac home_product_title PingFangSCMedium">与千家高成长企业一起，实现<br/>数字化采购</div>
 					<div>
 						<div :class="index==0?'flex-column home_Case_info home_Case_info_show':'flex-column home_Case_info'" v-for="(item,index) in CaseList">
 							<div class="home_Caseimg"><img :src="item.image" class="imgsize" :alt="item.tag"></div>
@@ -680,7 +683,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="home_Case_tabs flex-column flex-center">
+					<div class="home_Case_tabs flex-column flex-center ">
 						<div v-for="(item,index) in CaseList" :class="index==0?'home_Case_tab':''" @click="changeCaseTab(index)"></div>
 					</div>
 				</div>
@@ -711,7 +714,7 @@
 										<div class="home_endorsed_botImg"><img src="./img/home107.png" class="imgsize" alt=""></div>
 										<div class="home_endorsed_ying"><img src="./img/home_ying.png" class="imgsize"></div>
 									</div>
-									<a class="f14 colorblue home_more" href="./honor.html">了解更多<span class="home_product_saasMoreicon"><img src="img/home83.png" class="imgsize" alt=""></span></a>
+									<a class="f14 colorblue home_more" href="./honor.html">更多行业认可<span class="home_product_saasMoreicon"><img src="img/home83.png" class="imgsize" alt=""></span></a>
 								</div>
 							</div>
 						</div>
@@ -854,7 +857,7 @@
 						<div class="footer_topstyle xian_footer flex-column flex-between">
 							<div class="colorbai footer_leftstyle">
 								<div class="footer_logosize"><img src="./img/qqtbot.png" class="imgsize" alt="企企通"></div>
-								<div class="flex-column flex-middle"><span class="f14">服务热线：</span><span class="f18 PingFangSCMedium">400-835-1881</span></div>
+								<a class="flex-column flex-middle" href="tel:400-835-1881"><span class="f14">服务热线：</span><span class="f18 PingFangSCMedium">400-835-1881</span></a>
 								<div class="footer_textpadd"><span class="f14">市场合作：</span><span class="f18 PingFangSCMedium">marketing@51qqt.com</span></div>
 								<div class="flex-column tac f14">
 									<div class="footer_contactimgpadd">
@@ -1050,7 +1053,17 @@
 						<div class="f14 tac rightView_chatUsText">采购数字化管理专家</div>
 					</div>
 				</div>
-				
+			</div>
+			<div class="bothei"></div>
+			<div class="bgbai flex-column flex-between PingFangSCMediumBanner homephone_bot">
+				<div class="flex-column f14 homephone_bot_left" @click="showregistermodal('',1,'')">
+					<div class="homephone_bot_img"><img src="./img/homePhonebot1.png" class="imgsize"></div>
+					<div>注册体验</div>
+				</div>
+				<a class="flex-column f14 homephone_bot_right" href="tel:400-835-1881">
+					<div class="homephone_bot_img"><img src="./img/homePhonebot2.png" class="imgsize"></div>
+					<div>电话咨询</div>
+				</a>
 			</div>
 		</div>
 	</body>
@@ -1440,13 +1453,13 @@
 				})
 			},
 			handelTouchStart(e){
-				console.log('按钮', e.changedTouches[0].clientX);
+				// console.log('按钮', e.changedTouches[0].clientX);
 				this.startTime = Date.now()
 				this.startX = e.changedTouches[0].clientX;
 				this.startY = e.changedTouches[0].clientY;
 			},
 			handelTouchend(e) {
-				console.log('按钮', e.changedTouches[0].clientX);
+				// console.log('按钮', e.changedTouches[0].clientX);
 				let endTime = Date.now()
 				let endX = e.changedTouches[0].clientX;
 				let endY = e.changedTouches[0].clientY;
@@ -1465,12 +1478,12 @@
 						this.Solutionindex--
 					}
 				}else{
-					console.log(this.SolutionList[this.navstopIndex])
+					// console.log(this.SolutionList[this.navstopIndex])
 					if(this.SolutionList[this.navstopIndex][1].length-1>this.Solutionindex){
 						this.Solutionindex++
 					}
 				}
-				console.log(direction);
+				// console.log(direction);
 			}
 		},
 		computed:{

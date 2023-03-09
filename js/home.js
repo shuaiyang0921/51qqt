@@ -32,6 +32,7 @@ window.onscroll = () => lazyLoad(imgs);
 $(document).ready(function(){
     var onOff = true;
     $('.menu_button').click(function(){
+        console.log($(this))
         event.stopPropagation();
         $(this).toggleClass("cross");
         if(onOff){
