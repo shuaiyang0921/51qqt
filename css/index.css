@@ -322,7 +322,10 @@
 .rightView_showkfList{padding: 18px 0;}
 .rightView_showkfTitle{color: #222222;height: 22px;line-height: 22px;margin-bottom: 2px;}
 .rightView_showkfText{color: #9A9089;height: 20px;line-height: 20px;}
-.rightView_kf:hover .rightView_showkf{display: block;}
+/*.rightView_kf:hover ~ #newBridge{display: block !important;}*/
+#newBridge{
+    display: none !important;
+}
 .rightView_showkfList:hover .rightView_right{background: no-repeat url('../img/rightView_left.png');background-size: 100%;}
 .rightView_showkfList:hover .rightView_showkfTitle{color: #FF761A;}
 
