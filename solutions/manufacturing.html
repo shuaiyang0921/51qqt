@@ -665,6 +665,17 @@
 			getSeo(7)
 		},
 		methods: {
+			changenavicon(e){
+					if(e.currentTarget.style.transform=='translateY(4px) rotate(180deg)'){
+						e.currentTarget.parentElement.nextElementSibling.style.display = 'none'
+						e.currentTarget.parentElement.style.color = '#222222'
+						e.currentTarget.style.transform = "none"
+					}else{
+						e.currentTarget.parentElement.nextElementSibling.style.display = 'block'
+						e.currentTarget.parentElement.style.color = '#005CEF'
+						e.currentTarget.style.transform = "translateY(4px) rotate(180deg)"
+					}
+				},
 			showAiFanFan(){
 				$("#newBridge").attr("style","display: block !important;z-index: 2 !important")
 				$("#nb_icon_wrap").attr("style","margin-top:10px !important;margin-right:120px !important;")

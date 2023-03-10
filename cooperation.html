@@ -258,22 +258,22 @@
                         </div>
                     </div>
                     <div class="flex-column flex-middle flex-right" style="width: 400px;">
-                        <div class="flex-column flex-middle">
+                        <a class="flex-column flex-middle" href="tel:400-835-1881">
                             <div class="iconsize"><img src="./img/home18.png" class="imgsize" alt="电话拨号"></div>
                             <div class="homeHead_phone homeHead_appleStytle f18">400-835-1881</div>
-                        </div>
+						</a>
                         <a class="f16 homeHead_logintil" href="https://www.51qqt.com/ELSLogin/login/login.html">登录</a>
-                        <div class="f14 homeHead_registertil" @click="showregistermodal()">注册体验</div>
+                        <div class="f14 homeHead_registertil" @click="showregistermodal('',1,'')">注册体验</div>
                     </div>
                 </div>
 				<div class="bgbai homephoneHead_height">
 					<div class="flex-column flex-between homephoneHead xian_head">
 						<a class="logosize" href="./index.html"><img src="./img/logo.png" class="imgsize" alt="企企通"></a>
 						<div class="flex-column flex-middle">
-							<div class="flex-column flex-middle">
+							<a href="tel:400-835-1881" class="flex-column flex-middle">
 								<div class="iconsize"><img src="./img/home18.png" class="imgsize" alt="电话拨号"></div>
 								<div class="homeHead_phone homeHead_appleStytle f18">400-835-1881</div>
-							</div>
+							</a>
 							<div class="menu_buttonstyle">
 								<div class="menu_button">
 									<div class="bar"></div>
@@ -284,7 +284,104 @@
 						</div>
 					</div>
 					<div class="shownavs">
-						<div class="homephoneHead_navs xian_head">
+						<div class="flex-column" style="height: 100%;">
+							<div class="f14 PingFangSCMediumBanner homephoneHead_left">
+								<a class="homephoneHead_leftList">产品</a>
+								<a>解决方案</a>
+								<a class="homephoneHead_left_link" href="./case-study.html">客户案例</a>
+								<a>资讯中心</a>
+								<a class="homephoneHead_left_link" href="./cooperation.html">合作伙伴</a>
+								<a>关于我们</a>
+							</div>
+							<div class="homephoneHead_right f14">
+								<div class="f14 PingFangSCMediumBanner homephoneHead_right_title">企业SaaS云</div>
+								<div>
+									<div class="flex-column flex-between homephoneHead_navchild_Subhead">
+										<div class="homeHead_productpopUp_titleicon1"><a href="./purchase/index.html">采购云</a></div>
+										<div class="homephoneHead_navicon" @click="changenavicon"><img src="./img/homephone_xia.png" class="imgsize" alt="企企通图标"></div>
+									</div>
+									<div class="shownavchild_text">
+										<a class="homephoneHead_navchild_text" href="./purchase/supplier.html">供应商管理</a>
+										<a class="homephoneHead_navchild_text" href="./purchase/sourcing.html">战略寻源</a>
+										<a class="homephoneHead_navchild_text" href="./purchase/bidding.html">电子招投标</a>
+										<a class="homephoneHead_navchild_text" href="./purchase/procurement.html">采购协同</a>
+										<a class="homephoneHead_navchild_text" href="./purchase/contract.html">合同管理</a>
+										<a class="homephoneHead_navchild_text" href="./purchase/resource.html">采购资源</a>
+										<a class="homephoneHead_navchild_text" href="./purchase/analysis.html">采购分析</a>
+									</div>
+								</div>
+								<div>
+									<div class="flex-column flex-between homephoneHead_navchild_Subhead">
+										<div class="homeHead_productpopUp_titleicon2"><a href="./mall/mall.html">商城云</a></div>
+										<div class="homephoneHead_navicon" @click="changenavicon"><img src="./img/homephone_xia.png" class="imgsize" alt="企企通图标"></div>
+									</div>
+									<div class="shownavchild_text">
+										<a class="homephoneHead_navchild_text" href="./mall/qqgouQ3.html">企企通商城旗舰版</a>
+										<a class="homephoneHead_navchild_text" href="./mall/qqgouQ3K.html">企企通商城标准版</a>
+										<a class="homephoneHead_navchild_text" href="./mall/b2b.html">B2B商城</a>
+										<a class="homephoneHead_navchild_text" href="./mall/juyuanchi.html">聚源池</a>
+									</div>
+								</div>
+								<div>
+									<div class="flex-column flex-between homephoneHead_navchild_Subhead">
+										<div class="homeHead_productpopUp_titleicon3"><a href="./scf/scf.html">赋能云</a></div>
+									</div>
+								</div>
+								<div>
+									<div class="flex-column flex-between homephoneHead_navchild_Subhead">
+										<div class="homeHead_productpopUp_titleicon4"><a href="./mkt/mkt.html">营销云</a></div>
+									</div>
+								</div>
+								<div class="flex-column flex-between homephoneHead_navchild_Subhead">
+									<div class="homeHead_productpopUp_titleicon5"><a href="./purchase/darenTong.html">达人通</a></div>
+								</div>
+								<div class="f14 PingFangSCMediumBanner homephoneHead_right_title">PaaS平台</div>
+								<a class="homephoneHead_navchild_text homeHead_productpopUp_paastitleicon1" href="./paas/apaas.html?navNum=0">APaaS应用开发平台</a>
+								<a class="homephoneHead_navchild_text homeHead_productpopUp_paastitleicon2" href="./paas/apaas.html?navNum=1">IPaaS集成开发平台</a>
+								<a class="homephoneHead_navchild_text homeHead_productpopUp_paastitleicon3" href="./paas/apaas.html?navNum=2">DPaaS数据中台</a>
+							</div>
+							<div class="homephoneHead_right f14">
+								<div class="f14 PingFangSCMediumBanner homephoneHead_right_title">行业解决方案</div>
+								<div>
+									<a class="homephoneHead_right_text" href="./solutions/manufacturing.html">高端制造</a>
+									<a class="homephoneHead_right_text" href="./solutions/construction.html">地产建筑</a>
+									<a class="homephoneHead_right_text" href="./solutions/retail.html">零售消费</a>
+									<a class="homephoneHead_right_text" href="./solutions/food.html">食品餐饮</a>
+									<a class="homephoneHead_right_text" href="./solutions/finance.html">金融保险</a>
+									<a class="homephoneHead_right_text" href="./solutions/pharmacy.html">生物制药</a>
+									<a class="homephoneHead_right_text" href="./solutions/energy.html">能源化工</a>
+									<a class="homephoneHead_right_text" href="./solutions/service.html">现代服务</a>
+								</div>
+								<div class="f14 PingFangSCMediumBanner homephoneHead_right_title">领域解决方案</div>
+									<a class="homephoneHead_right_text cursorDefault">生产</a>
+									<a class="homephoneHead_right_text cursorDefault">商贸</a>
+									<a class="homephoneHead_right_text cursorDefault">项目</a>
+									<a class="homephoneHead_right_text cursorDefault">服务</a>
+									<a class="homephoneHead_right_text cursorDefault">大宗</a>
+									<a class="homephoneHead_right_text cursorDefault">办公</a>
+							</div>
+							<div class="homephoneHead_right f14">
+								<div class="f14 PingFangSCMediumBanner homephoneHead_right_title">资讯中心</div>
+								<div>
+									<a class="homephoneHead_right_text" href="./news/1.html">企业资讯</a>
+									<a class="homephoneHead_right_text" href="./news/events.html">市场活动</a>
+									<a class="homephoneHead_right_text" href="./news/4.html">干货分享</a>
+									<a class="homephoneHead_right_text" href="./news/reports.html">分析报告</a>
+									<a class="homephoneHead_right_text" href="./news/videos.html">微视频</a>
+								</div>
+							</div>
+							<div class="homephoneHead_right f14">
+								<div class="f14 PingFangSCMediumBanner homephoneHead_right_title">关于我们</div>
+								<div>
+									<a class="homephoneHead_right_text" href="./about.html">公司介绍</a>
+									<a class="homephoneHead_right_text" href="./honor.html">荣誉资质</a>
+									<a class="homephoneHead_right_text" href="./join-us.html">加入我们</a>
+									<a class="homephoneHead_right_text" href="./contact-us.html">联系我们</a>
+								</div>
+							</div>
+						</div>
+						
+						<!-- <div class="homephoneHead_navs xian_head">
 							<div>
 								<div class="flex-column flex-between homephoneHead_nav">
 									<div class="f16 PingFangSCMedium">产品</div>
@@ -326,7 +423,7 @@
 									</div>
 									<div>
 										<div class="flex-column flex-between homephoneHead_navchild_Subhead">
-											<div class="homeHead_productpopUp_titleicon4"><a href="./mkt/mkt.html">营销云</a></div>
+											<div class="homeHead_productpopUp_titleicon4"><a href="./paas/mkt.html">营销云</a></div>
 										</div>
 									</div>
 									<div class="flex-column flex-between homephoneHead_navchild_Subhead">
@@ -395,7 +492,7 @@
 							</div>
 							
 						</div>
-						<div class="f14 homeHead_registertil tac" @click="showregistermodal('')">注册体验</div>
+						<div class="f14 homeHead_registertil tac" @click="showregistermodal('')">注册体验</div> -->
 					</div>
 				</div>
 			</div>
@@ -732,6 +829,17 @@
 			getSeo(5)
 		},
 		methods: {
+			changenavicon(e){
+				if(e.currentTarget.style.transform=='translateY(4px) rotate(180deg)'){
+					e.currentTarget.parentElement.nextElementSibling.style.display = 'none'
+					e.currentTarget.parentElement.style.color = '#222222'
+					e.currentTarget.style.transform = "none"
+				}else{
+					e.currentTarget.parentElement.nextElementSibling.style.display = 'block'
+					e.currentTarget.parentElement.style.color = '#005CEF'
+					e.currentTarget.style.transform = "translateY(4px) rotate(180deg)"
+				}
+			},
 			showAiFanFan(){
 				$("#newBridge").attr("style","display: block !important;z-index: 2 !important")
 				$("#nb_icon_wrap").attr("style","margin-top:10px !important;margin-right:120px !important;")

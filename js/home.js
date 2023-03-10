@@ -31,6 +31,7 @@ window.onscroll = () => lazyLoad(imgs);
 
 $(document).ready(function(){
     var onOff = true;
+    var onchind = true;
     $('.menu_button').click(function(){
         console.log($(this))
         event.stopPropagation();
@@ -57,24 +58,7 @@ $(document).ready(function(){
         }else{
             $('.homephoneHead_right').eq(index).show().siblings('.homephoneHead_right').hide();
         }
-       
-        
     });
-    $('.homephoneHead_navchild_Subhead').click(function(){
-        event.stopPropagation();
-        index=$(this).index();
-        if($(this).find('.homephoneHead_navicon')[0].style.transform=='translateY(4px) rotate(180deg)'){
-            $(this).siblings(".shownavchild_text").hide();
-            $(this).css("color","#222222");
-            $(this).find('.homephoneHead_navicon').css("transform","none");
-        }else{
-            $(this).siblings(".shownavchild_text").show();
-            $(this).css("color","#005CEF");
-            $(this).find('.homephoneHead_navicon').css("transform","translateY(4px) rotate(180deg)");
-        }
-    });
-    
-    
     window.onscroll=function(){
         let t = document.documentElement.scrollTop || document.body.scrollTop
         var header = document.getElementsByClassName('header');
@@ -93,6 +77,24 @@ $(document).ready(function(){
             window.scrollTo(0, 0);
         },500)
     });
+    
+    // $('.homephoneHead_navchild_Subhead>.homephoneHead_navicon').click(function(){
+    //     event.stopPropagation();
+    //     index=$(this).index();
+    //     console.log(index, $(this)[0].style.transform)
+    //     if($(this)[0].style.transform=='translateY(4px) rotate(180deg)'){
+    //         $(this).parent().siblings(".shownavchild_text").hide();
+    //         $(this).parent().css("color","#222222");
+    //         $(this).css("transform","none");
+    //     }else{
+    //         console.log($(this).parent())
+    //         $(this).parent().siblings(".shownavchild_text").show()
+    //         $(this).parent().css("color","#005CEF");
+    //         $(this).css("transform","translateY(4px) rotate(180deg)");
+    //     }
+    // });
+    
+    
     // $('.home_Solution_tabs>div').click(function(){
     //     event.stopPropagation();
     //     index=$(this).index();

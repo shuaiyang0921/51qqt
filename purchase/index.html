@@ -292,7 +292,7 @@
 								<div>
 									<div class="flex-column flex-between homephoneHead_navchild_Subhead">
 										<div class="homeHead_productpopUp_titleicon1"><a href="../purchase/index.html">采购云</a></div>
-										<div class="homephoneHead_navicon"><img src="../img/homephone_xia.png" class="imgsize" alt="企企通图标"></div>
+										<div class="homephoneHead_navicon" @click="changenavicon"><img src="../img/homephone_xia.png" class="imgsize" alt="企企通图标"></div>
 									</div>
 									<div class="shownavchild_text">
 										<a class="homephoneHead_navchild_text" href="../purchase/supplier.html">供应商管理</a>
@@ -307,7 +307,7 @@
 								<div>
 									<div class="flex-column flex-between homephoneHead_navchild_Subhead">
 										<div class="homeHead_productpopUp_titleicon2"><a href="../mall/mall.html">商城云</a></div>
-										<div class="homephoneHead_navicon"><img src="../img/homephone_xia.png" class="imgsize" alt="企企通图标"></div>
+										<div class="homephoneHead_navicon" @click="changenavicon"><img src="../img/homephone_xia.png" class="imgsize" alt="企企通图标"></div>
 									</div>
 									<div class="shownavchild_text">
 										<a class="homephoneHead_navchild_text" href="../mall/qqgouQ3.html">企企通商城旗舰版</a>
@@ -391,7 +391,7 @@
 				</div>
 			</div>
 			<div class="padBg">
-				<div class="PingFangSCMedium tac home_title">满足企业全品类采购需求，覆盖各类应用场景</div>
+				<div class="PingFangSCMedium tac home_title">满足企业全品类采购需求，覆盖<br/>各类应用场景</div>
 				<div class="flex-column flex-center" style="width: 100%;">
 					<div class="mall_navs">
 						<div class="mall_navs_imgtitle"><img :src="purchaseMallData[0]?purchaseMallData[0].image:''" class="imgsize" :alt="purchaseMallData[0]?purchaseMallData[0].title:''"></div>
@@ -722,6 +722,17 @@
 				getSeo(28)
 			},
 			methods: {
+				changenavicon(e){
+					if(e.currentTarget.style.transform=='translateY(4px) rotate(180deg)'){
+						e.currentTarget.parentElement.nextElementSibling.style.display = 'none'
+						e.currentTarget.parentElement.style.color = '#222222'
+						e.currentTarget.style.transform = "none"
+					}else{
+						e.currentTarget.parentElement.nextElementSibling.style.display = 'block'
+						e.currentTarget.parentElement.style.color = '#005CEF'
+						e.currentTarget.style.transform = "translateY(4px) rotate(180deg)"
+					}
+				},
 				showAiFanFan(){
 					$("#newBridge").attr("style","display: block !important;z-index: 2 !important")
 					$("#nb_icon_wrap").attr("style","margin-top:10px !important;margin-right:120px !important;")
