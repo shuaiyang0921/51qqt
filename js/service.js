@@ -10,7 +10,7 @@ function getSeo(pageName){
 
 	//2.配饰请求方法，设置请求接口地址
 	//这里我以木小果接口来测试，如果接口无法使用，各位小伙伴可以自行到木小果中获取接口
-	xhr.open('get','http://localhost:8080/els/seo/noToken/queryByPageName?pageName='+pageName)
+	xhr.open('get','https://xgw.51qqt.com/els/seo/noToken/queryByPageName?pageName='+pageName)
 
 	//3.发送请求
 	xhr.send()
@@ -21,7 +21,6 @@ function getSeo(pageName){
 		if (xhr.readyState === 4 && xhr.status === 200) {
 			var res = JSON.parse(xhr.responseText)
 			if (res.code==200&&res.result){
-				console.log("=====")
 				document.querySelector('meta[name="Keywords"]').setAttribute('content',res.result.seoKeyword);
 				document.querySelector('title').innerHTML=res.result.title;
 

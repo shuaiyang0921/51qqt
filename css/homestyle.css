@@ -16,7 +16,7 @@
 .homeHead_adver_botimg:hover{
     transform: translateY(-6px);
 }
-.homeHead_adver_bottext{width: 183px;height: 30px;font-weight: 400;color: #888888;line-height: 15px;margin-top: 10px;}
+.homeHead_adver_bottext{width: 183px;height: 30px;font-weight: 400;color: #888888;line-height: 20px;margin-top: 10px;}
 .homeHead_adver_botstyle{width: 299px;border-right: 1px solid #EBEBEB;display: flex;justify-content: center;align-items: center;}
 .homeHead_adver_botstyle:last-child{border-right:none;}
 .homeHead_adver_botright{margin-left: 16px;width: 183px;}
