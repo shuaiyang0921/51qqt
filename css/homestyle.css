@@ -28,7 +28,7 @@
 .home_Enabling_right{margin: 18px 60px 0 80px;width: calc(100% - 810px);}
 .home_Enabling_Subhead{color: #555555;margin: 17px 0 50px 0;}
 .home_Enabling_title{margin-bottom: 20px;}
-.home_Enabling_text{margin: 10px 25px;position: relative;}
+.home_Enabling_text{margin: 10px 0 10px 25px ;position: relative;}
 .home_Enabling_text::before{content: "";width: 16px;height: 14px;position:absolute;top: 5px;left: -25px;background: url(../img/home73.png) no-repeat;background-size: 100%;}
 .home_Enabling_but{margin-top: 50px;}
 .home_Enabling_connect{margin: 0 142px 0 348px;position: relative;height: 86px;}
@@ -90,7 +90,7 @@
     transform: scale(1.1);
 }
 .home_Solution_center{width: calc(100% - 356px);background: rgba(23,24,27,0.3);backdrop-filter: blur(5px);padding: 50px 60px 60px 60px;max-height: 338px}
-.home_Solution_rightwidth{width: calc(100% - 252px);display: none;animation: leftin 1s;background: url(../img/homephone_solutionBg.png) no-repeat center center;background-size: cover;}
+.home_Solution_rightwidth{width: calc(100% - 252px);display: none;background: url(../img/homephone_solutionBg.png) no-repeat center center;background-size: cover;}
 .home_Solution_item{display: none;}
 .home_Solution_rightwidth2{width: calc(100% - 252px);}
 .showitem{display: flex;}
@@ -330,7 +330,9 @@ div::-webkit-scrollbar{
     z-index:-2;
     border-radius: 4px;
 }
-
+.product_banner_register{
+    padding: 13px 68px;
+}
 .registe_form_codebut:hover{
     z-index:1;
     background:transparent;
@@ -413,6 +415,7 @@ div::-webkit-scrollbar{
     .home_endorsed {padding: 60px;}
 }
 @media screen and (max-width:582px) {
+    .phonebai{background: #FFFFFF;}
     .homeHead_adverList{padding: 270px 20px 0 20px;height: 160px;}
     .homeHead_adver1_text{margin: 20px 0 22px 0;width: 100%;text-align: center;}
     /* .f14{font-size: 12px;} */
@@ -486,7 +489,7 @@ div::-webkit-scrollbar{
     .home_Solution_title{color: #222;}
     .home_Solution_tabs>div{padding: 11px 0;color: #005CEF;font-size: 16px;}
     .home_Solution_right_unSel,.home_Solution_left_unSel{border: 1px solid #005CEF;}
-    .home_Solution_left{display: none;}
+    .home_Solution_left,.phonehide{display: none;}
     .home_Solution_centerText{padding: 8px 0 59px 0;}
     .home_Solution_centerImgs{width: 100%;margin-bottom: 30px;}
     .home_Solution_centerImg{width: 20px;height: 20px;}
@@ -507,6 +510,9 @@ div::-webkit-scrollbar{
     .registe_form_submit{font-size: 14px;padding: 10px;width: calc(100% - 20px);text-align: center;}
     .homephone_bot{display: flex;}
     .bothei{display: block;}
+    .product_banner_register{padding: 10px 42px;margin: 0 auto;margin-top: 0;}
+    .home_Solution_rightwidth{animation: leftin 1s;}
+    .home_Enabling_text{font-size: 14px;}
 }
 @media screen and (max-width:580px) {
     .home_endorsed_botLists{bottom: -170px;}

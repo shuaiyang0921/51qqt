@@ -6,7 +6,7 @@
 .qqgouQ3_adver{padding: 60px 10%;padding-top: 132px;}
 .b2b_adver{background: url(../images/mall/bgB2B.png) no-repeat center center;background-size: cover;padding: 60px 10%;padding-top: 132px;}
 .juyuanchi_adver{background: url(../images/mall/bgJyc.png) no-repeat center center;background-size: cover;padding: 60px 10%;padding-top: 132px;}
-.supplier_adver{padding: 60px 10%;padding-top: 132px;}
+.supplier_adver{padding: 60px 10%;padding-top: 132px;height: 500px;}
 .paas_topImg{width: 490px;height: 370px;padding: 10px;background: #FFFFFF;box-shadow: 0px 2px 20px 0px rgba(142,168,220,0.2);border-radius: 12px;margin-left: 66px;}
 .adver_title{font-size: 48px;line-height: 67px;}
 .qilian_topImg{width: 360px;height: 350px;margin-left: 136px;}
@@ -157,6 +157,7 @@
     transform-origin: 0 100%;
 }
 .pushase_more_link{height: 18px;line-height: 18px;}
+.supplier_title{margin-bottom: 0;}
 @keyframes product {
     from {transform: scaleY(0);}
     to {transform: scaleY(1);}
@@ -183,6 +184,7 @@
 @media screen and (max-width:582px) {
     .manufacturing_adver_title{font-size: 24px;line-height: 33px;margin-bottom: 8px;}
     .mkt_adver{padding: 194px 0px 24px 0px;margin-top: 69px;text-align: center;}
+    .supplier_adver {padding: 194px 0px 24px 0px;margin-top: 69px;text-align: center;height: auto;height: auto;}
     .paas_adver_left{padding: 0 20px;width: calc(100% - 40px);}
     .mkt_adver_buts{margin-bottom: 20px;justify-content: space-between;}
     .mkt_adver_buts>div{font-size: 14px;margin: 0;padding: 4px 15px;width: 70px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
@@ -190,14 +192,21 @@
     .mall_navs{padding: 20px;width: calc(100% - 40px);margin: 0 0 16px 0;}
     .mall_navs:last-child{margin-bottom: 0;}
     .scf_navList_rightLable {padding: 10px 20px;font-size: 14px;height: 20px;line-height: 20px;font-weight:500;margin-bottom: 8px;}
-    .paas_adver_text{display: none;}
+    .paas_adver_text,.qilian_topImg{display: none;}
     .product_index_banner_register{padding: 10px 42px;margin: 0 auto;}
     .mall_navs_imgtitle{display: none;}
     .pushase_more_link{display: none;}
     .mall_navs_text{font-size: 14px;margin: 10px 0 0 0;}
     .last_mall_navs{margin: 16px 20px 0 20px;width: 100%;}
-    .scf_navList_rightTitle {font-size: 18px;height: 25px;line-height: 25px;margin-bottom: 12px;}
+    .scf_navList_rightTitle {font-size: 18px;line-height: 25px;margin-bottom: 12px;}
     .scf_navList_rightText{font-size: 14px;line-height: 24px;color: #555555;margin-bottom: 20px;}
-    .purchase_navList_left_text .scf_navList_rightTitle {text-align: center;}
-    .phonehide{display: none;}
+    /* .purchase_navList_left_text .scf_navList_rightTitle {text-align: center;} */
+    .qilian_adver_left{width:100%;}
+    .adver_title {font-size: 24px;line-height: 33px;margin-bottom: 8px;}
+    .paas_adver_buts{font-size: 14px;justify-content: center;margin-bottom: 16px;}
+    .paas_adver_buts>div{padding: 4px 15px;}
+    .paas_adver_buts>div:last-of-type{margin-right: 0px;}
+    .supplier_title{margin-bottom: 20px;}
+    .purchase_navList_rightText{font-size: 14px;margin-bottom:0;}
+    .aPaaS_head_but{display: none;}
 }

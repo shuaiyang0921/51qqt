@@ -1287,7 +1287,7 @@
 					}
 				})
 
-				console.log(index)
+				// console.log(index)
 				if (index==1){
 					this.caseTabClass1="home_Solution_left_sel"
 					this.caseTabClass2="home_Solution_right_unSel"
@@ -1457,6 +1457,9 @@
 			},
 			handelTouchend(e) {
 				// console.log('按钮', e.changedTouches[0].clientX);
+				if(this.clientWidth>=582){
+					return
+				}
 				let endTime = Date.now()
 				let endX = e.changedTouches[0].clientX;
 				let endY = e.changedTouches[0].clientY;

@@ -378,7 +378,7 @@
 				</div>
 			</div>
 			<!-- <div class="heiheader"></div> -->
-			<div class="paas_topBg" class="wow animate__fadeInUp" data-wow-duration="2s" :style="{backgroundImage: 'url('+(BannerImg[0]?BannerImg[0].image:'')+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover',backgroundPosition:'center',height:'500px'}">
+			<div v-if="BannerImg[0]" class="paas_topBg wow animate__fadeInUp" data-wow-duration="2s" :style="{backgroundImage: 'url('+(clientWidth<=582?BannerImg[0].mobileImage:BannerImg[0].image)+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover',backgroundPosition:'center'}">
 				 <div class="supplier_adver flex-column flex-middle flex-center maxwidth">
 					<div class="qilian_adver_left">
 						<div class="adver_title homeHead_appleStytle" v-html="BannerImg[0]?BannerImg[0].title:''"></div>
@@ -391,13 +391,13 @@
 					<div class="qilian_topImg"><img v-if="BannerImg[0]" :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize"></div>
 				</div>
 			</div>
-			<div class="padBg bggray">
+			<div class="padBg bggray phonebai wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth">
 					<div class="PingFangSCMedium tac home_title">传统采购管理，缺乏有效的数据分析</div>
 					<div class="flex-column flex-between">
 						<div class="flex-column manufacturing_observation_list" v-for="item in supplierData">
 							<div class="manufacturing_observation_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
-							<div>
+							<div class="manufacturing_observation_right">
 								<div class="PingFangSCMedium manufacturing_observation_title" v-html="item.title"></div>
 								<div class="f16 manufacturing_observation_text" v-html="item.intro"></div>
 							</div>
@@ -405,13 +405,13 @@
 					</div>
 				</div>
 			</div>
-			<div class="padBg">
+			<div class="padBg phonehide wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth">
 					<div class="PingFangSCMedium tac home_title">{{supplierImgData[0]?supplierImgData[0].bigTitle:''}}</div>
 					<div class=""><img v-if="supplierImgData[0]" :src="supplierImgData[0]?supplierImgData[0].image:''" class="imgsize" :alt="supplierImgData[0]?supplierImgData[0].bigTitle:''"></div>
 				</div>
 			</div>
-			<div class="padBg bggray">
+			<div class="padBg bggray wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="PingFangSCMedium tac home_title" style="margin-bottom: 0px;">产品价值</div>
 				<div v-for="(item,index) in supplierListData">
 					<div class="flex-column flex-center flex-middle" v-if="index%2==0">
@@ -621,6 +621,7 @@
 				companyName:'',
 				telephone:'',
 				smsCode:'',
+				clientWidth:0
 			}
 		},
 		watch: {
@@ -629,6 +630,7 @@
 			// if(getQueryVariable('navNum')){
 			// 	this.navNum = getQueryVariable('navNum')
 			// }
+			this.clientWidth = document.documentElement.clientWidth
 			getHost('els')
 			this.getdata()
 			this.getBanner()
@@ -679,6 +681,7 @@
 							}
 							that.BannerImg.forEach(item=>{
 								item.image=item.image.replace(/\s/g,'%20');
+								item.mobileImage=item.mobileImage.replace(/\s/g,'%20');
 							})
 						})
 						.catch(err => {

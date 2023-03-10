@@ -159,4 +159,10 @@
     .manufacturing_listleft_but2{padding: 8px 27px;font-size: 14px;line-height: 20px;height: 20px;}
     .manufacturing_listleft_but3{padding: 8px 20px;font-size: 14px;width: 90px;margin-left: calc(100% - 268px);}
     .manufacturing_listright_img{display: none;}
+    .manufacturing_observation_img{width: 30px;height: 30px;margin-right: 16px;}
+    .manufacturing_observation_list{padding: 20px;margin: 0 0 16px 0;width: calc(100% - 30px);}
+    .manufacturing_observation_list:last-child{margin-bottom: 0;}
+    .manufacturing_observation_title{font-size: 18px;line-height: 25px;height: 25px;}
+    .manufacturing_observation_text{font-size: 14px;line-height: 24px;width: 100%;}
+    .manufacturing_observation_right{width: calc(100% - 46px);}
 }
