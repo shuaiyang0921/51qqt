@@ -696,6 +696,7 @@
 				new WOW().init();
 			},
 			mounted(){
+			this.showAiFanFan();
 				getSeo(28)
 			},
 			methods: {
@@ -711,8 +712,10 @@
 					}
 				},
 				showAiFanFan(){
-					$("#newBridge").attr("style","display: block !important;z-index: 2 !important")
-					$("#nb_icon_wrap").attr("style","margin-top:10px !important;margin-right:120px !important;")
+					setTimeout(()=>{
+						$("#newBridge").attr("style","display: block !important;z-index: 2 !important")
+						$("#nb_icon_wrap").attr("style","margin-top:-32px !important;margin-right:22px !important;")
+					},1000)
 				},
 				getdata(){
 					that = this
