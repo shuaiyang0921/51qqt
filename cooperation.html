@@ -689,7 +689,7 @@
 						</div> -->
 					</div>
 				</div>
-				<div class="rightView_trial" @click="showregistermodal('',3,'')">
+				<div class="rightView_trial" @click="showregistermodal(3)">
 					<div class="rightView_trialImg"><img src="./img/right_shiyong.png" class="imgsize"></div>
 					<div class="f14 rightView_trialText">免费试用</div>
 				</div>
@@ -732,6 +732,10 @@
 			getSeo(5)
 		},
 		methods: {
+			showAiFanFan(){
+				$("#newBridge").attr("style","display: block !important;z-index: 2 !important")
+				$("#nb_icon_wrap").attr("style","margin-top:10px !important;margin-right:120px !important;")
+			},
 			getdata(){
 				that = this
 				var _getData = p => get('/content/websiteCooperativePartner/noToken/queryPageData', p);
