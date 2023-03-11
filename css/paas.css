@@ -158,7 +158,7 @@
 }
 .pushase_more_link{height: 18px;line-height: 18px;}
 .supplier_title{margin-bottom: 0;}
-
+.darentong_change_righttext{width: calc(100% - 74px);}
 @keyframes product {
     from {transform: scaleY(0);}
     to {transform: scaleY(1);}
@@ -223,4 +223,34 @@
     .scf_navs{flex-wrap: nowrap;position: absolute;}
     .scf_navs>div{width: 50px;padding: 8px 16px;}
     .scf_tabs_nav{margin-top: 320px;}
+    .phoone_adver_buts>div{padding: 4px 36px;}
+    .qiliantong_whyList{padding: 22px 20px;margin: 0 0 16px 0;width: 100%;}
+    .qiliantong_whyList:last-of-type{margin: 0;}
+    .qirongtong_whyList_text{width: 100%;font-size: 14px;margin-bottom: 16px;}
+    .qiliantong_whyList_img{width: 30px;height: 30px;}
+    .qirongtong_whyList_title{font-size: 14px;}
+    .qirongtong_Business{width: 100%;height: auto;margin-bottom: 20px;}
+    .qirongtong_Business_lists,.qipiaotong_Business_lists{position: initial;}
+    .qirongtong_Business_img{width: 30px;height: 30px;padding: 15px;margin-right:16px;}
+    .qirongtong_Business_right{width: calc(100% - 80px);}
+    .qirongtong_Business_title{margin-bottom: 8px;line-height: 22px;font-size: 16px;}
+    .qirongtong_Business_list1,.qirongtong_Business_list3{margin-bottom: 24px;}
+    .qirongtong_Business_list2{margin-left: 0;margin-bottom: 24px;}
+    .qiliantong_whyList_text,.qipiaotong_Business_textwidth{width: 100%;height: auto;}
+    .mkt_title{padding: 30px 0 10px 0;}
+    .paas_navs{padding: 0px;}
+    .paas_navs>div{font-size: 16px;padding-bottom: 8px;height: 22px;line-height: 22px;border-bottom: 2px solid #fff;}
+    .paas_nav{border-bottom: 2px solid #005CEF!important;}
+    .aPaaS_head_bg{padding: 16px 16px 30px 16px;}
+    .aPaaS_head{margin: 0;padding: 16px;}
+    .aPaaS_head_img{order: 1;width: 100%;height: auto;margin-bottom: 20px;}
+    .aPaaS_head_text{order: 2;width: 100%;}
+    .aPaaS_head_text1{font-size: 18px;line-height: 25px;margin-bottom: 4px;height: 25px;}
+    .aPaaS_head_text2{font-size: 14px;line-height: 24px;margin-bottom: 16px;}
+    .aPaaS_head_text2:last-of-type{margin-bottom: 0;}
+    .darentong_change_left,.darentong_change_leftwid{width: 100%;}
+    .darentong_change_img{width: 40px;height: 40px;}
+    .darentong_change_text{width: 100%;}
+    .darentong_change_righttext{width: calc(100% - 64px);}
+    .darentong_change_right{height: auto;}
 }
