@@ -401,7 +401,7 @@
 				<div class="paas_topImg"><img v-if="BannerImg[0]" :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize" alt="PaaS平台"></div>
 			</div> -->
 			<div class="PingFangSCMedium tac home_title scf_title">深度绑定产业生态，重新定义<br/>供应链金融</div>
-			<div class="scf_bgImg maxwidth"><img :src="clientWidth<=582?ImgData[0].mobileImage.replace(/\s/g,'%20'):ImgData[0].image.replace(/\s/g,'%20')" class="imgsize" :alt="ImgData[0]?ImgData[0].bigTitle:''"></div>
+			<div class="scf_bgImg maxwidth" v-if="ImgData[0]"><img :src="clientWidth<=582?ImgData[0].mobileImage.replace(/\s/g,'%20'):ImgData[0].image.replace(/\s/g,'%20')" class="imgsize" :alt="ImgData[0]?ImgData[0].bigTitle:''"></div>
 			<div class="bggray scf_navsBg">
 				<div class="PingFangSCMedium tac home_title">平台化供应链金融解决方案，助力<br/>产业链结构升级</div>
 				<div class="phone_scf_navs">
@@ -424,7 +424,7 @@
 			<div class="padBg">
 				<div class="maxwidth">
 					<div class="PingFangSCMedium tac home_title">连接资产端和资金端，赋能<br/>供应链企业和供应商</div>
-					<div class="scfImg"><img :src="purchaseImgData[0]?purchaseImgData[0].image:''" class="imgsize" :alt="purchaseImgData[0]?purchaseImgData[0].bigTitle:''"></div>
+					<div class="scfImg" v-if="purchaseImgData[0]"><img :src="purchaseImgData[0]?purchaseImgData[0].image:''" class="imgsize" :alt="purchaseImgData[0]?purchaseImgData[0].bigTitle:''"></div>
 				</div>
 			</div>
 			<div class="bggray scf_solvebgImg_bot">
