@@ -376,7 +376,7 @@
 				</div>
 			</div>
 			<!-- <div class="heiheader"></div> -->
-			<div class="wow animate__fadeInUp" data-wow-duration="2s" :style="{backgroundImage: 'url('+(BannerImg[0]?BannerImg[0].image:'')+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover'}">
+			<div v-if="BannerImg[0]" :style="{backgroundImage: 'url('+(clientWidth<=582?BannerImg[0].mobileImage.replace(/\s/g,'%20'):BannerImg[0].image.replace(/\s/g,'%20'))+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover',backgroundPosition:'center'}" class="wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="mkt_adver maxwidth flex-column flex-middle flex-between colorbai" >
 					<div class="paas_adver_left">
 						<div class="manufacturing_adver_title homeHead_appleStytle" v-html="BannerImg[0]?BannerImg[0].title:''"></div>
@@ -400,12 +400,14 @@
 				</div>
 				<div class="paas_topImg"><img v-if="BannerImg[0]" :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize" alt="PaaS平台"></div>
 			</div> -->
-			<div class="PingFangSCMedium tac home_title">{{ImgData[0]?ImgData[0].bigTitle:''}}</div>
-			<div class="scf_bgImg maxwidth"><img :src="ImgData[0]?ImgData[0].image:''" class="imgsize" :alt="ImgData[0]?ImgData[0].bigTitle:''"></div>
+			<div class="PingFangSCMedium tac home_title scf_title">深度绑定产业生态，重新定义<br/>供应链金融</div>
+			<div class="scf_bgImg maxwidth"><img :src="clientWidth<=582?ImgData[0].mobileImage.replace(/\s/g,'%20'):ImgData[0].image.replace(/\s/g,'%20')" class="imgsize" :alt="ImgData[0]?ImgData[0].bigTitle:''"></div>
 			<div class="bggray scf_navsBg">
-				<div class="PingFangSCMedium tac home_title">平台化供应链金融解决方案，助力产业链结构升级</div>
-				<div class="scf_navs f16 flex-column flex-center" style="margin-bottom: 0;">
-					<div v-for="(item,index) in listData" :class="index==changeindex?'scf_nav':'scf_nav_other'" @mouseenter="changeNav(index)" v-html="item.title"></div>
+				<div class="PingFangSCMedium tac home_title">平台化供应链金融解决方案，助力<br/>产业链结构升级</div>
+				<div class="phone_scf_navs">
+					<div class="f16 flex-column flex-center scf_navs" style="margin-bottom: 0;">
+						<div v-for="(item,index) in listData" :class="index==changeindex?'scf_nav':'scf_nav_other'" @mouseenter="changeNav(index)" v-html="item.title"></div>
+					</div>
 				</div>
 				<div class="">
 					<div class="flex-column flex-center flex-middle mkt_item" v-for="(item,index) in listData" v-show="index==changeindex">
@@ -421,15 +423,15 @@
 			</div>
 			<div class="padBg">
 				<div class="maxwidth">
-					<div class="PingFangSCMedium tac home_title">{{purchaseImgData[0]?purchaseImgData[0].bigTitle:''}}</div>
-					<div class=""><img :src="purchaseImgData[0]?purchaseImgData[0].image:''" class="imgsize" :alt="purchaseImgData[0]?purchaseImgData[0].bigTitle:''"></div>
+					<div class="PingFangSCMedium tac home_title">连接资产端和资金端，赋能<br/>供应链企业和供应商</div>
+					<div class="scfImg"><img :src="purchaseImgData[0]?purchaseImgData[0].image:''" class="imgsize" :alt="purchaseImgData[0]?purchaseImgData[0].bigTitle:''"></div>
 				</div>
 			</div>
 			<div class="bggray scf_solvebgImg_bot">
 				<div class="scf_solvebgImg porelative" style="padding: 60px calc(calc(100% - 1200px) / 2);">
 					<div class="PingFangSCMedium tac home_title colorbai maxwidth">解决供应链上下游企业痛点</div>
-					<div class="scf_solveList_location flex-column flex-between flex-middle maxwidth">
-						<div class="scf_solveList" v-for="item in solveList">
+					<div class="flex-column flex-between flex-middle maxwidth scf_solveList_location">
+						<div class="scf_solveList" v-for="(item,index) in solveList" v-if="index==Solutionindex" @touchstart="handelTouchStart" @touchend="handelTouchend">
 							<div class="flex-column flex-between flex-middle scf_solveList_title">
 								<div class="f22 homeHead_appleStytle color222" v-html="item.title"></div>
 								<div class="scf_solveList_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
@@ -439,9 +441,12 @@
 							</div>
 						</div>
 					</div>
+					<div class="flex-column flex-center home_Solution_tabs_nav scf_tabs_nav">
+						<div v-for="(item,index) in solveList" :class="index==Solutionindex?'home_Case_tab':''"></div>
+					</div>
 				</div>
 			</div>
-			<iframe src="../iframe/caseTab.html?name=17" style="width: 100%;height: 695px;" frameborder="0" scrolling="no"></iframe>
+			<iframe src="../iframe/caseTab.html?name=17" class="caseTabSty" frameborder="0" scrolling="no"></iframe>
 			<iframe src="../iframe/companys.html" class="companyStyle wow animate__fadeInUp" data-wow-duration="2s" frameborder="0" scrolling="no"></iframe>
 			<div class="home_register colorbai">
 				<div class="maxwidth flex-column flex-between flex-middle">
@@ -629,11 +634,17 @@
 				companyName:'',
 				telephone:'',
 				smsCode:'',
+				clientWidth:0,
+				startTime: 0,
+				startX: 0,
+				startY: 0,
+				Solutionindex:0
 			}
 		},
 		watch: {
 		},
 		created(){
+			this.clientWidth = document.documentElement.clientWidth
 			getHost('els')
 			this.getdata()
 			this.getBanner()
@@ -696,6 +707,7 @@
 							}
 							that.BannerImg.forEach(item=>{
 								item.image=item.image.replace(/\s/g,'%20');
+								item.mobileImage=item.mobileImage.replace(/\s/g,'%20');
 							})
 						})
 						.catch(err => {
@@ -760,18 +772,54 @@
 					smsCode:this.smsCode,
 					registerModule:this.leaveWordType,
 				})
-						.then(res => {
-							if (res.code==200){
-								window.alert('注册成功！');
-								this.showmodel = false
-							}else {
-								window.alert('验证码错误！');
-							}
-						})
-						.catch(err => {
-							console.log(err,'_getcode获取数据异常');
-						})
+				.then(res => {
+					if (res.code==200){
+						window.alert('注册成功！');
+						this.showmodel = false
+					}else {
+						window.alert('验证码错误！');
+					}
+				})
+				.catch(err => {
+					console.log(err,'_getcode获取数据异常');
+				})
 			},
+			handelTouchStart(e){
+				// console.log('按钮', e.changedTouches[0].clientX);
+				this.startTime = Date.now()
+				this.startX = e.changedTouches[0].clientX;
+				this.startY = e.changedTouches[0].clientY;
+			},
+			handelTouchend(e) {
+				// console.log('按钮', e.changedTouches[0].clientX);
+				if(this.clientWidth>=582){
+					return
+				}
+				let endTime = Date.now()
+				let endX = e.changedTouches[0].clientX;
+				let endY = e.changedTouches[0].clientY;
+				if (endTime - this.startTime > 2000) { //正常操作不会大于2秒
+					return
+				}
+				let direction = '';
+				//如果Y轴移动小于10,证明是上下滑动,所以不做处理
+				if (Math.abs(endX - this.startX) > 10 && Math.abs(endY - this.startY) < 20) {
+					direction = endX - this.startX > 0 ? 'right' : 'left'
+				}else{
+					return
+				}
+				if(direction=='right'){
+					if(this.Solutionindex!=0){
+						this.Solutionindex--
+					}
+				}else{
+					// console.log(this.SolutionList[this.navstopIndex])
+					if(this.solveList.length-1>this.Solutionindex){
+						this.Solutionindex++
+					}
+				}
+				// console.log(direction);
+			}
 		},
 		computed:{
 			

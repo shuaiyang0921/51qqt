@@ -356,6 +356,7 @@ div::-webkit-scrollbar{
 .homephone_bot_left{padding: 10px 39px;background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);border-radius: 4px;color: #FFFFFF;height: 20px;line-height: 20px;}
 .homephone_bot_right{padding: 9px 39px;border-radius: 4px;border: 1px solid #005CEF;color: #005CEF;height: 20px;line-height: 20px;}
 .bothei{height: 60px;display: none;}
+.caseTabSty{width: 100%;height: 695px;}
 @media screen and (max-width:1360px) {
     .homeHead_adver_bot{margin: 0px 30px 5px 30px;}
     .home_product_saas_first{width: 100%;height: 204px;margin:24px 0 0 0;}
@@ -513,6 +514,10 @@ div::-webkit-scrollbar{
     .product_banner_register{padding: 10px 42px;margin: 0 auto;margin-top: 0;}
     .home_Solution_rightwidth{animation: leftin 1s;}
     .home_Enabling_text{font-size: 14px;}
+    .home_Caseimg_not_index{width: 100%;height: 191px;}
+    .home_Case_inforight_title_case_tab{font-size: 14px;line-height: 24px;height: 144px;overflow: hidden;text-overflow: ellipsis;}
+    .scfMoreCase{display: none;}
+    .caseTabSty{height: 615px;}
 }
 @media screen and (max-width:580px) {
     .home_endorsed_botLists{bottom: -170px;}

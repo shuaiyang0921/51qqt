@@ -378,7 +378,7 @@
 				</div>
 			</div>
 			<!-- <div class="heiheader"></div> -->
-			<div class="wow animate__fadeInUp" data-wow-duration="2s" :style="{backgroundImage: 'url('+(BannerImg[0]?BannerImg[0].image:'')+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover'}">
+			<div v-if="BannerImg[0]" :style="{backgroundImage: 'url('+(clientWidth<=582?BannerImg[0].mobileImage.replace(/\s/g,'%20'):BannerImg[0].image.replace(/\s/g,'%20'))+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover',backgroundPosition:'center'}" class="wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="mkt_adver maxwidth flex-column flex-middle flex-between colorbai" >
 					<div class="paas_adver_left">
 						<div class="manufacturing_adver_title homeHead_appleStytle" v-html="BannerImg[0]?BannerImg[0].title:''"></div>
@@ -403,8 +403,10 @@
 							<div v-html="purchaseMallData[0]?purchaseMallData[0].title:''"></div>
 						</div>
 						<div class="mall_navs_text f16" v-html="purchaseMallData[0]?purchaseMallData[0].intro:''"></div>
-						<a v-if="purchaseMallData[0]&&purchaseMallData[0].link" class="f14 colorblue home_more" :href="purchaseMallData[0]?purchaseMallData[0].link:''"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
-						<a v-else class="f14 colorblue home_more"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
+						<div class="pushase_more_link">
+							<a v-if="purchaseMallData[0]&&purchaseMallData[0].link" class="f14 colorblue home_more" :href="purchaseMallData[0]?purchaseMallData[0].link:''"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
+							<a v-else class="f14 colorblue home_more"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
+						</div>
 					</div>
 					<div>
 						<div class="mall_navs" v-for="(item,index) in purchaseMallData" v-if="index==1||index==2">
@@ -415,8 +417,10 @@
 								<div v-html="item.title"></div>
 							</div>
 							<div class="mall_navs_text mall_navs_textwidth f16" v-html="item.intro"></div>
-							<a v-if="item.link" class="f14 colorblue home_more" :href="item.link"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
-							<a v-else class="f14 colorblue home_more"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
+							<div class="pushase_more_link">
+								<a v-if="item.link" class="f14 colorblue home_more" :href="item.link"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
+								<a v-else class="f14 colorblue home_more"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
+							</div>
 						</div>
 					</div>
 					<div class="flex-column flex-center">
@@ -428,8 +432,10 @@
 								<div v-html="item.title"></div>
 							</div>
 							<div class="mall_navs_text mall_navs_textwidth f16" v-html="item.intro"></div>
-							<a v-if="item.link" class="f14 colorblue home_more" :href="item.link"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
-							<a v-else class="f14 colorblue home_more"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
+							<div class="pushase_more_link">
+								<a v-if="item.link" class="f14 colorblue home_more" :href="item.link"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
+								<a v-else class="f14 colorblue home_more"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="../img/home83.png" class="imgsize" alt="了解更多"></span></a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -645,11 +651,13 @@
 				companyName:'',
 				telephone:'',
 				smsCode:'',
+				clientWidth:0
 			}
 		},
 		watch: {
 		},
 		created(){
+			this.clientWidth = document.documentElement.clientWidth
 			getHost('els')
 			this.getdata()
 			this.getBanner()
@@ -700,6 +708,7 @@
 							}
 							that.BannerImg.forEach(item=>{
 								item.image=item.image.replace(/\s/g,'%20');
+								item.mobileImage=item.mobileImage.replace(/\s/g,'%20');
 							})
 						})
 						.catch(err => {
