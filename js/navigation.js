@@ -37,12 +37,12 @@ _getData({})
 //
 //
 // var div="<div class=\"rightView_kf\" @click=\"showAiFanFan\">\n" +
-//     "\t\t\t\t\t<div class=\"rightView_kfImg\"><img src=\"./img/right_kefu.png\" class=\"imgsize\"></div>\n" +
+//     "\t\t\t\t\t<div class=\"rightView_kfImg\"><img src=\"https://xgw.51qqt.com/qqt/img/right_kefu.png\" class=\"imgsize\"></div>\n" +
 //     "\t\t\t\t\t<div class=\"f14 tac rightView_kfText\">在线咨询</div>\n" +
 //     "\t\t\t\t\t<div class=\"rightView_showkf\">\n" +
 //     "\t\t\t\t\t\t<div class=\"flex-column flex-between flex-middle rightView_showkfList \">\n" +
 //     "\t\t\t\t\t\t\t<div class=\"flex-column flex-middle\">\n" +
-//     "\t\t\t\t\t\t\t\t<div class=\"rightView_showkfImg\"><img src=\"./img/right_shouqian.png\" class=\"imgsize\"></div>\n" +
+//     "\t\t\t\t\t\t\t\t<div class=\"rightView_showkfImg\"><img src=\"https://xgw.51qqt.com/qqt/img/right_shouqian.png\" class=\"imgsize\"></div>\n" +
 //     "\t\t\t\t\t\t\t\t<div>\n" +
 //     "\t\t\t\t\t\t\t\t\t<div class=\"f16 rightView_showkfTitle\">售前咨询</div>\n" +
 //     "\t\t\t\t\t\t\t\t\t<div class=\"f14 rightView_showkfText\">人工客户在线沟通</div>\n" +
@@ -52,7 +52,7 @@ _getData({})
 //     "\t\t\t\t\t\t</div>\n" +
 //     "\t\t\t\t\t\t<!-- <div class=\"flex-column flex-between flex-middle rightView_showkfList xian_head\">\n" +
 //     "\t\t\t\t\t\t\t<div class=\"flex-column flex-middle\">\n" +
-//     "\t\t\t\t\t\t\t\t<div class=\"rightView_showkfImg\"><img src=\"./img/right_shouhou.png\" class=\"imgsize\"></div>\n" +
+//     "\t\t\t\t\t\t\t\t<div class=\"rightView_showkfImg\"><img src=\"https://xgw.51qqt.com/qqt/img/right_shouhou.png\" class=\"imgsize\"></div>\n" +
 //     "\t\t\t\t\t\t\t\t<div>\n" +
 //     "\t\t\t\t\t\t\t\t\t<div class=\"f16 rightView_showkfTitle\">售后咨询</div>\n" +
 //     "\t\t\t\t\t\t\t\t\t<div class=\"f14 rightView_showkfText\">专业售后客户解答</div>\n" +
@@ -63,14 +63,14 @@ _getData({})
 //     "\t\t\t\t\t</div>\n" +
 //     "\t\t\t\t</div>\n" +
 //     "\t\t\t\t<div class=\"rightView_trial\" @click=\"showregistermodal('',3,'')\">\n" +
-//     "\t\t\t\t\t<div class=\"rightView_trialImg\"><img src=\"./img/right_shiyong.png\" class=\"imgsize\"></div>\n" +
+//     "\t\t\t\t\t<div class=\"rightView_trialImg\"><img src=\"https://xgw.51qqt.com/qqt/img/right_shiyong.png\" class=\"imgsize\"></div>\n" +
 //     "\t\t\t\t\t<div class=\"f14 rightView_trialText\">免费试用</div>\n" +
 //     "\t\t\t\t</div>\n" +
 //     "\t\t\t\t<div class=\"rightView_trial\">\n" +
-//     "\t\t\t\t\t<div class=\"rightView_trialImg\"><img src=\"./img/right_chatUs.png\" class=\"imgsize\"></div>\n" +
+//     "\t\t\t\t\t<div class=\"rightView_trialImg\"><img src=\"https://xgw.51qqt.com/qqt/img/right_chatUs.png\" class=\"imgsize\"></div>\n" +
 //     "\t\t\t\t\t<div class=\"f14 rightView_trialText\">联系我们</div>\n" +
 //     "\t\t\t\t\t<div class=\"rightView_chatUs\">\n" +
-//     "\t\t\t\t\t\t<div class=\"rightView_chatUsImg\"><img src=\"./img/chatUs_erwei.png\" class=\"imgsize\"></div>\n" +
+//     "\t\t\t\t\t\t<div class=\"rightView_chatUsImg\"><img src=\"https://xgw.51qqt.com/qqt/img/chatUs_erwei.png\" class=\"imgsize\"></div>\n" +
 //     "\t\t\t\t\t\t<div class=\"f14 tac rightView_chatUsText\">采购数字化管理专家</div>\n" +
 //     "\t\t\t\t\t</div>\n" +
 //     "\t\t\t\t</div>";

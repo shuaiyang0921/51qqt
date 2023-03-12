@@ -10,7 +10,7 @@ function getSeo(pageName){
 
 	//2.配饰请求方法，设置请求接口地址
 	//这里我以木小果接口来测试，如果接口无法使用，各位小伙伴可以自行到木小果中获取接口
-	xhr.open('get','https://xgw.51qqt.com/els/seo/noToken/queryByPageName?pageName='+pageName)
+	xhr.open('get','https://xgw.51qqt.com/qqt/els/seo/noToken/queryByPageName?pageName='+pageName)
 
 	//3.发送请求
 	xhr.send()
@@ -45,7 +45,7 @@ function getHost(hostAddressSign) {
 	if(window.location.href.indexOf('file:')>-1){
 		switch(hostAddressSign){
 			case 'els': {
-				return axios.defaults.baseURL = 'https://xgw.51qqt.com/els';
+				return axios.defaults.baseURL = 'https://xgw.51qqt.com/qqt/els';
 			}
 		}
 	}
