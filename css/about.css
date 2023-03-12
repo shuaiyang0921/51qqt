@@ -40,3 +40,32 @@
 .about_excellent{background: url(../images/about/about3.png) no-repeat center center;background-size: cover;padding: 60px 120px;}
 .about_excellent_img{width: 64px;height: 64px;padding: 68px;background: #272B36;border-radius: 4px 0px 0px 4px;position: relative;}
 .about_excellent_img::after{content: "";position: absolute;width: 0;height: 0;border-color:  transparent #fff;border-width: 0px 15px 200px 0px ;border-style: solid;top: 0px;right: 0px;}
+.about_history_text{line-height: 34px;}
+@media screen and (max-width:582px) {
+    .about_videobg{padding: 0;margin-top: 69px;}
+    .about_video{padding: 0;border:none;}
+    .about_video_img{margin-right:0;width: 100%;height: 210px;}
+    .about_video_imgbg{display: none;}
+    .about_video_text {width: 100%;}
+    .about_video_title{font-size: 20px;line-height: 28px;margin: 30px 0 20px 0;}
+    .Vidio_padd{width: calc(100% - 32px);height: auto;}
+    .Vidio_cancel{top: -42px;right: 0px;}
+    .about_video_textmab{background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 4px 16px 0px rgba(55,99,170,0.1);border-radius: 4px;border: 2px solid #FFFFFF;margin: 0 16px;padding: 20px;}
+    .about_video_data {margin: 20px 16px 0 16px;padding: 30px 0 0 0;}
+    .about_video_dataTitle{font-size: 24px;height: 33px;line-height: 33px;margin-bottom: 8px;}
+    .about_video_dataText{font-size: 14px;margin-bottom: 30px;}
+    .about_history{padding: 30px 16px;background: #F7F8FA;}
+    .about_history_title{font-size: 20px;height: 28px;line-height: 28px;margin-bottom:20px;}
+    .about_history_navs{display: none;}
+    .about_history_intro>div{display: block!important;}
+    .about_history_intro{margin-left: 0;padding-left: 26px;border-left: 4px dotted rgba(0,92,239,0.3);}
+    .phone_about_List{background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);border-radius: 4px;border: 2px solid #FFFFFF;padding: 10px 16px;position: relative;margin-bottom: 16px;}
+    .phone_about_List::before{content: "";width: 16px;height: 16px;border-radius: 50%;background: #005CEF;position: absolute;top: -2px;left: -38px;}
+    .about_history_introTitle{font-size: 20px;height: 28px;line-height: 28px;margin-bottom: 16px;}
+    .about_history_introSub{font-size: 16px;height: 22px;line-height: 22px;margin-bottom: 8px;}
+    .about_history_text{font-size: 14px;line-height: 24px;}
+    .about_excellent{padding: 30px 16px;}
+    .about_excellent_img{width: 32px;height: 32px;padding: 30px 34px;overflow: hidden;}
+    .about_listright{display: block;display: flex;align-items: center;width: calc(100% - 130px);}
+    .about_excellent_img::after{border-width: 0px 8px 92px 0px;}
+}

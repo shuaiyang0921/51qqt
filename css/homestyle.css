@@ -347,7 +347,7 @@ div::-webkit-scrollbar{
     width: 100%;
 }
 
-.home_competitive_list_about_us{background-color: #FFFFFF;border-radius: 4px;margin: 12px;transition: transform 0.3s;box-shadow: 8px 8px 20px 0px rgba(0,0,0,0.3);}
+.home_competitive_list_about_us{background-color: #FFFFFF;border-radius: 4px;margin: 12px;transition: transform 0.3s;box-shadow: 8px 8px 20px 0px rgba(0,0,0,0.3);width: 100%;}
 .home_competitive_list_about_us:hover{box-shadow: 8px 8px 20px 0px rgba(0,0,0,0.5);;transform: translateY(-10px);}
 
 .home_partners_but{margin-bottom: 34px;}
@@ -518,6 +518,7 @@ div::-webkit-scrollbar{
     .home_Case_inforight_title_case_tab{font-size: 14px;line-height: 24px;height: 144px;overflow: hidden;text-overflow: ellipsis;}
     .scfMoreCase{display: none;}
     .caseTabSty{height: 615px;}
+    .phonesize16{font-size: 16px;}
 }
 @media screen and (max-width:580px) {
     .home_endorsed_botLists{bottom: -170px;}
