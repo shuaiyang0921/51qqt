@@ -29,6 +29,18 @@ function getSeo(pageName){
 		}
 	}
 }
+function getHost(hostAddressSign) {
+	console.log('aaaaaaaaaa',window.location.href)
+	if(window.location.href.indexOf('file:')>-1){
+		switch(hostAddressSign){
+			case 'els': {
+				console.log('aaaaaaaaaa')
+				return axios.defaults.baseURL = 'https://xgw.51qqt.com/els';
+			}
+		}
+	}
+	return axios.defaults.baseURL = '/els';
+}
 
 var _hmt = _hmt || [];
 (function() {
@@ -39,18 +51,7 @@ var _hmt = _hmt || [];
 })();
 
 
-var HostAddress = {}
-function getHost(hostAddressSign) {
 
-	if(window.location.href.indexOf('file:')>-1){
-		switch(hostAddressSign){
-			case 'els': {
-				return axios.defaults.baseURL = 'https://xgw.51qqt.com/qqt/els';
-			}
-		}
-	}
-	return axios.defaults.baseURL = '/els';
-}
 
 /** 
  * get方法，对应get请求 

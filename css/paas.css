@@ -205,7 +205,7 @@
     .qilian_adver_left{width:100%;}
     .adver_title {font-size: 24px;line-height: 33px;margin-bottom: 8px;}
     .paas_adver_buts{font-size: 14px;justify-content: center;margin-bottom: 16px;}
-    .paas_adver_buts>div{padding: 4px 15px;}
+    .paas_adver_buts>div{padding: 4px 10px;}
     .paas_adver_buts>div:last-of-type{margin-right: 0px;}
     .supplier_title{margin-bottom: 20px;}
     .purchase_navList_rightText{font-size: 14px;margin-bottom:0;}
@@ -219,7 +219,7 @@
     .scf_solvebgImg_bot{padding-bottom: 95px;}
     .scf_solveList_location{padding: 0 16px;width: calc(100% - 32px);}
     .scf_solveList{width: auto;animation: leftin 1s;}
-    .phone_scf_navs{height: 50px;width: 100%;position: relative;overflow-x: scroll;}
+    .phone_scf_navs{height: 32px;width: calc(100% - 32px);position: relative;overflow-x: scroll;padding: 0 16px;}
     .scf_navs{flex-wrap: nowrap;position: absolute;}
     .scf_navs>div{width: 50px;padding: 8px 16px;}
     .scf_tabs_nav{margin-top: 320px;}
@@ -253,4 +253,8 @@
     .darentong_change_text{width: 100%;}
     .darentong_change_righttext{width: calc(100% - 64px);}
     .darentong_change_right{height: auto;}
+    .phone_pass_navs{position: absolute;flex-wrap: nowrap;}
+    .paas_paas_topImg{display: none;}
+    .paas_navs>div{width: 160px;text-align: center;margin-right: 28px;}
+    .paas_navs>div:last-child{margin-right: 0;}
 }
