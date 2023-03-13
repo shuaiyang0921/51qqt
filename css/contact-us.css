@@ -2,12 +2,12 @@
 .contactUs_title{height: 50px;font-size: 36px;line-height: 50px;padding: 20px 0 60px 0;}
 .contactUs_info{margin-bottom: 50px;}
 .contactUs_info_left{padding: 32px 40px;background: #FFFFFF;border-radius: 4px;width: 420px;margin-right: 40px;position: relative;}
-.contactUs_info_left::after{position: absolute;content: "";width: 64px;height: 52px;background: url(../images/about/contactUs4.png) no-repeat center center;background-size: cover;top: 32px;right: 40px;}
+.contactUs_info_left::after{position: absolute;content: "";width: 64px;height: 52px;background: url(https://xgw.51qqt.com/qqt/images/about/contactUs4.png) no-repeat center center;background-size: cover;top: 32px;right: 40px;}
 .contactUs_info_leftTitle{height: 37px;font-size: 26px;line-height: 37px;margin-bottom: 16px;}
 .contactUs_info_leftText{height: 45px;font-size: 32px;color: #005CEF;line-height: 45px;margin-bottom: 30px;}
 .contactUs_info_leftMailbox{height: 28px;line-height: 28px;}
 .contactUs_info_leftMailboximg{width: 22px;height: 18px;margin-right: 10px;margin-top: 2px;}
-.contactUs_info_right{width: calc(100% - 652px);background: url(../images/about/contactUs2.png) no-repeat center center;background-size: cover;padding: 20px 56px;}
+.contactUs_info_right{width: calc(100% - 652px);background: url(https://xgw.51qqt.com/qqt/images/about/contactUs2.png) no-repeat center center;background-size: cover;padding: 20px 56px;}
 .contactUs_info_rightImg{width: 140px;height: 140px;}
 .contactUs_info_rightText{height: 22px;color: #005CEF;line-height: 22px;margin: 5px 0;}
 .contactUs_info_rightQRcode{padding: 8px 20px 0 20px;background: #F7F8FA;}
