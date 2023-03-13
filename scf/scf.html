@@ -401,11 +401,11 @@
 				<div class="paas_topImg"><img v-if="BannerImg[0]" :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize" alt="PaaS平台"></div>
 			</div> -->
 			<div class="wow animate__fadeInUp" data-wow-duration="2s">
-				<div class="PingFangSCMedium tac home_title scf_title">深度绑定产业生态，重新定义<br/>供应链金融</div>
+				<div class="PingFangSCMedium tac home_title scf_title">深度绑定产业生态，重新定义供应链金融</div>
 				<div class="scf_bgImg maxwidth" v-if="ImgData[0]"><img :src="clientWidth<=582?ImgData[0].mobileImage.replace(/\s/g,'%20'):ImgData[0].image.replace(/\s/g,'%20')" class="imgsize" :alt="ImgData[0]?ImgData[0].bigTitle:''"></div>
 			</div>
 			<div class="bggray scf_navsBg wow animate__fadeInUp" data-wow-duration="2s">
-				<div class="PingFangSCMedium tac home_title">平台化供应链金融解决方案，助力<br/>产业链结构升级</div>
+				<div class="PingFangSCMedium tac home_title">平台化供应链金融解决方案，助力产业链结构升级</div>
 				<div class="phone_scf_navs">
 					<div class="f16 flex-column flex-center scf_navs" style="margin-bottom: 0;">
 						<div v-for="(item,index) in listData" :class="index==changeindex?'scf_nav':'scf_nav_other'" @mouseenter="changeNav(index)" v-html="item.title"></div>
@@ -425,7 +425,7 @@
 			</div>
 			<div class="padBg phonehide wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth">
-					<div class="PingFangSCMedium tac home_title">连接资产端和资金端，赋能<br/>供应链企业和供应商</div>
+					<div class="PingFangSCMedium tac home_title">连接资产端和资金端，赋能供应链企业和供应商</div>
 					<div class="scfImg" v-if="purchaseImgData[0]"><img :src="purchaseImgData[0]?purchaseImgData[0].image:''" class="imgsize" :alt="purchaseImgData[0]?purchaseImgData[0].bigTitle:''"></div>
 				</div>
 			</div>
@@ -433,7 +433,7 @@
 				<div class="scf_solvebgImg porelative" style="padding: 60px calc(calc(100% - 1200px) / 2);">
 					<div class="PingFangSCMedium tac home_title colorbai maxwidth">解决供应链上下游企业痛点</div>
 					<div class="flex-column flex-between flex-middle maxwidth scf_solveList_location">
-						<div class="scf_solveList" v-for="(item,index) in solveList" v-if="index==Solutionindex" @touchstart="handelTouchStart" @touchend="handelTouchend">
+						<div class="scf_solveList" v-for="(item,index) in solveList" v-if="index==Solutionindex||clientWidth>=582" @touchstart="handelTouchStart" @touchend="handelTouchend">
 							<div class="flex-column flex-between flex-middle scf_solveList_title">
 								<div class="f22 homeHead_appleStytle color222" v-html="item.title"></div>
 								<div class="scf_solveList_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
