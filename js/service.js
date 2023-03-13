@@ -20,6 +20,7 @@ function getSeo(pageName){
 	xhr.onreadystatechange = function () {
 		if (xhr.readyState === 4 && xhr.status === 200) {
 			var res = JSON.parse(xhr.responseText)
+			console.log(res)
 			if (res.code==200&&res.result){
 				document.querySelector('meta[name="Keywords"]').setAttribute('content',res.result.seoKeyword);
 				document.querySelector('title').innerHTML=res.result.title;
@@ -30,11 +31,10 @@ function getSeo(pageName){
 	}
 }
 function getHost(hostAddressSign) {
-	console.log('aaaaaaaaaa',window.location.href)
+	// console.log('aaaaaaaaaa',window.location.href)
 	if(window.location.href.indexOf('file:')>-1){
 		switch(hostAddressSign){
 			case 'els': {
-				console.log('aaaaaaaaaa')
 				return axios.defaults.baseURL = 'https://xgw.51qqt.com/els';
 			}
 		}

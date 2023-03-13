@@ -329,7 +329,10 @@
 .rightView_showkfList:hover .rightView_showkfTitle{color: #FF761A;}
 #newBridge{z-index: 10;}
 #newBridge .newicon-right-center{
-    transform: translateY(-100%)!important;
+    transform: translateY(-122px)!important;
+}
+#newBridge .nb-icon-base-0 .nb-icon-inner-wrap{
+    transform: translateY(0px)!important;
 }
 @media screen and (max-width:1335px) {
     .homeHead{display: none;}
