@@ -327,7 +327,8 @@
 /*}*/
 .rightView_showkfList:hover .rightView_right{background: no-repeat url('../img/rightView_left.png');background-size: 100%;}
 .rightView_showkfList:hover .rightView_showkfTitle{color: #FF761A;}
-#newBridge .newicon-left-center, #newBridge .newicon-right-center{
+#newBridge{z-index: 10;}
+#newBridge .newicon-right-center{
     transform: translateY(-100%)!important;
 }
 @media screen and (max-width:1335px) {
