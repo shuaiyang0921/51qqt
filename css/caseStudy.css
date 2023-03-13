@@ -3,7 +3,7 @@
 .caseStudy_adver_xian{width: 90px;height: 6px;background: #FF761A;margin-bottom: 25px;}
 .caseStudy_adver_text{height: 28px;line-height: 28px;margin-bottom: 61px;}
 .caseStudy_registertil{padding: 14px 68px;}
-.caseStudy_FilterHeader{padding: 20px 120px;box-shadow: 0px 2px 10px 0px rgba(154,161,174,0.1);}
+.caseStudy_FilterHeader{padding: 20px 20px;box-shadow: 0px 2px 10px 0px rgba(154,161,174,0.1);}
 .caseStudy_FilterHeader_top{margin-bottom: 20px;}
 .caseStudy_FilterHeader_bottom{margin-top: 20px;}
 .caseStudy_FilterHeader_topTitle{}
@@ -29,7 +29,7 @@
 .caseStudy_FilterPages_nums{margin: 0 8px;}
 .caseStudy_FilterPages_nums>div{height: 22px;color: #005CEF;line-height: 22px;padding:5px 11px 5px 11px;width: 10px;border-radius: 2px;border: 1px solid #005CEF;margin: 0 7px;cursor: pointer;display: flex;flex-direction: row;justify-content: center;}
 .caseStudy_FilterPages_num{background: #FF761A;border-radius: 2px;color: #FFFFFF!important;border: 1px solid #FF761A!important;}
-.caseStudyInfo_bg{padding: 60px 120px;background: #F7F8FA;}
+.caseStudyInfo_bg{padding: 60px 20px;background: #F7F8FA;}
 .caseStudyInfo_label{color: #555555;height: 22px;line-height: 22px;margin-bottom: 16px;}
 .caseStudyInfo_label_img{width: 6px;height: 12px;margin: 0 10px;}
 .caseStudyInfo_left{background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(197,205,219,0.1);border-radius: 8px;border: 2px solid #FFFFFF;padding: 32px 32px 28px 32px;width: calc(100% - 420px);margin-right: 32px;}
@@ -78,7 +78,7 @@
 .news_vidio_img{width: 386px;height: 216px;overflow: hidden;transition: all 0.3ms;border-radius: 4px;}
 .news_vidio_pad{padding: 24px;}
 .news_vidio_title{line-height: 28px;margin-bottom: 10px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
-.news_vidio_text{color: #555555;line-height: 24px;height: 120px;width: 336px;word-break: break-all;
+.news_vidio_text{color: #555555;line-height: 24px;height: 20px;width: 336px;word-break: break-all;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;

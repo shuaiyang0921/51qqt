@@ -1,5 +1,5 @@
 .paas_topBg{background: linear-gradient(180deg, #E6EBF5 0%, #FFFFFF 100%);}
-.paas_adver{background: url(https://xgw.51qqt.com/qqt/images/paas/paas_bg.png) no-repeat center center;background-size: cover;padding: 60px 120px;}
+.paas_adver{background: url(https://xgw.51qqt.com/qqt/images/paas/paas_bg.png) no-repeat center center;background-size: cover;padding: 60px 20px;}
 .mkt_adver{padding: 165px 0px 132px 0px;}
 .qiliantong_adver{background: url(https://xgw.51qqt.com/qqt/images/paas/bg_qilian.png) no-repeat center center;background-size: cover;padding: 60px 10%;padding-top: 132px;}
 .qqgouQ3K_adver{background: url(https://xgw.51qqt.com/qqt/images/mall/bgQ3k.png) no-repeat center center;background-size: cover;padding: 60px 10%;padding-top: 132px;}
@@ -18,11 +18,11 @@
 .mkt_adver_buts{margin-bottom: 48px;}
 .mkt_adver_buts>div{border-radius: 18px;border: 1px solid rgba(255,255,255,0.4);padding: 5px 19px;margin-right: 16px;}
 .paas_paas_topImg{width: 26px;height: 26px;margin-right: 14px;vertical-align:top;}
-.paas_navs{padding: 0 120px;}
+.paas_navs{padding: 0 20px;}
 .paas_navs>div{padding-bottom: 22px;height: 28px;line-height: 28px;border-bottom: 4px solid #fff;cursor: pointer;}
 .paas_navs>div:hover{color: #005CEF}
 .paas_nav{border-bottom: 4px solid #005CEF!important;color: #005CEF}
-.aPaaS_head_bg{padding: 30px 120px 0 120px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);}
+.aPaaS_head_bg{padding: 30px 20px 0 20px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);}
 .aPaaS_head{background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;border: 3px solid #FFFFFF;padding: 40px 60px;}
 .aPaaS_head_img{width: 520px;height: 360px;}
 .aPaaS_head_text{padding-left: 16px;width: calc(100% - 600px);}
@@ -35,7 +35,7 @@
 /* .hideModel>div{display: none;} */
 /* .showModel{display: block!important;} */
 .mkt_registertil{color: #005CEF;background: #FFFFFF;}
-.scf_bgImg{padding: 0 120px;}
+.scf_bgImg{padding: 0 20px;}
 .scf_navsBg{padding: 60px 0;}
 .scf_navs{border-bottom: 1px solid #EBEBEB;margin-bottom: 40px;}
 .scf_navs>div{padding: 17px 50px;cursor: pointer;line-height: 28px;}
@@ -60,7 +60,7 @@
 .scf_solveList_title{padding: 25px 0;border-bottom: 1px solid #DDE0E5;}
 .scf_solveList_texts>div{line-height: 22px;margin: 16px 0;margin-left: 15px;position: relative;}
 .scf_solveList_texts>div::after{content: "";width: 4px;height: 4px;border-radius: 50%;position: absolute;top: 10px;left: -15px;background: #555555;}
-.scf_padachievement{padding: 170px 120px 60px 120px;}
+.scf_padachievement{padding: 170px 20px 60px 20px;}
 .hideList{margin-bottom: 30px;}
 .hideList>div{display: none;}
 .showList{display: flex!important;}

@@ -7,14 +7,14 @@
 .cooperation_type_list:hover{transform: translateY(-10px);}
 .cooperation_type_list:hover .cooperation_type_listrightSpan{display: none;}
 .cooperation_type_list:hover .cooperation_type_listrightBut{display: block;}
-.cooperation_type_listleft{width: 120px;height: 180px;}
+.cooperation_type_listleft{width: 20px;height: 180px;}
 .cooperation_type_listright{margin-left: 24px;}
 .cooperation_type_listrightTitle{height: 33px;font-size: 24px;line-height: 33px;margin-bottom: 12px;}
 .cooperation_type_listrightText{width: 396px;height: 78px;color: #555555;line-height: 26px;}
 .cooperation_type_listrightSpan{margin-top: 32px;}
 .cooperation_type_listrightSpan>span{padding: 3px 15px;margin-right: 8px;background: #FFFFFF;border-radius: 12px;border: 1px solid #EBEBEB;color: #888888;line-height: 17px;height: 17px;}
 
-.cooperation_why{padding: 60px 120px;}
+.cooperation_why{padding: 60px 20px;}
 .cooperation_why_left{padding: 32px 30px 143px 30px;background: url(https://xgw.51qqt.com/qqt/images/cooperation/cooperation2.png) no-repeat center center;background-size: cover;}
 .cooperation_why_lefttop{width: 56px;width: 56px;margin-bottom: 20px;}
 .cooperation_why_leftTitle{height: 33px;font-size: 24px;line-height: 33px;margin-bottom: 21px;}
@@ -27,7 +27,7 @@
 .cooperation_why_rightImg{width: 56px;height: 56px;margin: 0 auto;margin-bottom: 20px;}
 .cooperation_why_rightTitle{height: 33px;font-size: 24px;line-height: 33px;margin-bottom: 12px;}
 .cooperation_why_rightText{width: 290px;color: #555555;line-height: 26px;margin: 0 auto;}
-.cooperation_become{background: linear-gradient(180deg, #005CEF 0%, #008EFF 100%);padding: 60px 120px 142px 120px;}
+.cooperation_become{background: linear-gradient(180deg, #005CEF 0%, #008EFF 100%);padding: 60px 20px 142px 20px;}
 .cooperation_becomeImg{width: 100%;margin-bottom: 20px;}
 .cooperation_becomeText{line-height: 28px;}
 .cooperation_becomeText>div{width: 200px;}
