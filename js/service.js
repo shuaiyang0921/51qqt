@@ -46,7 +46,7 @@ var _hmt = _hmt || [];
 (function() {
 	var hm = document.createElement("script");
 	hm.src = "https://hm.baidu.com/hm.js?421bca2d35adfb2b4919c4a19acd0384";
-	var s = document.getElementsByTagName("script")[0];
+	var s = document.getElementById("app")[0];
 	s.parentNode.insertBefore(hm, s);
 })();
 

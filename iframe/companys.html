@@ -22,7 +22,7 @@
 		</script>
 	</head>
 	<body>
-		<div id="app">
+		<div id="appIframe">
             <div class="padBg bggray padCompanys">
 				<div class="tac home_product_title PingFangSCMedium">信赖之选，<span class="colorblue">500</span>强和<span class="colorblue">30+</span>行业领军企业都在用</div>
 				<div class="home_Case_companys flex-column flex-center flex-middle" ref='box' @mouseenter="enter" @mouseleave="leave">
@@ -43,7 +43,7 @@
 	
 	<script>
 		var vm = new Vue({
-			el:'#app',
+			el:'#appIframe',
 			data(){
 				return {
 					caseCompanylist:[],
