@@ -1,5 +1,5 @@
-.caseStudy_adver{background: url(https://51qqt.com/images/caseStudy/caseStudy2.png) no-repeat center center;background-size: cover;}
-.caseStudy_adver_title{height: 67px;font-size: 48px;line-height: 67px;margin-bottom: 24px;}
+.caseStudy_adver{background: url(https://51qqt.com/images/caseStudy/caseStudy2.png) no-repeat center center;background-size: cover;overflow: hidden;height: 500px;}
+.caseStudy_adver_title{height: 67px;font-size: 48px;line-height: 67px;margin-bottom: 24px;margin-top: 154px;}
 .caseStudy_adver_xian{width: 90px;height: 6px;background: #FF761A;margin-bottom: 25px;}
 .caseStudy_adver_text{height: 28px;line-height: 28px;margin-bottom: 61px;}
 .caseStudy_registertil{padding: 14px 68px;}
@@ -179,3 +179,23 @@
 
 
 .about_video_imgplay{width: 60px;height: 60px;position: absolute;top: calc(50% - 30px) ;left: calc(50% - 30px);}
+@media screen and (max-width:582px) {
+    .caseStudy_adver{text-align: center;background: url(../images/caseStudy/caseStudy_bg.png) no-repeat center center;background-size: cover;height: 280px;margin-top: 69px;}
+    .caseStudy_adver_title{font-size: 24px;margin-top: 80px;margin-bottom: 16px;line-height: 33px;height: 33px;}
+    .caseStudy_adver_xian{width: 48px;margin: 0 auto;margin-bottom: 16px;}
+    .caseStudy_adver_text{font-size: 14px;margin-bottom: 4px;}
+    .caseStudy_registertil{font-size: 14px;padding: 11px 42px;}
+    .caseStudy_FilterHeader{padding: 14px 0px;}
+    .caseStudy_FilterHeader_img{width: 8px;height: 4px;margin-left: 8px;}
+    .caseStudy_FilterHeader_img img{display: block;}
+    .caseStudy_FilterHeader_top{margin-bottom: 0;}
+    .caseStudy_FilterHeader_lists{position: absolute;background: #FAFBFC;left: 0;top: 35px;width: 100%;box-shadow: 0px 4px 16px 0px rgba(55,99,170,0.1);z-index: 1;}
+    .caseStudy_FilterHeader_chenck{background: #FAFBFC;color: #005CEF;}
+    .caseStudy_FilterHeader_lists>div{padding: 0 16px;margin: 16px 0;}
+    .caseStudy_Filter{padding: 16px;}
+    .caseStudy_FilterList_Bot{padding: 20px;}
+    .caseStudy_FilterList_Botright{width: calc(100% - 70px);}
+    .caseStudy_FilterList_BotTitle{font-size: 18px;margin-bottom: 4px;height: 25px;line-height: 25px;}
+    .caseStudy_FilterList_BotText{width: 100%;font-size: 14px;line-height: 24px;height:auto;}
+    .caseStudy_FilterList>a{margin: 0 0 16px 0;}
+}
