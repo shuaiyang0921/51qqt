@@ -375,9 +375,11 @@
 				</div>
 			</div>
 			<div class="heiheader"></div>
-			<div class="caseStudyInfo_bg ">
-				<div class="flex-column f16 flex-middle bgbai news_navs maxwidth">
-                    <div v-for="item in industryList" :class="typeIndex==item.type?'news_navschenck':''" @mouseenter="changetype(item.type)" >{{item.name}}</div>
+			<div class="caseStudyInfo_bg wow animate__fadeInUp" data-wow-duration="2s">
+				<div class="phone_navs_relative">
+					<div class="flex-column f16 flex-middle bgbai news_navs maxwidth">
+						<div v-for="item in industryList" :class="typeIndex==item.type?'news_navschenck':''" @mouseenter="changetype(item.type)" >{{item.name}}</div>
+					</div>
 				</div>
 				<div class="flex-column flex-top maxwidth" v-if="typeIndex!='videos.html'">
 					<div class="news_left">
@@ -604,19 +606,17 @@
 				</div>
 			</div>
 			<div class="register_modal flex-column flex-middle" v-if="showVidio">
-				<div class="Vidio_padd_wei flex-column flex-middle flex-center porelative">
-					<div class="videoContainer">
+				<!-- <div class="Vidio_padd flex-middle flex-center porelative">
+					<div>
 						<div class="colorbai videoTitleText">{{vidiotitle}}</div>
 						<div class="colorbai videoDescriptionText">{{videoDescription}}</div>
 						<video
 							controls
 							preload="auto"
-							width="878"
-							height="520"
-							:src="vidiourl"
-							:poster="imageUrl"
+							width="100%"
+							height="100%"
 							autoplay
-							style="margin-bottom: 111px;margin-top: 16px;"
+							:src="vidiourl"
 						>
 						</video>
 					</div>
@@ -630,6 +630,33 @@
 						</div>
 					</div>
 					<div class="Vidio_cancel" @click="hidevidiomodal"><img src="https://51qqt.com/img/home165.png" class="imgsize" alt=""></div>
+				</div> -->
+				<div class="Vidio_padd_wei flex-column flex-middle flex-center porelative">
+					<div class="videoContainer">
+						<div class="colorbai videoTitleText">{{vidiotitle}}</div>
+						<div class="colorbai videoDescriptionText">{{videoDescription}}</div>
+						<video
+							controls
+							preload="auto"
+							width="100%"
+							height="100%"
+							:src="vidiourl"
+							:poster="imageUrl"
+							autoplay
+						>
+						</video>
+						<div class="Vidio_cancel" @click="hidevidiomodal"><img src="https://51qqt.com/img/home165.png" class="imgsize" alt=""></div>
+					</div>
+					<div class="videoListContainer" ref="videoListContainer" @scroll="scollerFunc($event)">
+						<div v-for="(item,index) in videoList" @click="showvidiomodal(item)" class="flex-column flex-center videoListItem">
+                            <div class="video_img">
+                                <img  width="282" height="158" :src="item.image"/>
+                            </div>
+							<div class="videoListTitleText">{{item.title}}</div>
+							<div class="colorbai videoListDescriptionText">{{item.description}}</div>
+						</div>
+					</div>
+					
 				</div>
 
 			</div>
@@ -812,6 +839,7 @@
 				this.vidiourl = item.video
 				this.imageUrl=item.image
 				this.showVidio = true
+				console.log('1111')
 				this.videoList=[]
 				this.getVideoData()
 			},
