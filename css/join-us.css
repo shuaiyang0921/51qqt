@@ -9,7 +9,7 @@
 .joinUs_img3{width: 478px;height: 240px;}
 .joinUs_img_mag{margin: 0 3px;}
 .joinUs_post{padding: 60px 20px 0 20px;background: rgba(247, 248, 250, 1)}
-.joinUs_post_lists{}
+
 .joinUs_post_list{padding: 30px 40px;background: #FFFFFF;border-radius: 4px;border: 1px solid #EBEBEB;width: 304px;margin: 15px 0;cursor: pointer;}
 .joinUs_post_list_last{padding: 30px 40px;border-radius: 4px;border: 1px solid #F7F8FA;width: 304px;margin: 15px 0;background: rgba(247, 248, 250, 1);}
 .joinUs_post_listTitle{height: 28px;line-height: 28px;margin-bottom: 18px;}
@@ -45,4 +45,13 @@
     .joinUs_title{font-size: 20px;margin-bottom:30px;height: 28px;line-height: 28px;}
     .joinUs_job{font-size: 18px;height: 25px;line-height: 25px;margin-bottom:8px;}
     .joinUs_website{font-size: 18px;height: 25px;line-height: 25px;width: 158px;}
+    .joinUs_postright_img{width: 14px;height: 9px;}
+    .joinUs_post_list{padding: 16px;width: 100%;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 4px 16px 0px rgba(55,99,170,0.1);border: 2px solid #FFFFFF;margin: 0;}
+    .joinUs_post_lists{width: 100%;}
+    .joinUs_post_listTitle{font-size: 16px;height: 22px;line-height: 22px;margin-bottom: 10px;}
+    .joinUs_post_listlabel{font-size: 12px;height: 16px;line-height: 16px;padding: 0px 4px;margin-left: 12px;}
+    .jobDetailContainer>div{margin: 0;background: #F7F8FA;padding: 0 16px;}
+    .joinUs_post_popUpTitle{height: 22px;line-height: 22px;padding: 24px 0 10px 0;}
+    .joinUs_post_popUpText{font-size: 14px;line-height: 24px;}
+    .joinUs_post_popUpBut{padding: 10px 28px;margin: 24px 0;}
 }

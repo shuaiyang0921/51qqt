@@ -16,7 +16,7 @@ a{
 	color: inherit;
 	display: inline-block;
 }
-
+img{display: block;}
 label,span{
 	display: inline-block;
 }

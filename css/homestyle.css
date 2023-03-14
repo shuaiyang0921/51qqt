@@ -30,10 +30,12 @@
 .home_Enabling_title{margin-bottom: 20px;}
 .home_Enabling_text{margin: 10px 0 10px 25px ;position: relative;}
 .home_Enabling_text::before{content: "";width: 16px;height: 14px;position:absolute;top: 5px;left: -25px;background: url(https://51qqt.com/img/home73.png) no-repeat;background-size: 100%;}
+
 .home_Enabling_but{margin-top: 50px;}
 .home_Enabling_connect{margin: 0 142px 0 348px;position: relative;height: 86px;}
 .home_Enabling_connectimg{position: absolute;height: 187px;z-index: 1;top: -45px;}
 .home_product{background: url(https://51qqt.com/img/home39.png) no-repeat center center;background-size: cover;padding: 60px 20px;}
+
 .home_product_title{font-size: 36px;margin-bottom:40px;}
 .home_product_saas{width: calc(100% - 413px);height:204px;border-radius: 4px;border: 2px solid #FFFFFF;background: url(https://51qqt.com/img/home78.png) no-repeat center center;background-size: cover;margin: 24px 0 0 0px;cursor: pointer;-webkit-transition: all 0.3s; transition: all 0.3s;}
 .home_product_saas_first{width: 378px;height:432px;border-radius: 4px;border: 2px solid #FFFFFF;background: url(https://51qqt.com/img/home161.png) no-repeat center center;background-size: cover;margin: 24px 27px 0 0;cursor: pointer;-webkit-transition: all 0.3s; transition: all 0.3s;}
@@ -44,8 +46,7 @@
 .home_product_saasTitle{font-size: 22px;margin: 31px 0 16px 0;text-align: left}
 .home_product_saasText{color: #555555;margin-bottom: 24px;line-height:22px;}
 .home_product_saasMoreicon{height: 11px;width: 16px;margin-left: 5px;-webkit-transition: all 0.3s; transition: all 0.3s;}
-.home_product_paas{padding: 32px 62px 32px 32px;border-radius: 4px;border: 2px solid #FFFFFF;background: url(https://51qqt.com/img/home79.png) no-repeat center center;background-size: cover;margin-top: 24px;transition: all 0.3s;cursor: pointer;}
-.home_product_paas:hover{box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.3);transform: translateY(-10px);}
+.home_product_paas{padding: 32px 62px 32px 32px;border-radius: 4px;border: 2px solid #FFFFFF;background: url(https://51qqt.com/img/home79.png) no-repeat center center;background-size: cover;margin-top: 24px;transition: all 0.3s}.home_product_paas:hover{box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.3);transform: translateY(-10px);}
 .home_product_paasright{margin-left: 24px;width: 196px;}
 .home_product_paasTitle{font-size: 22px;margin-bottom: 16px;}
 .home_padd{padding: 60px 20px;}
@@ -59,6 +60,7 @@
 .home_competitive_listright{padding: 29px 29px 20px 25px;width: 280px;border-top-right-radius: 4px;border-bottom-right-radius: 4px;}
 .home_competitive_listtext{color: #555555;margin-top: 17px;line-height: 22px;}
 .home_Solution{padding: 60px 120px 0 120px;background: url(https://51qqt.com/img/home159.png) no-repeat center center;background-size: cover;}
+
 .home_Solution_title{color: #FFFFFF;}
 .home_Solution_tabs{border-radius: 4px;margin-bottom: 24px;}
 .home_Solution_tabs>div{width: calc(50% - 1px);color: rgba(255,255,255,0.7);padding: 14px 0;cursor: pointer;}
@@ -91,6 +93,7 @@
 }
 .home_Solution_center{width: calc(100% - 356px);background: rgba(23,24,27,0.3);backdrop-filter: blur(5px);padding: 50px 60px 60px 60px;max-height: 338px}
 .home_Solution_rightwidth{width: calc(100% - 252px);display: none;background: url(https://51qqt.com/img/homephone_solutionBg.png) no-repeat center center;background-size: cover;}
+
 .home_Solution_item{display: none;}
 .home_Solution_rightwidth2{width: calc(100% - 252px);}
 .showitem{display: flex;}
@@ -106,6 +109,7 @@
 .home_Case_inforight_title{position: relative;line-height: 28px;}
 .home_Case_inforight_title_case_tab{position: relative;line-height: 28px;}
 .home_Case_inforight_title::before{content: "";width: 48px;height: 40px;position: absolute;top: -30px;left: -30px;background: url(https://51qqt.com/img/home1.png) no-repeat center center;background-size: cover;}
+
 .home_Case_inforightImg{height: 46px;margin: 72px 0 16px 0;}
 .home_Case_tabs{width: 100%;margin: 0 auto;}
 .home_Case_tabs div{width: 30px;height: 4px;background: #BDC8DE;border-radius: 2px;margin: 0 5px;cursor: pointer;}

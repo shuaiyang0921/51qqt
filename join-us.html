@@ -384,11 +384,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="joinUs_banner tac colorbai">
+			<div class="joinUs_banner tac colorbai wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="joinUs_banner_text" style="">担当 | 坚持 | 奋斗 | 创新</div>
 				<div class="f14 homeHead_registertil tac joinUs_banner_but" @click="turnJoinUs">加入我们</div>
 			</div>
-			<div class="joinUs_imglists phonehide">
+			<div class="joinUs_imglists phonehide wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="tac joinUs_title PingFangSCMedium">加入企企通</div>
 				<div class="joinUs_imglist1 flex-column flex-center">
 					<div class="joinUs_img1"><img v-if="aboutImgData[0]" :src="aboutImgData[0]?aboutImgData[0].image:''" class="imgsize"></div>
@@ -401,7 +401,7 @@
 				</div>
 			</div>
 			
-			<div class="joinUs_post">
+			<div class="joinUs_post wow animate__fadeInUp" data-wow-duration="2s" v-if="clientWidth>582">
 				<div class="maxwidth">
 					<div class="tac joinUs_title PingFangSCMedium">热招岗位</div>
 					<div v-if="indexList==navIndex" ref="joinUs_post_lists" class="joinUs_post_lists flex-column flex-between " v-for="(itemList,indexList) in supplierListData">
@@ -437,7 +437,40 @@
 					</div>
 				</div>
 			</div>
-			<div class="padBg hrBg" >
+			<div class="joinUs_post wow animate__fadeInUp" data-wow-duration="2s" v-else>
+				<div class="maxwidth">
+					<div class="tac joinUs_title PingFangSCMedium">热招岗位</div>
+					<div v-if="indexList==navIndex" ref="joinUs_post_lists" class="joinUs_post_lists flex-column flex-between " v-for="(itemList,indexList) in supplierListData">
+						<template v-for="(item,index) in itemList">
+							<div class="joinUs_post_list" @click="changeshowText(index,item)">
+								<div class="f20 PingFangSCMedium flex-column flex-between flex-middle flex-middle joinUs_post_listTitle">
+									<div class="flex-column flex-middle">
+										<div>{{item.job}}</div>
+										<div class="f14 colorbai joinUs_post_listlabel">HOT</div>
+									</div>
+									<div class="joinUs_postright_img"><img :src="item.showText?'./img/homephone_shang.png':'./img/homephone_xia.png'" class="imgsize"></div>
+								</div>
+								<div class="f14 flex-column flex-middle"><span class="joinUs_post_icon"><img src="https://51qqt.com/images/about/joinUs7.png" class="imgsize" alt="地址"></span>{{item.address}}</div>
+							</div>
+							<div class="jobDetailContainer" v-if="item.showText">
+								<div>
+									<div class="f18 joinUs_post_popUpTitle PingFangSCMedium"><span></span>岗位职责</div>
+									<div class="f16 joinUs_post_popUpText" v-html="item.responsibilities"></div>
+									<div class="f18 joinUs_post_popUpTitle PingFangSCMedium"><span></span>任职要求</div>
+									<div class="f16 joinUs_post_popUpText" v-html="item.requirements"></div>
+									<a class="f16 colorbai homeHead_appleStytle joinUs_post_popUpBut" href="http://sc37ohz046mg5mk2.mikecrm.com/OfpKwA1">投递简历</a>
+								</div>
+							</div>
+
+
+						</template>
+					</div>
+					<div class="home_Case_tabs flex-column flex-center" style="padding-top: 45px;">
+						<div v-for="(item,index) in supplierListData" :class="index==0?'home_Case_tab':''" @click="changeCaseTab(index)"></div>
+					</div>
+				</div>
+			</div>
+			<div class="padBg hrBg wow animate__fadeInUp" data-wow-duration="2s" >
 				<div class="PingFangSCMedium joinUs_job tac">简历投递至人力资源部</div>
 				<div class="flex-column flex-center"><div class="PingFangSCMedium joinUs_website tac colororigin">hiring@51qqt.com</div></div>
 			</div>
@@ -620,11 +653,13 @@
 				companyName:'',
 				telephone:'',
 				smsCode:'',
+				clientWidth:0
 			}
 		},
 		watch: {
 		},
 		created(){
+			this.clientWidth = document.documentElement.clientWidth
 			getHost('els')
 			this.getdata()
 		},
@@ -669,6 +704,7 @@
 					this.detailItem=result1[0];
 					var resultList=[]
 					for (var i=0;i<result1.length;i++){
+						result1[i].showText = false
 						var result=result1[i];
 						if (i==0){
 							resultList.push(result)
@@ -685,6 +721,7 @@
 							that.supplierListData.push(resultList)
 						}
 					}
+					console.log(that.supplierListData)
 					setTimeout(()=>{
 						this.onResize()
 					},1)
@@ -724,6 +761,10 @@
 					this.Listindex = index
 				}
 				this.detailItem=item
+			},
+			changeshowText(index,item){
+				item.showText = !item.showText
+				this.$forceUpdate()
 			},
 			getcode(){
 				const reg = /^((0\d{2,3}-\d{7,8})|(1[3456789]\d{9}))$/
