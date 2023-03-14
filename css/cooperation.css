@@ -1,5 +1,5 @@
-.cooperation_adver{background: url(https://51qqt.com/images/cooperation/cooperation1.png) no-repeat center center;background-size: cover;}
-.cooperation_adver_title{font-size: 48px;line-height: 67px;margin-bottom: 16px;}
+.cooperation_adver{background: url(https://51qqt.com/images/cooperation/cooperation1.png) no-repeat center center;background-size: cover;height: 500px;overflow: hidden;background-position: center;}
+.cooperation_adver_title{font-size: 48px;line-height: 67px;margin-bottom: 16px;margin-top: 134px;}
 .cooperation_adver_text{line-height: 28px;margin-bottom: 40px;}
 .registertil_banner{padding: 13px 68px;}
 .cooperation_type{padding: 60px 100px;background: #F7F8FA;}
@@ -124,4 +124,31 @@
     .cooperation_why_leftText,.cooperation_why_right,.cooperation_why_rightList{width: 100%;}
     .cooperation_why_rightList0,.cooperation_why_rightList1{border: 1px solid #EBEBEB;}
     .cooperation_why_rightList0,.cooperation_why_rightList2{border-right: 1px solid #EBEBEB;}
+    .cooperation_adver{height: 280px;margin-top: 69px;background: url(https://51qqt.com/images/cooperation/cooperation_phone.png) no-repeat center center;background-size: cover;text-align: center;;}
+    .cooperation_adver_title {font-size: 24px;margin-top: 80px;margin-bottom: 8px;line-height: 24px;}
+    .cooperation_adver_text{font-size: 14px;line-height: 24px;margin-bottom: 4px;}
+    .registertil_banner{padding: 11px 42px;}
+    .cooperation_type{padding: 30px 16px;}
+    .cooperation_type_list:hover .cooperation_type_listrightSpan{display: block;}
+    .cooperation_type_list:hover .cooperation_type_listrightBut{display: none;}
+    .cooperation_type_listleft{width: 80px;height: 120px;}
+    .cooperation_type_list {width: 100%;}
+    .cooperation_type_listright{width: calc(100% - 104px);}
+    .cooperation_type_listrightText{width: 100%;height: auto;font-size: 14px;line-height: 24px;}
+    .cooperation_type_listrightTitle{font-size: 18px;height: 25px;line-height: 25px;margin-bottom:8px;}
+    .cooperation_why_rightImg{width: 44px;height: 44px;margin-bottom:16px;}
+    .cooperation_why_rightTitle{font-size: 18px;height: 25px;line-height: 25px;margin-bottom: 16px;}
+    .cooperation_why_rightText{font-size: 14px;width: 283px;}
+    .cooperation_become{padding: 30px 0 161px 0;margin-bottom: 245px;}
+    .cooperation_becomeImg{width: 100%;height: auto;margin-bottom: 0;}
+    .cooperation_becomeText{display: none;}
+    .cooperation_becomeBot{padding: 0 16px;height: auto;}
+    .cooperation_becomeBotform{width: calc(100% - 76px);padding: 30px 20px;bottom: 35px;top: auto;}
+    .cooperation_becomeBotform_img{display: none;}
+    .cooperation_becomeBotform_right{width: 100%;}
+    .cooperation_form_magbot{font-size: 14px;margin-bottom: 20px;}
+    .cooperation_form_Vercodemagbot{padding: 10px;width: calc(100% - 100px);}
+    .cooperation_form_input {width: calc(100% - 96px);}
+    .cooperation_form_Vercode{width: calc(100% - 70px);}
+    .cooperation_form_submit{width: 100%;margin-left: 0;padding: 9px 0px;}
 }

@@ -440,7 +440,7 @@ div::-webkit-scrollbar{
     .home_endorsed_botList{width: 96px;}
     .home_information{padding: 350px 10px 15px 10px;}
     .home_Case_More{padding: 10px 22px;}
-    .home_partners{padding: 30px 10px;display: none;}
+    .home_partners{display: none;}
     .home_partners_bgsty{padding: 30px 0 70px 0;margin-bottom: 60px;}
     .home_partners_but{width: 100%;position: absolute;bottom: -40px;}
     .home_Case_companyImg{padding: 10px;}
