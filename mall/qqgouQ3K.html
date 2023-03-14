@@ -393,13 +393,15 @@
 			</div>
 			
 			<div class="padBg bggray">
-				<div class="PingFangSCMedium tac home_title">企业采购的痛点</div>
-				<div class="flex-column flex-around">
-					<div class="flex-column manufacturing_observation_list" v-for="item in supplierData">
-						<div class="manufacturing_observation_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
-						<div>
-							<div class="PingFangSCMedium manufacturing_observation_title" v-html="item.title"></div>
-							<div class="f16 manufacturing_observation_text" v-html="item.intro"></div>
+				<div class="maxwidth">
+					<div class="PingFangSCMedium tac home_title">企业采购的痛点</div>
+					<div class="flex-column flex-between">
+						<div class="flex-column manufacturing_observation_list" v-for="item in supplierData">
+							<div class="manufacturing_observation_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
+							<div>
+								<div class="PingFangSCMedium manufacturing_observation_title" v-html="item.title"></div>
+								<div class="f16 manufacturing_observation_text" v-html="item.intro"></div>
+							</div>
 						</div>
 					</div>
 				</div>
