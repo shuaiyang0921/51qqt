@@ -29,14 +29,14 @@
 .home_Enabling_Subhead{color: #555555;margin: 17px 0 50px 0;}
 .home_Enabling_title{margin-bottom: 20px;}
 .home_Enabling_text{margin: 10px 0 10px 25px ;position: relative;}
-.home_Enabling_text::before{content: "";width: 16px;height: 14px;position:absolute;top: 5px;left: -25px;background: url(https://xgw.51qqt.com/qqt/img/home73.png) no-repeat;background-size: 100%;}
+.home_Enabling_text::before{content: "";width: 16px;height: 14px;position:absolute;top: 5px;left: -25px;background: url(https://51qqt.com/img/home73.png) no-repeat;background-size: 100%;}
 .home_Enabling_but{margin-top: 50px;}
 .home_Enabling_connect{margin: 0 142px 0 348px;position: relative;height: 86px;}
 .home_Enabling_connectimg{position: absolute;height: 187px;z-index: 1;top: -45px;}
-.home_product{background: url(https://xgw.51qqt.com/qqt/img/home39.png) no-repeat center center;background-size: cover;padding: 60px 20px;}
+.home_product{background: url(https://51qqt.com/img/home39.png) no-repeat center center;background-size: cover;padding: 60px 20px;}
 .home_product_title{font-size: 36px;margin-bottom:40px;}
-.home_product_saas{width: calc(100% - 413px);height:204px;border-radius: 4px;border: 2px solid #FFFFFF;background: url(https://xgw.51qqt.com/qqt/img/home78.png) no-repeat center center;background-size: cover;margin: 24px 0 0 0px;cursor: pointer;-webkit-transition: all 0.3s; transition: all 0.3s;}
-.home_product_saas_first{width: 378px;height:432px;border-radius: 4px;border: 2px solid #FFFFFF;background: url(https://xgw.51qqt.com/qqt/img/home161.png) no-repeat center center;background-size: cover;margin: 24px 27px 0 0;cursor: pointer;-webkit-transition: all 0.3s; transition: all 0.3s;}
+.home_product_saas{width: calc(100% - 413px);height:204px;border-radius: 4px;border: 2px solid #FFFFFF;background: url(https://51qqt.com/img/home78.png) no-repeat center center;background-size: cover;margin: 24px 0 0 0px;cursor: pointer;-webkit-transition: all 0.3s; transition: all 0.3s;}
+.home_product_saas_first{width: 378px;height:432px;border-radius: 4px;border: 2px solid #FFFFFF;background: url(https://51qqt.com/img/home161.png) no-repeat center center;background-size: cover;margin: 24px 27px 0 0;cursor: pointer;-webkit-transition: all 0.3s; transition: all 0.3s;}
 .home_product_saas:hover,.home_product_saas_first:hover{transform: translateY(-10px);}
 .home_product_saasList{width: calc(100% - 409px);}
 .home_product_saasimg{width: 64px;height: 64px;margin: 31px auto;}
@@ -44,7 +44,7 @@
 .home_product_saasTitle{font-size: 22px;margin: 31px 0 16px 0;text-align: left}
 .home_product_saasText{color: #555555;margin-bottom: 24px;line-height:22px;}
 .home_product_saasMoreicon{height: 11px;width: 16px;margin-left: 5px;-webkit-transition: all 0.3s; transition: all 0.3s;}
-.home_product_paas{padding: 32px 62px 32px 32px;border-radius: 4px;border: 2px solid #FFFFFF;background: url(https://xgw.51qqt.com/qqt/img/home79.png) no-repeat center center;background-size: cover;margin-top: 24px;transition: all 0.3s}
+.home_product_paas{padding: 32px 62px 32px 32px;border-radius: 4px;border: 2px solid #FFFFFF;background: url(https://51qqt.com/img/home79.png) no-repeat center center;background-size: cover;margin-top: 24px;transition: all 0.3s}
 .home_product_paas:hover{box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.3);transform: translateY(-10px);}
 .home_product_paasright{margin-left: 24px;width: 196px;}
 .home_product_paasTitle{font-size: 22px;margin-bottom: 16px;}
@@ -52,13 +52,13 @@
 .home_competitive_list{background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);border-radius: 4px;border: 2px solid #FFFFFF;margin: 12px;transition: transform 0.3s}
 .home_competitive_list:hover{box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.5);transform: translateY(-10px);}
 .home_competitive_listleft{padding: 40px 69px;background-size: cover;background-repeat: no-repeat;}
-.home_competitive_listleft2{padding: 40px 62px;background: url(https://xgw.51qqt.com/qqt/img/home85.png) no-repeat center center;background-size: cover;}
-.home_competitive_listleft3{padding: 40px 62px;background: url(https://xgw.51qqt.com/qqt/img/home86.png) no-repeat center center;background-size: cover;}
-.home_competitive_listleft4{padding: 40px 62px;background: url(https://xgw.51qqt.com/qqt/img/home87.png) no-repeat center center;background-size: cover;}
+.home_competitive_listleft2{padding: 40px 62px;background: url(https://51qqt.com/img/home85.png) no-repeat center center;background-size: cover;}
+.home_competitive_listleft3{padding: 40px 62px;background: url(https://51qqt.com/img/home86.png) no-repeat center center;background-size: cover;}
+.home_competitive_listleft4{padding: 40px 62px;background: url(https://51qqt.com/img/home87.png) no-repeat center center;background-size: cover;}
 .home_competitive_listImg{width: 60px;height: 54px;margin: 0 auto;margin-bottom: 15px;}
 .home_competitive_listright{padding: 29px 29px 20px 25px;width: 280px;border-top-right-radius: 4px;border-bottom-right-radius: 4px;}
 .home_competitive_listtext{color: #555555;margin-top: 17px;line-height: 22px;}
-.home_Solution{padding: 60px 120px 0 120px;background: url(https://xgw.51qqt.com/qqt/img/home159.png) no-repeat center center;background-size: cover;}
+.home_Solution{padding: 60px 120px 0 120px;background: url(https://51qqt.com/img/home159.png) no-repeat center center;background-size: cover;}
 .home_Solution_title{color: #FFFFFF;}
 .home_Solution_tabs{border-radius: 4px;margin-bottom: 24px;}
 .home_Solution_tabs>div{width: calc(50% - 1px);color: rgba(255,255,255,0.7);padding: 14px 0;cursor: pointer;}
@@ -90,14 +90,14 @@
     transform: scale(1.1);
 }
 .home_Solution_center{width: calc(100% - 356px);background: rgba(23,24,27,0.3);backdrop-filter: blur(5px);padding: 50px 60px 60px 60px;max-height: 338px}
-.home_Solution_rightwidth{width: calc(100% - 252px);display: none;background: url(https://xgw.51qqt.com/qqt/img/homephone_solutionBg.png) no-repeat center center;background-size: cover;}
+.home_Solution_rightwidth{width: calc(100% - 252px);display: none;background: url(https://51qqt.com/img/homephone_solutionBg.png) no-repeat center center;background-size: cover;}
 .home_Solution_item{display: none;}
 .home_Solution_rightwidth2{width: calc(100% - 252px);}
 .showitem{display: flex;}
 .home_Solution_centerText{padding: 33px 0 56px 0;line-height: 24px;}
 .home_Solution_centerImgs{width: 520px;margin-bottom: 40px;}
 .home_Solution_centerImg{width: 32px;height: 32px;margin: 0 auto;margin-bottom: 12px;}
-.home_Case{padding: 60px 0px;background: url(https://xgw.51qqt.com/qqt/img/home42.png) no-repeat center center;background-size: cover;}
+.home_Case{padding: 60px 0px;background: url(https://51qqt.com/img/home42.png) no-repeat center center;background-size: cover;}
 .home_Case_info{margin-bottom: 40px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;border: 2px solid #FFFFFF;display: none;height: 340px;}
 .home_Case_info_show{display: flex;}
 .home_Caseimg{width: 480px;height: 340px;}
@@ -105,7 +105,7 @@
 .home_Case_inforight{width: calc(100% - 640px);padding: 60px 60px 40px 60px;}
 .home_Case_inforight_title{position: relative;line-height: 28px;}
 .home_Case_inforight_title_case_tab{position: relative;line-height: 28px;}
-.home_Case_inforight_title::before{content: "";width: 48px;height: 40px;position: absolute;top: -30px;left: -30px;background: url(https://xgw.51qqt.com/qqt/img/home1.png) no-repeat center center;background-size: cover;}
+.home_Case_inforight_title::before{content: "";width: 48px;height: 40px;position: absolute;top: -30px;left: -30px;background: url(https://51qqt.com/img/home1.png) no-repeat center center;background-size: cover;}
 .home_Case_inforightImg{height: 46px;margin: 72px 0 16px 0;}
 .home_Case_tabs{width: 100%;margin: 0 auto;}
 .home_Case_tabs div{width: 30px;height: 4px;background: #BDC8DE;border-radius: 2px;margin: 0 5px;cursor: pointer;}
@@ -120,7 +120,7 @@
 /* .home_Case_companylist>div{width: 120px;height: 44px;padding: 14px 16px;background: #FFFFFF;box-shadow: 0px 0px 30px 0px rgba(20,22,26,0.08);border-radius: 4px;margin: 10px;}    */
 
 .scfMoreCase{margin: 50px 0}
-.home_endorsed{padding: 60px 20px;position: relative;background: url(https://xgw.51qqt.com/qqt/img/home53.png) no-repeat center center;background-size: cover;}
+.home_endorsed{padding: 60px 20px;position: relative;background: url(https://51qqt.com/img/home53.png) no-repeat center center;background-size: cover;}
 .home_endorsed_title{font-size: 44px;}
 .home_endorsed_lists{margin-bottom: 105px;}
 .home_endorsed_list{width: 300px;}
@@ -130,7 +130,7 @@
 .home_endorsed_botImg{width: 80px;height: 80px;border-radius: 50%;background: #FFFFFF;border: 1px solid #EBEBEB;margin: 0 auto;margin-bottom: 10px;}
 .home_endorsed_ying{position: absolute;width: 58px;height: 22px;bottom: 0;left: 65px;}
 .home_endorsed_bottext{color: #555555;}
-.home_information{padding: 126px 20px 60px 20px;background: url(https://xgw.51qqt.com/qqt/img/home54.png) no-repeat center center;background-size: cover;}
+.home_information{padding: 126px 20px 60px 20px;background: url(https://51qqt.com/img/home54.png) no-repeat center center;background-size: cover;}
 .home_information_list{padding: 32px 24px 22px 24px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);border-radius: 4px;border: 2px solid #FFFFFF;margin: 12px;transition: transform 0.3s}
 .home_information_list:hover{
     transform: translateY(-10px);
@@ -148,10 +148,10 @@
 .home_information_text div:first-of-type{padding-top: 0px;}
 .home_information_text div:hover{color: #005CEF;cursor: pointer;}
 .home_partners{padding: 0px 120px;background: #F7F8FA;background-repeat: no-repeat;background-size: cover;}
-.home_partners_bgsty{background: url(https://xgw.51qqt.com/qqt/img/home112.png) no-repeat center center;background-size: 100% 100%;padding: 24px 0;}
-.home_index_partners_bgsty{background: url(https://xgw.51qqt.com/qqt/img/home164.png) no-repeat center center;background-size: 100% 100%;padding: 26px 0;}
+.home_partners_bgsty{background: url(https://51qqt.com/img/home112.png) no-repeat center center;background-size: 100% 100%;padding: 24px 0;}
+.home_index_partners_bgsty{background: url(https://51qqt.com/img/home164.png) no-repeat center center;background-size: 100% 100%;padding: 26px 0;}
 .home_partners_img{margin-bottom: 440px;margin-top: 26px}
-.home_register{padding: 70px 50px;background: url(https://xgw.51qqt.com/qqt/img/home113.png) no-repeat center center;background-size: cover;font-size: 28px;}
+.home_register{padding: 70px 50px;background: url(https://51qqt.com/img/home113.png) no-repeat center center;background-size: cover;font-size: 28px;}
 .home_register_but{padding: 13px 64px;background: #FF761A;border-radius: 4px;margin-left: 12px;width: 72px;}
 .home_register_text{margin: 0 196px 7px 0;letter-spacing: 2px;}
 .tar{letter-spacing: 2px;}
