@@ -84,20 +84,19 @@
 					var _getcaseCompanylist = p => get('/consumer/noToken/queryLogo', p);
 					_getcaseCompanylist({type:'1'})
 					.then(res => {
-                        // console.log('_getcaseCompanylist',res.result)
 						that.caseCompanylist = res.result
-						// var iframes=$(window.parent.document).find("iframe")
-						// for (var i=0;i<iframes.length;i++){
-						// 	if ($(iframes[i]).attr("src").includes("companys.html")){
-						// 		var height=750
-						// 		if (that.showCase){
-						// 			height=864
-						// 		}
-						// 		var iframeHeight=(height-(6-that.caseCompanylist.length)*92)+"px;"
-						// 		$(iframes[i]).attr("style","width: 100%;height:"+iframeHeight)
-						// 	}
+						var iframes=$(window.parent.document).find("iframe")
+						for (var i=0;i<iframes.length;i++){
+							if ($(iframes[i]).attr("src").includes("companys.html")){
+								var height=750
+								if (that.showCase){
+									height=864
+								}
+								var iframeHeight=(height-(6-that.caseCompanylist.length)*92)+"px;"
+								$(iframes[i]).attr("style","width: 100%;height:"+iframeHeight)
+							}
 
-						// }
+						}
 					})
 					.catch(err => {
 						console.log(err,'_getcaseCompanylist获取数据异常');
