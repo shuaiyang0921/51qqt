@@ -3,11 +3,11 @@
 .cooperation_adver_text{line-height: 28px;margin-bottom: 40px;}
 .registertil_banner{padding: 13px 68px;}
 .cooperation_type{padding: 60px 100px;background: #F7F8FA;}
-.cooperation_type_list{padding: 24px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;border: 2px solid #FFFFFF;margin: 12px 0px; transition: all 0.3s}
+.cooperation_type_list{padding: 24px 22px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;border: 2px solid #FFFFFF;margin: 12px 0px; transition: all 0.3s}
 .cooperation_type_list:hover{transform: translateY(-10px);}
 .cooperation_type_list:hover .cooperation_type_listrightSpan{display: none;}
 .cooperation_type_list:hover .cooperation_type_listrightBut{display: block;}
-.cooperation_type_listleft{width: 20px;height: 180px;}
+.cooperation_type_listleft{width: 120px;height: 180px;}
 .cooperation_type_listright{margin-left: 24px;}
 .cooperation_type_listrightTitle{height: 33px;font-size: 24px;line-height: 33px;margin-bottom: 12px;}
 .cooperation_type_listrightText{width: 396px;height: 78px;color: #555555;line-height: 26px;}

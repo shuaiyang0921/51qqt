@@ -704,7 +704,7 @@
 					<div class="f16 registe_form_submit PingFangSCMedium colorbai" @click="submitfrom()">立即提交</div>
 				</div>
 			</div>
-			<div class="register_modal flex-column flex-middle" v-if="showVidio" v-cloak>
+			<div id="companyVideoId" class="register_modal flex-column flex-middle" v-if="showVidio" style="display: none">
 				<div class="Vidio_padd flex-column flex-middle flex-center porelative">
 					<div>
 						<div class="PingFangSCMedium tac home_title colorbai phonehide" v-html="aboutInfo[0]?aboutInfo[0].title:''"></div>
@@ -809,8 +809,13 @@
 			},
 			showvidiomodal(){
 				this.showVidio = true
+				setTimeout(()=>{
+					$("#companyVideoId").attr("style","display:block;")
+				})
+
 			},
 			hidevidiomodal(){
+				$("#companyVideoId").attr("style","display:none;")
 				this.showVidio = false
 			},
 			changeindex(index){
@@ -877,8 +882,3 @@
 	})
 </script>
 <script src="https://51qqt.com/js/navigation.js"></script>
-<style>
-	[v-cloak]{
-		display: none;
-	}
-</style>
