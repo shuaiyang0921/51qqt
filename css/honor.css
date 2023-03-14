@@ -1,7 +1,7 @@
-.honor_banner{width: 100%;background: url(https://51qqt.com/images/about/about5.png) no-repeat center center;background-size: cover;}
+.honor_banner{width: 100%;background: url(https://xgw.51qqt.com/qqt/images/about/about5.png) no-repeat center center;background-size: cover;}
 .honor_banner_title{font-size: 72px;height: 100px;line-height: 100px;}
 .honor_banner_text{font-size: 36px;height: 50px;line-height: 50px;margin-top: 8px;}
-.honor_certificate{padding: 60px 120px;}
+.honor_certificate{padding: 60px 20px;}
 .honor_title{font-size: 36px;height: 50px;line-height: 50px;margin-bottom: 50px;}
 .honor_certificate_list{padding: 21px 20px;background: #FFFFFF;border-radius: 4px;border: 1px solid #EBEBEB;cursor: pointer;margin: 17px 0px;margin-right: 18px;transition: all 0.3s}
 .honor_certificate_list:hover{box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.2);transform: translateY(-10px);}
