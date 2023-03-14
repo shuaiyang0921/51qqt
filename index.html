@@ -581,7 +581,7 @@
 							</div>
 						</div>
 						<div class="flex-column flex-between home_product_saasList">
-							<div v-if="index!=0"  class="home_product_saas projection" v-for="(item,index) in productSaasList">
+							<div v-if="index!=0"  class="home_product_saas projection" v-for="(item,index) in productSaasList" @click="trunPaasPage(item.remark)">
 								<div class="flex-item-7">
 									<div class="home_product_saasimg">
 										<img :src="item.icon" class="imgsize" :alt="item.intro">
@@ -590,7 +590,7 @@
 								<div class="flex-item-17">
 									<div class="home_product_saasTitle PingFangSCMedium">{{item.intro}}</div>
 									<div class="f14 home_product_saasText" v-html="item.description"></div>
-									<a class="home_more f14 colorblue" style="float: left" :href="item.remark">
+									<a class="home_more f14 colorblue" style="float: left">
 										了解更多
 										<span class="home_product_saasMoreicon"><img src="https://51qqt.com/img/home83.png" class="imgsize" alt="了解更多">
 										</span>
@@ -602,12 +602,12 @@
 					</div>
 					<div class="f26 homeHead_appleStytle">PaaS平台</div>
 					<div class="flex-column flex-between ">
-						<div class="home_product_paas projection flex-column" v-for="item in productPaasList">
+						<div class="home_product_paas projection flex-column" v-for="item in productPaasList" @click="trunPaasPage(item.remark)">
 							<div class="home_product_paasimg"><img :src="item.icon" class="imgsize" :alt="item.intro"></div>
 							<div class="home_product_paasright">
 								<div class="home_product_paasTitle PingFangSCMedium">{{item.intro}}</div>
 								<div class="f14 home_product_saasText" v-html="item.description"></div>
-								<a class="home_more f14 colorblue" :href="item.remark">
+								<a class="home_more f14 colorblue">
 									了解更多
 									<span class="home_product_saasMoreicon">
 										<img src="https://51qqt.com/img/home83.png" class="imgsize" alt="了解更多">
@@ -953,7 +953,7 @@
 					</div>
 					<div class="f14 tac footer_bottom flex-column flex-center">
 						<div>版权所有 © 2021 深圳市企企通科技有限公司<a href="https://beian.miit.gov.cn/#/Integrated/index" class="footer_bottom_num" target="_blank">粤ICP备15109055号</a></div>
-						<a href="#" class="footer_bottomtext">隐私政策</a>
+						<a href="#" class="footer_bottomtext"> 隐私政策</a>
 						<a href="#">网站声明</a>
 					</div>
 				</div>
@@ -1485,6 +1485,9 @@
 					}
 				}
 				// console.log(direction);
+			},
+			trunPaasPage(href){
+				window.location.href=href
 			}
 		},
 		computed:{

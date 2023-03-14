@@ -205,7 +205,7 @@
 .footer_aboutstyle a:hover{color: #FFFFFF;}
 .footer_bottom{padding: 30px 0;background: #0D0E10;}
 .footer_bottom a,.footer_bottom div{color: rgba(255,255,255,0.6)!important;}
-.footer_bottomtext{margin-right: 40px;}
+.footer_bottomtext{margin-right: 40px;margin-left: 40px;}
 .footer_bottom_num{margin-left: 10px;}
 /* 头部标题样式 */
 .manufacturing_adver_title{font-size: 48px;line-height: 62px;}
