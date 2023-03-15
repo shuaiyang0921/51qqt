@@ -520,7 +520,7 @@
 				</div>
 				<div class="flex-column flex-between homeHead_adver_bot">
 					<div class="homeHead_adver_botstyle" v-for="item in adverBotList">
-						<div class="homeHead_adver_botimg"><img :src="item.icon" class="imgsize" alt=""></div>
+						<div class="homeHead_adver_botimg"><img v-if="item.icon" :src="item.icon" class="imgsize" alt=""></div>
 						<div class="homeHead_adver_botright">
 							<div class="f16 PingFangSCMedium">{{clientWidth>780?item.title:item.fbk1}}</div>
 							<div class="f12 homeHead_adver_bottext">{{item.intro}}</div>
@@ -564,7 +564,7 @@
 					<div class="tac home_product_title PingFangSCMedium">产品矩阵：采购全链条业务闭环、开放</div>
 					<div class="f26 homeHead_appleStytle">SaaS云</div>
 					<div class="flex-column" style="margin-bottom: 24px">
-						<div v-if="index==0" class="home_product_saas_first projection" v-for="(item,index) in productSaasList">
+						<div v-if="index==0" class="home_product_saas_first projection" v-for="(item,index) in productSaasList" @click="trunPaasPage(item.remark)">
 							<div class="flex-item-7">
 								<div class="home_product_saasimg">
 									<img :src="item.icon" class="imgsize" :alt="item.intro">
