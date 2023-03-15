@@ -1,5 +1,5 @@
-.honor_banner{width: 100%;background: url(https://51qqt.com/images/about/about5.png) no-repeat center center;background-size: cover;}
-.honor_banner_title{font-size: 72px;height: 100px;line-height: 100px;}
+.honor_banner{width: 100%;background: url(https://51qqt.com/images/about/about5.png) no-repeat center center;background-size: cover;height: 500px;overflow: hidden;}
+.honor_banner_title{font-size: 72px;height: 100px;line-height: 100px;margin-top: 198px;}
 .honor_banner_text{font-size: 36px;height: 50px;line-height: 50px;margin-top: 8px;}
 .honor_certificate{padding: 60px 20px;}
 .honor_title{font-size: 36px;height: 50px;line-height: 50px;margin-bottom: 50px;}
@@ -16,4 +16,21 @@
 .honor_qualifications_img>img{transition: all 0.3s}
 .navNone{
     display: none;
+}
+
+@media screen and (max-width:582px) {
+    .honor_banner{height: auto;width: 100%;margin-top: 69px;min-height: 200px;}
+    .honor_banner_title{font-size: 30px;margin-top: 55px;height: 42px;line-height: 42px;}
+    .honor_banner_text{margin-top: 11px;font-size: 16px;line-height: 22px;height: 22px;}
+    .honor_title{font-size: 20px;margin-bottom: 30px;height: 28px;line-height: 28px;}
+    .honor_certificate_list{margin:0 16px 0 0;padding: 16px;}
+    .honor_certificate_list:last-child{margin-right: 0px;}
+    .honor_certificate_img{width: 120px;height: 168px;margin-bottom: 8px;}
+    .honor_text{width: 120px;font-size: 14px;line-height: 24px;height: auto;margin-top: 0;}
+    .honor_certificate_navs{position: relative;height: 306px;overflow: scroll;}
+    .displayBox{position: absolute;flex-wrap: nowrap;}
+    .honor_qualifications_img{width: 120px;height: 80px;}
+    .honor_certificate_text{font-size: 14px;line-height: 24px;height: auto;width: 120px;}
+    .honor_certificate{padding: 30px 16px;}
+    .honor_certificate_phonexia{height: 230px;}
 }
