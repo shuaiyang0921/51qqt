@@ -500,8 +500,8 @@
 			<div class="heiheader"></div>
 			<div class="contactUs_bg ">
 				<div class="maxwidth">
-					<div class="tac contactUs_title PingFangSCMedium">联系我们</div>
-					<div class="contactUs_info flex-column flex-between">
+					<div class="tac contactUs_title PingFangSCMedium phonehide">联系我们</div>
+					<div class="contactUs_info flex-column flex-between phonehide">
 						<div class="contactUs_info_left">
 							<div class="homeHead_appleStytle contactUs_info_leftTitle">咨询电话</div>
 							<div class="contactUs_info_leftText">400-835-1441</div>
@@ -527,8 +527,8 @@
 							<div class="f16 contactUs_workText">{{item.intro}}</div>
 						</div>
 					</div>
-					<div class="tac f14 colorgary" style="margin-top: 35px;">
-						如需了解更多办公地点，请联系我们 400-835-1881
+					<div class="tac f14 colorgary contactUs_bottom" v-html="clientWidth>582?'如需了解更多办公地点，请联系我们 400-835-1881':'如需了解更多办公地点，请联系我们<br/>400-835-1881'">
+						
 						<!-- <a class="f14 tac colorgary home_more" >更多办公及服务地点<span class="home_product_saasMoreicon"><img src="https://51qqt.com/home83.png" class="imgsize" alt=""></span></a> -->
 					</div>
 				</div>
@@ -712,11 +712,13 @@
 				companyName:'',
 				telephone:'',
 				smsCode:'',
+				clientWidth:0,
 			}
 		},
 		watch: {
 		},
 		created(){
+			this.clientWidth = document.documentElement.clientWidth
 			getHost('els')
 			this.getdata()
 		},

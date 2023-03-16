@@ -16,3 +16,12 @@
 .contactUs_workImg{width: 384px;height: 160px;}
 .contactUs_workTitle{height: 30px;font-size: 22px;line-height: 30px;margin: 24px 40px 12px 40px;}
 .contactUs_workText{color: #555555;line-height: 24px;height: 48px;margin: 0 40px;width: 304px;}
+.contactUs_bottom{margin-top: 35px;}
+@media screen and (max-width:582px) {
+    .contactUs_bg{margin:0 16px 30px 16px;padding: 30px 16px;border-radius: 0px 0px 40px 40px;}
+    .contactUs_workImg{width: 100%;height: auto;}
+    .contactUs_work{margin: 0;width: 100%;margin-bottom: 16px;padding-bottom:20px;}
+    .contactUs_workTitle{font-size: 18px;height: 25px;line-height: 25px;margin: 20px 20px 10px 20px;}
+    .contactUs_workText{margin: 0 20px;width: calc(100% - 40px);height: auto;font-size: 14px;}
+    .contactUs_bottom{margin-top: 30px;}
+}
