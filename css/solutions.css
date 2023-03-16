@@ -42,7 +42,7 @@
 .manufacturing_listright_img{width:640px;height:400px;position: absolute;z-index: 1;right: 0;top: 0;overflow: hidden;}
 .manufacturing_listright_img>img{transition: transform 0.3s}
 .manufacturing_listright_img>img:hover{transform: scale(1.1);}
-.manufacturing_listleft_title{font-size: 28px;line-height: 40px;margin-bottom: 24px;}
+.manufacturing_listleft_title{font-size: 28px;line-height: 40px;margin-bottom: 24px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 .manufacturing_listleft_text{line-height: 26px;margin-bottom: 30px;min-height:72px;max-height: 104px;overflow: hidden;text-overflow: ellipsis;}
 .manufacturing_listleft_text>p{color: #FFFFFF}
 .manufacturing_listleft_but2{width: 80px;line-height: 22px;height: 22px;border-radius: 4px;border: 2px solid rgba(255,255,255,0.3);padding: 9px 33px;margin-top: 10px;}

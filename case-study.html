@@ -27,8 +27,8 @@
 	<body>
 		<div id="app">
 			<div class="header">
-                <div class="flex-column flex-center homeHead f16">
-                    <div class="flex-column flex-middle" style="width: 800px;">
+                <div class="flex-column flex-between homeHead f16 maxwidth">
+                    <div class="flex-column flex-middle">
                         <a class="logosize" href="https://51qqt.com/index.html"><img src="https://51qqt.com/img/logo.png" class="imgsize" alt="企企通"></a>
                         <div class="flex-column flex-middle homenavs">
                             <ul class="flex-column flex-middle homeNav">
@@ -258,7 +258,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="flex-column flex-middle flex-right" style="width: 400px;">
+                    <div class="flex-column flex-middle flex-right">
                         <a class="flex-column flex-middle" href="tel:400-835-1881">
                             <div class="iconsize"><img src="https://51qqt.com/img/home18.png" class="imgsize" alt="电话拨号"></div>
                             <div class="homeHead_phone homeHead_appleStytle f18">400-835-1881</div>
@@ -506,7 +506,7 @@
 					<a class="f16 homeHead_registertil caseStudy_registertil tac homeHead_appleStytle " @click="showregistermodal">注册体验</a>
 				</div>
 			</div>
-			<div class="caseStudy_FilterHeader wow animate__fadeInUp" data-wow-duration="2s">
+			<div id="FilterList_id" class="caseStudy_FilterHeader wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth" v-if="clientWidth>582">
 					<div class="flex-column flex-middle f16 caseStudy_FilterHeader_top">
 						<div class="">行业：</div>
@@ -586,9 +586,9 @@
 					</div>
 					<div class="caseStudy_FilterPages flex-column flex-middle flex-center" v-if="ListData.length>0">
 						<div v-if="totalPage>5&&currentPage!=1" class="Pagesprev"><img src="https://51qqt.com/caseStudy/caseStudy4.png" class="imgsize" alt="上一页" @click="prevPage"></div>
-						<div class="f16 flex-column flex-middle caseStudy_FilterPages_nums tac">
+						<a href="#FilterList_id" class="f16 flex-column flex-middle caseStudy_FilterPages_nums tac">
 							<div v-if="showPage(item)"  v-for="item in Pagenun" :class="currentPage==item?'caseStudy_FilterPages_num':''" @click="changePage(item)">{{item}}</div>
-						</div>
+						</a>
 						<div v-if="totalPage>5&&currentPage!=totalPage" class="Pagesnext"><img src="https://51qqt.com/images/caseStudy/caseStudy3.png" class="imgsize" alt="下一页" @click="nextPage"></div>
 					</div>
 				</div>
@@ -1012,7 +1012,7 @@
 				})
 						.then(res => {
 							if (res.code==200){
-								window.alert('注册成功！');
+								window.alert('提交成功！');
 								this.showmodel = false
 							}else {
 								window.alert('验证码错误！');

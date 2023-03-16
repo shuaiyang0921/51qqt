@@ -6,7 +6,7 @@
 .qqgouQ3_adver{padding: 60px 10%;padding-top: 132px;}
 .b2b_adver{background: url(https://51qqt.com/images/mall/bgB2B.png) no-repeat center center;background-size: cover;padding: 60px 10%;padding-top: 132px;}
 .juyuanchi_adver{background: url(https://51qqt.com/images/mall/bgJyc.png) no-repeat center center;background-size: cover;padding: 60px 10%;padding-top: 132px;}
-.supplier_adver{padding: 60px 10%;padding-top: 132px;height: 500px;}
+.supplier_adver{padding: 60px 10%;padding-top: 138px;height: 380px;}
 .paas_topImg{width: 490px;height: 370px;padding: 10px;background: #FFFFFF;box-shadow: 0px 2px 20px 0px rgba(142,168,220,0.2);border-radius: 12px;margin-left: 66px;}
 .adver_title{font-size: 48px;line-height: 67px;}
 .qilian_topImg{width: 360px;height: 350px;margin-left: 136px;}
@@ -35,7 +35,7 @@
 /* .hideModel>div{display: none;} */
 /* .showModel{display: block!important;} */
 .mkt_registertil{color: #005CEF;background: #FFFFFF;}
-.scf_bgImg{padding: 0 20px;}
+.scf_bgImg{padding: 0 20px 20px 20px;}
 .scf_navsBg{padding: 60px 0;}
 .scf_navs{border-bottom: 1px solid #EBEBEB;margin-bottom: 40px;}
 .scf_navs>div{padding: 17px 50px;cursor: pointer;line-height: 28px;}
@@ -50,7 +50,7 @@
 .purchase_navList_left{width: 520px;padding-left: 55px;}
 .scf_navList_rightTitle{font-size: 28px;line-height: 37px;margin-bottom: 16px;color: #222222}
 .scf_navList_rightLable{padding: 13px 24px;border-radius: 2px;border-left: 4px solid #FF761A;margin-bottom: 16px;}
-.scf_navList_rightText{color: #555555;line-height: 24px;margin-bottom: 60px;}
+.scf_navList_rightText{color: #555555;line-height: 24px;margin-bottom: 48px;}
 .scf_solvebgImg_bot{padding-bottom: 120px;}
 .scf_solvebgImg{background: url(https://51qqt.com/images/paas/scf16.png) no-repeat center center;background-size: cover;height: 220px;}
 .scf_solveList_img{width: 30px;height: 30px;}
@@ -90,12 +90,15 @@
 .qirongtong_Business_text{color: #555555;line-height: 24px;}
 .qipiaotong_Business_textwidth{width: 400px;}
 .qipiaotong_title{font-size: 36px;height: 50px;line-height: 50px;margin-bottom: 16px;}
-.mall_navs{padding: 32px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;border: 2px solid #FFFFFF;margin: 12px;-webkit-transition: all .5s; transition: all .5s;}
+.mall_navs{padding: 30px 32px 28px 32px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;border: 2px solid #FFFFFF;-webkit-transition: all .5s; transition: all .5s;}
 .mall_navs:hover{transform: translateY(-10px);}
-.mall_navs_imgtitle{width: 728px;height: 170px;margin-bottom: 20px;}
+.mall_navs_imgtitle{width: 728px;height: 170px;margin-bottom: 14px;}
 .mall_navs_img{width: 30px;height: 30px;margin:auto 12px; margin-left: 0}
 .mall_navs_text{color: #555555;line-height: 26px;margin: 8px 0 16px 0;}
 .mall_navs_textwidth{width: 320px;}
+.last_mall_navs{margin-top: 24px;}
+.mall_navs_magright{margin-right: 24px;}
+.mall_navs_magright:last-of-type{margin-right: 0;}
 .Q3k_navList_img{width: 520px;height: 310px;margin: 35px 45px 35px 0;}
 .purchase_navList_rightText{color: #555555;line-height: 24px;margin-bottom: 20px;}
 .darentong_change_leftwid{width: calc(100% - 408px);}
@@ -173,14 +176,15 @@
 /*    from{opacity: 0}*/
 /*    to {opacity: 1}*/
 /*}*/
-@media screen and (max-width:1170px) {
+@media screen and (max-width:1252px) {
     .paas_topImg{display: none;}
     .paas_adver_left{width: calc(100% - 120px);padding: 0 60px;}
     .mkt_registertil{margin: 0;}
-    .mall_navs{width: calc(100% - 64px); margin: 12px 0;}
+    .mall_navs{width: calc(100% - 68px); margin: 12px 0;}
     .mall_navs_imgtitle,.phone_mall_navswid{width: 100%;}
     .purchase_navList_right_text{padding-left:0px;padding-right:0px;padding-bottom: 20px;}
     .purchase_navList_left_text{padding-left: 0px;padding-right:0px;padding-top: 20px;}
+    .last_mall_navs{margin: 16px 0px 0 0px;width: 100%;}
 }
 @media screen and (max-width:582px) {
     .manufacturing_adver_title{font-size: 24px;line-height: 33px;margin-bottom: 8px;}
@@ -198,7 +202,7 @@
     .mall_navs_imgtitle{display: none;}
     .pushase_more_link{display: none;}
     .mall_navs_text{font-size: 14px;margin: 10px 0 0 0;}
-    .last_mall_navs{margin: 16px 20px 0 20px;width: 100%;}
+    
     .scf_navList_rightTitle {font-size: 18px;line-height: 25px;margin-bottom: 12px;}
     .scf_navList_rightText{font-size: 14px;line-height: 24px;color: #555555;margin-bottom: 20px;}
     /* .purchase_navList_left_text .scf_navList_rightTitle {text-align: center;} */
