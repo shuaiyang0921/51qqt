@@ -34,6 +34,22 @@ _getData({})
         console.log(err,'_getData获取数据异常');
     })
 
+var _getBaseInfo = p => get('/baseInfo/websiteBaseInfo/noToken/queryBaseInfo', p);
+_getBaseInfo({})
+    .then(res => {
+        if (res.code==200){
+            vm.baseInfo=res.result;
+            console.log(vm.baseInfo,"数据1")
+        }else {
+            vm.baseInfo={};
+        }
+    }).catch(err => {
+    console.log(err,'_getBaseInfo获取数据异常');
+})
+
+
+
+
 //
 //
 // var div="<div class=\"rightView_kf\" @click=\"showAiFanFan\">\n" +
