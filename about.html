@@ -498,10 +498,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="about_banner tac phonehide wow animate__fadeInUp" data-wow-duration="2s" style="height: 500px;overflow: hidden;">
-				<div class="homeHead_appleStytle about_banner_title" style="margin-top: 154px;">企企通</div>
-				<div class="about_banner_text">推动数字化采购新变革</div>
-				<div class="f16 homeHead_registertil tac about_banner_but" @click="showregistermodal">注册体验</div>
+			<div class="about_banner tac phonehide wow animate__fadeInUp" data-wow-duration="2s" :style="{backgroundImage: 'url('+BannerImg.image+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover',height: '500px',overflow: 'hidden'}">
+				<div class="homeHead_appleStytle about_banner_title" style="margin-top: 154px;" v-html="BannerImg.title"></div>
+				<div class="about_banner_text" v-html="BannerImg.intro"></div>
+				<div v-if="BannerImg.showButton" class="f16 homeHead_registertil tac about_banner_but" @click="showregistermodal" v-html="BannerImg.buttonText"></div>
 			</div>
 			<div class="about_videobg wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth">
@@ -757,6 +757,7 @@
 				telephone:'',
 				smsCode:'',
 				buttonNav:[],
+				BannerImg:{},
 			}
 		},
 		watch: {
@@ -815,6 +816,21 @@
 				}).catch(err => {
 					console.log(err,'_getData获取数据异常');
 				})
+
+				var _getBannerImg = p => get('/banner/noToken/queryByModule', p);
+				_getBannerImg({module:'2'})
+						.then(res => {
+							if (res.result.length>0){
+								that.BannerImg = res.result[0]
+								if (that.BannerImg.image){
+									that.BannerImg.image=that.BannerImg.image.replace(/\s/g,'%20');
+								}
+							}
+
+						})
+						.catch(err => {
+							console.log(err,'_getBannerImg获取数据异常');
+						})
 			},
 			showregistermodal(){
 				this.showmodel = true

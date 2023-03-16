@@ -384,9 +384,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="joinUs_banner tac colorbai wow animate__fadeInUp" data-wow-duration="2s">
-				<div class="joinUs_banner_text" style="">担当 | 坚持 | 奋斗 | 创新</div>
-				<div class="f14 homeHead_registertil tac joinUs_banner_but" @click="turnJoinUs">加入我们</div>
+			<div class="joinUs_banner tac colorbai wow animate__fadeInUp" data-wow-duration="2s" :style="{backgroundImage: 'url('+BannerImg.image+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover',height: '500px',overflow: 'hidden'}">
+				<div class="joinUs_banner_text" style="" v-html="BannerImg.title"></div>
+				<div v-if="BannerImg.showButton" class="f14 homeHead_registertil tac joinUs_banner_but" @click="turnJoinUs(BannerImg.link)">加入我们</div>
 			</div>
 			<div class="joinUs_imglists phonehide wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="tac joinUs_title PingFangSCMedium">加入企企通</div>
@@ -652,6 +652,7 @@
 				smsCode:'',
 				clientWidth:0,
 				buttonNav:[],
+				BannerImg:{},
 			}
 		},
 		watch: {
@@ -744,6 +745,21 @@
 				}).catch(err => {
 					console.log(err,'_getData获取数据异常');
 				})
+
+				var _getBannerImg = p => get('/banner/noToken/queryByModule', p);
+				_getBannerImg({module:'3'})
+						.then(res => {
+							if (res.result.length>0){
+								that.BannerImg = res.result[0]
+								if (that.BannerImg.image){
+									that.BannerImg.image=that.BannerImg.image.replace(/\s/g,'%20');
+								}
+							}
+
+						})
+						.catch(err => {
+							console.log(err,'_getBannerImg获取数据异常');
+						})
 			},
 			changeCaseTab(index){
 				this.navIndex = index

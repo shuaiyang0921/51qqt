@@ -497,9 +497,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="honor_banner tac colorbai" style="height: 500px;overflow: hidden;">
-				<div class="homeHead_appleStytle honor_banner_title" style="margin-top: 198px;">企企通</div>
-				<div class="honor_banner_text">历年履获行业权威机构多项殊荣及专业资质</div>
+			<div class="honor_banner tac colorbai" :style="{backgroundImage: 'url('+BannerImg.image+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover',height: '500px',overflow: 'hidden'}">
+				<div class="homeHead_appleStytle honor_banner_title" style="margin-top: 198px;" v-html="BannerImg.title"></div>
+				<div class="honor_banner_text" v-html="BannerImg.intro"></div>
 			</div>
 			<div id="honorImageList" style="position: absolute;top: 430px;"></div>
 			<div class="padBg">
@@ -711,6 +711,7 @@
 				telephone:'',
 				smsCode:'',
 				buttonNav:[],
+				BannerImg:{},
 			}
 		},
 		watch: {
@@ -802,6 +803,22 @@
 				}).catch(err => {
 					console.log(err,'_getData获取数据异常');
 				})
+
+				var _getBannerImg = p => get('/banner/noToken/queryByModule', p);
+				_getBannerImg({module:'4'})
+						.then(res => {
+							if (res.result.length>0){
+								that.BannerImg = res.result[0]
+								if (that.BannerImg.image){
+									that.BannerImg.image=that.BannerImg.image.replace(/\s/g,'%20');
+								}
+
+							}
+
+						})
+						.catch(err => {
+							console.log(err,'_getBannerImg获取数据异常');
+						})
 			},
 			showregistermodal(){
 				this.showmodel = true

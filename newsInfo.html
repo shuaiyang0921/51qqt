@@ -780,7 +780,7 @@
 		},
 		mounted(){
 
-			getSeo(46)
+			// getSeo(46)
 			this.getBottomNav()
 		},
 		methods: {
@@ -834,7 +834,10 @@
 					type:type
 				}).then(res => {
 					that.InfoData = res.result
-					
+					document.querySelector('meta[name="Keywords"]').setAttribute('content',res.result.sdkKeywords);
+					document.querySelector('title').innerHTML=res.result.sdkTitle;
+
+					document.querySelector('meta[name="Description"]').setAttribute('content',res.result.sdkDescription);
 				}).catch(err => {
 					console.log(err,'_getData获取数据异常');
 				})
