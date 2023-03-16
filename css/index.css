@@ -229,6 +229,12 @@
     margin-top: 10px;
 }
 
+.homeHead_registertil_scf{
+    padding: 10px 32px;color: #FFFFFF;background: linear-gradient(270deg, #FFA328 0%, #FF761A 100%);border-radius: 4px;width: 64px;text-align: center;cursor: pointer;
+    position: relative;
+    transition: background 0.3s;
+}
+
 .homeHead_registertil{
     padding: 10px 32px;color: #FFFFFF;background: linear-gradient(to right,#005CEF,#239BFF);border-radius: 4px;width: 64px;text-align: center;cursor: pointer;
     position: relative;
@@ -356,4 +362,7 @@
     .footer_topstyle{padding: 0 20px;margin: 0;}
     .footer_aboutstyle {display: none;}
     .logosize{height: 28px;width: 80px;}
+}
+@media screen and (max-width:780px) {
+    .manufacturing_adver_title{font-size: 24px;line-height: 33px;margin-bottom: 4px;}
 }
