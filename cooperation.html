@@ -263,7 +263,7 @@
                             <div class="iconsize"><img src="https://51qqt.com/img/home18.png" class="imgsize" alt="电话拨号"></div>
                             <div class="homeHead_phone homeHead_appleStytle f18">400-835-1881</div>
 						</a>
-                        <a class="f16 homeHead_logintil" href="https://q3srm.51qqt.com/">登录</a>
+                        <a class="f16 homeHead_logintil" :href="baseInfo.fbk1">登录</a>
                         <div class="f14 homeHead_registertil" @click="showregistermodal('',1,'')">注册体验</div>
                     </div>
                 </div>
@@ -784,6 +784,7 @@
 			return {
 				cooperationInfo:[],
 				suppliernumData:[],
+				cooperationImg:[],
 				partnersImg:[],
 				showmodel:false,
 				Listindex:0,
@@ -849,17 +850,13 @@
 				_getData().then(res => {
 					that.cooperationInfo = res.result['1']
 					that.suppliernumData = res.result['2']
+					that.cooperationImg=res.result['3']
+					if (that.cooperationImg){
+						that.partnersImg = that.cooperationImg[0].image;
+					}
 				}).catch(err => {
 					console.log(err,'_getData获取数据异常');
 				})
-				var _getData = p => get('/general/websiteGeneral/noToken/queryIndexData', p);
-				_getData({})
-						.then(res => {
-							that.partnersImg = res.result['首页-合作伙伴'];
-						})
-						.catch(err => {
-							console.log(err,'_getData获取数据异常');
-						})
 			},
 			showregistermodal(){
 				this.showmodel = true
@@ -938,4 +935,4 @@
 	})
     </script>
 </html>
-<script src="https://51qqt.com/js/navigation.js"></script>
+<script src="./js/navigation.js"></script>
