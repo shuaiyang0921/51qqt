@@ -261,4 +261,5 @@
     .paas_paas_topImg{display: none;}
     .paas_navs>div{width: 160px;text-align: center;margin-right: 28px;}
     .paas_navs>div:last-child{margin-right: 0;}
+    .mkt_navs>div{width: 72px;margin-right: 0px;}
 }
