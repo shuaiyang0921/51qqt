@@ -494,7 +494,7 @@
 			<div class="wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="homeHead_adver" >
 					<div class="homeHead_adverstyle flex-column" :style="{width: imgwidth}" v-show="BanerImg.length!=0">
-						<div @click="jumpLink(item.showButton,item.link)" :class="item.video?'homeHead_adverList_video':'homeHead_adverList'" v-for="(item,index) in BanerImg" :style="{backgroundImage: 'url('+ (clientWidth<=582?item.mobileImage:item.image) + ')',position:'relative','cursor':(item.showButton==1?'':'pointer')}" @touchstart="bannerTouchStart" @touchend="bannerTouchend">
+						<div @click="jumpLink(item.showButton,item.link)" :class="item.video?'homeHead_adverList_video':'homeHead_adverList'" v-for="(item,index) in BanerImg" :style="{backgroundImage: 'url('+ (clientWidth<=582?item.mobileImage:item.image) + ')',position:'relative','cursor':(item.showButton==1?'':'pointer')}" @touchstart="handelTouchStart" @touchend="bannerTouchend">
 							<div class="maxwidth">
 								<template v-if="!item.video">
 									<div class="homeHead_adver1_title homeHead_appleStytle" v-if="item.title" v-html="item.title"></div>
@@ -669,7 +669,7 @@
 				<div class="maxwidth">
 					<div class="tac home_product_title PingFangSCMedium">与千家高成长企业一起，实现数字化采购</div>
 					<div>
-						<div class="flex-column home_Case_info" :class="index==0?'home_Case_info_show':''" v-for="(item,index) in CaseList" @touchstart="bannerTouchStart" @touchend="CaseTouchend">
+						<div class="flex-column home_Case_info" :class="index==0?'home_Case_info_show':''" v-for="(item,index) in CaseList" @touchstart="handelTouchStart" @touchend="CaseTouchend">
 							<div class="home_Caseimg"><img :src="item.image" class="imgsize" :alt="item.tag"></div>
 							<div class="home_Case_inforight">
 								<div class="f16 home_Case_inforight_title">{{item.intro}}</div>
@@ -1443,7 +1443,7 @@
 				}
 				let direction = '';
 				//如果Y轴移动小于10,证明是上下滑动,所以不做处理
-				if (Math.abs(endX - this.startX) > 5 && Math.abs(endY - this.startY) < 20) {
+				if (Math.abs(endX - this.startX) > 10 && Math.abs(endY - this.startY) < 30) {
 					direction = endX - this.startX > 0 ? 'right' : 'left'
 				}else{
 					return
@@ -1460,11 +1460,6 @@
 				}
 				// console.log(direction);
 			},
-			bannerTouchStart(e){
-				this.startTime = Date.now()
-				this.startX = e.changedTouches[0].clientX;
-				this.startY = e.changedTouches[0].clientY;
-			},
 			bannerTouchend(e) {
 				if(this.clientWidth>=582){
 					return
@@ -1478,7 +1473,7 @@
 				let direction = '';
 				console.log(this.startX,endX,this.startY,endY)
 				//如果Y轴移动小于10,证明是上下滑动,所以不做处理
-				if (Math.abs(endX - this.startX) > 10 && Math.abs(endY - this.startY) < 20) {
+				if (Math.abs(endX - this.startX) > 10 && Math.abs(endY - this.startY) < 30) {
 					direction = endX - this.startX > 0 ? 'right' : 'left'
 				}else{
 					return
@@ -1512,7 +1507,7 @@
 				}
 				let direction = '';
 				//如果Y轴移动小于10,证明是上下滑动,所以不做处理
-				if (Math.abs(endX - this.startX) > 5 && Math.abs(endY - this.startY) < 20) {
+				if (Math.abs(endX - this.startX) > 10 && Math.abs(endY - this.startY) < 30) {
 					direction = endX - this.startX > 0 ? 'right' : 'left'
 				}else{
 					return
