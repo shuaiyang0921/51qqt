@@ -373,25 +373,26 @@
 				</div>
 			</div>
 			<!-- <div class="heiheader"></div> -->
-			<div class="wow animate__fadeInUp" data-wow-duration="2s" :style="{backgroundImage: 'url('+(BannerImg[0]?BannerImg[0].image:'')+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover',height:'500px'}">
-				<div class="qqgouQ3_adver flex-column flex-middle flex-between maxwidth" >
-					<div class="paas_adver_left">
-						<div class="manufacturing_adver_title homeHead_appleStytle" v-html="BannerImg[0]?BannerImg[0].title:''"></div>
-						<div class="f16 PingFangSCMedium paas_adver_text" v-html="BannerImg[0]?BannerImg[0].intro:''"></div>
-						<div class="flex-column flex-middle f18 paas_adver_buts homeHead_appleStytle colorgary">
-							<div v-for="(item,index) in tags">{{item}}</div>
-						</div>
-						<div class="f14 homeHead_registertil tac homeHead_appleStytle product_banner_register" @click="showregistermodal(1)">注册体验</div>
-					</div>
-				</div>
-			</div>
-			<div class="padBg">
+			<div v-if="BannerImg[0]" class="paas_topBg wow animate__fadeInUp" data-wow-duration="2s" :style="{backgroundImage: 'url('+(clientWidth<=582?BannerImg[0].mobileImage:BannerImg[0].image)+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover',backgroundPosition:'center'}">
+				<div class="supplier_adver flex-column flex-middle flex-center maxwidth">
+				   <div class="qilian_adver_left">
+					   <div class="adver_title homeHead_appleStytle" v-html="BannerImg[0]?BannerImg[0].title:''"></div>
+					   <div class="f16 PingFangSCMedium paas_adver_text" v-html="BannerImg[0]?BannerImg[0].intro:''"></div>
+					   <div class="flex-column flex-middle f18 paas_adver_buts homeHead_appleStytle colorgary">
+						   <div v-for="(item,index) in tags">{{item}}</div>
+					   </div>
+					   <div class="f14 homeHead_registertil tac homeHead_appleStytle product_banner_register" @click="showregistermodal(1)">注册体验</div>
+				   </div>
+				   <div class="qilian_topImg"><img v-if="BannerImg[0]" :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize"></div>
+			   </div>
+		   </div>
+		   <div class="padBg phonehide wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth">
 					<div class="PingFangSCMedium tac home_title">{{supplierImgData[0]?supplierImgData[0].bigTitle:''}}</div>
 					<div class=""><img :src="supplierImgData[0]?supplierImgData[0].image:''" class="imgsize" :alt="supplierImgData[0]?supplierImgData[0].bigTitle:''"></div>
 				</div>
 			</div>
-			<div class="padBg bggray">
+			<div class="padBg bggray wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth">
 					<div class="PingFangSCMedium tac home_title" style="margin-bottom: 0">核心能力</div>
 					<div v-for="(item,index) in supplierListData">
@@ -416,7 +417,7 @@
 					</div>
 				</div>
 			</div>
-			<iframe src="https://mall.51qqt.com/iframe/achieveCust.html?name=27" class="achieveCuststy wow animate__fadeInUp" frameborder="0" scrolling="no"></iframe>
+			<iframe src="https://mall.51qqt.com/iframe/achieveCust.html?name=27" class="achieveCuststy wow animate__fadeInUp" data-wow-duration="2s" frameborder="0" scrolling="no"></iframe>
 			<iframe src="https://mall.51qqt.com/iframe/companys.html" class="companyStyle wow animate__fadeInUp" data-wow-duration="2s" frameborder="0" scrolling="no"></iframe>
 			<div class="wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="home_register colorbai" >
@@ -595,11 +596,13 @@
 				companyName:'',
 				telephone:'',
 				smsCode:'',
+				clientWidth:0
 			}
 		},
 		watch: {
 		},
 		created(){
+			this.clientWidth = document.documentElement.clientWidth
 			getHost('els')
 			this.getdata()
 			this.getBanner()
@@ -649,6 +652,7 @@
 							}
 							that.BannerImg.forEach(item=>{
 								item.image=item.image.replace(/\s/g,'%20');
+								item.mobileImage=item.mobileImage.replace(/\s/g,'%20');
 							})
 						})
 						.catch(err => {
