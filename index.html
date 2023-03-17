@@ -13,7 +13,7 @@
 		<!-- 头部底部样式 -->
 		<link rel="stylesheet" href="https://51qqt.com/css/index.css" />
 		<!-- 首页样式 -->
-		<link rel="stylesheet" href="https://51qqt.com/css/homestyle.css" />
+		<link rel="stylesheet" href="./css/homestyle.css" />
 		<link rel="stylesheet" href="https://51qqt.com/css/caseStudy.css" />
 		<link rel="stylesheet" href="https://51qqt.com/css/animate.min.css" />
 		<link rel="stylesheet" href="https://51qqt.com/css/cooperation.css" />
@@ -157,32 +157,26 @@
                                                     <div class="f18 homeHead_appleStytle homeHead_solutionPopUp_leftTitle">领域解决方案</div>
                                                 </div>
                                                 <div class="homeHead_productpopUp_right f14 flex-column">
-<!--                                                    <a class="homeHead_solutionPopUp_rightText " href="https://51qqt.com/solutions/manufacturing.html?name=39">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon9">生产</div>
                                                         <div class="f12 homeHead_solutionPopUp_subheading">直接采购/间接采购</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=40">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon10">商贸</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">标准商品/定制商品/相关服务</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=41">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon11">项目</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">工程/研发/设备项目/营销项目</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=42">-->
                                                     <a class="homeHead_solutionPopUp_rightText  cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon12">服务</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">教培/福利/物流/营销/费用类</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=43">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon13">大宗</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">农副/金属/化工/能源产品</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=44">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon14">办公</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">行政物资/办公/IT类/劳保用品</div>
@@ -500,8 +494,8 @@
 			<div class="wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="homeHead_adver" >
 					<div class="homeHead_adverstyle flex-column" :style="{width: imgwidth}" v-show="BanerImg.length!=0">
-						<div @click="jumpLink(item.showButton,item.link)" :class="item.video?'homeHead_adverList_video':'homeHead_adverList'" v-for="(item,index) in BanerImg" :style="{backgroundImage: 'url('+ (clientWidth<=582?item.mobileImage.replace(/\s/g,'%20'):item.image.replace(/\s/g,'%20')) + ')',position:'relative','cursor':(item.showButton==1?'':'pointer')}">
-							<div style="max-width: 1200px;margin: 0 auto;" >
+						<div @click="jumpLink(item.showButton,item.link)" :class="item.video?'homeHead_adverList_video':'homeHead_adverList'" v-for="(item,index) in BanerImg" :style="{backgroundImage: 'url('+ (clientWidth<=582?item.mobileImage.replace(/\s/g,'%20'):item.image.replace(/\s/g,'%20')) + ')',position:'relative','cursor':(item.showButton==1?'':'pointer')}" @touchstart="bannerTouchStart" @touchend="bannerTouchend">
+							<div class="maxwidth">
 								<template v-if="!item.video">
 									<div class="homeHead_adver1_title homeHead_appleStytle" v-if="item.title" v-html="item.title"></div>
 									<div class="f20 homeHead_adver1_text" v-if="item.intro" v-html="item.intro"></div>
@@ -672,7 +666,7 @@
 				<div class="maxwidth">
 					<div class="tac home_product_title PingFangSCMedium">与千家高成长企业一起，实现数字化采购</div>
 					<div>
-						<div :class="index==0?'flex-column home_Case_info home_Case_info_show':'flex-column home_Case_info'" v-for="(item,index) in CaseList">
+						<div class="flex-column home_Case_info" :class="index==0?'home_Case_info_show':''" v-for="(item,index) in CaseList" @touchstart="bannerTouchStart" @touchend="CaseTouchend">
 							<div class="home_Caseimg"><img :src="item.image" class="imgsize" :alt="item.tag"></div>
 							<div class="home_Case_inforight">
 								<div class="f16 home_Case_inforight_title">{{item.intro}}</div>
@@ -689,7 +683,7 @@
 					</div>
 				</div>
 			</div>
-			<iframe src="https://51qqt.com/iframe/companys.html" class="companyStyle wow animate__fadeInUp" data-wow-duration="2s" frameborder="0" scrolling="no"></iframe>
+			<iframe src="./iframe/companys.html" class="companyStyle wow animate__fadeInUp" data-wow-duration="2s" frameborder="0" scrolling="no"></iframe>
 			<div class="home_endorsed wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth">
 					<div class="tac home_product_title PingFangSCMedium colorbai">行业认可</div>
@@ -801,37 +795,10 @@
 				<div class="maxwidth">
 					<div class="PingFangSCMedium tac home_product_title">为什么选择与企企通合作</div>
 					<div class="flex-column">
-						<!--						<div class="cooperation_why_left">-->
-						<!--							<div class="cooperation_why_lefttop"><img src="https://51qqt.com/images/cooperation/cooperation5.png" class="imgsize" alt="品牌实力"></div>-->
-						<!--							<div class="colorbai PingFangSCMedium cooperation_why_leftTitle">品牌实力</div>-->
-						<!--							<div class="f16 cooperation_why_leftText">-->
-						<!--								企企通在-->
-						<!--								<span>SRM赛道持续领先</span><br/>-->
-						<!--								服务众多-->
-						<!--								<span>500强</span>-->
-						<!--								及-->
-						<!--								<span>中小微企业客户</span><br/>-->
-						<!--								国家级“高新技术企业”及多项安全/ISO认证<br/>-->
-						<!--								先后获得“中国企业服务创新成长50强”“大中华区IT服务业独角兽大奖”等-->
-						<!--								<span>30+行业</span>-->
-						<!--								权威荣誉奖项-->
-						<!--							</div>-->
-						<!--						</div>-->
 						<div v-if="suppliernumData[4]" class="cooperation_why_left" :style="{backgroundImage: 'url('+suppliernumData[4].image+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover'}">
 							<div class="cooperation_why_lefttop"><img :src="suppliernumData[4].icon" class="imgsize" alt="品牌实力"></div>
 							<div class="colorbai PingFangSCMedium cooperation_why_leftTitle">{{suppliernumData[4].title}}</div>
-							<div class="f16 cooperation_why_leftText" v-html="suppliernumData[4].intro">
-								<!--								企企通在-->
-								<!--								<span>SRM赛道持续领先</span><br/>-->
-								<!--								服务众多-->
-								<!--								<span>500强</span>-->
-								<!--								及-->
-								<!--								<span>中小微企业客户</span><br/>-->
-								<!--								国家级“高新技术企业”及多项安全/ISO认证<br/>-->
-								<!--								先后获得“中国企业服务创新成长50强”“大中华区IT服务业独角兽大奖”等-->
-								<!--								<span>30+行业</span>-->
-								<!--								权威荣誉奖项-->
-							</div>
+							<div class="f16 cooperation_why_leftText" v-html="suppliernumData[4].intro"></div>
 						</div>
 						<div class="cooperation_why_right flex-column">
 							<div v-if="index<4" :class="'cooperation_why_rightList '+(' cooperation_why_rightList'+index)" v-for="(item,index) in suppliernumData">
@@ -1470,7 +1437,7 @@
 				}
 				let direction = '';
 				//如果Y轴移动小于10,证明是上下滑动,所以不做处理
-				if (Math.abs(endX - this.startX) > 10 && Math.abs(endY - this.startY) < 20) {
+				if (Math.abs(endX - this.startX) > 5 && Math.abs(endY - this.startY) < 20) {
 					direction = endX - this.startX > 0 ? 'right' : 'left'
 				}else{
 					return
@@ -1486,6 +1453,76 @@
 					}
 				}
 				// console.log(direction);
+			},
+			bannerTouchStart(e){
+				this.startTime = Date.now()
+				this.startX = e.changedTouches[0].clientX;
+				this.startY = e.changedTouches[0].clientY;
+			},
+			bannerTouchend(e) {
+				if(this.clientWidth>=582){
+					return
+				}
+				let endTime = Date.now()
+				let endX = e.changedTouches[0].clientX;
+				let endY = e.changedTouches[0].clientY;
+				if (endTime - this.startTime > 2000) { //正常操作不会大于2秒
+					return
+				}
+				let direction = '';
+				//如果Y轴移动小于10,证明是上下滑动,所以不做处理
+				if (Math.abs(endX - this.startX) > 5 && Math.abs(endY - this.startY) < 20) {
+					direction = endX - this.startX > 0 ? 'right' : 'left'
+				}else{
+					return
+				}
+				if(direction=='right'){
+					if(this.changenum==0){
+						return
+					}
+					this.changenum --
+				}else{
+					// console.log(this.SolutionList[this.navstopIndex])
+					if(this.BanerImg.length-1>this.changenum){
+						this.changenum++
+					}
+				}
+				clearInterval(this.bannerInterval)
+				this.setBannerInterval();
+				$('.homeHead_tabs>div').eq(this.changenum).addClass('homeHead_tab').siblings().removeClass('homeHead_tab')
+				$('.homeHead_adverstyle').animate({'left':-(this.changenum*100)+'%'},0);
+			},
+			CaseTouchend(e) {
+				if(this.clientWidth>=582){
+					return
+				}
+				let endTime = Date.now()
+				let endX = e.changedTouches[0].clientX;
+				let endY = e.changedTouches[0].clientY;
+				if (endTime - this.startTime > 2000) { //正常操作不会大于2秒
+					return
+				}
+				let direction = '';
+				//如果Y轴移动小于10,证明是上下滑动,所以不做处理
+				if (Math.abs(endX - this.startX) > 5 && Math.abs(endY - this.startY) < 20) {
+					direction = endX - this.startX > 0 ? 'right' : 'left'
+				}else{
+					return
+				}
+				if(direction=='right'){
+					if(this.changeCaseNum==0){
+						return
+					}
+					this.changeCaseNum --
+				}else{
+					if(this.CaseList.length-1>this.changeCaseNum){
+						this.changeCaseNum++
+					}
+				}
+				clearInterval(this.caseInterval)
+				this.setCaseInterval();
+				$('.home_Case_tabs>div').eq(this.changeCaseNum).addClass('home_Case_tab').siblings().removeClass('home_Case_tab')
+				$('.home_Case_info').eq(this.changeCaseNum).addClass('home_Case_info_show').siblings().removeClass('home_Case_info_show')
 			},
 			trunPaasPage(href){
 				window.location.href=href

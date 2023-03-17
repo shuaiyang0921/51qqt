@@ -423,11 +423,11 @@ div::-webkit-scrollbar{
 }
 @media screen and (max-width:582px) {
     .phonebai{background: #FFFFFF;}
-    .homeHead_adverList{padding: 270px 20px 0 20px;height: 160px;}
+    .homeHead_adverList{padding: 190px 20px 0 20px;height: 150px;}
     .homeHead_adver1_text{margin: 20px 0 22px 0;width: 100%;text-align: center;}
     /* .f14{font-size: 12px;} */
     .f20,.f22,.f24,.f26{font-size: 18px;}
-    .homeHead_adver{height: 430px;margin-top: 69px;}
+    .homeHead_adver{height: 340px;margin-top: 69px;}
     .home_Enabling{margin: 0 15px 30px 15px;padding: 16px 16px 30px 16px;border-radius: 8px;}
     .home_Enabling_Subhead{margin:8px 0 16px 0;}
     .home_Enabling_title{margin-bottom: 8px;font-size: 14px;}
@@ -455,7 +455,7 @@ div::-webkit-scrollbar{
     .home_Enabling_left{margin: 0;width:100%;padding-bottom: 30px;border-bottom: 1px solid #EBEBEB;}
     .home_Enabling_right{margin: 16px 0px 0 0px;width:100%;}
     .achieveCuststy{height: 927px;}
-    .companyStyle{height: 518px;}
+    .companyStyle{height: 465px;}
     .homeHead_adver_bot{margin: 0;transform:none;padding: 15px 0 9px 0;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 4px 16px 0px rgba(55,99,170,0.1);border: 1px solid #FFFFFF;justify-content: space-around;}
     .homeHead_adver_bottext{display: none;}
     .homeHead_adver_botimg {width: 32px;height: 32px;margin: 0 auto;margin-bottom: 10px;}
