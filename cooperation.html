@@ -518,7 +518,7 @@
 									<span v-for="items in item.tag.split(',')">{{items}}</span>
 								</div>
 							</div>
-							<div class="f12 cooperation_type_listrightSpan" v-if="item.tag&&!clientWidth>582">
+							<div class="f12 cooperation_type_listrightSpan" v-if="item.tag&&!clientWidth<582">
 								<span v-for="items in item.tag.split(',')">{{items}}</span>
 							</div>
 						</div>
@@ -583,7 +583,7 @@
 			<div class="cooperation_become wow animate__fadeInUp" frameborder="0" id="joinNow" >
 				<div class="maxwidth">
 					<div class="PingFangSCMedium colorbai tac home_title">马上成为企企通合作伙伴</div>
-					<div class="cooperation_becomeImg"><img :src="clientWidth>582?'https://51qqt.com/images/cooperation/cooperation8.png':'https://51qqt.com/images/cooperation/cooperation_phoneBg.png'" class="imgsize" alt="马上成为企企通合作伙伴"></div>
+					<div class="cooperation_becomeImg"><img :src="clientWidth>582?'https://51qqt.com/images/cooperation/cooperation8.png':'./images/cooperation/cooperation_phoneBg.png'" class="imgsize" alt="马上成为企企通合作伙伴"></div>
 					<div class="flex-column flex-around f20 homeHead_appleStytle colorbai cooperation_becomeText tac">
 						<div>1.提出申请</div>
 						<div>2.申请确认</div>
@@ -613,7 +613,7 @@
 							<div class="registe_form_text PingFangSCMedium">验证码：</div>
 							<div class="flex-column flex-middle cooperation_form_Vercodemagbot">
 								<div class="cooperation_form_Vercode"><input v-model="smsCode" type="number" class="imgsize" placeholder="请输入正确的验证码"></div>
-								<div class="colorblue PingFangSCMedium" style="cursor: pointer;" @click="getcode">获取验证码</div>
+								<div class="colorblue PingFangSCMedium cooperation_codeText" style="cursor: pointer;" @click="getcode">获取验证码</div>
 							</div>
 						</div>
 						<div class="f16 tac cooperation_form_submit homeHead_appleStytle colorbai" @click="submitfrom()">立即加入</div>
