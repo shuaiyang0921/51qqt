@@ -494,7 +494,7 @@
 			<div class="wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="homeHead_adver" >
 					<div class="homeHead_adverstyle flex-column" :style="{width: imgwidth}" v-show="BanerImg.length!=0">
-						<div @click="jumpLink(item.showButton,item.link)" :class="item.video?'homeHead_adverList_video':'homeHead_adverList'" v-for="(item,index) in BanerImg" :style="{backgroundImage: 'url('+ (clientWidth<=582?item.mobileImage.replace(/\s/g,'%20'):item.image.replace(/\s/g,'%20')) + ')',position:'relative','cursor':(item.showButton==1?'':'pointer')}" @touchstart="bannerTouchStart" @touchend="bannerTouchend">
+						<div @click="jumpLink(item.showButton,item.link)" :class="item.video?'homeHead_adverList_video':'homeHead_adverList'" v-for="(item,index) in BanerImg" :style="{backgroundImage: 'url('+ (clientWidth<=582?item.mobileImage:item.image) + ')',position:'relative','cursor':(item.showButton==1?'':'pointer')}" @touchstart="bannerTouchStart" @touchend="bannerTouchend">
 							<div class="maxwidth">
 								<template v-if="!item.video">
 									<div class="homeHead_adver1_title homeHead_appleStytle" v-if="item.title" v-html="item.title"></div>
@@ -522,37 +522,40 @@
 					</div>
 				</div>
 			</div>
-
-			<div class="PingFangSCMedium tac home_Enabtitle wow animate__fadeInUp " data-wow-duration="2s">双向赋能，构建企业供应链采购数字化协同平台</div>
-			<div class="home_Enabling wow animate__fadeInUp " data-wow-duration="2s">
-				<template  v-for="(item,index) in firstdemo">
-					<div >
-						<div class="flex-column flex-between" v-if="index==0">
-							<div class="home_Enabling_left">
-								<div class="f26 PingFangSCMedium">{{item.title}}</div>
-								<div class="f16 home_Enabling_Subhead" v-html="item.intro"></div>
-								<div class="f16 PingFangSCMedium home_Enabling_title">业务场景：</div>
-								<div class="f14 home_Enabling_text" v-for="itchenk in item.description.split(',')">{{itchenk}}</div>
-								<div class="f14 homeHead_appleStytle home_Enabling_but homeHead_registertil colorbai" @click="showregistermodal('',4,'')">注册体验</div>
+			<div class="wow animate__fadeInUp " data-wow-duration="2s">
+				<div class="PingFangSCMedium tac home_Enabtitle">双向赋能，构建企业供应链采购数字化协同平台</div>
+				<div class="home_Enabling">
+					<template  v-for="(item,index) in firstdemo">
+						<div >
+							<div class="flex-column flex-between" v-if="index==0">
+								<div class="home_Enabling_left">
+									<div class="f26 PingFangSCMedium">{{item.title}}</div>
+									<div class="f16 home_Enabling_Subhead" v-html="item.intro"></div>
+									<div class="f16 PingFangSCMedium home_Enabling_title">业务场景：</div>
+									<div class="f14 home_Enabling_text" v-for="itchenk in item.description.split(',')">{{itchenk}}</div>
+									<div class="f14 homeHead_appleStytle home_Enabling_but homeHead_registertil colorbai" @click="showregistermodal('',4,'')">注册体验</div>
+								</div>
+								<div class="home_Enabling_rightimg"><img :src="item.image" class="imgsize" :alt="item.title"></div>
 							</div>
-							<div class="home_Enabling_rightimg"><img :src="item.image" class="imgsize" :alt="item.title"></div>
-						</div>
-						<div class="flex-column flex-between" v-if="index==1">
-							<div class="home_Enabling_leftimg"><img :src="item.image" class="imgsize" :alt="item.title"></div>
-							<div class="home_Enabling_right">
-								<div class="f26 PingFangSCMedium">{{item.title}}</div>
-								<div class="f16 home_Enabling_Subhead" v-html="item.intro"></div>
-								<div class="f16 PingFangSCMedium home_Enabling_title">业务场景：</div>
-								<div class="f14 home_Enabling_text" v-for="itchenk in item.description.split(',')">{{itchenk}}</div>
-								<div class="f14 homeHead_appleStytle home_Enabling_but homeHead_registertil colorbai" @click="showregistermodal('',4,'')">注册体验</div>
+							<div class="flex-column flex-between" v-if="index==1">
+								<div class="home_Enabling_leftimg"><img :src="item.image" class="imgsize" :alt="item.title"></div>
+								<div class="home_Enabling_right">
+									<div class="f26 PingFangSCMedium">{{item.title}}</div>
+									<div class="f16 home_Enabling_Subhead" v-html="item.intro"></div>
+									<div class="f16 PingFangSCMedium home_Enabling_title">业务场景：</div>
+									<div class="f14 home_Enabling_text" v-for="itchenk in item.description.split(',')">{{itchenk}}</div>
+									<div class="f14 homeHead_appleStytle home_Enabling_but homeHead_registertil colorbai" @click="showregistermodal('',4,'')">注册体验</div>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="flex-column flex-between showEnablingimg" v-if="index==0" style="background-color: #F7F8FA;height: 130px;position: relative">
-						<img src="https://51qqt.com/img/home163.png" style="width: 65%;height: 140%;position: absolute;top: -22px;left: 24%">
-					</div>
-				</template>
+						<div class="flex-column flex-between showEnablingimg" v-if="index==0" style="background-color: #F7F8FA;height: 130px;position: relative">
+							<img src="https://51qqt.com/img/home163.png" style="width: 65%;height: 140%;position: absolute;top: -22px;left: 24%">
+						</div>
+					</template>
+				</div>
 			</div>
+			
+			
 			<div class="home_product wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth">
 					<div class="tac home_product_title PingFangSCMedium">产品矩阵：采购全链条业务闭环、开放</div>
@@ -683,7 +686,7 @@
 					</div>
 				</div>
 			</div>
-			<iframe src="https://51qqt.com/iframe/companys.html" class="companyStyle wow animate__fadeInUp" data-wow-duration="2s" frameborder="0" scrolling="no"></iframe>
+			<iframe src="./iframe/companys.html" class="companyStyle wow animate__fadeInUp" data-wow-duration="2s" frameborder="0" scrolling="no"></iframe>
 			<div class="home_endorsed wow animate__fadeInUp" data-wow-duration="2s">
 				<div class="maxwidth">
 					<div class="tac home_product_title PingFangSCMedium colorbai">行业认可</div>
@@ -1182,6 +1185,9 @@
 					that.BanerImg = res.result
 					that.BanerImg.forEach(item=>{
 						item.image=item.image.replace(/\s/g,'%20');
+						if(item.mobileImage){
+							item.mobileImage=item.mobileImage.replace(/\s/g,'%20');
+						}
 					})
 					if(that.BanerImg.length>1){
 						this.setBannerInterval();
@@ -1470,12 +1476,14 @@
 					return
 				}
 				let direction = '';
+				console.log(this.startX,endX,this.startY,endY)
 				//如果Y轴移动小于10,证明是上下滑动,所以不做处理
-				if (Math.abs(endX - this.startX) > 5 && Math.abs(endY - this.startY) < 20) {
+				if (Math.abs(endX - this.startX) > 10 && Math.abs(endY - this.startY) < 20) {
 					direction = endX - this.startX > 0 ? 'right' : 'left'
 				}else{
 					return
 				}
+				console.log(direction)
 				if(direction=='right'){
 					if(this.changenum==0){
 						return

@@ -87,13 +87,13 @@
 					.then(res => {
 						that.caseCompanylist = res.result
 						var iframes=$(window.parent.document).find("iframe")
+						console.log('iframes',iframes)
 						for (var i=0;i<iframes.length;i++){
 							if ($(iframes[i]).attr("src").includes("companys.html")){
 								var height=750
-								if(this.clientWidth<582){
-									height=465
-								}
-								if (that.showCase){
+								if(this.clientWidth<582||!that.showCase){
+									height=565
+								}else{
 									height=864
 								}
 								var iframeHeight=(height-(6-that.caseCompanylist.length)*92)+"px;"

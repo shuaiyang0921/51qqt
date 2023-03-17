@@ -531,7 +531,7 @@ div::-webkit-scrollbar{
     .home_product_saas:hover, .home_product_saas_first:hover{transform:none}
 }
 @media screen and (max-width:580px) {
-    .home_endorsed_botLists{bottom: -170px;}
+    .home_endorsed_botLists{bottom: -190px;}
     .home_information{padding: 200px  10px 0px 10px;}
     /* .home_endorsed {padding: 60px 30px;} */
     .home_Case_inforight{padding: 30px 20px 20px 20px;}
