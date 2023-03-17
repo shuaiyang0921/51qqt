@@ -460,7 +460,7 @@ div::-webkit-scrollbar{
     .homeHead_adver_bottext{display: none;}
     .homeHead_adver_botimg {width: 32px;height: 32px;margin: 0 auto;margin-bottom: 10px;}
     .homeHead_adver_botstyle{display: block;width: auto;}
-    .homeHead_adver_botright{width: 56px;height: 20px;line-height: 20px;margin-left:0;}
+    .homeHead_adver_botright{width: 60px;height: 20px;line-height: 20px;margin-left:0;}
     .homeHead_adver_botright .f16{font-size: 14px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
     .home_title{font-size: 20px;line-height: 28px;margin: 0px 0 20px 0;}
     .home_Enabtitle{font-size: 20px;line-height: 28px;margin: 30px 0 20px 0;padding: 0 15px;}
@@ -528,6 +528,7 @@ div::-webkit-scrollbar{
     .home_competitive_list_about_us{width: 100%;}
     .Vidio_cancel{top: -42px;right: 10px;}
     .Vidio_padd{margin-top: 250px;padding: 0 16px;}
+    .home_product_saas:hover, .home_product_saas_first:hover{transform:none}
 }
 @media screen and (max-width:580px) {
     .home_endorsed_botLists{bottom: -170px;}
