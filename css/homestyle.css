@@ -427,7 +427,7 @@ div::-webkit-scrollbar{
     .homeHead_adver1_text{margin: 20px 0 22px 0;width: 100%;text-align: center;}
     /* .f14{font-size: 12px;} */
     .f20,.f22,.f24,.f26{font-size: 18px;}
-    .homeHead_adver{height: 430px;}
+    .homeHead_adver{height: 430px;margin-top: 69px;}
     .home_Enabling{margin: 0 15px 30px 15px;padding: 16px 16px 30px 16px;border-radius: 8px;}
     .home_Enabling_Subhead{margin:8px 0 16px 0;}
     .home_Enabling_title{margin-bottom: 8px;font-size: 14px;}
