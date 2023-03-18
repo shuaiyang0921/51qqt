@@ -362,6 +362,7 @@ div::-webkit-scrollbar{
 .bothei{height: 60px;display: none;}
 .caseTabSty{width: 100%;height: 695px;}
 .phoneshow{display: none;}
+.anileftIn{animation: leftin 1s;}
 #newBridge .newicon-left-center, #newBridge .newicon-right-center{width: 80px!important;box-shadow: 4px 8px 20px 0px rgba(55,99,170,0.1);}
 @media screen and (max-width:1170px) {
     .home_Enabling_rightimg,.home_Enabling_leftimg,.home_Caseimg{display: none;}
@@ -454,7 +455,7 @@ div::-webkit-scrollbar{
     .home_Case_companys{margin-bottom: 30px;padding: 0;}
     .home_Enabling_left{margin: 0;width:100%;padding-bottom: 30px;border-bottom: 1px solid #EBEBEB;}
     .home_Enabling_right{margin: 16px 0px 0 0px;width:100%;}
-    .achieveCuststy{height: 927px;}
+    .achieveCuststy{height: 567px;}
     .companyStyle{height: 465px;}
     .homeHead_adver_bot{margin: 0;transform:none;padding: 15px 0 9px 0;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 4px 16px 0px rgba(55,99,170,0.1);border: 1px solid #FFFFFF;justify-content: space-around;}
     .homeHead_adver_bottext{display: none;}

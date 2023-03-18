@@ -91,9 +91,9 @@
 						for (var i=0;i<iframes.length;i++){
 							if ($(iframes[i]).attr("src").includes("companys.html")){
 								var height=750
-								if(this.clientWidth<582||!that.showCase){
-									height=565
-								}else{
+								if(this.clientWidth<=582){
+									height=557
+								}else if(that.showCase&&this.clientWidth>582){
 									height=864
 								}
 								var iframeHeight=(height-(6-that.caseCompanylist.length)*92)+"px;"
