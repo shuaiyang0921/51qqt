@@ -47,7 +47,8 @@
     .joinUs_website{font-size: 18px;height: 25px;line-height: 25px;width: 158px;}
     .joinUs_postright_img{width: 14px;height: 9px;}
     .joinUs_postright_img img{display: block;}
-    .joinUs_post_list{padding: 16px;width: 100%;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 4px 16px 0px rgba(55,99,170,0.1);border: 2px solid #FFFFFF;margin: 0;}
+    .joinUs_post_list{padding: 16px;width: 100%;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 4px 16px 0px rgba(55,99,170,0.1);border: 2px solid #FFFFFF;margin: 0;margin-bottom: 16px;}
+    .joinUs_post_list:last-of-type{margin-bottom: 0px;}
     .joinUs_post_lists{width: 100%;}
     .joinUs_post_listTitle{font-size: 16px;height: 22px;line-height: 22px;margin-bottom: 10px;}
     .joinUs_post_listlabel{font-size: 12px;height: 16px;line-height: 16px;padding: 0px 4px;margin-left: 12px;}
