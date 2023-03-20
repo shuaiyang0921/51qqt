@@ -518,7 +518,7 @@
 									<span v-for="items in item.tag.split(',')">{{items}}</span>
 								</div>
 							</div>
-							<div class="f12 cooperation_type_listrightSpan" v-if="item.tag&&!clientWidth<582">
+							<div class="f12 cooperation_type_listrightSpan" v-if="item.tag&&clientWidth<=582">
 								<span v-for="items in item.tag.split(',')">{{items}}</span>
 							</div>
 						</div>
