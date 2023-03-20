@@ -807,7 +807,7 @@
 				}
 				let direction = '';
 				//如果Y轴移动小于10,证明是上下滑动,所以不做处理
-				if (Math.abs(endX - this.startX) > 10 && Math.abs(endY - this.startY) < 20) {
+				if (Math.abs(endX - this.startX) > 10 && Math.abs(endY - this.startY) < 100) {
 					direction = endX - this.startX > 0 ? 'right' : 'left'
 				}else{
 					return

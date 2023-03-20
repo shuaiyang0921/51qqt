@@ -490,7 +490,7 @@ div::-webkit-scrollbar{
     .home_product_saasTitle{font-size: 16px;margin: 16px 0 8px 0;}
     .home_product_saasimg {margin: 16px auto;}
     .home_product_saas{height: 160px;}
-    .home_endorsed_bottext{font-size: 12px;margin-bottom: 20px;}
+    .home_endorsed_bottext{font-size: 12px;margin-bottom: 20px;min-width: 96px;max-height: 45px;overflow: hidden;text-overflow: ellipsis;}
     .home_Solution_right{display: none;}
     .home_Solution_center{max-height: none;padding:30px 15px;backdrop-filter:initial;}
     .home_Solution{padding: 30px 15px;background: #F7F8FA;}
