@@ -33,7 +33,7 @@
 /* .manufacturing_case{background: linear-gradient(180deg, rgba(103,154,255,0.06) 0%, rgba(255,255,255,0.06) 100%);} */
 .manufacturing_case_navs{width: 80%;}
 .manufacturing_case_navs>div{width: 25%;border-right: 1px solid #EBEBEB;box-sizing: border-box;border-top: 3px solid #FFFFFF;cursor: pointer;}
-.manufacturing_case_nav{border-top: 3px solid #005CEF;}
+.manufacturing_case_nav{border-top: 3px solid #005CEF!important;}
 .manufacturing_case_navsImg{width: 180px;height: 60px;padding: 15px 30px;}
 .manufacturing_case_but{width: 20%;padding: 22px 0 ;}
 /* .manufacturing_lists>div{display: none;}
@@ -154,7 +154,7 @@
 }
 @media screen and (max-width:580px) {
     .manufacturing_bg{padding: 30px 16px;}
-    .manufacturing_case_navs{width: 100%;}
+    .manufacturing_case_navs{width: 100%;position: absolute;flex-wrap: nowrap;overflow-x: auto;}
     .manufacturing_case_navs>div{width: 100%;justify-content: right;}
     .manufacturing_case_nav{justify-content: flex-start!important;}
     .manufacturing_case_but{display: none;}
