@@ -56,7 +56,7 @@
 							</div>
 						</div>
 						<div class="homeHead_tabs flex-column flex-center" >
-							<div v-for="(item,index) in achieveCustlist" :class="index==0?'homeHead_tab':''" @click="changetab(index)"></div>
+							<div v-for="(item,index) in achieveCustlist" :class="index==navsindex?'homeHead_tab':''" @click="changetab(index)"></div>
 						</div>
 					</div>
 					<div @touchstart="handelTouchStart" @touchend="handelTouchend" v-else >
