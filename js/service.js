@@ -35,7 +35,7 @@ function getHost(hostAddressSign) {
 	if(window.location.href.indexOf('file:')>-1){
 		switch(hostAddressSign){
 			case 'els': {
-				return axios.defaults.baseURL = 'http://localhost:8080/els';
+				return axios.defaults.baseURL = 'https://51qqt.com/els';
 			}
 		}
 	}

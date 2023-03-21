@@ -152,7 +152,7 @@
 .home_information_text div:first-of-type{padding-top: 0px;}
 .home_information_text div:hover{color: #005CEF;cursor: pointer;}
 .home_partners{padding: 0px 120px;background: #F7F8FA;background-repeat: no-repeat;background-size: cover;}
-.home_partners_bgsty{background: url(https://51qqt.com/img/home112.png) no-repeat center center;background-size: 100% 100%;padding: 24px 0;}
+.home_partners_bgsty{padding: 24px 0;}
 .home_index_partners_bgsty{background: url(https://51qqt.com/img/home164.png) no-repeat center center;background-size: 100% 100%;padding: 26px 0;}
 .home_partners_img{margin-bottom: 440px;margin-top: 26px}
 .home_register{padding: 70px 50px;background: url(https://51qqt.com/img/home113.png) no-repeat center center;background-size: cover;font-size: 28px;}
