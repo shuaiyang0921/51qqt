@@ -263,7 +263,7 @@
                             <div class="iconsize"><img src="https://51qqt.com/img/home18.png" class="imgsize" alt="电话拨号"></div>
                             <div class="homeHead_phone homeHead_appleStytle f18">400-835-1881</div>
 						</a>
-                        <a class="f16 homeHead_logintil" href="https://q3srm.51qqt.com/">登录</a>
+                        <a class="f16 homeHead_logintil" :href="baseInfo.fbk1">登录</a>
                         <div class="f14 homeHead_registertil" @click="showregistermodal('',1,'')">注册体验</div>
                     </div>
                 </div>
@@ -635,88 +635,84 @@
 						<div class="footer_topstyle xian_footer flex-column flex-between">
 							<div class="colorbai footer_leftstyle">
 								<div class="footer_logosize"><img src="https://51qqt.com/img/qqtbot.png" class="imgsize" alt="企企通"></div>
-								<a class="flex-column flex-middle" href="tel:400-835-1881"><span class="f14">服务热线：</span><span class="f18 PingFangSCMedium">400-835-1881</span></a>
-								<div class="footer_textpadd"><span class="f14">市场合作：</span><span class="f18 PingFangSCMedium">marketing@51qqt.com</span></div>
+								<a class="flex-column flex-middle" href="tel:400-835-1881"><span class="f14">服务热线：</span><span class="f18 PingFangSCMedium" v-html="baseInfo.fbk2"></span></a>
+								<div class="footer_textpadd"><span class="f14">市场合作：</span><span class="f18 PingFangSCMedium" v-html="baseInfo.email"></span></div>
 								<div class="flex-column tac f14">
 									<div class="footer_contactimgpadd">
-										<div class="footer_contactimg"><img src="https://51qqt.com/img/home15.png" class="imgsize" alt="企企通"></div>
-										<div class="tuomaogz">企企通官方公众号</div>
+										<div class="footer_contactimg"><img v-if="baseInfo.publicAccountImage" :src="baseInfo.publicAccountImage" class="imgsize" alt="企企通"></div>
+										<div class="tuomaogz" v-html="baseInfo.publicAccountText"></div>
 									</div>
 									<div>
-										<div class="footer_contactimg"><img src="https://51qqt.com/img/home62.png" class="imgsize" alt="企企通"></div>
-										<div class="tuomaogz">售前咨询</div>
+										<div class="footer_contactimg"><img v-if="baseInfo.consultationImage" :src="baseInfo.consultationImage" class="imgsize" alt="企企通"></div>
+										<div class="tuomaogz" v-html="baseInfo.consultationText"></div>
 									</div>
 								</div>
 							</div>
-							<div class="f14 flex-column flex-between footer_rightstyle">
+							<div class="f14 flex-column flex-between footer_rightstyle" v-if="buttonNav && buttonNav.length>0">
 								<div>
-									<div class="homeHead_appleStytle colorbai">产品</div>
+									<div class="homeHead_appleStytle colorbai" v-text="buttonNav[0].name"></div>
 									<div class="flex-column footer_linkstyle">
 										<div class="footer_linkmag">
-											<div class="colorbai">SaaS云</div>
-											<a href="https://srm.51qqt.com/index.html">采购云</a>
-											<a href="https://mall.51qqt.com/mall.html">商城云</a>
-											<a href="https://scf.51qqt.com/scf.html">赋能云</a>
-											<a href="https://mkt.51qqt.com/mkt.html?navNum=0">营销云</a>
-											<a href="https://51qqt.com/purchase/darenTong.html">达人通</a>
+											<div class="colorbai" v-text="buttonNav[0].childNavs[0].name"></div>
+											<template v-for="(saasItem,index) in buttonNav[0].childNavs[0].childNavs">
+												<a v-if="saasItem.link" :href="saasItem.link">{{saasItem.name}}</a>
+												<a v-else>{{saasItem.name}}</a>
+											</template>
 										</div>
 										<div class="">
-											<div class="colorbai">PaaS平台</div>
-											<a href="https://51qqt.com/paas/apaas.html?navNum=0">APaaS应用开发平台</a>
-											<a href="https://51qqt.com/paas/apaas.html?navNum=1">IPaaS集成开发平台</a>
-											<a href="https://51qqt.com/paas/apaas.html?navNum=2">DPaaS数据中台</a>
+											<div class="colorbai" v-text="buttonNav[0].childNavs[1].name"></div>
+
+											<template v-for="(saasItem,index) in buttonNav[0].childNavs[1].childNavs">
+												<a v-if="saasItem.link" :href="saasItem.link">{{saasItem.name}}</a>
+												<a v-else>{{saasItem.name}}</a>
+											</template>
 										</div>
 									</div>
 								</div>
 								<div>
-									<div class="homeHead_appleStytle colorbai">解决方案</div>
+									<div class="homeHead_appleStytle colorbai" v-text="buttonNav[1].name"></div>
 									<div class="flex-column footer_linkstyle">
 										<div class="footer_linkmag">
-											<div class="colorbai">行业解决方案</div>
-											<a href="https://51qqt.com/solutions/manufacturing.html">高端制造</a>
-											<a href="https://51qqt.com/solutions/construction.html">地产建筑</a>
-											<a href="https://51qqt.com/solutions/retail.html">零售消费</a>
-											<a href="https://51qqt.com/solutions/food.html">食品餐饮</a>
-											<a href="https://51qqt.com/solutions/finance.html">金融保险</a>
-											<a href="https://51qqt.com/solutions/pharmacy.html">生物制药</a>
-											<a href="https://51qqt.com/solutions/energy.html">能源化工</a>
-											<a href="https://51qqt.com/solutions/service.html">现代服务</a>
+											<div class="colorbai" v-text="buttonNav[1].childNavs[0].name"></div>
+
+											<template v-for="(solutionItem,index) in buttonNav[1].childNavs[0].childNavs">
+												<a v-if="solutionItem.link" :href="solutionItem.link">{{solutionItem.name}}</a>
+												<a v-else>{{solutionItem.name}}</a>
+											</template>
 										</div>
 										<div class="">
-											<div class="colorbai">领域解决方案</div>
-											<a class="cursorDefault">生产</a>
-											<a class="cursorDefault">大宗物资</a>
-											<a class="cursorDefault">商贸</a>
-											<a class="cursorDefault">项目</a>
-											<a class="cursorDefault">服务</a>
-											<a class="cursorDefault">行政办公</a>
+											<div class="colorbai" v-text="buttonNav[1].childNavs[1].name"></div>
+
+											<template v-for="(solutionItem,index) in buttonNav[1].childNavs[1].childNavs">
+												<a v-if="solutionItem.link" :href="solutionItem.link">{{solutionItem.name}}</a>
+												<a v-else>{{solutionItem.name}}</a>
+											</template>
 										</div>
 									</div>
 								</div>
 								<div>
-									<div class="homeHead_appleStytle colorbai">客户案例</div>
-									<a class="footer_linkstyle" href="https://51qqt.com/case-study.html" class="https://51qqt.com/footer_linkstyle">客户案例</a>
+									<div class="homeHead_appleStytle colorbai" v-text="buttonNav[2].name"></div>
+									<a class="footer_linkstyle" :href="buttonNav[2].childNavs[0].link" v-text="buttonNav[2].childNavs[0].name">客户案例</a>
 								</div>
 								<div>
-									<div class="homeHead_appleStytle colorbai">资讯中心</div>
+									<div class="homeHead_appleStytle colorbai" v-text="buttonNav[3].name"></div>
 									<div class="flex-column footer_linkstyle">
 										<div class="footer_linkmag">
-											<a href="https://51qqt.com/news/1.html" class="footer_firstlinkmag">企业资讯</a>
-											<a href="https://51qqt.com/news/events.html">市场活动</a>
-											<a href="https://51qqt.com/news/4.html">干货分享</a>
-											<a href="https://51qqt.com/news/reports.html">分析报告</a>
-											<a href="https://51qqt.com/news/videos.html">微视频</a>
+											<template v-for="(infoItem,index) in buttonNav[3].childNavs">
+												<a :class="index==0?'footer_firstlinkmag':''" v-if="infoItem.link" :href="infoItem.link">{{infoItem.name}}</a>
+												<a v-else>{{infoItem.name}}</a>
+											</template>
 										</div>
 									</div>
 								</div>
 								<div>
-									<div class="homeHead_appleStytle colorbai">关于企企通</div>
+									<div class="homeHead_appleStytle colorbai" v-text="buttonNav[4].name"></div>
 									<div class="flex-column footer_linkstyle">
 										<div class="footer_linkmag">
-											<a href="https://51qqt.com/about.html" class="footer_firstlinkmag">公司介绍</a>
-											<a href="https://51qqt.com/honor.html">荣誉资质</a>
-											<a href="https://51qqt.com/join-us.html">加入我们</a>
-											<a href="https://51qqt.com/contact-us.html">联系我们</a>
+											<template v-for="(aboutItem,index) in buttonNav[4].childNavs">
+												<a :class="index==0?'footer_firstlinkmag':''" v-if="aboutItem.link" :href="aboutItem.link">{{aboutItem.name}}</a>
+												<a v-else>{{aboutItem.name}}</a>
+											</template>
 										</div>
 									</div>
 								</div>
@@ -788,6 +784,7 @@
 			return {
 				cooperationInfo:[],
 				suppliernumData:[],
+				cooperationImg:[],
 				partnersImg:[],
 				showmodel:false,
 				Listindex:0,
@@ -796,7 +793,9 @@
 				telephone:'',
 				blogrollList:[],
 				smsCode:'',
-				clientWidth:0
+				clientWidth:0,
+				buttonNav:[],
+				baseInfo:{},
 			}
 		},
 		watch: {
@@ -809,8 +808,25 @@
 		mounted(){
 
 			getSeo(5)
+			this.getBottomNav()
 		},
 		methods: {
+			getBottomNav(){
+				var _getBottomNav = p => get('/websiteNav/noToken/queryByType', p);
+				_getBottomNav({
+					type:2,
+				})
+						.then(res => {
+							console.log(res)
+							if (res.code==200){
+								this.buttonNav=res.result;
+							}
+
+						})
+						.catch(err => {
+							console.log(err,'_getBottomNav获取数据异常');
+						})
+			},
 			changenavicon(e){
 				if(e.currentTarget.style.transform=='translateY(4px) rotate(180deg)'){
 					e.currentTarget.parentElement.nextElementSibling.style.display = 'none'
@@ -834,17 +850,13 @@
 				_getData().then(res => {
 					that.cooperationInfo = res.result['1']
 					that.suppliernumData = res.result['2']
+					that.cooperationImg=res.result['3']
+					if (that.cooperationImg){
+						that.partnersImg = that.cooperationImg[0].image;
+					}
 				}).catch(err => {
 					console.log(err,'_getData获取数据异常');
 				})
-				var _getData = p => get('/general/websiteGeneral/noToken/queryIndexData', p);
-				_getData({})
-						.then(res => {
-							that.partnersImg = res.result['首页-合作伙伴'];
-						})
-						.catch(err => {
-							console.log(err,'_getData获取数据异常');
-						})
 			},
 			showregistermodal(){
 				this.showmodel = true
@@ -923,4 +935,4 @@
 	})
     </script>
 </html>
-<script src="https://51qqt.com/js/navigation.js"></script>
+<script src="./js/navigation.js"></script>
