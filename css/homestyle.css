@@ -399,7 +399,7 @@ div::-webkit-scrollbar{
     .home_Solution_rightimg{width: 90px;height: 90px;margin: 15px;}
     .home_endorsed_list{width: 50%;}
     .home_register{padding: 35px 16px;}
-    .home_register_but{margin-left: 55px;}
+    .home_register_but{padding: 5px 24px!important;margin: 20px auto;margin-bottom: 0;}
     .home_register .PingFangSCMedium{width: 100%;}
     .home_register_text{width: 100%;text-align: center;}
     .home_register .tar{text-align: center;}
@@ -450,7 +450,6 @@ div::-webkit-scrollbar{
     .f18{font-size: 16px;}
     .home_register{ font-size: 18px;padding: 30px 20px;}
     .home_register_text{margin: 0 0px 8px 0;}
-    .home_register_but{padding: 5px 24px!important;margin: 20px auto;margin-bottom: 0;}
     .companyshei{height: 674px;}
     .home_Case_companys{margin-bottom: 30px;padding: 0;}
     .home_Enabling_left{margin: 0;width:100%;padding-bottom: 30px;border-bottom: 1px solid #EBEBEB;}
