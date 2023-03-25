@@ -128,8 +128,9 @@
 .home_endorsed_title{font-size: 44px;}
 .home_endorsed_lists{margin-bottom: 105px;}
 .home_endorsed_list{width: 300px;}
-.home_endorsed_botLists{position: absolute;width: 100%;bottom: -90px;left: 0;}
+.home_endorsed_botLists{position: absolute;width: 100%;bottom: -105px;left: 0;}
 .home_endorsed_botStyle{background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;border: 2px solid #FFFFFF;padding: 30px 19px;}
+.home_endorsed_botStyle:hover{box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.2);}
 .home_endorsed_botList{width: 112px;}
 .home_endorsed_botImg{width: 80px;height: 80px;border-radius: 50%;background: #FFFFFF;border: 1px solid #EBEBEB;margin: 0 auto;margin-bottom: 10px;}
 .home_endorsed_ying{position: absolute;width: 58px;height: 22px;bottom: 0;left: 65px;}

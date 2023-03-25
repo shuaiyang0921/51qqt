@@ -368,9 +368,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="heiheader"></div>
+			<div  id="FilterList_id" class="heiheader"></div>
 			<div class="caseStudyInfo_bg ">
-				<div id="FilterList_id" class="phone_navs_relative">
+				<div class="phone_navs_relative">
 					<div class="flex-column f16 flex-middle bgbai news_navs maxwidth">
 						<div v-for="item in industryList" :class="typeIndex==item.type?'news_navschenck':''" @mouseenter="changetype(item.type)" >{{item.name}}</div>
 					</div>
@@ -392,7 +392,7 @@
                             暂无数据
                         </div>
                         <div class="caseStudy_FilterPages flex-column flex-middle flex-center" v-if="InfoData.length>0">
-                            <div class="Pagesprev" v-if="totalPage>5&&currentPage!=1"><img src="https://51qqt.com/caseStudy/caseStudy4.png" class="imgsize" alt="上一页" @click="prevPage"></div>
+                            <div class="Pagesprev" v-if="totalPage>5&&currentPage!=1"><img src="https://51qqt.com/images/caseStudy/caseStudy4.png" class="imgsize" alt="上一页" @click="prevPage"></div>
                             <a href="#FilterList_id" class="f16 flex-column flex-middle caseStudy_FilterPages_nums tac">
                                 <div v-if="showPage(item)" v-for="item in Pagenun" :class="currentPage==item?'caseStudy_FilterPages_num':''" @click="changePage(item)">{{item}}</div>
 							</a>
@@ -450,7 +450,7 @@
 						暂无数据
 					</div>
 					<div class="caseStudy_FilterPages flex-column flex-middle flex-center videoPageWidth" v-if="InfoData.length>0">
-						<div class="Pagesprev" v-if="totalPage>5&&currentPage!=1"><img src="https://51qqt.com/caseStudy/caseStudy4.png" class="imgsize" alt="上一页" @click="prevPage"></div>
+						<div class="Pagesprev" v-if="totalPage>5&&currentPage!=1"><img src="https://51qqt.com/images/caseStudy/caseStudy4.png" class="imgsize" alt="上一页" @click="prevPage"></div>
 						<div class="f16 flex-column flex-middle caseStudy_FilterPages_nums tac">
 							<div v-if="showPage(item)" v-for="item in Pagenun" :class="currentPage==item?'caseStudy_FilterPages_num':''" @click="changePage(item)">{{item}}</div>
 						</div>

@@ -383,7 +383,7 @@
 					   </div>
 					   <div class="f14 homeHead_registertil tac homeHead_appleStytle product_banner_register" @click="showregistermodal(1)">注册体验</div>
 				   </div>
-				   <div class="qilian_topImg"><img v-if="BannerImg[0]" :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize"></div>
+				   <div class="qilian_topImg" v-if="BannerImg[0].rightImage"><img :src="BannerImg[0].rightImage" class="imgsize"></div>
 			   </div>
 		   </div>
 		   <div class="padBg phonehide wow animate__fadeInUp" data-wow-duration="1s">

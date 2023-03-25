@@ -385,7 +385,7 @@
 					<div class="paas_topImg"><img v-if="BannerImg[0]" :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize" alt="采购云"></div>
 				</div>
 			</div>
-			<div class="padBg">
+			<div v-if="purchaseMallData[0]" class="padBg">
 				<div class="PingFangSCMedium tac home_title">满足企业全品类采购需求，覆盖各类应用场景</div>
 				<div class="flex-column flex-center" style="width: 100%;">
 					<div class="mall_navs_magright mall_navs">
@@ -461,7 +461,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="padBg bggray">
+			<div v-if="purchasenavListData.length" class="padBg bggray">
 				<div class="maxwidth">
 					<div class="PingFangSCMedium tac home_title">打通供应链采购各个环节，形成业务、系统、人到物多维度集成协同</div>
 					<div v-for="(item,index) in purchasenavListData">
@@ -486,7 +486,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="padBg phonehide wow animate__fadeInUp" data-wow-duration="1s">
+			<div v-if="purchaseImgData[0]" class="padBg phonehide wow animate__fadeInUp" data-wow-duration="1s">
 				<div class="maxwidth">
 					<div class="PingFangSCMedium tac home_title">{{purchaseImgData[0]?purchaseImgData[0].bigTitle:''}}</div>
 					<div style="width: 100%;"><img :src="purchaseImgData[0]?purchaseImgData[0].image:''" class="imgsize" :alt="purchaseImgData[0]?purchaseImgData[0].bigTitle:''"></div>
