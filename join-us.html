@@ -497,11 +497,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="joinUs_banner tac colorbai wow animate__fadeInUp" data-wow-duration="2s" :style="{backgroundImage: 'url('+BannerImg.image+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover',height: '500px',overflow: 'hidden'}">
+			<div class="joinUs_banner tac colorbai wow animate__fadeInUp" data-wow-duration="1s" :style="{backgroundImage: 'url('+BannerImg.image+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover',height: '500px',overflow: 'hidden'}">
 				<div class="joinUs_banner_text" style="" v-html="BannerImg.title"></div>
 				<div v-if="BannerImg.showButton" class="f14 homeHead_registertil tac joinUs_banner_but" @click="turnJoinUs(BannerImg.link)">加入我们</div>
 			</div>
-			<div class="joinUs_imglists phonehide wow animate__fadeInUp" data-wow-duration="2s">
+			<div class="joinUs_imglists phonehide wow animate__fadeInUp" data-wow-duration="1s">
 				<div class="tac joinUs_title PingFangSCMedium">加入企企通</div>
 				<div class="joinUs_imglist1 flex-column flex-center">
 					<div class="joinUs_img1"><img v-if="aboutImgData[0]" :src="aboutImgData[0]?aboutImgData[0].image:''" class="imgsize"></div>
@@ -514,7 +514,7 @@
 				</div>
 			</div>
 			
-			<div class="joinUs_post wow animate__fadeInUp" data-wow-duration="2s" v-if="clientWidth>582">
+			<div class="joinUs_post wow animate__fadeInUp" data-wow-duration="1s" v-if="clientWidth>582">
 				<div class="maxwidth">
 					<div class="tac joinUs_title PingFangSCMedium">热招岗位</div>
 					<div v-if="indexList==navIndex" ref="joinUs_post_lists" class="joinUs_post_lists flex-column flex-between " v-for="(itemList,indexList) in supplierListData">
@@ -550,7 +550,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="joinUs_post wow animate__fadeInUp" data-wow-duration="2s" v-else>
+			<div class="joinUs_post wow animate__fadeInUp" data-wow-duration="1s" v-else>
 				<div class="maxwidth">
 					<div class="tac joinUs_title PingFangSCMedium">热招岗位</div>
 					<div v-if="indexList==navIndex" ref="joinUs_post_lists" class="joinUs_post_lists flex-column flex-between " v-for="(itemList,indexList) in supplierListData">
@@ -583,11 +583,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="padBg hrBg wow animate__fadeInUp" data-wow-duration="2s" >
+			<div class="padBg hrBg wow animate__fadeInUp" data-wow-duration="1s" >
 				<div class="PingFangSCMedium joinUs_job tac">简历投递至人力资源部</div>
 				<div class="flex-column flex-center"><div class="PingFangSCMedium joinUs_website tac colororigin">hiring@51qqt.com</div></div>
 			</div>
-			<div class="wow animate__fadeInUp" data-wow-duration="2s">
+			<div class="wow animate__fadeInUp" data-wow-duration="1s">
 				<div class="home_register colorbai" >
 					<div class="maxwidth flex-column flex-between flex-middle">
 						<div class="PingFangSCMedium">

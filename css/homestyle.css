@@ -128,12 +128,12 @@
 .home_endorsed_title{font-size: 44px;}
 .home_endorsed_lists{margin-bottom: 105px;}
 .home_endorsed_list{width: 300px;}
-.home_endorsed_botLists{position: absolute;width: 100%;bottom: -66px;left: 0;}
+.home_endorsed_botLists{position: absolute;width: 100%;bottom: -90px;left: 0;}
 .home_endorsed_botStyle{background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;border: 2px solid #FFFFFF;padding: 30px 19px;}
 .home_endorsed_botList{width: 112px;}
 .home_endorsed_botImg{width: 80px;height: 80px;border-radius: 50%;background: #FFFFFF;border: 1px solid #EBEBEB;margin: 0 auto;margin-bottom: 10px;}
 .home_endorsed_ying{position: absolute;width: 58px;height: 22px;bottom: 0;left: 65px;}
-.home_endorsed_bottext{color: #555555;}
+.home_endorsed_bottext{color: #555555;height: 72px;overflow: hidden;text-overflow: ellipsis;}
 .home_information{padding: 126px 20px 60px 20px;background: url(https://51qqt.com/img/home54.png) no-repeat center center;background-size: cover;}
 .home_information_list{padding: 32px 24px 22px 24px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);border-radius: 4px;border: 2px solid #FFFFFF;margin: 12px;transition: transform 0.3s}
 .home_information_list:hover{
@@ -399,7 +399,7 @@ div::-webkit-scrollbar{
     .home_Solution_rightimg{width: 90px;height: 90px;margin: 15px;}
     .home_endorsed_list{width: 50%;}
     .home_register{padding: 35px 16px;}
-    .home_register_but{margin-left: 55px;}
+    .home_register_but{padding: 5px 24px!important;margin: 20px auto;margin-bottom: 0;}
     .home_register .PingFangSCMedium{width: 100%;}
     .home_register_text{width: 100%;text-align: center;}
     .home_register .tar{text-align: center;}
@@ -450,7 +450,6 @@ div::-webkit-scrollbar{
     .f18{font-size: 16px;}
     .home_register{ font-size: 18px;padding: 30px 20px;}
     .home_register_text{margin: 0 0px 8px 0;}
-    .home_register_but{padding: 5px 24px!important;margin: 20px auto;margin-bottom: 0;}
     .companyshei{height: 674px;}
     .home_Case_companys{margin-bottom: 30px;padding: 0;}
     .home_Enabling_left{margin: 0;width:100%;padding-bottom: 30px;border-bottom: 1px solid #EBEBEB;}
