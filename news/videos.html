@@ -450,11 +450,11 @@
 						暂无数据
 					</div>
 					<div class="caseStudy_FilterPages flex-column flex-middle flex-center videoPageWidth" v-if="InfoData.length>0">
-						<div class="Pagesprev" v-if="totalPage>5&&currentPage!=1"><img src="https://51qqt.com/images/caseStudy/caseStudy4.png" class="imgsize" alt="上一页" @click="prevPage"></div>
-						<div class="f16 flex-column flex-middle caseStudy_FilterPages_nums tac">
+						<a href="#FilterList_id" class="Pagesprev" v-if="totalPage>5&&currentPage!=1"><img src="https://51qqt.com/images/caseStudy/caseStudy4.png" class="imgsize" alt="上一页" @click="prevPage"></a>
+						<a href="#FilterList_id" class="f16 flex-column flex-middle caseStudy_FilterPages_nums tac">
 							<div v-if="showPage(item)" v-for="item in Pagenun" :class="currentPage==item?'caseStudy_FilterPages_num':''" @click="changePage(item)">{{item}}</div>
-						</div>
-						<div class="Pagesnext" v-if="totalPage>5&&currentPage!=totalPage"><img src="https://51qqt.com/images/caseStudy/caseStudy3.png" class="imgsize" alt="下一页" @click="nextPage"></div>
+						</a>
+						<a href="#FilterList_id" class="Pagesnext" v-if="totalPage>5&&currentPage!=totalPage"><img src="https://51qqt.com/images/caseStudy/caseStudy3.png" class="imgsize" alt="下一页" @click="nextPage"></a>
 					</div>
                 </div>
 			</div>
