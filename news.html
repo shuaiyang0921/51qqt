@@ -498,8 +498,8 @@
 				</div>
 			</div>
 			<div class="heiheader"></div>
-			<div class="caseStudyInfo_bg ">
-				<div id="FilterList_id" class="flex-column f16 flex-middle bgbai news_navs maxwidth">
+			<div id="FilterList_id"  class="caseStudyInfo_bg ">
+				<div class="flex-column f16 flex-middle bgbai news_navs maxwidth">
                     <div v-for="item in industryList" :class="typeIndex==item.type?'news_navschenck':''" @mouseenter="changetype(item.type)" >{{item.name}}</div>
 				</div>
 				<div class="flex-column flex-top maxwidth" v-if="typeIndex!='videos.html'">
