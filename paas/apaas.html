@@ -386,14 +386,14 @@
 						<div class="paas_topImg"><img v-if="BannerImg[0]" :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize" alt="PaaS平台"></div>
 					</div>
 				</div>
-				<div class="PingFangSCMedium tac home_title maxwidth mkt_title">PaaS平台，提供企业级采购业务应用和数据服务</div>
-				<div class="phone_scf_navs">
+				<div v-if="BannerImg[0]" class="PingFangSCMedium tac home_title maxwidth mkt_title">PaaS平台，提供企业级采购业务应用和数据服务</div>
+				<div v-if="passData.length" class="phone_scf_navs">
 					<div class="f20 flex-column flex-middle flex-around paas_navs color222 maxwidth phone_pass_navs">
 						<div v-for="(item,index) in passData" :class="navNum==index?'paas_nav homeHead_appleStytle':''" @mouseenter="changenav(index)"><span class="paas_paas_topImg"><img :src="item.icon" class="imgsize" :alt="item.childName"></span>{{item.title}}</div>
 					</div>
 				</div>
 			</div>
-			<div class="wow animate__fadeInUp" data-wow-duration="1s">
+			<div v-if="passData.length" class="wow animate__fadeInUp" data-wow-duration="1s">
 				<div v-for="(item,index) in passData" v-show="navNum==index">
 					<div class="aPaaS_head_bg">
 						<div class="flex-column flex-between aPaaS_head maxwidth mkt_item">

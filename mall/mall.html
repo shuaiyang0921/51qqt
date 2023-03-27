@@ -386,7 +386,7 @@
 					<div class="paas_topImg"><img v-if="BannerImg[0]" :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize" alt="商城云"></div>
 				</div>
 			</div>
-			<div class="padBg">
+			<div v-if="purchaseMallData[0]" class="padBg">
 				<div class="PingFangSCMedium tac home_title">商城云，赋能企业智能化采购</div>
 				<div class="flex-column flex-center">
 					<div class="mall_navs">
@@ -435,7 +435,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="padBg bggray">
+			<div v-if="purchasenavListData.length" class="padBg bggray">
 				<div class="PingFangSCMedium tac home_title">覆盖多种商城采购场景，企业采购更高效</div>
 				<div v-for="(item,index) in purchasenavListData">
 					<div class="flex-column flex-center flex-middle" v-if="index%2==0">

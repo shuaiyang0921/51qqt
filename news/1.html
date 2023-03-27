@@ -369,7 +369,7 @@
 				</div>
 			</div>
 			<div id="FilterList_id" class="heiheader"></div>
-			<div class="caseStudyInfo_bg ">
+			<div class="caseStudyInfo_bg " v-if="InfoData.length">
 				<div id="FilterList_id" class="phone_navs_relative">
 					<div class="flex-column f16 flex-middle bgbai news_navs maxwidth">
 						<div v-for="item in industryList" :class="typeIndex==item.type?'news_navschenck':''" @mouseenter="changetype(item.type)" >{{item.name}}</div>

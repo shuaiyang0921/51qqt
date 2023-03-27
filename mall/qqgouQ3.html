@@ -386,7 +386,7 @@
 				   <div class="qilian_topImg" v-if="BannerImg[0].rightImage"><img :src="BannerImg[0].rightImage" class="imgsize"></div>
 			   </div>
 		   </div>
-		   <div class="padBg bggray phonebai wow animate__fadeInUp" data-wow-duration="1s">
+		   <div v-if="supplierData.length" class="padBg bggray phonebai wow animate__fadeInUp" data-wow-duration="1s">
 				<div class="maxwidth">
 					<div class="PingFangSCMedium tac home_title">企业采购的痛点</div>
 					<div class="flex-column flex-between">
@@ -400,13 +400,13 @@
 					</div>
 				</div>
 			</div>
-			<div class="padBg phonehide wow animate__fadeInUp" data-wow-duration="1s">
+			<div v-if="supplierImgData[0]" class="padBg phonehide wow animate__fadeInUp" data-wow-duration="1s">
 				<div class="maxwidth">
 					<div class="PingFangSCMedium tac home_title">{{supplierImgData[0]?supplierImgData[0].bigTitle:''}}</div>
 					<div class=""><img v-if="supplierImgData[0]" :src="supplierImgData[0]?supplierImgData[0].image:''" class="imgsize" :alt="supplierImgData[0]?supplierImgData[0].bigTitle:''"></div>
 				</div>
 			</div>
-			<div class="padBg bggray wow animate__fadeInUp" data-wow-duration="1s">
+			<div v-if="supplierListData.length" class="padBg bggray wow animate__fadeInUp" data-wow-duration="1s">
 				<div class="PingFangSCMedium tac home_title" style="margin-bottom: 0">核心能力</div>
 				<div v-for="(item,index) in supplierListData">
 					<div class="flex-column flex-center flex-middle" v-if="index%2==0">

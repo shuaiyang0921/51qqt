@@ -372,7 +372,7 @@
 				</div>
 			</div>
 			<!-- <div class="heiheader"></div> -->
-			<div class="paas_topBg wow animate__fadeInUp" data-wow-duration="1s">
+			<div v-if="BannerImg[0]" class="paas_topBg wow animate__fadeInUp" data-wow-duration="1s">
 				<div :style="{backgroundImage: 'url('+(BannerImg[0]?BannerImg[0].image:'')+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover'}">
 					<div class="supplier_adver flex-column flex-middle flex-center maxwidth" >
 						<div class="qilian_adver_left">

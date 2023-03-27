@@ -369,7 +369,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="colorbai wow animate__fadeInUp" data-wow-duration="1s" :style="banner.backgroundImage" style="height: 500px;overflow: hidden;">
+		<div v-if="banner" class="colorbai wow animate__fadeInUp" data-wow-duration="1s" :style="banner.backgroundImage" style="height: 500px;overflow: hidden;">
 			<div class="maxwidth">
 				<div class="manufacturing_adver_title homeHead_appleStytle banner_title" v-html="banner.title"></div>
 				<div class="manufacturing_adver_title">解决方案</div>

@@ -368,7 +368,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="colorbai wow animate__fadeInUp solutions_adver" data-wow-duration="1s" :style="banner.backgroundImage">
+	<div v-if="banner" class="colorbai wow animate__fadeInUp solutions_adver" data-wow-duration="1s" :style="banner.backgroundImage">
 		<div class="maxwidth">
 			<div class="manufacturing_adver_title homeHead_appleStytle banner_title" v-html="banner.title"></div>
 			<div class="manufacturing_adver_title">解决方案</div>

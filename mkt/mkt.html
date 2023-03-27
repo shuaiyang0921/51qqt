@@ -385,12 +385,12 @@
 						<div class="paas_topImg"><img v-if="BannerImg[0]" :src="BannerImg[0]?BannerImg[0].rightImage:''" class="imgsize" alt="营销云"></div>
 					</div>
 				</div>
-				<div class="PingFangSCMedium tac home_title mkt_title ">营销云，为企业提供一站式营销解决方案</div>
-				<div class="f20 flex-column flex-middle flex-around paas_navs maxwidth mkt_navs">
+				<div v-if="BannerImg[0]" class="PingFangSCMedium tac home_title mkt_title ">营销云，为企业提供一站式营销解决方案</div>
+				<div v-if="listData.length" class="f20 flex-column flex-middle flex-around paas_navs maxwidth mkt_navs">
 					<div v-for="(item,index) in listData" :class="index==listIndex?'paas_nav homeHead_appleStytle':''" @mouseenter="changenav(index)">{{item.title}}</div>
 				</div> 
 			</div>
-			<div class="wow animate__fadeInUp" data-wow-duration="1s" v-for="(item,index) in listData" v-show="listIndex==index">
+			<div v-if="listData.length" class="wow animate__fadeInUp" data-wow-duration="1s" v-for="(item,index) in listData" v-show="listIndex==index">
 				<div class="aPaaS_head_bg">
 					<div class="maxwidth">
 						<div class="flex-column flex-between mkt_item aPaaS_head">

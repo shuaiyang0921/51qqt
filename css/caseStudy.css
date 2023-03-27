@@ -222,8 +222,10 @@
     .videoContainer{position: relative;padding: 0 16px;}
     .caseStudyInfo_label{font-size: 14px;height: 20px;line-height: 20px;padding: 10px 16px 0px 16px;}
     .caseStudyInfo_left{width: calc(100% - 32px);margin-right:0;background: none;border: none;padding:0 16px}
-    .caseStudyInfo_label_text{width: calc(100% - 136px);overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+    .caseStudyInfo_label_text{width: calc(100% - 140px);overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
     .caseStudyInfo_left_title{font-size: 22px;line-height: 32px;margin-bottom:16px;}
     .caseStudyInfo_left_publishtime{font-size: 12px;line-height: 17px;height: 17px;margin-bottom: 30px;}
     .caseStudyInfo_left_text{font-size: 14px;line-height: 24px;}
+    .next_news{display: none;}
+    .previous_news{display: none;}
 }
