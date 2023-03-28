@@ -68,20 +68,10 @@
                                                         <div class="homeHead_productpopUp_rightText">
                                                             <div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon4 colorblue"><a href="https://mkt.51qqt.com/mkt.html">营销云</a><span class="iconright"></span></div>
                                                             <div class="f12 homeHead_productpopUp_subheading">提供一站式营销解决方案</div>
-                                                            <!-- <a href="https://51qqt.com/paas/mkt.html?navNum=0">内容创意</a>
-                                                            <a href="https://51qqt.com/paas/mkt.html?navNum=1">广告投放</a>
-                                                            <a href="https://51qqt.com/paas/mkt.html?navNum=2">渠道运营</a>
-                                                            <a href="https://51qqt.com/paas/mkt.html?navNum=3">客户管理</a> -->
                                                         </div>
                                                         <div class="homeHead_productpopUp_rightText">
                                                             <div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon3 colorblue"><a href="https://scf.51qqt.com/scf.html">赋能云</a><span class="iconright"></span></div>
                                                             <div class="f12 homeHead_productpopUp_subheading">中小微企快捷资产资金对接平台</div>
-                                                            <!-- <a href="https://51qqt.com/paas/scf-qiliantong.html">企链通</a>
-                                                            <a href="https://51qqt.com/paas/scf-qilitong.html">企利通</a>
-                                                            <a href="https://51qqt.com/paas/scf-qirongtong.html">企融通</a>
-                                                            <a href="https://51qqt.com/paas/scf-qipiaotong.html">企票通</a>
-                                                            <a href="https://51qqt.com/paas/scf-qibaotong.html">企保通</a>
-                                                            <a href="https://51qqt.com/paas/scf-qidingtong.html">企订通</a> -->
                                                         </div>
                                                     </div>
 
@@ -157,32 +147,26 @@
                                                     <div class="f18 homeHead_appleStytle homeHead_solutionPopUp_leftTitle">领域解决方案</div>
                                                 </div>
                                                 <div class="homeHead_productpopUp_right f14 flex-column">
-<!--                                                    <a class="homeHead_solutionPopUp_rightText " href="https://51qqt.com/solutions/manufacturing.html?name=39">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon9">生产</div>
                                                         <div class="f12 homeHead_solutionPopUp_subheading">直接采购/间接采购</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=40">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon10">商贸</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">标准商品/定制商品/相关服务</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=41">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon11">项目</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">工程/研发/设备项目/营销项目</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=42">-->
                                                     <a class="homeHead_solutionPopUp_rightText  cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon12">服务</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">教培/福利/物流/营销/费用类</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=43">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon13">大宗</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">农副/金属/化工/能源产品</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=44">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon14">办公</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">行政物资/办公/IT类/劳保用品</div>
@@ -498,7 +482,7 @@
 				</div>
 			</div>
 			<div class="heiheader"></div>
-			<div class="contactUs_bg ">
+			<div v-if="addressInfos.length" class="contactUs_bg ">
 				<div class="maxwidth">
 					<div class="tac contactUs_title PingFangSCMedium phonehide">联系我们</div>
 					<div class="contactUs_info flex-column flex-between phonehide">
@@ -519,7 +503,6 @@
 							</div>
 						</div>
 					</div>
-<!--					<div><img src="https://51qqt.com/images/about/contactUs6.png" class="imgsize" alt="公司办事处地图"></div>-->
 					<div class="flex-column flex-between">
 						<div class="contactUs_work" v-for="(item,index) in addressInfos">
 							<div class="contactUs_workImg"><img :src="item.image" class="imgsize" alt=""></div>

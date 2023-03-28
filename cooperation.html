@@ -68,20 +68,10 @@
                                                         <div class="homeHead_productpopUp_rightText">
                                                             <div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon4 colorblue"><a href="https://mkt.51qqt.com/mkt.html">营销云</a><span class="iconright"></span></div>
                                                             <div class="f12 homeHead_productpopUp_subheading">提供一站式营销解决方案</div>
-                                                            <!-- <a href="https://51qqt.com/paas/mkt.html?navNum=0">内容创意</a>
-                                                            <a href="https://51qqt.com/paas/mkt.html?navNum=1">广告投放</a>
-                                                            <a href="https://51qqt.com/paas/mkt.html?navNum=2">渠道运营</a>
-                                                            <a href="https://51qqt.com/paas/mkt.html?navNum=3">客户管理</a> -->
                                                         </div>
                                                         <div class="homeHead_productpopUp_rightText">
                                                             <div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon3 colorblue"><a href="https://scf.51qqt.com/scf.html">赋能云</a><span class="iconright"></span></div>
                                                             <div class="f12 homeHead_productpopUp_subheading">中小微企快捷资产资金对接平台</div>
-                                                            <!-- <a href="https://51qqt.com/paas/scf-qiliantong.html">企链通</a>
-                                                            <a href="https://51qqt.com/paas/scf-qilitong.html">企利通</a>
-                                                            <a href="https://51qqt.com/paas/scf-qirongtong.html">企融通</a>
-                                                            <a href="https://51qqt.com/paas/scf-qipiaotong.html">企票通</a>
-                                                            <a href="https://51qqt.com/paas/scf-qibaotong.html">企保通</a>
-                                                            <a href="https://51qqt.com/paas/scf-qidingtong.html">企订通</a> -->
                                                         </div>
                                                     </div>
 
@@ -157,32 +147,26 @@
                                                     <div class="f18 homeHead_appleStytle homeHead_solutionPopUp_leftTitle">领域解决方案</div>
                                                 </div>
                                                 <div class="homeHead_productpopUp_right f14 flex-column">
-<!--                                                    <a class="homeHead_solutionPopUp_rightText " href="https://51qqt.com/solutions/manufacturing.html?name=39">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon9">生产</div>
                                                         <div class="f12 homeHead_solutionPopUp_subheading">直接采购/间接采购</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=40">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon10">商贸</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">标准商品/定制商品/相关服务</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=41">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon11">项目</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">工程/研发/设备项目/营销项目</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=42">-->
                                                     <a class="homeHead_solutionPopUp_rightText  cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon12">服务</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">教培/福利/物流/营销/费用类</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=43">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon13">大宗</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">农副/金属/化工/能源产品</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=44">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon14">办公</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">行政物资/办公/IT类/劳保用品</div>
@@ -504,7 +488,7 @@
 					<a class="f14 homeHead_registertil tac homeHead_appleStytle registertil_banner" href="#joinNow">申请加入</a>
 				</div>
 			</div>
-			<div class="cooperation_type wow animate__fadeInUp" frameborder="0">
+			<div v-if="cooperationInfo.length" class="cooperation_type wow animate__fadeInUp" frameborder="0">
 				<div class="maxwidth">
 					<div class="PingFangSCMedium tac home_title">合作伙伴招募类型</div>
 					<div class="flex-column flex-between">
@@ -527,40 +511,14 @@
 					
 				</div>
 			</div>
-			<div class="cooperation_why wow animate__fadeInUp" frameborder="0">
+			<div v-if="suppliernumData.length" class="cooperation_why wow animate__fadeInUp" frameborder="0">
 				<div class="maxwidth">
 					<div class="PingFangSCMedium tac home_title">为什么选择与企企通合作</div>
 					<div class="flex-column">
-<!--						<div class="cooperation_why_left">-->
-<!--							<div class="cooperation_why_lefttop"><img src="https://51qqt.com/images/cooperation/cooperation5.png" class="imgsize" alt="品牌实力"></div>-->
-<!--							<div class="colorbai PingFangSCMedium cooperation_why_leftTitle">品牌实力</div>-->
-<!--							<div class="f16 cooperation_why_leftText">-->
-<!--								企企通在-->
-<!--								<span>SRM赛道持续领先</span><br/>-->
-<!--								服务众多-->
-<!--								<span>500强</span>-->
-<!--								及-->
-<!--								<span>中小微企业客户</span><br/>-->
-<!--								国家级“高新技术企业”及多项安全/ISO认证<br/>-->
-<!--								先后获得“中国企业服务创新成长50强”“大中华区IT服务业独角兽大奖”等-->
-<!--								<span>30+行业</span>-->
-<!--								权威荣誉奖项-->
-<!--							</div>-->
-<!--						</div>-->
 						<div v-if="suppliernumData[4]" class="cooperation_why_left" :style="{backgroundImage: 'url('+suppliernumData[4].image+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover'}">
 							<div class="cooperation_why_lefttop"><img :src="suppliernumData[4].icon" class="imgsize" alt="品牌实力"></div>
 							<div class="colorbai PingFangSCMedium cooperation_why_leftTitle">{{suppliernumData[4].title}}</div>
 							<div class="f16 cooperation_why_leftText" v-html="suppliernumData[4].intro">
-<!--								企企通在-->
-<!--								<span>SRM赛道持续领先</span><br/>-->
-<!--								服务众多-->
-<!--								<span>500强</span>-->
-<!--								及-->
-<!--								<span>中小微企业客户</span><br/>-->
-<!--								国家级“高新技术企业”及多项安全/ISO认证<br/>-->
-<!--								先后获得“中国企业服务创新成长50强”“大中华区IT服务业独角兽大奖”等-->
-<!--								<span>30+行业</span>-->
-<!--								权威荣誉奖项-->
 							</div>
 						</div>
 						<div class="cooperation_why_right flex-column">
@@ -573,7 +531,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="home_partners wow animate__fadeInUp" frameborder="0">
+			<div v-if="partnersImg" class="home_partners wow animate__fadeInUp" frameborder="0">
 				<div class="maxwidth">
 					<div class="home_partners_bgsty" :style="{backgroundImage: 'url('+partnersImg+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover'}">
 						<div class="tac home_product_title PingFangSCMedium home_partners_img">合作伙伴</div>

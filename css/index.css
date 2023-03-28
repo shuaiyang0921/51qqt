@@ -36,7 +36,7 @@
 .PingFangSCMedium{font-weight: 600;}
 .PingFangSCMediumNormal{font-weight: normal;}
 .PingFangSCMediumBanner{font-weight: 500;}
-.homeHead{position: relative;}/*box-shadow: 0px 3px 14px 0px rgba(0,0,0,0.05);*/
+.homeHead{}/*box-shadow: 0px 3px 14px 0px rgba(0,0,0,0.05);*/
 .homephoneHead{padding: 20px 24px;display: none;}
 .menu_buttonstyle{width: 55px;height: 19px;}
 .menu_button {cursor: pointer;margin-left: 30px;position: absolute;}

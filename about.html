@@ -158,32 +158,26 @@
                                                     <div class="f18 homeHead_appleStytle homeHead_solutionPopUp_leftTitle">领域解决方案</div>
                                                 </div>
                                                 <div class="homeHead_productpopUp_right f14 flex-column">
-<!--                                                    <a class="homeHead_solutionPopUp_rightText " href="https://51qqt.com/solutions/manufacturing.html?name=39">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon9">生产</div>
                                                         <div class="f12 homeHead_solutionPopUp_subheading">直接采购/间接采购</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=40">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon10">商贸</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">标准商品/定制商品/相关服务</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=41">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon11">项目</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">工程/研发/设备项目/营销项目</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=42">-->
                                                     <a class="homeHead_solutionPopUp_rightText  cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon12">服务</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">教培/福利/物流/营销/费用类</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=43">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon13">大宗</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">农副/金属/化工/能源产品</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=44">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon14">办公</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">行政物资/办公/IT类/劳保用品</div>
@@ -503,7 +497,7 @@
 				<div class="about_banner_text" v-html="BannerImg.intro"></div>
 				<div v-if="BannerImg.showButton" v-if="BannerImg.buttonText" class="f16 homeHead_registertil tac about_banner_but" @click="showregistermodal" v-html="BannerImg.buttonText"></div>
 			</div>
-			<div class="about_videobg wow animate__fadeInUp" data-wow-duration="1s">
+			<div v-if="aboutInfo[0]" class="about_videobg wow animate__fadeInUp" data-wow-duration="1s">
 				<div class="maxwidth">
 					<div class="about_video">
 						<div class="homeHead_appleStytle about_video_title tac phonehide">{{aboutInfo[0]?aboutInfo[0].title:''}}</div>
@@ -527,7 +521,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="about_history wow animate__fadeInUp" data-wow-duration="1s">
+			<div v-if="supplierListData.length" class="about_history wow animate__fadeInUp" data-wow-duration="1s">
 				<div class="maxwidth">
 					<div class="tac homeHead_appleStytle about_history_title ">发展历程</div>
 					<div class="about_history_navs flex-column flex-around flex-middle">
@@ -548,7 +542,7 @@
 				</div>
 				
 			</div>
-			<div class="about_excellent wow animate__fadeInUp" data-wow-duration="1s">
+			<div v-if="aboutListData.length" class="about_excellent wow animate__fadeInUp" data-wow-duration="1s">
 				<div class="maxwidth">
 					<div class="tac home_product_title PingFangSCMedium colorbai">保持优秀，持续领先</div>
 					<div class="flex-column flex-between">

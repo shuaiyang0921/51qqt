@@ -68,20 +68,10 @@
                                                         <div class="homeHead_productpopUp_rightText">
                                                             <div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon4 colorblue"><a href="https://mkt.51qqt.com/mkt.html">营销云</a><span class="iconright"></span></div>
                                                             <div class="f12 homeHead_productpopUp_subheading">提供一站式营销解决方案</div>
-                                                            <!-- <a href="https://51qqt.com/paas/mkt.html?navNum=0">内容创意</a>
-                                                            <a href="https://51qqt.com/paas/mkt.html?navNum=1">广告投放</a>
-                                                            <a href="https://51qqt.com/paas/mkt.html?navNum=2">渠道运营</a>
-                                                            <a href="https://51qqt.com/paas/mkt.html?navNum=3">客户管理</a> -->
                                                         </div>
                                                         <div class="homeHead_productpopUp_rightText">
                                                             <div class="homeHead_productpopUp_title homeHead_appleStytle homeHead_productpopUp_titleicon3 colorblue"><a href="https://scf.51qqt.com/scf.html">赋能云</a><span class="iconright"></span></div>
                                                             <div class="f12 homeHead_productpopUp_subheading">中小微企快捷资产资金对接平台</div>
-                                                            <!-- <a href="https://51qqt.com/paas/scf-qiliantong.html">企链通</a>
-                                                            <a href="https://51qqt.com/paas/scf-qilitong.html">企利通</a>
-                                                            <a href="https://51qqt.com/paas/scf-qirongtong.html">企融通</a>
-                                                            <a href="https://51qqt.com/paas/scf-qipiaotong.html">企票通</a>
-                                                            <a href="https://51qqt.com/paas/scf-qibaotong.html">企保通</a>
-                                                            <a href="https://51qqt.com/paas/scf-qidingtong.html">企订通</a> -->
                                                         </div>
                                                     </div>
 
@@ -157,32 +147,27 @@
                                                     <div class="f18 homeHead_appleStytle homeHead_solutionPopUp_leftTitle">领域解决方案</div>
                                                 </div>
                                                 <div class="homeHead_productpopUp_right f14 flex-column">
-<!--                                                    <a class="homeHead_solutionPopUp_rightText " href="https://51qqt.com/solutions/manufacturing.html?name=39">-->
+
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon9">生产</div>
                                                         <div class="f12 homeHead_solutionPopUp_subheading">直接采购/间接采购</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=40">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon10">商贸</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">标准商品/定制商品/相关服务</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=41">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon11">项目</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">工程/研发/设备项目/营销项目</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=42">-->
                                                     <a class="homeHead_solutionPopUp_rightText  cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon12">服务</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">教培/福利/物流/营销/费用类</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=43">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon13">大宗</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">农副/金属/化工/能源产品</div>
                                                     </a>
-<!--                                                    <a class="homeHead_solutionPopUp_rightText" href="https://51qqt.com/solutions/manufacturing.html?name=44">-->
                                                     <a class="homeHead_solutionPopUp_rightText cursorDefault">
                                                         <div class="f14 homeHead_productpopUp_title homeHead_appleStytle homeHead_solutionPopUp_titleicon14">办公</div>
                                                         <div class="f12 homeHead_productpopUp_subheading">行政物资/办公/IT类/劳保用品</div>
@@ -497,11 +482,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="joinUs_banner tac colorbai wow animate__fadeInUp" data-wow-duration="1s" :style="{backgroundImage: 'url('+BannerImg.image+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover',height: '500px',overflow: 'hidden'}">
+			<div v-if="BannerImg" class="joinUs_banner tac colorbai wow animate__fadeInUp" data-wow-duration="1s" :style="{backgroundImage: 'url('+BannerImg.image+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover',height: '500px',overflow: 'hidden'}">
 				<div class="joinUs_banner_text" style="" v-html="BannerImg.title"></div>
 				<div v-if="BannerImg.showButton" class="f14 homeHead_registertil tac joinUs_banner_but" @click="turnJoinUs(BannerImg.link)">加入我们</div>
 			</div>
-			<div class="joinUs_imglists phonehide wow animate__fadeInUp" data-wow-duration="1s">
+			<div v-if="aboutImgData.length" class="joinUs_imglists phonehide wow animate__fadeInUp" data-wow-duration="1s">
 				<div class="tac joinUs_title PingFangSCMedium">加入企企通</div>
 				<div class="joinUs_imglist1 flex-column flex-center">
 					<div class="joinUs_img1"><img v-if="aboutImgData[0]" :src="aboutImgData[0]?aboutImgData[0].image:''" class="imgsize"></div>
@@ -514,7 +499,7 @@
 				</div>
 			</div>
 			
-			<div class="joinUs_post wow animate__fadeInUp" data-wow-duration="1s" v-if="clientWidth>582">
+			<div v-if="itemList.length" class="joinUs_post wow animate__fadeInUp" data-wow-duration="1s" v-if="clientWidth>582">
 				<div class="maxwidth">
 					<div class="tac joinUs_title PingFangSCMedium">热招岗位</div>
 					<div v-if="indexList==navIndex" ref="joinUs_post_lists" class="joinUs_post_lists flex-column flex-between " v-for="(itemList,indexList) in supplierListData">
@@ -550,7 +535,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="joinUs_post wow animate__fadeInUp" data-wow-duration="1s" v-else>
+			<div v-if="supplierListData.length" class="joinUs_post wow animate__fadeInUp" data-wow-duration="1s" v-else>
 				<div class="maxwidth">
 					<div class="tac joinUs_title PingFangSCMedium">热招岗位</div>
 					<div v-if="indexList==navIndex" ref="joinUs_post_lists" class="joinUs_post_lists flex-column flex-between " v-for="(itemList,indexList) in supplierListData">

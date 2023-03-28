@@ -374,7 +374,7 @@
 			</div>
 			<!-- <div class="heiheader"></div> -->
 			<div v-if="BannerImg[0]" class="paas_topBg wow animate__fadeInUp" data-wow-duration="1s" :style="{backgroundImage: 'url('+(clientWidth<=582?BannerImg[0].mobileImage:BannerImg[0].image)+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover',backgroundPosition:'center'}">
-				<div class="supplier_adver flex-column flex-middle flex-center maxwidth">
+				<div class="supplier_adver flex-column flex-middle flex-between maxwidth">
 				   <div class="qilian_adver_left">
 					   <div class="adver_title homeHead_appleStytle" v-html="BannerImg[0]?BannerImg[0].title:''"></div>
 					   <div class="f16 PingFangSCMedium paas_adver_text" v-html="BannerImg[0]?BannerImg[0].intro:''"></div>

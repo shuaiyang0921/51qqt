@@ -127,7 +127,7 @@
     position: absolute;top: 0;left: 0;
 }
 .videoListContainer{
-    color: #FFFFFF;background: rgba(34, 35, 37, 1);overflow-y: auto;position: absolute;top: 0;right: 0;height: 743px;padding: 19px 20px 0 20px;
+    color: #FFFFFF;background: rgba(34, 35, 37, 1);overflow-y: auto;position: absolute;top: 0;right: -322px;height: 695px;padding: 19px 20px 0 20px;
 }
 .videoListItem{
     width: 282px;margin-bottom: 20px;overflow: hidden;
@@ -174,11 +174,18 @@
     width: 857px;text-align: left;height: 33px;line-height: 33px;font-size: 24px;margin-top: 24px;padding-left: 20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
 }
 .videoDescriptionText{
-    width: 857px;text-align: left;height: 22px;line-height: 22px;font-size: 16px;margin-top: 8px;padding-left: 20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+    width: 857px;text-align: left;height: 22px;line-height: 22px;font-size: 16px;margin-top: 8px;padding-left: 20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-bottom:24px;
 }
 
 
 .about_video_imgplay{width: 60px;height: 60px;position: absolute;top: calc(50% - 30px) ;left: calc(50% - 30px);}
+.caseStudy_mag{margin:13px 30px!important;}
+@media screen and (max-width:1240px) {
+    .caseStudy_mag{margin:13px 0!important;}
+    .videoListContainer,.videoTitleText,.videoDescriptionText{display: none;}
+    .Vidio_padd_wei {background: rgba(0,0,0,0.5);}
+    .videoContainer{position: relative;padding: 0 16px;}
+}
 @media screen and (max-width:582px) {
     .caseStudy_adver{text-align: center;background: url(https://51qqt.com/images/caseStudy/caseStudy_bg.png) no-repeat center center;background-size: cover;height: 280px;margin-top: 69px;}
     .caseStudy_adver_title{font-size: 24px;margin-top: 80px;margin-bottom: 16px;line-height: 33px;height: 33px;}
@@ -217,9 +224,7 @@
     .news_listright{width: calc(100% - 44px);box-shadow: 0px 4px 16px 0px rgba(55,99,170,0.1);border-radius: 4px;border: 2px solid #FFFFFF;padding: 20px;border-top: none;}
     .caseStudyInfo_right{display: none;}
     .caseStudy_FilterPages{margin: 30px 0;}
-    .videoListContainer,.videoTitleText,.videoDescriptionText{display: none;}
-    .Vidio_padd_wei {background: rgba(0,0,0,0.5);}
-    .videoContainer{position: relative;padding: 0 16px;}
+    
     .caseStudyInfo_label{font-size: 14px;height: 20px;line-height: 20px;padding: 10px 16px 0px 16px;}
     .caseStudyInfo_left{width: calc(100% - 32px);margin-right:0;background: none;border: none;padding:0 16px}
     .caseStudyInfo_label_text{width: calc(100% - 140px);overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
