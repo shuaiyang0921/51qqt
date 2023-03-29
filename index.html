@@ -13,7 +13,7 @@
 		<!-- 头部底部样式 -->
 		<link rel="stylesheet" href="https://51qqt.com/css/index.css" />
 		<!-- 首页样式 -->
-		<link rel="stylesheet" href="./css/homestyle.css" />
+		<link rel="stylesheet" href="https://51qqt.com/css/homestyle.css" />
 		<link rel="stylesheet" href="https://51qqt.com/css/caseStudy.css" />
 		<link rel="stylesheet" href="https://51qqt.com/css/animate.min.css" />
 		<link rel="stylesheet" href="https://51qqt.com/css/cooperation.css" />
@@ -737,7 +737,7 @@
 							<div class="flex-column home_information_bot">
 								<div class="home_information_Img"><img src="https://51qqt.com/img/home108.png" class="imgsize" alt="企业资讯"></div>
 								<div class="f14 home_information_text">
-									<div v-for="item in information1" @click="turnInformationDetail(item)">{{item.title}}</div>
+									<div v-for="(item,index) in information1" v-if="index<=3" @click="turnInformationDetail(item)">{{item.title}}</div>
 								</div>
 							</div>
 						</div>
@@ -754,7 +754,7 @@
 							<div class="flex-column home_information_bot">
 								<div class="home_information_Img"><img src="https://51qqt.com/img/home109.png" class="imgsize" alt="市场活动"></div>
 								<div class="f14 home_information_text">
-									<div v-for="item in information2" @click="turnInformationDetail(item)">{{item.title}}</div>
+									<div v-for="(item,index) in information2" v-if="index<=3" @click="turnInformationDetail(item)">{{item.title}}</div>
 								</div>
 							</div>
 						</div>
@@ -766,7 +766,7 @@
 							<div class="flex-column home_information_bot">
 								<div class="home_information_Img"><img src="https://51qqt.com/img/home110.png" class="imgsize" alt="干货分享"></div>
 								<div class="f14 home_information_text">
-									<div v-for="item in information3" @click="turnInformationDetail(item)">{{item.title}}</div>
+									<div v-for="(item,index) in information3" v-if="index<=3" @click="turnInformationDetail(item)">{{item.title}}</div>
 								</div>
 							</div>
 						</div>
@@ -778,7 +778,7 @@
 							<div class="flex-column home_information_bot">
 								<div class="home_information_Img"><img src="https://51qqt.com/img/home111.png" class="imgsize" alt="微视频"></div>
 								<div class="f14 home_information_text">
-									<div v-for="(item,index) in information4" v-if="index<=2" @click="turnInformationDetail(item)">{{item.title}}</div>
+									<div v-for="(item,index) in information4" v-if="index<=3" @click="turnInformationDetail(item)">{{item.title}}</div>
 								</div>
 							</div>
 						</div>

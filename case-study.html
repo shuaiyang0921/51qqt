@@ -537,7 +537,7 @@
 			</div>
 			<div class="caseStudy_Filter wow animate__fadeInUp" data-wow-duration="1s">
 				<div class="maxwidth">
-					<div ref="caseStudy_FilterList_id" class="flex-column flex-center caseStudy_FilterList" v-if="ListData.length!=0" style="position: relative">
+					<div ref="caseStudy_FilterList_id" class="flex-column flex-middle caseStudy_FilterList" v-if="ListData.length!=0" style="position: relative">
 						<template v-for="(item,index) in ListData" >
 							<a :class="(index+2)%3==0?'caseStudy_mag':''" v-if="!item.caseClassify.includes('5')" :href="'caseStudyInfo.html?id='+item.id">
 								<div class="caseStudy_FilterList_img"><img :src="item.image" class="imgsize"></div>
