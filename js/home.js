@@ -103,9 +103,9 @@ $(document).ready(function(){
     //     $('.home_Solution_item').removeClass('showitem')
     //     $('.home_Solution_item').eq(index).addClass('showitem')
     //     if(index==1){
-    //         $('.home_Solution').css({"background":"url(./img/home41.png) no-repeat center center","background-size": "cover"});
+    //         $('.home_Solution').css({"background":"url(https://51qqt.com/img/home41.png) no-repeat center center","background-size": "cover"});
     //     }else{
-    //         $('.home_Solution').css({"background":"url(./img/home159.png) no-repeat center center","background-size": "cover"});
+    //         $('.home_Solution').css({"background":"url(https://51qqt.com/img/home159.png) no-repeat center center","background-size": "cover"});
     //     }
     //     // $('.home_Solution_item').eq(index).show()
     //     // changenum = index
@@ -120,10 +120,10 @@ $(document).ready(function(){
     // //     $('.home_Solution_item .home_Solution_rightwidth').eq(index).css("display","flex").siblings().css("display","none");
     // //     if(index==7){
     // //         console.log($('.home_Solution').css("background"))
-    // //         $('.home_Solution').css({"background":"url(./img/home158.png) no-repeat center center","background-size": "cover"});
+    // //         $('.home_Solution').css({"background":"url(https://51qqt.com/img/home158.png) no-repeat center center","background-size": "cover"});
     // //         console.log($('.home_Solution').css("background"))
     // //     }else{
-    // //         $('.home_Solution').css({"background":"url(./img/home159.png) no-repeat center center","background-size": "cover"});
+    // //         $('.home_Solution').css({"background":"url(https://51qqt.com/img/home159.png) no-repeat center center","background-size": "cover"});
     // //     }
     // // });
     // $('.home_Solutionleftclike>div').click(function(){
