@@ -6,6 +6,7 @@
 .colorhui888{color: #888888;}
 .colorred{color: #c83030;}
 .colorblue{color: #005CEF!important;}
+.colorblue a{color: #005CEF!important;}
 .colororigin{color: #FF761A;}
 .bgbai{background-color: #FFFFFF;}
 .bghead{background-color: #FAFBFC;}
@@ -21,6 +22,7 @@
 .padbott{padding-bottom: 55px;}
 .imgsize{width: 100%;height: 100%;}
 .xian_head{border-bottom: 1px dashed #EBEBEB;}
+.xian_headsolid{border-bottom: 1px solid #EBEBEB;}
 .xian_footer{border-bottom: 1px solid rgba(255,255,255,0.1);}
 .porelative{position: relative;}
 .padBg{padding: 60px 20px;}

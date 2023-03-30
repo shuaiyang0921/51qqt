@@ -14,9 +14,9 @@
 		<!-- 头部底部样式 -->
 		<link rel="stylesheet" href="https://51qqt.com/css/index.css" />
 		<!-- 首页样式 -->
-		<link rel="stylesheet" href="https://51qqt.com/css/homestyle.css" />
+		<link rel="stylesheet" href="../css/homestyle.css" />
         <!-- 荣耀资质样式 -->
-        <link rel="stylesheet" href="https://51qqt.com/css/caseStudy.css">
+        <link rel="stylesheet" href="../css/caseStudy.css">
 		<link rel="stylesheet" href="https://51qqt.com/css/animate.min.css" />
 		<script src="https://51qqt.com/js/jquery.min.js"></script>
 		<script src="https://51qqt.com/js/load.js"></script>
@@ -36,7 +36,7 @@
 									<div class="hobverPopUp_text"><span>产品</span><span class="iconxia"></span></div>
 									<div class="homeHead_popUpStyle bghead">
 										<div class="maxwidth">
-											<div class="flex-column xian_head">
+											<div class="flex-column xian_headsolid">
 												<div class="homeHead_productpopUp_saas">
 													<div class="f18 homeHead_appleStytle homeHead_productpopUp_left">企业SasS云</div>
 												</div>
@@ -103,7 +103,7 @@
 									<span class="hobverPopUp_text">解决方案</span><span class="iconxia"></span>
 									<div class="bghead homeHead_popUpStyle">
 										<div class=" maxwidth">
-											<div class="flex-column xian_head">
+											<div class="flex-column xian_headsolid">
 												<div class="homeHead_solutionPopUp_left">
 													<div class="f18 homeHead_appleStytle homeHead_solutionPopUp_leftTitle">行业解决方案</div>
 												</div>
@@ -142,7 +142,7 @@
 													</a>
 												</div>
 											</div>
-											<div class="flex-column xian_head">
+											<div class="flex-column xian_headsolid">
 												<div class="homeHead_solutionPopUp_left">
 													<div class="f18 homeHead_appleStytle homeHead_solutionPopUp_leftTitle">领域解决方案</div>
 												</div>
@@ -596,15 +596,14 @@
 				</div>
 			</div>
 			<div class="register_modal flex-column flex-middle" v-show="showVidio">
-				<div class="Vidio_padd_wei flex-column flex-middle flex-center porelative">
+				<div class="Vidio_padd_wei flex-column flex-center porelative">
 					<div class="videoContainer">
 						<div class="colorbai videoTitleText">{{vidiotitle}}</div>
 						<div class="colorbai videoDescriptionText">{{videoDescription}}</div>
 						<video
+							class="videosize"
 							controls
 							preload="auto"
-							width="100%"
-							height="100%"
 							:src="vidiourl"
 							:poster="imageUrl"
 							ref="vueRef"

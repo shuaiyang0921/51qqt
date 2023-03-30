@@ -185,7 +185,7 @@
     .caseStudy_mag{margin:13px 0!important;}
     .videoListContainer,.videoTitleText,.videoDescriptionText{display: none;}
     .Vidio_padd_wei {background: rgba(0,0,0,0.5);}
-    .videoContainer{position: relative;padding: 0 16px;}
+    .videoContainer{position: relative;padding: 0 16px;margin: auto;}
 }
 @media screen and (max-width:582px) {
     .caseStudy_adver{text-align: center;background: url(https://51qqt.com/images/caseStudy/caseStudy_bg.png) no-repeat center center;background-size: cover;height: 280px;margin-top: 69px;}
