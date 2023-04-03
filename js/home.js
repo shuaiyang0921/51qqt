@@ -75,7 +75,7 @@ $(document).ready(function(){
     window.addEventListener("load", () => {
         setTimeout(()=>{
             window.scrollTo(0, 0);
-        },1)
+        },100)
     });
     
     // $('.homephoneHead_navchild_Subhead>.homephoneHead_navicon').click(function(){

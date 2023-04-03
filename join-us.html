@@ -499,7 +499,7 @@
 				</div>
 			</div>
 			
-			<div v-if="supplierListData.length" class="joinUs_post wow animate__fadeInUp" data-wow-duration="1s" v-if="clientWidth>582">
+			<div v-if="supplierListData.length&&clientWidth>582" class="joinUs_post wow animate__fadeInUp" data-wow-duration="1s">
 				<div class="maxwidth">
 					<div class="tac joinUs_title PingFangSCMedium">热招岗位</div>
 					<div v-if="indexList==navIndex" ref="joinUs_post_lists" class="joinUs_post_lists flex-column flex-between " v-for="(itemList,indexList) in supplierListData">
@@ -535,7 +535,7 @@
 					</div>
 				</div>
 			</div>
-			<div v-if="supplierListData.length" class="joinUs_post wow animate__fadeInUp" data-wow-duration="1s" v-else>
+			<div v-else-if="supplierListData.length&&clientWidth<=582" class="joinUs_post wow animate__fadeInUp" data-wow-duration="1s">
 				<div class="maxwidth">
 					<div class="tac joinUs_title PingFangSCMedium">热招岗位</div>
 					<div v-if="indexList==navIndex" ref="joinUs_post_lists" class="joinUs_post_lists flex-column flex-between " v-for="(itemList,indexList) in supplierListData">
@@ -669,7 +669,6 @@
 									</div>
 								</div>
 							</div>
-							
 						</div>
 						<div class="f14 flex-column footer_topstyle footer_aboutstyle">
 							<div class="blogroll">友情链接</div>
@@ -738,7 +737,7 @@
 				supplierListData:[],
 				showmodel:false,
 				showVidio:false,
-				Listindex:-1,
+				Listindex:0,
 				blogrollList:[],
 				navIndex: 0,
 				detailItem:{},
@@ -764,7 +763,7 @@
 		mounted(){
 
 			window.addEventListener('resize', this.onResize);
-			this.changeCaseTab(0);
+			this.changeCaseTab(0*1);
 			getSeo(3);
 			this.getBottomNav()
 		},
@@ -862,9 +861,9 @@
 			},
 			changeCaseTab(index){
 				this.navIndex = index
-				this.Listindex=0
-				this.showJobDetail=true;
-				this.detailItem=this.supplierListData[index][0]
+				this.Listindex=-1
+				this.showJobDetail=false;
+				this.detailItem=index?this.supplierListData[index][0]:''
 				$('.home_Case_tabs>div').eq(this.navIndex).addClass('home_Case_tab').siblings().removeClass('home_Case_tab')
 			},
 			showregistermodal(){
