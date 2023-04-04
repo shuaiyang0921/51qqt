@@ -37,6 +37,11 @@
 .jobDetailContainer>div{
     background: #FFFFFF;border: 1px solid #EBEBEB;margin: 12px 0;padding: 0 40px;border-radius: 4px;
 }
+@media screen and (max-width:1440px) {
+    .joinUs_imglist1{margin-bottom:0px;}
+    .joinUs_img1,.joinUs_img2,.joinUs_img3{width: 80%;height: auto;}
+    .joinUs_img_mag{margin: 0;}
+}
 @media screen and (max-width:582px) {
     .joinUs_banner{height: 200px;margin-top: 69px;}
     .joinUs_banner_text{font-size: 24px;height: 33px;line-height: 33px;margin-top:62px;}
