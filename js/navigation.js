@@ -48,7 +48,7 @@ _getBaseInfo({})
 })
 
 var _getOtherSet = p => get('/websiteOther/noToken/queryPosition', p);
-_getOtherSet({positions:"1"})
+_getOtherSet({positions:"1,2"})
     .then(res => {
         if (res.code==200){
             vm.kefuInfo=res.result;

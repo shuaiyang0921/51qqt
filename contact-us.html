@@ -488,18 +488,18 @@
 					<div class="contactUs_info flex-column flex-between phonehide">
 						<div class="contactUs_info_left">
 							<div class="homeHead_appleStytle contactUs_info_leftTitle">咨询电话</div>
-							<div class="contactUs_info_leftText">400-835-1441</div>
+							<div class="contactUs_info_leftText">{{baseInfo.phone}}</div>
 							<div class="f20 contactUs_info_leftMailbox PingFangSCMedium flex-column">
-								<span class="contactUs_info_leftMailboximg"><img src="https://51qqt.com/images/about/contactUs5.png" class="imgsize" alt="联系邮箱"></span><span>联系邮箱：marketing@51qqt.com</span></div>
+								<span class="contactUs_info_leftMailboximg"><img src="https://51qqt.com/images/about/contactUs5.png" class="imgsize" alt="联系邮箱"></span><span>联系邮箱：{{baseInfo.hrEmail}}</span></div>
 						</div>
-						<div class="contactUs_info_right flex-column flex-around tac">
+						<div class="contactUs_info_right flex-column flex-around tac" v-if="kefuInfo[2]">
 							<div class="contactUs_info_rightQRcode">
-								<div class="contactUs_info_rightImg"><img src="https://51qqt.com/images/about/contactUs1.png" class="imgsize" alt="企企通官方公众号"></div>
-								<div class="contactUs_info_rightText f16">企企通官方公众号</div>
+								<div class="contactUs_info_rightImg"><img :src="kefuInfo[2][0].image" class="imgsize" :alt="kefuInfo[2][0].text"></div>
+								<div class="contactUs_info_rightText f16">{{kefuInfo[2][0].text}}</div>
 							</div>
 							<div class="contactUs_info_rightQRcode">
-								<div class="contactUs_info_rightImg"><img src="https://51qqt.com/images/about/contactUs3.png" class="imgsize" alt="售前咨询"></div>
-								<div class="contactUs_info_rightText f16">售前咨询</div>
+								<div class="contactUs_info_rightImg"><img :src="kefuInfo[2][1].image" class="imgsize" :alt="kefuInfo[2][1].text"></div>
+								<div class="contactUs_info_rightText f16">{{kefuInfo[2][0].text}}</div>
 							</div>
 						</div>
 					</div>
@@ -618,7 +618,7 @@
 						</div>
 						<div class="f14 flex-column footer_topstyle footer_aboutstyle">
 							<div class="blogroll">友情链接</div>
-							<a v-for="item in blogrollList" :href="item.link">{{item.title}}</a>
+							<a v-for="item in blogrollList" :rel="item.linkRelation" :href="item.link">{{item.title}}</a>
 						</div>
 					</div>
 					<div class="f14 tac footer_bottom flex-column flex-center">
@@ -827,4 +827,4 @@
 		computed:{},
 	})
 </script>
-<script src="https://51qqt.com/js/navigation.js"></script>
+<script src="./js/navigation.js"></script>
