@@ -704,6 +704,7 @@
 							preload="auto"
 							width="100%"
 							height="100%"
+							ref="vueRef"
 							autoplay
 							:src="aboutInfo[0]?aboutInfo[0].video:''"
 						>
@@ -835,13 +836,10 @@
 			},
 			showvidiomodal(){
 				this.showVidio = true
-				setTimeout(()=>{
-					$("#companyVideoId").attr("style","display:block;")
-				})
-
+				this.$refs.vueRef.play();
 			},
 			hidevidiomodal(){
-				$("#companyVideoId").attr("style","display:none;")
+				this.$refs.vueRef.pause();
 				this.showVidio = false
 			},
 			changeindex(index){
