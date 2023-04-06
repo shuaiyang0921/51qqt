@@ -717,7 +717,7 @@
 				</div>
 
 			</div>
-			<div class="rightView">
+			<div class="rightView" v-if="kefuInfo[1]">
 				<div class="rightView_kf_none">
 
 				</div>
@@ -762,6 +762,7 @@
 				smsCode:'',
 				buttonNav:[],
 				baseInfo:{},
+				kefuInfo:{},
 			}
 		},
 		watch: {

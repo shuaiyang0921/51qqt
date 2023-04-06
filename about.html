@@ -712,7 +712,7 @@
 					<div class="Vidio_cancel" @click="hidevidiomodal"><img src="https://51qqt.com/img/home165.png" class="imgsize" alt=""></div>
 				</div>
 			</div>
-			<div class="rightView">
+			<div class="rightView" v-if="kefuInfo[1]">
 				<div class="rightView_kf_none">
 
 				</div>
@@ -752,6 +752,7 @@
 				smsCode:'',
 				buttonNav:[],
 				baseInfo:{},
+				kefuInfo:{},
 				BannerImg:{},
 			}
 		},

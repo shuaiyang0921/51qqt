@@ -587,7 +587,7 @@
 					 <div class="f16 registe_form_submit PingFangSCMedium colorbai" @click="submitfrom()">立即提交</div>
 				</div>
 			</div>
-			<div class="rightView">
+			<div class="rightView" v-if="kefuInfo[1]">
 				<div class="rightView_kf_none">
 
 				</div>
@@ -635,6 +635,7 @@
 				Solutionindex:0,
 				buttonNav:[],
 				baseInfo:{},
+				kefuInfo:{},
 			}
 		},
 		watch: {
