@@ -47,6 +47,19 @@ _getBaseInfo({})
     console.log(err,'_getBaseInfo获取数据异常');
 })
 
+var _getOtherSet = p => get('/websiteOther/noToken/queryPosition', p);
+_getOtherSet({positions:"1"})
+    .then(res => {
+        if (res.code==200){
+            vm.kefuInfo=res.result;
+            console.log(vm.kefuInfo,"数据kefuInfo")
+        }else {
+            vm.kefuInfo=[];
+        }
+    }).catch(err => {
+    console.log(err,'_OtherSet获取数据异常');
+})
+
 
 
 

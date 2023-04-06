@@ -574,15 +574,15 @@
 
 				</div>
 				<div class="rightView_trial" @click="showregistermodal(3)">
-					<div class="rightView_trialImg"><img src="https://51qqt.com/img/right_shiyong.png" class="imgsize"></div>
-					<div class="f14 rightView_trialText">免费试用</div>
+					<div class="rightView_trialImg"><img :src="kefuInfo[1][0].image" class="imgsize"></div>
+					<div class="f14 rightView_trialText">{{kefuInfo[1][0].text}}</div>
 				</div>
 				<div class="rightView_trial">
-					<div class="rightView_trialImg"><img src="https://51qqt.com/img/right_chatUs.png" class="imgsize"></div>
-					<div class="f14 rightView_trialText">联系我们</div>
+					<div class="rightView_trialImg"><img :src="kefuInfo[1][1].image" class="imgsize"></div>
+					<div class="f14 rightView_trialText">{{kefuInfo[1][1].text}}</div>
 					<div class="rightView_chatUs">
-						<div class="rightView_chatUsImg"><img src="https://51qqt.com/img/chatUs_erwei.png" class="imgsize"></div>
-						<div class="f14 tac rightView_chatUsText">采购数字化管理专家</div>
+						<div class="rightView_chatUsImg"><img :src="kefuInfo[1][2].image" class="imgsize"></div>
+						<div class="f14 tac rightView_chatUsText">{{kefuInfo[1][2].text}}</div>
 					</div>
 				</div>
 			</div>
