@@ -128,7 +128,7 @@
     width: 878px;
 }
 .videoListContainer{
-    color: #FFFFFF;background: rgba(34, 35, 37, 1);overflow-y: auto;height: 695px;padding: 19px 20px 0 20px;
+    color: #FFFFFF;background: rgba(34, 35, 37, 1);overflow-y: auto;height: 584px;padding: 19px 20px 0 20px;
 }
 .videoListItem{
     width: 282px;margin-bottom: 20px;overflow: hidden;
@@ -184,7 +184,7 @@
 @media screen and (max-width:1240px) {
     .caseStudy_mag{margin:13px 0!important;}
     .videoListContainer,.videoTitleText,.videoDescriptionText{display: none;}
-    .Vidio_padd_wei {background: rgba(0,0,0,0.5);}
+    
     .videoContainer{position: relative;padding: 0 16px;margin: auto;}
 }
 @media screen and (max-width:582px) {
