@@ -41,6 +41,9 @@
     font-size: 16px;
     color: #cccccc;
 }
+.cooperation_form_input>input{
+    font-size: 16px;
+}
 .cooperation_form_Vercode>input::placeholder{
     font-size: 16px;
     color: #cccccc;
