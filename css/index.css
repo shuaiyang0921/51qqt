@@ -369,4 +369,22 @@
     .logosize{height: 28px;width: 80px;}
     .manufacturing_adver_title{font-size: 24px;line-height: 33px;margin-bottom: 4px;}
     .footer_bottomtext{margin-left:0;}
-} 
+}
+.saasNavItemIcon{
+    width: 30px;height: 30px;position: absolute;top: -8px;left: -38px;
+}
+.paasNavItemIcon{
+    width: 30px;height: 30px;position: absolute;top: -8px;left: -38px;
+}
+.navIcon{
+    width: 20px;height: 20px;position: absolute;top: 2px;left: -25px;
+}
+.aboutNavIcon{
+    width: 20px;height: 20px;position: absolute;top: 2px;left: 5px;
+}
+.mobileSaasNavIcon{
+    width: 30px;height: 30px;position: absolute;top: -8px;left: -38px;
+}
+.mobilePaasNavIcon{
+    width: 44px;height: 44px;position: absolute;top: -27px;left: 200px;
+}

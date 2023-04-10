@@ -22,6 +22,7 @@ $(".hobverPopUp").mouseenter(function (){
     $(".homeHead_popUpStyle").attr("style","")
 })
 
+//获取友情链接数据
 var _getData = p => get('/websiteBlogroll/noToken/list', p);
 _getData({})
     .then(res => {
@@ -34,32 +35,48 @@ _getData({})
         console.log(err,'_getData获取数据异常');
     })
 
+//获取基本信息数据
 var _getBaseInfo = p => get('/baseInfo/websiteBaseInfo/noToken/queryBaseInfo', p);
 _getBaseInfo({})
     .then(res => {
         if (res.code==200){
             vm.baseInfo=res.result;
-            console.log(vm.baseInfo,"数据1")
         }else {
             vm.baseInfo={};
         }
     }).catch(err => {
     console.log(err,'_getBaseInfo获取数据异常');
 })
-
+//获取其他的一下设置信息
 var _getOtherSet = p => get('/websiteOther/noToken/queryPosition', p);
 _getOtherSet({positions:"1,2"})
     .then(res => {
         if (res.code==200){
             vm.kefuInfo=res.result;
-            console.log(vm.kefuInfo,"数据kefuInfo")
         }else {
             vm.kefuInfo=[];
         }
     }).catch(err => {
     console.log(err,'_OtherSet获取数据异常');
 })
+//获取顶部导航数据
+var _getTopNav = p => get('/websiteNav/noToken/queryByType', p);
+_getTopNav({
+    type:1,
+})
+    .then(res => {
+        console.log(res,"topNav")
+        if (res.code==200){
+            res.result.forEach(rel=>{
+                vm.topNav.push(rel);
+            })
+            vm.topNavShow=true;
+        }
 
+    })
+    .catch(err => {
+        console.log(err,'_getTopNav获取数据异常');
+    })
 
 
 

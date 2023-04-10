@@ -46,7 +46,10 @@ $(document).ready(function(){
         onOff = !onOff;
     });
     $('.homephoneHead_right').eq(0).show().siblings('.homephoneHead_right').hide();
-    $('.homephoneHead_left>a').click(function(){
+
+
+
+    $(document).on('click','.homephoneHead_left>a',function(){
         event.stopPropagation();
         index=$(this).index();
         // console.log(index,$('.homephoneHead_right'))
