@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="https://51qqt.com/css/animate.min.css" />
 		<link rel="stylesheet" href="https://51qqt.com/css/cooperation.css" />
 		<script src="https://51qqt.com/js/jquery.min.js"></script>
-		<script src="https://51qqt.com/js/load.js"></script>
+		<script src="./js/load.js"></script>
 		<script type="text/javascript">
 			load('axios')
 		</script>
@@ -531,7 +531,7 @@
 										<div class="f14 colorbai">{{itemchenk.title}}</div>
 									</div>
 								</div>
-								<a v-if="index==1" class="f14 colorbai home_Solution_centerbut" :href="'https://51qqt.com/solutions/'+pageName">方案详情</a>
+								<a v-if="itemdemo.link" class="f14 colorbai home_Solution_centerbut" :href="itemdemo.link">方案详情</a>
 							</div>
 							<div class="home_Solution_right flex-column">
 								<div class="home_Solution_rightimg" v-for="itemlogos in itemdemo.logos"><img :src="itemlogos" class="imgsize" alt="itemlogos" style="border-radius: 4px;"></div>
@@ -1442,4 +1442,4 @@
 		},
 	})
 </script>
-<script src="https://51qqt.com/js/navigation.js"></script>
+<script src="./js/navigation.js"></script>
