@@ -26,7 +26,7 @@
 		</script>
 	</head>
 	<body>
-		<div id="app">
+		<div id="app" v-cloak>
 			<div class="header">
                 <div class="flex-column flex-between homeHead f16 maxwidth">
                     <div class="flex-column flex-middle">
@@ -573,7 +573,7 @@
 					<div class="f16 registe_form_submit PingFangSCMedium colorbai" @click="submitfrom()">立即提交</div>
 				</div>
 			</div>
-			<div id="companyVideoId" class="register_modal flex-column flex-middle" v-show="showVidio&&aboutInfo[0]">
+			<div id="companyVideoId" class="register_modal flex-column flex-middle" v-show="showVidio" v-if="aboutInfo[0]">
 				<div class="Vidio_padd flex-middle flex-center porelative">
 					<div>
 						<div class="PingFangSCMedium tac home_title colorbai phonehide" style="padding-top: 30px;" v-html="aboutInfo[0]?aboutInfo[0].title:''"></div>
@@ -644,7 +644,6 @@
 			this.getdata()
 		},
 		mounted(){
-
 			getSeo(2)
 			this.getBottomNav()
 		},
@@ -654,16 +653,16 @@
 				_getBottomNav({
 					type:2,
 				})
-						.then(res => {
-							console.log(res)
-							if (res.code==200){
-								this.buttonNav=res.result;
-							}
+				.then(res => {
+					console.log(res)
+					if (res.code==200){
+						this.buttonNav=res.result;
+					}
 
-						})
-						.catch(err => {
-							console.log(err,'_getBottomNav获取数据异常');
-						})
+				})
+				.catch(err => {
+					console.log(err,'_getBottomNav获取数据异常');
+				})
 			},
 			changenavicon(e){
 				if(e.currentTarget.style.transform=='translateY(4px) rotate(180deg)'){
@@ -690,6 +689,7 @@
 					that.suppliernumData = res.result['2']
 					that.supplierListData = res.result['3']
 					that.aboutListData = res.result['4']
+					that.$refs.vueRef.pause();
 				}).catch(err => {
 					console.log(err,'_getData获取数据异常');
 				})

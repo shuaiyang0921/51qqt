@@ -1,3 +1,6 @@
+[v-cloak]{
+    display: none;
+}
 .colorhui{color: #8e8e8e;}
 .colorgary{color: #555555;}
 .colorbai{color: #FFFFFF!important;}
@@ -123,7 +126,7 @@
 /* 导航解决方案弹窗 */
 .homeHead_solutionPopUp_left{background: linear-gradient(135deg, rgba(0,85,255,0) 0%, rgba(0,85,255,0.04) 100%);}
 .homeHead_solutionPopUp_leftTitle{padding: 37px 30px;width: 160px;height: 146px;background: no-repeat url(https://51qqt.com/img/home8.png);background-size:100%;}
-.homeHead_solutionPopUp_rightText{padding: 20px 10px 20px 40px;width: 170px;cursor: pointer;}
+.homeHead_solutionPopUp_rightText{padding: 20px 10px 10px 40px;width: 170px;cursor: pointer;}
 .homeHead_solutionPopUp_rightText:hover{background: #F7f8fa;}
 .homeHead_solutionPopUp_rightText:hover .homeHead_productpopUp_title{color: #005CEF;}
 .homeHead_solutionPopUp_subheading{color: #888888;}

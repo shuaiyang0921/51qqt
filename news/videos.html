@@ -25,7 +25,7 @@
 		</script>
 	</head>
 	<body>
-		<div id="app">
+		<div id="app" v-cloak>
 			<div class="header">
 				<div class="flex-column flex-between homeHead f16 maxwidth">
 					<div class="flex-column flex-middle">
@@ -260,7 +260,7 @@
 			<div class="caseStudyInfo_bg " v-if="InfoData.length">
 				<div class="phone_navs_relative">
 					<div class="flex-column f16 flex-middle bgbai news_navs maxwidth">
-						<div v-for="item in industryList" :class="typeIndex==item.type?'news_navschenck':''" @mouseenter="changetype(item.type)" >{{item.name}}</div>
+						<div v-for="item in industryList" :class="typeIndex==item.type?'news_navschenck':''" @click="changetype(item.type)" >{{item.name}}</div>
 					</div>
 				</div>
 				<div class="flex-column flex-top maxwidth" v-if="typeIndex!='videos.html'">
