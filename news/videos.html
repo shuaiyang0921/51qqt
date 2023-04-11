@@ -717,6 +717,14 @@
 				this.showVidio = true
 				console.log('1111')
 				this.videoList=[]
+				var _viewsCount = p => get('/information/noToken/viewsCount', p);
+				_viewsCount({
+					id:item.id
+				}).then(res => {
+					console.log("数据统计返回数据：",res)
+				}).catch(err => {
+					console.log(err,'_viewsCount获取数据异常');
+				})
 				this.getVideoData()
 			},
 			hidevidiomodal(){
