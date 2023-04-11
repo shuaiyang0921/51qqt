@@ -24,7 +24,7 @@
 .paddboth{padding: 0 15px;}
 .padbott{padding-bottom: 55px;}
 .imgsize{width: 100%;height: 100%;}
-.xian_head{border-bottom: 1px dashed #EBEBEB;}
+.xian_head{border-bottom: 1px solid #EBEBEB;}
 .xian_headsolid{border-bottom: 1px solid #EBEBEB;}
 .xian_footer{border-bottom: 1px solid rgba(255,255,255,0.1);}
 .porelative{position: relative;}

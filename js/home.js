@@ -82,7 +82,7 @@ $(document).ready(function(){
     //     event.stopPropagation();
     //     index=$(this).index();
     //     console.log(index, $(this)[0].style.transform)
-    //     if($(this)[0].style.transform=='translateY(8px) rotate(180deg)'){
+    //     if($(this)[0].style.transform=='translateY(4px) rotate(180deg)'){
     //         $(this).parent().siblings(".shownavchild_text").hide();
     //         $(this).parent().css("color","#222222");
     //         $(this).css("transform","none");
@@ -90,7 +90,7 @@ $(document).ready(function(){
     //         console.log($(this).parent())
     //         $(this).parent().siblings(".shownavchild_text").show()
     //         $(this).parent().css("color","#005CEF");
-    //         $(this).css("transform","translateY(8px) rotate(180deg)");
+    //         $(this).css("transform","translateY(4px) rotate(180deg)");
     //     }
     // });
     
