@@ -34,7 +34,7 @@
 .PaaS_img{width: 100%;}
 /* .hideModel>div{display: none;} */
 /* .showModel{display: block!important;} */
-.mkt_registertil{color: #005CEF;background: #FFFFFF;}
+.mkt_registertil{color: #005CEF;background: #FFFFFF;padding: 13px 54px;width: 64px;}
 .scf_bgImg{padding: 0 20px 20px 20px;}
 .scf_navsBg{padding: 60px 0;}
 .scf_navs{border-bottom: 1px solid #EBEBEB;margin-bottom: 40px;}
@@ -102,9 +102,9 @@
 .Q3k_navList_img{width: 520px;height: 310px;margin: 35px 45px 35px 0;}
 .purchase_navList_rightText{color: #555555;line-height: 24px;margin-bottom: 20px;}
 .darentong_change_leftwid{width: calc(100% - 408px);}
-.darentong_change_left{padding: 32px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;margin: 12px;width: calc(50% - 88px);}
+.darentong_change_left{padding: 32px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;margin: 12px;width: calc(50% - 88px);-webkit-transition: all .3s; transition: all .3s;}
 .darentong_change_left:hover{box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.5);transform: translateY(-10px);}
-.darentong_change_right{padding: 32px;width: 320px;height: 252px;background: url(https://51qqt.com/images/purchase/darentong2.png) no-repeat center center;background-size: cover;margin: 12px;box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;}
+.darentong_change_right{padding: 32px;width: 320px;height: 252px;background: url(https://51qqt.com/images/purchase/darentong2.png) no-repeat center center;background-size: cover;margin: 12px;box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.1);border-radius: 4px;-webkit-transition: all .3s; transition: all .3s;}
 .darentong_change_right:hover{box-shadow: 0px 8px 20px 0px rgba(166,180,208,0.5);transform: translateY(-10px);}
 .darentong_change_img{width: 48px;height: 48px;margin-right: 24px;}
 .darentong_change_title{line-height: 30px;margin-bottom: 8px;}
