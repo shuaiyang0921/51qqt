@@ -700,6 +700,8 @@
 								if (res.code==200){
 									window.alert('提交成功！');
 									this.showmodel = false
+								}else if (res.code==1000){
+									window.alert('已提交信息，无需重复提交！');
 								}else {
 									window.alert('验证码错误！');
 								}
