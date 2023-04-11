@@ -81,7 +81,7 @@
 .homephoneHead_right_title{height: 20px;line-height: 20px;padding-bottom: 20px;border-bottom: 1px solid #EBEBEB;}
 .homephoneHead_navs{padding: 0px 24px;height: calc(100% - 79px);overflow: auto;}
 .homephoneHead_nav{padding: 16px 0px;color: #222;}
-.homephoneHead_navicon{width: 10px;height: 10px;}
+.homephoneHead_navicon{width: 10px;height: 7px;}
 .homephoneHead_navchild{margin-left: 16px;display: none;}
 .homephoneHead_navchild a{display: block;}
 .homephoneHead_navchild_title{font-weight: 400;}
