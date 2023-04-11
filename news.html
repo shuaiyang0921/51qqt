@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="https://51qqt.com/css/caseStudy.css">
 		<link rel="stylesheet" href="https://51qqt.com/css/animate.min.css" />
 		<script src="https://51qqt.com/js/jquery.min.js"></script>
-		<script src="https://51qqt.com/js/load.js"></script>
+		<script src="./js/load.js"></script>
 		<script type="text/javascript">
 			load('axios')
 		</script>
@@ -377,7 +377,12 @@
 				<div class="flex-column flex-top maxwidth" v-if="typeIndex!='videos.html'">
 					<div class="news_left">
 						<div class="flex-column flex-top news_list" v-for="item in InfoData"  v-if="InfoData.length!=0">
-                            <div class="news_listimg" @click="tznewsInfo(item)"><img :src="item.image" class="imgsize" :alt="item.title"></div>
+                            <div class="news_listimg" @click="tznewsInfo(item)">
+								<div class="informationTop">
+									置顶
+								</div>
+								<img :src="item.image" class="imgsize" :alt="item.title">
+							</div>
                             <div class="news_listright">
                                 <div class="f18 homeHead_appleStytle news_listright_title" @click="tznewsInfo(item)">{{item.title}}</div>
                                 <div class="f14 news_listright_text">{{item.description}}</div>
@@ -934,4 +939,4 @@
 		computed:{},
 	})
 </script>
-<script src="https://51qqt.com/js/navigation.js"></script>
+<script src="./js/navigation.js"></script>

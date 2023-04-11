@@ -51,7 +51,7 @@
 .news_navs{margin-bottom: 24px;border-radius: 4px;}
 .news_navs>div{padding: 18px 20px;border-bottom: 2px solid #FFFFFF;margin-right: 10px;line-height: 22px;cursor: pointer;}
 .news_navschenck{font-size: 20px;color: #005CEF;font-weight: 500;border-bottom: 2px solid #005CEF!important;}
-.news_listimg{width: 280px;height: 160px;border-radius: 4px;margin-right: 30px;overflow: hidden;}
+.news_listimg{width: 280px;height: 160px;border-radius: 4px;margin-right: 30px;overflow: hidden;position: relative;}
 .news_list{padding: 24px 0;border-bottom: 1px solid #EBEBEB;}
 .news_listright{width: calc(100% - 310px);}
 .news_listright_title{height: 26px;line-height: 26px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;margin-bottom: 10px;cursor: pointer}
@@ -235,4 +235,7 @@
     .caseStudyInfo_left_text{font-size: 14px;line-height: 24px;}
     .next_news{display: none;}
     .previous_news{display: none;}
+}
+.informationTop{
+    position: absolute;top: 8px;left: 8px;background-color: #FFA328;color: white;font-weight: 400;font-size: 14px;line-height:22px;border-radius: 2px;text-align:center;width: 40px;height: 22px;background: linear-gradient(270deg, #FFA328 0%, #FF761A 100%);z-index: 10000;
 }
