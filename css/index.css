@@ -98,7 +98,9 @@
 .homeHead_productpopUp_rightText>a{margin-bottom: 14px;display: block;cursor: pointer;}
 .homeHead_productpopUp_rightText>a:hover{color: #005CEF;}
 .homeHead_productpopUp_title{margin-bottom: 4px!important;}
+.homeHead_productpopUp_title:hover a{color: #005CEF;}
 .homeHead_productpopUp_title:hover .iconright{margin-left:15px}
+.homeHead_productpopUp_title:hover .iconrightgary{margin-left:15px;background: no-repeat url(https://51qqt.com/img/home46.png);background-size:100%;}
 .homeHead_productpopUp_titleicon1{position: relative;}
 .homeHead_productpopUp_titleicon1::before{content:'';background: no-repeat url(https://51qqt.com/img/home74.png);background-size:100%;width: 30px;height: 30px;position: absolute;top: -8px;left: -38px;}
 .homeHead_productpopUp_titleicon2{position: relative;}
