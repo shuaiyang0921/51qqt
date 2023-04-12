@@ -237,5 +237,5 @@
     .previous_news{display: none;}
 }
 .informationTop{
-    position: absolute;top: 12px;left: 12px;bcolor: white;font-weight: 400;font-size: 14px;line-height:23px;border-radius: 2px;text-align:center;width: 40px;height: 22px;background: linear-gradient(270deg, #FFA328 0%, #FF761A 100%);z-index: 10000;
+    position: absolute;top: 12px;left: 12px;bcolor: white;font-weight: 400;font-size: 14px;line-height:23px;border-radius: 2px;text-align:center;width: 40px;height: 22px;background: linear-gradient(270deg, #FFA328 0%, #FF761A 100%);z-index: 10;
 }
