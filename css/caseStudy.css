@@ -189,7 +189,7 @@
     .videoContainer{position: relative;padding: 0 16px;margin: auto;}
 }
 @media screen and (max-width:582px) {
-    .caseStudy_adver{text-align: center;background: url(https://51qqt.com/images/caseStudy/caseStudy_bg.png) no-repeat center center;background-size: cover;height: 280px;margin-top: 69px;}
+    .caseStudy_adver{text-align: center;background: url(https://51qqt.com/images/caseStudy/caseStudy_bg.png) no-repeat center center;background-size: cover;height: 280px;margin-top: 57px;}
     .caseStudy_adver_title{font-size: 24px;margin-top: 80px;margin-bottom: 16px;line-height: 33px;height: 33px;}
     .caseStudy_adver_xian{width: 48px;margin: 0 auto;margin-bottom: 16px;}
     .caseStudy_adver_text{font-size: 14px;margin-bottom: 4px;}

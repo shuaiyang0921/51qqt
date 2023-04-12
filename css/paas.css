@@ -184,8 +184,8 @@
 }
 @media screen and (max-width:582px) {
     .manufacturing_adver_title{font-size: 24px;line-height: 33px;margin-bottom: 8px;}
-    .mkt_adver{padding: 194px 0px 24px 0px;margin-top: 69px;text-align: center;}
-    .supplier_adver {padding: 194px 0px 24px 0px;margin-top: 69px;text-align: center;height: auto;height: auto;}
+    .mkt_adver{padding: 194px 0px 24px 0px;margin-top: 57px;text-align: center;}
+    .supplier_adver {padding: 194px 0px 24px 0px;margin-top: 57px;text-align: center;height: auto;height: auto;}
     .paas_adver_left{padding: 0 20px;width: calc(100% - 40px);}
     .mkt_adver_buts{margin-bottom: 20px;justify-content: space-between;}
     .mkt_adver_buts>div{font-size: 14px;margin: 0;padding: 4px 15px;width: 70px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}

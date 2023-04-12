@@ -43,7 +43,7 @@
     .joinUs_img_mag{margin: 0;}
 }
 @media screen and (max-width:582px) {
-    .joinUs_banner{height: 200px;margin-top: 69px;}
+    .joinUs_banner{height: 200px;margin-top: 57px;}
     .joinUs_banner_text{font-size: 24px;height: 33px;line-height: 33px;margin-top:62px;}
     .joinUs_banner_but{margin-top: 20px;}
     .joinUs_post{padding:30px 0;}
