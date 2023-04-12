@@ -44,7 +44,7 @@
 												<div class="homeHead_productpopUp_saas">
 													<div class="f18 homeHead_appleStytle homeHead_productpopUp_left">{{topNav[0].childNavs[0].name}}</div>
 												</div>
-												<div class="homeHead_productpopUp_right f14 flex-column flex-between">
+													<div class="homeHead_productpopUp_right f14 flex-column flex-between">
 													<div class="homeHead_productpopUp_rightText">
 														<div style="position: absolute"><img :src="topNav[0].childNavs[0].childNavs[0].icon" class="saasNavItemIcon"></div>
 														<div class="homeHead_productpopUp_title homeHead_appleStytle colorblue"><a :href="topNav[0].childNavs[0].childNavs[0].link">{{topNav[0].childNavs[0].childNavs[0].name}}</a><span class="iconright"></span></div>
@@ -74,7 +74,6 @@
 															<div class="f12 homeHead_productpopUp_subheading" v-html="topNav[0].childNavs[0].childNavs[4].description"></div>
 														</div>
 													</div>
-
 												</div>
 											</div>
 											<div class="flex-column">
@@ -315,7 +314,7 @@
 				<div class="maxwidth">
 					<div class="PingFangSCMedium tac home_title colorbai">{{purchaseImgData[0]?purchaseImgData[0].bigTitle:''}}</div>
 					<div class="flex-column flex-center">
-						<div class="flex-column darentong_change_leftwid" >
+						<div class="flex-column darentong_change_leftwid">
 							<div class="darentong_change_left flex-column flex-top" v-for="(item,index) in purchaseImgData" v-if="index<=3">
 								<div class="darentong_change_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>
 								<div class="darentong_change_righttext">

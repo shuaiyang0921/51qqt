@@ -44,7 +44,7 @@
 												<div class="homeHead_productpopUp_saas">
 													<div class="f18 homeHead_appleStytle homeHead_productpopUp_left">{{topNav[0].childNavs[0].name}}</div>
 												</div>
-												<div class="homeHead_productpopUp_right f14 flex-column flex-between">
+													<div class="homeHead_productpopUp_right f14 flex-column flex-between">
 													<div class="homeHead_productpopUp_rightText">
 														<div style="position: absolute"><img :src="topNav[0].childNavs[0].childNavs[0].icon" class="saasNavItemIcon"></div>
 														<div class="homeHead_productpopUp_title homeHead_appleStytle colorblue"><a :href="topNav[0].childNavs[0].childNavs[0].link">{{topNav[0].childNavs[0].childNavs[0].name}}</a><span class="iconright"></span></div>
@@ -74,7 +74,6 @@
 															<div class="f12 homeHead_productpopUp_subheading" v-html="topNav[0].childNavs[0].childNavs[4].description"></div>
 														</div>
 													</div>
-
 												</div>
 											</div>
 											<div class="flex-column">
@@ -276,48 +275,74 @@
 			</div>
 			<div v-if="purchaseMallData[0]" class="padBg">
 				<div class="PingFangSCMedium tac home_title">商城云，赋能企业智能化采购</div>
-				<div class="flex-column flex-center">
-					<div class="mall_navs">
+				<div class="flex-column flex-center" style="width: 100%;">
+					<div class="mall_navs_magright mall_navs">
 						<div class="mall_navs_imgtitle"><img v-if="purchaseMallData[0]" :src="purchaseMallData[0]?purchaseMallData[0].image:''" class="imgsize" :alt="purchaseMallData[0]?purchaseMallData[0].title:''"></div>
-						<div class="f24 PingFangSCMedium flex-column flex-left">
+						<div class="f24 PingFangSCMedium flex-column flex-middle">
 							<div class="mall_navs_img">
 								<img :src="purchaseMallData[0]?purchaseMallData[0].icon:''" class="imgsize" :alt="purchaseMallData[0]?purchaseMallData[0].title:''">
 							</div>
 							<div v-html="purchaseMallData[0]?purchaseMallData[0].title:''"></div>
 						</div>
-						<div class="mall_navs_text f16" v-html="purchaseMallData[0]?purchaseMallData[0].intro:''"></div>
+						<div class="f16 mall_navs_text" v-html="purchaseMallData[0]?purchaseMallData[0].intro:''"></div>
 						<div class="pushase_more_link">
-							<a v-if="purchaseMallData[0]&&purchaseMallData[0].link" class="f14 colorblue home_more" :href="purchaseMallData[0]?purchaseMallData[0].link:''"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="https://51qqt.com/img/home83.png" class="imgsize" alt="了解更多"></span></a>
-							<a v-else class="f14 colorblue home_more"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="https://51qqt.com/img/home83.png" class="imgsize" alt="了解更多"></span></a>
+							<a v-if="purchaseMallData[0]&&purchaseMallData[0].link" class="home_more f14 colorblue" style="float: left" :href="purchaseMallData[0]?purchaseMallData[0].link:''">
+								<span class="purchase_more">了解更多</span>
+								<span class="home_product_saasMoreicon">
+									<img src="https://51qqt.com/img/home83.png" class="imgsize" alt="了解更多">
+								</span>
+							</a>
+							<a v-else class="home_more f14 colorblue" style="float: left">
+								<span class="purchase_more">了解更多</span>
+								<span class="home_product_saasMoreicon">
+									<img src="https://51qqt.com/img/home83.png" class="imgsize" alt="了解更多">
+								</span>
+							</a>
 						</div>
 					</div>
-					<div>
-						<div class="mall_navs" v-for="(item,index) in purchaseMallData" v-if="index==1||index==2">
-							<div class="f24 PingFangSCMedium flex-column flex-left">
+					<div class="phone_mall_navswid">
+						<div class="mall_navs" v-for="(item,index) in purchaseMallData" v-if="index==1||index==2" :style="index==1&&clientWidth>582?'margin-bottom:24px':index==1&&clientWidth<=582?'margin-bottom:16px':''">
+							<div class="f24 PingFangSCMedium flex-column flex-middle">
 								<div class="mall_navs_img">
 									<img :src="item.icon" class="imgsize" :alt="item.title">
 								</div>
 								<div v-html="item.title"></div>
 							</div>
-							<div class="mall_navs_text mall_navs_textwidth f16" v-html="item.intro"></div>
+							<div class="f16 mall_navs_text mall_navs_textwidth" v-html="item.intro"></div>
 							<div class="pushase_more_link">
-								<a v-if="item.link" class="f14 colorblue home_more" :href="item.link"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="https://51qqt.com/img/home83.png" class="imgsize" alt="了解更多"></span></a>
-								<a v-else class="f14 colorblue home_more"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="https://51qqt.com/img/home83.png" class="imgsize" alt="了解更多"></span></a>
+								<a v-if="item.link" class="home_more f14 colorblue" style="float: left" :href="item.link">
+									<span class="purchase_more">了解更多</span>
+									<span class="home_product_saasMoreicon"><img src="https://51qqt.com/img/home83.png" class="imgsize" alt="了解更多">
+									</span>
+								</a>
+								<a v-else class="home_more f14 colorblue" style="float: left">
+									<span class="purchase_more">了解更多</span>
+									<span class="home_product_saasMoreicon"><img src="https://51qqt.com/img/home83.png" class="imgsize" alt="了解更多">
+									</span>
+								</a>
 							</div>
 						</div>
 					</div>
-					<div class="flex-column flex-center">
-						<div class="mall_navs" v-for="(item,index) in purchaseMallData" v-if="index>2">
-							<div class="f24 PingFangSCMedium flex-column flex-left">
+					<div class="flex-column flex-center last_mall_navs">
+						<div class="mall_navs_magright mall_navs" v-for="(item,index) in purchaseMallData" v-if="index>2">
+							<div class="f24 PingFangSCMedium flex-column flex-middle">
 								<div class="mall_navs_img">
 									<img :src="item.icon" class="imgsize" :alt="item.title">
 								</div>
 								<div v-html="item.title"></div>
 							</div>
-							<div class="mall_navs_text mall_navs_textwidth f16" v-html="item.intro"></div>
+							<div class="f16 mall_navs_text mall_navs_textwidth " v-html="item.intro"></div>
 							<div class="pushase_more_link">
-								<a v-if="item.link" class="f14 colorblue home_more" :href="item.link"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="https://51qqt.com/img/home83.png" class="imgsize" alt="了解更多"></span></a>
-								<a v-else class="f14 colorblue home_more"><span class="purchase_more">了解更多</span><span class="home_product_saasMoreicon"><img src="https://51qqt.com/img/home83.png" class="imgsize" alt="了解更多"></span></a>
+								<a v-if="item.link" class="home_more f14 colorblue" style="float: left" :href="item.link">
+									<span class="purchase_more">了解更多</span>
+									<span class="home_product_saasMoreicon"><img src="https://51qqt.com/img/home83.png" class="imgsize" alt="了解更多">
+									</span>
+								</a>
+								<a v-else class="home_more f14 colorblue" style="float: left">
+									<span class="purchase_more">了解更多</span>
+									<span class="home_product_saasMoreicon"><img src="https://51qqt.com/img/home83.png" class="imgsize" alt="了解更多">
+									</span>
+								</a>
 							</div>
 						</div>
 					</div>

@@ -44,7 +44,7 @@
 												<div class="homeHead_productpopUp_saas">
 													<div class="f18 homeHead_appleStytle homeHead_productpopUp_left">{{topNav[0].childNavs[0].name}}</div>
 												</div>
-												<div class="homeHead_productpopUp_right f14 flex-column flex-between">
+													<div class="homeHead_productpopUp_right f14 flex-column flex-between">
 													<div class="homeHead_productpopUp_rightText">
 														<div style="position: absolute"><img :src="topNav[0].childNavs[0].childNavs[0].icon" class="saasNavItemIcon"></div>
 														<div class="homeHead_productpopUp_title homeHead_appleStytle colorblue"><a :href="topNav[0].childNavs[0].childNavs[0].link">{{topNav[0].childNavs[0].childNavs[0].name}}</a><span class="iconright"></span></div>
@@ -74,7 +74,6 @@
 															<div class="f12 homeHead_productpopUp_subheading" v-html="topNav[0].childNavs[0].childNavs[4].description"></div>
 														</div>
 													</div>
-
 												</div>
 											</div>
 											<div class="flex-column">
@@ -288,7 +287,7 @@
 					</div>
 				</div>
 			</div>
-			<div v-if="supplierImgData[0]" class="padBg phonehide wow animate__fadeInUp" data-wow-duration="1s">
+			<div v-if="supplierImgData[0]" class="padBg phonehide wow animate__fadeInUp maxwidth" data-wow-duration="1s">
 				<div class="PingFangSCMedium tac home_title">{{supplierImgData[0]?supplierImgData[0].bigTitle:''}}</div>
 				<div class=""><img :src="supplierImgData[0]?supplierImgData[0].image:''" class="imgsize" :alt="supplierImgData[0]?supplierImgData[0].bigTitle:''"></div>
 			</div>
