@@ -307,13 +307,14 @@
 	<iframe src="https://51qqt.com/iframe/achieveCust.html?name=14" class="achieveCuststy wow animate__fadeInUp" data-wow-duration="1s" frameborder="0" scrolling="no"></iframe>
 	<iframe src="https://51qqt.com/iframe/companys.html" class="companyStyle wow animate__fadeInUp" data-wow-duration="1s" frameborder="0" scrolling="no"></iframe>
 	<div class="wow animate__fadeInUp" data-wow-duration="1s">
-		<div class="home_register colorbai" >
-			<div class="maxwidth flex-column flex-between flex-middle">
+		<div v-if="bottomBanner" class="home_register colorbai" :style="{backgroundImage: 'url('+bottomBanner[0].image+')'}">
+			<div v-if="bottomBanner[0].showButton" class="maxwidth flex-column flex-between flex-middle">
 				<div class="PingFangSCMedium">
-					<div class="home_register_text">开启数字化供应链与采购新体验</div>
-					<div class="tar">赋能企业数字化转型与变革</div>
+					<div v-if="bottomBanner[0].title" class="home_register_text" v-html="bottomBanner[0].title"></div>
+					<div v-if="bottomBanner[0].intro" class="tar" v-html="bottomBanner[0].intro"></div>
 				</div>
-				<div class="f18 register_bottom home_register_but homeHead_appleStytle colorbai" @click="showregistermodal(5)">注册体验</div>
+				<div class="f18 register_bottom home_register_but homeHead_appleStytle colorbai" @click="showregistermodal('',5,'')">
+					{{bottomBanner[0].buttonText}}</div>
 			</div>
 		</div>
 		<div class="bgfooter">

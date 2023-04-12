@@ -65,7 +65,6 @@ _getTopNav({
     type:1,
 })
     .then(res => {
-        console.log(res,"topNav")
         if (res.code==200){
             res.result.forEach(rel=>{
                 vm.topNav.push(rel);
@@ -78,6 +77,21 @@ _getTopNav({
         console.log(err,'_getTopNav获取数据异常');
     })
 
+//获取底部公用的banner
+var _getBottomNav = p => get('/banner/noToken/queryByType', p);
+_getBottomNav({
+    bannerType:2,
+})
+    .then(res => {
+        if (res.code==200){
+            console.log(res.result)
+            vm.bottomBanner=res.result;
+        }
+
+    })
+    .catch(err => {
+        console.log(err,'_getBottomNav获取数据异常');
+    })
 
 
 //
