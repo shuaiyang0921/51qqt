@@ -24,7 +24,7 @@
 .paddboth{padding: 0 15px;}
 .padbott{padding-bottom: 55px;}
 .imgsize{width: 100%;height: 100%;}
-.xian_head{border-bottom: 1px dashed #EBEBEB;}
+.xian_head{border-bottom: 1px solid #EBEBEB;}
 .xian_headsolid{border-bottom: 1px solid #EBEBEB;}
 .xian_footer{border-bottom: 1px solid rgba(255,255,255,0.1);}
 .porelative{position: relative;}
@@ -42,7 +42,7 @@
 .PingFangSCMediumNormal{font-weight: normal;}
 .PingFangSCMediumBanner{font-weight: 500;}
 .homeHead{}/*box-shadow: 0px 3px 14px 0px rgba(0,0,0,0.05);*/
-.homephoneHead{padding: 20px 24px;display: none;}
+.homephoneHead{padding: 14px 20px;display: none;}
 .menu_buttonstyle{width: 55px;height: 19px;}
 .menu_button {cursor: pointer;margin-left: 30px;position: absolute;}
 .menu_button .bar:nth-of-type(1) { margin-top: 0px;}
@@ -81,7 +81,7 @@
 .homephoneHead_right_title{height: 20px;line-height: 20px;padding-bottom: 20px;border-bottom: 1px solid #EBEBEB;}
 .homephoneHead_navs{padding: 0px 24px;height: calc(100% - 79px);overflow: auto;}
 .homephoneHead_nav{padding: 16px 0px;color: #222;}
-.homephoneHead_navicon{width: 10px;height: 10px;}
+.homephoneHead_navicon{width: 10px;height: 7px;}
 .homephoneHead_navchild{margin-left: 16px;display: none;}
 .homephoneHead_navchild a{display: block;}
 .homephoneHead_navchild_title{font-weight: 400;}
@@ -98,7 +98,9 @@
 .homeHead_productpopUp_rightText>a{margin-bottom: 14px;display: block;cursor: pointer;}
 .homeHead_productpopUp_rightText>a:hover{color: #005CEF;}
 .homeHead_productpopUp_title{margin-bottom: 4px!important;}
+.homeHead_productpopUp_title:hover a{color: #005CEF;}
 .homeHead_productpopUp_title:hover .iconright{margin-left:15px}
+.homeHead_productpopUp_title:hover .iconrightgary{margin-left:15px;background: no-repeat url(https://51qqt.com/img/home46.png);background-size:100%;}
 .homeHead_productpopUp_titleicon1{position: relative;}
 .homeHead_productpopUp_titleicon1::before{content:'';background: no-repeat url(https://51qqt.com/img/home74.png);background-size:100%;width: 30px;height: 30px;position: absolute;top: -8px;left: -38px;}
 .homeHead_productpopUp_titleicon2{position: relative;}
@@ -199,7 +201,7 @@
 .footer_rightstyle{width: calc(100% - 380px);margin-bottom: 16px;}
 .footer_logosize{width: 120px;height: 40px;margin-bottom: 20px;}
 .footer_textpadd{margin: 10px 0 32px 0;}
-.footer_contactimg{width: 120px;height: 120px;}
+.footer_contactimg{width: 120px;height: 120px;border-radius: 2px;}
 .footer_contactimgpadd{margin-right: 30px;margin-bottom: 15px;}
 .footer_linkstyle{margin-top: 20px;color: rgba(255,255,255,0.6);}
 .footer_linkmag{margin-right: 24px;}

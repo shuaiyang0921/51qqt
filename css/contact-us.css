@@ -16,7 +16,7 @@
 .contactUs_workImg{width: 384px;height: 160px;}
 .contactUs_workTitle{height: 30px;font-size: 22px;line-height: 30px;margin: 24px 40px 12px 40px;}
 .contactUs_workText{color: #555555;line-height: 24px;height: 48px;margin: 0 40px;width: 304px;}
-.contactUs_bottom{margin-top: 35px;}
+.contactUs_bottom{margin-top: 35px;color: #222222;}
 @media screen and (max-width:582px) {
     .contactUs_bg{margin:0 16px 30px 16px;padding: 30px 16px;border-radius: 0px 0px 40px 40px;}
     .contactUs_workImg{width: 100%;height: auto;}
