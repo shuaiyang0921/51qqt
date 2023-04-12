@@ -378,7 +378,7 @@
 					<div class="news_left">
 						<div class="flex-column flex-top news_list" v-for="item in InfoData"  v-if="InfoData.length!=0">
                             <div class="news_listimg" @click="tznewsInfo(item)">
-								<div class="informationTop">
+								<div v-if="item.top==1" class="informationTop">
 									置顶
 								</div>
 								<img :src="item.image" class="imgsize" :alt="item.title">
