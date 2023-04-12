@@ -147,7 +147,7 @@
 														<img :src="aboutNavItem.icon" class="aboutNavIcon">
 													</div>
 													<div class="f14 homeHead_aboutUsPopUp_title homeHead_appleStytle">{{aboutNavItem.name}}<span class="iconrightgary"></span></div>
-													<div class="f12 homeHead_solutionPopUp_subheading">{{aboutNavItem.description}}</div>
+													<div class="f12 homeHead_solutionPopUp_subheading" v-html="aboutNavItem.description"></div>
 												</a>
 											</div>
 										</div>
