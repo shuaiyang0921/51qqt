@@ -1053,13 +1053,6 @@
 						}
 					})
 
-					var backgroundImage=that.SolutionList[1][1][0].backgroundImage;
-					backgroundImage=backgroundImage.replace("@","\\@");
-					backgroundImage=backgroundImage.replace("(","\\(");
-					backgroundImage=backgroundImage.replace(")","\\)");
-					setTimeout(()=>{
-						$('#solutionBackgroundImage').attr("style","background-image: url("+backgroundImage+")")
-					},1)
 
 					that.information1 = res.result['首页-精选资讯']['企业资讯'];
 					that.information2 = res.result['首页-精选资讯']['市场活动'];
@@ -1164,11 +1157,6 @@
 				this.navstopIndex = index
 				this.Solutionindex = 0
 
-				var backgroundImage=item[1][0].backgroundImage;
-				backgroundImage=backgroundImage.replace("@","\\@");
-				backgroundImage=backgroundImage.replace("(","\\(");
-				backgroundImage=backgroundImage.replace(")","\\)");
-				$('#solutionBackgroundImage').attr("style","background-image: url("+backgroundImage+")")
 			},
 			changeSolution(index,item,name){
 				item.forEach(i=>{
@@ -1176,11 +1164,6 @@
 						this.pageName=this.pageNameMap[i.name]
 					}
 				})
-				var backgroundImage=item[index].backgroundImage;
-				backgroundImage=backgroundImage.replace("@","\\@");
-				backgroundImage=backgroundImage.replace("(","\\(");
-				backgroundImage=backgroundImage.replace(")","\\)");
-				$('#solutionBackgroundImage').attr("style","background-image: url("+backgroundImage+")")
 				this.Solutionindex = index
 				$('.home_Solutionleft>div').eq(this.Solutionindex).addClass('bgblue').siblings().removeClass('bgblue')
 				// $('.home_Solution_item .home_Solution_rightwidth').eq(index).css("display","flex").siblings().css("display","none");
