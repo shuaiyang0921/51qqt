@@ -165,7 +165,7 @@
                             <div class="homeHead_phone homeHead_appleStytle f18">400-835-1881</div>
 						</a>
                         <a class="f16 homeHead_logintil" :href="baseInfo.fbk1">登录</a>
-                        <div class="f14 homeHead_registertil" @click="showregistermodal('',1,'')">注册体验</div>
+                        <div class="f14 homeHead_registertil" @click="showregistermodal(1)">注册体验</div>
                     </div>
                 </div>
 				<div class="bgbai homephoneHead_height">
@@ -374,7 +374,7 @@
 			<div v-if="BannerImg" class="about_banner tac phonehide wow animate__fadeInUp" data-wow-duration="1s" :style="{backgroundImage: 'url('+BannerImg.image+')',backgroundRepeat: 'no-repeat', backgroundPosition: 'center center',backgroundSize: 'cover',height: '500px',overflow: 'hidden'}">
 				<div class="homeHead_appleStytle about_banner_title" style="margin-top: 154px;" v-html="BannerImg.title"></div>
 				<div class="about_banner_text" v-html="BannerImg.intro"></div>
-				<div v-if="BannerImg.showButton" v-if="BannerImg.buttonText" class="f16 homeHead_registertil tac about_banner_but" @click="showregistermodal" v-html="BannerImg.buttonText"></div>
+				<div v-if="BannerImg.showButton" v-if="BannerImg.buttonText" class="f16 homeHead_registertil tac about_banner_but" @click="showregistermodal(2)" v-html="BannerImg.buttonText"></div>
 			</div>
 			<div v-if="aboutInfo[0]" class="about_videobg wow animate__fadeInUp" data-wow-duration="1s">
 				<div class="maxwidth">
@@ -443,7 +443,7 @@
 							<div v-if="bottomBanner[0].title" class="home_register_text" v-html="bottomBanner[0].title"></div>
 							<div v-if="bottomBanner[0].intro" class="tar" v-html="bottomBanner[0].intro"></div>
 						</div>
-						<div class="f18 register_bottom home_register_but homeHead_appleStytle colorbai" @click="showregistermodal('',5,'')">
+						<div class="f18 register_bottom home_register_but homeHead_appleStytle colorbai" @click="showregistermodal(4)">
 							{{bottomBanner[0].buttonText}}</div>
 					</div>
 				</div>
@@ -619,6 +619,7 @@
 		el:'#app',
 		data(){
 			return {
+				leaveWordType:'',
 				aboutInfo:[],
 				suppliernumData:[],
 				supplierListData:[],
@@ -712,8 +713,9 @@
 							console.log(err,'_getBannerImg获取数据异常');
 						})
 			},
-			showregistermodal(){
+			showregistermodal(leaveWordType){
 				this.showmodel = true
+				this.leaveWordType='2-'+leaveWordType;
 			},
 			hederegistermodal(){
 				this.showmodel = false
@@ -771,7 +773,7 @@
 					companyName:this.companyName,
 					telephone:this.telephone,
 					smsCode:this.smsCode,
-					registerModule:'1',
+					registerModule: this.leaveWordType,
 				})
 						.then(res => {
 							if (res.code==200){

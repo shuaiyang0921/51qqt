@@ -164,7 +164,7 @@
                             <div class="homeHead_phone homeHead_appleStytle f18">400-835-1881</div>
 						</a>
                         <a class="f16 homeHead_logintil" :href="baseInfo.fbk1">登录</a>
-                        <div class="f14 homeHead_registertil" @click="showregistermodal('',1,'')">注册体验</div>
+                        <div class="f14 homeHead_registertil" @click="showregistermodal(1)">注册体验</div>
                     </div>
                 </div>
 				<div class="bgbai homephoneHead_height">
@@ -386,7 +386,7 @@
 							<div class="cooperation_type_listright">
 								<div class="PingFangSCMedium cooperation_type_listrightTitle">{{item.title}}</div>
 								<div class="f16 cooperation_type_listrightText" v-html="item.intro"></div>
-								<div class="f14 cooperation_type_listrightBut" @click="showregistermodal">立即加入</div>
+								<div class="f14 cooperation_type_listrightBut" @click="showregistermodal(2)">立即加入</div>
 								<div class="f12 cooperation_type_listrightSpan" v-if="item.tag&&clientWidth>582">
 									<span v-for="items in item.tag.split(',')">{{items}}</span>
 								</div>
@@ -463,7 +463,7 @@
 								<div class="colorblue PingFangSCMedium cooperation_codeText" style="cursor: pointer;" @click="getcode">获取验证码</div>
 							</div>
 						</div>
-						<div class="f16 tac cooperation_form_submit homeHead_appleStytle colorbai" @click="submitfrom()">立即加入</div>
+						<div class="f16 tac cooperation_form_submit homeHead_appleStytle colorbai" @click="submitfrom(1)">立即加入</div>
 					</div>
 				</div>
 			</div>
@@ -474,7 +474,7 @@
 							<div v-if="bottomBanner[0].title" class="home_register_text" v-html="bottomBanner[0].title"></div>
 							<div v-if="bottomBanner[0].intro" class="tar" v-html="bottomBanner[0].intro"></div>
 						</div>
-						<div class="f18 register_bottom home_register_but homeHead_appleStytle colorbai" @click="showregistermodal('',5,'')">
+						<div class="f18 register_bottom home_register_but homeHead_appleStytle colorbai" @click="showregistermodal(4)">
 							{{bottomBanner[0].buttonText}}</div>
 					</div>
 				</div>
@@ -602,7 +602,7 @@
 						<div class="registe_form_Vercode"><input type="number" v-model="smsCode" class="imgsize" placeholder="请输入验证码"></div>
 						<div class="registe_form_codebut colorbai" @click="getcode">获取验证码</div>
 					</div>
-					<div class="f16 registe_form_submit PingFangSCMedium colorbai" @click="submitfrom()">立即提交</div>
+					<div class="f16 registe_form_submit PingFangSCMedium colorbai" @click="submitfrom('')">立即提交</div>
 				</div>
 			</div>
 			<div class="rightView" v-if="kefuInfo[1]">
@@ -630,6 +630,7 @@
 		el:'#app',
 		data(){
 			return {
+				leaveWordType:'',
 				cooperationInfo:[],
 				suppliernumData:[],
 				cooperationImg:[],
@@ -710,8 +711,9 @@
 					console.log(err,'_getData获取数据异常');
 				})
 			},
-			showregistermodal(){
+			showregistermodal(leaveWordType){
 				this.showmodel = true
+				this.leaveWordType='5-'+leaveWordType;
 			},
 			hederegistermodal(){
 				this.showmodel = false
@@ -743,7 +745,10 @@
 							console.log(err,'_getcode获取数据异常');
 						})
 			},
-			submitfrom(){
+			submitfrom(submitType){
+				if (submitType==1){
+					this.leaveWordType='5-5'
+				}
 				if(this.name==''){
 					window.alert("联系人不能为空！");
 					return false
@@ -767,7 +772,7 @@
 					companyName:this.companyName,
 					telephone:this.telephone,
 					smsCode:this.smsCode,
-					registerModule:'1',
+					registerModule: this.leaveWordType,
 				})
 						.then(res => {
 							if (res.code==200){

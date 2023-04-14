@@ -164,7 +164,7 @@
                             <div class="homeHead_phone homeHead_appleStytle f18">400-835-1881</div>
 						</a>
                         <a class="f16 homeHead_logintil" :href="baseInfo.fbk1">登录</a>
-                        <div class="f14 homeHead_registertil" @click="showregistermodal('',1,'')">注册体验</div>
+                        <div class="f14 homeHead_registertil" @click="showregistermodal(1)">注册体验</div>
                     </div>
                 </div>
 				<div class="bgbai homephoneHead_height">
@@ -376,7 +376,7 @@
 					<div class="caseStudy_adver_title homeHead_appleStytle">客户案例</div>
 					<div class="caseStudy_adver_xian"></div>
 					<div class="f20 PingFangSCMedium caseStudy_adver_text fontWeightNormal">信赖之选，500强和30+行业领军企业都在用 </div>
-					<a class="f16 homeHead_registertil caseStudy_registertil tac homeHead_appleStytle " @click="showregistermodal">注册体验</a>
+					<a class="f16 homeHead_registertil caseStudy_registertil tac homeHead_appleStytle " @click="showregistermodal(4)">注册体验</a>
 				</div>
 			</div>
 			<div class="caseStudy_FilterHeader wow animate__fadeInUp" data-wow-duration="1s">
@@ -473,7 +473,7 @@
 							<div v-if="bottomBanner[0].title" class="home_register_text" v-html="bottomBanner[0].title"></div>
 							<div v-if="bottomBanner[0].intro" class="tar" v-html="bottomBanner[0].intro"></div>
 						</div>
-						<div class="f18 register_bottom home_register_but homeHead_appleStytle colorbai" @click="showregistermodal('',5,'')">
+						<div class="f18 register_bottom home_register_but homeHead_appleStytle colorbai" @click="showregistermodal(3)">
 							{{bottomBanner[0].buttonText}}</div>
 					</div>
 				</div>
@@ -608,7 +608,7 @@
 				<div class="rightView_kf_none">
 
 				</div>
-				<div class="rightView_trial" @click="showregistermodal(3)">
+				<div class="rightView_trial" @click="showregistermodal(2)">
 					<div class="rightView_trialImg"><img :src="kefuInfo[1][0].image" class="imgsize"></div>
 					<div class="f14 rightView_trialText">{{kefuInfo[1][0].text}}</div>
 				</div>
@@ -629,6 +629,7 @@
 		el:'#app',
 		data(){
 			return {
+				leaveWordType:'',
 				industryList:[
 					// {nameStr:'全部',industry:''},
 					// {nameStr:'高端制造',industry:'7'},
@@ -775,8 +776,9 @@
 					console.log(err,'_getCategoryData获取数据异常');
 				})
 			},
-			showregistermodal(){
+			showregistermodal(leaveWordType){
 				this.showmodel = true
+				this.leaveWordType='6-'+leaveWordType;
 			},
 			hederegistermodal(){
 				this.showmodel = false
@@ -910,7 +912,7 @@
 					companyName:this.companyName,
 					telephone:this.telephone,
 					smsCode:this.smsCode,
-					registerModule:'1',
+					registerModule: this.leaveWordType,
 				})
 						.then(res => {
 							if (res.code==200){
