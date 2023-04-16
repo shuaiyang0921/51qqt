@@ -275,7 +275,7 @@
 			</div>
 			<div v-if="supplierData.length" class="padBg bggray phonebai wow animate__fadeInUp" data-wow-duration="1s">
 				<div class="maxwidth">
-					<div class="PingFangSCMedium tac home_title">供应商管理痛点</div>
+					<div class="PingFangSCMedium tac home_title">{{supplierData[0].bigTitle}}</div>
 					<div class="flex-column flex-between">
 						<div class="flex-column manufacturing_observation_list" v-for="item in supplierData">
 							<div class="manufacturing_observation_img"><img :src="item.icon" class="imgsize" :alt="item.title"></div>

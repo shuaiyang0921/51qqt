@@ -31,10 +31,11 @@ function getSeo(pageName){
 }
 function getHost(hostAddressSign) {
 	// console.log('aaaaaaaaaa',window.location.href)
-	if(window.location.href.indexOf('file:')>-1){
+	if(window.location.href.indexOf('http://localhost/')>-1){
 		switch(hostAddressSign){
 			case 'els': {
-				return axios.defaults.baseURL = 'https://51qqt.com/els';
+				return axios.defaults.baseURL = 'https://xgw-cs.51qqt.com';
+				// return axios.defaults.baseURL = 'https://51qqt.com/els';
 			}
 		}
 	}
