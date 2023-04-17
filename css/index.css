@@ -74,11 +74,11 @@
 .homephoneHead_height{height: 100%;}
 .shownavs{height: calc(100% - 67px);display: none;}
 .homephoneHead_left{width: 110px;border-right: 1px solid #EBEBEB;height: 100%;}
-.homephoneHead_left>a{margin: 10px 0;padding: 10px 0 10px 20px;height: 20px;line-height: 20px;display:inline-block;width: calc(100% - 24px);border-left: 4px solid #fff;}
+.homephoneHead_left>a{margin: 10px 0;padding: 10px 0 10px 20px;height: 20px;line-height: 20px;display:inline-block;width: calc(100% - 24px);border-left: 4px solid #fff;font-weight: 600;}
 .homephoneHead_leftList{color: #005CEF;border-left: 4px solid #005CEF!important;}
 .homephoneHead_left_link{margin: 10px 0;padding: 10px 0 10px 20px;height: 20px;line-height: 20px;display:inline-block;width: calc(100% - 24px);border-left: 4px solid #fff;display: block;}
 .homephoneHead_right{margin-left: 20px;width: calc(100% - 131px);padding: 20px 0;display: none;}
-.homephoneHead_right_title{height: 20px;line-height: 20px;padding-bottom: 20px;border-bottom: 1px solid #EBEBEB;}
+.homephoneHead_right_title{height: 20px;line-height: 20px;padding-bottom: 20px;border-bottom: 1px solid #EBEBEB;font-weight: 600;}
 .homephoneHead_navs{padding: 0px 24px;height: calc(100% - 79px);overflow: auto;}
 .homephoneHead_nav{padding: 16px 0px;color: #222;}
 .homephoneHead_navicon{width: 10px;height: 7px;}
