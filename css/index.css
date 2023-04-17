@@ -66,7 +66,7 @@
 .homeHead_logintil{color: #333333;margin:0 30px;}
 .homeHead_logintil:hover{color: #005CEF;}
 .homeHead_popUpStyle{border-radius: 0px 0px 4px 4px;box-shadow:  0px 8px 20px 0px rgba(55,99,170,0.2);position: absolute;top: 74px;left: 0px;width: 100%;z-index: 10;opacity: 0;height: 0;overflow: hidden;max-height: 20px;transition: max-height .25s ease-in-out,opacity .25s ease-in-out;}
-.hobverPopUp:hover .hobverPopUp_text{color: #005CEF;}
+.hobverPopUp:hover .hobverPopUp_text a{color: #005CEF;}
 .hobverPopUp_text>a:hover{color: #005CEF;cursor: pointer;}
 .hobverPopUp:hover{border-bottom: 2px solid #005CEF;}
 .hobverPopUp:hover .iconxia{background: no-repeat url(https://51qqt.com/img/home43.png);background-size:100%;width: 10px;height: 8px;}
