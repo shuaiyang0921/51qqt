@@ -393,6 +393,7 @@ div::-webkit-scrollbar{
     .Vidio_padd_wei{margin:0px auto;width:100%;height:100%;background: rgba(0,0,0,0.5);}
     .Vidio_cancel{top: -42px;right: 10px;}
     .videosize{height: auto;}
+    .home_Solution_centerImgsleft{margin-left:25px;}
 }
 @media screen and (max-width:946px) {
     .home_endorsed_botLists{bottom:-285px}

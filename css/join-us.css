@@ -39,7 +39,7 @@
 }
 @media screen and (max-width:1440px) {
     .joinUs_imglist1{margin-bottom:0px;}
-    .joinUs_img1,.joinUs_img2,.joinUs_img3{width: 80%;height: auto;}
+    .joinUs_img1,.joinUs_img2,.joinUs_img3{width: 80%;height: auto;max-height: 500px;}
     .joinUs_img_mag{margin: 0;}
 }
 @media screen and (max-width:582px) {
