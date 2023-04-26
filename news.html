@@ -800,9 +800,18 @@
 					console.log(err,'_getVideoData获取数据异常');
 				})
 			},
-			showregistermodal(leaveWordType){
-				this.showmodel = true
-				this.leaveWordType='47-'+leaveWordType;
+			showregistermodal(link,leaveWordType,index){
+				if (index.toString()){
+					this.leaveWordType='47-'+leaveWordType+"-"+index;
+				}else {
+					this.leaveWordType='47-'+leaveWordType;
+				}
+
+				if (link){
+					window.open(link)
+				}else {
+					this.showmodel = true
+				}
 			},
 			hederegistermodal(){
 				this.showmodel = false

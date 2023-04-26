@@ -209,8 +209,8 @@
     .paas_adver_buts>div:last-of-type{margin-right: 0px;}
     .supplier_title{margin-bottom: 20px;}
     .purchase_navList_rightText{font-size: 14px;margin-bottom:0;}
-    .aPaaS_head_but{display: none;}
-    .scf_title{margin: 30px 0;}
+    /* .aPaaS_head_but{display: none;} */
+    .scf_title{margin: 30px 16px;}
     .scf_bgImg {padding: 0;height: 460px;}
     .scf_navsBg{padding: 30px 0 ;}
     .scf_nav{font-size: 16px;}

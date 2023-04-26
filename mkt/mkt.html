@@ -575,9 +575,18 @@
 			changenav(index){
 				this.listIndex = index
 			},
-			showregistermodal(leaveWordType){
-				this.showmodel = true;
-				this.leaveWordType='16-'+leaveWordType;
+			showregistermodal(link,leaveWordType,index){
+				if (index.toString()){
+					this.leaveWordType='16-'+leaveWordType+"-"+index;
+				}else {
+					this.leaveWordType='16-'+leaveWordType;
+				}
+
+				if (link){
+					window.open(link)
+				}else {
+					this.showmodel = true
+				}
 			},
 			hederegistermodal(){
 				this.showmodel = false
