@@ -367,6 +367,18 @@ div::-webkit-scrollbar{
 .anileftIn{animation: leftin 1s;}
 #newBridge .newicon-left-center, #newBridge .newicon-right-center{width: 80px!important;}
 .videosize{width: 100%;height: 492px;}
+/* register */
+.registe_formphone{padding: 107px 20px 155px 20px;background: url(../img/registe_formphone.png) no-repeat center;background-size: cover;}
+.registe_formphone_title{width: 100%;margin-bottom: 30px;}
+.registe_formphone_magbot{margin-bottom: 12px;}
+.registe_formphone_input{padding: 11px 12px;border: 1px solid #DADBDD;border-radius: 4px;width: calc(100% - 26px);}
+.registe_formphone_inputbot{margin-bottom: 20px;}
+.registe_formphone_input input{font-size: 16px;height: 22px;line-height: 22px;}
+.registe_formphone_Vercode{margin-bottom: 30px;}
+.registe_formphone_Vercodeverify{margin-bottom: 10px;}
+.registe_formphone_VercodeInput{padding: 11px 12px;border: 1px solid #DADBDD;border-radius: 4px;width: calc(100% - 138px);margin-right: 12px;}
+.registe_formphone_submit{padding: 12px 0;height: 25px;line-height: 24px;width: 100%;background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);border-radius: 4px;font-size: 17px;}
+.registe_formphone_verify{margin-left: 12px;height: 17px;line-height: 17px;margin-bottom: 3px;color: #FF2828;}
 @media screen and (max-width:1240px) {
     .home_Enabling_rightimg,.home_Enabling_leftimg,.home_Caseimg{display: none;}
     .header{opacity: 1;}
@@ -469,7 +481,7 @@ div::-webkit-scrollbar{
     .homeHead_adver_botstyle{display: block;width: auto;}
     .homeHead_adver_botright{width: 60px;height: 20px;line-height: 20px;margin-left:0;}
     .homeHead_adver_botright .f16{font-size: 14px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
-    .home_title{font-size: 20px;line-height: 28px;margin: 0px 16px 20px 16px;}
+    .home_title{font-size: 20px;line-height: 28px;margin: 0px 0 20px 0;}
     .home_Enabtitle{font-size: 20px;line-height: 28px;margin: 30px 0 20px 0;padding: 0 15px;}
     .homeHead_tabs{bottom:15px;}
     .homeHead_adver1_title{font-size: 26px;text-align: center;}
@@ -541,7 +553,7 @@ div::-webkit-scrollbar{
 }
 @media screen and (max-width:580px) {
     .home_endorsed_botLists{bottom: -190px;}
-    .home_information{padding: 220px  10px 0px 10px;}
+    .home_information{padding: 200px  10px 0px 10px;}
     /* .home_endorsed {padding: 60px 30px;} */
     .home_Case_inforight{padding: 30px 20px 20px 20px;}
     .home_Case_inforightImg{margin: 16px 0 8px 0;}
