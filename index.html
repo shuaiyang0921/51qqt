@@ -1112,7 +1112,12 @@
 				if (link){
 					window.open(link)
 				}else {
-					this.showmodel = true
+					if(this.clientWidth<=582){
+						window.location.href="https://51qqt.com/register.html"
+					}else{
+						this.showmodel = true
+					}
+					
 				}
 			},
 			jumpLink(showButton,link){
