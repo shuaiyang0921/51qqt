@@ -123,6 +123,7 @@
 }
 @media screen and (max-width:946px) {
     .cooperation_why_rightText{height: auto;}
+    .cooperation_type{padding: 30px 16px;}
 }
 @media screen and (max-width:582px) {
     .cooperation_why{padding: 30px 15px;}
@@ -133,7 +134,6 @@
     .cooperation_adver_title {font-size: 24px;margin-top: 80px;margin-bottom: 8px;line-height: 24px;}
     .cooperation_adver_text{font-size: 14px;line-height: 24px;margin-bottom: 4px;}
     .registertil_banner{padding: 11px 42px;}
-    .cooperation_type{padding: 30px 16px;}
     .cooperation_type_listrightSpan{margin-top: 16px;}
     .cooperation_type_list:hover .cooperation_type_listrightSpan{display: block;}
     .cooperation_type_list:hover .cooperation_type_listrightBut{display: none;}

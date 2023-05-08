@@ -387,8 +387,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="homeHead_tabs flex-column flex-center" >
+					<div class="homeHead_tabs flex-column flex-center" v-if="clientWidth>582">
 						<div v-for="(item,index) in BanerImg" :class="index==0?'homeHead_tab':''" @click="changetab(index)"></div>
+					</div>
+					<div v-else class="leftandright flex-column flex-between">
+						<div class="homeHead_left" @click="preftab()"><img src="./images/caseStudy/caseStudy4.png" class="imgsize" alt=""></div>
+						<div class="homeHead_left" @click="nexttab()"><img src="./images/caseStudy/caseStudy3.png" class="imgsize" alt=""></div>
 					</div>
 				</div>
 				<div class="flex-column flex-between homeHead_adver_bot">
@@ -529,7 +533,7 @@
 								<div class="home_Solution_centerImgs flex-column">
 									<div class="tac" v-for="(itemchenk,tagIndex) in itemdemo.tags" :class="tagIndex!=0?'home_Solution_centerImgsleft':''">
 										<div class="home_Solution_centerImg"><img :src="itemchenk.src" class="imgsize" :alt="itemchenk.title"></div>
-										<div class="f14 colorbai">{{itemchenk.title}}</div>
+										<div class="f14 colorbai" style="max-width: 100px;">{{itemchenk.title}}</div>
 									</div>
 								</div>
 								<a v-if="itemdemo.link" class="f14 colorbai home_Solution_centerbut" :href="itemdemo.link">方案详情</a>
@@ -538,8 +542,12 @@
 								<div class="home_Solution_rightimg" v-for="itemlogos in itemdemo.logos"><img :src="itemlogos" class="imgsize" alt="itemlogos" style="border-radius: 4px;"></div>
 							</div>
 						</div>
+						<div class="leftandright flex-column flex-between" v-if="clientWidth<=582">
+							<div class="homeHead_left" @click="prefSolution()"><img src="./images/caseStudy/caseStudy4.png" class="imgsize" alt=""></div>
+							<div class="homeHead_left" @click="nextSolution()"><img src="./images/caseStudy/caseStudy3.png" class="imgsize" alt=""></div>
+						</div>
 					</div>
-					<div class="flex-column flex-center home_Solution_tabs_nav" v-if="SolutionList[navstopIndex]">
+					<div class="flex-column flex-center home_Solution_tabs_nav"  v-if="clientWidth>582">
 						<div v-for="(item,index) in SolutionList[navstopIndex][1]" :class="index==Solutionindex?'home_Case_tab':''"></div>
 					</div>
 				</div>
@@ -547,7 +555,7 @@
 			<div v-if="CaseList.length" class="home_Case wow animate__fadeInUp" data-wow-duration="1s">
 				<div class="maxwidth">
 					<div class="tac home_product_title PingFangSCMedium">与千家高成长企业一起，实现数字化采购</div>
-					<div>
+					<div style="position: relative;">
 						<div class="flex-column home_Case_info" :class="index==0?'home_Case_info_show':''" v-for="(item,index) in CaseList" @touchstart="handelTouchStart" @touchend="CaseTouchend">
 							<div class="home_Caseimg"><img :src="item.image" class="imgsize" :alt="item.tag"></div>
 							<div class="home_Case_inforight">
@@ -559,10 +567,15 @@
 								</div>
 							</div>
 						</div>
+						<div class="leftandright flex-column flex-between" v-if="clientWidth<=582">
+							<div class="homeHead_left" @click="prefCaseTab()"><img src="./images/caseStudy/caseStudy4.png" class="imgsize" alt=""></div>
+							<div class="homeHead_left" @click="nextCaseTab()"><img src="./images/caseStudy/caseStudy3.png" class="imgsize" alt=""></div>
+						</div>
 					</div>
 					<div class="home_Case_tabs flex-column flex-center ">
 						<div v-for="(item,index) in CaseList" :class="index==0?'home_Case_tab':''" @click="changeCaseTab(index)"></div>
 					</div>
+					
 				</div>
 			</div>
 			<iframe src="./iframe/companys.html" class="companyStyle wow animate__fadeInUp" data-wow-duration="1s" frameborder="0" scrolling="no"></iframe>
@@ -1136,8 +1149,83 @@
 				$('.homeHead_tabs>div').eq(this.changenum).addClass('homeHead_tab').siblings().removeClass('homeHead_tab')
 				$('.homeHead_adverstyle').animate({'left':-(this.changenum*100)+'%'},0);
 			},
+			preftab (){
+				this.changenum = this.changenum-1
+				if(this.changenum==-1){
+					this.changenum = that.BanerImg.length-1
+				}
+				clearInterval(this.bannerInterval)
+				this.setBannerInterval();
+				$('.homeHead_tabs>div').eq(this.changenum).addClass('homeHead_tab').siblings().removeClass('homeHead_tab')
+				$('.homeHead_adverstyle').animate({'left':-(this.changenum*100)+'%'},0);
+			},
+			nexttab (){
+				this.changenum = this.changenum+1
+				if(this.changenum==that.BanerImg.length){
+					this.changenum = 0
+				}
+				clearInterval(this.bannerInterval)
+				this.setBannerInterval();
+				$('.homeHead_tabs>div').eq(this.changenum).addClass('homeHead_tab').siblings().removeClass('homeHead_tab')
+				$('.homeHead_adverstyle').animate({'left':-(this.changenum*100)+'%'},0);
+			},
+			prefSolution (){
+				this.Solutionindex = this.Solutionindex-1
+				if(this.Solutionindex==-1){
+					this.Solutionindex = this.SolutionList[this.navstopIndex][1].length-1
+				}
+			},
+			nextSolution (){
+				this.Solutionindex = this.Solutionindex+1
+				if(this.Solutionindex==this.SolutionList[this.navstopIndex][1].length){
+					this.Solutionindex = 0
+				}
+			},
+			setBannerInterval(){
+				this.bannerInterval=setInterval(()=>{
+					if(that.changenum>=that.BanerImg.length-1){
+						that.changenum=0
+					}else{
+						that.changenum++;
+					}
+					$('.homeHead_tabs>div').eq(that.changenum).addClass('homeHead_tab').siblings().removeClass('homeHead_tab')
+					$('.homeHead_adverstyle').animate({'left':-(that.changenum*100)+'%'},0);
+					this.videoPauseOrPlay()
+				},4000);
+			},
+			videoPauseOrPlay(){
+				var videos=document.getElementsByTagName('video');
+				if(videos.length!=0){
+					for (var i=0;i<videos.length;i++){
+						var id=$(videos[i]).prop("id");
+						if (id!="notBanner"){
+							videos[i].pause()
+						}
+					}
+				}
+			},
 			changeCaseTab(index){
 				this.changeCaseNum = index
+				clearInterval(this.caseInterval)
+				this.setCaseInterval();
+				$('.home_Case_tabs>div').eq(this.changeCaseNum).addClass('home_Case_tab').siblings().removeClass('home_Case_tab')
+				$('.home_Case_info').eq(this.changeCaseNum).addClass('home_Case_info_show').siblings().removeClass('home_Case_info_show')
+			},
+			prefCaseTab(){
+				this.changeCaseNum = this.changeCaseNum-1
+				if(this.changeCaseNum==-1){
+					this.changeCaseNum = this.CaseList.length-1
+				}
+				clearInterval(this.caseInterval)
+				this.setCaseInterval();
+				$('.home_Case_tabs>div').eq(this.changeCaseNum).addClass('home_Case_tab').siblings().removeClass('home_Case_tab')
+				$('.home_Case_info').eq(this.changeCaseNum).addClass('home_Case_info_show').siblings().removeClass('home_Case_info_show')
+			},
+			nextCaseTab(){
+				this.changeCaseNum = this.changeCaseNum+1
+				if(this.changeCaseNum==this.CaseList.length){
+					this.changeCaseNum = 0
+				}
 				clearInterval(this.caseInterval)
 				this.setCaseInterval();
 				$('.home_Case_tabs>div').eq(this.changeCaseNum).addClass('home_Case_tab').siblings().removeClass('home_Case_tab')
@@ -1245,30 +1333,6 @@
 				.catch(err => {
 					console.log(err,'_getcode获取数据异常');
 				})
-			},
-			videoPauseOrPlay(){
-				var videos=document.getElementsByTagName('video');
-				if(videos.length!=0){
-					for (var i=0;i<videos.length;i++){
-						var id=$(videos[i]).prop("id");
-						if (id!="notBanner"){
-							videos[i].pause()
-						}
-					}
-				}
-				
-			},
-			setBannerInterval(){
-				this.bannerInterval=setInterval(()=>{
-					if(that.changenum>=that.BanerImg.length-1){
-						that.changenum=0
-					}else{
-						that.changenum++;
-					}
-					$('.homeHead_tabs>div').eq(that.changenum).addClass('homeHead_tab').siblings().removeClass('homeHead_tab')
-					$('.homeHead_adverstyle').animate({'left':-(that.changenum*100)+'%'},0);
-					this.videoPauseOrPlay()
-				},4000);
 			},
 			setCaseInterval(){
 				this.caseInterval=setInterval(()=>{

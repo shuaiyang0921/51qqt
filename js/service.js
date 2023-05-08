@@ -43,15 +43,15 @@ function getHost(hostAddressSign) {
 	return axios.defaults.baseURL = '/els';
 }
 //客服代码
-setTimeout(()=>{
-	var _hmt = _hmt || [];
-	(function() {
-		var hm = document.createElement("script");
-		hm.src = "https://hm.baidu.com/hm.js?421bca2d35adfb2b4919c4a19acd0384";
-		var s = document.getElementById("app");
-		s.parentNode.insertBefore(hm, s);
-	})();
-},1)
+// setTimeout(()=>{
+// 	var _hmt = _hmt || [];
+// 	(function() {
+// 		var hm = document.createElement("script");
+// 		hm.src = "https://hm.baidu.com/hm.js?421bca2d35adfb2b4919c4a19acd0384";
+// 		var s = document.getElementById("app");
+// 		s.parentNode.insertBefore(hm, s);
+// 	})();
+// },1)
 
 
 
