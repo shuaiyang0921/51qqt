@@ -211,7 +211,7 @@
     .purchase_navList_rightText{font-size: 14px;margin-bottom:0;}
     /* .aPaaS_head_but{display: none;} */
     .scf_title{margin: 30px 16px;}
-    .scf_bgImg {padding: 0;height: 460px;}
+    .scf_bgImg {padding: 0;height: auto;}
     .scf_navsBg{padding: 30px 0 ;}
     .scf_nav{font-size: 16px;}
     .mkt_item{margin: 16px 16px 0px 16px;background: linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%);box-shadow: 0px 4px 16px 0px rgba(55,99,170,0.1);border-radius: 4px;border: 2px solid #FFFFFF;padding: 16px 0px 30px 0px;}

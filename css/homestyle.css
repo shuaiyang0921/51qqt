@@ -379,8 +379,8 @@ div::-webkit-scrollbar{
 .registe_formphone_VercodeInput{padding: 11px 12px;border: 1px solid #DADBDD;border-radius: 4px;width: calc(100% - 138px);margin-right: 12px;}
 .registe_formphone_submit{padding: 12px 0;height: 25px;line-height: 24px;width: 100%;background: linear-gradient(270deg, #0087FF 0%, #005CEF 100%);border-radius: 4px;font-size: 17px;}
 .registe_formphone_verify{margin-left: 12px;height: 17px;line-height: 17px;margin-bottom: 3px;color: #FF2828;}
-.leftandright{position: absolute;top: calc(50% - 25px);width: calc(100% - 10px);padding: 0 5px;}
-.homeHead_left{width: 20px;height: 30px;padding: 10px 15px;border-radius: 50%;background-color: rgba(0,0,0,0.1);}
+.leftandright{position: absolute;top: calc(50% - 25px);width: calc(100% - 20px);padding: 0 10px;}
+.homeHead_left{width: 8px;height: 14px;padding: 11px 14px;border-radius: 50%;background: #FFFFFF;box-shadow: 0px 4px 8px 0px rgba(148,169,201,0.1);}
 @media screen and (max-width:1240px) {
     .home_Enabling_rightimg,.home_Enabling_leftimg,.home_Caseimg{display: none;}
     .header{opacity: 1;}
